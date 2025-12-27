@@ -438,13 +438,13 @@ permalink: /
     </div>
 
     {# Architecture Diagram #}
-    <div class="relative" data-reveal>
+    <div class="relative" data-reveal id="architecture-diagram">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
         {# Left: Data Sources #}
-        <div class="flex flex-col">
+        <div class="flex flex-col relative z-10">
           <h3 class="text-lg font-medium text-warm-black text-center mb-6">Data Sources</h3>
           <div class="flex-1 space-y-3">
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 data-source-box relative" data-connector="source-1">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
@@ -452,7 +452,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">Databases</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 data-source-box relative" data-connector="source-2">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
@@ -460,7 +460,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">APIs</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 data-source-box relative" data-connector="source-3">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -468,7 +468,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">Documents</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 data-source-box relative" data-connector="source-4">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -479,39 +479,49 @@ permalink: /
           </div>
         </div>
 
-        {# Center: Zunkiree Search Engine #}
-        <div class="flex flex-col items-center justify-center py-8 md:py-0">
-          {# Connecting arrows on desktop #}
-          <div class="hidden md:flex items-center w-full">
-            <div class="flex-1 h-0.5 bg-gradient-to-r from-warm-border to-zunkiree-300"></div>
-            <div class="bg-zunkiree-600 text-white rounded-2xl p-8 text-center shadow-xl mx-4 relative z-10">
-              <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {# Center: Zunkiree Search Engine - Oval Search Bar Style #}
+        <div class="flex flex-col relative z-20">
+          {# Invisible spacer to match left/right column headers #}
+          <h3 class="text-lg font-medium text-center mb-6 invisible hidden md:block" aria-hidden="true">&nbsp;</h3>
+          {# Desktop version - Oval/Pill shaped like search bar - positioned to align with middle of boxes #}
+          <div class="hidden md:flex flex-1 items-start justify-center pt-[300px]">
+            <div class="bg-zunkiree-600 text-white rounded-full px-10 py-6 text-center shadow-xl relative overflow-hidden" style="min-width: 280px;" data-connector="center">
+              {# Subtle inner glow effect #}
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+              <div class="relative flex items-center justify-center gap-4">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <h3 class="text-lg font-medium whitespace-nowrap">Zunkiree Search</h3>
+                  <p class="text-white/80 text-sm">AI-Native Engine</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {# Mobile version #}
+          <div class="md:hidden bg-zunkiree-600 text-white rounded-full px-8 py-5 text-center shadow-xl w-full max-w-xs mx-auto">
+            <div class="flex items-center justify-center gap-3">
+              <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-medium mb-2">Zunkiree Search</h3>
-              <p class="text-white/80 text-sm">AI-Native Engine</p>
+              <div class="text-left">
+                <h3 class="text-base font-medium">Zunkiree Search</h3>
+                <p class="text-white/80 text-xs">AI-Native Engine</p>
+              </div>
             </div>
-            <div class="flex-1 h-0.5 bg-gradient-to-r from-zunkiree-300 to-warm-border"></div>
-          </div>
-          {# Mobile version #}
-          <div class="md:hidden bg-zunkiree-600 text-white rounded-2xl p-8 text-center shadow-xl w-full">
-            <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-medium mb-2">Zunkiree Search</h3>
-            <p class="text-white/80 text-sm">AI-Native Engine</p>
           </div>
         </div>
 
         {# Right: User Experiences #}
-        <div class="flex flex-col">
+        <div class="flex flex-col relative z-10">
           <h3 class="text-lg font-medium text-warm-black text-center mb-6">User Experiences</h3>
           <div class="flex-1 space-y-3">
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 user-exp-box relative" data-connector="target-1">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -519,7 +529,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">Search Interfaces</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 user-exp-box relative" data-connector="target-2">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
@@ -527,7 +537,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">Chatbots</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 user-exp-box relative" data-connector="target-3">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -535,7 +545,7 @@ permalink: /
               </div>
               <span class="text-warm-700 font-medium">Dashboards</span>
             </div>
-            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3">
+            <div class="bg-warm-surface rounded-xl p-4 flex items-center gap-3 user-exp-box relative" data-connector="target-4">
               <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -546,6 +556,198 @@ permalink: /
           </div>
         </div>
       </div>
+
+      {# SVG Flow Lines Overlay - Dynamically positioned via JavaScript #}
+      <svg id="connector-svg" class="absolute inset-0 w-full h-full pointer-events-none hidden md:block" style="z-index: 5;">
+        <defs>
+          <linearGradient id="inflowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#d1d5db" />
+            <stop offset="100%" stop-color="#eb1600" />
+          </linearGradient>
+          <linearGradient id="outflowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#eb1600" />
+            <stop offset="100%" stop-color="#d1d5db" />
+          </linearGradient>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g id="connector-paths"></g>
+        <g id="connector-dots"></g>
+      </svg>
+
+      {# JavaScript for dynamic connector positioning #}
+      <script>
+        (function() {
+          function drawConnectors() {
+            const container = document.getElementById('architecture-diagram');
+            const svg = document.getElementById('connector-svg');
+            const pathsGroup = document.getElementById('connector-paths');
+            const dotsGroup = document.getElementById('connector-dots');
+
+            if (!container || !svg || !pathsGroup || !dotsGroup) return;
+
+            // Get container bounds for relative positioning
+            const containerRect = container.getBoundingClientRect();
+
+            // Get center element
+            const center = document.querySelector('[data-connector="center"]');
+            if (!center) return;
+            const centerRect = center.getBoundingClientRect();
+
+            // Calculate center point relative to container
+            const centerLeft = centerRect.left - containerRect.left;
+            const centerRight = centerRect.right - containerRect.left;
+            const centerY = centerRect.top - containerRect.top + centerRect.height / 2;
+
+            // Clear existing paths and dots
+            pathsGroup.innerHTML = '';
+            dotsGroup.innerHTML = '';
+
+            // Get all source and target elements
+            const sources = [1, 2, 3, 4].map(i => document.querySelector(`[data-connector="source-${i}"]`));
+            const targets = [1, 2, 3, 4].map(i => document.querySelector(`[data-connector="target-${i}"]`));
+
+            // Draw inflow paths (sources → center)
+            sources.forEach((source, index) => {
+              if (!source) return;
+              const rect = source.getBoundingClientRect();
+              const startX = rect.right - containerRect.left;
+              const startY = rect.top - containerRect.top + rect.height / 2;
+              const endX = centerLeft;
+              const endY = centerY;
+
+              // Control points for smooth Bézier curve
+              const cp1x = startX + (endX - startX) * 0.4;
+              const cp1y = startY;
+              const cp2x = startX + (endX - startX) * 0.6;
+              const cp2y = endY;
+
+              const pathId = `flowIn${index + 1}`;
+              const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              path.setAttribute('id', pathId);
+              path.setAttribute('d', `M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${endX} ${endY}`);
+              path.setAttribute('stroke', 'url(#inflowGrad)');
+              path.setAttribute('stroke-width', '2');
+              path.setAttribute('fill', 'none');
+              path.setAttribute('opacity', '0.6');
+              path.setAttribute('stroke-dasharray', '6 4');
+              pathsGroup.appendChild(path);
+
+              // Animated dot
+              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+              circle.setAttribute('r', '4');
+              circle.setAttribute('fill', '#eb1600');
+              circle.setAttribute('filter', 'url(#glow)');
+
+              const animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+              animateMotion.setAttribute('dur', `${1.8 + index * 0.1}s`);
+              animateMotion.setAttribute('repeatCount', 'indefinite');
+              animateMotion.setAttribute('begin', `${index * 0.3}s`);
+
+              const mpath = document.createElementNS('http://www.w3.org/2000/svg', 'mpath');
+              mpath.setAttribute('href', `#${pathId}`);
+              animateMotion.appendChild(mpath);
+
+              const animateOpacity = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+              animateOpacity.setAttribute('attributeName', 'opacity');
+              animateOpacity.setAttribute('values', '0;1;1;0');
+              animateOpacity.setAttribute('keyTimes', '0;0.1;0.9;1');
+              animateOpacity.setAttribute('dur', `${1.8 + index * 0.1}s`);
+              animateOpacity.setAttribute('repeatCount', 'indefinite');
+              animateOpacity.setAttribute('begin', `${index * 0.3}s`);
+
+              circle.appendChild(animateMotion);
+              circle.appendChild(animateOpacity);
+              dotsGroup.appendChild(circle);
+            });
+
+            // Draw outflow paths (center → targets)
+            targets.forEach((target, index) => {
+              if (!target) return;
+              const rect = target.getBoundingClientRect();
+              const startX = centerRight;
+              const startY = centerY;
+              const endX = rect.left - containerRect.left;
+              const endY = rect.top - containerRect.top + rect.height / 2;
+
+              // Control points for smooth Bézier curve
+              const cp1x = startX + (endX - startX) * 0.4;
+              const cp1y = startY;
+              const cp2x = startX + (endX - startX) * 0.6;
+              const cp2y = endY;
+
+              const pathId = `flowOut${index + 1}`;
+              const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              path.setAttribute('id', pathId);
+              path.setAttribute('d', `M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${endX} ${endY}`);
+              path.setAttribute('stroke', 'url(#outflowGrad)');
+              path.setAttribute('stroke-width', '2');
+              path.setAttribute('fill', 'none');
+              path.setAttribute('opacity', '0.6');
+              path.setAttribute('stroke-dasharray', '6 4');
+              pathsGroup.appendChild(path);
+
+              // Animated dot
+              const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+              circle.setAttribute('r', '4');
+              circle.setAttribute('fill', '#eb1600');
+              circle.setAttribute('filter', 'url(#glow)');
+
+              const animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+              animateMotion.setAttribute('dur', `${1.8 + index * 0.1}s`);
+              animateMotion.setAttribute('repeatCount', 'indefinite');
+              animateMotion.setAttribute('begin', `${1.2 + index * 0.3}s`);
+
+              const mpath = document.createElementNS('http://www.w3.org/2000/svg', 'mpath');
+              mpath.setAttribute('href', `#${pathId}`);
+              animateMotion.appendChild(mpath);
+
+              const animateOpacity = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+              animateOpacity.setAttribute('attributeName', 'opacity');
+              animateOpacity.setAttribute('values', '0;1;1;0');
+              animateOpacity.setAttribute('keyTimes', '0;0.1;0.9;1');
+              animateOpacity.setAttribute('dur', `${1.8 + index * 0.1}s`);
+              animateOpacity.setAttribute('repeatCount', 'indefinite');
+              animateOpacity.setAttribute('begin', `${1.2 + index * 0.3}s`);
+
+              circle.appendChild(animateMotion);
+              circle.appendChild(animateOpacity);
+              dotsGroup.appendChild(circle);
+            });
+          }
+
+          // Debounce function for resize
+          function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+              const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+              };
+              clearTimeout(timeout);
+              timeout = setTimeout(later, wait);
+            };
+          }
+
+          // Initialize on DOM ready and window load
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', drawConnectors);
+          } else {
+            drawConnectors();
+          }
+
+          // Redraw after images/fonts load
+          window.addEventListener('load', drawConnectors);
+
+          // Redraw on resize (debounced)
+          window.addEventListener('resize', debounce(drawConnectors, 100));
+        })();
+      </script>
     </div>
   </div>
 </section>
