@@ -500,8 +500,54 @@ html {
 }
 
 /* =====================================================
-   Platform Architecture - Flowing Lines Animation
+   Logo Marquee Animation
    ===================================================== */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 25s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade edges for seamless look */
+.marquee-fade {
+  position: relative;
+}
+
+.marquee-fade::before,
+.marquee-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marquee-fade::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.marquee-fade::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
 
 .data-source-box,
 .user-exp-box {

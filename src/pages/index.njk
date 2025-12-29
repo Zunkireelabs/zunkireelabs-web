@@ -21,8 +21,8 @@ permalink: /
     <div class="absolute inset-0 bg-gradient-to-b from-transparent from-60% via-white/70 via-85% to-white"></div>
   </div>
 
-  {# Content - vertically centered in hero with proper padding #}
-  <div class="relative z-10 max-w-[1200px] mx-auto px-5 md:px-10 text-center pt-24 pb-16 md:pt-[72px] md:pb-24">
+  {# Content - vertically centered in hero #}
+  <div class="relative z-10 max-w-[1200px] mx-auto px-5 md:px-10 text-center mt-16">
     {# Headline - Duna style with tight letter-spacing #}
     <h1 class="hero-headline text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-medium text-black tracking-[-0.04em] leading-[1.1] mb-6" data-reveal>
       AI-native search and interaction<br>
@@ -36,10 +36,10 @@ permalink: /
 
     {# Dual CTAs - Primary dark, Secondary outline #}
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal>
-      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-warm-rich-black text-white font-medium text-base rounded-xl hover:bg-warm-black transition-all duration-200 hover:-translate-y-0.5 shadow-lg">
+      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-warm-rich-black text-white font-medium text-base rounded-full hover:bg-warm-black transition-all duration-200 hover:-translate-y-0.5 shadow-lg">
         Schedule a Demo
       </a>
-      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-black/30 text-black font-medium text-base rounded-xl hover:bg-black/5 transition-all duration-200">
+      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-black/30 text-black font-medium text-base rounded-full hover:bg-black/5 transition-all duration-200">
         Talk to Us
       </a>
     </div>
@@ -47,20 +47,128 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 2: CLIENTS / PARTNERS (Duna-style)
-   Blends seamlessly with hero via gradient + backdrop blur
+   SECTION 2: CLIENTS / PARTNERS (Marquee style)
+   Full-width auto-scrolling logo strip
    ===================================================== #}
 <section class="relative py-16 md:py-20 bg-gradient-to-b from-white/80 via-white to-white backdrop-blur-sm">
   {# Subtle top fade for extra smoothness #}
   <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/50 to-transparent pointer-events-none"></div>
+
   <div class="max-w-[1200px] mx-auto px-5 md:px-10">
     <p class="text-center text-sm font-medium text-warm-400 tracking-wide mb-10">Trusted by forward-thinking companies</p>
-    <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 md:gap-x-16">
-      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">TechStartup</span>
-      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">InnovateCo</span>
-      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em]">DigitalFirst</span>
-      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] hidden md:block">FutureLabs</span>
-      <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] hidden lg:block">CloudNine</span>
+
+    {# Marquee container - aligned with content width #}
+    <div class="marquee-fade">
+      <div class="marquee-container">
+        <div class="marquee-track">
+        {# First set of logos #}
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechStartup</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataFlow</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
+        {# Duplicate set for seamless loop #}
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechStartup</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataFlow</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
+        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION: TRUSTED BY LEADERS (Bento Grid Testimonials)
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
+    {# Section Header #}
+    <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
+      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-4">
+        Trusted by leaders
+      </h2>
+      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
+        Build intelligent search experiences like the world's best companies — without needing a 100+ people team.
+      </p>
+    </div>
+
+    {# Bento Grid #}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5" data-reveal>
+      {# Card 1: Logo Card (Tall) #}
+      <div class="col-span-1 row-span-2 bg-warm-surface rounded-2xl p-6 flex flex-col justify-between min-h-[280px]">
+        <span class="text-2xl md:text-3xl font-bold text-warm-black tracking-[-0.02em]">TechFlow</span>
+        <div class="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
+          <svg class="w-4 h-4 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+      </div>
+
+      {# Card 2: Photo Card with Logo #}
+      <div class="col-span-1 bg-gradient-to-br from-amber-100 to-orange-200 rounded-2xl p-4 flex flex-col justify-between min-h-[130px] relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"%3E%3Ccircle cx=\"50\" cy=\"80\" r=\"60\" fill=\"%23fbbf24\" opacity=\"0.3\"/%3E%3C/svg%3E')] bg-cover opacity-50"></div>
+        <div class="relative z-10 mt-auto">
+          <span class="text-sm font-semibold text-warm-charcoal">⟡ DataPrime</span>
+        </div>
+      </div>
+
+      {# Card 3: Testimonial Card (Wide) #}
+      <div class="col-span-2 md:col-span-2 bg-warm-charcoal rounded-2xl p-6 flex flex-col justify-between min-h-[130px] md:min-h-[160px]">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <p class="text-white font-medium text-sm">Sarah Chen</p>
+            <p class="text-white/60 text-xs">VP Engineering, ScaleUp</p>
+          </div>
+          <span class="text-white/80 font-semibold text-sm">ScaleUp</span>
+        </div>
+        <p class="text-white/90 text-sm md:text-base leading-relaxed">
+          "Implementing Zunkiree Search transformed how our users discover content. What used to take months of engineering now works out of the box."
+        </p>
+      </div>
+
+      {# Card 4: Testimonial Card (Wide + Tall) #}
+      <div class="col-span-2 row-span-2 bg-warm-rich-black rounded-2xl p-6 flex flex-col justify-between min-h-[280px]">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <p class="text-white font-medium">Marcus Rivera</p>
+            <p class="text-white/60 text-sm">CTO, InnovateCo</p>
+          </div>
+          <span class="text-white font-bold tracking-tight">innovate</span>
+        </div>
+        <p class="text-white/90 text-base md:text-lg leading-relaxed">
+          "Zunkiree's AI-native approach is exceptional. I wish a platform like this existed when we were scaling our search infrastructure. It would have saved us years of engineering effort."
+        </p>
+      </div>
+
+      {# Card 5: Logo Card (Tall - matches Innovate card) #}
+      <div class="col-span-1 row-span-2 bg-warm-surface rounded-2xl p-5 flex flex-col justify-between min-h-[280px]">
+        <span class="text-xl font-bold text-warm-black tracking-[-0.01em]">CloudNine</span>
+        <div class="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
+          <svg class="w-4 h-4 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+      </div>
+
+      {# Card 6: Photo/Logo Card #}
+      <div class="col-span-1 bg-gradient-to-br from-sky-100 to-blue-200 rounded-2xl p-4 flex flex-col justify-between min-h-[130px] relative overflow-hidden">
+        <div class="relative z-10 mt-auto flex items-center justify-between">
+          <span class="text-sm font-semibold text-warm-charcoal">◈ NextGen</span>
+          <div class="w-8 h-8 rounded-full bg-white/80 flex items-center justify-center">
+            <svg class="w-4 h-4 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -272,7 +380,7 @@ permalink: /
 
         {# CTA Button #}
         <div class="pt-4">
-          <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium rounded-xl hover:bg-zunkiree-700 transition-all duration-200">
+          <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200">
             Schedule a Demo
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -802,72 +910,6 @@ permalink: /
     <p class="text-center text-lg text-warm-600 max-w-2xl mx-auto" data-reveal>
       Our goal is to build software that compounds value over time.
     </p>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 8: PRODUCTS OVERVIEW
-   ===================================================== #}
-<section class="py-16 md:py-24 lg:py-32">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    {# Section Header #}
-    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">What We Build</p>
-      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2]">
-        Our Products
-      </h2>
-    </div>
-
-    {# Products Grid #}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {# Product 1: Zunkiree Search (Featured) #}
-      <div class="group bg-zunkiree-50 rounded-2xl p-8 border-2 border-zunkiree-200 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <span class="inline-flex items-center px-3 py-1 text-xs font-medium bg-zunkiree-600 text-white rounded-full mb-6">
-          Primary Product
-        </span>
-        <div class="w-14 h-14 bg-zunkiree-600 rounded-xl flex items-center justify-center text-white mb-6">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Zunkiree Search</h3>
-        <p class="text-warm-700 leading-relaxed mb-6">AI-native search and interaction module for modern, data-driven platforms. Transform how users find and engage with information.</p>
-        <a href="/contact/" class="inline-flex items-center gap-1 text-zunkiree-700 font-medium hover:gap-2 transition-all duration-200">
-          Learn more <span>&rarr;</span>
-        </a>
-      </div>
-
-      {# Product 2: Gaamma #}
-      <div class="group bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-14 h-14 bg-warm-surface rounded-xl flex items-center justify-center text-warm-charcoal mb-6 group-hover:bg-warm-charcoal group-hover:text-white transition-colors duration-300">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Gaamma</h3>
-        <p class="text-warm-600 leading-relaxed mb-6">Full-scale manufacturing ERP platform focused on operational efficiency and digital transformation for production environments.</p>
-        <a href="/contact/" class="inline-flex items-center gap-1 text-warm-charcoal font-medium hover:gap-2 transition-all duration-200">
-          Learn more <span>&rarr;</span>
-        </a>
-      </div>
-
-      {# Product 3: Dental AI Assistant (Coming Soon) #}
-      <div class="group bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <span class="inline-flex items-center px-3 py-1 text-xs font-medium bg-warm-surface text-warm-600 rounded-full mb-6">
-          Coming Soon
-        </span>
-        <div class="w-14 h-14 bg-warm-surface rounded-xl flex items-center justify-center text-warm-charcoal mb-6 group-hover:bg-warm-charcoal group-hover:text-white transition-colors duration-300">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Dental AI Assistant</h3>
-        <p class="text-warm-600 leading-relaxed mb-6">Upcoming AI assistant designed for dental operations and customer interaction. Part of our long-term vertical AI roadmap.</p>
-        <span class="inline-flex items-center gap-1 text-warm-400 font-medium">
-          In Development
-        </span>
-      </div>
-    </div>
   </div>
 </section>
 
