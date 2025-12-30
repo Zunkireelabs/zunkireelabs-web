@@ -34,7 +34,7 @@
       ]
     },
     {
-      "label": "Services",
+      "label": "Solutions",
       "url": "/services/"
     },
     {
@@ -57,14 +57,18 @@
       { "label": "Gaamma", "url": "/products/gaamma/" },
       { "label": "Dental AI Assistant", "url": "/products/dental-ai/" }
     ],
+    "solutions": [
+      { "label": "Web Development", "url": "/services/#web" },
+      { "label": "AI Solutions", "url": "/services/#ai" },
+      { "label": "Mobile Apps", "url": "/services/#mobile" },
+      { "label": "UI/UX Design", "url": "/services/" },
+      { "label": "Cloud & DevOps", "url": "/services/" }
+    ],
     "company": [
       { "label": "About Us", "url": "/about/" },
       { "label": "Careers", "url": "/careers/" },
-      { "label": "Contact", "url": "/contact/" }
-    ],
-    "resources": [
       { "label": "Customer Stories", "url": "/customers/" },
-      { "label": "Services", "url": "/services/" }
+      { "label": "Contact", "url": "/contact/" }
     ]
   }
 }

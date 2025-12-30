@@ -260,265 +260,871 @@ permalink: /
 </section>
 
 {# =====================================================
-   SECTION 5: ZUNKIREE SEARCH FEATURE (Tabbed Interface)
+   SECTION 5: ZUNKIREE SEARCH FEATURE (Professional Tabbed Interface)
    ===================================================== #}
-<section class="py-16 md:py-24 lg:py-32 bg-warm-off-white" x-data="{ activeTab: 1 }">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    {# Section Header #}
-    <div class="flex items-start justify-between mb-12" data-reveal>
-      <div>
-        <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-3">
+<section class="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-white via-warm-off-white to-warm-off-white relative overflow-hidden" x-data="{ activeTab: 1 }">
+  {# Subtle background pattern #}
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23000000&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+  <div class="max-w-[1200px] mx-auto px-5 md:px-10 relative">
+    {# Section Header - Enhanced #}
+    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 mb-14 md:mb-16" data-reveal>
+      <div class="max-w-xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-zunkiree-50 rounded-full mb-4">
+          <span class="w-1.5 h-1.5 bg-zunkiree-600 rounded-full animate-pulse"></span>
+          <span class="text-xs font-semibold text-zunkiree-700 tracking-wide uppercase">Flagship Product</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-[48px] font-semibold text-warm-black tracking-[-0.03em] leading-[1.1] mb-4">
           Zunkiree Search
         </h2>
-        <p class="text-lg md:text-xl text-warm-600 tracking-[-0.01em]">
+        <p class="text-lg md:text-xl text-warm-600 tracking-[-0.01em] leading-relaxed">
           The AI-native interaction layer for modern platforms
         </p>
       </div>
-      <a href="/products/search/" class="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 border border-warm-border rounded-full text-warm-700 font-medium hover:bg-warm-surface transition-all duration-200">
-        Explore
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <a href="/products/search/" class="group inline-flex items-center gap-2 px-6 py-3 bg-white border border-warm-200 rounded-full text-warm-700 font-medium hover:border-zunkiree-200 hover:bg-zunkiree-50 transition-all duration-300 shadow-sm">
+        Explore Product
+        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
       </a>
     </div>
 
-    {# Two Column Layout: Tabs + Preview #}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-      {# Left: Clickable Tabs #}
-      <div class="space-y-3" data-reveal>
-        {# Tab 1: Reduce Friction #}
-        <button
-          @click="activeTab = 1"
-          class="w-full text-left p-4 rounded-xl transition-all duration-200"
-          :class="activeTab === 1 ? 'bg-warm-surface' : 'hover:bg-warm-surface/50'"
-        >
-          <div class="flex items-start gap-3">
-            <div class="w-6 h-6 mt-0.5 flex-shrink-0" :class="activeTab === 1 ? 'text-zunkiree-600' : 'text-warm-400'">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
-            <div>
-              <span class="font-medium text-warm-black block">Reduce friction</span>
-              <p
-                class="text-warm-600 text-sm mt-1.5 leading-relaxed overflow-hidden transition-all duration-300"
-                :class="activeTab === 1 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
-              >
-                Streamline how users discover and understand information. Natural language queries replace complex filters and navigation.
-              </p>
-            </div>
-          </div>
-        </button>
-
-        {# Tab 2: Complex to Conversational #}
-        <button
-          @click="activeTab = 2"
-          class="w-full text-left p-4 rounded-xl transition-all duration-200"
-          :class="activeTab === 2 ? 'bg-warm-surface' : 'hover:bg-warm-surface/50'"
-        >
-          <div class="flex items-start gap-3">
-            <div class="w-6 h-6 mt-0.5 flex-shrink-0" :class="activeTab === 2 ? 'text-zunkiree-600' : 'text-warm-400'">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-              </svg>
-            </div>
-            <div>
-              <span class="font-medium text-warm-black block">Complex to conversational</span>
-              <p
-                class="text-warm-600 text-sm mt-1.5 leading-relaxed overflow-hidden transition-all duration-300"
-                :class="activeTab === 2 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
-              >
-                Transform structured data into accessible dialogue. Users ask questions in plain language and receive contextual answers.
-              </p>
-            </div>
-          </div>
-        </button>
-
-        {# Tab 3: Improve Engagement #}
-        <button
-          @click="activeTab = 3"
-          class="w-full text-left p-4 rounded-xl transition-all duration-200"
-          :class="activeTab === 3 ? 'bg-warm-surface' : 'hover:bg-warm-surface/50'"
-        >
-          <div class="flex items-start gap-3">
-            <div class="w-6 h-6 mt-0.5 flex-shrink-0" :class="activeTab === 3 ? 'text-zunkiree-600' : 'text-warm-400'">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
-            </div>
-            <div>
-              <span class="font-medium text-warm-black block">Improve engagement</span>
-              <p
-                class="text-warm-600 text-sm mt-1.5 leading-relaxed overflow-hidden transition-all duration-300"
-                :class="activeTab === 3 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
-              >
-                Clearer touchpoints lead to better user experiences. Increase time-on-site and reduce support queries with instant answers.
-              </p>
-            </div>
-          </div>
-        </button>
-
-        {# Tab 4: Scale Intelligently #}
-        <button
-          @click="activeTab = 4"
-          class="w-full text-left p-4 rounded-xl transition-all duration-200"
-          :class="activeTab === 4 ? 'bg-warm-surface' : 'hover:bg-warm-surface/50'"
-        >
-          <div class="flex items-start gap-3">
-            <div class="w-6 h-6 mt-0.5 flex-shrink-0" :class="activeTab === 4 ? 'text-zunkiree-600' : 'text-warm-400'">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <div>
-              <span class="font-medium text-warm-black block">Scale intelligently</span>
-              <p
-                class="text-warm-600 text-sm mt-1.5 leading-relaxed overflow-hidden transition-all duration-300"
-                :class="activeTab === 4 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
-              >
-                Handle growing data volumes and user traffic without degrading performance. Built for enterprise-scale workloads.
-              </p>
-            </div>
-          </div>
-        </button>
-
-        {# CTA Button #}
-        <div class="pt-4">
-          <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200">
-            Schedule a Demo
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      {# Right: Preview Cards #}
-      <div class="relative min-h-[400px]" data-reveal>
-        {# Card 1: Search Query Example #}
-        <div
-          x-show="activeTab === 1"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 translate-y-4"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-200"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-4"
-          class="absolute inset-0 bg-warm-surface rounded-2xl p-8 flex flex-col"
-        >
-          <div class="flex-1 flex flex-col items-center justify-center text-center">
-            <div class="w-16 h-16 bg-zunkiree-600 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
-            <p class="text-warm-black font-medium text-lg mb-4">Natural Language Query</p>
-            <div class="bg-white rounded-xl p-4 w-full max-w-sm shadow-sm">
-              <p class="text-warm-600 italic">"Show me all orders from last month with delivery issues"</p>
-            </div>
-            <p class="text-warm-500 text-sm mt-4">Instant contextual results</p>
-          </div>
-        </div>
-
-        {# Card 2: Conversational Interface #}
-        <div
-          x-show="activeTab === 2"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 translate-y-4"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-200"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-4"
-          class="absolute inset-0 bg-warm-surface rounded-2xl p-8 flex flex-col"
-        >
-          <div class="flex-1 flex flex-col justify-center space-y-4">
-            {# User message #}
-            <div class="flex justify-end">
-              <div class="bg-zunkiree-600 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[80%]">
-                <p class="text-sm">What's the return policy for electronics?</p>
-              </div>
-            </div>
-            {# AI response #}
-            <div class="flex justify-start">
-              <div class="bg-white rounded-2xl rounded-bl-md px-4 py-3 max-w-[80%] shadow-sm">
-                <p class="text-sm text-warm-700">Electronics can be returned within 30 days with original packaging. Items must be in working condition. Refunds are processed within 5-7 business days.</p>
-              </div>
-            </div>
-            {# Follow-up #}
-            <div class="flex justify-end">
-              <div class="bg-zunkiree-600 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[80%]">
-                <p class="text-sm">Does that include opened items?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {# Card 3: Engagement Metrics #}
-        <div
-          x-show="activeTab === 3"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 translate-y-4"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-200"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-4"
-          class="absolute inset-0 bg-warm-surface rounded-2xl p-8 flex flex-col"
-        >
-          <div class="flex-1 flex flex-col justify-center">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-white rounded-xl p-5 text-center">
-                <p class="text-3xl font-medium text-zunkiree-600 mb-1">+47%</p>
-                <p class="text-warm-600 text-sm">User engagement</p>
-              </div>
-              <div class="bg-white rounded-xl p-5 text-center">
-                <p class="text-3xl font-medium text-zunkiree-600 mb-1">-62%</p>
-                <p class="text-warm-600 text-sm">Support tickets</p>
-              </div>
-              <div class="bg-white rounded-xl p-5 text-center">
-                <p class="text-3xl font-medium text-zunkiree-600 mb-1">3.2x</p>
-                <p class="text-warm-600 text-sm">Time on site</p>
-              </div>
-              <div class="bg-white rounded-xl p-5 text-center">
-                <p class="text-3xl font-medium text-zunkiree-600 mb-1">89%</p>
-                <p class="text-warm-600 text-sm">Query resolution</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {# Card 4: Scale Infrastructure #}
-        <div
-          x-show="activeTab === 4"
-          x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 translate-y-4"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-200"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-4"
-          class="absolute inset-0 bg-warm-surface rounded-2xl p-8 flex flex-col"
-        >
-          <div class="flex-1 flex flex-col justify-center">
-            {# Timeline/steps visual #}
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <div class="w-3 h-3 bg-zunkiree-600 rounded-full"></div>
-                <div class="flex-1 bg-white rounded-xl p-4">
-                  <p class="text-warm-black font-medium">1M+ queries/day</p>
-                  <p class="text-warm-500 text-sm">Handled without performance degradation</p>
+    {# Main Content - Card Container #}
+    <div class="bg-white rounded-3xl shadow-xl shadow-warm-900/5 border border-warm-100 overflow-hidden" data-reveal>
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+        {# Left: Feature Tabs #}
+        <div class="lg:col-span-5 p-6 md:p-8 lg:p-10 bg-gradient-to-br from-warm-50/50 to-white border-b lg:border-b-0 lg:border-r border-warm-100">
+          <div class="space-y-2">
+            {# Tab 1: Reduce Friction #}
+            <button
+              @click="activeTab = 1"
+              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              :class="activeTab === 1 ? 'bg-white shadow-lg shadow-warm-900/5 border border-warm-100' : 'hover:bg-white/60'"
+            >
+              <div class="flex items-start gap-4 relative z-10">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                  :class="activeTab === 1 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-warm-100 text-warm-500 group-hover:bg-warm-200'"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-warm-900 text-[15px]">Reduce friction</span>
+                    <svg
+                      class="w-4 h-4 text-zunkiree-600 transition-all duration-300"
+                      :class="activeTab === 1 ? 'opacity-100' : 'opacity-0'"
+                      fill="currentColor" viewBox="0 0 20 20"
+                    >
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p
+                    class="text-warm-600 text-sm mt-2 leading-relaxed overflow-hidden transition-all duration-300"
+                    :class="activeTab === 1 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
+                  >
+                    Natural language queries replace complex filters. Users find what they need instantly.
+                  </p>
                 </div>
               </div>
-              <div class="flex items-center gap-4">
-                <div class="w-3 h-3 bg-zunkiree-600 rounded-full"></div>
-                <div class="flex-1 bg-white rounded-xl p-4">
-                  <p class="text-warm-black font-medium">&lt;100ms response time</p>
-                  <p class="text-warm-500 text-sm">P95 latency across all queries</p>
+            </button>
+
+            {# Tab 2: Complex to Conversational #}
+            <button
+              @click="activeTab = 2"
+              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              :class="activeTab === 2 ? 'bg-white shadow-lg shadow-warm-900/5 border border-warm-100' : 'hover:bg-white/60'"
+            >
+              <div class="flex items-start gap-4 relative z-10">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                  :class="activeTab === 2 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-warm-100 text-warm-500 group-hover:bg-warm-200'"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-warm-900 text-[15px]">Complex to conversational</span>
+                    <svg
+                      class="w-4 h-4 text-zunkiree-600 transition-all duration-300"
+                      :class="activeTab === 2 ? 'opacity-100' : 'opacity-0'"
+                      fill="currentColor" viewBox="0 0 20 20"
+                    >
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p
+                    class="text-warm-600 text-sm mt-2 leading-relaxed overflow-hidden transition-all duration-300"
+                    :class="activeTab === 2 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
+                  >
+                    Transform structured data into accessible dialogue with contextual answers.
+                  </p>
                 </div>
               </div>
-              <div class="flex items-center gap-4">
-                <div class="w-3 h-3 bg-zunkiree-600 rounded-full"></div>
-                <div class="flex-1 bg-white rounded-xl p-4">
-                  <p class="text-warm-black font-medium">Auto-scaling</p>
-                  <p class="text-warm-500 text-sm">Elastic infrastructure that grows with demand</p>
+            </button>
+
+            {# Tab 3: Improve Engagement #}
+            <button
+              @click="activeTab = 3"
+              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              :class="activeTab === 3 ? 'bg-white shadow-lg shadow-warm-900/5 border border-warm-100' : 'hover:bg-white/60'"
+            >
+              <div class="flex items-start gap-4 relative z-10">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                  :class="activeTab === 3 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-warm-100 text-warm-500 group-hover:bg-warm-200'"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-warm-900 text-[15px]">Improve engagement</span>
+                    <svg
+                      class="w-4 h-4 text-zunkiree-600 transition-all duration-300"
+                      :class="activeTab === 3 ? 'opacity-100' : 'opacity-0'"
+                      fill="currentColor" viewBox="0 0 20 20"
+                    >
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p
+                    class="text-warm-600 text-sm mt-2 leading-relaxed overflow-hidden transition-all duration-300"
+                    :class="activeTab === 3 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
+                  >
+                    Increase time-on-site and reduce support queries with instant answers.
+                  </p>
+                </div>
+              </div>
+            </button>
+
+            {# Tab 4: Scale Intelligently #}
+            <button
+              @click="activeTab = 4"
+              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              :class="activeTab === 4 ? 'bg-white shadow-lg shadow-warm-900/5 border border-warm-100' : 'hover:bg-white/60'"
+            >
+              <div class="flex items-start gap-4 relative z-10">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                  :class="activeTab === 4 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-warm-100 text-warm-500 group-hover:bg-warm-200'"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-warm-900 text-[15px]">Scale intelligently</span>
+                    <svg
+                      class="w-4 h-4 text-zunkiree-600 transition-all duration-300"
+                      :class="activeTab === 4 ? 'opacity-100' : 'opacity-0'"
+                      fill="currentColor" viewBox="0 0 20 20"
+                    >
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p
+                    class="text-warm-600 text-sm mt-2 leading-relaxed overflow-hidden transition-all duration-300"
+                    :class="activeTab === 4 ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'"
+                  >
+                    Built for enterprise-scale workloads. Handle millions of queries effortlessly.
+                  </p>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          {# CTA Button - Prominent #}
+          <div class="mt-6 pt-6 border-t border-warm-200">
+            <a href="/contact/" class="group flex items-center justify-center gap-3 w-full px-6 py-4 bg-zunkiree-600 text-white font-semibold rounded-2xl hover:bg-zunkiree-700 transition-all duration-300 shadow-lg shadow-zunkiree-600/30 hover:shadow-xl hover:shadow-zunkiree-600/40 hover:-translate-y-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <span>Schedule a Demo</span>
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+            <p class="text-center text-warm-500 text-xs mt-3">Free consultation - No commitment required</p>
+          </div>
+        </div>
+
+        {# Right: Preview Cards - Enhanced with decorative background #}
+        <div class="lg:col-span-7 relative min-h-[420px] md:min-h-[520px] overflow-hidden">
+          {# Decorative Background Layer #}
+          <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
+            {# Gradient Orbs #}
+            <div class="absolute top-10 right-10 w-64 h-64 bg-zunkiree-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+            {# Grid Pattern #}
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+            {# Decorative Dots #}
+            <div class="absolute top-8 left-8 flex gap-1.5">
+              <div class="w-2 h-2 rounded-full bg-zunkiree-300"></div>
+              <div class="w-2 h-2 rounded-full bg-warm-300"></div>
+              <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+            </div>
+            <div class="absolute bottom-8 right-8 flex gap-1.5">
+              <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+              <div class="w-2 h-2 rounded-full bg-warm-300"></div>
+              <div class="w-2 h-2 rounded-full bg-zunkiree-300"></div>
+            </div>
+          </div>
+
+          {# Card 1: Interactive Search Demo - AI Answer Style #}
+          <div
+            x-show="activeTab === 1"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="absolute inset-0 p-5 md:p-8 flex flex-col overflow-y-auto"
+            x-data="{
+              searchText: '',
+              answerText: '',
+              isTypingQuery: false,
+              isTypingAnswer: false,
+              showAnswer: false,
+              showSources: false,
+              query: 'What is the return policy?',
+              answer: 'You can return most items within 30 days of purchase for a full refund. Items must be in original condition with tags attached. Electronics require original packaging. Refunds are processed within 5-7 business days to your original payment method.',
+              sources: [
+                { page: '/help/returns', title: 'Help Center - Returns', icon: 'help' },
+                { page: '/policies/refunds', title: 'Refund Policy', icon: 'doc' },
+                { page: '/faq#returns', title: 'FAQ - Returns', icon: 'faq' }
+              ],
+              querySpeed: 35,
+              answerSpeed: 12,
+              init() {
+                this.runDemo();
+              },
+              async runDemo() {
+                this.searchText = '';
+                this.answerText = '';
+                this.showAnswer = false;
+                this.showSources = false;
+                this.isTypingQuery = false;
+                this.isTypingAnswer = false;
+
+                await new Promise(r => setTimeout(r, 600));
+
+                this.isTypingQuery = true;
+                for (let i = 0; i < this.query.length; i++) {
+                  this.searchText = this.query.substring(0, i + 1);
+                  await new Promise(r => setTimeout(r, this.querySpeed));
+                }
+                this.isTypingQuery = false;
+
+                await new Promise(r => setTimeout(r, 500));
+                this.showAnswer = true;
+
+                await new Promise(r => setTimeout(r, 300));
+                this.isTypingAnswer = true;
+                for (let i = 0; i < this.answer.length; i++) {
+                  this.answerText = this.answer.substring(0, i + 1);
+                  await new Promise(r => setTimeout(r, this.answerSpeed));
+                }
+                this.isTypingAnswer = false;
+
+                await new Promise(r => setTimeout(r, 400));
+                this.showSources = true;
+
+                await new Promise(r => setTimeout(r, 5000));
+                this.runDemo();
+              }
+            }"
+          >
+            <div class="flex-1 flex flex-col items-center justify-start relative z-10 pt-2">
+              {# Search Widget Container #}
+              <div class="w-full max-w-lg">
+                {# Search Bar #}
+                <div class="bg-white rounded-2xl shadow-xl shadow-warm-900/10 border border-warm-200">
+                  <div class="flex items-center gap-3 p-2 pl-5">
+                    <svg class="w-5 h-5 text-warm-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <div class="flex-1 py-2 min-h-[28px]">
+                      <span class="text-warm-800 text-[15px]" x-text="searchText"></span>
+                      <span x-show="!searchText && !isTypingQuery" class="text-warm-400 text-[15px]">Ask a question...</span>
+                      <span x-show="isTypingQuery" class="inline-block w-0.5 h-5 bg-blue-500 animate-pulse align-middle"></span>
+                    </div>
+                    <button class="px-5 py-2.5 bg-blue-400 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center gap-2 transition-colors">
+                      Search
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {# Powered by badge #}
+                <div class="flex items-center justify-center gap-2 mt-3">
+                  <span class="text-amber-500 text-sm">&#10024;</span>
+                  <span class="text-warm-500 text-sm">Powered by</span>
+                  <span class="text-blue-500 font-semibold text-sm">Zunkiree AI</span>
+                </div>
+
+                {# Answer Card #}
+                <div
+                  x-show="showAnswer"
+                  x-transition:enter="transition ease-out duration-300"
+                  x-transition:enter-start="opacity-0 translate-y-4"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  class="mt-4 bg-white rounded-2xl shadow-lg border border-warm-200 overflow-hidden"
+                >
+                  {# Answer Content #}
+                  <div class="px-5 py-4">
+                    <p class="text-warm-700 text-[15px] leading-relaxed">
+                      <span x-text="answerText"></span>
+                      <span x-show="isTypingAnswer" class="inline-block w-0.5 h-4 bg-blue-500 animate-pulse align-middle ml-0.5"></span>
+                    </p>
+                  </div>
+
+                  {# Sources Section - Inside Answer Card #}
+                  <div
+                    x-show="showSources"
+                    x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    class="border-t border-warm-100 bg-warm-50/50"
+                  >
+                    <div class="px-4 py-2 flex items-center gap-2">
+                      <svg class="w-3.5 h-3.5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                      </svg>
+                      <span class="text-warm-500 text-xs font-medium">Sources</span>
+                    </div>
+                    <div class="px-4 pb-3 flex flex-wrap gap-2">
+                      <template x-for="(source, index) in sources" :key="index">
+                        <a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-lg border border-warm-200 hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer group">
+                          <svg class="w-3.5 h-3.5 text-warm-400 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                          </svg>
+                          <span class="text-xs text-warm-700 group-hover:text-blue-700" x-text="source.title"></span>
+                        </a>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# Card 2: Complex to Conversational - Search Bar + Chat Demo #}
+          <div
+            x-show="activeTab === 2"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="absolute inset-0 p-4 md:p-6 flex flex-col overflow-y-auto"
+            x-data="{
+              searchText: '',
+              isTypingSearch: false,
+              showChat: false,
+              messages: [],
+              currentChatText: '',
+              isTypingChat: false,
+              showTypingIndicator: false,
+              typeSpeed: 25,
+              conversation: [
+                {
+                  role: 'user',
+                  text: 'Show me sales data for Q4',
+                  isSearch: true
+                },
+                {
+                  role: 'ai',
+                  text: 'Here is your Q4 2024 sales summary:',
+                  data: [
+                    { label: 'Total Revenue', value: '$2.4M', change: '+18%', up: true },
+                    { label: 'Orders', value: '12,847', change: '+23%', up: true },
+                    { label: 'Avg Order Value', value: '$186', change: '+8%', up: true }
+                  ],
+                  sources: [
+                    { title: 'Q4 Revenue Report' },
+                    { title: 'Sales Dashboard' }
+                  ]
+                },
+                {
+                  role: 'user',
+                  text: 'Break it down by month'
+                },
+                {
+                  role: 'ai',
+                  text: 'Monthly breakdown for Q4:',
+                  months: [
+                    { name: 'October', revenue: '$720K', orders: '3,890', percent: '30%' },
+                    { name: 'November', revenue: '$850K', orders: '4,520', percent: '35%' },
+                    { name: 'December', revenue: '$830K', orders: '4,437', percent: '35%' }
+                  ],
+                  sources: [
+                    { title: 'Monthly Analytics' },
+                    { title: 'Order History' }
+                  ]
+                },
+                {
+                  role: 'user',
+                  text: 'Which products drove November sales?'
+                },
+                {
+                  role: 'ai',
+                  text: 'Top 3 products in November:',
+                  products: [
+                    { rank: 1, name: 'Enterprise Suite', revenue: '$340K', units: '89' },
+                    { rank: 2, name: 'Pro Analytics', revenue: '$285K', units: '156' },
+                    { rank: 3, name: 'Team Starter', revenue: '$125K', units: '892' }
+                  ],
+                  sources: [
+                    { title: 'Product Sales' },
+                    { title: 'November Report' }
+                  ]
+                },
+                {
+                  role: 'user',
+                  text: 'Compare Enterprise Suite to last quarter'
+                },
+                {
+                  role: 'ai',
+                  text: 'Enterprise Suite: Q4 vs Q3 comparison',
+                  comparison: [
+                    { metric: 'Revenue', current: '$890K', previous: '$650K', change: '+37%', up: true },
+                    { metric: 'Units Sold', current: '245', previous: '178', change: '+38%', up: true },
+                    { metric: 'Win Rate', current: '68%', previous: '61%', change: '+7pts', up: true }
+                  ],
+                  sources: [
+                    { title: 'Q4 vs Q3 Analysis' },
+                    { title: 'Product Performance' }
+                  ]
+                },
+                {
+                  role: 'user',
+                  text: 'What regions are growing fastest?'
+                },
+                {
+                  role: 'ai',
+                  text: 'Fastest growing regions (Q4 YoY):',
+                  regions: [
+                    { name: 'APAC', growth: '+45%', revenue: '$580K' },
+                    { name: 'EMEA', growth: '+32%', revenue: '$720K' },
+                    { name: 'Americas', growth: '+21%', revenue: '$1.1M' }
+                  ],
+                  sources: [
+                    { title: 'Regional Sales' },
+                    { title: 'YoY Growth Data' }
+                  ]
+                }
+              ],
+              init() {
+                this.runDemo();
+              },
+              async scrollToBottom(delay = 50) {
+                await new Promise(r => setTimeout(r, delay));
+                await this.$nextTick();
+                if (this.$refs.chatArea) {
+                  this.$refs.chatArea.scrollTo({ top: this.$refs.chatArea.scrollHeight, behavior: 'smooth' });
+                }
+                await new Promise(r => setTimeout(r, 200));
+              },
+              async runDemo() {
+                this.searchText = '';
+                this.isTypingSearch = false;
+                this.showChat = false;
+                this.messages = [];
+                this.currentChatText = '';
+
+                await new Promise(r => setTimeout(r, 600));
+
+                for (let i = 0; i < this.conversation.length; i++) {
+                  const msg = this.conversation[i];
+
+                  if (msg.role === 'user') {
+                    if (msg.isSearch) {
+                      // Type in search bar
+                      this.isTypingSearch = true;
+                      this.searchText = '';
+                      for (let j = 0; j < msg.text.length; j++) {
+                        this.searchText = msg.text.substring(0, j + 1);
+                        await new Promise(r => setTimeout(r, this.typeSpeed));
+                      }
+                      await new Promise(r => setTimeout(r, 400));
+                      this.isTypingSearch = false;
+                      this.showChat = true;
+                      await this.$nextTick();
+                      this.messages.push({ role: 'user', text: msg.text });
+                      await this.scrollToBottom();
+                    } else {
+                      // Type in chat input - scroll during typing
+                      this.isTypingChat = true;
+                      this.currentChatText = '';
+                      await this.scrollToBottom(0);
+                      for (let j = 0; j < msg.text.length; j++) {
+                        this.currentChatText = msg.text.substring(0, j + 1);
+                        await new Promise(r => setTimeout(r, this.typeSpeed));
+                        // Scroll every 10 characters while typing
+                        if (j % 10 === 0) {
+                          this.$refs.chatArea?.scrollTo({ top: this.$refs.chatArea.scrollHeight, behavior: 'smooth' });
+                        }
+                      }
+                      await new Promise(r => setTimeout(r, 300));
+                      this.isTypingChat = false;
+                      this.currentChatText = '';
+                      this.messages.push({ role: 'user', text: msg.text });
+                      await this.scrollToBottom();
+                    }
+                  } else {
+                    this.showTypingIndicator = true;
+                    await this.scrollToBottom();
+                    await new Promise(r => setTimeout(r, 400));
+                    this.showTypingIndicator = false;
+                    this.messages.push({
+                      role: 'ai',
+                      text: msg.text,
+                      data: msg.data || null,
+                      months: msg.months || null,
+                      products: msg.products || null,
+                      comparison: msg.comparison || null,
+                      regions: msg.regions || null,
+                      sources: msg.sources || null
+                    });
+                    await this.scrollToBottom(100);
+                    await new Promise(r => setTimeout(r, 500));
+                  }
+                }
+
+                await new Promise(r => setTimeout(r, 3500));
+                this.runDemo();
+              }
+            }"
+          >
+            <div class="flex-1 flex flex-col items-center justify-start relative z-10">
+              <div class="w-full max-w-lg">
+                {# Search Bar - Same style as Reduce Friction #}
+                <div class="bg-white rounded-2xl shadow-xl shadow-warm-900/10 border border-warm-200">
+                  <div class="flex items-center gap-3 p-2 pl-5">
+                    <svg class="w-5 h-5 text-warm-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                    </svg>
+                    <div class="flex-1 py-2 min-h-[28px]">
+                      <span class="text-warm-800 text-[15px]" x-text="searchText"></span>
+                      <span x-show="!searchText && !isTypingSearch" class="text-warm-400 text-[15px]">Ask about your data...</span>
+                      <span x-show="isTypingSearch" class="inline-block w-0.5 h-5 bg-blue-500 animate-pulse align-middle"></span>
+                    </div>
+                    <button class="px-5 py-2.5 bg-blue-400 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center gap-2 transition-colors">
+                      Search
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                {# Powered by badge #}
+                <div class="flex items-center justify-center gap-2 mt-3">
+                  <span class="text-amber-500 text-sm">&#10024;</span>
+                  <span class="text-warm-500 text-sm">Powered by</span>
+                  <span class="text-blue-500 font-semibold text-sm">Zunkiree AI</span>
+                </div>
+
+                {# Chat Container - appears after search #}
+                <div
+                  x-show="showChat"
+                  x-transition:enter="transition ease-out duration-300"
+                  x-transition:enter-start="opacity-0 translate-y-4"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  class="mt-4 bg-white rounded-2xl shadow-lg border border-warm-200 overflow-hidden"
+                >
+                  {# Messages Area #}
+                  <div class="p-3 space-y-2.5 max-h-[280px] overflow-y-auto scroll-smooth" x-ref="chatArea" x-effect="if($refs.chatArea) $refs.chatArea.scrollTo({ top: $refs.chatArea.scrollHeight, behavior: 'smooth' })">
+                    <template x-for="(msg, idx) in messages" :key="idx">
+                      <div>
+                        {# User Message #}
+                        <template x-if="msg.role === 'user'">
+                          <div class="flex justify-end">
+                            <div class="bg-blue-400 rounded-2xl rounded-br-sm px-3.5 py-2 max-w-[85%]">
+                              <p class="text-sm text-white" x-text="msg.text"></p>
+                            </div>
+                          </div>
+                        </template>
+
+                        {# AI Message #}
+                        <template x-if="msg.role === 'ai'">
+                          <div class="flex justify-start">
+                            <div class="bg-warm-100 rounded-2xl rounded-bl-sm px-3.5 py-2.5 max-w-[92%]">
+                              <p class="text-sm text-warm-800 mb-2" x-text="msg.text"></p>
+
+                              {# Summary Data Cards #}
+                              <template x-if="msg.data">
+                                <div class="grid grid-cols-3 gap-1.5">
+                                  <template x-for="(item, i) in msg.data" :key="i">
+                                    <div class="bg-white rounded-lg p-2 text-center">
+                                      <p class="font-bold text-warm-900 text-sm" x-text="item.value"></p>
+                                      <p class="text-warm-500 text-[9px] leading-tight" x-text="item.label"></p>
+                                      <p class="text-[10px] font-medium" :class="item.up ? 'text-green-600' : 'text-red-500'" x-text="item.change"></p>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+
+                              {# Monthly Breakdown #}
+                              <template x-if="msg.months">
+                                <div class="space-y-1.5">
+                                  <template x-for="(item, i) in msg.months" :key="i">
+                                    <div class="bg-white rounded-lg p-2 flex items-center gap-2">
+                                      <div class="flex-1">
+                                        <p class="font-medium text-warm-900 text-xs" x-text="item.name"></p>
+                                        <p class="text-warm-500 text-[10px]" x-text="item.orders + ' orders'"></p>
+                                      </div>
+                                      <p class="font-semibold text-warm-900 text-xs" x-text="item.revenue"></p>
+                                      <div class="w-12 bg-warm-200 rounded-full h-1.5">
+                                        <div class="bg-blue-400 h-1.5 rounded-full" :style="'width: ' + item.percent"></div>
+                                      </div>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+
+                              {# Products List #}
+                              <template x-if="msg.products">
+                                <div class="space-y-1.5">
+                                  <template x-for="(item, i) in msg.products" :key="i">
+                                    <div class="bg-white rounded-lg p-2 flex items-center gap-2">
+                                      <div class="w-5 h-5 bg-blue-100 rounded flex items-center justify-center text-blue-600 font-bold text-[10px]" x-text="item.rank"></div>
+                                      <div class="flex-1 min-w-0">
+                                        <p class="font-medium text-warm-900 text-xs truncate" x-text="item.name"></p>
+                                        <p class="text-warm-500 text-[10px]" x-text="item.units + ' units'"></p>
+                                      </div>
+                                      <p class="font-semibold text-warm-900 text-xs" x-text="item.revenue"></p>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+
+                              {# Comparison Data #}
+                              <template x-if="msg.comparison">
+                                <div class="space-y-1.5">
+                                  <template x-for="(item, i) in msg.comparison" :key="i">
+                                    <div class="bg-white rounded-lg p-2 flex items-center gap-2">
+                                      <div class="flex-1">
+                                        <p class="text-warm-500 text-[10px]" x-text="item.metric"></p>
+                                        <p class="font-semibold text-warm-900 text-xs" x-text="item.current"></p>
+                                      </div>
+                                      <div class="text-right">
+                                        <p class="text-warm-400 text-[10px]">vs <span x-text="item.previous"></span></p>
+                                        <p class="font-medium text-[10px]" :class="item.up ? 'text-green-600' : 'text-red-500'" x-text="item.change"></p>
+                                      </div>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+
+                              {# Region Data #}
+                              <template x-if="msg.regions">
+                                <div class="space-y-1.5">
+                                  <template x-for="(item, i) in msg.regions" :key="i">
+                                    <div class="bg-white rounded-lg p-2 flex items-center gap-2">
+                                      <div class="flex-1">
+                                        <p class="font-medium text-warm-900 text-xs" x-text="item.name"></p>
+                                        <p class="text-warm-500 text-[10px]" x-text="item.revenue"></p>
+                                      </div>
+                                      <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-[10px] font-semibold" x-text="item.growth"></span>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+
+                              {# Sources #}
+                              <template x-if="msg.sources">
+                                <div class="mt-2 pt-2 border-t border-warm-200">
+                                  <div class="flex items-center gap-1.5 mb-1.5">
+                                    <svg class="w-3 h-3 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                                    </svg>
+                                    <span class="text-warm-500 text-[10px] font-medium">Sources</span>
+                                  </div>
+                                  <div class="flex flex-wrap gap-1.5">
+                                    <template x-for="(source, si) in msg.sources" :key="si">
+                                      <a class="inline-flex items-center gap-1 px-2 py-1 bg-white rounded-md border border-warm-200 hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer group">
+                                        <svg class="w-2.5 h-2.5 text-warm-400 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        <span class="text-[10px] text-warm-700 group-hover:text-blue-700" x-text="source.title"></span>
+                                      </a>
+                                    </template>
+                                  </div>
+                                </div>
+                              </template>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                    </template>
+
+                    {# Typing in Chat #}
+                    <div x-show="isTypingChat" class="flex justify-end">
+                      <div class="bg-blue-400 rounded-2xl rounded-br-sm px-3.5 py-2 max-w-[85%]">
+                        <p class="text-sm text-white">
+                          <span x-text="currentChatText"></span>
+                          <span class="inline-block w-0.5 h-4 bg-white animate-pulse ml-0.5 align-middle"></span>
+                        </p>
+                      </div>
+                    </div>
+
+                    {# AI Typing Indicator #}
+                    <div x-show="showTypingIndicator" class="flex justify-start" x-transition>
+                      <div class="bg-warm-100 rounded-2xl rounded-bl-sm px-3.5 py-2.5">
+                        <div class="flex items-center gap-1">
+                          <span class="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce" style="animation-delay: 0ms"></span>
+                          <span class="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+                          <span class="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {# Chat Input Area #}
+                  <div class="px-3 py-2 border-t border-warm-100 bg-warm-50/50">
+                    <div class="flex items-center gap-2 bg-white rounded-lg px-3 py-1.5 border border-warm-200">
+                      <div class="flex-1 min-h-[24px]">
+                        <span x-show="!isTypingChat && !currentChatText" class="text-warm-400 text-sm">Follow up...</span>
+                        <span x-show="isTypingChat" class="text-warm-800 text-sm" x-text="currentChatText"></span>
+                      </div>
+                      <button class="p-1.5 bg-blue-400 hover:bg-blue-500 text-white rounded-lg transition-colors">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# Card 3: Engagement Metrics - Enhanced #}
+          <div
+            x-show="activeTab === 3"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="absolute inset-0 flex flex-col"
+          >
+            {# Dark gradient background #}
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+              <div class="absolute top-20 right-20 w-64 h-64 bg-zunkiree-500/20 rounded-full blur-3xl"></div>
+              <div class="absolute bottom-20 left-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"></div>
+              {# Grid overlay #}
+              <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col justify-center p-6 md:p-10 relative z-10">
+              <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full mb-3">
+                  <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  </svg>
+                  <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Performance Metrics</span>
+                </div>
+                <p class="text-white/50 text-sm">Real results from our customers</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 max-w-md mx-auto w-full">
+                <div class="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]">
+                  <p class="text-4xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent mb-1">+47%</p>
+                  <p class="text-white/50 text-sm">User engagement</p>
+                </div>
+                <div class="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]">
+                  <p class="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-1">-62%</p>
+                  <p class="text-white/50 text-sm">Support tickets</p>
+                </div>
+                <div class="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]">
+                  <p class="text-4xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent mb-1">3.2x</p>
+                  <p class="text-white/50 text-sm">Time on site</p>
+                </div>
+                <div class="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]">
+                  <p class="text-4xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent mb-1">89%</p>
+                  <p class="text-white/50 text-sm">Query resolution</p>
+                </div>
+              </div>
+
+              <p class="text-white/30 text-xs text-center mt-6 flex items-center justify-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Based on average customer results
+              </p>
+            </div>
+          </div>
+
+          {# Card 4: Scale Infrastructure - Enhanced #}
+          <div
+            x-show="activeTab === 4"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95"
+            class="absolute inset-0 p-6 md:p-10 flex flex-col"
+          >
+            <div class="flex-1 flex flex-col justify-center max-w-md mx-auto w-full relative z-10">
+              <div class="text-center mb-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-full border border-blue-100 mb-3">
+                  <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                  <span class="text-xs font-semibold text-blue-700 uppercase tracking-wider">Enterprise Scale</span>
+                </div>
+                <p class="text-warm-500 text-sm">Built for mission-critical workloads</p>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-4 group">
+                  <div class="w-12 h-12 bg-gradient-to-br from-zunkiree-500 to-zunkiree-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-zunkiree-500/20 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-xl p-4 flex-1 shadow-lg shadow-warm-900/5 border border-warm-100 group-hover:shadow-xl group-hover:border-zunkiree-100 transition-all">
+                    <p class="text-warm-900 font-semibold">1M+ queries/day</p>
+                    <p class="text-warm-500 text-sm mt-1">Handled without performance degradation</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 group">
+                  <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/20 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-xl p-4 flex-1 shadow-lg shadow-warm-900/5 border border-warm-100 group-hover:shadow-xl group-hover:border-green-100 transition-all">
+                    <p class="text-warm-900 font-semibold">&lt;100ms response time</p>
+                    <p class="text-warm-500 text-sm mt-1">P95 latency across all queries</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 group">
+                  <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-xl p-4 flex-1 shadow-lg shadow-warm-900/5 border border-warm-100 group-hover:shadow-xl group-hover:border-blue-100 transition-all">
+                    <p class="text-warm-900 font-semibold">Auto-scaling</p>
+                    <p class="text-warm-500 text-sm mt-1">Elastic infrastructure that grows with demand</p>
+                  </div>
                 </div>
               </div>
             </div>

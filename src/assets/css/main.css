@@ -560,3 +560,43 @@ html {
   transform: translateX(4px);
   box-shadow: 0 4px 12px rgba(235, 22, 0, 0.1);
 }
+
+/* Mobile flow dot glow effect */
+.mobile-flow-dot {
+  filter: drop-shadow(0 0 6px rgba(235, 22, 0, 0.6));
+}
+
+/* =====================================================
+   Testimonials Marquee Animation (Twitter-style)
+   ===================================================== */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Pause marquee on hover */
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
