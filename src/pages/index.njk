@@ -298,14 +298,519 @@ permalink: /
 
     {# Main Content - No inner box, content flows in outer container #}
     <div class="overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+      {# ==================== MOBILE ACCORDION LAYOUT (lg:hidden) ==================== #}
+      <div class="lg:hidden space-y-3" x-data="{
+        mobileActiveTab: 0,
+        demo1: { searchText: '', answerText: '', isTypingQuery: false, isTypingAnswer: false, showAnswer: false, showSources: false, running: false },
+        demo2: { searchText: '', isTypingSearch: false, showChat: false, messages: [], currentChatText: '', isTypingChat: false, showTypingIndicator: false, running: false },
+        query1: 'What is the return policy?',
+        answer1: 'You can return most items within 30 days of purchase for a full refund. Items must be in original condition with tags attached.',
+        sources1: [{ title: 'Help Center - Returns' }, { title: 'Refund Policy' }],
+        conv2: [
+          { role: 'user', text: 'Show me Q4 sales', isSearch: true },
+          { role: 'ai', text: 'Q4 2024 Summary:', data: [{ label: 'Revenue', value: '$2.4M', change: '+18%', up: true }, { label: 'Orders', value: '12,847', change: '+23%', up: true }] },
+          { role: 'user', text: 'Break it down by month' },
+          { role: 'ai', text: 'Monthly breakdown:', months: [{ name: 'Oct', revenue: '$720K', percent: '30%' }, { name: 'Nov', revenue: '$850K', percent: '35%' }, { name: 'Dec', revenue: '$830K', percent: '35%' }] }
+        ],
+        async runDemo1() {
+          if (this.demo1.running) return;
+          this.demo1.running = true;
+          this.demo1.searchText = '';
+          this.demo1.answerText = '';
+          this.demo1.showAnswer = false;
+          this.demo1.showSources = false;
+          this.demo1.isTypingQuery = false;
+          this.demo1.isTypingAnswer = false;
+          await new Promise(r => setTimeout(r, 400));
+          this.demo1.isTypingQuery = true;
+          for (let i = 0; i < this.query1.length; i++) {
+            if (this.mobileActiveTab !== 1) { this.demo1.running = false; return; }
+            this.demo1.searchText = this.query1.substring(0, i + 1);
+            await new Promise(r => setTimeout(r, 35));
+          }
+          this.demo1.isTypingQuery = false;
+          await new Promise(r => setTimeout(r, 400));
+          this.demo1.showAnswer = true;
+          await new Promise(r => setTimeout(r, 200));
+          this.demo1.isTypingAnswer = true;
+          for (let i = 0; i < this.answer1.length; i++) {
+            if (this.mobileActiveTab !== 1) { this.demo1.running = false; return; }
+            this.demo1.answerText = this.answer1.substring(0, i + 1);
+            await new Promise(r => setTimeout(r, 12));
+          }
+          this.demo1.isTypingAnswer = false;
+          await new Promise(r => setTimeout(r, 300));
+          this.demo1.showSources = true;
+          await new Promise(r => setTimeout(r, 4000));
+          this.demo1.running = false;
+          if (this.mobileActiveTab === 1) this.runDemo1();
+        },
+        async runDemo2() {
+          if (this.demo2.running) return;
+          this.demo2.running = true;
+          this.demo2.searchText = '';
+          this.demo2.isTypingSearch = false;
+          this.demo2.showChat = false;
+          this.demo2.messages = [];
+          this.demo2.currentChatText = '';
+          await new Promise(r => setTimeout(r, 400));
+          for (let i = 0; i < this.conv2.length; i++) {
+            if (this.mobileActiveTab !== 2) { this.demo2.running = false; return; }
+            const msg = this.conv2[i];
+            if (msg.role === 'user') {
+              if (msg.isSearch) {
+                this.demo2.isTypingSearch = true;
+                this.demo2.searchText = '';
+                for (let j = 0; j < msg.text.length; j++) {
+                  if (this.mobileActiveTab !== 2) { this.demo2.running = false; return; }
+                  this.demo2.searchText = msg.text.substring(0, j + 1);
+                  await new Promise(r => setTimeout(r, 30));
+                }
+                await new Promise(r => setTimeout(r, 300));
+                this.demo2.isTypingSearch = false;
+                this.demo2.showChat = true;
+                this.demo2.messages.push({ role: 'user', text: msg.text });
+              } else {
+                this.demo2.isTypingChat = true;
+                this.demo2.currentChatText = '';
+                for (let j = 0; j < msg.text.length; j++) {
+                  if (this.mobileActiveTab !== 2) { this.demo2.running = false; return; }
+                  this.demo2.currentChatText = msg.text.substring(0, j + 1);
+                  await new Promise(r => setTimeout(r, 30));
+                }
+                await new Promise(r => setTimeout(r, 200));
+                this.demo2.isTypingChat = false;
+                this.demo2.currentChatText = '';
+                this.demo2.messages.push({ role: 'user', text: msg.text });
+              }
+            } else {
+              this.demo2.showTypingIndicator = true;
+              await new Promise(r => setTimeout(r, 350));
+              this.demo2.showTypingIndicator = false;
+              this.demo2.messages.push({ role: 'ai', text: msg.text, data: msg.data || null, months: msg.months || null });
+              await new Promise(r => setTimeout(r, 400));
+            }
+          }
+          await new Promise(r => setTimeout(r, 3000));
+          this.demo2.running = false;
+          if (this.mobileActiveTab === 2) this.runDemo2();
+        }
+      }">
+        {# Accordion Item 1: Reduce Friction #}
+        <div class="rounded-2xl overflow-hidden">
+          <button
+            @click="mobileActiveTab = mobileActiveTab === 1 ? 0 : 1; if(mobileActiveTab === 1) setTimeout(() => runDemo1(), 100)"
+            class="w-full text-left p-4 transition-all duration-300 group relative"
+            :class="mobileActiveTab === 1 ? 'bg-[rgb(40,65,75)] border border-white/10 rounded-t-2xl' : 'bg-[rgb(40,65,75)]/50 hover:bg-[rgb(40,65,75)]/70 rounded-2xl'"
+          >
+            <div class="flex items-center gap-4 relative z-10">
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                :class="mobileActiveTab === 1 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-white/10 text-white/60 group-hover:bg-white/20'"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="font-semibold text-white text-[15px]">Reduce friction</span>
+                <p class="text-white/60 text-sm mt-1">Natural language queries replace complex filters.</p>
+              </div>
+              <svg
+                class="w-5 h-5 text-zunkiree-500 transition-transform duration-300 flex-shrink-0"
+                :class="mobileActiveTab === 1 ? 'rotate-90' : ''"
+                fill="currentColor" viewBox="0 0 20 20"
+              >
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </button>
+          {# Expandable Content for Tab 1 #}
+          <div
+            x-show="mobileActiveTab === 1"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="bg-[rgb(40,65,75)] border border-t-0 border-white/10 rounded-b-2xl overflow-hidden"
+          >
+            <div class="p-4 pt-2">
+              {# Search Bar #}
+              <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
+                <div class="flex items-center gap-2 p-2 pl-4">
+                  <svg class="w-4 h-4 text-white/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                  <div class="flex-1 py-1.5 min-h-[24px]">
+                    <span class="text-white text-sm" x-text="demo1.searchText"></span>
+                    <span x-show="!demo1.searchText && !demo1.isTypingQuery" class="text-white/40 text-sm">Ask a question...</span>
+                    <span x-show="demo1.isTypingQuery" class="inline-block w-0.5 h-4 bg-blue-400 animate-pulse align-middle"></span>
+                  </div>
+                  <button class="px-3 py-1.5 bg-blue-500/80 text-white text-sm font-medium rounded-lg flex items-center gap-1.5">
+                    Search
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {# Powered by badge #}
+              <div class="flex items-center justify-center gap-2 mt-2">
+                <span class="text-amber-400 text-xs">&#10024;</span>
+                <span class="text-white/50 text-xs">Powered by</span>
+                <span class="text-blue-400 font-semibold text-xs">Zunkiree AI</span>
+              </div>
+
+              {# Answer Card #}
+              <div
+                x-show="demo1.showAnswer"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                class="mt-3 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden"
+              >
+                <div class="px-4 py-3">
+                  <p class="text-white/90 text-sm leading-relaxed">
+                    <span x-text="demo1.answerText"></span>
+                    <span x-show="demo1.isTypingAnswer" class="inline-block w-0.5 h-3 bg-blue-400 animate-pulse align-middle ml-0.5"></span>
+                  </p>
+                </div>
+                <div
+                  x-show="demo1.showSources"
+                  x-transition
+                  class="border-t border-white/10 bg-white/5 px-3 py-2"
+                >
+                  <div class="flex items-center gap-1.5 mb-1.5">
+                    <svg class="w-3 h-3 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                    </svg>
+                    <span class="text-white/50 text-[10px] font-medium">Sources</span>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <template x-for="(source, index) in sources1" :key="index">
+                      <span class="inline-flex items-center gap-1 px-2 py-1 bg-white/10 rounded-md border border-white/20 text-[10px] text-white/70" x-text="source.title"></span>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {# Accordion Item 2: Complex to Conversational #}
+        <div class="rounded-2xl overflow-hidden">
+          <button
+            @click="mobileActiveTab = mobileActiveTab === 2 ? 0 : 2; if(mobileActiveTab === 2) setTimeout(() => runDemo2(), 100)"
+            class="w-full text-left p-4 transition-all duration-300 group relative"
+            :class="mobileActiveTab === 2 ? 'bg-[rgb(40,65,75)] border border-white/10 rounded-t-2xl' : 'bg-[rgb(40,65,75)]/50 hover:bg-[rgb(40,65,75)]/70 rounded-2xl'"
+          >
+            <div class="flex items-center gap-4 relative z-10">
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                :class="mobileActiveTab === 2 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-white/10 text-white/60 group-hover:bg-white/20'"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="font-semibold text-white text-[15px]">Complex to conversational</span>
+                <p class="text-white/60 text-sm mt-1">Transform structured data into accessible dialogue.</p>
+              </div>
+              <svg
+                class="w-5 h-5 text-zunkiree-500 transition-transform duration-300 flex-shrink-0"
+                :class="mobileActiveTab === 2 ? 'rotate-90' : ''"
+                fill="currentColor" viewBox="0 0 20 20"
+              >
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </button>
+          {# Expandable Content for Tab 2 #}
+          <div
+            x-show="mobileActiveTab === 2"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="bg-[rgb(40,65,75)] border border-t-0 border-white/10 rounded-b-2xl overflow-hidden"
+          >
+            <div class="p-4 pt-2">
+              {# Search Bar #}
+              <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20">
+                <div class="flex items-center gap-2 p-2 pl-4">
+                  <svg class="w-4 h-4 text-white/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                  </svg>
+                  <div class="flex-1 py-1.5 min-h-[24px]">
+                    <span class="text-white text-sm" x-text="demo2.searchText"></span>
+                    <span x-show="!demo2.searchText && !demo2.isTypingSearch" class="text-white/40 text-sm">Ask about your data...</span>
+                    <span x-show="demo2.isTypingSearch" class="inline-block w-0.5 h-4 bg-blue-400 animate-pulse align-middle"></span>
+                  </div>
+                  <button class="px-3 py-1.5 bg-blue-500/80 text-white text-sm font-medium rounded-lg">Search</button>
+                </div>
+              </div>
+
+              {# Powered by badge #}
+              <div class="flex items-center justify-center gap-2 mt-2">
+                <span class="text-amber-400 text-xs">&#10024;</span>
+                <span class="text-white/50 text-xs">Powered by</span>
+                <span class="text-blue-400 font-semibold text-xs">Zunkiree AI</span>
+              </div>
+
+              {# Chat Container #}
+              <div
+                x-show="demo2.showChat"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                class="mt-3 bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden"
+              >
+                <div class="p-2 space-y-2 max-h-[220px] overflow-y-auto scroll-smooth">
+                  <template x-for="(msg, idx) in demo2.messages" :key="idx">
+                    <div>
+                      <template x-if="msg.role === 'user'">
+                        <div class="flex justify-end">
+                          <div class="bg-blue-400 rounded-xl rounded-br-sm px-3 py-1.5 max-w-[85%]">
+                            <p class="text-xs text-white" x-text="msg.text"></p>
+                          </div>
+                        </div>
+                      </template>
+                      <template x-if="msg.role === 'ai'">
+                        <div class="flex justify-start">
+                          <div class="bg-white/5 rounded-xl rounded-bl-sm px-3 py-2 max-w-[92%]">
+                            <p class="text-xs text-white/90 mb-1.5" x-text="msg.text"></p>
+                            <template x-if="msg.data">
+                              <div class="grid grid-cols-2 gap-1">
+                                <template x-for="(item, i) in msg.data" :key="i">
+                                  <div class="bg-white/10 rounded-lg p-1.5 text-center">
+                                    <p class="font-bold text-white text-xs" x-text="item.value"></p>
+                                    <p class="text-white/50 text-[9px]" x-text="item.label"></p>
+                                    <p class="text-[9px] font-medium" :class="item.up ? 'text-green-400' : 'text-red-400'" x-text="item.change"></p>
+                                  </div>
+                                </template>
+                              </div>
+                            </template>
+                            <template x-if="msg.months">
+                              <div class="space-y-1">
+                                <template x-for="(item, i) in msg.months" :key="i">
+                                  <div class="bg-white/10 rounded-lg p-1.5 flex items-center gap-2">
+                                    <p class="font-medium text-white text-[10px] w-8" x-text="item.name"></p>
+                                    <div class="flex-1 bg-white/20 rounded-full h-1">
+                                      <div class="bg-blue-400 h-1 rounded-full" :style="'width: ' + item.percent"></div>
+                                    </div>
+                                    <p class="font-semibold text-white text-[10px]" x-text="item.revenue"></p>
+                                  </div>
+                                </template>
+                              </div>
+                            </template>
+                          </div>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <div x-show="demo2.isTypingChat" class="flex justify-end">
+                    <div class="bg-blue-400 rounded-xl rounded-br-sm px-3 py-1.5">
+                      <p class="text-xs text-white">
+                        <span x-text="demo2.currentChatText"></span>
+                        <span class="inline-block w-0.5 h-3 bg-white animate-pulse ml-0.5 align-middle"></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div x-show="demo2.showTypingIndicator" class="flex justify-start" x-transition>
+                    <div class="bg-white/5 rounded-xl rounded-bl-sm px-3 py-2">
+                      <div class="flex items-center gap-1">
+                        <span class="w-1 h-1 bg-white/50 rounded-full animate-bounce" style="animation-delay: 0ms"></span>
+                        <span class="w-1 h-1 bg-white/50 rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+                        <span class="w-1 h-1 bg-white/50 rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {# Accordion Item 3: Improve Engagement #}
+        <div class="rounded-2xl overflow-hidden">
+          <button
+            @click="mobileActiveTab = mobileActiveTab === 3 ? 0 : 3"
+            class="w-full text-left p-4 transition-all duration-300 group relative"
+            :class="mobileActiveTab === 3 ? 'bg-[rgb(40,65,75)] border border-white/10 rounded-t-2xl' : 'bg-[rgb(40,65,75)]/50 hover:bg-[rgb(40,65,75)]/70 rounded-2xl'"
+          >
+            <div class="flex items-center gap-4 relative z-10">
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                :class="mobileActiveTab === 3 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-white/10 text-white/60 group-hover:bg-white/20'"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="font-semibold text-white text-[15px]">Improve engagement</span>
+                <p class="text-white/60 text-sm mt-1">Increase time-on-site and reduce support queries.</p>
+              </div>
+              <svg
+                class="w-5 h-5 text-zunkiree-500 transition-transform duration-300 flex-shrink-0"
+                :class="mobileActiveTab === 3 ? 'rotate-90' : ''"
+                fill="currentColor" viewBox="0 0 20 20"
+              >
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </button>
+          {# Expandable Content for Tab 3 #}
+          <div
+            x-show="mobileActiveTab === 3"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 max-h-0"
+            x-transition:enter-end="opacity-100 max-h-[400px]"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 max-h-[400px]"
+            x-transition:leave-end="opacity-0 max-h-0"
+            class="bg-[rgb(40,65,75)] border border-t-0 border-white/10 rounded-b-2xl overflow-hidden"
+          >
+            <div class="p-4">
+              <div class="text-center mb-4">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 rounded-full mb-2">
+                  <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  </svg>
+                  <span class="text-[10px] font-semibold text-white/80 uppercase tracking-wider">Performance Metrics</span>
+                </div>
+                <p class="text-white/50 text-xs">Real results from our customers</p>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                  <p class="text-2xl font-bold text-white mb-0.5">+47%</p>
+                  <p class="text-white/50 text-[10px]">User engagement</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                  <p class="text-2xl font-bold text-green-400 mb-0.5">-62%</p>
+                  <p class="text-white/50 text-[10px]">Support tickets</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                  <p class="text-2xl font-bold text-white mb-0.5">3.2x</p>
+                  <p class="text-white/50 text-[10px]">Time on site</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10">
+                  <p class="text-2xl font-bold text-white mb-0.5">89%</p>
+                  <p class="text-white/50 text-[10px]">Query resolution</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {# Accordion Item 4: Scale Intelligently #}
+        <div class="rounded-2xl overflow-hidden">
+          <button
+            @click="mobileActiveTab = mobileActiveTab === 4 ? 0 : 4"
+            class="w-full text-left p-4 transition-all duration-300 group relative"
+            :class="mobileActiveTab === 4 ? 'bg-[rgb(40,65,75)] border border-white/10 rounded-t-2xl' : 'bg-[rgb(40,65,75)]/50 hover:bg-[rgb(40,65,75)]/70 rounded-2xl'"
+          >
+            <div class="flex items-center gap-4 relative z-10">
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+                :class="mobileActiveTab === 4 ? 'bg-zunkiree-600 text-white shadow-lg shadow-zunkiree-600/30' : 'bg-white/10 text-white/60 group-hover:bg-white/20'"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="font-semibold text-white text-[15px]">Scale intelligently</span>
+                <p class="text-white/60 text-sm mt-1">Built for enterprise-scale workloads.</p>
+              </div>
+              <svg
+                class="w-5 h-5 text-zunkiree-500 transition-transform duration-300 flex-shrink-0"
+                :class="mobileActiveTab === 4 ? 'rotate-90' : ''"
+                fill="currentColor" viewBox="0 0 20 20"
+              >
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </button>
+          {# Expandable Content for Tab 4 #}
+          <div
+            x-show="mobileActiveTab === 4"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 max-h-0"
+            x-transition:enter-end="opacity-100 max-h-[350px]"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 max-h-[350px]"
+            x-transition:leave-end="opacity-0 max-h-0"
+            class="bg-[rgb(40,65,75)] border border-t-0 border-white/10 rounded-b-2xl overflow-hidden"
+          >
+            <div class="p-4 space-y-2.5">
+              <div class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-zunkiree-500 to-zunkiree-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-zunkiree-500/30">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 flex-1 border border-white/10">
+                  <p class="text-white font-semibold text-sm">1M+ queries/day</p>
+                  <p class="text-white/50 text-xs mt-0.5">No performance degradation</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 flex-1 border border-white/10">
+                  <p class="text-white font-semibold text-sm">&lt;100ms response</p>
+                  <p class="text-white/50 text-xs mt-0.5">P95 latency</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                  </svg>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-3 flex-1 border border-white/10">
+                  <p class="text-white font-semibold text-sm">Auto-scaling</p>
+                  <p class="text-white/50 text-xs mt-0.5">Elastic infrastructure</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {# Mobile CTA Button #}
+        <div class="mt-4 pt-4 border-t border-white/20">
+          <a href="/contact/" class="group flex items-center justify-center gap-3 w-full px-6 py-4 bg-zunkiree-600 text-white font-semibold rounded-2xl hover:bg-zunkiree-700 transition-all duration-300 shadow-lg shadow-zunkiree-600/30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <span>Schedule a Demo</span>
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <p class="text-center text-white/50 text-xs mt-3">Free consultation - No commitment required</p>
+        </div>
+      </div>
+
+      {# ==================== DESKTOP TABBED LAYOUT (hidden lg:grid) ==================== #}
+      <div class="hidden lg:grid grid-cols-12 gap-8">
         {# Left: Feature Tabs #}
-        <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="col-span-5">
           <div class="space-y-2">
             {# Tab 1: Reduce Friction #}
             <button
               @click="activeTab = 1"
-              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              class="w-full text-left p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
               :class="activeTab === 1 ? 'bg-[rgb(40,65,75)] border border-white/10' : 'hover:bg-white/5'"
             >
               <div class="flex items-start gap-4 relative z-10">
@@ -341,7 +846,7 @@ permalink: /
             {# Tab 2: Complex to Conversational #}
             <button
               @click="activeTab = 2"
-              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              class="w-full text-left p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
               :class="activeTab === 2 ? 'bg-[rgb(40,65,75)] border border-white/10' : 'hover:bg-white/5'"
             >
               <div class="flex items-start gap-4 relative z-10">
@@ -377,7 +882,7 @@ permalink: /
             {# Tab 3: Improve Engagement #}
             <button
               @click="activeTab = 3"
-              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              class="w-full text-left p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
               :class="activeTab === 3 ? 'bg-[rgb(40,65,75)] border border-white/10' : 'hover:bg-white/5'"
             >
               <div class="flex items-start gap-4 relative z-10">
@@ -413,7 +918,7 @@ permalink: /
             {# Tab 4: Scale Intelligently #}
             <button
               @click="activeTab = 4"
-              class="w-full text-left p-4 md:p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
+              class="w-full text-left p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden"
               :class="activeTab === 4 ? 'bg-[rgb(40,65,75)] border border-white/10' : 'hover:bg-white/5'"
             >
               <div class="flex items-start gap-4 relative z-10">
@@ -463,7 +968,7 @@ permalink: /
         </div>
 
         {# Right: Preview Cards - Enhanced with decorative background #}
-        <div class="lg:col-span-7 order-1 lg:order-2 relative min-h-[420px] md:min-h-[520px] overflow-hidden">
+        <div class="col-span-7 relative min-h-[520px] overflow-hidden">
           {# Decorative Background Layer - Transparent with gradient orbs #}
           <div class="absolute inset-0">
             {# Gradient Orbs - Keep for visual interest #}
