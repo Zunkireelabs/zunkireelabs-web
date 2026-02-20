@@ -15,6 +15,14 @@
           "url": "/products/search/"
         },
         {
+          "id": "zunkiree-agent",
+          "label": "Zunkiree Agent",
+          "description": "Autonomous AI workflow agents",
+          "extendedDescription": "Deploy intelligent agents that automate complex business workflows. From customer support to data processing, let AI handle repetitive tasks while you focus on what matters.",
+          "icon": "agent",
+          "url": "/products/agent/"
+        },
+        {
           "id": "gaamma",
           "label": "Gaamma",
           "description": "Manufacturing ERP platform",
@@ -38,10 +46,6 @@
       "url": "/services/"
     },
     {
-      "label": "Customer Stories",
-      "url": "/customers/"
-    },
-    {
       "label": "Company",
       "hasDropdown": true,
       "dropdownType": "simple",
@@ -54,6 +58,7 @@
   "footer": {
     "products": [
       { "label": "Zunkiree Search", "url": "/products/search/" },
+      { "label": "Zunkiree Agent", "url": "/products/agent/" },
       { "label": "Gaamma", "url": "/products/gaamma/" },
       { "label": "Dental AI Assistant", "url": "/products/dental-ai/" }
     ],
@@ -67,7 +72,6 @@
     "company": [
       { "label": "About Us", "url": "/about/" },
       { "label": "Careers", "url": "/careers/" },
-      { "label": "Customer Stories", "url": "/customers/" },
       { "label": "Contact", "url": "/contact/" }
     ]
   }
