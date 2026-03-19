@@ -1,18 +1,45 @@
 <header
-  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200"
+  class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+  style="background-color: var(--header-bg); border-bottom: 1px solid var(--header-border);"
   x-data="{
     scrolled: false,
     activeDropdown: null,
     activeProduct: 'zunkiree-search',
-    mobileMenuOpen: false
+    mobileMenuOpen: false,
+    darkMode: localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches),
+    toggleTheme() {
+      this.darkMode = !this.darkMode;
+      localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', this.darkMode);
+    }
   }"
+  x-init="
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        darkMode = e.matches;
+        document.documentElement.classList.toggle('dark', darkMode);
+      }
+    });
+  "
   @scroll.window="scrolled = window.scrollY > 10"
 >
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <nav class="relative flex items-center h-12">
       <!-- Logo -->
       <a href="/" class="flex items-center flex-shrink-0">
-        <img src="/assets/images/zunkireelabs-logo-round.svg" alt="Zunkiree Labs" class="h-6 w-auto" />
+        <img
+          x-show="!darkMode"
+          src="/assets/images/zunkireelabs-logo-round.svg"
+          alt="Zunkiree Labs"
+          class="h-6 w-auto"
+        />
+        <img
+          x-show="darkMode"
+          x-cloak
+          src="/assets/images/logo-light.svg"
+          alt="Zunkiree Labs"
+          class="h-6 w-auto"
+        />
       </a>
 
       <!-- Desktop Navigation - Immediately after logo -->
@@ -27,7 +54,7 @@
             >
               <button
                 class="flex items-center gap-1 px-3 py-2 text-base transition-colors duration-200"
-                :class="activeDropdown === '{{ item.label }}' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'"
+                :class="activeDropdown === '{{ item.label }}' ? 'text-[var(--foreground)]' : 'text-[var(--foreground-muted)] hover:text-[var(--foreground)]'"
               >
                 {{ item.label }}
                 <svg class="w-3.5 h-3.5 transition-transform duration-200" :class="activeDropdown === '{{ item.label }}' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +66,10 @@
             <!-- Regular Nav Link -->
             <a
               href="{{ item.url }}"
-              class="px-3 py-2 text-base text-gray-600 hover:text-gray-900 transition-colors duration-200"
+              class="px-3 py-2 text-base transition-colors duration-200"
+              style="color: var(--foreground-muted);"
+              onmouseover="this.style.color='var(--foreground)'"
+              onmouseout="this.style.color='var(--foreground-muted)'"
             >
               {{ item.label }}
             </a>
@@ -50,20 +80,72 @@
       <!-- Right Side - Icons and Links -->
       <div class="hidden lg:flex items-center gap-1 ml-auto">
         <!-- Search Icon -->
-        <button class="p-2 text-gray-600 hover:text-gray-900 transition-colors" aria-label="Search">
+        <button
+          class="p-2 transition-colors"
+          style="color: var(--foreground-muted);"
+          onmouseover="this.style.color='var(--foreground)'"
+          onmouseout="this.style.color='var(--foreground-muted)'"
+          aria-label="Search"
+        >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
         </button>
         <!-- About Link -->
-        <a href="/about/" class="px-3 py-2 text-base text-gray-600 hover:text-gray-900 transition-colors">About</a>
+        <a
+          href="/about/"
+          class="px-3 py-2 text-base transition-colors"
+          style="color: var(--foreground-muted);"
+          onmouseover="this.style.color='var(--foreground)'"
+          onmouseout="this.style.color='var(--foreground-muted)'"
+        >About</a>
         <!-- Contact Link -->
-        <a href="/contact/" class="px-3 py-2 text-base text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+        <a
+          href="/contact/"
+          class="px-3 py-2 text-base transition-colors"
+          style="color: var(--foreground-muted);"
+          onmouseover="this.style.color='var(--foreground)'"
+          onmouseout="this.style.color='var(--foreground-muted)'"
+        >Contact</a>
+        <!-- Theme Toggle -->
+        <button
+          @click="toggleTheme()"
+          class="p-2 transition-colors ml-1"
+          style="color: var(--foreground-muted);"
+          onmouseover="this.style.color='var(--foreground)'"
+          onmouseout="this.style.color='var(--foreground-muted)'"
+          type="button"
+          title="Toggle theme"
+          aria-label="Toggle theme"
+        >
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg
+            x-show="darkMode"
+            x-cloak
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg
+            x-show="!darkMode"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
-        class="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors ml-auto"
+        class="lg:hidden p-2 transition-colors ml-auto"
+        style="color: var(--foreground-muted);"
         @click="mobileMenuOpen = !mobileMenuOpen"
         aria-label="Toggle menu"
         :aria-expanded="mobileMenuOpen"
@@ -94,21 +176,21 @@
           >
             {% if item.dropdownType == 'product' %}
               <!-- Product Mega Menu -->
-              <div class="bg-white border-t border-gray-100 shadow-lg">
+              <div class="shadow-lg transition-colors duration-300" style="background-color: var(--card); border-top: 1px solid var(--border);">
                 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 py-6">
                   <div class="grid grid-cols-12 gap-8">
                     <!-- Products List -->
                     <div class="col-span-5">
-                      <p class="text-xs uppercase tracking-widest text-gray-400 mb-4">Products</p>
+                      <p class="text-xs uppercase tracking-widest mb-4" style="color: var(--foreground-subtle);">Products</p>
                       <div class="space-y-1">
                         {% for product in item.items %}
                           <a
                             href="{{ product.url }}"
                             class="group flex items-start gap-4 p-3 transition-colors duration-200"
-                            :class="activeProduct === '{{ product.id }}' ? 'bg-gray-50' : 'hover:bg-gray-50'"
+                            :class="activeProduct === '{{ product.id }}' ? 'bg-[var(--background-alt)]' : 'hover:bg-[var(--background-alt)]'"
                             @mouseenter="activeProduct = '{{ product.id }}'"
                           >
-                            <div class="w-9 h-9 bg-gray-100 flex items-center justify-center text-gray-600 flex-shrink-0">
+                            <div class="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-colors" style="background-color: var(--background-alt); color: var(--foreground-muted);">
                               {% if product.icon == 'search' %}
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -137,14 +219,14 @@
                             </div>
                             <div class="flex-1">
                               <div class="flex items-center gap-2">
-                                <span class="text-sm text-gray-900">{{ product.label }}</span>
+                                <span class="text-sm" style="color: var(--foreground);">{{ product.label }}</span>
                                 {% if product.badge %}
-                                  <span class="text-xs px-1.5 py-0.5 {% if product.badge == 'Flagship' %}bg-zunkiree-600 text-white{% else %}bg-gray-200 text-gray-600{% endif %}">
+                                  <span class="text-xs px-1.5 py-0.5 {% if product.badge == 'Flagship' %}bg-zunkiree-600 text-white{% else %}bg-[var(--background-muted)] text-[var(--foreground-muted)]{% endif %}">
                                     {{ product.badge }}
                                   </span>
                                 {% endif %}
                               </div>
-                              <p class="text-xs text-gray-500 mt-0.5">{{ product.description }}</p>
+                              <p class="text-xs mt-0.5" style="color: var(--foreground-subtle);">{{ product.description }}</p>
                             </div>
                           </a>
                         {% endfor %}
@@ -152,7 +234,7 @@
                     </div>
 
                     <!-- Product Preview -->
-                    <div class="col-span-7 bg-gray-50 p-6">
+                    <div class="col-span-7 p-6 transition-colors" style="background-color: var(--background-alt);">
                       {% for product in item.items %}
                         <div
                           x-show="activeProduct === '{{ product.id }}'"
@@ -161,9 +243,9 @@
                           x-transition:enter-end="opacity-100"
                           class="h-full flex flex-col"
                         >
-                          <h4 class="text-xl text-gray-900 mb-2">{{ product.label }}</h4>
-                          <p class="text-sm text-gray-600 mb-4">{{ product.extendedDescription }}</p>
-                          <a href="{{ product.url }}" class="inline-flex items-center gap-2 text-sm text-zunkiree-600 hover:gap-3 transition-all mt-auto">
+                          <h4 class="text-xl mb-2" style="color: var(--foreground);">{{ product.label }}</h4>
+                          <p class="text-sm mb-4" style="color: var(--foreground-muted);">{{ product.extendedDescription }}</p>
+                          <a href="{{ product.url }}" class="inline-flex items-center gap-2 text-sm text-zunkiree-600 dark:text-zunkiree-400 hover:gap-3 transition-all mt-auto">
                             Learn more
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -177,17 +259,17 @@
               </div>
             {% else %}
               <!-- Simple Dropdown -->
-              <div class="bg-white border-t border-gray-100 shadow-lg">
+              <div class="shadow-lg transition-colors duration-300" style="background-color: var(--card); border-top: 1px solid var(--border);">
                 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 py-4">
                   <div class="grid grid-cols-3 gap-4">
                     {% for subitem in item.items %}
                       <a
                         href="{{ subitem.url }}"
-                        class="group p-3 hover:bg-gray-50 transition-colors duration-200"
+                        class="group p-3 transition-colors duration-200 hover:bg-[var(--background-alt)]"
                       >
-                        <span class="text-sm text-gray-900 group-hover:text-zunkiree-600 block">{{ subitem.label }}</span>
+                        <span class="text-sm block group-hover:text-zunkiree-600 dark:group-hover:text-zunkiree-400" style="color: var(--foreground);">{{ subitem.label }}</span>
                         {% if subitem.description %}
-                          <p class="text-xs text-gray-500 mt-0.5">{{ subitem.description }}</p>
+                          <p class="text-xs mt-0.5" style="color: var(--foreground-subtle);">{{ subitem.description }}</p>
                         {% endif %}
                       </a>
                     {% endfor %}
@@ -203,7 +285,8 @@
 
   <!-- Mobile Menu -->
   <div
-    class="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto"
+    class="lg:hidden fixed inset-0 top-12 z-40 overflow-y-auto transition-colors duration-300"
+    style="background-color: var(--background);"
     x-show="mobileMenuOpen"
     x-transition:enter="transition ease-out duration-200"
     x-transition:enter-start="opacity-0"
@@ -222,23 +305,25 @@
             <div x-data="{ open: false }">
               <button
                 @click="open = !open"
-                class="w-full flex items-center justify-between px-2 py-3 text-gray-900 hover:bg-gray-50 text-sm transition-colors"
+                class="w-full flex items-center justify-between px-2 py-3 text-sm transition-colors hover:bg-[var(--background-alt)]"
+                style="color: var(--foreground);"
               >
                 {{ item.label }}
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 transition-transform duration-200" style="color: var(--foreground-subtle);" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </button>
-              <div x-show="open" x-collapse class="pl-4 border-l border-gray-200 ml-2">
+              <div x-show="open" x-collapse class="pl-4 ml-2" style="border-left: 1px solid var(--border);">
                 {% for subitem in item.items %}
                   <a
                     href="{{ subitem.url }}"
-                    class="flex items-center gap-2 px-2 py-2.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+                    class="flex items-center gap-2 px-2 py-2.5 text-sm transition-colors hover:bg-[var(--background-alt)]"
+                    style="color: var(--foreground-muted);"
                     @click="mobileMenuOpen = false"
                   >
                     <span>{{ subitem.label }}</span>
                     {% if subitem.badge %}
-                      <span class="text-xs px-1.5 py-0.5 {% if subitem.badge == 'Flagship' %}bg-zunkiree-600 text-white{% else %}bg-gray-200 text-gray-600{% endif %}">
+                      <span class="text-xs px-1.5 py-0.5 {% if subitem.badge == 'Flagship' %}bg-zunkiree-600 text-white{% else %}bg-[var(--background-muted)] text-[var(--foreground-muted)]{% endif %}">
                         {{ subitem.badge }}
                       </span>
                     {% endif %}
@@ -250,7 +335,8 @@
             <!-- Mobile Regular Link -->
             <a
               href="{{ item.url }}"
-              class="px-2 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors"
+              class="px-2 py-3 text-sm transition-colors hover:bg-[var(--background-alt)]"
+              style="color: var(--foreground);"
               @click="mobileMenuOpen = false"
             >
               {{ item.label }}
@@ -259,11 +345,26 @@
         {% endfor %}
 
         <!-- Divider -->
-        <div class="border-t border-gray-200 my-2"></div>
+        <div class="my-2" style="border-top: 1px solid var(--border);"></div>
 
         <!-- Mobile About & Contact -->
-        <a href="/about/" class="px-2 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors" @click="mobileMenuOpen = false">About</a>
-        <a href="/contact/" class="px-2 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors" @click="mobileMenuOpen = false">Contact</a>
+        <a href="/about/" class="px-2 py-3 text-sm transition-colors hover:bg-[var(--background-alt)]" style="color: var(--foreground);" @click="mobileMenuOpen = false">About</a>
+        <a href="/contact/" class="px-2 py-3 text-sm transition-colors hover:bg-[var(--background-alt)]" style="color: var(--foreground);" @click="mobileMenuOpen = false">Contact</a>
+
+        <!-- Mobile Theme Toggle -->
+        <button
+          @click="toggleTheme()"
+          class="flex items-center gap-2 px-2 py-3 text-sm transition-colors hover:bg-[var(--background-alt)]"
+          style="color: var(--foreground);"
+        >
+          <svg x-show="darkMode" x-cloak class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg x-show="!darkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <span x-text="darkMode ? 'Light mode' : 'Dark mode'"></span>
+        </button>
       </div>
     </div>
   </div>
