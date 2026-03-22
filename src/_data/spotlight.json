@@ -1,0 +1,34 @@
+[
+  {
+    "type": "REPORT",
+    "title": "State of AI Search 2026: Enterprise Adoption Report",
+    "description": "Key findings on how businesses are replacing keyword search with AI-native solutions.",
+    "cta": "Read now",
+    "url": "/resources/ai-search-report-2026/",
+    "image": "/assets/images/spotlight/report-ai-search-2026.svg"
+  },
+  {
+    "type": "ON DEMAND",
+    "title": "From Keywords to Conversations: AI Search Implementation",
+    "description": "Learn how to integrate natural language search in under 2 hours.",
+    "cta": "Watch now",
+    "url": "/resources/webinar-ai-search-implementation/",
+    "image": "/assets/images/spotlight/ondemand-ai-implementation.svg"
+  },
+  {
+    "type": "APR 2026 / VIRTUAL",
+    "title": "AI Search Summit: Building Next-Gen Customer Experience",
+    "description": "The virtual event for teams building AI-powered search and discovery.",
+    "cta": "Register now",
+    "url": "/events/ai-search-summit-2026/",
+    "image": "/assets/images/spotlight/event-ai-summit.svg"
+  },
+  {
+    "type": "EBOOK",
+    "title": "The AI Search Playbook for Product Teams",
+    "description": "Practical guide with implementation patterns, code examples, and real results.",
+    "cta": "Read now",
+    "url": "/resources/ai-search-playbook/",
+    "image": "/assets/images/spotlight/ebook-ai-playbook.svg"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Zunkiree Search?",
+    "answer": "Zunkiree Search is an AI-native search platform that delivers direct answers through natural language queries. Unlike keyword-based search, it understands context and intent, connecting your business data to customer-facing experiences for faster information discovery."
+  },
+  {
+    "question": "How does AI-native search work?",
+    "answer": "AI-native search uses large language models and retrieval systems to understand what users actually mean, not just keywords. It indexes your content, processes natural language queries, and returns accurate, contextual answers instead of link lists."
+  },
+  {
+    "question": "What industries does Zunkiree serve?",
+    "answer": "Zunkiree Labs serves technology companies, e-commerce, healthcare, education, and professional services. Any business with customer-facing content, documentation, or knowledge bases can benefit from AI-powered search and interaction."
+  },
+  {
+    "question": "How long does integration take?",
+    "answer": "Most customers integrate Zunkiree Search within 2 hours using our JavaScript widget. Enterprise API integrations typically take 1-2 weeks depending on data complexity and custom requirements."
+  },
+  {
+    "question": "Is Zunkiree Labs based in Nepal?",
+    "answer": "Yes, Zunkiree Labs is headquartered in Kathmandu, Nepal. We build world-class AI products from Nepal for international markets, combining local engineering talent with global product standards."
+  }
+]

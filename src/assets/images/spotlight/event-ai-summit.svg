@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="none">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="eventGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8553D"/>
+      <stop offset="50%" style="stop-color:#C44332"/>
+      <stop offset="100%" style="stop-color:#1F2937"/>
+    </linearGradient>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5675A"/>
+      <stop offset="100%" style="stop-color:#C44332"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#eventGrad)"/>
+
+  <!-- Hexagon pattern background -->
+  <polygon points="320,20 360,45 360,95 320,120 280,95 280,45" fill="url(#hexGrad)" opacity="0.4"/>
+  <polygon points="350,80 390,105 390,155 350,180 310,155 310,105" fill="url(#hexGrad)" opacity="0.3"/>
+  <polygon points="60,150 100,175 100,225 60,250 20,225 20,175" fill="url(#hexGrad)" opacity="0.2"/>
+
+  <!-- Main content box -->
+  <rect x="50" y="50" width="200" height="150" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <!-- Event text -->
+  <text x="70" y="90" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="2">ZUNKIREE LABS</text>
+  <text x="70" y="120" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="white">AI SEARCH</text>
+  <text x="70" y="148" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="white">SUMMIT</text>
+  <text x="70" y="175" font-family="system-ui, sans-serif" font-size="14" font-weight="500" fill="#F5675A">2026</text>
+
+  <!-- Date badge -->
+  <rect x="280" y="170" width="90" height="50" rx="8" fill="white"/>
+  <text x="325" y="192" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280" text-anchor="middle">APRIL</text>
+  <text x="325" y="212" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1F2937" text-anchor="middle">15-16</text>
+
+  <!-- Virtual badge -->
+  <rect x="280" y="130" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="315" y="149" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle">VIRTUAL</text>
+
+  <!-- Decorative dots -->
+  <circle cx="320" cy="60" r="4" fill="white" opacity="0.3"/>
+  <circle cx="340" cy="70" r="3" fill="white" opacity="0.2"/>
+  <circle cx="360" cy="55" r="5" fill="white" opacity="0.25"/>
+</svg>

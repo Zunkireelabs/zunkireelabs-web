@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ai-development",
+    "title": "AI Development",
+    "description": "Custom AI systems built with modern architectures. RAG, LLM integration, intelligent automation, knowledge systems, and AI-powered search solutions.",
+    "cta": "Learn More",
+    "url": "/services/#ai-development",
+    "icon": "ai",
+    "clients": [
+      {
+        "name": "CoreCloud365",
+        "logo": "/assets/images/clients/corecloud365.svg"
+      },
+      {
+        "name": "Carbon Spark",
+        "logo": "/assets/images/clients/carbon-spark.png"
+      },
+      {
+        "name": "Admizz",
+        "logo": "/assets/images/clients/admizz.png"
+      }
+    ]
+  },
+  {
+    "id": "data-systems",
+    "title": "Data Systems",
+    "description": "Scalable data pipelines, warehousing, and analytics infrastructure that powers intelligent applications. AI-ready data architecture for modern businesses.",
+    "cta": "Learn More",
+    "url": "/services/#data-systems",
+    "icon": "data",
+    "clients": [
+      {
+        "name": "Rapid Investment",
+        "logo": "/assets/images/clients/rapid-investment.svg"
+      },
+      {
+        "name": "Mach24 Orbital",
+        "logo": "/assets/images/clients/mach24orbital.png"
+      },
+      {
+        "name": "CMS Group",
+        "logo": "/assets/images/clients/cms-group.png"
+      }
+    ]
+  },
+  {
+    "id": "custom-software",
+    "title": "Custom Software",
+    "description": "Modern web platforms, SaaS applications, and enterprise software tailored to your needs. Scalable architecture designed for growth and performance.",
+    "cta": "Learn More",
+    "url": "/services/#custom-software",
+    "icon": "code",
+    "clients": [
+      {
+        "name": "Prime Tiles",
+        "logo": "/assets/images/clients/prime-tiles.png"
+      },
+      {
+        "name": "Khushbu Nirman Sewa",
+        "logo": "/assets/images/clients/khushbu-nirman-sewa.png"
+      },
+      {
+        "name": "Khems Cleaning",
+        "logo": "/assets/images/clients/khems-cleaning.png"
+      }
+    ]
+  }
+]
