@@ -1,64 +1,193 @@
 {
   "main": [
     {
-      "label": "Product",
+      "label": "Products",
       "hasDropdown": true,
-      "dropdownType": "product",
-      "items": [
-        {
-          "id": "zunkiree-search",
-          "label": "Zunkiree Search",
-          "description": "AI-native search and interaction",
-          "extendedDescription": "Transform how users find and engage with information. AI-native search layer for modern, data-driven platforms that delivers intelligent, context-aware results.",
-          "icon": "search",
-          "badge": "Primary",
-          "url": "/products/search/"
-        },
-        {
-          "id": "gaamma",
-          "label": "Gaamma",
-          "description": "Manufacturing ERP platform",
-          "extendedDescription": "Full-scale manufacturing ERP focused on operational efficiency and digital transformation. Built for modern factories and production workflows.",
-          "icon": "factory",
-          "url": "/products/gaamma/"
-        },
-        {
-          "id": "dental-ai",
-          "label": "Dental AI Assistant",
-          "description": "Vertical AI for dental workflows",
-          "extendedDescription": "AI assistant designed for dental operations and customer interaction. Streamlines patient communication and practice management.",
-          "icon": "health",
-          "badge": "Coming Soon",
-          "url": "/products/dental-ai/"
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "PRODUCTS",
+            "items": [
+              { "label": "Zunkiree Search", "url": "/products/search/" },
+              { "label": "Dental AI", "url": "/products/dental-ai/" },
+              { "label": "Gaamma", "url": "/products/gaamma/" }
+            ],
+            "seeAll": { "label": "See all products", "url": "/products/" }
+          },
+          {
+            "header": "INDUSTRIES",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/" },
+              { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
+              { "label": "Legal", "url": "/solutions/legal/" },
+              { "label": "Professional Services", "url": "/solutions/services/" },
+              { "label": "Education", "url": "/solutions/education/" },
+              { "label": "Human Resources", "url": "/solutions/human-resources/" }
+            ],
+            "seeAll": { "label": "See all industries", "url": "/solutions/" }
+          },
+          {
+            "header": "IN DEVELOPMENT",
+            "items": [
+              { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
+              { "label": "AI CRM", "url": "/products/ai-crm/" }
+            ]
+          },
+          {
+            "header": "RESOURCES",
+            "items": [
+              { "label": "Blog", "url": "/blog/" },
+              { "label": "Case Studies", "url": "/case-studies/" },
+              { "label": "Research", "url": "/research/" }
+            ]
+          }
+        ],
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
         }
-      ]
+      }
     },
     {
       "label": "Solutions",
-      "url": "/services/"
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "INDUSTRIES",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/" },
+              { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
+              { "label": "Legal", "url": "/solutions/legal/" }
+            ]
+          },
+          {
+            "header": "",
+            "items": [
+              { "label": "Professional Services", "url": "/solutions/services/" },
+              { "label": "Education", "url": "/solutions/education/" },
+              { "label": "Human Resources", "url": "/solutions/human-resources/" }
+            ],
+            "seeAll": { "label": "See all industries", "url": "/solutions/" }
+          },
+          {
+            "header": "BY USE CASE",
+            "items": [
+              { "label": "Customer Support", "url": "/solutions/customer-support/" },
+              { "label": "Internal Search", "url": "/solutions/internal-search/" },
+              { "label": "Knowledge Management", "url": "/solutions/knowledge-management/" }
+            ]
+          }
+        ],
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
     },
     {
-      "label": "Company",
+      "label": "Services",
       "hasDropdown": true,
-      "dropdownType": "simple",
-      "items": [
-        { "label": "About", "description": "Our story and mission", "url": "/about/" },
-        { "label": "Careers", "description": "Join our team", "url": "/careers/" }
-      ]
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "AI & DATA",
+            "items": [
+              { "label": "AI Development", "url": "/services/ai-development/" },
+              { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/" },
+              { "label": "Data Systems", "url": "/services/data-systems/" }
+            ]
+          },
+          {
+            "header": "DEVELOPMENT",
+            "items": [
+              { "label": "Custom Software", "url": "/services/custom-software/" },
+              { "label": "SaaS Development", "url": "/services/saas-development/" },
+              { "label": "Web Development", "url": "/services/web-development/" },
+              { "label": "App Development", "url": "/services/app-development/" }
+            ]
+          },
+          {
+            "header": "MARKETING",
+            "items": [
+              { "label": "AEO & SEO", "url": "/services/aeo-seo/" }
+            ],
+            "seeAll": { "label": "See all services", "url": "/services/" }
+          }
+        ],
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "label": "Resources",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "LEARN",
+            "items": [
+              { "label": "Blog", "url": "/blog/" },
+              { "label": "Case Studies", "url": "/case-studies/" },
+              { "label": "Research", "url": "/research/" }
+            ]
+          },
+          {
+            "header": "COMPANY",
+            "items": [
+              { "label": "About Us", "url": "/about/" },
+              { "label": "Careers", "url": "/careers/" },
+              { "label": "Contact", "url": "/contact/" }
+            ]
+          }
+        ],
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
     }
   ],
   "footer": {
     "products": [
-      { "label": "Zunkiree Search", "url": "/products/search/" },
-      { "label": "Gaamma", "url": "/products/gaamma/" },
-      { "label": "Dental AI Assistant", "url": "/products/dental-ai/" }
+      { "label": "Zunkiree Search", "url": "/products/zunkiree-search/" },
+      { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
+      { "label": "AI CRM", "url": "/products/ai-crm/" },
+      { "label": "Dental AI", "url": "/products/dental-ai/" },
+      { "label": "Gaamma", "url": "/products/gaamma/" }
     ],
     "solutions": [
-      { "label": "Web Development", "url": "/services/#web" },
-      { "label": "AI Solutions", "url": "/services/#ai" },
-      { "label": "Mobile Apps", "url": "/services/#mobile" },
-      { "label": "UI/UX Design", "url": "/services/" },
-      { "label": "Cloud & DevOps", "url": "/services/" }
+      { "label": "Healthcare", "url": "/solutions/healthcare/" },
+      { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
+      { "label": "Legal", "url": "/solutions/legal/" },
+      { "label": "Services", "url": "/solutions/services/" },
+      { "label": "Education", "url": "/solutions/education/" },
+      { "label": "Human Resources", "url": "/solutions/human-resources/" }
+    ],
+    "services": [
+      { "label": "AI Development", "url": "/services/ai-development/" },
+      { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/" },
+      { "label": "Data Systems", "url": "/services/data-systems/" },
+      { "label": "Custom Software", "url": "/services/custom-software/" },
+      { "label": "SaaS Development", "url": "/services/saas-development/" },
+      { "label": "AEO & SEO", "url": "/services/aeo-seo/" },
+      { "label": "Web Development", "url": "/services/web-development/" },
+      { "label": "App Development", "url": "/services/app-development/" }
+    ],
+    "resources": [
+      { "label": "Blog", "url": "/blog/" },
+      { "label": "Case Studies", "url": "/case-studies/" },
+      { "label": "Research", "url": "/research/" }
     ],
     "company": [
       { "label": "About Us", "url": "/about/" },

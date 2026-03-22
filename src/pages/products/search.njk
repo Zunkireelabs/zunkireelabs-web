@@ -1,8 +1,21 @@
 ---
 layout: base.njk
-title: Zunkiree Search | AI-Native Search Platform
-description: Transform how users discover and interact with your data. Zunkiree Search delivers intelligent, context-aware search experiences for modern digital platforms.
+title: "Zunkiree Search: AI-Native Search & Interaction Platform | Zunkiree Labs"
+description: "Transform how users discover information with Zunkiree Search. Our AI-native platform delivers direct answers through natural language, reducing support queries by 45%. Get a demo."
 permalink: /products/search/
+schemaType: product
+lastUpdated: 2026-03-19
+faqs:
+  - question: What is Zunkiree Search?
+    answer: Zunkiree Search is an AI-native search and interaction platform that enables businesses to deliver direct answers through natural language queries. Unlike traditional keyword-based search, it understands context and user intent.
+  - question: How long does Zunkiree Search take to integrate?
+    answer: Most customers complete integration within 2 hours using our JavaScript widget. Enterprise API integrations typically take 1-2 weeks depending on data complexity and custom requirements.
+  - question: What data sources does Zunkiree Search connect to?
+    answer: Zunkiree integrates with websites, documentation, knowledge bases, CMS platforms, and custom databases through our REST API and 50+ pre-built connectors including Notion, Confluence, and PostgreSQL.
+  - question: How does Zunkiree Search pricing work?
+    answer: Zunkiree Search pricing is based on query volume and data sources connected. Contact our sales team for a custom quote based on your specific requirements and scale.
+  - question: Is Zunkiree Search secure for enterprise use?
+    answer: Yes. Zunkiree Search includes role-based access control, end-to-end encryption, SOC 2 compliance, and can be deployed on-premises or in your own cloud environment for maximum data security.
 ---
 
 {# =====================================================
@@ -13,7 +26,7 @@ permalink: /products/search/
     <div class="max-w-3xl">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-zunkiree-50 rounded-full mb-6" data-reveal>
         <span class="w-2 h-2 bg-zunkiree-600 rounded-full"></span>
-        <span class="text-sm font-medium text-zunkiree-700">Primary Product</span>
+        <span class="text-sm font-medium text-zunkiree-700">AI-Native Search Platform</span>
       </div>
       <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.04em] leading-[1.1] mb-6" data-reveal>
         Zunkiree Search
@@ -29,6 +42,23 @@ permalink: /products/search/
           Talk to Sales
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   WHAT IS ZUNKIREE SEARCH - Definition Block for AEO
+   ===================================================== #}
+<section class="py-12 px-4 md:px-6 bg-white border-b border-warm-border">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="max-w-3xl" data-reveal>
+      <h2 class="text-2xl md:text-3xl font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-4">
+        What is Zunkiree Search?
+      </h2>
+      <p class="text-lg text-warm-600 leading-relaxed">
+        <strong>Zunkiree Search</strong> is an AI-native search and interaction platform that enables businesses to deliver direct answers through natural language queries. Unlike traditional keyword-based search that returns link lists, Zunkiree understands context and user intent to provide accurate, relevant answers instantly. According to our customer data, organizations using Zunkiree see a 45% reduction in support queries and 3x improvement in information discovery speed.
+      </p>
+      <p class="text-sm text-warm-400 mt-4">Last updated: {{ lastUpdated }}</p>
     </div>
   </div>
 </section>
@@ -297,6 +327,33 @@ permalink: /products/search/
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   FAQ SECTION - For AEO/Schema Markup
+   ===================================================== #}
+<section class="py-16 md:py-24 px-4 md:px-6 bg-warm-off-white">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
+      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">FAQ</p>
+      <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2]">
+        Frequently Asked Questions
+      </h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-6">
+      {% for faq in faqs %}
+      <div class="bg-white rounded-2xl p-6 md:p-8 border border-warm-border" data-reveal>
+        <h3 class="text-lg md:text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">
+          {{ faq.question }}
+        </h3>
+        <p class="text-warm-600 leading-relaxed">
+          {{ faq.answer }}
+        </p>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
