@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="native-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="native-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#native-bg)"/>
+
+  <!-- Abstract wave patterns -->
+  <path d="M0 300 Q200 250 400 300 Q600 350 800 300 L800 450 L0 450 Z" fill="#fff" opacity="0.03"/>
+  <path d="M0 350 Q200 300 400 350 Q600 400 800 350 L800 450 L0 450 Z" fill="#fff" opacity="0.02"/>
+
+  <!-- Search bar container -->
+  <g transform="translate(100, 150)">
+    <rect width="600" height="70" fill="#fff" rx="35" opacity="0.95"/>
+    <rect x="5" y="5" width="590" height="60" fill="#f8fafc" rx="30"/>
+
+    <!-- Search icon -->
+    <g transform="translate(30, 20)">
+      <circle cx="14" cy="14" r="10" fill="none" stroke="#64748b" stroke-width="2.5"/>
+      <line x1="21" y1="21" x2="28" y2="28" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Mixed language query text -->
+    <text x="75" y="42" font-family="system-ui, sans-serif" font-size="18" fill="#334155">
+      <tspan>मलाई </tspan>
+      <tspan fill="#1e40af">laptop</tspan>
+      <tspan> को </tspan>
+      <tspan fill="#1e40af">warranty</tspan>
+      <tspan> बारेमा...</tspan>
+    </text>
+
+    <!-- Search button -->
+    <rect x="500" y="10" width="90" height="50" fill="url(#native-glow)" rx="25"/>
+    <text x="545" y="42" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">Search</text>
+  </g>
+
+  <!-- AI response preview -->
+  <g transform="translate(100, 250)">
+    <rect width="600" height="130" fill="#fff" opacity="0.1" rx="12"/>
+    <g transform="translate(20, 20)">
+      <!-- AI icon -->
+      <circle cx="15" cy="15" r="15" fill="url(#native-glow)"/>
+      <text x="15" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
+
+      <!-- Response lines -->
+      <g transform="translate(45, 0)">
+        <rect width="400" height="8" fill="#fff" opacity="0.6" rx="4"/>
+        <rect y="18" width="350" height="8" fill="#fff" opacity="0.4" rx="4"/>
+        <rect y="36" width="380" height="8" fill="#fff" opacity="0.5" rx="4"/>
+      </g>
+    </g>
+
+    <!-- Result cards hint -->
+    <g transform="translate(20, 80)">
+      <rect width="180" height="35" fill="#fff" opacity="0.1" rx="6"/>
+      <rect x="195" width="180" height="35" fill="#fff" opacity="0.1" rx="6"/>
+      <rect x="390" width="180" height="35" fill="#fff" opacity="0.1" rx="6"/>
+    </g>
+  </g>
+
+  <!-- Floating language indicators -->
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#fff" opacity="0.3">
+    <text x="650" y="100">EN</text>
+    <text x="700" y="80">नेपाली</text>
+    <text x="720" y="130">Mixed</text>
+  </g>
+
+  <!-- Code-switching indicator -->
+  <g transform="translate(580, 60)">
+    <rect width="160" height="50" fill="#fff" opacity="0.1" rx="8"/>
+    <text x="80" y="25" font-family="system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">CODE-SWITCHING</text>
+    <text x="80" y="42" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="middle">SUPPORTED</text>
+  </g>
+
+  <!-- Guide badge -->
+  <rect x="60" y="60" width="80" height="30" fill="url(#native-glow)" rx="4"/>
+  <text x="100" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">GUIDE</text>
+</svg>

@@ -1,0 +1,212 @@
+---
+layout: base.njk
+title: State of AI in Nepal 2026 | Zunkiree Labs
+description: Nepal ranks 150th globally in AI readiness. This report analyzes AI adoption across 50+ Nepali organizations with industry benchmarks, budget data, and a 5-year forecast.
+permalink: /resources/state-of-ai-nepal-2026/
+---
+
+{% set resource = resources.items | find("slug", "state-of-ai-nepal-2026") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-zunkiree-600 text-white text-xs font-medium tracking-wide mb-4">
+        Featured Report
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    {# Stats Bar #}
+    {% if resource.stats %}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for stat in resource.stats %}
+      <div class="text-center md:text-left">
+        <p class="text-3xl md:text-4xl font-medium text-zunkiree-600 mb-1">{{ stat.value }}</p>
+        <p class="text-sm text-gray-600">{{ stat.label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      {# Hero Image #}
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {# Sidebar #}
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/ai-implementation-guide-nepal/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI Implementation Guide for Nepal SMEs
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/ai-vs-traditional-software-kathmandu/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI vs Traditional Software: What Kathmandu Enterprises Need to Know
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/khushbu-nirman-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khushbu Nirman Sewa's AI Transformation
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      {# Left Column: Content #}
+      <div class="lg:col-span-7">
+        {# What is this report #}
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">What is this report?</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            <strong>The State of AI in Nepal 2026</strong> is the first comprehensive analysis of artificial intelligence adoption across Nepali industries. Based on research from 50+ organizations in Kathmandu and beyond, this report provides actionable insights for business leaders planning AI investments.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            Nepal ranks 150th globally in AI readiness, yet adoption is accelerating. Only 31.8% of businesses have dedicated AI budgets, and 56% cite lack of skilled manpower as their primary barrier. This report bridges the knowledge gap with practical frameworks tailored for Nepal's market conditions.
+          </p>
+        </div>
+
+        {# Key Findings #}
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Key findings</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">Only 20.77% of Nepal industries are AI-ready</p>
+              <p class="text-warm-600">The technology sector leads at 45%, while manufacturing lags at 8%.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">39 AI companies operate in Nepal</p>
+              <p class="text-warm-600">Up from 12 in 2023, with 4 new startups founded in 2025 alone.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">NPR 50K to 50M investment range</p>
+              <p class="text-warm-600">Budget varies widely based on use case, from chatbots to full automation.</p>
+            </div>
+          </div>
+        </div>
+
+        {# What You Get #}
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {# FAQ Section #}
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What industries does the report cover?</h3>
+              <p class="text-warm-600">The report analyzes AI adoption across IT/Software, Financial Services, Healthcare, Manufacturing, Education, and Retail sectors in Nepal. Each industry section includes adoption rates, common use cases, and budget benchmarks.</p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Is this report relevant for small businesses?</h3>
+              <p class="text-warm-600">Yes. We include specific guidance for SMEs with budget tiers starting at NPR 50,000. The report covers both enterprise AI implementations and accessible solutions for smaller organizations.</p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">How was the research conducted?</h3>
+              <p class="text-warm-600">We surveyed 50+ organizations across Nepal, conducted interviews with 15 technology leaders, and analyzed publicly available data from government sources, industry associations, and international AI readiness indexes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# Right Column: Form #}
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# Schema Markup #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs",
+    "url": "https://zunkiree.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Artificial Intelligence in Nepal"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Nepal"
+  }
+}
+</script>

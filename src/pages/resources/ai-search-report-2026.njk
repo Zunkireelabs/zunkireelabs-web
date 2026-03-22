@@ -1,0 +1,183 @@
+---
+layout: base.njk
+title: State of AI Search 2026 | Zunkiree Labs
+description: Research from 500+ enterprise technology leaders reveals how organizations are transitioning from keyword search to AI-native natural language understanding.
+permalink: /resources/ai-search-report-2026/
+---
+
+{% set resource = resources.items | find("slug", "ai-search-report-2026") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    {% if resource.stats %}
+    <div class="grid grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for stat in resource.stats %}
+      <div class="text-center md:text-left">
+        <p class="text-3xl md:text-4xl font-medium text-zunkiree-600 mb-1">{{ stat.value }}</p>
+        <p class="text-sm text-gray-600">{{ stat.label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/ai-search-playbook/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              The AI Search Playbook for Product Teams
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/semantic-search-vs-keyword-search/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Semantic Search vs Keyword Search: A Technical Comparison
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/webinar-ai-search-implementation/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Watch: From Keywords to Conversations Webinar
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">What is AI-native search?</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            <strong>AI-native search</strong> is a search paradigm that uses natural language understanding to interpret user intent rather than matching keywords. Unlike traditional search that returns lists of links, AI-native search delivers direct answers by understanding context, synonyms, and the relationships between concepts.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            This report analyzes how 500+ enterprise technology leaders are implementing AI search, the ROI they're achieving, and the common pitfalls to avoid. Organizations report an average 340% return on investment within 18 months of deployment.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Key findings</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">340% average ROI within 18 months</p>
+              <p class="text-warm-600">Organizations implementing AI search see dramatic returns through reduced support costs and improved conversion.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">45% reduction in support queries</p>
+              <p class="text-warm-600">When users find answers directly, they don't need to contact support.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-zunkiree-600">
+              <p class="text-lg font-medium text-warm-black mb-1">78% of enterprises plan AI search investment by 2027</p>
+              <p class="text-warm-600">AI search is becoming a competitive necessity, not a nice-to-have.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">How is AI search different from traditional search?</h3>
+              <p class="text-warm-600">Traditional search matches keywords and returns ranked links. AI search understands natural language queries, interprets intent, and delivers direct answers. For example, "what's your return policy for electronics?" returns the policy itself, not a list of pages mentioning "return" and "electronics."</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What industries benefit most from AI search?</h3>
+              <p class="text-warm-600">E-commerce, SaaS documentation, customer support, and knowledge management see the highest ROI. Any organization with complex information that users need to find quickly benefits from AI search.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">How long does implementation take?</h3>
+              <p class="text-warm-600">Basic implementations can be completed in 2-4 hours using widget integrations. Enterprise deployments with custom data pipelines typically take 2-4 weeks depending on data complexity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>

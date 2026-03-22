@@ -1,0 +1,191 @@
+---
+layout: base.njk
+title: Corecloud365 Case Study | Zunkiree Labs
+description: How Corecloud365 achieved 60% cost reduction and 80% faster issue resolution with AI-powered cloud operations.
+permalink: /resources/corecloud365-case-study/
+---
+
+{% set resource = resources.items | find("slug", "corecloud365-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-xl md:text-2xl font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/admizz-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Admizz Education
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/khushbu-nirman-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khushbu Nirman Sewa
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/ai-search-stack-guide/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              The AI Search Stack Guide
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About Corecloud365</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>Corecloud365</strong> is a cloud services provider managing infrastructure for mid-market enterprises. They handle everything from cloud migration to ongoing operations, supporting hundreds of virtual machines, databases, and applications across multiple cloud providers.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            As Corecloud365 scaled, their operations team struggled to keep up. Troubleshooting required searching through logs across dozens of systems. Documentation was scattered, and tribal knowledge lived in senior engineers' heads. When issues occurred, resolution time depended on who was on-call.
+          </p>
+          <div class="p-6 bg-red-50 border-l-4 border-red-500">
+            <p class="text-warm-600">
+              <strong>Key pain points:</strong>
+            </p>
+            <ul class="mt-2 space-y-2 text-warm-600">
+              <li>• Mean time to resolution (MTTR) averaged 4 hours</li>
+              <li>• Documentation spread across 5 different systems</li>
+              <li>• Junior engineers needed constant help from seniors</li>
+              <li>• Recurring issues weren't captured systematically</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The solution</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Corecloud365 deployed Zunkiree Search to create an AI-powered operations assistant. Engineers can now describe problems in natural language and get relevant runbooks, past incident reports, and troubleshooting steps instantly. The system learns from resolved incidents to improve future recommendations.
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Unified knowledge search</p>
+              <p class="text-warm-600 text-sm">All documentation, runbooks, and incident reports searchable from one interface with natural language queries.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Intelligent troubleshooting</p>
+              <p class="text-warm-600 text-sm">"Database connection timeout on production" returns relevant past incidents and resolution steps.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Automated documentation</p>
+              <p class="text-warm-600 text-sm">Resolved incidents are automatically indexed, making tribal knowledge searchable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for result in resource.results %}
+            <div class="p-6 bg-green-50 border-l-4 border-green-500 text-center">
+              <p class="text-xl font-medium text-warm-black">{{ result }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {# Quote #}
+        <div class="mb-10 p-8 bg-gray-50" data-reveal>
+          <blockquote class="text-xl text-warm-black italic mb-4">
+            "Our junior engineers can now resolve issues that used to require senior intervention. The AI finds the right documentation instantly, and we've cut our operational costs dramatically."
+          </blockquote>
+          <p class="text-warm-600">
+            <strong>VP of Engineering</strong><br>
+            Corecloud365
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>

@@ -1,0 +1,481 @@
+---
+layout: base.njk
+title: Resources | Zunkiree Labs
+description: Explore AI search guides, industry reports, case studies, and technical whitepapers from Zunkiree Labs. Learn how to build AI-native search experiences.
+permalink: /resources/
+---
+
+{# =====================================================
+   RESOURCES INDEX PAGE - IBM Newsroom Style
+   Sections:
+   1. Hero - Featured resource + sidebar
+   2. Resource Tools - 3 icon cards for categories
+   3. Featured Banner - Highlighted report
+   4. Latest Resources - 6-card grid
+   5. Inside Zunkiree Labs - 3 link cards
+   6. Newsletter CTA - Dark section
+   ===================================================== #}
+
+{% set featuredResource = resources.items | find("slug", resources.featured) %}
+{% set bannerResource = resources.items | find("slug", resources.featuredBanner) %}
+
+{# =====================================================
+   SECTION 1: HERO - Featured Resource + Sidebar
+   ===================================================== #}
+<section class="bg-white pt-24 md:pt-28 pb-12 md:pb-16 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+
+    {# Page Title #}
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 tracking-tight mb-12" data-reveal>
+      Resources
+    </h1>
+
+    {# Featured Resource + Sidebar Grid #}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+      {# Left: Featured Resource Card (7 cols) #}
+      <div class="lg:col-span-7" data-reveal>
+        <a href="/resources/{{ featuredResource.slug }}/" class="group block">
+          {# Featured Badge #}
+          <span class="inline-block px-3 py-1 bg-zunkiree-600 text-white text-xs font-medium tracking-wide mb-4">
+            Featured
+          </span>
+
+          {# Cover Image #}
+          <div class="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 mb-6 overflow-hidden">
+            {% if featuredResource.coverImage %}
+              <img
+                src="{{ featuredResource.coverImage }}"
+                alt="{{ featuredResource.title }}"
+                class="w-full h-full object-cover"
+              />
+            {% else %}
+              <div class="w-full h-full relative bg-gradient-to-br from-slate-800 to-slate-900">
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-white/20 text-5xl md:text-7xl font-bold tracking-tighter">{{ featuredResource.type }}</span>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {# Content #}
+          <div class="flex items-start gap-4">
+            <div class="flex-1">
+              <p class="text-xs text-zunkiree-600 font-medium tracking-wide mb-2">
+                {{ featuredResource.type }} | {{ featuredResource.publishDate }}
+              </p>
+              <h2 class="text-xl md:text-2xl font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors mb-2">
+                {{ featuredResource.title }}
+              </h2>
+              <p class="text-gray-600 text-sm md:text-base">
+                {{ featuredResource.subtitle }}
+              </p>
+            </div>
+            <span class="flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      {# Right: More Resources Sidebar (5 cols) #}
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-xs font-semibold text-gray-900 tracking-wide uppercase mb-6">More Resources</h3>
+
+        <div class="divide-y divide-gray-200">
+          {# Show first 4 resources that are NOT the featured resource #}
+          {% for resource in resources.items %}
+            {% if resource.slug != resources.featured and loop.index <= 5 %}
+              <a href="/resources/{{ resource.slug }}/" class="group block py-5 first:pt-0">
+                <p class="text-xs text-gray-500 mb-1">{{ resource.type }}</p>
+                <p class="text-base text-gray-900 group-hover:text-zunkiree-600 transition-colors leading-snug mb-2">
+                  {{ resource.title }}
+                </p>
+                <span class="inline-flex items-center text-gray-900">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </span>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 2: FEATURED BANNER - Highlighted Report
+   ===================================================== #}
+<section class="bg-[#fff9f8] py-16 md:py-20 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+      {# Left: Content #}
+      <div data-reveal>
+        <span class="inline-block text-zunkiree-600 text-xs font-medium tracking-wide uppercase mb-4">Featured</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 leading-tight mb-4">
+          {{ bannerResource.title }}
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+          {{ bannerResource.subtitle }}
+        </p>
+        <a href="/resources/{{ bannerResource.slug }}/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+          Download the report
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      {# Right: Abstract Visual - Chart bars + floating shapes #}
+      <div class="hidden lg:block">
+        <div class="relative h-64 lg:h-80">
+          {# Chart-like bars in center #}
+          <div class="absolute bottom-8 left-1/4 flex items-end gap-4">
+            <div class="w-10 h-20 bg-zunkiree-200 rounded-t"></div>
+            <div class="w-10 h-32 bg-zunkiree-300 rounded-t"></div>
+            <div class="w-10 h-44 bg-zunkiree-400 rounded-t"></div>
+            <div class="w-10 h-28 bg-zunkiree-200 rounded-t"></div>
+            <div class="w-10 h-36 bg-zunkiree-300 rounded-t"></div>
+          </div>
+          {# Floating abstract shapes #}
+          <div class="absolute top-0 right-0 w-32 h-32 bg-zunkiree-100 rounded-2xl transform rotate-12"></div>
+          <div class="absolute top-20 right-16 w-20 h-20 bg-zunkiree-200 rounded-xl transform -rotate-6"></div>
+          <div class="absolute bottom-4 right-4 w-24 h-24 bg-zunkiree-50 rounded-3xl transform rotate-3"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 3: LATEST RESOURCES - Sidebar + Grid Layout
+   ===================================================== #}
+<section class="bg-white py-16 md:py-24 px-4 md:px-6" x-data="resourceFilter()">
+  <div class="max-w-screen-2xl mx-auto">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+      {# LEFT SIDEBAR - Filters #}
+      <div class="lg:col-span-3" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {# Section Title #}
+          <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-8">Latest resources</h2>
+
+          {# Search Bar #}
+          <div class="flex mb-8">
+            <input
+              type="text"
+              x-model="searchQuery"
+              @input="filterResources()"
+              placeholder="Search..."
+              class="flex-1 px-4 py-3 border border-gray-300 border-r-0 text-sm focus:outline-none focus:border-gray-400 bg-white"
+            />
+            <button class="px-5 py-3 bg-gray-800 text-white text-sm font-medium hover:bg-gray-900 transition-colors">
+              search
+            </button>
+          </div>
+
+          {# Resource Type Filter #}
+          <div class="mb-6">
+            <button
+              @click="filterOpen = !filterOpen"
+              class="w-full flex items-center justify-between py-3 border-t border-gray-300"
+            >
+              <span class="text-base font-medium text-gray-900">Resource Type</span>
+              <div class="flex items-center gap-2">
+                <span
+                  x-show="selectedTypes.length > 0"
+                  x-text="selectedTypes.length"
+                  class="w-6 h-6 flex items-center justify-center text-xs font-medium text-gray-600 border border-gray-300 rounded-full"
+                ></span>
+                <svg
+                  class="w-4 h-4 text-gray-500 transition-transform"
+                  :class="{ 'rotate-180': filterOpen }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                </svg>
+              </div>
+            </button>
+
+            {# Filter Options #}
+            <div x-show="filterOpen" x-transition class="py-4 space-y-4">
+              <template x-for="type in resourceTypes" :key="type.value">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    :value="type.value"
+                    x-model="selectedTypes"
+                    @change="filterResources()"
+                    class="w-5 h-5 border-2 border-gray-300 rounded-sm text-zunkiree-600 focus:ring-zunkiree-500 cursor-pointer"
+                  />
+                  <span class="text-sm text-gray-700 group-hover:text-gray-900" x-text="type.label"></span>
+                </label>
+              </template>
+            </div>
+          </div>
+
+          {# Clear All #}
+          <button
+            x-show="selectedTypes.length > 0 || searchQuery.length > 0"
+            @click="clearFilters()"
+            class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            clear all
+          </button>
+
+          {# Subscribe CTA #}
+          <a
+            href="/contact/?source=newsletter"
+            class="block w-full px-6 py-4 bg-gray-800 text-white text-center font-medium hover:bg-gray-900 transition-colors"
+          >
+            Subscribe to Newsletter
+          </a>
+        </div>
+      </div>
+
+      {# RIGHT - Resource Cards Grid #}
+      <div class="lg:col-span-9">
+        {# Resources Grid #}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {% for resource in resources.items %}
+            <a
+              href="/resources/{{ resource.slug }}/"
+              class="resource-card group block bg-gray-50 overflow-hidden transition-shadow duration-300 hover:shadow-xl"
+              data-reveal
+              data-type="{{ resource.type }}"
+              data-title="{{ resource.title }}"
+              x-show="isVisible('{{ resource.type }}', '{{ resource.title | replace("'", "\\'") }}')"
+              x-transition
+            >
+              {# Card Image #}
+              <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                {% if resource.coverImage %}
+                  <img
+                    src="{{ resource.coverImage }}"
+                    alt="{{ resource.title }}"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                {% else %}
+                  {# Fallback gradient placeholder #}
+                  <div class="w-full h-full flex items-center justify-center
+                    {% if resource.type == 'EBOOK' or resource.type == 'GUIDE' %}bg-gradient-to-br from-slate-700 to-slate-900
+                    {% elif resource.type == 'REPORT' or resource.type == 'WHITEPAPER' %}bg-gradient-to-br from-zunkiree-500 to-zunkiree-700
+                    {% elif resource.type == 'CASE STUDY' %}bg-gradient-to-br from-gray-600 to-gray-800
+                    {% else %}bg-gradient-to-br from-gray-500 to-gray-700{% endif %}">
+                    <span class="text-white/30 text-2xl font-bold tracking-tight uppercase">{{ resource.type }}</span>
+                  </div>
+                {% endif %}
+              </div>
+
+              {# Card Content #}
+              <div class="p-4">
+                {# Type Badge #}
+                <p class="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-1">{{ resource.type }}</p>
+
+                {# Title #}
+                <h3 class="text-base font-normal text-gray-900 leading-snug line-clamp-2">
+                  {{ resource.title }}
+                </h3>
+
+                {# CTA Link #}
+                <span class="inline-flex items-center gap-1 text-sm text-zunkiree-600 font-medium group-hover:gap-2 transition-all mt-8">
+                  Read now
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+
+        {# No Results Message #}
+        <div
+          x-show="filteredCount === 0"
+          x-transition
+          class="py-16 text-center"
+        >
+          <p class="text-gray-500">No resources match your filters.</p>
+          <button @click="clearFilters()" class="mt-4 text-zunkiree-600 font-medium hover:text-zunkiree-700">
+            Clear filters
+          </button>
+        </div>
+
+        {# Pagination Footer #}
+        <div class="flex items-center justify-between mt-12 pt-8 border-t border-gray-200" data-reveal>
+          {# Left: Page indicator #}
+          <div class="flex items-center gap-3">
+            <span class="text-base text-gray-900">Page</span>
+            <span class="w-10 h-10 flex items-center justify-center bg-gray-900 text-white text-sm font-medium">
+              1
+            </span>
+          </div>
+
+          {# Right: Resource count #}
+          <div>
+            <span class="text-zunkiree-600 font-medium" x-text="'Showing 1-' + filteredCount + ' of ' + {{ resources.items | length }} + ' resources'">
+              Showing 1-{{ resources.items | length }} of {{ resources.items | length }} resources
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function resourceFilter() {
+    return {
+      searchQuery: '',
+      selectedTypes: [],
+      filterOpen: true,
+      filteredCount: {{ resources.items | length }},
+      resourceTypes: [
+        { value: 'EBOOK', label: 'eBooks' },
+        { value: 'GUIDE', label: 'Guides' },
+        { value: 'REPORT', label: 'Reports' },
+        { value: 'CASE STUDY', label: 'Case Studies' },
+        { value: 'WHITEPAPER', label: 'Whitepapers' }
+      ],
+
+      isVisible(type, title) {
+        const typeMatch = this.selectedTypes.length === 0 || this.selectedTypes.includes(type);
+        const searchMatch = this.searchQuery === '' ||
+          title.toLowerCase().includes(this.searchQuery.toLowerCase());
+        return typeMatch && searchMatch;
+      },
+
+      filterResources() {
+        this.$nextTick(() => {
+          const cards = document.querySelectorAll('.resource-card');
+          let count = 0;
+          cards.forEach(card => {
+            if (window.getComputedStyle(card).display !== 'none') count++;
+          });
+          this.filteredCount = count;
+        });
+      },
+
+      clearFilters() {
+        this.searchQuery = '';
+        this.selectedTypes = [];
+        this.filterResources();
+      }
+    }
+  }
+</script>
+
+{# =====================================================
+   SECTION 4: CTA + FAQ SECTION
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
+
+      {# Left Side - CTA Box #}
+      <div
+        class="relative p-10 md:p-14 lg:p-16 flex flex-col justify-center overflow-hidden"
+        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
+        data-reveal
+      >
+        {# Background Image #}
+        <img
+          src="/assets/images/cta-background.svg"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        {# Content overlay #}
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
+            Start your AI<br>journey today
+          </h2>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+              Contact Us
+            </a>
+            <a href="/products/search/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
+              View Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# Right Side - FAQ Accordion #}
+      <div x-ref="faqSection" data-reveal>
+      <div x-data="{ activeIndex: null, expandAll: false }">
+        {# Header #}
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Get to know Zunkiree</h3>
+          <button
+            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+          </button>
+        </div>
+
+        {# FAQ Items #}
+        <div class="divide-y divide-gray-200">
+          {% for item in faq %}
+          <div class="py-5">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+              class="w-full flex items-center justify-between text-left group"
+            >
+              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+                {{ item.question }}
+              </span>
+              <span class="flex-shrink-0 text-gray-400">
+                <svg
+                  class="w-5 h-5 transition-transform duration-200"
+                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              x-show="activeIndex === {{ loop.index }} || expandAll"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-4 text-gray-600 leading-relaxed">
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</section>

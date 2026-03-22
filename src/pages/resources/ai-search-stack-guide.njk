@@ -1,0 +1,149 @@
+---
+layout: base.njk
+title: The AI Search Stack for the Modern Enterprise | Zunkiree Labs
+description: Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. Free ebook with architecture patterns and implementation strategies.
+permalink: /resources/ai-search-stack-guide/
+---
+
+{# =====================================================
+   RESOURCE PAGE: AI Search Stack Guide
+   Layout: Databricks-style hero with overlapping elements
+   ===================================================== #}
+
+{% set resource = resources.items | find("slug", "ai-search-stack-guide") %}
+
+{# =====================================================
+   HERO SECTION - IBM Style (Light background, stacked layout)
+   ===================================================== #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+
+    {# Title Area - Left column only #}
+    <div class="mb-8">
+      {# Title #}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+
+      {# Subtitle #}
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+
+      {# Date #}
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate | replace("-", " ") }}
+      </p>
+    </div>
+
+    {# Image + Sidebar Row - Both aligned at same vertical level #}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      {# Hero Image (7 cols) #}
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {# Sidebar - More Articles (5 cols) - aligned with image #}
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">more articles</h3>
+
+        <div class="space-y-6">
+          {# Article 1 #}
+          <a href="#" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              How AI Search Transforms Customer Experience in E-commerce
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+
+          <hr class="border-warm-200">
+
+          {# Article 2 #}
+          <a href="#" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Building Semantic Search: A Technical Deep Dive
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+
+          <hr class="border-warm-200">
+
+          {# Article 3 #}
+          <a href="#" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Enterprise AI Adoption: Lessons from Fortune 500 Companies
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   CONTENT SECTION - White Background
+   ===================================================== #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      {# Left Column: Content (7 cols on desktop) #}
+      <div class="lg:col-span-7">
+        {# Introduction #}
+        <div class="mb-8" data-reveal>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            {{ resource.description }}
+          </p>
+        </div>
+
+        {# What You Get Section #}
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">
+            What you get:
+          </h2>
+
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-warm-black mt-1.5">•</span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+
+      {# Right Column: Sticky Form (5 cols) #}
+      <div class="lg:col-span-5" data-reveal>
+        {% set formTitle = "Please tell us about yourself" %}
+        {% set ctaText = resource.ctaText %}
+        {% include "components/lead-capture-form.njk" %}
+      </div>
+
+    </div>
+  </div>
+</section>
+

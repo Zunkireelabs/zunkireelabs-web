@@ -1,0 +1,175 @@
+{# =====================================================
+   LEAD CAPTURE FORM COMPONENT
+   Usage: {% include "components/lead-capture-form.njk" %}
+   Variables:
+     - formTitle: string (default: "Get Your Copy")
+     - formSubtitle: string (optional)
+     - ctaText: string (default: "Download Now")
+     - resourceSlug: string (for form identification)
+   ===================================================== #}
+
+{% set formTitle = formTitle or "Get Your Copy" %}
+{% set ctaText = ctaText or "Download Now" %}
+
+<div class="bg-[#fff9f8] shadow-lg p-6 lg:p-8 lg:sticky lg:top-32">
+  <h3 class="text-2xl font-medium text-warm-black tracking-[-0.02em] mb-2">{{ formTitle }}</h3>
+  {% if formSubtitle %}
+  <p class="text-warm-600 text-sm mb-6">{{ formSubtitle }}</p>
+  {% else %}
+  <div class="mb-6"></div>
+  {% endif %}
+
+  <form
+    class="space-y-4"
+    x-data="{
+      firstName: '',
+      lastName: '',
+      email: '',
+      company: '',
+      jobTitle: '',
+      phone: '',
+      country: '',
+      submitting: false,
+      submitted: false
+    }"
+    @submit.prevent="submitting = true; setTimeout(() => { submitting = false; submitted = true; }, 1500)"
+  >
+    {# Success Message #}
+    <div x-show="submitted" x-cloak class="text-center py-8">
+      <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h4 class="text-lg font-medium text-warm-black mb-2">Thank you!</h4>
+      <p class="text-warm-600 text-sm">Check your email for the download link.</p>
+    </div>
+
+    {# Form Fields #}
+    <div x-show="!submitted">
+      {# First Name #}
+      <div class="mb-4">
+        <label for="firstName" class="block text-sm font-medium text-warm-charcoal mb-1.5">First Name <span class="text-zunkiree-600">*</span></label>
+        <input
+          type="text"
+          id="firstName"
+          x-model="firstName"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="John"
+          required
+        >
+      </div>
+
+      {# Last Name #}
+      <div class="mb-4">
+        <label for="lastName" class="block text-sm font-medium text-warm-charcoal mb-1.5">Last Name <span class="text-zunkiree-600">*</span></label>
+        <input
+          type="text"
+          id="lastName"
+          x-model="lastName"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="Doe"
+          required
+        >
+      </div>
+
+      {# Company Email #}
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-warm-charcoal mb-1.5">Company Email <span class="text-zunkiree-600">*</span></label>
+        <input
+          type="email"
+          id="email"
+          x-model="email"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="john@company.com"
+          required
+        >
+      </div>
+
+      {# Company Name #}
+      <div class="mb-4">
+        <label for="company" class="block text-sm font-medium text-warm-charcoal mb-1.5">Company Name <span class="text-zunkiree-600">*</span></label>
+        <input
+          type="text"
+          id="company"
+          x-model="company"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="Acme Inc."
+          required
+        >
+      </div>
+
+      {# Job Title #}
+      <div class="mb-4">
+        <label for="jobTitle" class="block text-sm font-medium text-warm-charcoal mb-1.5">Job Title <span class="text-zunkiree-600">*</span></label>
+        <input
+          type="text"
+          id="jobTitle"
+          x-model="jobTitle"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="Product Manager"
+          required
+        >
+      </div>
+
+      {# Phone Number #}
+      <div class="mb-4">
+        <label for="phone" class="block text-sm font-medium text-warm-charcoal mb-1.5">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          x-model="phone"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal placeholder:text-warm-400 focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          placeholder="+1 (555) 123-4567"
+        >
+      </div>
+
+      {# Country #}
+      <div class="mb-6">
+        <label for="country" class="block text-sm font-medium text-warm-charcoal mb-1.5">Country <span class="text-zunkiree-600">*</span></label>
+        <select
+          id="country"
+          x-model="country"
+          class="w-full px-3 py-2.5 bg-white border border-warm-300 text-warm-charcoal focus:border-zunkiree-600 focus:ring-1 focus:ring-zunkiree-600/20 outline-none transition-all text-sm"
+          required
+        >
+          <option value="">Select a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="GB">United Kingdom</option>
+          <option value="AU">Australia</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="IN">India</option>
+          <option value="JP">Japan</option>
+          <option value="NP">Nepal</option>
+          <option value="SG">Singapore</option>
+          <option value="AE">United Arab Emirates</option>
+          <option value="OTHER">Other</option>
+        </select>
+      </div>
+
+      {# Privacy Text #}
+      <p class="text-xs text-warm-400 mb-4 leading-relaxed">
+        By submitting, I agree to the processing of my personal data by Zunkiree Labs in accordance with our
+        <a href="/privacy/" class="text-zunkiree-600 hover:underline">Privacy Policy</a>.
+      </p>
+
+      {# Submit Button #}
+      <button
+        type="submit"
+        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        :disabled="submitting"
+      >
+        <span x-show="!submitting">{{ ctaText }}</span>
+        <span x-show="submitting" class="flex items-center gap-2">
+          <svg class="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Processing...
+        </span>
+      </button>
+    </div>
+  </form>
+</div>

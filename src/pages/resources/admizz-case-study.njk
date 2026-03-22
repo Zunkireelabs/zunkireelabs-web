@@ -1,0 +1,191 @@
+---
+layout: base.njk
+title: Admizz Case Study | Zunkiree Labs
+description: How Admizz Education reduced response time by 45% with AI-powered student inquiry management. 3x improvement in satisfaction.
+permalink: /resources/admizz-case-study/
+---
+
+{% set resource = resources.items | find("slug", "admizz-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-xl md:text-2xl font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/khushbu-nirman-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khushbu Nirman Sewa
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/corecloud365-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Corecloud365
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/ai-search-report-2026/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              State of AI Search 2026 Report
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About Admizz Education</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>Admizz Education</strong> is a leading education consultancy helping students navigate university admissions. They handle thousands of student inquiries annually about programs, eligibility, application processes, and deadlines. Their team of counselors provides personalized guidance for students seeking to study abroad.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            With growing student interest in international education, Admizz was overwhelmed with inquiries. Students asked similar questions repeatedly—about application deadlines, document requirements, and program eligibility. Counselors spent most of their time answering routine questions instead of providing high-value personalized guidance.
+          </p>
+          <div class="p-6 bg-red-50 border-l-4 border-red-500">
+            <p class="text-warm-600">
+              <strong>Key pain points:</strong>
+            </p>
+            <ul class="mt-2 space-y-2 text-warm-600">
+              <li>• Average response time of 24+ hours for initial inquiries</li>
+              <li>• 70% of questions were repetitive FAQs</li>
+              <li>• Counselors burned out from repetitive work</li>
+              <li>• Students frustrated with slow responses during application seasons</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The solution</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Admizz implemented Zunkiree Search to power an AI-native inquiry system. Students can now ask questions in natural language and receive instant, accurate answers. The system understands context—it knows that "IELTS requirement for UK universities" is different from "IELTS requirement for Australian universities."
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Natural language understanding</p>
+              <p class="text-warm-600 text-sm">Students ask questions naturally: "What documents do I need for a US student visa?" and get direct answers.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Contextual responses</p>
+              <p class="text-warm-600 text-sm">The system understands context and provides answers specific to the student's situation and target country.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Seamless escalation</p>
+              <p class="text-warm-600 text-sm">Complex queries are automatically routed to human counselors with full context preserved.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for result in resource.results %}
+            <div class="p-6 bg-green-50 border-l-4 border-green-500 text-center">
+              <p class="text-xl font-medium text-warm-black">{{ result }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        {# Quote #}
+        <div class="mb-10 p-8 bg-gray-50" data-reveal>
+          <blockquote class="text-xl text-warm-black italic mb-4">
+            "Students used to wait days for answers to simple questions. Now they get instant responses, and our counselors focus on what matters—helping students make the right decisions about their education."
+          </blockquote>
+          <p class="text-warm-600">
+            <strong>Operations Director</strong><br>
+            Admizz Education
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>

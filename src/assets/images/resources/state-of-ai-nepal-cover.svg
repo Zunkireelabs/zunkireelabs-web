@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="nepal-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0f1f33"/>
+    </linearGradient>
+    <linearGradient id="nepal-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EB1600"/>
+      <stop offset="100%" stop-color="#ff4d4d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#nepal-bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.1" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Abstract Nepal mountain silhouette -->
+  <path d="M0 380 L100 280 L180 320 L280 220 L350 260 L450 150 L520 200 L600 120 L680 180 L750 100 L800 140 L800 450 L0 450 Z" fill="#fff" opacity="0.05"/>
+
+  <!-- Data visualization bars -->
+  <g transform="translate(100, 280)">
+    <rect x="0" y="80" width="40" height="60" fill="url(#nepal-accent)" opacity="0.8" rx="2"/>
+    <rect x="60" y="50" width="40" height="90" fill="url(#nepal-accent)" opacity="0.85" rx="2"/>
+    <rect x="120" y="20" width="40" height="120" fill="url(#nepal-accent)" opacity="0.9" rx="2"/>
+    <rect x="180" y="40" width="40" height="100" fill="url(#nepal-accent)" opacity="0.85" rx="2"/>
+    <rect x="240" y="0" width="40" height="140" fill="url(#nepal-accent)" rx="2"/>
+  </g>
+
+  <!-- Circular data points -->
+  <g fill="#fff" opacity="0.6">
+    <circle cx="550" cy="150" r="4"/>
+    <circle cx="590" cy="180" r="3"/>
+    <circle cx="620" cy="140" r="5"/>
+    <circle cx="660" cy="170" r="3"/>
+    <circle cx="700" cy="130" r="4"/>
+  </g>
+
+  <!-- Connecting lines -->
+  <polyline points="550,150 590,180 620,140 660,170 700,130" fill="none" stroke="#EB1600" stroke-width="2" opacity="0.6"/>
+
+  <!-- Nepal text element -->
+  <text x="550" y="280" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#fff" opacity="0.1">NEPAL</text>
+
+  <!-- Stats indicators -->
+  <g transform="translate(520, 320)">
+    <rect width="100" height="50" fill="#fff" opacity="0.1" rx="4"/>
+    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">150th</text>
+    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Readiness</text>
+  </g>
+
+  <g transform="translate(640, 320)">
+    <rect width="100" height="50" fill="#fff" opacity="0.1" rx="4"/>
+    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">39</text>
+    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Companies</text>
+  </g>
+
+  <!-- Year badge -->
+  <rect x="50" y="50" width="80" height="30" fill="url(#nepal-accent)" rx="4"/>
+  <text x="90" y="70" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">2026</text>
+</svg>
