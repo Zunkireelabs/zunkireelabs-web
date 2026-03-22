@@ -5,6 +5,7 @@ export default function (eleventyConfig) {
   // Vite Plugin with configuration
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {
+      publicDir: "public", // Static assets copied as-is
       build: {
         emptyOutDir: false, // Preserve Eleventy files
         rollupOptions: {
@@ -45,6 +46,12 @@ export default function (eleventyConfig) {
 
   // Shortcode for current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Custom filter to find item by attribute value
+  eleventyConfig.addFilter("find", function(array, attr, value) {
+    if (!array || !Array.isArray(array)) return null;
+    return array.find(item => item[attr] === value);
+  });
 
   return {
     dir: {
