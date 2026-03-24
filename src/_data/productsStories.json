@@ -1,0 +1,38 @@
+[
+  {
+    "id": "admizz",
+    "name": "Admizz Education",
+    "logo": "/assets/images/clients/admizz.png",
+    "stat": "45%",
+    "statLabel": "fewer support tickets",
+    "headline": "Admizz deploys Zunkiree Search for student self-service",
+    "description": "Admizz integrated Zunkiree Search to help students find answers instantly, reducing support ticket volume while improving satisfaction scores.",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/admizz-case-study/"
+  },
+  {
+    "id": "corecloud365",
+    "name": "CoreCloud365",
+    "logo": "/assets/images/clients/corecloud365.png",
+    "stat": "3x",
+    "statLabel": "faster information discovery",
+    "headline": "CoreCloud365 transforms documentation with AI search",
+    "description": "CoreCloud365 replaced their legacy search with Zunkiree Search, enabling customers to find answers through natural language queries instead of keyword hunting.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/corecloud365-case-study/"
+  },
+  {
+    "id": "carbon-spark",
+    "name": "Carbon Spark",
+    "logo": "/assets/images/clients/carbon-spark.png",
+    "stat": "60%",
+    "statLabel": "efficiency gain",
+    "headline": "Carbon Spark powers internal knowledge search",
+    "description": "Carbon Spark integrated Zunkiree Search to make their internal documentation searchable. Employees now find answers in seconds instead of searching through folders.",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/carbon-spark-case-study/"
+  }
+]

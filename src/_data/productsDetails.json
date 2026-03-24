@@ -1,0 +1,155 @@
+{
+  "search": {
+    "id": "search",
+    "title": "Zunkiree Search",
+    "category": "AI Products",
+    "tagline": "AI-native search that understands intent",
+    "description": "Transform how users discover information with natural language search. Deliver direct answers instead of link lists, reducing support queries by 45%.",
+    "heroImage": "/assets/images/zunkiree-search-hero.svg",
+    "lastUpdated": "2026-03-24",
+
+    "definition": {
+      "heading": "Search that understands what users actually mean",
+      "content": "Zunkiree Search is an AI-native search and interaction platform that enables businesses to deliver direct answers through natural language queries. Unlike traditional keyword-based search that returns link lists, Zunkiree understands context and user intent to provide accurate, relevant answers instantly. Organizations using Zunkiree see a 45% reduction in support queries and 3x improvement in information discovery speed."
+    },
+
+    "stats": [
+      { "value": "100ms", "label": "P95 Response", "description": "sub-second answers" },
+      { "value": "99.9%", "label": "Uptime SLA", "description": "enterprise reliability" },
+      { "value": "45%", "label": "Query Reduction", "description": "fewer support tickets" },
+      { "value": "50+", "label": "Connectors", "description": "data integrations" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "search",
+        "title": "Natural language, instant answers",
+        "description": "Users ask questions in plain language and receive accurate, contextual responses drawn from your entire data ecosystem. No keywords required—just natural conversation."
+      },
+      {
+        "icon": "speed",
+        "title": "Sub-100ms response times at scale",
+        "description": "Enterprise-grade performance that handles millions of queries daily without degradation. Your users get instant answers, every time, regardless of load."
+      },
+      {
+        "icon": "integrate",
+        "title": "Connect any data source in hours",
+        "description": "50+ pre-built connectors for databases, APIs, documents, and knowledge bases. Most integrations complete in under 2 hours with our JavaScript widget."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "ecommerce",
+        "title": "E-commerce",
+        "headline": "Conversational Product Discovery",
+        "description": "Help customers find products faster with natural language. 'Show me blue running shoes under $100 with good reviews' returns exactly what they want.",
+        "features": [
+          "Product recommendations",
+          "Inventory queries",
+          "Order tracking",
+          "Size and fit guidance"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "knowledge",
+        "title": "Knowledge Management",
+        "headline": "Intelligent Internal Search",
+        "description": "Make internal documentation searchable and accessible. Employees find answers in seconds instead of searching through folders and wikis.",
+        "features": [
+          "Document search",
+          "Policy lookups",
+          "FAQ automation",
+          "Onboarding assistance"
+        ],
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "support",
+        "title": "Customer Support",
+        "headline": "Self-Service Resolution",
+        "description": "Reduce support tickets with instant, accurate answers. Customers resolve issues themselves while agents focus on complex problems.",
+        "features": [
+          "Self-service resolution",
+          "Agent assistance",
+          "Ticket deflection",
+          "Knowledge base search"
+        ],
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "analytics",
+        "title": "Data Analytics",
+        "headline": "Natural Language BI",
+        "description": "Query complex datasets with plain language. Business users get insights without learning SQL or waiting for analyst reports.",
+        "features": [
+          "Business intelligence",
+          "Report generation",
+          "Trend analysis",
+          "Dashboard queries"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Documentation",
+        "description": "Technical guides and API reference",
+        "url": "/docs/search/",
+        "icon": "book"
+      },
+      {
+        "title": "Integration Guide",
+        "description": "Step-by-step setup instructions",
+        "url": "/resources/search-integration-guide/",
+        "icon": "code"
+      },
+      {
+        "title": "Case Studies",
+        "description": "See how customers use Zunkiree",
+        "url": "/resources/?type=case-study",
+        "icon": "briefcase"
+      },
+      {
+        "title": "API Reference",
+        "description": "REST API documentation",
+        "url": "/docs/search/api/",
+        "icon": "terminal"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is Zunkiree Search?",
+        "answer": "Zunkiree Search is an AI-native search and interaction platform that enables businesses to deliver direct answers through natural language queries. Unlike traditional keyword-based search, it understands context and user intent."
+      },
+      {
+        "question": "How long does Zunkiree Search take to integrate?",
+        "answer": "Most customers complete integration within 2 hours using our JavaScript widget. Enterprise API integrations typically take 1-2 weeks depending on data complexity and custom requirements."
+      },
+      {
+        "question": "What data sources does Zunkiree Search connect to?",
+        "answer": "Zunkiree integrates with websites, documentation, knowledge bases, CMS platforms, and custom databases through our REST API and 50+ pre-built connectors including Notion, Confluence, and PostgreSQL."
+      },
+      {
+        "question": "How does Zunkiree Search pricing work?",
+        "answer": "Zunkiree Search pricing is based on query volume and data sources connected. Contact our sales team for a custom quote based on your specific requirements and scale."
+      },
+      {
+        "question": "Is Zunkiree Search secure for enterprise use?",
+        "answer": "Yes. Zunkiree Search includes role-based access control, end-to-end encryption, SOC 2 compliance, and can be deployed on-premises or in your own cloud environment for maximum data security."
+      }
+    ],
+
+    "cta": {
+      "headline": "Ready to transform your search?",
+      "description": "See how Zunkiree Search can improve user experience and engagement on your platform.",
+      "primaryButton": { "text": "Schedule Demo", "url": "/contact/" },
+      "secondaryButton": { "text": "Contact Sales", "url": "/contact/" }
+    },
+
+    "clients": ["admizz", "corecloud365", "carbon-spark"]
+  }
+}
