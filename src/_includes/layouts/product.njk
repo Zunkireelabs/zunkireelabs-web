@@ -801,10 +801,10 @@ schemaType: product
 {% endif %}
 
 {# =====================================================
-   SECTION 7: RESOURCES
+   SECTION 7: RESOURCES (Databricks-style cards)
    ===================================================== #}
 {% if product.resources %}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Header #}
     <div class="mb-12">
@@ -814,49 +814,55 @@ schemaType: product
       </h2>
     </div>
 
-    {# Resources Grid #}
+    {# Resources Grid - Databricks style #}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {% for resource in product.resources %}
-      <a href="{{ resource.url }}" class="group bg-white border border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-200">
-        {# Icon #}
-        <div class="mb-4">
-          {% if resource.icon == "book" %}
-          <svg class="w-8 h-8 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+      <a href="{{ resource.url }}" class="group bg-[#EDF2F8] rounded-none p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+        {# Top Row: Icon + Label + Arrow #}
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-2.5">
+            {# Small colored icon #}
+            <div class="w-6 h-6 flex items-center justify-center">
+              {% if resource.icon == "book" %}
+              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+              {% elif resource.icon == "code" %}
+              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+              {% elif resource.icon == "briefcase" %}
+              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              {% elif resource.icon == "terminal" %}
+              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              {% else %}
+              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+              </svg>
+              {% endif %}
+            </div>
+            {# Category label #}
+            <span class="text-xs font-medium uppercase tracking-wider text-gray-500">Zunkiree</span>
+          </div>
+          {# Arrow icon - top right #}
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7v10"></path>
           </svg>
-          {% elif resource.icon == "code" %}
-          <svg class="w-8 h-8 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-          </svg>
-          {% elif resource.icon == "briefcase" %}
-          <svg class="w-8 h-8 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-          {% elif resource.icon == "terminal" %}
-          <svg class="w-8 h-8 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-          {% else %}
-          <svg class="w-8 h-8 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-          </svg>
-          {% endif %}
         </div>
+
         {# Title #}
-        <h3 class="text-lg font-medium text-gray-900 mb-2 group-hover:text-zunkiree-600 transition-colors">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-zunkiree-600 transition-colors">
           {{ resource.title }}
         </h3>
+
         {# Description #}
-        <p class="text-gray-600 text-sm mb-4">
+        <p class="text-gray-500 text-sm leading-relaxed">
           {{ resource.description }}
         </p>
-        {# Arrow #}
-        <div class="flex items-center text-zunkiree-600 text-sm font-medium">
-          <span>View</span>
-          <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </div>
       </a>
       {% endfor %}
     </div>
