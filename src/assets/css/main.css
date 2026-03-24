@@ -571,6 +571,41 @@
   .dark .marquee-fade-light::after {
     background: linear-gradient(to left, var(--background) 0%, transparent 100%);
   }
+
+  /* =====================================================
+     CTA Shimmer Animation
+     ===================================================== */
+  .cta-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 60%,
+      transparent 100%
+    );
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    50%, 100% {
+      left: 100%;
+    }
+  }
 }
 
 /* Utilities */

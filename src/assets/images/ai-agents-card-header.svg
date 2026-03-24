@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100">
+  <defs>
+    <!-- Gradient for background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3139"/>
+      <stop offset="100%" style="stop-color:#2d4a56"/>
+    </linearGradient>
+    <!-- Glow effect for nodes -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="320" height="100" fill="url(#bgGradient)"/>
+  <rect width="320" height="100" fill="url(#grid)"/>
+
+  <!-- Connection lines (neural network style) -->
+  <g stroke="rgba(235,22,0,0.3)" stroke-width="1.5">
+    <!-- Main connections -->
+    <line x1="60" y1="50" x2="120" y2="30"/>
+    <line x1="60" y1="50" x2="120" y2="70"/>
+    <line x1="120" y1="30" x2="180" y2="50"/>
+    <line x1="120" y1="70" x2="180" y2="50"/>
+    <line x1="180" y1="50" x2="240" y2="35"/>
+    <line x1="180" y1="50" x2="240" y2="65"/>
+    <line x1="240" y1="35" x2="290" y2="50"/>
+    <line x1="240" y1="65" x2="290" y2="50"/>
+    <!-- Secondary connections -->
+    <line x1="120" y1="30" x2="120" y2="70" stroke="rgba(235,22,0,0.15)"/>
+    <line x1="240" y1="35" x2="240" y2="65" stroke="rgba(235,22,0,0.15)"/>
+  </g>
+
+  <!-- Data flow particles (small dots along lines) -->
+  <g fill="#eb1600" opacity="0.6">
+    <circle cx="90" cy="40" r="1.5"/>
+    <circle cx="150" cy="40" r="1.5"/>
+    <circle cx="210" cy="42" r="1.5"/>
+    <circle cx="265" cy="43" r="1.5"/>
+  </g>
+
+  <!-- Neural network nodes -->
+  <!-- Input node (left) -->
+  <g filter="url(#glow)">
+    <circle cx="60" cy="50" r="12" fill="#1b3139" stroke="#eb1600" stroke-width="2"/>
+    <circle cx="60" cy="50" r="5" fill="#eb1600"/>
+  </g>
+
+  <!-- Hidden layer 1 -->
+  <g filter="url(#glow)">
+    <circle cx="120" cy="30" r="8" fill="#1b3139" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <circle cx="120" cy="30" r="3" fill="white"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="120" cy="70" r="8" fill="#1b3139" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <circle cx="120" cy="70" r="3" fill="white"/>
+  </g>
+
+  <!-- Central processing node (larger) -->
+  <g filter="url(#glow)">
+    <circle cx="180" cy="50" r="14" fill="#eb1600"/>
+    <circle cx="180" cy="50" r="8" fill="#1b3139"/>
+    <!-- AI symbol in center -->
+    <text x="180" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="white">AI</text>
+  </g>
+
+  <!-- Hidden layer 2 -->
+  <g filter="url(#glow)">
+    <circle cx="240" cy="35" r="8" fill="#1b3139" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <circle cx="240" cy="35" r="3" fill="white"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="240" cy="65" r="8" fill="#1b3139" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <circle cx="240" cy="65" r="3" fill="white"/>
+  </g>
+
+  <!-- Output node (right) -->
+  <g filter="url(#glow)">
+    <circle cx="290" cy="50" r="10" fill="#1b3139" stroke="#eb1600" stroke-width="2"/>
+    <path d="M285 50 L290 45 L295 50 L290 55 Z" fill="#eb1600"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <!-- Top right corner accent -->
+  <g opacity="0.3">
+    <rect x="280" y="8" width="30" height="2" fill="#eb1600" rx="1"/>
+    <rect x="295" y="14" width="15" height="2" fill="white" rx="1"/>
+  </g>
+
+  <!-- Bottom left corner accent -->
+  <g opacity="0.3">
+    <rect x="10" y="85" width="25" height="2" fill="white" rx="1"/>
+    <rect x="10" y="90" width="15" height="2" fill="#eb1600" rx="1"/>
+  </g>
+
+  <!-- Floating geometric shapes -->
+  <g opacity="0.15">
+    <polygon points="30,20 40,25 35,35 25,30" fill="white"/>
+    <polygon points="280,75 290,70 295,80 285,85" fill="#eb1600"/>
+  </g>
+</svg>
