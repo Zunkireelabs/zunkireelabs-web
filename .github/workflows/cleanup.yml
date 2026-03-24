@@ -5,7 +5,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: zunkiree-technologies/zunkiree-web
+  IMAGE_NAME: zunkireelabs/zunkiree-web
 
 jobs:
   cleanup:
