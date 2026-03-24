@@ -1,0 +1,1554 @@
+{
+  "ai-development": {
+    "id": "ai-development",
+    "title": "AI Development",
+    "category": "AI & Data",
+    "tagline": "Build intelligent systems that solve real business problems",
+    "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
+    "heroImage": "/assets/images/ai-development-hero.png",
+    "lastUpdated": "2026-03-23",
+
+    "heroCommands": [
+      { "text": "Extract invoice data", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Analyze customer sentiment", "type": "Content", "offset": "top-20 right-24" },
+      { "text": "Process document batch", "type": "Actions", "offset": "top-32 right-8" },
+      { "text": "Generate knowledge response", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Train custom model", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Deploy to production", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Monitor model accuracy", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "AI systems that deliver measurable business impact",
+      "content": "We architect production-grade AI systems that integrate seamlessly with your existing infrastructure. Our engineering team has deployed RAG pipelines, LLM orchestration, and intelligent automation across healthcare, finance, and manufacturing—delivering solutions that reduce operational costs by 40% and accelerate decision-making. Every system we build is designed for scale, security, and long-term maintainability."
+    },
+
+    "stats": [
+      { "value": "40%", "label": "Faster Development", "description": "vs traditional methods" },
+      { "value": "<3mo", "label": "Time-to-Production", "description": "for most projects" },
+      { "value": "99.9%", "label": "Uptime SLA", "description": "production systems" },
+      { "value": "24/7", "label": "Monitoring", "description": "included" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "workflow",
+        "title": "Simplify complex data workflows",
+        "description": "Our AI pipelines process unstructured documents, extract insights, and automate decisions—reducing manual review time by up to 80% across healthcare, legal, and finance operations."
+      },
+      {
+        "icon": "speed",
+        "title": "Ship to production in weeks, not months",
+        "description": "Purpose-built architecture with pre-configured infrastructure. Most clients see their first AI system live within 6-8 weeks, with full enterprise security and monitoring from day one."
+      },
+      {
+        "icon": "integrate",
+        "title": "Integrate with your existing stack",
+        "description": "Native connectors for Salesforce, SAP, Microsoft 365, and custom APIs. Our systems work alongside your current tools—no rip-and-replace required."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "document-ai",
+        "title": "Document AI",
+        "headline": "Document AI Processing",
+        "description": "Extract, classify, and process documents at scale using custom AI models. Turn unstructured documents into structured, actionable data.",
+        "features": [
+          "Invoice and receipt processing",
+          "Contract analysis and extraction",
+          "Form data extraction",
+          "Document classification"
+        ],
+        "image": "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "knowledge-base",
+        "title": "Knowledge Base",
+        "headline": "Intelligent Knowledge Base",
+        "description": "Build AI-powered knowledge systems that understand context and deliver precise answers from your documentation, manuals, and internal resources.",
+        "features": [
+          "Natural language Q&A",
+          "Context-aware responses",
+          "Multi-source integration",
+          "Continuous learning"
+        ],
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "predictive",
+        "title": "Predictive",
+        "headline": "Predictive Analytics",
+        "description": "Leverage machine learning to forecast trends, identify patterns, and make data-driven decisions before problems occur.",
+        "features": [
+          "Demand forecasting",
+          "Anomaly detection",
+          "Risk assessment",
+          "Churn prediction"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "automation",
+        "title": "Automation",
+        "headline": "Intelligent Automation",
+        "description": "Automate complex workflows that require judgment and decision-making. AI agents that handle exceptions and escalate appropriately.",
+        "features": [
+          "Workflow automation",
+          "Decision routing",
+          "Exception handling",
+          "Process optimization"
+        ],
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "custom",
+        "title": "Custom",
+        "headline": "Custom AI Solutions",
+        "description": "Unique business challenges require unique solutions. We build specialized AI systems for problems that don't fit standard categories.",
+        "features": [
+          "Specialized models",
+          "Domain-specific training",
+          "Custom integrations",
+          "Hybrid approaches"
+        ],
+        "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Discovery",
+        "description": "Understand your data, workflows, and goals. Define success metrics and identify the right AI approach.",
+        "duration": "2 weeks",
+        "deliverables": ["Requirements document", "Data assessment", "Architecture proposal"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Architecture and tech stack selection. Data preparation and pipeline design. Prototype key functionality.",
+        "duration": "2-3 weeks",
+        "deliverables": ["Technical architecture", "Data pipeline design", "Working prototype"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Iterative development with weekly demos. Continuous testing with real data. Refinement based on feedback.",
+        "duration": "6-12 weeks",
+        "deliverables": ["Production code", "Test suite", "Documentation"]
+      },
+      {
+        "step": 4,
+        "title": "Deploy",
+        "description": "Production deployment with monitoring. Knowledge transfer and team training. Ongoing support and optimization.",
+        "duration": "Ongoing",
+        "deliverables": ["Live system", "Monitoring dashboard", "Support agreement"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "OpenAI", "category": "LLM", "description": "GPT-4, Embeddings", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
+      { "name": "Anthropic", "category": "LLM", "description": "Claude, Safety", "logo": "https://cdn.simpleicons.org/anthropic/191919" },
+      { "name": "LangChain", "category": "Framework", "description": "RAG Pipelines", "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg" },
+      { "name": "Pinecone", "category": "Vector DB", "description": "Embeddings Storage", "logo": "https://cdn.simpleicons.org/pinecone/000000" },
+      { "name": "Python", "category": "Language", "description": "ML & Backend", "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg" },
+      { "name": "FastAPI", "category": "Framework", "description": "API Development", "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" },
+      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
+      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "What business problems does AI development solve?",
+        "answer": "AI development automates repetitive tasks, extracts insights from unstructured data, and enables faster decision-making. Businesses typically see 40-60% reduction in manual processing time, 3x faster customer response rates, and significant cost savings by automating workflows that previously required human review."
+      },
+      {
+        "question": "How quickly can AI start delivering ROI?",
+        "answer": "Most businesses see measurable impact within 8-12 weeks. Simple automations like document processing or FAQ chatbots can launch in 4-6 weeks. More complex systems like predictive analytics take 3-6 months but often deliver 10x returns through operational efficiency and revenue optimization."
+      },
+      {
+        "question": "What types of AI work best for enterprise use cases?",
+        "answer": "Enterprise AI excels at document processing (invoices, contracts, applications), knowledge management (internal search, support automation), and predictive analytics (demand forecasting, churn prediction). The key is matching AI capabilities to specific workflows where accuracy and speed directly impact business outcomes."
+      },
+      {
+        "question": "How does custom AI compare to off-the-shelf tools?",
+        "answer": "Off-the-shelf AI tools work for generic tasks but often achieve only 60-70% accuracy on domain-specific problems. Custom AI trained on your data and workflows typically reaches 90-95% accuracy, integrates directly with your systems, and improves over time as it learns from your specific use cases."
+      },
+      {
+        "question": "Is enterprise AI secure enough for sensitive data?",
+        "answer": "Yes. Modern AI systems support on-premise deployment, data encryption, role-based access, and compliance with SOC 2, HIPAA, and GDPR. Businesses can process sensitive documents, customer data, and proprietary information without data leaving their environment or being used to train external models."
+      }
+    ],
+
+    "relatedServices": ["ai-customer-experience", "data-systems", "custom-software"],
+
+    "cta": {
+      "headline": "Ready to build intelligent systems?",
+      "description": "Discuss your AI project with our engineering team. We'll help you identify the right approach and define a clear path to production.",
+      "primaryButton": { "text": "Schedule Consultation", "url": "/contact/" },
+      "secondaryButton": { "text": "View Our Work", "url": "/projects/" }
+    },
+
+    "clients": ["corecloud365", "carbon-spark", "admizz"]
+  },
+
+  "ai-customer-experience": {
+    "id": "ai-customer-experience",
+    "title": "AI Customer Experience",
+    "category": "AI & Data",
+    "tagline": "Transform support from cost center to competitive advantage",
+    "description": "AI-powered customer experience systems that resolve inquiries instantly, route complex issues intelligently, and learn from every interaction. We build support infrastructure that scales without scaling headcount.",
+    "heroImage": "/assets/images/ai-customer-experience-hero.png",
+    "heroBgColor": "#efefef",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Resolve customer inquiry", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Route to specialist", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Analyze sentiment", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Generate response", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Update knowledge base", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Escalate to human", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Track resolution time", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Customer support that scales intelligently",
+      "content": "We build AI systems that handle the 80% of inquiries that don't need human intervention—accurately. Our customer experience platforms integrate with your existing support stack, understand your product deeply, and resolve issues in seconds rather than hours. The result: support teams that focus on complex problems while AI handles routine questions, billing inquiries, and status updates at enterprise scale."
+    },
+
+    "stats": [
+      { "value": "40%", "label": "Ticket Reduction", "description": "through self-service AI" },
+      { "value": "< 30s", "label": "Avg Response Time", "description": "vs 4+ hours industry avg" },
+      { "value": "92%", "label": "Resolution Rate", "description": "without human handoff" },
+      { "value": "4.8/5", "label": "CSAT Score", "description": "post-implementation avg" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "Instant resolution at any hour",
+        "description": "AI handles inquiries 24/7 with consistent accuracy. Customers get immediate answers to billing questions, order status, password resets, and product queries—no queue, no wait, no frustration."
+      },
+      {
+        "icon": "workflow",
+        "title": "Route complex issues to the right expert",
+        "description": "When AI can't resolve an issue, it routes intelligently—capturing context, sentiment, and urgency so human agents have everything they need to resolve quickly. No customer repeats themselves."
+      },
+      {
+        "icon": "integrate",
+        "title": "Learn from every interaction",
+        "description": "Our systems improve continuously. Every resolved ticket, every feedback signal, every successful outcome trains the model to handle similar cases better. Your AI gets smarter every week."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "support-automation",
+        "title": "Support Automation",
+        "headline": "Intelligent Support Automation",
+        "description": "Automate tier-1 support with AI that understands your products, policies, and procedures. Handle returns, refunds, account changes, and common troubleshooting without human intervention.",
+        "features": [
+          "Natural language understanding",
+          "Multi-turn conversations",
+          "Policy-aware responses",
+          "Automatic escalation"
+        ],
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "omnichannel",
+        "title": "Omnichannel",
+        "headline": "Omnichannel Experience",
+        "description": "Consistent AI-powered support across email, chat, SMS, social, and voice. Single customer context flows across all channels—no fragmented conversations or repeated explanations.",
+        "features": [
+          "Unified customer view",
+          "Channel-agnostic AI",
+          "Seamless handoffs",
+          "Conversation continuity"
+        ],
+        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "proactive-support",
+        "title": "Proactive",
+        "headline": "Proactive Customer Support",
+        "description": "Predict issues before customers report them. Monitor usage patterns, detect anomalies, and reach out proactively to prevent churn and escalation.",
+        "features": [
+          "Usage monitoring",
+          "Anomaly detection",
+          "Proactive outreach",
+          "Churn prevention"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "agent-assist",
+        "title": "Agent Assist",
+        "headline": "AI Agent Assist",
+        "description": "Augment human agents with real-time AI suggestions, knowledge retrieval, and response drafts. Reduce handling time while improving resolution quality.",
+        "features": [
+          "Real-time suggestions",
+          "Knowledge retrieval",
+          "Response drafting",
+          "Quality assurance"
+        ],
+        "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "voice-ai",
+        "title": "Voice AI",
+        "headline": "Voice AI Systems",
+        "description": "Replace IVR trees with conversational AI that understands natural speech. Route calls intelligently, handle simple requests automatically, and reduce call center load.",
+        "features": [
+          "Speech recognition",
+          "Intent detection",
+          "Call routing",
+          "Voice authentication"
+        ],
+        "image": "https://images.unsplash.com/photo-1590935217281-8f102120d683?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Audit",
+        "description": "Analyze your current support operations. Map ticket categories, response patterns, and resolution workflows to identify automation opportunities.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Support audit report", "Automation roadmap", "ROI projection"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design conversation flows, escalation logic, and integration points. Build the knowledge base and train initial models on your documentation.",
+        "duration": "2-3 weeks",
+        "deliverables": ["Conversation design", "Integration architecture", "Training data"]
+      },
+      {
+        "step": 3,
+        "title": "Deploy",
+        "description": "Launch AI alongside existing support channels. Monitor accuracy, gather feedback, and iterate rapidly based on real customer interactions.",
+        "duration": "4-6 weeks",
+        "deliverables": ["Live AI system", "Monitoring dashboard", "Agent training"]
+      },
+      {
+        "step": 4,
+        "title": "Optimize",
+        "description": "Continuous improvement based on resolution data. Expand coverage, improve accuracy, and reduce escalation rates over time.",
+        "duration": "Ongoing",
+        "deliverables": ["Weekly reports", "Model updates", "Coverage expansion"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "OpenAI", "category": "LLM", "description": "GPT-4 Turbo", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
+      { "name": "Intercom", "category": "Platform", "description": "Customer Messaging", "logo": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg" },
+      { "name": "Zendesk", "category": "Platform", "description": "Help Desk", "logo": "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg" },
+      { "name": "Twilio", "category": "Voice", "description": "Voice & SMS", "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg" },
+      { "name": "Segment", "category": "Data", "description": "Customer Data", "logo": "https://cdn.worldvectorlogo.com/logos/segment-1.svg" },
+      { "name": "Python", "category": "Language", "description": "Backend Logic", "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg" },
+      { "name": "Redis", "category": "Cache", "description": "Session State", "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg" },
+      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "How does AI customer support affect customer satisfaction?",
+        "answer": "Done right, AI improves satisfaction by eliminating wait times and providing instant, accurate responses. Our implementations average 4.8/5 CSAT scores—higher than human-only support. The key is building AI that knows its limits and escalates gracefully when needed."
+      },
+      {
+        "question": "What percentage of support tickets can AI actually resolve?",
+        "answer": "Typically 60-80% of tier-1 tickets are automatable: password resets, order status, billing questions, return requests, and basic troubleshooting. Complex technical issues, emotional situations, and edge cases still need human agents—but AI can assist them too."
+      },
+      {
+        "question": "How long does it take to train AI on our products and policies?",
+        "answer": "Initial training takes 2-3 weeks using your existing documentation, help articles, and ticket history. The AI continues learning from every interaction, so accuracy improves over time. Most clients see 85%+ accuracy within the first month of deployment."
+      },
+      {
+        "question": "Will AI replace our support team?",
+        "answer": "AI handles volume so your team can focus on complex issues, relationship building, and high-value interactions. Most clients don't reduce headcount—they handle 3-5x more volume with the same team while improving response quality and employee satisfaction."
+      },
+      {
+        "question": "How do you handle sensitive customer data?",
+        "answer": "We deploy within your existing security perimeter. Data stays in your environment, models can run on-premise or in your cloud, and we support SOC 2, HIPAA, and GDPR compliance. AI never trains on customer data without explicit consent."
+      }
+    ],
+
+    "relatedServices": ["ai-development", "custom-software", "data-systems"],
+
+    "cta": {
+      "headline": "Ready to transform customer support?",
+      "description": "See how AI can handle your support volume while improving satisfaction scores. We'll audit your current operations and show you exactly what's automatable.",
+      "primaryButton": { "text": "Schedule Support Audit", "url": "/contact/" },
+      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+    },
+
+    "clients": ["admizz", "prime-tiles", "khems-cleaning"]
+  },
+
+  "data-systems": {
+    "id": "data-systems",
+    "title": "Data Systems",
+    "category": "AI & Data",
+    "tagline": "Turn raw data into production-ready AI infrastructure",
+    "description": "Data pipelines, warehouses, and analytics infrastructure engineered for AI workloads. We build the foundation that makes machine learning actually work—clean data, reliable pipelines, and scalable architecture.",
+    "heroImage": "/assets/images/data-systems-hero.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Ingest data stream", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Transform schema", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Validate quality", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Load to warehouse", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Generate embeddings", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Sync to vector DB", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Monitor pipeline health", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Data infrastructure that AI can actually use",
+      "content": "Most AI projects fail because of data problems, not model problems. We build the infrastructure that solves this: data pipelines that handle messy real-world inputs, warehouses optimized for analytical and ML workloads, and quality systems that catch issues before they corrupt your models. Our clients skip the 6-month data cleanup phase and go straight to production ML."
+    },
+
+    "stats": [
+      { "value": "80%", "label": "Faster Data Prep", "description": "vs manual processes" },
+      { "value": "99.9%", "label": "Pipeline Uptime", "description": "with auto-recovery" },
+      { "value": "10x", "label": "Query Performance", "description": "after optimization" },
+      { "value": "<1hr", "label": "Data Freshness", "description": "real-time available" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "workflow",
+        "title": "Ship ML features without data engineering bottlenecks",
+        "description": "Self-service data infrastructure that lets data scientists and ML engineers access clean, joined, and transformed data without waiting on engineering tickets. Feature stores, embedding pipelines, and training datasets on demand."
+      },
+      {
+        "icon": "speed",
+        "title": "Go from raw data to production ML in weeks",
+        "description": "Pre-built patterns for common data sources (CRMs, ERPs, event streams) with automatic schema detection and quality validation. Most clients have their first ML model in production within 6 weeks."
+      },
+      {
+        "icon": "integrate",
+        "title": "Scale without replatforming",
+        "description": "Architecture designed to grow from gigabytes to petabytes without rewrites. Start with cost-effective solutions and scale infrastructure as your data volume and ML usage demands increase."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "data-pipelines",
+        "title": "Data Pipelines",
+        "headline": "Production Data Pipelines",
+        "description": "Reliable ETL/ELT pipelines that handle real-world data at scale. Automatic error handling, data validation, and monitoring. Never lose data or miss a load.",
+        "features": [
+          "Event-driven ingestion",
+          "Schema evolution",
+          "Error recovery",
+          "Lineage tracking"
+        ],
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "data-warehouse",
+        "title": "Data Warehouse",
+        "headline": "Modern Data Warehouse",
+        "description": "Cloud-native warehouses optimized for analytics and ML workloads. Separation of storage and compute, automatic scaling, and query optimization.",
+        "features": [
+          "Columnar storage",
+          "Auto-scaling compute",
+          "Query optimization",
+          "Concurrent workloads"
+        ],
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "feature-store",
+        "title": "Feature Store",
+        "headline": "ML Feature Store",
+        "description": "Centralized feature management for ML teams. Store, version, and serve features consistently across training and production. Eliminate training-serving skew.",
+        "features": [
+          "Feature versioning",
+          "Online/offline serving",
+          "Feature reuse",
+          "Point-in-time queries"
+        ],
+        "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "vector-infrastructure",
+        "title": "Vector Infrastructure",
+        "headline": "Vector & Embedding Infrastructure",
+        "description": "Infrastructure for AI applications: embedding generation, vector storage, and similarity search. The foundation for RAG, semantic search, and recommendation systems.",
+        "features": [
+          "Embedding pipelines",
+          "Vector databases",
+          "Similarity search",
+          "Hybrid retrieval"
+        ],
+        "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "data-quality",
+        "title": "Data Quality",
+        "headline": "Data Quality Systems",
+        "description": "Automated quality monitoring that catches issues before they impact downstream systems. Data contracts, anomaly detection, and alerting for data teams.",
+        "features": [
+          "Schema validation",
+          "Anomaly detection",
+          "Data contracts",
+          "Quality dashboards"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Assess",
+        "description": "Map your current data landscape: sources, volumes, quality issues, and downstream needs. Identify quick wins and long-term architecture needs.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Data inventory", "Quality assessment", "Architecture recommendations"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design the target architecture: pipeline patterns, warehouse schema, and integration points. Select technology stack based on your scale and requirements.",
+        "duration": "2-3 weeks",
+        "deliverables": ["Architecture design", "Technology selection", "Migration plan"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Implement infrastructure iteratively. Start with highest-value data sources and expand coverage. Deploy monitoring and quality systems from day one.",
+        "duration": "6-12 weeks",
+        "deliverables": ["Production pipelines", "Data warehouse", "Documentation"]
+      },
+      {
+        "step": 4,
+        "title": "Operate",
+        "description": "Ongoing operations: monitoring, optimization, and expansion. SLA-backed support with 24/7 alerting and incident response.",
+        "duration": "Ongoing",
+        "deliverables": ["SLA reports", "Optimization reviews", "Capacity planning"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "Snowflake", "category": "Warehouse", "description": "Cloud DW", "logo": "https://cdn.worldvectorlogo.com/logos/snowflake.svg" },
+      { "name": "dbt", "category": "Transform", "description": "Data Modeling", "logo": "https://cdn.worldvectorlogo.com/logos/dbt.svg" },
+      { "name": "Airflow", "category": "Orchestration", "description": "Workflow DAGs", "logo": "https://cdn.worldvectorlogo.com/logos/apache-airflow.svg" },
+      { "name": "Fivetran", "category": "Ingestion", "description": "ELT Pipelines", "logo": "https://cdn.simpleicons.org/fivetran/0073FF" },
+      { "name": "Pinecone", "category": "Vector DB", "description": "Embeddings", "logo": "https://cdn.simpleicons.org/pinecone/000000" },
+      { "name": "Spark", "category": "Processing", "description": "Big Data", "logo": "https://cdn.worldvectorlogo.com/logos/apache-spark-5.svg" },
+      { "name": "Kafka", "category": "Streaming", "description": "Event Streams", "logo": "https://cdn.worldvectorlogo.com/logos/kafka.svg" },
+      { "name": "Databricks", "category": "Platform", "description": "Lakehouse", "logo": "https://cdn.worldvectorlogo.com/logos/databricks.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "How long does a data warehouse migration typically take?",
+        "answer": "A full migration takes 3-6 months depending on complexity, but we deliver value incrementally. Most clients have their first critical data sources in production within 4-6 weeks, with expansion happening in parallel with business-as-usual operations."
+      },
+      {
+        "question": "Should we use a data lake or data warehouse?",
+        "answer": "Modern lakehouse architectures combine both. We typically recommend cloud warehouses (Snowflake, BigQuery) for structured analytics and Databricks/Delta Lake for ML workloads. The right choice depends on your data types, team skills, and use cases."
+      },
+      {
+        "question": "How do you handle data quality in pipelines?",
+        "answer": "We implement quality checks at every stage: schema validation on ingestion, data contracts between teams, anomaly detection on key metrics, and automated alerting. Issues are caught before they propagate, not after they've corrupted downstream models."
+      },
+      {
+        "question": "What's the difference between a feature store and a data warehouse?",
+        "answer": "Data warehouses serve analytics queries; feature stores serve ML systems. A feature store ensures that the features used to train a model are exactly the features served in production—eliminating training-serving skew, which is a major cause of ML model failures."
+      },
+      {
+        "question": "How do you approach real-time vs batch data processing?",
+        "answer": "Start with batch unless you have a clear real-time use case. Batch is simpler, cheaper, and sufficient for most analytics. When real-time matters (fraud detection, personalization), we implement streaming with Kafka or managed services, with batch as fallback."
+      }
+    ],
+
+    "relatedServices": ["ai-development", "custom-software", "saas-development"],
+
+    "cta": {
+      "headline": "Ready to fix your data foundation?",
+      "description": "Let's assess your current data infrastructure and identify the fastest path to production-ready ML. Free data audit for qualified projects.",
+      "primaryButton": { "text": "Request Data Audit", "url": "/contact/" },
+      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+    },
+
+    "clients": ["rapid-investment", "mach24orbital", "cms-group"]
+  },
+
+  "custom-software": {
+    "id": "custom-software",
+    "title": "Custom Software",
+    "category": "Development",
+    "tagline": "Build systems your team will actually use",
+    "description": "Enterprise applications tailored to your workflows. We build internal tools, business systems, and operational software that replaces spreadsheet chaos with purpose-built solutions.",
+    "heroImage": "/assets/images/custom-software-hero.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Create new workflow", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Import legacy data", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Generate report", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Send notification", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Process approval", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Sync with ERP", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Export to dashboard", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Software that fits your business, not the other way around",
+      "content": "Off-the-shelf software forces you to adapt your processes. Custom software adapts to you. We build applications that encode your specific workflows, integrate with your existing systems, and evolve as your business changes. The result: teams that work faster, make fewer errors, and spend less time fighting their tools."
+    },
+
+    "stats": [
+      { "value": "60%", "label": "Time Saved", "description": "on core workflows" },
+      { "value": "85%", "label": "Adoption Rate", "description": "within 30 days" },
+      { "value": "3x", "label": "Productivity Gain", "description": "vs spreadsheets" },
+      { "value": "12mo", "label": "Avg Payback", "description": "on investment" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "workflow",
+        "title": "Replace spreadsheet chaos with proper systems",
+        "description": "That critical process running on a shared spreadsheet? We turn it into a real application with proper access control, audit trails, validation, and integrations. No more version conflicts or formula errors."
+      },
+      {
+        "icon": "integrate",
+        "title": "Connect your existing tools and data",
+        "description": "Custom software that integrates with your CRM, ERP, accounting system, and operational databases. Single source of truth without forcing teams to switch platforms or re-enter data."
+      },
+      {
+        "icon": "speed",
+        "title": "Evolve as your business changes",
+        "description": "Unlike rigid packaged software, custom systems can adapt. New regulations, new product lines, new workflows—we build software that changes with you, not software that holds you back."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "internal-tools",
+        "title": "Internal Tools",
+        "headline": "Internal Operations Tools",
+        "description": "Purpose-built tools for operations teams: order management, inventory tracking, scheduling, and resource allocation. Replace manual processes with automated workflows.",
+        "features": [
+          "Workflow automation",
+          "Role-based access",
+          "Audit logging",
+          "Mobile access"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "data-management",
+        "title": "Data Management",
+        "headline": "Data Management Systems",
+        "description": "Custom databases and management interfaces for complex data. Master data management, data entry portals, and quality control systems tailored to your domain.",
+        "features": [
+          "Custom data models",
+          "Validation rules",
+          "Import/export",
+          "Search and filtering"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "workflow-automation",
+        "title": "Workflow Automation",
+        "headline": "Business Process Automation",
+        "description": "Automate approval flows, document routing, and multi-step processes. Rules-based automation with exception handling and human-in-the-loop when needed.",
+        "features": [
+          "Approval workflows",
+          "Document routing",
+          "Escalation rules",
+          "Status tracking"
+        ],
+        "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "reporting-systems",
+        "title": "Reporting",
+        "headline": "Custom Reporting Systems",
+        "description": "Reports and dashboards built for your specific metrics. Automated generation, scheduled distribution, and interactive exploration of your business data.",
+        "features": [
+          "Custom KPIs",
+          "Scheduled reports",
+          "Interactive dashboards",
+          "Export formats"
+        ],
+        "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "legacy-modernization",
+        "title": "Modernization",
+        "headline": "Legacy System Modernization",
+        "description": "Migrate from outdated systems without disrupting operations. Incremental modernization that preserves critical functionality while adding modern capabilities.",
+        "features": [
+          "Phased migration",
+          "Data preservation",
+          "API integration",
+          "User training"
+        ],
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Discover",
+        "description": "Understand your current workflows, pain points, and goals. Map the process as it exists today and identify where software can add the most value.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Process maps", "Requirements document", "Scope definition"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design the user experience and system architecture. Prototype key screens and workflows for validation before building.",
+        "duration": "2-3 weeks",
+        "deliverables": ["UX designs", "Architecture plan", "Interactive prototype"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Iterative development with regular demos and feedback cycles. Working software delivered every 2 weeks, not at the end of a long project.",
+        "duration": "8-16 weeks",
+        "deliverables": ["Production application", "Documentation", "Training materials"]
+      },
+      {
+        "step": 4,
+        "title": "Support",
+        "description": "Post-launch support, maintenance, and enhancement. Your software continues to evolve based on user feedback and changing business needs.",
+        "duration": "Ongoing",
+        "deliverables": ["Bug fixes", "Feature updates", "Performance monitoring"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "React", "category": "Frontend", "description": "UI Framework", "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+      { "name": "Node.js", "category": "Backend", "description": "Server Runtime", "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
+      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
+      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+      { "name": "Next.js", "category": "Framework", "description": "Full Stack", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
+      { "name": "Prisma", "category": "ORM", "description": "Data Layer", "logo": "https://cdn.worldvectorlogo.com/logos/prisma-2.svg" },
+      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
+      { "name": "Docker", "category": "DevOps", "description": "Containers", "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "When should we build custom vs buy off-the-shelf?",
+        "answer": "Build custom when your process is a competitive advantage, when off-the-shelf tools require significant workarounds, or when integration requirements are complex. Buy when there's a strong market fit and customization needs are minimal. We help clients make this decision honestly—sometimes we recommend against custom builds."
+      },
+      {
+        "question": "How do you ensure the software gets adopted by teams?",
+        "answer": "We involve end users from day one—not just managers. Regular demos, feedback sessions, and iterative refinement based on actual usage. Software that reflects how people actually work gets used; software designed in isolation gets ignored."
+      },
+      {
+        "question": "What happens if our requirements change mid-project?",
+        "answer": "We expect requirements to evolve—that's why we work iteratively. Every 2-week cycle delivers working software and an opportunity to adjust direction. Major scope changes require trade-off conversations, but the process is designed for flexibility, not rigidity."
+      },
+      {
+        "question": "How do you handle integration with legacy systems?",
+        "answer": "We build integration layers that connect to existing systems via APIs, database connections, or file exchanges. Legacy systems often outlive their expected lifespans—our approach ensures new software works alongside old without requiring risky full migrations."
+      },
+      {
+        "question": "What's the total cost of ownership for custom software?",
+        "answer": "Initial build is typically 3-6 months of development. Ongoing costs include hosting (often $500-2000/month), maintenance (10-20% of build cost annually), and enhancements as needed. We provide detailed TCO projections before project start so you can compare against alternatives."
+      }
+    ],
+
+    "relatedServices": ["saas-development", "web-development", "ai-development"],
+
+    "cta": {
+      "headline": "Ready to replace spreadsheets with real software?",
+      "description": "Tell us about your workflow challenges. We'll help you evaluate whether custom software makes sense and scope a solution.",
+      "primaryButton": { "text": "Discuss Your Project", "url": "/contact/" },
+      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+    },
+
+    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"]
+  },
+
+  "saas-development": {
+    "id": "saas-development",
+    "title": "SaaS Development",
+    "category": "Development",
+    "tagline": "Launch multi-tenant products that scale",
+    "description": "Multi-tenant SaaS platforms with subscription billing, user management, and architecture designed for scale. We build products that handle thousands of tenants without rewriting the foundation.",
+    "heroImage": "/assets/images/saas-development-hero.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Create tenant workspace", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Process subscription", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Apply usage limits", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Generate invoice", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Upgrade plan tier", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Onboard new user", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Scale infrastructure", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "SaaS architecture that doesn't break at scale",
+      "content": "We've built SaaS products that serve 10 tenants and products that serve 10,000. The difference isn't luck—it's architecture. Our SaaS development approach handles multi-tenancy, subscription complexity, and scaling challenges from day one. You launch faster and grow without hitting walls that require expensive rewrites."
+    },
+
+    "stats": [
+      { "value": "3-6mo", "label": "MVP Launch", "description": "typical timeline" },
+      { "value": "10k+", "label": "Tenant Scale", "description": "architecture supports" },
+      { "value": "99.9%", "label": "Uptime Target", "description": "built for reliability" },
+      { "value": "< $2k", "label": "Infra Cost", "description": "at 1000 tenants" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "Launch your MVP in months, not years",
+        "description": "Pre-built patterns for auth, billing, tenant management, and common SaaS features. We don't rebuild from scratch—we assemble proven components and customize where your product is unique."
+      },
+      {
+        "icon": "workflow",
+        "title": "Scale without rewriting your codebase",
+        "description": "Multi-tenant architecture designed for growth: database-per-tenant options, horizontal scaling, and cost-efficient resource sharing. Handle your 10,000th customer the same way you handled your first."
+      },
+      {
+        "icon": "integrate",
+        "title": "Handle billing complexity from day one",
+        "description": "Subscription plans, usage-based pricing, trials, upgrades, downgrades, and prorations—billing is hard. We integrate with Stripe or your provider to handle the edge cases that trip up most SaaS products."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "b2b-saas",
+        "title": "B2B SaaS",
+        "headline": "B2B SaaS Platforms",
+        "description": "Business software delivered as a service: CRMs, project management, HR tools, and vertical solutions. Team workspaces, admin controls, and enterprise features.",
+        "features": [
+          "Team workspaces",
+          "Role-based permissions",
+          "Admin dashboards",
+          "SSO integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "marketplace",
+        "title": "Marketplace",
+        "headline": "Marketplace Platforms",
+        "description": "Two-sided marketplaces connecting buyers and sellers. Payment splitting, reviews, search and discovery, and transaction management.",
+        "features": [
+          "Buyer/seller flows",
+          "Payment splitting",
+          "Review systems",
+          "Discovery features"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "api-product",
+        "title": "API Products",
+        "headline": "API-First Products",
+        "description": "Developer platforms and API products. Usage metering, developer portals, API key management, and SDKs for common languages.",
+        "features": [
+          "Usage metering",
+          "Developer portal",
+          "API key management",
+          "SDK generation"
+        ],
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "vertical-saas",
+        "title": "Vertical SaaS",
+        "headline": "Vertical SaaS Solutions",
+        "description": "Industry-specific software: healthcare, legal, real estate, construction. Deep domain features with regulatory compliance built in.",
+        "features": [
+          "Industry workflows",
+          "Compliance features",
+          "Domain integrations",
+          "Specialized reporting"
+        ],
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "white-label",
+        "title": "White Label",
+        "headline": "White Label Platforms",
+        "description": "Platforms that can be resold or branded by partners. Customizable UI, isolated environments, and partner management tools.",
+        "features": [
+          "Custom branding",
+          "Partner management",
+          "Isolated environments",
+          "Revenue sharing"
+        ],
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Strategy",
+        "description": "Define your product vision, target market, and MVP scope. Identify core features that deliver value versus nice-to-haves that can wait.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Product roadmap", "MVP scope", "Architecture plan"]
+      },
+      {
+        "step": 2,
+        "title": "Foundation",
+        "description": "Build core infrastructure: auth, multi-tenancy, billing integration, and base UI. The foundation that everything else builds on.",
+        "duration": "4-6 weeks",
+        "deliverables": ["Auth system", "Tenant management", "Billing integration"]
+      },
+      {
+        "step": 3,
+        "title": "Features",
+        "description": "Develop your differentiating features. Iterative cycles with continuous deployment and user feedback incorporated.",
+        "duration": "8-12 weeks",
+        "deliverables": ["Core features", "User flows", "Admin tools"]
+      },
+      {
+        "step": 4,
+        "title": "Launch",
+        "description": "Production deployment, monitoring setup, and launch support. Help with go-to-market, early customer onboarding, and rapid iteration.",
+        "duration": "Ongoing",
+        "deliverables": ["Production deployment", "Monitoring", "Launch support"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "Next.js", "category": "Framework", "description": "Full Stack React", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
+      { "name": "Stripe", "category": "Payments", "description": "Billing & Subscriptions", "logo": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
+      { "name": "PostgreSQL", "category": "Database", "description": "Multi-Tenant Data", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
+      { "name": "Auth0", "category": "Auth", "description": "Identity Management", "logo": "https://cdn.worldvectorlogo.com/logos/auth0-icon.svg" },
+      { "name": "Vercel", "category": "Platform", "description": "Edge Deployment", "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
+      { "name": "Redis", "category": "Cache", "description": "Session & Cache", "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg" },
+      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "What's the difference between multi-tenant and single-tenant architecture?",
+        "answer": "Multi-tenant shares infrastructure across customers (lower cost, easier updates). Single-tenant gives each customer isolated resources (higher security, more customization). We typically recommend multi-tenant with strong isolation for most SaaS products, with single-tenant options for enterprise customers."
+      },
+      {
+        "question": "How do you handle different pricing tiers and feature gating?",
+        "answer": "We build feature flagging and entitlement systems from the start. Plans define feature access, usage limits, and UI variations. Upgrading unlocks features instantly without code changes—it's all data-driven."
+      },
+      {
+        "question": "What about enterprise customers who need custom features?",
+        "answer": "Our architecture supports both standard and enterprise tiers. Enterprise features like SSO, audit logs, custom branding, and dedicated support are built as optional modules. Large customers get customization without forking your codebase."
+      },
+      {
+        "question": "How do you approach SaaS security?",
+        "answer": "Security is built in, not bolted on: tenant isolation at the database level, encryption at rest and in transit, SOC 2 compliant practices, and regular security audits. Enterprise customers often require this—we make sure you're ready."
+      },
+      {
+        "question": "What's a realistic timeline for an MVP?",
+        "answer": "A focused MVP with core features typically takes 3-4 months. Complex products with multiple user types, integrations, or regulatory requirements may take 5-6 months. We scope honestly—unrealistic timelines lead to technical debt that slows you down later."
+      }
+    ],
+
+    "relatedServices": ["custom-software", "web-development", "ai-development"],
+
+    "cta": {
+      "headline": "Ready to build your SaaS product?",
+      "description": "Let's discuss your product vision and map out the fastest path to launch. We'll help you scope an MVP that delivers value without overbuilding.",
+      "primaryButton": { "text": "Discuss Your Product", "url": "/contact/" },
+      "secondaryButton": { "text": "View SaaS Projects", "url": "/projects/" }
+    },
+
+    "clients": ["carbon-spark", "corecloud365", "mach24orbital"]
+  },
+
+  "web-development": {
+    "id": "web-development",
+    "title": "Web Development",
+    "category": "Development",
+    "tagline": "Fast sites that rank and convert",
+    "description": "High-performance websites and web applications built for speed, SEO, and conversion. Modern frameworks, responsive design, and architecture that handles traffic without breaking.",
+    "heroImage": "/assets/images/web-development-hero.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Optimize Core Web Vitals", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Generate static pages", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Deploy to edge", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Cache API response", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Compress images", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Prefetch navigation", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Analyze user flow", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Websites built for performance and results",
+      "content": "We build websites that load fast, rank high, and convert visitors to customers. Every site ships with optimized Core Web Vitals, mobile-first responsive design, and SEO best practices baked in—not bolted on. The result: organic traffic that actually converts, page speeds that beat competitors, and infrastructure that scales."
+    },
+
+    "stats": [
+      { "value": "<1s", "label": "Load Time", "description": "LCP target met" },
+      { "value": "95+", "label": "PageSpeed Score", "description": "mobile performance" },
+      { "value": "40%", "label": "Conversion Lift", "description": "avg after rebuild" },
+      { "value": "99.9%", "label": "Uptime", "description": "edge deployment" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "Load fast on any device, any connection",
+        "description": "Sub-second page loads through static generation, edge caching, and optimized assets. Mobile visitors don't wait—they convert. We optimize for Core Web Vitals because Google ranks fast sites higher."
+      },
+      {
+        "icon": "workflow",
+        "title": "Rank higher with technical SEO built in",
+        "description": "Proper semantic HTML, structured data, meta tags, and crawlability from day one. We don't build first and fix SEO later—search optimization is part of the architecture."
+      },
+      {
+        "icon": "integrate",
+        "title": "Scale to millions of visitors without replatforming",
+        "description": "JAMstack architecture with CDN distribution handles traffic spikes gracefully. No server capacity planning, no emergency scaling—just fast pages served from the edge."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "marketing-sites",
+        "title": "Marketing Sites",
+        "headline": "Marketing Websites",
+        "description": "Company websites, product marketing, and landing pages optimized for conversion. Fast loading, SEO-ready, and integrated with your marketing stack.",
+        "features": [
+          "Conversion optimization",
+          "A/B testing ready",
+          "Analytics integration",
+          "CMS integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "e-commerce",
+        "title": "E-Commerce",
+        "headline": "E-Commerce Websites",
+        "description": "Online stores built for performance and conversion. Fast product pages, optimized checkout, and integration with inventory and fulfillment systems.",
+        "features": [
+          "Fast product pages",
+          "Cart optimization",
+          "Payment integration",
+          "Inventory sync"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "web-apps",
+        "title": "Web Apps",
+        "headline": "Web Applications",
+        "description": "Interactive web applications with complex UIs and real-time features. Single-page apps, dashboards, and tools that feel native in the browser.",
+        "features": [
+          "Rich interactivity",
+          "Real-time updates",
+          "Offline support",
+          "Progressive Web App"
+        ],
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "content-platforms",
+        "title": "Content Platforms",
+        "headline": "Content Platforms",
+        "description": "Blogs, documentation sites, and content hubs optimized for SEO. Static generation for speed, CMS integration for easy editing.",
+        "features": [
+          "SEO optimization",
+          "Fast page loads",
+          "CMS integration",
+          "Content workflows"
+        ],
+        "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "portal-development",
+        "title": "Portals",
+        "headline": "Customer Portals",
+        "description": "Authenticated portals for customers, partners, or employees. Self-service account management, document access, and personalized dashboards.",
+        "features": [
+          "Secure authentication",
+          "Self-service features",
+          "Document management",
+          "Role-based access"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Discover",
+        "description": "Understand your goals, audience, and content needs. Audit existing site performance, SEO, and conversion funnels.",
+        "duration": "1 week",
+        "deliverables": ["Site audit", "Content inventory", "Technical requirements"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design responsive layouts, component systems, and user flows. Performance-oriented design that looks great without sacrificing speed.",
+        "duration": "2-3 weeks",
+        "deliverables": ["Design system", "Page layouts", "Interactive prototype"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Develop with modern frameworks, optimize for Core Web Vitals, and integrate CMS and third-party services.",
+        "duration": "4-8 weeks",
+        "deliverables": ["Production website", "CMS setup", "SEO implementation"]
+      },
+      {
+        "step": 4,
+        "title": "Launch",
+        "description": "Deploy to edge network, set up monitoring, and optimize based on real user data. Ongoing performance tuning and content support.",
+        "duration": "Ongoing",
+        "deliverables": ["Live site", "Analytics setup", "Performance monitoring"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "Next.js", "category": "Framework", "description": "React Framework", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
+      { "name": "Tailwind", "category": "Styling", "description": "CSS Framework", "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
+      { "name": "Vercel", "category": "Platform", "description": "Edge Hosting", "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
+      { "name": "Sanity", "category": "CMS", "description": "Headless CMS", "logo": "https://cdn.worldvectorlogo.com/logos/sanity.svg" },
+      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+      { "name": "Cloudflare", "category": "CDN", "description": "Edge Network", "logo": "https://cdn.worldvectorlogo.com/logos/cloudflare.svg" },
+      { "name": "Framer Motion", "category": "Animation", "description": "Motion Design", "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg" },
+      { "name": "Algolia", "category": "Search", "description": "Site Search", "logo": "https://cdn.worldvectorlogo.com/logos/algolia.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "Why does page speed matter for business results?",
+        "answer": "Speed directly impacts conversion: a 1-second delay reduces conversions by 7%. Google ranks faster sites higher, improving organic traffic. And fast sites reduce bounce rates—users stay, browse, and convert. Performance isn't a technical nicety; it's a business metric."
+      },
+      {
+        "question": "What CMS do you recommend for marketing sites?",
+        "answer": "We typically recommend headless CMSs like Sanity, Contentful, or Storyblok for marketing teams that need flexibility. For simpler needs, we also work with WordPress (headless) or static site generators. The right choice depends on your content workflow and technical comfort."
+      },
+      {
+        "question": "How do you approach mobile-first design?",
+        "answer": "We design for mobile first, then enhance for larger screens. This ensures the mobile experience is fast and usable—not a shrunken desktop site. With 60%+ traffic coming from mobile devices, mobile-first isn't optional."
+      },
+      {
+        "question": "Can you migrate our existing site without losing SEO?",
+        "answer": "Yes. We plan migrations carefully: mapping all URLs, setting up proper redirects, preserving meta data, and monitoring rankings post-launch. Most well-planned migrations see short-term stability and long-term gains as improved performance benefits SEO."
+      },
+      {
+        "question": "What's the difference between a website and a web app?",
+        "answer": "Websites are primarily content-focused (marketing sites, blogs, e-commerce). Web apps are functionality-focused (dashboards, tools, interactive features). The technology often overlaps, but the design priorities differ. Many projects combine both—a marketing site with an authenticated app section."
+      }
+    ],
+
+    "relatedServices": ["custom-software", "aeo-seo", "app-development"],
+
+    "cta": {
+      "headline": "Ready for a faster, higher-converting site?",
+      "description": "Let's audit your current site performance and map out improvements. We'll show you exactly where you're losing visitors and how to fix it.",
+      "primaryButton": { "text": "Request Site Audit", "url": "/contact/" },
+      "secondaryButton": { "text": "View Our Work", "url": "/projects/" }
+    },
+
+    "clients": ["prime-tiles", "khushbu-nirman-sewa", "khems-cleaning"]
+  },
+
+  "app-development": {
+    "id": "app-development",
+    "title": "App Development",
+    "category": "Development",
+    "tagline": "Native quality, cross-platform efficiency",
+    "description": "Mobile applications for iOS and Android that feel native and perform smoothly. Cross-platform development when it makes sense, native when it doesn't—the right approach for your product and users.",
+    "heroImage": "/assets/images/services-hero-bg.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Build for iOS", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Build for Android", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Sync offline data", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Send push notification", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Access camera", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Authenticate user", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Submit to App Store", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Mobile apps built for real-world usage",
+      "content": "We build mobile applications that work reliably in the real world: spotty connections, diverse devices, and impatient users. Our apps feel native because we respect platform conventions, perform smoothly because we optimize relentlessly, and scale because we architect for growth. Whether consumer-facing or enterprise internal tools, we build mobile experiences users actually want to open."
+    },
+
+    "stats": [
+      { "value": "4.7+", "label": "App Store Rating", "description": "average across apps" },
+      { "value": "60%", "label": "Faster Development", "description": "vs dual native teams" },
+      { "value": "< 200ms", "label": "UI Response", "description": "interaction target" },
+      { "value": "99%", "label": "Crash-Free Rate", "description": "production standard" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "Launch on iOS and Android simultaneously",
+        "description": "Cross-platform frameworks let us ship to both platforms from a single codebase—without sacrificing native feel. Faster time-to-market, lower development costs, and easier maintenance."
+      },
+      {
+        "icon": "workflow",
+        "title": "Work offline, sync when connected",
+        "description": "Real apps need to work in elevators, on planes, and in areas with poor coverage. We build offline-first when your use case demands it, with seamless sync when connectivity returns."
+      },
+      {
+        "icon": "integrate",
+        "title": "Integrate with your backend and third-party services",
+        "description": "Apps that connect to your existing APIs, authentication systems, and business data. Push notifications, analytics, payment processing, and deep integrations with platform features."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "consumer-apps",
+        "title": "Consumer Apps",
+        "headline": "Consumer Mobile Apps",
+        "description": "B2C mobile apps for iOS and Android. Beautiful UI, smooth animations, and engagement features like push notifications and social sharing.",
+        "features": [
+          "Polished UI/UX",
+          "Push notifications",
+          "Social features",
+          "In-app purchases"
+        ],
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "enterprise-mobile",
+        "title": "Enterprise",
+        "headline": "Enterprise Mobile Apps",
+        "description": "Internal tools and field apps for enterprise teams. Secure access, offline capability, and integration with corporate systems.",
+        "features": [
+          "Secure auth (SSO)",
+          "Offline support",
+          "MDM integration",
+          "Corporate data access"
+        ],
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "companion-apps",
+        "title": "Companion Apps",
+        "headline": "IoT & Hardware Companion Apps",
+        "description": "Mobile apps that pair with hardware devices: Bluetooth connectivity, device management, and real-time data visualization.",
+        "features": [
+          "Bluetooth/BLE",
+          "Device pairing",
+          "Real-time data",
+          "Firmware updates"
+        ],
+        "image": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "marketplace-apps",
+        "title": "Marketplace",
+        "headline": "Marketplace Mobile Apps",
+        "description": "Two-sided marketplace apps with buyer and seller experiences. Search, discovery, transactions, and messaging.",
+        "features": [
+          "Buyer/seller flows",
+          "Search & filters",
+          "In-app payments",
+          "Messaging"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "on-demand-apps",
+        "title": "On-Demand",
+        "headline": "On-Demand Service Apps",
+        "description": "Real-time service apps: delivery, ride-sharing, home services. Location tracking, matching algorithms, and instant communication.",
+        "features": [
+          "Real-time tracking",
+          "Matching algorithms",
+          "Chat & calling",
+          "Rating systems"
+        ],
+        "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Strategy",
+        "description": "Define your app's core value proposition, target platforms, and MVP scope. Identify platform-specific considerations and technical requirements.",
+        "duration": "1-2 weeks",
+        "deliverables": ["App strategy document", "Platform recommendations", "MVP scope"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design user flows, screens, and interactions following platform conventions. Prototype key flows for validation before development.",
+        "duration": "2-4 weeks",
+        "deliverables": ["UI/UX designs", "Interactive prototype", "Design system"]
+      },
+      {
+        "step": 3,
+        "title": "Develop",
+        "description": "Build the app with regular TestFlight/beta releases. Iterative development with continuous feedback from real device testing.",
+        "duration": "8-16 weeks",
+        "deliverables": ["Beta app", "API integration", "Testing suite"]
+      },
+      {
+        "step": 4,
+        "title": "Launch",
+        "description": "App Store/Play Store submission, launch marketing support, and post-launch monitoring. Ongoing updates and feature development.",
+        "duration": "Ongoing",
+        "deliverables": ["App Store listing", "Launch support", "Update roadmap"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "React Native", "category": "Framework", "description": "Cross-Platform", "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+      { "name": "Swift", "category": "Language", "description": "iOS Native", "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg" },
+      { "name": "Kotlin", "category": "Language", "description": "Android Native", "logo": "https://cdn.worldvectorlogo.com/logos/kotlin-2.svg" },
+      { "name": "Expo", "category": "Platform", "description": "React Native Tools", "logo": "https://cdn.worldvectorlogo.com/logos/expo-1.svg" },
+      { "name": "Firebase", "category": "Backend", "description": "Mobile Backend", "logo": "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" },
+      { "name": "RevenueCat", "category": "Payments", "description": "In-App Purchases", "logo": "https://cdn.simpleicons.org/revenuecat/F25A5A" },
+      { "name": "OneSignal", "category": "Push", "description": "Notifications", "logo": "https://cdn.simpleicons.org/onesignal/E54B4D" },
+      { "name": "Sentry", "category": "Monitoring", "description": "Crash Reporting", "logo": "https://cdn.worldvectorlogo.com/logos/sentry-3.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "Should we build native or cross-platform?",
+        "answer": "Cross-platform (React Native, Flutter) works well for most apps and significantly reduces cost and time-to-market. Go native when you need heavy graphics/gaming, deep OS integration, or maximum performance. We evaluate your specific requirements and recommend honestly."
+      },
+      {
+        "question": "How long does App Store approval take?",
+        "answer": "Apple typically reviews apps in 1-3 days. Google Play is faster, often within hours. However, rejections happen—usually for policy issues rather than bugs. We know the guidelines and prepare submissions to minimize rejection risk."
+      },
+      {
+        "question": "How do you handle different screen sizes and devices?",
+        "answer": "We design and test across the device spectrum: from iPhone SE to iPad Pro, from budget Android phones to flagship devices. Responsive layouts adapt to screen sizes while maintaining usability and performance."
+      },
+      {
+        "question": "What about app maintenance and updates?",
+        "answer": "Apps require ongoing updates for OS changes (iOS and Android release annually), security patches, and feature improvements. We offer maintenance packages that cover these updates plus bug fixes and minor enhancements."
+      },
+      {
+        "question": "Can you take over an existing app project?",
+        "answer": "Yes, we regularly take over apps from other teams or internal developers. We start with a code audit to assess quality and identify issues, then create a stabilization and improvement plan. Honest assessment of the existing code helps set realistic expectations."
+      }
+    ],
+
+    "relatedServices": ["web-development", "custom-software", "saas-development"],
+
+    "cta": {
+      "headline": "Ready to build your mobile app?",
+      "description": "Let's discuss your app idea and the best approach for your users and budget. We'll help you define an MVP that delivers value without overbuilding.",
+      "primaryButton": { "text": "Discuss Your App", "url": "/contact/" },
+      "secondaryButton": { "text": "View App Projects", "url": "/projects/" }
+    },
+
+    "clients": ["admizz", "rapid-investment", "carbon-spark"]
+  },
+
+  "aeo-seo": {
+    "id": "aeo-seo",
+    "title": "AEO & SEO",
+    "category": "Marketing",
+    "tagline": "Get found by Google and AI systems",
+    "description": "Search optimization for the AI era. We optimize your content to rank in traditional search and get cited by AI assistants like ChatGPT, Perplexity, and Google AI Overviews. The new rules require a new approach.",
+    "heroImage": "/assets/images/aeo-seo-hero.png",
+    "lastUpdated": "2026-03-24",
+
+    "heroCommands": [
+      { "text": "Audit AI visibility", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Optimize for citation", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Add schema markup", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Structure FAQ content", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Track AI mentions", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Improve Core Web Vitals", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Analyze search intent", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "Search optimization for the AI era",
+      "content": "AI systems like ChatGPT, Perplexity, and Google AI Overviews now answer millions of queries that previously sent traffic to websites. To stay visible, your content must be optimized not just for search engines, but for AI extraction and citation. We call this AI Engine Optimization (AEO)—and it requires structured content, authoritative positioning, and technical precision that traditional SEO doesn't cover."
+    },
+
+    "stats": [
+      { "value": "40%", "label": "AI Traffic Share", "description": "by 2027 projection" },
+      { "value": "3x", "label": "Citation Rate", "description": "with AEO optimization" },
+      { "value": "200%", "label": "Organic Growth", "description": "avg client improvement" },
+      { "value": "< 30d", "label": "First Results", "description": "for quick wins" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "workflow",
+        "title": "Get cited by AI systems, not just ranked",
+        "description": "When ChatGPT or Perplexity answers a question, they cite sources. We structure your content so AI systems recognize your authority and reference your brand—driving awareness and traffic even when users don't click search results."
+      },
+      {
+        "icon": "speed",
+        "title": "Capture featured snippets and AI Overviews",
+        "description": "Google's AI Overviews pull from well-structured content. We optimize for position zero: clear definitions, formatted lists, and schema markup that tells search engines exactly what your content contains."
+      },
+      {
+        "icon": "integrate",
+        "title": "Build authority that compounds over time",
+        "description": "Both traditional SEO and AEO reward authority. We build it through content depth, expert positioning, backlink acquisition, and technical excellence. The result is traffic that grows and compounds, not ads that stop when you stop paying."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "ai-visibility",
+        "title": "AI Visibility",
+        "headline": "AI Visibility Optimization",
+        "description": "Get cited by ChatGPT, Perplexity, Claude, and Google AI Overviews. Structure content for AI extraction with definition blocks, FAQs, and authoritative positioning.",
+        "features": [
+          "AI citation optimization",
+          "Definition block creation",
+          "FAQ structuring",
+          "Authority signals"
+        ],
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "technical-seo",
+        "title": "Technical SEO",
+        "headline": "Technical SEO",
+        "description": "Fix the technical foundation: site speed, crawlability, structured data, and Core Web Vitals. Technical issues that block rankings and visibility.",
+        "features": [
+          "Site speed optimization",
+          "Schema markup",
+          "Crawl optimization",
+          "Core Web Vitals"
+        ],
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "content-strategy",
+        "title": "Content Strategy",
+        "headline": "Content Strategy",
+        "description": "Identify high-value topics, create content that ranks and converts, and build topical authority. Content that serves both users and search algorithms.",
+        "features": [
+          "Keyword research",
+          "Content planning",
+          "Topic clusters",
+          "Competitor analysis"
+        ],
+        "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "local-seo",
+        "title": "Local SEO",
+        "headline": "Local SEO",
+        "description": "Optimize for local search: Google Business Profile, local citations, and review management. Get found by customers in your service area.",
+        "features": [
+          "Google Business optimization",
+          "Local citations",
+          "Review management",
+          "Local schema"
+        ],
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "seo-migration",
+        "title": "SEO Migration",
+        "headline": "SEO Migration & Recovery",
+        "description": "Protect rankings during site migrations and redesigns. Recover from algorithm penalties or traffic drops with targeted fixes.",
+        "features": [
+          "Migration planning",
+          "Redirect mapping",
+          "Penalty recovery",
+          "Traffic restoration"
+        ],
+        "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Audit",
+        "description": "Comprehensive audit of technical SEO, content quality, AI visibility, and competitive positioning. Identify quick wins and long-term opportunities.",
+        "duration": "1-2 weeks",
+        "deliverables": ["SEO audit report", "AEO assessment", "Priority roadmap"]
+      },
+      {
+        "step": 2,
+        "title": "Fix",
+        "description": "Address technical issues and implement quick wins. Schema markup, site speed improvements, and content structure optimizations.",
+        "duration": "2-4 weeks",
+        "deliverables": ["Technical fixes", "Schema implementation", "Content restructuring"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Execute content strategy: create new content, optimize existing pages, and build topical authority. Ongoing link building and PR.",
+        "duration": "Ongoing",
+        "deliverables": ["Content calendar", "Link acquisition", "Ranking reports"]
+      },
+      {
+        "step": 4,
+        "title": "Measure",
+        "description": "Track rankings, traffic, AI citations, and conversions. Monthly reporting with insights and strategy adjustments based on data.",
+        "duration": "Ongoing",
+        "deliverables": ["Monthly reports", "Ranking tracking", "AI citation monitoring"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "Ahrefs", "category": "SEO Tool", "description": "Backlink Analysis", "logo": "https://cdn.simpleicons.org/ahrefs/FF6600" },
+      { "name": "Semrush", "category": "SEO Tool", "description": "Keyword Research", "logo": "https://cdn.worldvectorlogo.com/logos/semrush.svg" },
+      { "name": "Screaming Frog", "category": "Crawler", "description": "Technical Audit", "logo": "https://cdn.simpleicons.org/screamingfrog/9DCA31" },
+      { "name": "Google Search Console", "category": "Analytics", "description": "Search Data", "logo": "https://cdn.worldvectorlogo.com/logos/google-search-console.svg" },
+      { "name": "Schema.org", "category": "Structured Data", "description": "Markup Standard", "logo": "https://schema.org/docs/favicon.ico" },
+      { "name": "PageSpeed Insights", "category": "Performance", "description": "Core Web Vitals", "logo": "https://cdn.worldvectorlogo.com/logos/google-lighthouse.svg" },
+      { "name": "Clearscope", "category": "Content", "description": "Content Optimization", "logo": "https://cdn.simpleicons.org/c/5046E5" },
+      { "name": "Surfer SEO", "category": "Content", "description": "On-Page SEO", "logo": "https://cdn.simpleicons.org/surfshark/178BF1" }
+    ],
+
+    "faq": [
+      {
+        "question": "What is AEO and why does it matter?",
+        "answer": "AEO (AI Engine Optimization) is optimizing content to be cited by AI systems like ChatGPT, Perplexity, and Google AI Overviews. As AI answers more queries directly, traditional click-through rates decline. AEO ensures your brand gets mentioned and cited even when users don't visit search results—maintaining visibility in the AI era."
+      },
+      {
+        "question": "How long does SEO take to show results?",
+        "answer": "Technical fixes and quick wins often show results in 2-4 weeks. Competitive keyword rankings typically take 3-6 months. Building domain authority and ranking for high-value terms can take 6-12 months. We prioritize quick wins while building toward long-term goals."
+      },
+      {
+        "question": "Should we focus on SEO or paid advertising?",
+        "answer": "Both serve different purposes. Paid ads deliver immediate traffic but stop when you stop paying. SEO builds assets that compound—content that ranks continues to drive traffic for years. Most businesses benefit from paid ads for immediate needs while building organic traffic for long-term efficiency."
+      },
+      {
+        "question": "How do you track AI citations?",
+        "answer": "We monitor AI systems for brand mentions and citations: tracking when ChatGPT, Perplexity, or other AI tools reference your content. This is a new discipline with evolving tools, but we've built monitoring systems that track AI visibility alongside traditional search metrics."
+      },
+      {
+        "question": "What makes content get cited by AI systems?",
+        "answer": "AI systems favor clear definitions, structured data (schema markup), authoritative positioning (credentials, citations, data), and well-organized content. FAQ sections, comparison tables, and self-contained paragraphs are more likely to be extracted and cited than walls of text."
+      }
+    ],
+
+    "relatedServices": ["web-development", "custom-software", "ai-customer-experience"],
+
+    "cta": {
+      "headline": "Ready to get found by Google and AI?",
+      "description": "Let's audit your current visibility and show you exactly where you're missing opportunities. Free SEO/AEO audit for qualified businesses.",
+      "primaryButton": { "text": "Request Free Audit", "url": "/contact/" },
+      "secondaryButton": { "text": "See Results", "url": "/projects/" }
+    },
+
+    "clients": ["prime-tiles", "mach24orbital", "cms-group"]
+  }
+}

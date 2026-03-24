@@ -1,0 +1,17 @@
+<svg width="681" height="681" viewBox="0 0 681 681" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<path d="M510.474 340.5H340.224L340.224 510.75H510.474L510.474 340.5Z" fill="#EDF2F8"/>
+<path d="M681 170.25L510.75 170.25L510.75 340.5H681L681 170.25Z" fill="#E5EAF1"/>
+<g style="mix-blend-mode:multiply">
+<circle cx="255.375" cy="425.625" r="85.125" fill="#EDF2F8"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<circle cx="425.625" cy="85.125" r="85.125" fill="#EDF2F8"/>
+</g>
+<path d="M170.25 168.834V339.084L0 339.084L170.25 168.834Z" fill="#EDF2F8"/>
+<path d="M170.25 510.75L340.5 510.75L340.5 681L170.25 510.75Z" fill="#E5EAF1"/>
+<path d="M255.375 340.5C302.388 340.5 340.5 302.388 340.5 255.375C340.5 208.362 302.388 170.25 255.375 170.25C208.362 170.25 170.25 208.362 170.25 255.375C170.25 302.388 208.362 340.5 255.375 340.5Z" fill="#E5EAF1"/>
+<path d="M220.238 277.599L243.577 254.264L220.238 230.929" stroke="white" stroke-width="6.83824" stroke-miterlimit="10"/>
+<path d="M250.672 280.774H290.815" stroke="white" stroke-width="6.83824" stroke-miterlimit="10"/>
+</g>
+</svg>

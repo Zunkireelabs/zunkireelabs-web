@@ -1,0 +1,62 @@
+[
+  {
+    "id": "admizz",
+    "name": "Admizz Education",
+    "logo": "/assets/images/clients/admizz.png",
+    "stat": "45%",
+    "statLabel": "faster responses",
+    "headline": "Admizz transforms student inquiry management",
+    "description": "After implementing Zunkiree's AI-powered chatbot, Admizz reduced response times and improved student engagement across their education platform.",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/admizz-case-study/"
+  },
+  {
+    "id": "carbon-spark",
+    "name": "Carbon Spark",
+    "logo": "/assets/images/clients/carbon-spark.png",
+    "stat": "3x",
+    "statLabel": "faster time to market",
+    "headline": "Carbon Spark accelerates SaaS deployment",
+    "description": "Carbon Spark partnered with us to build their SaaS platform from the ground up, launching to market in record time with a scalable architecture.",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/carbon-spark-case-study/"
+  },
+  {
+    "id": "corecloud365",
+    "name": "CoreCloud365",
+    "logo": "/assets/images/clients/corecloud365.png",
+    "stat": "60%",
+    "statLabel": "efficiency gain",
+    "headline": "CoreCloud365 integrates AI automation",
+    "description": "We helped CoreCloud365 integrate AI capabilities into their existing infrastructure, enabling intelligent automation across their operations.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/corecloud365-case-study/"
+  },
+  {
+    "id": "rapid-investment",
+    "name": "Rapid Investment",
+    "logo": "/assets/images/clients/rapid-investment.png",
+    "stat": "10x",
+    "statLabel": "faster analysis",
+    "headline": "Rapid Investment transforms data processing",
+    "description": "Rapid Investment needed real-time data analytics to power their investment decisions. We built a data system that processes millions of data points.",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/rapid-investment-case-study/"
+  },
+  {
+    "id": "cms-group",
+    "name": "CMS Group",
+    "logo": "/assets/images/clients/cms-group.png",
+    "stat": "85%",
+    "statLabel": "process automation",
+    "headline": "CMS Group automates enterprise workflows",
+    "description": "CMS Group transformed their operations with custom enterprise software that automated manual workflows and improved team collaboration.",
+    "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop",
+    "ctaText": "Read the case study",
+    "ctaUrl": "/resources/cms-group-case-study/"
+  }
+]

@@ -1,0 +1,643 @@
+---
+layout: base.njk
+schemaType: service
+---
+
+{# =====================================================
+   SERVICE PAGE LAYOUT
+   Based on IBM Planning Analytics reference
+   All 11 sections included
+   ===================================================== #}
+
+{% set service = servicesDetails[serviceId] %}
+{% set stories = servicesStories %}
+
+{# =====================================================
+   SECTION 1: HERO / LEADSPACE
+   Background image with gradient overlay
+   ===================================================== #}
+<section class="relative pt-16 pb-12 md:pt-20 md:pb-16 overflow-hidden bg-white dark:bg-warm-900">
+  {# Background Image - positioned right, full bleed #}
+  {% if service.heroImage %}
+  <div class="absolute inset-0 hidden lg:block overflow-hidden">
+    <img
+      src="{{ service.heroImage }}"
+      alt=""
+      class="absolute right-0 top-0 w-full h-full object-cover object-right"
+      aria-hidden="true"
+    />
+  </div>
+  {# White gradient overlay - solid white left, fades to transparent right #}
+  <div class="absolute inset-0 bg-gradient-to-r from-white from-30% via-white/95 via-40% to-transparent to-70% dark:from-warm-900 dark:via-warm-900/95 dark:to-transparent"></div>
+  {% endif %}
+
+  <div class="relative max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 min-h-[300px] md:min-h-[340px]">
+
+      {# Left: Content (spans 5 cols on large) #}
+      <div class="lg:col-span-5 flex flex-col justify-center z-10">
+        {# Breadcrumb #}
+        <nav class="flex items-center gap-2 text-sm mb-8" data-reveal aria-label="Breadcrumb">
+          <a href="/" class="text-zunkiree-600 dark:text-zunkiree-400 hover:underline">Home</a>
+          <span class="text-warm-400">/</span>
+          <a href="/services/" class="text-zunkiree-600 dark:text-zunkiree-400 hover:underline">Services</a>
+          <span class="text-warm-400">/</span>
+          <span class="text-warm-600 dark:text-warm-300">{{ service.title }}</span>
+        </nav>
+
+        {# Title #}
+        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-normal text-warm-black dark:text-white tracking-[-0.04em] leading-[1.05] mb-6" data-reveal>
+          {{ service.tagline }}
+        </h1>
+
+        {# Description #}
+        <p class="text-lg md:text-xl text-warm-600 dark:text-warm-300 leading-relaxed tracking-[-0.01em] mb-10 max-w-lg" data-reveal>
+          {{ service.description }}
+        </p>
+
+        {# CTAs - Homepage style buttons #}
+        <div class="flex flex-col sm:flex-row items-start gap-4" data-reveal>
+          <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+            {{ service.cta.primaryButton.text }}
+          </a>
+          <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
+            {{ service.cta.secondaryButton.text }}
+          </a>
+        </div>
+      </div>
+
+      {# Right side is now filled by the background image #}
+      <div class="hidden lg:block lg:col-span-7"></div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 2: SOCIAL PROOF + STATS BAR
+   ===================================================== #}
+<section class="py-6 bg-white border-y border-gray-200">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+      {# Left: Trust Text with Divider #}
+      <div class="lg:col-span-2 flex items-center gap-4">
+        <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by forward-thinking organizations</p>
+        <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
+      </div>
+
+      {# Middle: Client Logos #}
+      <div class="lg:col-span-5 flex items-center gap-8 overflow-x-auto">
+        {% for clientId in service.clients %}
+          {% for story in stories %}
+            {% if story.id == clientId %}
+            <div class="flex-shrink-0">
+              <img src="{{ story.logo }}" alt="{{ story.name }}" class="h-6 md:h-8 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      {# Right: Stats #}
+      <div class="lg:col-span-5 flex items-center justify-end gap-6 md:gap-8">
+        {% for stat in service.stats %}
+        <div class="text-center">
+          <p class="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">{{ stat.value }}</p>
+          <p class="text-xs text-gray-500">{{ stat.label }}</p>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 3: OVERVIEW / VALUE PROP (Two-column)
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+      {# Left: Large benefit-focused headline #}
+      <div>
+        <h2 class="text-3xl sm:text-4xl md:text-[44px] lg:text-[52px] font-normal leading-[1.1] tracking-[-0.03em] bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">
+          {{ service.definition.heading }}
+        </h2>
+      </div>
+
+      {# Right: Supporting paragraph #}
+      <div class="lg:pt-2">
+        <p class="text-lg md:text-xl text-gray-600 dark:text-warm-300 leading-relaxed">
+          {{ service.definition.content }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 4: KEY BENEFITS (IBM-style minimal)
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      {# Left: Large "Benefits" title #}
+      <div class="lg:col-span-3">
+        <h2 class="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+          Benefits
+        </h2>
+      </div>
+
+      {# Right: Benefits grid #}
+      <div class="lg:col-span-9">
+        {# SVG Gradient Definition #}
+        <svg width="0" height="0" style="position:absolute;">
+          <defs>
+            <linearGradient id="benefit-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          {% for benefit in service.benefits %}
+          <div>
+            {# Icon #}
+            <div class="mb-6">
+              {% if benefit.icon == "workflow" %}
+              <svg class="w-12 h-12" fill="none" stroke="url(#benefit-icon-gradient)" viewBox="0 0 24 24" stroke-width="1">
+                <circle cx="6" cy="6" r="2"/>
+                <circle cx="18" cy="6" r="2"/>
+                <circle cx="6" cy="18" r="2"/>
+                <circle cx="18" cy="18" r="2"/>
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M6 8v2M6 14v2M18 8v2M18 14v2M8 6h2M14 6h2M8 18h2M14 18h2M8 12h2M14 12h2M12 8v2M12 14v2"/>
+              </svg>
+              {% elif benefit.icon == "speed" %}
+              <svg class="w-12 h-12" fill="none" stroke="url(#benefit-icon-gradient)" viewBox="0 0 24 24" stroke-width="1">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              {% elif benefit.icon == "integrate" %}
+              <svg class="w-12 h-12" fill="none" stroke="url(#benefit-icon-gradient)" viewBox="0 0 24 24" stroke-width="1">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="4" cy="8" r="2"/>
+                <circle cx="20" cy="8" r="2"/>
+                <circle cx="4" cy="16" r="2"/>
+                <circle cx="20" cy="16" r="2"/>
+                <path d="M6 8h3M15 8h3M6 16h3M15 16h3"/>
+              </svg>
+              {% else %}
+              <svg class="w-12 h-12" fill="none" stroke="url(#benefit-icon-gradient)" viewBox="0 0 24 24" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+              </svg>
+              {% endif %}
+            </div>
+            {# Title #}
+            <h3 class="text-lg font-normal text-gray-900 dark:text-white mb-3">
+              {{ benefit.title }}
+            </h3>
+            {# Description #}
+            <p class="text-gray-600 dark:text-warm-300 leading-relaxed">
+              {{ benefit.description }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 5: USE CASES (IBM-style Tabbed Interface)
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white dark:bg-warm-900" x-data="{ activeTab: '{{ service.useCases[0].id }}' }">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Left-aligned title #}
+    <h2 class="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em] mb-8">
+      Use cases
+    </h2>
+
+    {# Tab Navigation - Rounded with gradient active #}
+    <div class="flex flex-wrap gap-2 mb-12">
+      {% for useCase in service.useCases %}
+      <button
+        @click="activeTab = '{{ useCase.id }}'"
+        :class="activeTab === '{{ useCase.id }}' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        {{ useCase.title }}
+      </button>
+      {% endfor %}
+    </div>
+
+    {# Tab Content #}
+    {% for useCase in service.useCases %}
+    <div
+      x-show="activeTab === '{{ useCase.id }}'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start"
+    >
+      {# Content #}
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 dark:text-white tracking-[-0.02em] mb-4">
+          {{ useCase.headline }}
+        </h3>
+        <p class="text-lg text-gray-600 dark:text-warm-300 leading-relaxed mb-6">
+          {{ useCase.description }}
+        </p>
+        <a href="/contact/" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all duration-200">
+          Learn more
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+
+      {# Image #}
+      <div class="relative">
+        <div class="aspect-[16/9] overflow-hidden">
+          {% if useCase.image %}
+          <img
+            src="{{ useCase.image }}"
+            alt="{{ useCase.headline }}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+          {% else %}
+          <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+            <span class="text-gray-400">{{ useCase.headline }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 6: CLIENT STORIES / SOCIAL PROOF (Light theme)
+   ===================================================== #}
+{% set clientStories = [] %}
+{% for clientId in service.clients %}
+  {% for story in stories %}
+    {% if story.id == clientId %}
+      {% set clientStories = (clientStories.push(story), clientStories) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if clientStories.length > 0 %}
+<section class="py-12 md:py-20 bg-gray-50" x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ clientStories.length }} / 2) }">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Header with logos #}
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
+      <div class="mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 tracking-[-0.02em]">
+          See how our clients build with Zunkiree
+        </h2>
+      </div>
+
+      {# Client Logos #}
+      <div class="flex flex-wrap items-center gap-6">
+        {% for story in clientStories %}
+        <img
+          src="{{ story.logo }}"
+          alt="{{ story.name }}"
+          class="h-6 md:h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+          loading="lazy"
+        >
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Story Cards Slider - 2 per view (Homepage style) #}
+    <div class="relative overflow-hidden">
+      <div
+        class="flex transition-transform duration-500 ease-out"
+        :style="'transform: translateX(-' + (currentSlide * 100) + '%)'"
+      >
+        {% for story in clientStories %}
+        <div class="w-full md:w-1/2 flex-shrink-0 px-2">
+          {# Card Container - Homepage style with border #}
+          <div class="bg-white border border-gray-200 overflow-hidden h-full flex flex-col">
+            {# Card Top - Content + Image (horizontal on md+) #}
+            <div class="p-8 flex flex-col md:flex-row gap-6 flex-1">
+              {# Content - Left side #}
+              <div class="flex-1 flex flex-col order-2 md:order-1">
+                <h3 class="text-xl md:text-2xl font-normal text-gray-900 tracking-[-0.02em] mb-3">
+                  {{ story.headline }}
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-5 text-sm md:text-base flex-1">
+                  {{ story.description }}
+                </p>
+
+                {# Stat Highlight #}
+                <div class="flex items-baseline gap-2 mb-5">
+                  <span class="text-3xl md:text-4xl font-medium bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">{{ story.stat }}</span>
+                  <span class="text-gray-500 text-sm">{{ story.statLabel }}</span>
+                </div>
+
+                <a href="{{ story.ctaUrl }}" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
+                  {{ story.ctaText }}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+
+              {# Divider #}
+              <div class="hidden md:block w-px bg-gray-200 order-2"></div>
+
+              {# Image - Right side (full height) #}
+              <div class="flex-shrink-0 md:w-[45%] order-1 md:order-3 self-stretch">
+                <div class="h-full min-h-[200px] overflow-hidden bg-gray-100">
+                  <img
+                    src="{{ story.image }}"
+                    alt="{{ story.name }} project"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+            </div>
+
+            {# Card Bottom - Client Logo (matching homepage style) #}
+            <div class="border-t border-gray-200 px-8 py-5">
+              <div class="flex items-center justify-end">
+                <img
+                  src="{{ story.logo }}"
+                  alt="{{ story.name }}"
+                  class="h-5 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Navigation #}
+    {% if clientStories.length > 2 %}
+    <div class="flex items-center justify-center gap-6 mt-8">
+      {# Prev Button #}
+      <button
+        @click="currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1"
+        class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors rounded-lg"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      {# Dots #}
+      <div class="flex items-center gap-2">
+        <template x-for="i in totalSlides" :key="i">
+          <button
+            @click="currentSlide = i - 1"
+            class="w-2.5 h-2.5 rounded-full transition-colors"
+            :class="currentSlide === (i - 1) ? 'bg-zunkiree-600' : 'bg-gray-300 hover:bg-gray-400'"
+          ></button>
+        </template>
+      </div>
+
+      {# Next Button #}
+      <button
+        @click="currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0"
+        class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors rounded-lg"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   SECTION 8: TECH STACK / INTEGRATIONS
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      {# Left: Title #}
+      <div class="lg:col-span-3" data-reveal>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Technology</p>
+        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+          Technologies we use
+        </h2>
+      </div>
+
+      {# Right: Tech Grid #}
+      <div class="lg:col-span-9">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {% for tech in service.techStack %}
+          <div class="bg-white border border-gray-200 p-5 text-center hover:shadow-md transition-shadow duration-200" data-reveal>
+            {# Logo #}
+            {% if tech.logo %}
+            <div class="h-10 flex items-center justify-center mb-3">
+              <img
+                src="{{ tech.logo }}"
+                alt="{{ tech.name }}"
+                class="max-h-8 max-w-[100px] object-contain"
+                loading="lazy"
+              />
+            </div>
+            {% endif %}
+            <p class="font-medium text-warm-black dark:text-white text-sm mb-0.5">{{ tech.name }}</p>
+            <p class="text-xs text-zunkiree-600 dark:text-zunkiree-400 mb-0.5">{{ tech.category }}</p>
+            <p class="text-[11px] text-warm-400">{{ tech.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{# =====================================================
+   SECTION 10: RELATED SERVICES (IBM-style bordered grid)
+   ===================================================== #}
+{% if service.relatedServices.length > 0 %}
+<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Left-aligned header #}
+    <div class="mb-12" data-reveal>
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Related Services</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+        You might also need
+      </h2>
+    </div>
+
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="related-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    {# IBM-style bordered grid #}
+    <div class="grid grid-cols-1 md:grid-cols-3 border border-gray-200">
+      {% for relatedId in service.relatedServices %}
+      {% set related = services | find("id", relatedId) %}
+      {% if related %}
+      <a href="{{ related.url }}" class="group relative flex flex-col justify-between p-6 border-b md:border-b-0 {% if not loop.last %}md:border-r{% endif %} border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">{{ related.title }}</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">{{ related.description }}</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          {# Icon #}
+          {% if related.icon == "ai" %}
+          <svg class="w-10 h-10 transition-all duration-300 group-hover:stroke-white" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+          {% elif related.icon == "chat" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+          {% elif related.icon == "data" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+          </svg>
+          {% elif related.icon == "code" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          {% elif related.icon == "cloud" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+          </svg>
+          {% elif related.icon == "globe" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+          </svg>
+          {% elif related.icon == "mobile" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          {% elif related.icon == "search" %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          {% else %}
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#related-icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          {% endif %}
+          {# Arrow #}
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   SECTION 11: CTA + FAQ (IBM Vertical Stack)
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {# TOP: CTA Block #}
+    <div class="mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6 leading-tight tracking-[-0.02em]">
+        Take the next step
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
+        {{ service.cta.description }}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-zunkiree-600 text-white font-medium text-sm hover:bg-zunkiree-700 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          {{ service.cta.primaryButton.text }}
+        </a>
+        <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-zunkiree-600 text-zunkiree-600 font-medium text-sm hover:bg-zunkiree-50 transition-colors">
+          {{ service.cta.secondaryButton.text }}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {# BOTTOM: FAQ Accordion (Full Width) #}
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      {# Header #}
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Get to know {{ service.title }}</h3>
+        <button
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+          class="text-sm text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      {# FAQ Items #}
+      <div class="divide-y divide-gray-200">
+        {% for faq in service.faq %}
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">
+              {{ faq.question }}
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === {{ loop.index }} || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              {{ faq.answer }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,549 @@
+---
+layout: base.njk
+---
+
+{# =====================================================
+   SHARED CATALOG LAYOUT
+   Used for: Services page, Products page
+   Data-driven via frontmatter variables
+   ===================================================== #}
+
+{# Determine which data source to use #}
+{% set items = products if catalogType == "products" else services %}
+{% set categories = catalogCategories | default([]) %}
+
+{# =====================================================
+   SECTION 1: HERO - Image Background with Dark Gradient
+   ===================================================== #}
+<section class="relative min-h-[35vh] md:min-h-[45vh] overflow-hidden bg-gray-900">
+  {# Full Image Background #}
+  {% if heroImage %}
+  <img
+    src="{{ heroImage }}"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover object-right"
+    aria-hidden="true"
+  />
+  {% endif %}
+
+  {# Dark gradient overlay - fades from left to right #}
+  <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+
+  {# Content #}
+  <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 h-full min-h-[35vh] md:min-h-[45vh] flex flex-col justify-between pt-20 pb-6 md:pt-24 md:pb-8">
+    {# Top: Breadcrumb + Title #}
+    <div>
+      {# Breadcrumb #}
+      <nav class="mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2 text-sm">
+          <li><a href="/" class="text-blue-400 hover:text-blue-300 transition-colors">Home</a></li>
+          <li class="text-white/50">/</li>
+          <li class="text-white/70">{{ heroLabel | default(heroTitle) }}</li>
+        </ol>
+      </nav>
+
+      {# Hero title #}
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight leading-[1.1] max-w-2xl text-white">
+        {{ heroTitle }}
+      </h1>
+    </div>
+
+    {# Bottom: Description #}
+    <p class="text-lg md:text-xl max-w-xl text-white/80">
+      {{ heroTagline }}
+    </p>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 2: INTRO (Two-column)
+   ===================================================== #}
+<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      {# Left: Large heading #}
+      <div>
+        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight leading-[1.15]" style="color: var(--foreground);">
+          {{ introHeadline }}
+        </h2>
+      </div>
+
+      {# Right: Supporting paragraph #}
+      <div class="lg:pt-2">
+        <p class="text-lg leading-relaxed" style="color: var(--foreground-muted);">
+          {{ introDescription }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 3: DEFINITION BLOCK (AEO)
+   ===================================================== #}
+{% if definitionBlock %}
+<section class="pb-12 md:pb-16 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="max-w-3xl p-6 md:p-8 border-l-4 border-zunkiree-600" style="background-color: var(--background-alt);">
+      <h3 class="text-lg font-normal mb-3" style="color: var(--foreground);">
+        {{ definitionBlock.question }}
+      </h3>
+      <p class="leading-relaxed" style="color: var(--foreground-muted);">
+        {{ definitionBlock.answer }}
+      </p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   SECTION 4: TAB NAVIGATION + CATALOG CARDS
+   ===================================================== #}
+<section
+  class="pb-16 md:pb-24 px-4 sm:px-6 lg:px-8"
+  style="background-color: var(--background);"
+  x-data="{ activeTab: 'all' }"
+>
+  <div class="max-w-screen-2xl mx-auto">
+    {# Tab Navigation (only show if categories exist) #}
+    {% if categories.length > 0 %}
+    <div class="border-b" style="border-color: var(--border);">
+      <nav class="flex gap-8 -mb-px overflow-x-auto" aria-label="{{ catalogType | capitalize }} categories">
+        <button
+          @click="activeTab = 'all'"
+          class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
+          :class="activeTab === 'all' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent hover:border-gray-300'"
+          :style="activeTab !== 'all' ? 'color: var(--foreground-muted)' : ''"
+        >
+          All {{ catalogType | capitalize }}
+        </button>
+        {% for category in categories %}
+        <button
+          @click="activeTab = '{{ category.id }}'"
+          class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
+          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent hover:border-gray-300'"
+          :style="activeTab !== '{{ category.id }}' ? 'color: var(--foreground-muted)' : ''"
+        >
+          {{ category.label }}
+        </button>
+        {% endfor %}
+      </nav>
+    </div>
+    {% endif %}
+
+    {# Catalog Cards Grid - Full table-style borders #}
+    <div class="border-l {% if categories.length > 0 %}mt-0{% else %}mt-8{% endif %}" style="border-color: var(--border);">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{% if items.length <= 3 %}3{% else %}4{% endif %}">
+        {% for item in items %}
+          <article
+            class="flex flex-col p-6 transition-colors border-b border-r hover:bg-gray-50 dark:hover:bg-gray-800/50"
+            style="background-color: var(--background); border-color: var(--border);"
+            {% if categories.length > 0 %}
+            x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            {% endif %}
+          >
+            {# Category/Status label #}
+            {% if item.category %}
+            <span class="text-xs font-medium mb-2" style="color: var(--foreground-subtle);">
+              {{ item.category }}
+            </span>
+            {% elif item.status %}
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium mb-2 {% if item.status == 'Available' %}text-green-600{% elif item.status == 'Coming Soon' %}text-amber-600{% else %}text-blue-600{% endif %}">
+              {% if item.status == 'Available' %}
+              <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+              {% elif item.status == 'Coming Soon' %}
+              <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse"></span>
+              {% endif %}
+              {{ item.status }}
+            </span>
+            {% endif %}
+
+            {# Item title #}
+            <h3 class="text-lg font-medium mb-3" style="color: var(--foreground);">
+              {{ item.title }}
+            </h3>
+
+            {# Tagline (for products) #}
+            {% if item.tagline %}
+            <p class="text-sm font-medium text-zunkiree-600 mb-3">
+              {{ item.tagline }}
+            </p>
+            {% endif %}
+
+            {# Description #}
+            <p class="text-sm leading-relaxed mb-8 flex-grow" style="color: var(--foreground-muted);">
+              {{ item.description }}
+            </p>
+
+            {# View link - justified to ends #}
+            <div class="flex items-center justify-between mt-auto">
+              <a
+                href="{{ item.url }}"
+                class="text-sm font-medium text-zunkiree-600 dark:text-zunkiree-400 hover:underline"
+              >
+                {{ item.cta | default('Learn more') }}
+              </a>
+              <a
+                href="{{ item.url }}"
+                class="text-zunkiree-600 dark:text-zunkiree-400 hover:translate-x-1 transition-transform"
+                aria-label="Learn more about {{ item.title }}"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 5: CTA BANNER
+   ===================================================== #}
+<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background-alt);">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      {# Left: Heading #}
+      <div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight" style="color: var(--foreground);">
+          {{ ctaHeadline | default('Ready to get started?') }}
+        </h2>
+      </div>
+
+      {# Right: Paragraph + CTA #}
+      <div>
+        <p class="text-lg mb-6" style="color: var(--foreground-muted);">
+          {{ ctaDescription | default('Let\'s discuss how we can help you achieve your goals.') }}
+        </p>
+        <a
+          href="{{ ctaButtonUrl | default('/contact/') }}"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+        >
+          {{ ctaButtonText | default('Get in touch') }}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 6: CUSTOMER STORIES - Interactive Carousel
+   ===================================================== #}
+{% set stories = servicesStories if catalogType == "services" else productsStories %}
+{% if stories and stories.length > 0 %}
+<script id="catalog-stories-data" type="application/json">{{ stories | dump | safe }}</script>
+<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);" x-data="catalogCarousel()">
+  <div class="max-w-screen-2xl mx-auto">
+
+    {# Section Header #}
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight" style="color: var(--foreground);">
+        See how our clients are building with Zunkiree
+      </h2>
+    </div>
+
+    {# Logo Tab Bar #}
+    <div class="flex items-stretch gap-2">
+      {# Play/Pause Button #}
+      <button
+        @click="togglePlay()"
+        class="flex-shrink-0 w-14 h-20 flex items-center justify-center transition-colors"
+        style="background-color: var(--background-alt);"
+        :aria-label="isPlaying ? 'Pause carousel' : 'Play carousel'"
+      >
+        {# Play Icon #}
+        <svg x-show="!isPlaying" class="w-5 h-5" style="color: var(--foreground-muted);" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        {# Pause Icon #}
+        <svg x-show="isPlaying" class="w-5 h-5" style="color: var(--foreground-muted);" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+
+      {# Client Logo Tabs - Horizontal Scroll #}
+      <div
+        x-ref="tabsContainer"
+        class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
+      >
+        <template x-for="(study, index) in studies" :key="study.id">
+          <button
+            @click="goTo(index)"
+            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
+            :style="activeIndex === index ? 'background-color: var(--background); box-shadow: 0 1px 3px rgba(0,0,0,0.1);' : 'background-color: var(--background-alt);'"
+            style="min-width: calc((100% - 32px) / 5);"
+          >
+            <img
+              :src="study.logo"
+              :alt="study.name"
+              class="max-h-8 max-w-[120px] object-contain transition-all duration-300"
+              :class="activeIndex === index ? 'grayscale-0 opacity-100' : 'grayscale opacity-50 hover:opacity-70'"
+            />
+            {# Progress Bar (only on active, animates while playing) #}
+            <div
+              class="absolute bottom-0 left-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && isPlaying ? '' : 'hidden'"
+              :style="`width: ${progress}%`"
+            ></div>
+            {# Static indicator (only on active, when paused) #}
+            <div
+              class="absolute bottom-0 left-0 right-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && !isPlaying ? '' : 'hidden'"
+            ></div>
+          </button>
+        </template>
+      </div>
+    </div>
+
+    {# Content Area - Separate container with gap #}
+    <div class="mt-6 border" style="background-color: var(--background); border-color: var(--border);">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        {# Left: Content #}
+        <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
+          <template x-for="(study, index) in studies" :key="study.id">
+            <div
+              x-show="activeIndex === index"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 transform translate-y-4"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-200 absolute"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+            >
+              {# Client Logo Large #}
+              <div class="mb-6">
+                <img
+                  :src="study.logo"
+                  :alt="study.name"
+                  class="h-10 object-contain"
+                />
+              </div>
+
+              {# Big Stat #}
+              <div class="mb-4">
+                <span class="text-5xl md:text-6xl lg:text-7xl font-light" style="color: var(--foreground);" x-text="study.stat"></span>
+                <span class="text-lg ml-2" style="color: var(--foreground-muted);" x-text="study.statLabel"></span>
+              </div>
+
+              {# Headline #}
+              <h3 class="text-xl md:text-2xl font-medium mb-4" style="color: var(--foreground);" x-text="study.headline"></h3>
+
+              {# Description #}
+              <p class="mb-6 max-w-lg" style="color: var(--foreground-muted);" x-text="study.description"></p>
+
+              {# CTA #}
+              <a
+                :href="study.ctaUrl"
+                class="inline-flex items-center gap-2 text-zunkiree-600 dark:text-zunkiree-400 font-medium hover:gap-3 transition-all"
+              >
+                <span x-text="study.ctaText"></span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </template>
+        </div>
+
+        {# Right: Image #}
+        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden" style="background-color: var(--background-alt);">
+          {# Case study images with transition #}
+          <template x-for="(study, index) in studies" :key="'visual-' + study.id">
+            <div
+              class="absolute inset-0"
+              :class="activeIndex === index ? '' : 'hidden'"
+            >
+              <img
+                :src="study.image"
+                :alt="study.name + ' case study'"
+                class="w-full h-full object-cover"
+              />
+              {# Subtle overlay for better contrast #}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+          </template>
+          {# Accent line #}
+          <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-zunkiree-600"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function catalogCarousel() {
+    return {
+      activeIndex: 0,
+      isPlaying: true,
+      progress: 0,
+      interval: null,
+      duration: 5000,
+      studies: [],
+
+      init() {
+        // Load data from script tag
+        const dataEl = document.getElementById('catalog-stories-data');
+        if (dataEl) {
+          try {
+            this.studies = JSON.parse(dataEl.textContent);
+          } catch (e) {
+            console.error('Failed to parse carousel data:', e);
+          }
+        }
+        this.startAutoPlay();
+      },
+
+      startAutoPlay() {
+        if (this.interval) clearInterval(this.interval);
+        this.progress = 0;
+
+        const tick = 50;
+        this.interval = setInterval(() => {
+          if (this.isPlaying) {
+            this.progress += (tick / this.duration) * 100;
+            if (this.progress >= 100) {
+              this.next();
+            }
+          }
+        }, tick);
+      },
+
+      next() {
+        this.activeIndex = (this.activeIndex + 1) % this.studies.length;
+        this.progress = 0;
+        this.scrollToActive();
+      },
+
+      goTo(index) {
+        this.activeIndex = index;
+        this.progress = 0;
+        this.isPlaying = false;
+        this.scrollToActive();
+      },
+
+      togglePlay() {
+        this.isPlaying = !this.isPlaying;
+        if (this.isPlaying) {
+          this.progress = 0;
+        }
+      },
+
+      scrollToActive() {
+        this.$nextTick(() => {
+          const container = this.$refs.tabsContainer;
+          const buttons = container.querySelectorAll('button');
+          const activeButton = buttons[this.activeIndex];
+
+          if (activeButton && container) {
+            const containerWidth = container.offsetWidth;
+            const buttonLeft = activeButton.offsetLeft;
+            const buttonWidth = activeButton.offsetWidth;
+
+            container.scrollTo({
+              left: buttonLeft - (containerWidth / 2) + (buttonWidth / 2),
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    }
+  }
+</script>
+{% endif %}
+
+{# =====================================================
+   SECTION 7: CTA + FAQ
+   ===================================================== #}
+{# Use page-specific FAQ if available, otherwise use global FAQ #}
+{% set pageFaqData = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
+{% set faq = pageFaqData if pageFaqData else faq %}
+{% include "partials/cta-faq.njk" %}
+
+{# =====================================================
+   SCHEMA MARKUP (JSON-LD)
+   ===================================================== #}
+{% if schemaType %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ schemaType }}",
+  "name": "{{ heroTitle }} - Zunkiree Labs",
+  "description": "{{ description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs",
+    "url": "https://zunkiree.com"
+  }
+  {% if catalogType == "services" %},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{{ heroTitle }}",
+    "itemListElement": [
+      {% for item in items %}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{{ item.title }}",
+          "description": "{{ item.description }}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  {% elif catalogType == "products" %},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{{ heroTitle }}",
+    "itemListElement": [
+      {% for item in items %}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "{{ item.title }}",
+          "description": "{{ item.description }}",
+          "applicationCategory": "BusinessApplication"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  {% endif %}
+}
+</script>
+{% endif %}
+
+{# FAQPage Schema if FAQ exists #}
+{% set schemaFaq = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
+{% if schemaFaq and schemaFaq.length > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in schemaFaq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

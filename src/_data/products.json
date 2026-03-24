@@ -1,0 +1,87 @@
+[
+  {
+    "id": "zunkiree-search",
+    "title": "Zunkiree Search",
+    "tagline": "AI-Native Search Platform",
+    "category": "AI Products",
+    "status": "Available",
+    "description": "Transform how users discover information with AI-native search. Delivers direct answers through natural language, reducing support queries by 45%. Integrates in hours, not weeks.",
+    "cta": "View product",
+    "url": "/products/search/",
+    "icon": "search",
+    "features": [
+      "Natural language understanding",
+      "50+ pre-built connectors",
+      "2-hour integration",
+      "SOC 2 compliant"
+    ]
+  },
+  {
+    "id": "ai-booking-engine",
+    "title": "AI Booking Engine",
+    "tagline": "Intelligent Scheduling Platform",
+    "category": "Business Tools",
+    "status": "Available",
+    "description": "Smart scheduling that handles complex availability, multi-resource bookings, and automatic conflict resolution. Reduce no-shows by 35% with AI-powered reminders.",
+    "cta": "View product",
+    "url": "/products/ai-booking-engine/",
+    "icon": "calendar",
+    "features": [
+      "Complex availability handling",
+      "Multi-resource booking",
+      "AI-powered reminders",
+      "Calendar integrations"
+    ]
+  },
+  {
+    "id": "ai-crm",
+    "title": "AI CRM",
+    "tagline": "Customer Intelligence Platform",
+    "category": "Business Tools",
+    "status": "Available",
+    "description": "Customer relationship management powered by AI. Predicts customer needs, automates outreach, and surfaces insights that drive revenue growth.",
+    "cta": "View product",
+    "url": "/products/ai-crm/",
+    "icon": "users",
+    "features": [
+      "Predictive lead scoring",
+      "Automated outreach",
+      "Customer insights",
+      "Pipeline intelligence"
+    ]
+  },
+  {
+    "id": "gaamma",
+    "title": "Gaamma",
+    "tagline": "Manufacturing ERP Platform",
+    "category": "Enterprise Software",
+    "status": "Available",
+    "description": "End-to-end manufacturing intelligence for modern factories. Unifies operations from raw materials to finished goods with real-time visibility and predictive insights.",
+    "cta": "View product",
+    "url": "/products/gaamma/",
+    "icon": "factory",
+    "features": [
+      "Production planning",
+      "Inventory management",
+      "Quality control",
+      "Real-time analytics"
+    ]
+  },
+  {
+    "id": "dental-ai",
+    "title": "Dental AI Assistant",
+    "tagline": "AI for Dental Workflows",
+    "category": "AI Products",
+    "status": "Coming Soon",
+    "description": "AI assistant designed for dental operations and patient interaction. Streamlines appointment scheduling, patient communication, and practice management.",
+    "cta": "Join waitlist",
+    "url": "/products/dental-ai/",
+    "icon": "tooth",
+    "features": [
+      "Patient communication",
+      "Appointment scheduling",
+      "Follow-up automation",
+      "Practice analytics"
+    ]
+  }
+]
