@@ -1,0 +1,64 @@
+name: Cleanup Deployment
+
+on:
+  delete:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: zunkiree-technologies/zunkiree-web
+
+jobs:
+  cleanup:
+    name: Remove Container
+    runs-on: ubuntu-latest
+    if: github.event.ref_type == 'branch' && (startsWith(github.event.ref, 'feature/') || startsWith(github.event.ref, 'staging/'))
+    steps:
+      - name: Resolve container name
+        id: parse
+        run: |
+          BRANCH="${{ github.event.ref }}"
+
+          if [[ "$BRANCH" == feature/* ]]; then
+            FEATURE_PART="${BRANCH#feature/}"
+            CONTAINER_NAME="zunkiree-dev-${FEATURE_PART}"
+            IMAGE_TAG="feature-${FEATURE_PART}"
+          elif [[ "$BRANCH" == staging/* ]]; then
+            CLIENT="${BRANCH#staging/}"
+            CONTAINER_NAME="zunkiree-staging-${CLIENT}"
+            IMAGE_TAG="staging-${CLIENT}"
+          else
+            echo "No cleanup needed for branch: $BRANCH"
+            exit 0
+          fi
+
+          echo "container_name=${CONTAINER_NAME}" >> "$GITHUB_OUTPUT"
+          echo "image_tag=${IMAGE_TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Remove container via SSH
+        uses: appleboy/ssh-action@v1
+        env:
+          CONTAINER_NAME: ${{ steps.parse.outputs.container_name }}
+          IMAGE_TAG: ${{ steps.parse.outputs.image_tag }}
+          REGISTRY: ${{ env.REGISTRY }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          envs: CONTAINER_NAME,IMAGE_TAG,REGISTRY,IMAGE_NAME
+          script: |
+            set -e
+
+            echo "Cleaning up container: ${CONTAINER_NAME}"
+
+            # Stop and remove container
+            docker stop "${CONTAINER_NAME}" 2>/dev/null || true
+            docker rm "${CONTAINER_NAME}" 2>/dev/null || true
+
+            # Remove the specific image tag
+            docker rmi "${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}" 2>/dev/null || true
+
+            # Prune dangling images
+            docker image prune -f
+
+            echo "Cleanup complete: ${CONTAINER_NAME}"
