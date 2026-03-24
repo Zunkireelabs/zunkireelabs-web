@@ -16,6 +16,8 @@ concurrency:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: zunkireelabs/zunkiree-web
+  BASE_DOMAIN: zunkireelabs.com
+  PROD_DOMAIN: zunkireelabs.com
 
 jobs:
   resolve-env:
@@ -33,14 +35,14 @@ jobs:
         id: parse
         run: |
           BRANCH="${GITHUB_REF_NAME}"
-          BASE_DOMAIN="${{ secrets.DOMAIN || 'zunkireelabs.com' }}"
+          BASE_DOMAIN="${{ env.BASE_DOMAIN }}"
 
           echo "Branch: $BRANCH"
 
           if [[ "$BRANCH" == "main" ]]; then
             DEPLOY_ENV="production"
             CONTAINER_NAME="zunkiree-production"
-            DOMAIN="${{ secrets.PRODUCTION_DOMAIN || 'zunkireelabs.com' }}"
+            DOMAIN="${{ env.PROD_DOMAIN }}"
             IMAGE_TAG="latest"
             IS_PRODUCTION="true"
 
