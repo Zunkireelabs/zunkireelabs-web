@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="spot-search-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="spot-search-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EB1600"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="250" fill="url(#spot-search-bg)"/>
+
+  <!-- Search icon -->
+  <g transform="translate(150, 70)" opacity="0.2">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#fff" stroke-width="6"/>
+    <line x1="62" y1="62" x2="85" y2="85" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Stats -->
+  <g transform="translate(30, 150)">
+    <rect width="100" height="50" fill="#fff" opacity="0.05" rx="4"/>
+    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">340%</text>
+    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6" text-anchor="middle">Avg ROI</text>
+  </g>
+
+  <g transform="translate(150, 150)">
+    <rect width="100" height="50" fill="#fff" opacity="0.05" rx="4"/>
+    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">45%</text>
+    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6" text-anchor="middle">Less Support</text>
+  </g>
+
+  <g transform="translate(270, 150)">
+    <rect width="100" height="50" fill="#fff" opacity="0.05" rx="4"/>
+    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">3x</text>
+    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6" text-anchor="middle">Satisfaction</text>
+  </g>
+
+  <!-- Badge -->
+  <rect x="30" y="30" width="60" height="22" fill="url(#spot-search-accent)" rx="3"/>
+  <text x="60" y="45" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#fff" text-anchor="middle">REPORT</text>
+
+  <!-- Year -->
+  <text x="310" y="45" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#fff" opacity="0.3">2026</text>
+</svg>

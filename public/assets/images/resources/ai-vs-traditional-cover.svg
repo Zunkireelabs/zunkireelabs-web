@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="vs-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#vs-bg)"/>
+
+  <!-- Dividing line -->
+  <line x1="400" y1="60" x2="400" y2="390" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- VS circle -->
+  <circle cx="400" cy="225" r="40" fill="#374151" stroke="#fff" stroke-width="2"/>
+  <text x="400" y="235" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">VS</text>
+
+  <!-- Left side: AI -->
+  <g transform="translate(50, 80)">
+    <text x="150" y="0" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#10b981" text-anchor="middle">AI</text>
+
+    <!-- AI brain icon -->
+    <g transform="translate(100, 30)">
+      <ellipse cx="50" cy="40" rx="45" ry="35" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+      <path d="M25 40 Q40 25 50 40 Q60 55 75 40" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+      <circle cx="35" cy="35" r="4" fill="#10b981"/>
+      <circle cx="65" cy="35" r="4" fill="#10b981"/>
+    </g>
+
+    <!-- AI features -->
+    <g transform="translate(0, 130)" font-family="system-ui, sans-serif" font-size="14" fill="#fff">
+      <g>
+        <circle cx="10" cy="5" r="5" fill="#10b981"/>
+        <text x="25" y="10">Natural language</text>
+      </g>
+      <g transform="translate(0, 30)">
+        <circle cx="10" cy="5" r="5" fill="#10b981"/>
+        <text x="25" y="10">Learns patterns</text>
+      </g>
+      <g transform="translate(0, 60)">
+        <circle cx="10" cy="5" r="5" fill="#10b981"/>
+        <text x="25" y="10">Handles ambiguity</text>
+      </g>
+      <g transform="translate(0, 90)">
+        <circle cx="10" cy="5" r="5" fill="#10b981"/>
+        <text x="25" y="10">Improves over time</text>
+      </g>
+      <g transform="translate(0, 120)">
+        <circle cx="10" cy="5" r="5" fill="#10b981"/>
+        <text x="25" y="10">Complex decisions</text>
+      </g>
+    </g>
+
+    <!-- Best for -->
+    <g transform="translate(0, 290)">
+      <text font-family="system-ui, sans-serif" font-size="11" fill="#fff" opacity="0.6">BEST FOR</text>
+      <text y="20" font-family="system-ui, sans-serif" font-size="13" fill="#10b981">Search, Chatbots, Predictions</text>
+    </g>
+  </g>
+
+  <!-- Right side: Traditional -->
+  <g transform="translate(450, 80)">
+    <text x="150" y="0" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#6b7280" text-anchor="middle">TRADITIONAL</text>
+
+    <!-- Code/rules icon -->
+    <g transform="translate(100, 30)">
+      <rect x="10" y="0" width="80" height="70" fill="none" stroke="#6b7280" stroke-width="2" opacity="0.6" rx="4"/>
+      <line x1="25" y1="20" x2="75" y2="20" stroke="#6b7280" stroke-width="2" opacity="0.4"/>
+      <line x1="25" y1="35" x2="60" y2="35" stroke="#6b7280" stroke-width="2" opacity="0.4"/>
+      <line x1="25" y1="50" x2="70" y2="50" stroke="#6b7280" stroke-width="2" opacity="0.4"/>
+    </g>
+
+    <!-- Traditional features -->
+    <g transform="translate(0, 130)" font-family="system-ui, sans-serif" font-size="14" fill="#fff">
+      <g>
+        <circle cx="10" cy="5" r="5" fill="#6b7280"/>
+        <text x="25" y="10">Explicit rules</text>
+      </g>
+      <g transform="translate(0, 30)">
+        <circle cx="10" cy="5" r="5" fill="#6b7280"/>
+        <text x="25" y="10">Deterministic</text>
+      </g>
+      <g transform="translate(0, 60)">
+        <circle cx="10" cy="5" r="5" fill="#6b7280"/>
+        <text x="25" y="10">100% accuracy possible</text>
+      </g>
+      <g transform="translate(0, 90)">
+        <circle cx="10" cy="5" r="5" fill="#6b7280"/>
+        <text x="25" y="10">Predictable behavior</text>
+      </g>
+      <g transform="translate(0, 120)">
+        <circle cx="10" cy="5" r="5" fill="#6b7280"/>
+        <text x="25" y="10">Simple operations</text>
+      </g>
+    </g>
+
+    <!-- Best for -->
+    <g transform="translate(0, 290)">
+      <text font-family="system-ui, sans-serif" font-size="11" fill="#fff" opacity="0.6">BEST FOR</text>
+      <text y="20" font-family="system-ui, sans-serif" font-size="13" fill="#6b7280">Accounting, CRUD, Compliance</text>
+    </g>
+  </g>
+
+  <!-- Whitepaper badge -->
+  <rect x="330" y="390" width="140" height="35" fill="#fff" opacity="0.1" rx="4"/>
+  <text x="400" y="413" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#fff" text-anchor="middle">WHITEPAPER</text>
+</svg>
