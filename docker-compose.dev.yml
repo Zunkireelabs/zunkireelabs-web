@@ -7,7 +7,7 @@ services:
       - hosting
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.zunkiree-dev.rule=Host(`dev-web.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-dev.rule=Host(`dev-zunkiree.zunkireelabs.com`)"
       - "traefik.http.routers.zunkiree-dev.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-dev.tls.certresolver=letsencrypt"
       - "traefik.http.services.zunkiree-dev.loadbalancer.server.port=80"

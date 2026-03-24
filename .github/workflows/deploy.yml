@@ -1,0 +1,220 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - staging
+      - 'staging/**'
+      - 'feature/**'
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: zunkireelabs/zunkiree-web
+  BASE_DOMAIN: zunkireelabs.com
+  PROD_DOMAIN: zunkireelabs.com
+
+jobs:
+  resolve-env:
+    name: Resolve Environment
+    runs-on: ubuntu-latest
+    outputs:
+      deploy_env: ${{ steps.parse.outputs.deploy_env }}
+      container_name: ${{ steps.parse.outputs.container_name }}
+      domain: ${{ steps.parse.outputs.domain }}
+      image_tag: ${{ steps.parse.outputs.image_tag }}
+      router_name: ${{ steps.parse.outputs.router_name }}
+      is_production: ${{ steps.parse.outputs.is_production }}
+    steps:
+      - name: Parse branch to environment
+        id: parse
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          BASE_DOMAIN="${{ env.BASE_DOMAIN }}"
+
+          echo "Branch: $BRANCH"
+
+          if [[ "$BRANCH" == "main" ]]; then
+            DEPLOY_ENV="production"
+            CONTAINER_NAME="zunkiree-production"
+            DOMAIN="${{ env.PROD_DOMAIN }}"
+            IMAGE_TAG="latest"
+            IS_PRODUCTION="true"
+
+          elif [[ "$BRANCH" == "develop" ]]; then
+            DEPLOY_ENV="dev"
+            CONTAINER_NAME="zunkiree-dev"
+            DOMAIN="dev-zunkiree.${BASE_DOMAIN}"
+            IMAGE_TAG="develop"
+            IS_PRODUCTION="false"
+
+          elif [[ "$BRANCH" == "staging" ]]; then
+            DEPLOY_ENV="staging"
+            CONTAINER_NAME="zunkiree-staging"
+            DOMAIN="staging-zunkiree.${BASE_DOMAIN}"
+            IMAGE_TAG="staging"
+            IS_PRODUCTION="false"
+
+          elif [[ "$BRANCH" == staging/* ]]; then
+            CLIENT="${BRANCH#staging/}"
+            DEPLOY_ENV="staging"
+            CONTAINER_NAME="zunkiree-staging-${CLIENT}"
+            DOMAIN="staging-${CLIENT}.${BASE_DOMAIN}"
+            IMAGE_TAG="staging-${CLIENT}"
+            IS_PRODUCTION="false"
+
+          elif [[ "$BRANCH" == feature/* ]]; then
+            # feature/{client}-{feature} -> client and feature
+            FEATURE_PART="${BRANCH#feature/}"
+            DEPLOY_ENV="dev"
+            CONTAINER_NAME="zunkiree-dev-${FEATURE_PART}"
+            DOMAIN="dev-${FEATURE_PART}.${BASE_DOMAIN}"
+            IMAGE_TAG="feature-${FEATURE_PART}"
+            IS_PRODUCTION="false"
+
+          else
+            echo "::error::Unknown branch pattern: $BRANCH"
+            exit 1
+          fi
+
+          # Sanitize router name (Traefik requires alphanumeric + hyphens)
+          ROUTER_NAME=$(echo "$CONTAINER_NAME" | tr '.' '-' | tr '/' '-')
+
+          echo "deploy_env=${DEPLOY_ENV}" >> "$GITHUB_OUTPUT"
+          echo "container_name=${CONTAINER_NAME}" >> "$GITHUB_OUTPUT"
+          echo "domain=${DOMAIN}" >> "$GITHUB_OUTPUT"
+          echo "image_tag=${IMAGE_TAG}" >> "$GITHUB_OUTPUT"
+          echo "router_name=${ROUTER_NAME}" >> "$GITHUB_OUTPUT"
+          echo "is_production=${IS_PRODUCTION}" >> "$GITHUB_OUTPUT"
+
+          echo "## Deployment Info" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Key | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Environment | ${DEPLOY_ENV} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Container | ${CONTAINER_NAME} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Domain | ${DOMAIN} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Image Tag | ${IMAGE_TAG} |" >> "$GITHUB_STEP_SUMMARY"
+
+  build-and-push:
+    name: Build & Push Image
+    runs-on: ubuntu-latest
+    needs: resolve-env
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.resolve-env.outputs.image_tag }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+    needs: [resolve-env, build-and-push]
+    environment: ${{ needs.resolve-env.outputs.deploy_env }}
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        env:
+          CONTAINER_NAME: ${{ needs.resolve-env.outputs.container_name }}
+          DOMAIN: ${{ needs.resolve-env.outputs.domain }}
+          IMAGE_TAG: ${{ needs.resolve-env.outputs.image_tag }}
+          ROUTER_NAME: ${{ needs.resolve-env.outputs.router_name }}
+          DEPLOY_ENV: ${{ needs.resolve-env.outputs.deploy_env }}
+          IS_PRODUCTION: ${{ needs.resolve-env.outputs.is_production }}
+          REGISTRY: ${{ env.REGISTRY }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          GHCR_PAT: ${{ secrets.GHCR_PAT }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          envs: CONTAINER_NAME,DOMAIN,IMAGE_TAG,ROUTER_NAME,DEPLOY_ENV,IS_PRODUCTION,REGISTRY,IMAGE_NAME,GHCR_PAT
+          script: |
+            set -e
+
+            IMAGE="${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
+            NETWORK="hosting"
+
+            # Login to GHCR
+            echo "${GHCR_PAT}" | docker login ghcr.io -u github --password-stdin
+
+            # Pull the new image
+            echo "Pulling ${IMAGE}..."
+            docker pull "${IMAGE}"
+
+            # Stop and remove existing container
+            docker stop "${CONTAINER_NAME}" 2>/dev/null || true
+            docker rm "${CONTAINER_NAME}" 2>/dev/null || true
+
+            # Build docker run command
+            if [ "${IS_PRODUCTION}" = "true" ]; then
+              # Production: add www redirect router
+              docker run -d \
+                --name "${CONTAINER_NAME}" \
+                --network "${NETWORK}" \
+                --restart unless-stopped \
+                --label "traefik.enable=true" \
+                --label "traefik.http.routers.${ROUTER_NAME}.rule=Host(\`${DOMAIN}\`)" \
+                --label "traefik.http.routers.${ROUTER_NAME}.entrypoints=websecure" \
+                --label "traefik.http.routers.${ROUTER_NAME}.tls=true" \
+                --label "traefik.http.routers.${ROUTER_NAME}.tls.certresolver=letsencrypt" \
+                --label "traefik.http.routers.${ROUTER_NAME}-www.rule=Host(\`www.${DOMAIN}\`)" \
+                --label "traefik.http.routers.${ROUTER_NAME}-www.entrypoints=websecure" \
+                --label "traefik.http.routers.${ROUTER_NAME}-www.tls=true" \
+                --label "traefik.http.routers.${ROUTER_NAME}-www.tls.certresolver=letsencrypt" \
+                --label "traefik.http.services.${ROUTER_NAME}.loadbalancer.server.port=80" \
+                --label "zunkiree.env=${DEPLOY_ENV}" \
+                "${IMAGE}"
+            else
+              docker run -d \
+                --name "${CONTAINER_NAME}" \
+                --network "${NETWORK}" \
+                --restart unless-stopped \
+                --label "traefik.enable=true" \
+                --label "traefik.http.routers.${ROUTER_NAME}.rule=Host(\`${DOMAIN}\`)" \
+                --label "traefik.http.routers.${ROUTER_NAME}.entrypoints=websecure" \
+                --label "traefik.http.routers.${ROUTER_NAME}.tls=true" \
+                --label "traefik.http.routers.${ROUTER_NAME}.tls.certresolver=letsencrypt" \
+                --label "traefik.http.services.${ROUTER_NAME}.loadbalancer.server.port=80" \
+                --label "zunkiree.env=${DEPLOY_ENV}" \
+                "${IMAGE}"
+            fi
+
+            # Verify container is running
+            sleep 3
+            if docker ps --filter "name=${CONTAINER_NAME}" --format "{{.Status}}" | grep -q "Up"; then
+              echo "Deployed successfully: https://${DOMAIN}"
+            else
+              echo "ERROR: Container failed to start"
+              docker logs "${CONTAINER_NAME}" --tail 20
+              exit 1
+            fi
+
+            # Cleanup dangling images
+            docker image prune -f --filter "until=24h"

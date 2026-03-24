@@ -24,6 +24,9 @@ export default function (eleventyConfig) {
         allowedHosts: [
           'zunkiree.com',
           'www.zunkiree.com',
+          'zunkireelabs.com',
+          'www.zunkireelabs.com',
+          '.zunkireelabs.com',
           'dev-zunkiree.simplifycodes.com',
           'localhost',
           '127.0.0.1'

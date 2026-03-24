@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.brain
+.claude
+.vercel
+docs
+temp_ss
+*.log
