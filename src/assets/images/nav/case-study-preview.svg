@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160">
+  <defs>
+    <linearGradient id="navBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3139"/>
+      <stop offset="100%" style="stop-color:#2d4a56"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="160" fill="url(#navBg2)" rx="8"/>
+  <!-- Chart/graph icon -->
+  <rect x="100" y="85" width="20" height="35" fill="#eb1600" rx="2"/>
+  <rect x="130" y="60" width="20" height="60" fill="rgba(255,255,255,0.4)" rx="2"/>
+  <rect x="160" y="45" width="20" height="75" fill="#eb1600" rx="2"/>
+  <!-- Arrow up -->
+  <path d="M140 30 L150 45 L143 45 L143 55 L137 55 L137 45 L130 45 Z" fill="rgba(255,255,255,0.6)"/>
+  <!-- Text lines -->
+  <rect x="40" y="130" width="100" height="8" fill="rgba(255,255,255,0.3)" rx="4"/>
+  <rect x="150" y="130" width="90" height="8" fill="rgba(255,255,255,0.15)" rx="4"/>
+</svg>
