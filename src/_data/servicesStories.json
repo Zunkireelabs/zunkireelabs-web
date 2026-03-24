@@ -2,7 +2,7 @@
   {
     "id": "admizz",
     "name": "Admizz Education",
-    "logo": "/assets/images/clients/admizz.png",
+    "logo": "/images/clients/admizz.png",
     "stat": "45%",
     "statLabel": "faster responses",
     "headline": "Admizz transforms student inquiry management",
@@ -14,7 +14,7 @@
   {
     "id": "carbon-spark",
     "name": "Carbon Spark",
-    "logo": "/assets/images/clients/carbon-spark.png",
+    "logo": "/images/clients/carbon-spark.png",
     "stat": "3x",
     "statLabel": "faster time to market",
     "headline": "Carbon Spark accelerates SaaS deployment",
@@ -26,7 +26,7 @@
   {
     "id": "corecloud365",
     "name": "CoreCloud365",
-    "logo": "/assets/images/clients/corecloud365.png",
+    "logo": "/images/clients/corecloud365.png",
     "stat": "60%",
     "statLabel": "efficiency gain",
     "headline": "CoreCloud365 integrates AI automation",
@@ -38,7 +38,7 @@
   {
     "id": "rapid-investment",
     "name": "Rapid Investment",
-    "logo": "/assets/images/clients/rapid-investment.png",
+    "logo": "/images/clients/rapid-investment.png",
     "stat": "10x",
     "statLabel": "faster analysis",
     "headline": "Rapid Investment transforms data processing",
@@ -50,7 +50,7 @@
   {
     "id": "cms-group",
     "name": "CMS Group",
-    "logo": "/assets/images/clients/cms-group.png",
+    "logo": "/images/clients/cms-group.png",
     "stat": "85%",
     "statLabel": "process automation",
     "headline": "CMS Group automates enterprise workflows",
