@@ -151,5 +151,622 @@
     },
 
     "clients": ["admizz", "corecloud365", "carbon-spark"]
+  },
+
+  "gaamma": {
+    "id": "gaamma",
+    "title": "Gaamma",
+    "category": "Enterprise Software",
+    "tagline": "Manufacturing intelligence that drives efficiency",
+    "description": "End-to-end ERP platform built for modern manufacturing. Unify operations from raw materials to finished goods with real-time visibility and predictive insights.",
+    "heroImage": "/images/gaamma-hero.svg",
+    "lastUpdated": "2026-03-24",
+
+    "definition": {
+      "heading": "Manufacturing operations, unified and intelligent",
+      "content": "Gaamma is a comprehensive manufacturing ERP platform that brings together production planning, inventory management, quality control, and analytics in one intelligent system. Purpose-built for factories seeking digital transformation, Gaamma provides real-time visibility across your entire operation—from raw material intake to finished product shipment. Manufacturers using Gaamma see 30% reduction in downtime and 25% improvement in inventory turns."
+    },
+
+    "stats": [
+      { "value": "30%", "label": "Less Downtime", "description": "predictive maintenance" },
+      { "value": "25%", "label": "Better Inventory", "description": "inventory turn improvement" },
+      { "value": "40%", "label": "Faster Orders", "description": "order fulfillment speed" },
+      { "value": "20%", "label": "Waste Reduction", "description": "material optimization" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "factory",
+        "title": "Complete production visibility",
+        "description": "Track every work order, machine, and operator in real-time. Know exactly where every product is in your manufacturing process at any moment."
+      },
+      {
+        "icon": "speed",
+        "title": "Predictive maintenance intelligence",
+        "description": "AI-powered equipment monitoring predicts failures before they happen. Reduce unplanned downtime by scheduling maintenance at optimal times."
+      },
+      {
+        "icon": "integrate",
+        "title": "Connects to your existing systems",
+        "description": "Integrates with PLCs, SCADA systems, accounting software, and IoT sensors. No rip-and-replace required—Gaamma works alongside your current setup."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "discrete",
+        "title": "Discrete Manufacturing",
+        "headline": "Build-to-Order Excellence",
+        "description": "Manage complex BOMs, work orders, and assembly operations. Track serialized parts and maintain complete product genealogy.",
+        "features": [
+          "Multi-level BOM management",
+          "Work order scheduling",
+          "Serial/lot tracking",
+          "Assembly routing"
+        ],
+        "image": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "process",
+        "title": "Process Manufacturing",
+        "headline": "Formula-Based Production",
+        "description": "Handle batch processing, recipe management, and yield optimization. Maintain strict compliance with industry regulations.",
+        "features": [
+          "Recipe/formula management",
+          "Batch tracking",
+          "Yield optimization",
+          "Regulatory compliance"
+        ],
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "jobshop",
+        "title": "Job Shop",
+        "headline": "Custom Order Management",
+        "description": "Handle high-mix, low-volume production with ease. Quote accurately, schedule efficiently, and deliver on time.",
+        "features": [
+          "Quote management",
+          "Dynamic scheduling",
+          "Resource allocation",
+          "Job costing"
+        ],
+        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "warehouse",
+        "title": "Warehouse & Distribution",
+        "headline": "Inventory Intelligence",
+        "description": "Optimize stock levels, automate reordering, and manage multi-warehouse operations with intelligent inventory control.",
+        "features": [
+          "Multi-warehouse management",
+          "Automated reordering",
+          "Pick/pack optimization",
+          "Shipping integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Implementation Guide",
+        "description": "Step-by-step deployment process",
+        "url": "/docs/gaamma/implementation/",
+        "icon": "book"
+      },
+      {
+        "title": "API Documentation",
+        "description": "Integration reference for developers",
+        "url": "/docs/gaamma/api/",
+        "icon": "code"
+      },
+      {
+        "title": "Case Studies",
+        "description": "Manufacturing success stories",
+        "url": "/resources/?type=case-study&product=gaamma",
+        "icon": "briefcase"
+      },
+      {
+        "title": "ROI Calculator",
+        "description": "Estimate your potential savings",
+        "url": "/resources/gaamma-roi-calculator/",
+        "icon": "terminal"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is Gaamma?",
+        "answer": "Gaamma is an end-to-end manufacturing ERP platform that unifies production planning, inventory management, quality control, and analytics. It's designed for manufacturers seeking to digitize operations and gain real-time visibility across their entire production process."
+      },
+      {
+        "question": "How long does Gaamma take to implement?",
+        "answer": "Implementation typically takes 8-12 weeks for core modules. This includes data migration, system configuration, integration with existing equipment, and staff training. Phased rollouts are available for larger operations."
+      },
+      {
+        "question": "Does Gaamma integrate with our existing equipment?",
+        "answer": "Yes. Gaamma connects to PLCs, SCADA systems, IoT sensors, and most industrial equipment through standard protocols (OPC-UA, MQTT, Modbus). We also integrate with popular accounting systems like QuickBooks and SAP."
+      },
+      {
+        "question": "Is Gaamma suitable for small manufacturers?",
+        "answer": "Gaamma scales from single-facility operations to multi-plant enterprises. We offer modular pricing so you only pay for the capabilities you need, with the ability to add modules as you grow."
+      },
+      {
+        "question": "What kind of support does Gaamma include?",
+        "answer": "All Gaamma plans include 24/7 technical support, regular software updates, and access to our customer success team. Enterprise plans add dedicated account management and on-site training options."
+      }
+    ],
+
+    "cta": {
+      "headline": "Ready to modernize your factory?",
+      "description": "See how Gaamma can transform your manufacturing operations with a personalized demo.",
+      "primaryButton": { "text": "Request Demo", "url": "/contact/" },
+      "secondaryButton": { "text": "Contact Sales", "url": "/contact/" }
+    },
+
+    "clients": []
+  },
+
+  "dental-ai": {
+    "id": "dental-ai",
+    "title": "Dental AI Assistant",
+    "category": "AI Products",
+    "status": "coming-soon",
+    "tagline": "AI-powered dental practice management",
+    "description": "Intelligent assistant designed for dental operations. Automates patient communication, scheduling, and follow-ups so your team can focus on patient care.",
+    "heroImage": "/images/dental-ai-hero.svg",
+    "lastUpdated": "2026-03-24",
+
+    "definition": {
+      "heading": "Your practice's always-on patient communication partner",
+      "content": "Dental AI Assistant is an intelligent platform that handles routine patient interactions around the clock. From appointment scheduling and reminders to insurance inquiries and treatment explanations, the AI manages communications that typically consume hours of staff time daily. Practices using Dental AI see 35% reduction in no-shows and reclaim 15+ hours per week of administrative time."
+    },
+
+    "stats": [
+      { "value": "35%", "label": "Fewer No-Shows", "description": "smart reminders" },
+      { "value": "15+", "label": "Hours Saved", "description": "per week on admin" },
+      { "value": "24/7", "label": "Availability", "description": "always-on support" },
+      { "value": "90%", "label": "Query Resolution", "description": "without staff" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "chat",
+        "title": "24/7 patient communication",
+        "description": "Patients get instant answers to questions about procedures, pricing, and availability—anytime. No more missed calls or voicemails stacking up."
+      },
+      {
+        "icon": "calendar",
+        "title": "Intelligent appointment scheduling",
+        "description": "AI considers treatment duration, provider availability, and patient preferences to book optimal appointment times automatically."
+      },
+      {
+        "icon": "bell",
+        "title": "Personalized follow-up automation",
+        "description": "Automated reminders, post-visit check-ins, and recall notifications via SMS, email, or voice—personalized to each patient's preferences."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "patient-comms",
+        "title": "Patient Communication",
+        "headline": "Always-On Patient Support",
+        "description": "Answer common questions about procedures, pricing, insurance, and availability instantly—without staff involvement.",
+        "features": [
+          "Procedure FAQs",
+          "Pricing inquiries",
+          "Insurance questions",
+          "Office hours/location"
+        ],
+        "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "scheduling",
+        "title": "Smart Scheduling",
+        "headline": "Optimized Appointment Booking",
+        "description": "AI schedules appointments considering treatment time, chair availability, provider schedules, and patient preferences.",
+        "features": [
+          "Online booking",
+          "Waitlist management",
+          "Rescheduling",
+          "Provider matching"
+        ],
+        "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "reminders",
+        "title": "Appointment Reminders",
+        "headline": "Reduce No-Shows Automatically",
+        "description": "Multi-channel reminders that adapt to patient preferences. Confirmations, day-before reminders, and easy rescheduling options.",
+        "features": [
+          "SMS reminders",
+          "Email confirmations",
+          "Voice calls",
+          "Easy rescheduling"
+        ],
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "reviews",
+        "title": "Review Management",
+        "headline": "Build Your Online Reputation",
+        "description": "Automated post-visit follow-ups that encourage satisfied patients to leave reviews on Google, Yelp, and healthcare directories.",
+        "features": [
+          "Post-visit surveys",
+          "Review requests",
+          "Response management",
+          "Reputation monitoring"
+        ],
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Product Overview",
+        "description": "Detailed feature walkthrough",
+        "url": "/docs/dental-ai/overview/",
+        "icon": "book"
+      },
+      {
+        "title": "Integration Guide",
+        "description": "Connect with your practice software",
+        "url": "/docs/dental-ai/integration/",
+        "icon": "code"
+      },
+      {
+        "title": "ROI Calculator",
+        "description": "Estimate your practice savings",
+        "url": "/resources/dental-ai-roi/",
+        "icon": "briefcase"
+      },
+      {
+        "title": "HIPAA Compliance",
+        "description": "Security and compliance details",
+        "url": "/docs/dental-ai/compliance/",
+        "icon": "terminal"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is Dental AI Assistant?",
+        "answer": "Dental AI Assistant is an intelligent platform that automates patient communication, appointment scheduling, and follow-ups for dental practices. It handles routine inquiries 24/7 so your staff can focus on in-office patient care."
+      },
+      {
+        "question": "Is Dental AI Assistant HIPAA compliant?",
+        "answer": "Yes. Dental AI Assistant is fully HIPAA compliant with end-to-end encryption, secure data storage, and BAA agreements available. All patient communications are logged and auditable."
+      },
+      {
+        "question": "Does it integrate with my practice management software?",
+        "answer": "Dental AI Assistant integrates with major dental practice management systems including Dentrix, Eaglesoft, Open Dental, and Curve. Integration typically takes 1-2 days."
+      },
+      {
+        "question": "When will Dental AI Assistant be available?",
+        "answer": "Dental AI Assistant is currently in private beta with select practices. Join our waitlist to be notified when we open general availability, expected Q3 2026."
+      },
+      {
+        "question": "What does Dental AI Assistant cost?",
+        "answer": "Pricing will be based on practice size and feature requirements. Early waitlist members will receive preferred pricing. Contact us for details."
+      }
+    ],
+
+    "cta": {
+      "headline": "Be the first to transform your practice",
+      "description": "Join the waitlist for early access to Dental AI Assistant and help shape the future of dental practice automation.",
+      "primaryButton": { "text": "Join Waitlist", "url": "/contact/" },
+      "secondaryButton": { "text": "Request Early Access", "url": "/contact/" }
+    },
+
+    "clients": []
+  },
+
+  "ai-booking-engine": {
+    "id": "ai-booking-engine",
+    "title": "AI Booking Engine",
+    "category": "Business Tools",
+    "tagline": "Intelligent scheduling that fills your calendar",
+    "description": "Smart scheduling platform that handles complex availability, multi-resource bookings, and automatic conflict resolution. Reduce no-shows by 35% with AI-powered reminders.",
+    "heroImage": "/images/ai-booking-hero.svg",
+    "lastUpdated": "2026-03-24",
+
+    "definition": {
+      "heading": "Scheduling that thinks ahead so you don't have to",
+      "content": "AI Booking Engine is an intelligent scheduling platform that goes beyond simple calendar management. It understands complex availability rules, handles multi-resource bookings, resolves conflicts automatically, and optimizes your schedule for maximum efficiency. With AI-powered reminders and predictive analytics, businesses using AI Booking Engine see 35% fewer no-shows and 50% reduction in scheduling-related support requests."
+    },
+
+    "stats": [
+      { "value": "35%", "label": "Fewer No-Shows", "description": "AI reminders" },
+      { "value": "50%", "label": "Less Support", "description": "self-service booking" },
+      { "value": "3x", "label": "Faster Booking", "description": "vs manual scheduling" },
+      { "value": "99.9%", "label": "Uptime SLA", "description": "enterprise reliability" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "calendar",
+        "title": "Complex availability, simplified",
+        "description": "Handle multiple providers, locations, equipment dependencies, and custom rules. The AI figures out what's available without endless back-and-forth."
+      },
+      {
+        "icon": "speed",
+        "title": "Intelligent conflict resolution",
+        "description": "When conflicts arise, the AI suggests alternatives, handles waitlists, and can automatically rebook affected appointments with customer approval."
+      },
+      {
+        "icon": "integrate",
+        "title": "Connects to your existing calendars",
+        "description": "Syncs with Google Calendar, Outlook, Apple Calendar, and major scheduling systems. Embed booking widgets anywhere with our JavaScript SDK."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "services",
+        "title": "Service Businesses",
+        "headline": "Professional Appointment Booking",
+        "description": "Perfect for consultants, salons, clinics, and any service business. Customers book online, you control the rules.",
+        "features": [
+          "Online self-service",
+          "Service menu display",
+          "Provider selection",
+          "Payment integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "resources",
+        "title": "Resource Scheduling",
+        "headline": "Room & Equipment Booking",
+        "description": "Manage meeting rooms, equipment, vehicles, or any shared resource. Prevent double-booking and optimize utilization.",
+        "features": [
+          "Room booking",
+          "Equipment checkout",
+          "Capacity management",
+          "Usage analytics"
+        ],
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "teams",
+        "title": "Team Scheduling",
+        "headline": "Multi-Provider Coordination",
+        "description": "Coordinate schedules across team members, handle round-robin assignments, and balance workload automatically.",
+        "features": [
+          "Round-robin booking",
+          "Load balancing",
+          "Team availability",
+          "Collective scheduling"
+        ],
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "events",
+        "title": "Event Registration",
+        "headline": "Class & Event Booking",
+        "description": "Handle recurring classes, workshops, and events. Manage capacity, waitlists, and session-based scheduling.",
+        "features": [
+          "Class scheduling",
+          "Capacity limits",
+          "Waitlist management",
+          "Series bookings"
+        ],
+        "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Quick Start Guide",
+        "description": "Get booking in 15 minutes",
+        "url": "/docs/booking/quickstart/",
+        "icon": "book"
+      },
+      {
+        "title": "Widget Customization",
+        "description": "Embed and style your booking widget",
+        "url": "/docs/booking/widgets/",
+        "icon": "code"
+      },
+      {
+        "title": "API Reference",
+        "description": "Build custom integrations",
+        "url": "/docs/booking/api/",
+        "icon": "terminal"
+      },
+      {
+        "title": "Best Practices",
+        "description": "Optimize your scheduling workflow",
+        "url": "/resources/booking-best-practices/",
+        "icon": "briefcase"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is AI Booking Engine?",
+        "answer": "AI Booking Engine is an intelligent scheduling platform that handles complex availability rules, multi-resource bookings, and automatic conflict resolution. It enables customers to self-service book while giving businesses complete control over scheduling rules."
+      },
+      {
+        "question": "How does AI Booking Engine reduce no-shows?",
+        "answer": "The AI sends personalized reminders via SMS, email, or voice at optimal times based on appointment type and customer behavior. It also makes rescheduling easy, so customers change appointments instead of simply not showing up."
+      },
+      {
+        "question": "Can AI Booking Engine handle complex scheduling rules?",
+        "answer": "Yes. Define rules for buffer times, service combinations, provider specialties, equipment dependencies, and location constraints. The AI applies all rules automatically when showing availability."
+      },
+      {
+        "question": "Does it integrate with payment processors?",
+        "answer": "AI Booking Engine integrates with Stripe, Square, and PayPal for deposits, prepayments, and full payments at booking. You can also connect to your existing payment infrastructure via API."
+      },
+      {
+        "question": "What's the pricing model?",
+        "answer": "Pricing is based on the number of bookings per month and features required. Plans start at $29/month for small businesses. Enterprise custom pricing available. All plans include unlimited calendar connections."
+      }
+    ],
+
+    "cta": {
+      "headline": "Ready to automate your scheduling?",
+      "description": "See how AI Booking Engine can eliminate scheduling friction and reduce no-shows for your business.",
+      "primaryButton": { "text": "Start Free Trial", "url": "/contact/" },
+      "secondaryButton": { "text": "Schedule Demo", "url": "/contact/" }
+    },
+
+    "clients": []
+  },
+
+  "ai-crm": {
+    "id": "ai-crm",
+    "title": "AI CRM",
+    "category": "Business Tools",
+    "tagline": "Customer intelligence that drives revenue",
+    "description": "Customer relationship management powered by AI. Predicts customer needs, automates outreach, and surfaces insights that drive revenue growth.",
+    "heroImage": "/images/ai-crm-hero.svg",
+    "lastUpdated": "2026-03-24",
+
+    "definition": {
+      "heading": "Your customer data, transformed into action",
+      "content": "AI CRM is an intelligent customer relationship platform that goes beyond contact management. It analyzes customer interactions, predicts buying behavior, automates personalized outreach, and surfaces the insights your team needs to close deals faster. Sales teams using AI CRM see 40% improvement in lead conversion and spend 60% less time on data entry thanks to automatic activity capture."
+    },
+
+    "stats": [
+      { "value": "40%", "label": "Better Conversion", "description": "lead to customer" },
+      { "value": "60%", "label": "Less Data Entry", "description": "auto-capture" },
+      { "value": "2x", "label": "Pipeline Velocity", "description": "faster deal cycles" },
+      { "value": "25%", "label": "Revenue Lift", "description": "AI-guided actions" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "users",
+        "title": "Predictive lead scoring that works",
+        "description": "AI analyzes behavior signals to score leads based on actual buying intent—not just demographics. Focus on prospects ready to buy now."
+      },
+      {
+        "icon": "speed",
+        "title": "Automatic activity capture",
+        "description": "Emails, calls, meetings, and notes are captured and logged automatically. Your team sells instead of doing data entry."
+      },
+      {
+        "icon": "integrate",
+        "title": "Intelligent next-best-action",
+        "description": "AI recommends exactly what to do next for each deal—who to contact, what to say, and when. No more guessing or missed follow-ups."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "sales",
+        "title": "Sales Teams",
+        "headline": "Close Deals Faster",
+        "description": "Prioritize hot leads, automate follow-ups, and get AI-powered coaching on every deal. Know exactly where to focus for maximum impact.",
+        "features": [
+          "Lead prioritization",
+          "Deal forecasting",
+          "Email sequences",
+          "Meeting scheduling"
+        ],
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "marketing",
+        "title": "Marketing Teams",
+        "headline": "Campaign Intelligence",
+        "description": "Understand which campaigns drive real pipeline. Score and route leads automatically. Close the loop between marketing and sales.",
+        "features": [
+          "Campaign attribution",
+          "Lead routing",
+          "Engagement scoring",
+          "Funnel analytics"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "success",
+        "title": "Customer Success",
+        "headline": "Proactive Retention",
+        "description": "Identify at-risk accounts before they churn. Track health scores, automate check-ins, and surface expansion opportunities.",
+        "features": [
+          "Health scoring",
+          "Churn prediction",
+          "Renewal tracking",
+          "Expansion signals"
+        ],
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "leadership",
+        "title": "Revenue Leadership",
+        "headline": "Pipeline Visibility",
+        "description": "Real-time pipeline analytics, accurate forecasting, and team performance insights. Make decisions based on data, not guesses.",
+        "features": [
+          "Pipeline analytics",
+          "Forecast accuracy",
+          "Team dashboards",
+          "Revenue insights"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Getting Started",
+        "description": "Set up your CRM in 30 minutes",
+        "url": "/docs/crm/quickstart/",
+        "icon": "book"
+      },
+      {
+        "title": "Import Guide",
+        "description": "Migrate from Salesforce, HubSpot, etc.",
+        "url": "/docs/crm/migration/",
+        "icon": "code"
+      },
+      {
+        "title": "Sales Playbooks",
+        "description": "Best practices for sales teams",
+        "url": "/resources/crm-playbooks/",
+        "icon": "briefcase"
+      },
+      {
+        "title": "API Reference",
+        "description": "Build custom integrations",
+        "url": "/docs/crm/api/",
+        "icon": "terminal"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is AI CRM?",
+        "answer": "AI CRM is an intelligent customer relationship platform that combines traditional CRM functionality with AI-powered insights, automation, and predictions. It helps sales teams prioritize leads, automate outreach, and close deals faster."
+      },
+      {
+        "question": "How does AI CRM compare to Salesforce or HubSpot?",
+        "answer": "AI CRM is built AI-first, meaning intelligence is core to every feature—not an add-on. You get predictive scoring, automatic data capture, and next-best-action recommendations out of the box, without enterprise pricing or complex setup."
+      },
+      {
+        "question": "Can I import data from my existing CRM?",
+        "answer": "Yes. AI CRM includes one-click migration tools for Salesforce, HubSpot, Pipedrive, and other major CRMs. We also support CSV imports and API-based data transfer for custom systems."
+      },
+      {
+        "question": "How does automatic activity capture work?",
+        "answer": "AI CRM connects to your email (Gmail, Outlook), calendar, and phone system to automatically log communications. It uses AI to extract key information and associate activities with the right contacts and deals."
+      },
+      {
+        "question": "What's the pricing for AI CRM?",
+        "answer": "AI CRM pricing starts at $49/user/month for teams. Volume discounts available for larger teams. All plans include AI features, unlimited contacts, and standard integrations. Enterprise pricing available for custom requirements."
+      }
+    ],
+
+    "cta": {
+      "headline": "Ready to sell smarter?",
+      "description": "See how AI CRM can help your team close more deals with less effort.",
+      "primaryButton": { "text": "Start Free Trial", "url": "/contact/" },
+      "secondaryButton": { "text": "Schedule Demo", "url": "/contact/" }
+    },
+
+    "clients": []
   }
 }
