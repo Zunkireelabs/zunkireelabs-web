@@ -1,188 +1,757 @@
 ---
 layout: base.njk
-title: About Us | Zunkiree Labs
-description: Learn about Zunkiree Labs - our story, mission, values, and the team behind premium digital solutions.
+title: About Us | Zunkiree Labs - AI-First Technology Company
+description: Zunkiree Labs is a product-first AI and software engineering company from Kathmandu, Nepal. We build intelligent platforms like Zunkiree Search and Gaamma ERP.
 permalink: /about/
 ---
 
 {# =====================================================
-   HERO SECTION (Duna-style)
+   SECTION 1: HERO - Databricks Style Two-Column
    ===================================================== #}
-<section class="pt-32 pb-16 md:pt-40 md:pb-24">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    <div class="max-w-3xl">
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4" data-reveal>About Us</p>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.04em] leading-[1.1] mb-6" data-reveal>
-        We build digital products that matter
-      </h1>
-      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em]" data-reveal>
-        Zunkiree Labs is a premium software development studio dedicated to transforming ambitious ideas into exceptional digital products. We partner with startups and enterprises to create solutions that drive real business growth.
-      </p>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   OUR STORY (Duna-style)
-   ===================================================== #}
-<section class="py-16 md:py-24 bg-warm-off-white">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
+<section class="pt-20 md:pt-28 pb-12 md:pb-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div data-reveal>
-        <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Story</p>
-        <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-6">
-          From vision to reality
-        </h2>
-        <div class="space-y-4 text-warm-600 leading-relaxed tracking-[-0.01em]">
-          <p>
-            Founded with a simple belief: technology should empower businesses, not complicate them. We started Zunkiree Labs to bridge the gap between ambitious ideas and exceptional execution.
+
+      {# Left: Content #}
+      <div class="order-2 lg:order-1">
+        {# Large headline #}
+        <h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-8" data-reveal>
+          The AI infrastructure company
+        </h1>
+
+        {# Body paragraphs #}
+        <div class="space-y-6 mb-10" data-reveal>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            We build intelligent software platforms that connect data, systems, and human interaction through AI. Built on an AI-native architecture, our platforms provide a unified foundation for search, automation, and data intelligence—combined with AI models tuned to each organization's unique needs.
           </p>
-          <p>
-            Over the years, we've grown from a small team of passionate developers into a full-service digital studio. Yet our core philosophy remains the same - every project deserves dedicated attention, creative thinking, and technical excellence.
+          <p class="text-lg text-gray-600 leading-relaxed">
+            With origins in Nepal and a global mindset, Zunkiree Labs was founded in 2018 by engineers who believe great software can come from anywhere. Today, we're building the next generation of AI-native platforms for businesses worldwide.
           </p>
-          <p>
-            Today, we work with clients across industries, from healthcare to fintech, helping them build products that their users love and that drive measurable business results.
-          </p>
+        </div>
+
+        {# CTA Button #}
+        <div data-reveal>
+          <a href="/products/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+            Explore Our Products
+          </a>
         </div>
       </div>
-      <div class="relative" data-reveal>
-        <div class="aspect-square bg-warm-surface rounded-2xl flex items-center justify-center border border-warm-border">
-          <div class="text-center">
-            <div class="w-20 h-20 bg-warm-charcoal rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl font-medium text-white">Z</span>
-            </div>
-            <p class="text-xl font-medium text-warm-black tracking-[-0.02em]">Zunkiree Labs</p>
-            <p class="text-warm-400 text-sm">Est. 2019</p>
+
+      {# Right: Creative Collage (HTML/CSS based) #}
+      <div class="order-1 lg:order-2 flex justify-center lg:justify-end" data-reveal>
+        <div class="relative w-full max-w-md lg:max-w-lg aspect-square">
+
+          {# Large triangle - top left #}
+          <div class="absolute left-0 top-[16%] w-[36%] h-[40%] bg-zunkiree-600" style="clip-path: polygon(0 0, 100% 100%, 0 100%);"></div>
+
+          {# Medium triangle - bottom right #}
+          <div class="absolute right-0 bottom-[16%] w-[36%] h-[28%] bg-zunkiree-400" style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"></div>
+
+          {# Small triangle - right side #}
+          <div class="absolute right-0 top-[32%] w-[8%] h-[8%] bg-zunkiree-600" style="clip-path: polygon(0 100%, 100% 0, 100% 100%);"></div>
+
+          {# Circular image - top right #}
+          <div class="absolute right-[8%] top-[2%] w-[22%] aspect-square rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop&crop=face"
+              alt="Team member"
+              class="w-full h-full object-cover grayscale"
+            />
           </div>
+
+          {# Rectangular image - center #}
+          <div class="absolute left-[36%] top-[20%] w-[32%] h-[40%] overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face"
+              alt="Team member"
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+
+          {# Dark circle with terminal icon #}
+          <div class="absolute left-[24%] top-[30%] w-[20%] aspect-square rounded-full bg-gray-900 flex items-center justify-center shadow-xl z-10">
+            <span class="text-white font-mono text-2xl font-bold">&gt;_</span>
+          </div>
+
+          {# Rectangular image - bottom right #}
+          <div class="absolute right-[4%] bottom-[12%] w-[36%] h-[28%] overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
+              alt="Team collaboration"
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+
+          {# Circular image - bottom left #}
+          <div class="absolute left-[4%] bottom-[8%] w-[28%] aspect-square rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
+              alt="Team member"
+              class="w-full h-full object-cover grayscale"
+            />
+          </div>
+
+          {# Dot pattern #}
+          <div class="absolute right-[20%] top-[52%] flex gap-1.5">
+            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
+            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
+            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
+          </div>
+
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 2: MISSION STATEMENT - Two Column
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      {# Left: Large Headline #}
+      <div data-reveal>
+        <p class="text-xs uppercase tracking-widest text-gray-900 font-medium mb-6">Our Mission</p>
+        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight leading-[1.15] bg-gradient-to-r from-zunkiree-600 via-zunkiree-500 to-orange-500 bg-clip-text text-transparent">
+          We build infrastructure-level AI systems, not wrappers—products that compound value over time.
+        </h2>
+      </div>
+
+      {# Right: Supporting Text #}
+      <div class="lg:pt-12" data-reveal>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          Zunkiree Labs combines AI engineering, data systems, and modern software architecture to transform how organizations operate. We don't retrofit AI onto existing systems. We design with intelligence at the core, creating platforms that serve businesses internationally while staying rooted in Nepal's growing tech ecosystem.
+        </p>
+        <p class="text-sm text-gray-500 font-medium">
+          — Sadin Shrestha, Founder & CEO
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   VALUES (Duna-style)
+   SECTION 3: WHAT WE DO - Capability Grid
    ===================================================== #}
-<section class="py-16 md:py-24 lg:py-32">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Values</p>
-      <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
-        What drives us
-      </h2>
-      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
-        Our values guide every decision we make and every project we undertake.
-      </p>
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="mb-12" data-reveal>
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Expertise</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Technology & services</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" class="absolute">
+      <defs>
+        <linearGradient id="about-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c"/>
+          <stop offset="100%" style="stop-color:#eb1600"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    {# Capability Grid - IBM Style #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-gray-200">
+      {# Card 1: AI & Machine Learning #}
+      <div class="p-8 border-b md:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">AI & Machine Learning</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Design and deploy intelligent systems powered by RAG, knowledge systems, AI-powered search, and automation.</p>
+      </div>
+
+      {# Card 2: Data Engineering #}
+      <div class="p-8 border-b lg:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Data Engineering</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Build scalable data pipelines, warehouses, and AI-ready infrastructure that turns raw data into business intelligence.</p>
+      </div>
+
+      {# Card 3: Custom Software #}
+      <div class="p-8 border-b md:border-r lg:border-r-0 border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Custom Software</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Create modern SaaS applications, web platforms, and enterprise systems with API-driven, scalable architecture.</p>
+      </div>
+
+      {# Card 4: AI Integration #}
+      <div class="p-8 border-b lg:border-b-0 md:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">AI Integration</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Embed AI capabilities into existing workflows—automation, support systems, and internal productivity tools.</p>
+      </div>
+
+      {# Card 5: Platform Engineering #}
+      <div class="p-8 border-b md:border-b-0 lg:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Platform Engineering</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Architect cloud-native platforms with microservices, scalable backends, and seamless system connectivity.</p>
+      </div>
+
+      {# Card 6: Technical Consulting #}
+      <div class="p-8 hover:bg-gray-50 transition-colors" data-reveal>
+        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Technical Consulting</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Provide strategic guidance on AI adoption, architecture decisions, and technology roadmaps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 5: ORIGIN STORY - Tabbed Interface
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50" x-data="{ activeTab: '2018' }">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="mb-8" data-reveal>
+      <h2 class="text-4xl md:text-5xl font-normal text-gray-900 tracking-[-0.02em]">Our journey</h2>
+    </div>
+
+    {# Tab Navigation - Rounded with gradient active #}
+    <div class="flex flex-wrap gap-2 mb-12" data-reveal>
+      <button
+        @click="activeTab = '2018'"
+        :class="activeTab === '2018' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        2018
+      </button>
+      <button
+        @click="activeTab = '2020'"
+        :class="activeTab === '2020' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        2020
+      </button>
+      <button
+        @click="activeTab = '2023'"
+        :class="activeTab === '2023' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        2023
+      </button>
+      <button
+        @click="activeTab = '2024'"
+        :class="activeTab === '2024' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        2024
+      </button>
+      <button
+        @click="activeTab = 'next'"
+        :class="activeTab === 'next' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
+        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+      >
+        Next
+      </button>
+    </div>
+
+    {# Tab Content: 2018 - Founded #}
+    <div
+      x-show="activeTab === '2018'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+    >
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
+          Founded in Kathmandu
+        </h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          Zunkiree Labs started with a simple belief: technology companies can emerge from anywhere. Based in Kathmandu, we set out to build globally relevant software products—not just services.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Product-first mindset from day one</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">AI-native architecture as core principle</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Global ambition, local engineering talent</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop" alt="Founding team" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    {# Tab Content: 2020 - First Clients #}
+    <div
+      x-show="activeTab === '2020'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+    >
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
+          First enterprise clients
+        </h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          We landed our first enterprise clients, proving that quality engineering transcends borders. These early partnerships validated our approach and funded our product development.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Delivered custom AI solutions for enterprises</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Established reputation for engineering excellence</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Grew team with top local engineering talent</span>
+          </li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" alt="Team collaboration" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    {# Tab Content: 2023 - Zunkiree Search #}
+    <div
+      x-show="activeTab === '2023'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+    >
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
+          Zunkiree Search launches
+        </h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          Our flagship AI-native search platform launched, enabling businesses to connect their data to natural language queries. This marked our transition from services to products.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">AI-native search with natural language understanding</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">RAG-powered knowledge systems</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Embeddable widget for any website</span>
+          </li>
+        </ul>
+        <a href="/products/search/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
+          Explore Zunkiree Search
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop" alt="AI Search platform" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    {# Tab Content: 2024 - Gaamma ERP #}
+    <div
+      x-show="activeTab === '2024'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+    >
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
+          Gaamma ERP launches
+        </h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          We expanded into enterprise software with Gaamma, an ERP platform designed specifically for manufacturing businesses. This demonstrated our capability to build large-scale systems.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Complete manufacturing operations management</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Real-time production visibility</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">AI-powered process optimization</span>
+          </li>
+        </ul>
+        <a href="/products/gaamma/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
+          Explore Gaamma
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop" alt="Manufacturing ERP" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    {# Tab Content: Next - Future #}
+    <div
+      x-show="activeTab === 'next'"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+    >
+      <div class="pt-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
+          Vertical AI products
+        </h3>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          We're building specialized AI solutions for specific industries—healthcare, dental, legal, and more. Each vertical product applies our AI infrastructure expertise to solve domain-specific problems.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Dental AI Assistant for clinic operations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Healthcare AI for patient interactions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-600">Industry-specific knowledge systems</span>
+          </li>
+        </ul>
+        <a href="/contact/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
+          Partner with us
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+      <div class="relative">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop" alt="Healthcare AI" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 6: VISION & IMPACT - Image Mosaic
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="mb-12" data-reveal>
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Vision</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Global impact</h2>
+    </div>
+
+    {# Image Grid with Commitment Cards #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {# Card 1: Product-First #}
+      <div class="relative group overflow-hidden" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+          alt="Team collaboration"
+          class="w-full h-64 md:h-80 object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <h3 class="text-lg font-medium text-white mb-2">Product-First Mindset</h3>
+          <p class="text-sm text-white/80">We build proprietary platforms, not just client projects. Long-term value over short-term revenue.</p>
+        </div>
+      </div>
+
+      {# Card 2: AI-Native #}
+      <div class="relative group overflow-hidden" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+          alt="AI visualization"
+          class="w-full h-64 md:h-80 object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <h3 class="text-lg font-medium text-white mb-2">AI-Native Architecture</h3>
+          <p class="text-sm text-white/80">Systems designed with AI at the core, not retrofitted. Intelligence is infrastructure.</p>
+        </div>
+      </div>
+
+      {# Card 3: Global from Nepal #}
+      <div class="relative group overflow-hidden" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&h=400&fit=crop"
+          alt="Nepal mountains"
+          class="w-full h-64 md:h-80 object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <h3 class="text-lg font-medium text-white mb-2">Global from Nepal</h3>
+          <p class="text-sm text-white/80">World-class products built from Kathmandu. Proving great software can come from anywhere.</p>
+        </div>
+      </div>
+    </div>
+
+    {# Vision Statement #}
+    <div class="mt-12 max-w-3xl" data-reveal>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Our long-term vision is to grow from a services-supported startup into a product-led technology company—developing a portfolio of AI-native software platforms that serve multiple industries worldwide.
+      </p>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 7: VALUES - Condensed Horizontal
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-900">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="text-center mb-12" data-reveal>
+      <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Principles</p>
+      <h2 class="text-3xl md:text-4xl font-normal text-white">What drives us</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
       {# Value 1 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="text-center" data-reveal>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Excellence</h3>
-        <p class="text-warm-600 leading-relaxed">We don't settle for good enough. Every line of code, every pixel, and every interaction is crafted to the highest standards.</p>
+        <h3 class="text-lg font-medium text-white mb-2">Excellence</h3>
+        <p class="text-sm text-gray-400">Every line of code crafted to the highest standards</p>
       </div>
 
       {# Value 2 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Partnership</h3>
-        <p class="text-warm-600 leading-relaxed">We see ourselves as an extension of your team. Your success is our success, and we're invested in your long-term growth.</p>
-      </div>
-
-      {# Value 3 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="text-center" data-reveal>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Innovation</h3>
-        <p class="text-warm-600 leading-relaxed">We stay ahead of the curve, embracing new technologies and methodologies to deliver cutting-edge solutions.</p>
+        <h3 class="text-lg font-medium text-white mb-2">Innovation</h3>
+        <p class="text-sm text-gray-400">Embracing new technologies to deliver cutting-edge solutions</p>
+      </div>
+
+      {# Value 3 #}
+      <div class="text-center" data-reveal>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-medium text-white mb-2">Partnership</h3>
+        <p class="text-sm text-gray-400">Your success is our success—invested in your growth</p>
       </div>
 
       {# Value 4 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Transparency</h3>
-        <p class="text-warm-600 leading-relaxed">Open communication, honest feedback, and clear expectations. No surprises, just trust.</p>
-      </div>
-
-      {# Value 5 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="text-center" data-reveal>
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Reliability</h3>
-        <p class="text-warm-600 leading-relaxed">We deliver on our promises. Deadlines are met, budgets are respected, and quality is consistent.</p>
+        <h3 class="text-lg font-medium text-white mb-2">Reliability</h3>
+        <p class="text-sm text-gray-400">We deliver on promises—deadlines met, quality consistent</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      {# Value 6 #}
-      <div class="bg-white rounded-2xl p-8 border border-warm-border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-warm-surface rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-6 h-6 text-warm-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-          </svg>
+{# =====================================================
+   SECTION 8: CTA + FAQ
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
+
+      {# Left Side - CTA Box #}
+      <div
+        class="relative p-10 md:p-14 lg:p-16 flex flex-col justify-center overflow-hidden"
+        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
+        data-reveal
+      >
+        {# Background Image #}
+        <img
+          src="/assets/images/cta-background.svg"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        {# Content overlay #}
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8 leading-tight">
+            Ready to build<br>something great?
+          </h2>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+              Contact Us
+            </a>
+            <a href="/products/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
+              See Our Products
+            </a>
+          </div>
         </div>
-        <h3 class="text-xl font-medium text-warm-black tracking-[-0.02em] mb-3">Passion</h3>
-        <p class="text-warm-600 leading-relaxed">We genuinely love what we do. That enthusiasm shows in every project we deliver.</p>
       </div>
+
+      {# Right Side - FAQ Accordion #}
+      <div x-ref="faqSection">
+      <div x-data="{ activeIndex: null, expandAll: false }">
+        {# Header #}
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl md:text-3xl font-medium text-gray-900">About Zunkiree Labs</h3>
+          <button
+            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+          >
+            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+          </button>
+        </div>
+
+        {# FAQ Items #}
+        <div class="divide-y divide-gray-200">
+          {% for item in aboutFaq %}
+          <div class="py-5">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+              class="w-full flex items-center justify-between text-left group"
+            >
+              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+                {{ item.question }}
+              </span>
+              <span class="flex-shrink-0 text-gray-400">
+                <svg
+                  class="w-5 h-5 transition-transform duration-200"
+                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              x-show="activeIndex === {{ loop.index }} || expandAll"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-4 text-gray-600 leading-relaxed">
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 {# =====================================================
-   TEAM SECTION - HIDDEN: Uncomment when content is ready
+   SCHEMA MARKUP (JSON-LD) - Organization
    ===================================================== #}
-{#
-<section class="py-16 md:py-24 bg-warm-off-white">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Team</p>
-      <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
-        Meet the experts
-      </h2>
-      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
-        Our talented team of developers, designers, and strategists ready to bring your vision to life.
-      </p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Team members go here -->
-    </div>
-  </div>
-</section>
-#}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zunkiree Labs",
+  "url": "https://zunkiree.com",
+  "logo": "https://zunkiree.com/assets/images/zunkiree-logo.png",
+  "description": "Zunkiree Labs is a product-first AI and software engineering company from Kathmandu, Nepal. We build intelligent platforms like Zunkiree Search and Gaamma ERP.",
+  "foundingDate": "2018",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Kathmandu, Nepal"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "Nepal"
+  },
+  "sameAs": [],
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Data Engineering",
+    "Custom Software Development",
+    "AI Integration",
+    "Platform Engineering"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Products & Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Zunkiree Search",
+          "description": "AI-native search and interaction platform"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Gaamma",
+          "description": "Enterprise resource planning platform for manufacturing"
+        }
+      }
+    ]
+  }
+}
+</script>
 
-{# =====================================================
-   CTA SECTION (Duna-style)
-   ===================================================== #}
-<section class="py-20 md:py-28 lg:py-36 bg-warm-rich-black">
-  <div class="max-w-[1200px] mx-auto px-5 md:px-10">
-    <div class="max-w-2xl mx-auto text-center" data-reveal>
-      <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-white tracking-[-0.03em] leading-[1.15] mb-6">
-        Ready to work together?
-      </h2>
-      <p class="text-lg text-white/60 mb-10 leading-relaxed tracking-[-0.01em]">
-        Let's discuss your project and see how we can help bring your vision to life.
-      </p>
-      <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200 hover:-translate-y-0.5">
-        Get in Touch
-        <span>&rarr;</span>
-      </a>
-    </div>
-  </div>
-</section>
+{# FAQPage Schema #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in aboutFaq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

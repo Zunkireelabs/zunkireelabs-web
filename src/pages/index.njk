@@ -14,7 +14,7 @@ permalink: /
       {# Left: Text Content #}
       <div class="flex flex-col justify-center pb-16 lg:pb-24">
         <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">AI-First Technology Company</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 leading-tight mb-8">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">
           AI Infrastructure.<br>
           Engineered Right.
         </h1>
@@ -32,7 +32,7 @@ permalink: /
       </div>
       {# Right: Hero Image #}
       <div class="hidden lg:flex lg:flex-col lg:justify-end">
-        <img src="/images/hero-zunkiree-animation.svg" alt="AI Infrastructure Visualization" class="w-[135%] h-auto max-w-none" />
+        <img src="/assets/images/hero-orca-dashboard.png" alt="Orca Platform Dashboard - AI Infrastructure Management" class="w-[120%] h-auto max-w-none rounded-lg" />
       </div>
     </div>
   </div>
@@ -143,7 +143,7 @@ permalink: /
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
       <div class="max-w-2xl mb-6 lg:mb-0">
         <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900">Expert solutions to accelerate your AI journey</h2>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Expert solutions to accelerate your AI journey</h2>
       </div>
       <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
         View all services
@@ -307,7 +307,7 @@ permalink: /
     {# Section Header #}
     <div class="mb-12">
       <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900">How innovators use Zunkiree</h2>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">How innovators use Zunkiree</h2>
     </div>
 
     {# Logo Tab Bar #}
@@ -633,7 +633,7 @@ permalink: /
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
       <div class="max-w-2xl mb-6 lg:mb-0">
         <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-4">Engineering excellence at every layer</h2>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">Engineering excellence at every layer</h2>
         <p class="text-lg text-gray-600">
           From AI systems to data platforms, we build infrastructure-level solutions that compound value over time.
         </p>
@@ -783,7 +783,7 @@ permalink: /
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="max-w-2xl mb-12">
       <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Solutions</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900">AI-native systems for every industry</h2>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">AI-native systems for every industry</h2>
     </div>
 
     {# SVG Gradient Definition #}
@@ -875,7 +875,7 @@ permalink: /
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
       <div class="mb-6 lg:mb-0">
         <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Resources</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900">In the spotlight</h2>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">In the spotlight</h2>
       </div>
       <a href="/resources/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
         View all resources
@@ -927,95 +927,4 @@ permalink: /
 {# =====================================================
    CTA + FAQ SECTION
    ===================================================== #}
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
-
-      {# Left Side - CTA Box #}
-      <div
-        class="relative p-10 md:p-14 lg:p-16 flex flex-col justify-center overflow-hidden"
-        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
-      >
-        {# Background Image #}
-        <img
-          src="/assets/images/cta-background.svg"
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        {# Content overlay #}
-        <div class="relative z-10">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
-            Start your AI<br>journey today
-          </h2>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-              Contact Us
-            </a>
-            <a href="/products/search/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
-              View Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {# Right Side - FAQ Accordion #}
-      <div x-ref="faqSection">
-      <div x-data="{ activeIndex: null, expandAll: false }">
-        {# Header #}
-        <div class="flex items-center justify-between mb-6">
-          <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Get to know Zunkiree</h3>
-          <button
-            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
-            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-          </button>
-        </div>
-
-        {# FAQ Items #}
-        <div class="divide-y divide-gray-200">
-          {% for item in faq %}
-          <div class="py-5">
-            <button
-              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
-              class="w-full flex items-center justify-between text-left group"
-            >
-              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-                {{ item.question }}
-              </span>
-              <span class="flex-shrink-0 text-gray-400">
-                <svg
-                  class="w-5 h-5 transition-transform duration-200"
-                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-              </span>
-            </button>
-            <div
-              x-show="activeIndex === {{ loop.index }} || expandAll"
-              x-transition:enter="transition ease-out duration-200"
-              x-transition:enter-start="opacity-0 -translate-y-2"
-              x-transition:enter-end="opacity-100 translate-y-0"
-              x-transition:leave="transition ease-in duration-150"
-              x-transition:leave-start="opacity-100 translate-y-0"
-              x-transition:leave-end="opacity-0 -translate-y-2"
-              class="overflow-hidden"
-            >
-              <p class="pt-4 text-gray-600 leading-relaxed">
-                {{ item.answer }}
-              </p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+{% include "partials/cta-faq.njk" %}
