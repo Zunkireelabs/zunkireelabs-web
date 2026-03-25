@@ -8,12 +8,17 @@
     "build": "eleventy",
     "clean": "rm -rf dist"
   },
-  "keywords": ["zunkiree", "tech", "website"],
+  "keywords": [
+    "zunkiree",
+    "tech",
+    "website"
+  ],
   "author": "Sadin",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-vite": "^7.0.0",
+    "@alpinejs/collapse": "^3.15.8",
     "alpinejs": "^3.15.2",
     "autoprefixer": "^10.4.22",
     "gsap": "^3.13.0",

@@ -48,39 +48,6 @@
   --footer-bg: #1b3139;
 }
 
-.dark {
-  /* Background colors */
-  --background: #0f172a;
-  --background-alt: #1e293b;
-  --background-muted: #334155;
-
-  /* Foreground/text colors */
-  --foreground: #f8fafc;
-  --foreground-muted: #94a3b8;
-  --foreground-subtle: #64748b;
-
-  /* Card/surface colors */
-  --card: #1e293b;
-  --card-hover: #334155;
-
-  /* Border colors */
-  --border: #334155;
-  --border-muted: #1e293b;
-
-  /* Primary (Zunkiree Red - slightly brighter in dark) */
-  --primary: #f43f5e;
-  --primary-hover: #fb7185;
-  --primary-muted: #4c1d1d;
-
-  /* Secondary (lighter for dark mode) */
-  --secondary: #cbd5e1;
-  --secondary-hover: #e2e8f0;
-  --secondary-muted: #334155;
-
-  /* Header */
-  --header-bg: #0f172a;
-  --header-border: #1e293b;
-}
 
 /* Base Styles */
 @layer base {
@@ -99,9 +66,6 @@
     @apply bg-zunkiree-100 text-zunkiree-900;
   }
 
-  .dark ::selection {
-    @apply bg-zunkiree-900 text-zunkiree-100;
-  }
 
   /* Scrollbar - Minimal */
   ::-webkit-scrollbar {
@@ -297,10 +261,6 @@
     @apply text-navy-200;
   }
 
-  /* Dark mode keeps section-dark the same */
-  .dark .section-dark {
-    @apply bg-navy text-white;
-  }
 
   /* Section headings */
   .section-label {
@@ -389,9 +349,6 @@
     box-shadow: 0 0 0 2px rgba(235, 22, 0, 0.1);
   }
 
-  .dark .input:focus {
-    box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.2);
-  }
 
   .input-error {
     @apply input border-error focus:border-error;
@@ -561,16 +518,6 @@
     color: var(--foreground-muted);
   }
 
-  /* =====================================================
-     Logo Marquee Dark Mode
-     ===================================================== */
-  .dark .marquee-fade-light::before {
-    background: linear-gradient(to right, var(--background) 0%, transparent 100%);
-  }
-
-  .dark .marquee-fade-light::after {
-    background: linear-gradient(to left, var(--background) 0%, transparent 100%);
-  }
 
   /* =====================================================
      CTA Shimmer Animation

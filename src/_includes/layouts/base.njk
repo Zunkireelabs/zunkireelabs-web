@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <!-- Prevent FOUC: Apply theme immediately before page renders -->
-  <script>
-    (function() {
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = stored || (prefersDark ? 'dark' : 'light');
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
   <script>
@@ -129,10 +117,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
 
-  <!-- Main JS + CSS (bundled via Vite) -->
-  <script type="module" src="/assets/js/main.js"></script>
 </head>
-<body class="font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+<body class="font-sans antialiased overflow-x-hidden">
 
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -145,14 +131,21 @@
 
   {% include "partials/footer.njk" %}
 
-  {# Zunkiree Search Widget - currently homepage only #}
-  {% if page.url == "/" %}
+  <!-- Main JS + CSS (bundled via Vite) -->
+  <script type="module" src="/assets/js/main.js"></script>
+
+  {# Zunkiree Search Widget - loads on all pages #}
   <script
     src="https://zunkiree-search-v1.vercel.app/zunkiree-widget.iife.js"
     data-site-id="zunkireelabs"
     data-api-url="https://api.zunkireelabs.com">
   </script>
-  {% endif %}
+  <script>
+    function openZunkireeWidget() {
+      var fab = document.querySelector('.zk-fab');
+      if (fab) fab.click();
+    }
+  </script>
 
 </body>
 </html>

@@ -136,7 +136,7 @@ layout: base.njk
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{% if items.length <= 3 %}3{% else %}4{% endif %}">
         {% for item in items %}
           <article
-            class="flex flex-col p-6 transition-colors border-b border-r hover:bg-gray-50 dark:hover:bg-gray-800/50"
+            class="flex flex-col p-6 transition-colors border-b border-r hover:bg-gray-50 "
             style="background-color: var(--background); border-color: var(--border);"
             {% if categories.length > 0 %}
             x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
@@ -182,13 +182,13 @@ layout: base.njk
             <div class="flex items-center justify-between mt-auto">
               <a
                 href="{{ item.url }}"
-                class="text-sm font-medium text-zunkiree-600 dark:text-zunkiree-400 hover:underline"
+                class="text-sm font-medium text-zunkiree-600  hover:underline"
               >
                 {{ item.cta | default('Learn more') }}
               </a>
               <a
                 href="{{ item.url }}"
-                class="text-zunkiree-600 dark:text-zunkiree-400 hover:translate-x-1 transition-transform"
+                class="text-zunkiree-600  hover:translate-x-1 transition-transform"
                 aria-label="Learn more about {{ item.title }}"
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,7 +223,7 @@ layout: base.njk
         </p>
         <a
           href="{{ ctaButtonUrl | default('/contact/') }}"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900  text-white  text-sm font-medium hover:bg-gray-800  transition-colors"
         >
           {{ ctaButtonText | default('Get in touch') }}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -344,7 +344,7 @@ layout: base.njk
               {# CTA #}
               <a
                 :href="study.ctaUrl"
-                class="inline-flex items-center gap-2 text-zunkiree-600 dark:text-zunkiree-400 font-medium hover:gap-3 transition-all"
+                class="inline-flex items-center gap-2 text-zunkiree-600  font-medium hover:gap-3 transition-all"
               >
                 <span x-text="study.ctaText"></span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

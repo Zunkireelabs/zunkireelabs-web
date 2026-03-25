@@ -16,7 +16,7 @@ schemaType: service
    SECTION 1: HERO / LEADSPACE
    Background image with gradient overlay
    ===================================================== #}
-<section class="relative pt-16 pb-12 md:pt-20 md:pb-16 overflow-hidden bg-white dark:bg-warm-900">
+<section class="relative pt-16 pb-12 md:pt-20 md:pb-16 overflow-hidden bg-white ">
   {# Background Image - positioned right, full bleed #}
   {% if service.heroImage %}
   <div class="absolute inset-0 hidden lg:block overflow-hidden">
@@ -28,7 +28,7 @@ schemaType: service
     />
   </div>
   {# White gradient overlay - solid white left, fades to transparent right #}
-  <div class="absolute inset-0 bg-gradient-to-r from-white from-30% via-white/95 via-40% to-transparent to-70% dark:from-warm-900 dark:via-warm-900/95 dark:to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-white from-30% via-white/95 via-40% to-transparent to-70% "></div>
   {% endif %}
 
   <div class="relative max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,20 +38,20 @@ schemaType: service
       <div class="lg:col-span-5 flex flex-col justify-center z-10">
         {# Breadcrumb #}
         <nav class="flex items-center gap-2 text-sm mb-8" data-reveal aria-label="Breadcrumb">
-          <a href="/" class="text-zunkiree-600 dark:text-zunkiree-400 hover:underline">Home</a>
+          <a href="/" class="text-zunkiree-600  hover:underline">Home</a>
           <span class="text-warm-400">/</span>
-          <a href="/services/" class="text-zunkiree-600 dark:text-zunkiree-400 hover:underline">Services</a>
+          <a href="/services/" class="text-zunkiree-600  hover:underline">Services</a>
           <span class="text-warm-400">/</span>
-          <span class="text-warm-600 dark:text-warm-300">{{ service.title }}</span>
+          <span class="text-warm-600 ">{{ service.title }}</span>
         </nav>
 
         {# Title #}
-        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-normal text-warm-black dark:text-white tracking-[-0.04em] leading-[1.05] mb-6" data-reveal>
+        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-normal text-warm-black  tracking-[-0.04em] leading-[1.05] mb-6" data-reveal>
           {{ service.tagline }}
         </h1>
 
         {# Description #}
-        <p class="text-lg md:text-xl text-warm-600 dark:text-warm-300 leading-relaxed tracking-[-0.01em] mb-10 max-w-lg" data-reveal>
+        <p class="text-lg md:text-xl text-warm-600  leading-relaxed tracking-[-0.01em] mb-10 max-w-lg" data-reveal>
           {{ service.description }}
         </p>
 
@@ -116,7 +116,7 @@ schemaType: service
 {# =====================================================
    SECTION 3: OVERVIEW / VALUE PROP (Two-column)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+<section class="py-12 md:py-20 bg-white ">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
       {# Left: Large benefit-focused headline #}
@@ -128,7 +128,7 @@ schemaType: service
 
       {# Right: Supporting paragraph #}
       <div class="lg:pt-2">
-        <p class="text-lg md:text-xl text-gray-600 dark:text-warm-300 leading-relaxed">
+        <p class="text-lg md:text-xl text-gray-600  leading-relaxed">
           {{ service.definition.content }}
         </p>
       </div>
@@ -139,12 +139,12 @@ schemaType: service
 {# =====================================================
    SECTION 4: KEY BENEFITS (IBM-style minimal)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+<section class="py-12 md:py-20 bg-white ">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
       {# Left: Large "Benefits" title #}
       <div class="lg:col-span-3">
-        <h2 class="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+        <h2 class="text-4xl md:text-5xl font-normal text-gray-900  tracking-[-0.02em]">
           Benefits
         </h2>
       </div>
@@ -198,11 +198,11 @@ schemaType: service
               {% endif %}
             </div>
             {# Title #}
-            <h3 class="text-lg font-normal text-gray-900 dark:text-white mb-3">
+            <h3 class="text-lg font-normal text-gray-900  mb-3">
               {{ benefit.title }}
             </h3>
             {# Description #}
-            <p class="text-gray-600 dark:text-warm-300 leading-relaxed">
+            <p class="text-gray-600  leading-relaxed">
               {{ benefit.description }}
             </p>
           </div>
@@ -216,10 +216,10 @@ schemaType: service
 {# =====================================================
    SECTION 5: USE CASES (IBM-style Tabbed Interface)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900" x-data="{ activeTab: '{{ service.useCases[0].id }}' }">
+<section class="py-12 md:py-20 bg-white " x-data="{ activeTab: '{{ service.useCases[0].id }}' }">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Left-aligned title #}
-    <h2 class="text-4xl md:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em] mb-8">
+    <h2 class="text-4xl md:text-5xl font-normal text-gray-900  tracking-[-0.02em] mb-8">
       Use cases
     </h2>
 
@@ -247,10 +247,10 @@ schemaType: service
     >
       {# Content #}
       <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 dark:text-white tracking-[-0.02em] mb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900  tracking-[-0.02em] mb-4">
           {{ useCase.headline }}
         </h3>
-        <p class="text-lg text-gray-600 dark:text-warm-300 leading-relaxed mb-6">
+        <p class="text-lg text-gray-600  leading-relaxed mb-6">
           {{ useCase.description }}
         </p>
         <a href="/contact/" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all duration-200">
@@ -429,13 +429,13 @@ schemaType: service
 {# =====================================================
    SECTION 8: TECH STACK / INTEGRATIONS
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+<section class="py-12 md:py-20 bg-white ">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       {# Left: Title #}
       <div class="lg:col-span-3" data-reveal>
         <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Technology</p>
-        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+        <h2 class="text-3xl md:text-4xl font-normal text-gray-900  tracking-[-0.02em]">
           Technologies we use
         </h2>
       </div>
@@ -456,8 +456,8 @@ schemaType: service
               />
             </div>
             {% endif %}
-            <p class="font-medium text-warm-black dark:text-white text-sm mb-0.5">{{ tech.name }}</p>
-            <p class="text-xs text-zunkiree-600 dark:text-zunkiree-400 mb-0.5">{{ tech.category }}</p>
+            <p class="font-medium text-warm-black  text-sm mb-0.5">{{ tech.name }}</p>
+            <p class="text-xs text-zunkiree-600  mb-0.5">{{ tech.category }}</p>
             <p class="text-[11px] text-warm-400">{{ tech.description }}</p>
           </div>
           {% endfor %}
@@ -472,12 +472,12 @@ schemaType: service
    SECTION 10: RELATED SERVICES (IBM-style bordered grid)
    ===================================================== #}
 {% if service.relatedServices.length > 0 %}
-<section class="py-12 md:py-20 bg-white dark:bg-warm-900">
+<section class="py-12 md:py-20 bg-white ">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Left-aligned header #}
     <div class="mb-12" data-reveal>
       <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Related Services</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 dark:text-white tracking-[-0.02em]">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900  tracking-[-0.02em]">
         You might also need
       </h2>
     </div>

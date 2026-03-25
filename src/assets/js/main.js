@@ -1,16 +1,19 @@
 // Import CSS (required for Vite bundling)
 import '../css/main.css';
 
-// Import Alpine.js
+// Import Alpine.js and plugins
 import Alpine from 'alpinejs';
+import collapse from '@alpinejs/collapse';
+
+// Register plugins before starting
+Alpine.plugin(collapse);
 
 // Make Alpine available globally
 window.Alpine = Alpine;
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Alpine.js
+// Start Alpine when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => Alpine.start());
+} else {
   Alpine.start();
-
-  console.log('🚀 Zunkiree Labs - Initialized');
-});
+}
