@@ -1,0 +1,461 @@
+{
+  "featured": "state-of-ai-nepal-2026",
+  "featuredBanner": "ai-search-report-2026",
+  "categories": [
+    {
+      "id": "ebooks",
+      "name": "Ebooks & Guides",
+      "description": "In-depth guides on AI implementation",
+      "icon": "book"
+    },
+    {
+      "id": "reports",
+      "name": "Research Reports",
+      "description": "Industry data and analysis",
+      "icon": "chart"
+    },
+    {
+      "id": "case-studies",
+      "name": "Case Studies",
+      "description": "Customer success stories",
+      "icon": "users"
+    },
+    {
+      "id": "webinars",
+      "name": "Webinars & Events",
+      "description": "On-demand learning and live events",
+      "icon": "video"
+    }
+  ],
+  "items": [
+    {
+      "slug": "state-of-ai-nepal-2026",
+      "type": "REPORT",
+      "category": "reports",
+      "title": "State of AI in Nepal 2026: Industry Report",
+      "subtitle": "The definitive guide to AI adoption across Nepali industries",
+      "description": "Nepal ranks 150th globally in AI readiness, yet adoption is accelerating. This report analyzes AI implementation across 50+ Nepali organizations, identifies key barriers, and provides a roadmap for businesses in Kathmandu and beyond.",
+      "coverImage": "/assets/images/resources/state-of-ai-nepal-cover.svg",
+      "publishDate": "2026-03-20",
+      "readTime": "35 min read",
+      "whatYouGet": [
+        "AI readiness assessment framework for Nepal market",
+        "Industry-by-industry adoption analysis (IT, Finance, Healthcare, Manufacturing)",
+        "Budget benchmarks: What Nepali companies invest in AI (NPR 50K to 50M)",
+        "Skills gap analysis and training recommendations",
+        "Regulatory landscape and data privacy considerations",
+        "5-year AI adoption forecast for Nepal",
+        "Case studies from 5 Kathmandu-based companies"
+      ],
+      "authors": [
+        {
+          "name": "Sadin Shrestha",
+          "role": "Founder & CEO",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/sadin-shrestha.svg"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access",
+      "stats": [
+        { "value": "150th", "label": "Nepal's AI Readiness Rank (of 193)" },
+        { "value": "39", "label": "AI Companies in Nepal" },
+        { "value": "31.8%", "label": "Businesses with AI Budget" },
+        { "value": "20.77%", "label": "Industries AI-Ready" }
+      ]
+    },
+    {
+      "slug": "ai-search-report-2026",
+      "type": "REPORT",
+      "category": "reports",
+      "title": "State of AI Search 2026: Enterprise Adoption Report",
+      "subtitle": "Key findings on how businesses are replacing keyword search with AI-native solutions",
+      "description": "Based on research from 500+ enterprise technology leaders globally, this report reveals how organizations are transitioning from traditional keyword search to AI-native natural language understanding. Includes benchmarks, ROI data, and implementation timelines.",
+      "coverImage": "/assets/images/resources/ai-search-report-2026-cover.svg",
+      "publishDate": "2026-03-15",
+      "readTime": "40 min read",
+      "whatYouGet": [
+        "Global AI search adoption trends and benchmarks",
+        "ROI analysis: Average 340% return within 18 months",
+        "Implementation timeline comparisons across industries",
+        "Technology stack breakdown and vendor landscape",
+        "Common pitfalls and how to avoid them",
+        "2027 predictions from industry experts"
+      ],
+      "authors": [
+        {
+          "name": "Sarah Chen",
+          "role": "Head of AI Engineering",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/sarah-chen.svg"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access",
+      "stats": [
+        { "value": "340%", "label": "Average ROI" },
+        { "value": "45%", "label": "Reduction in Support Queries" },
+        { "value": "3x", "label": "Improvement in User Satisfaction" }
+      ]
+    },
+    {
+      "slug": "ai-search-playbook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "title": "The AI Search Playbook for Product Teams",
+      "subtitle": "Practical guide with implementation patterns, code examples, and real results",
+      "description": "A hands-on playbook for product managers and engineers implementing AI-native search. Covers everything from initial scoping to production deployment, with code snippets, architecture diagrams, and lessons learned from 20+ implementations.",
+      "coverImage": "/assets/images/resources/ai-search-playbook-cover.svg",
+      "publishDate": "2026-03-10",
+      "readTime": "45 min read",
+      "whatYouGet": [
+        "Step-by-step implementation roadmap",
+        "Code examples in Python, JavaScript, and REST APIs",
+        "Architecture patterns for different scale requirements",
+        "A/B testing frameworks for search quality",
+        "User research templates for search behavior",
+        "Performance optimization techniques",
+        "Monitoring and alerting best practices"
+      ],
+      "authors": [
+        {
+          "name": "Marcus Thompson",
+          "role": "Principal Solutions Architect",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/marcus-thompson.svg"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "webinar-ai-search-implementation",
+      "type": "ON DEMAND",
+      "category": "webinars",
+      "title": "From Keywords to Conversations: AI Search Implementation",
+      "subtitle": "Learn how to integrate natural language search in under 2 hours",
+      "description": "In this 45-minute on-demand webinar, our engineering team walks through a complete AI search implementation. Watch as we transform a basic keyword search into a conversational AI experience, with live coding and Q&A.",
+      "coverImage": "/assets/images/resources/webinar-ai-search-cover.svg",
+      "publishDate": "2026-03-01",
+      "readTime": "45 min watch",
+      "whatYouGet": [
+        "Live coding demonstration of AI search integration",
+        "Step-by-step walkthrough of the Zunkiree API",
+        "Common integration patterns and anti-patterns",
+        "Performance optimization tips",
+        "Q&A with engineering team"
+      ],
+      "authors": [
+        {
+          "name": "Dr. Emily Rodriguez",
+          "role": "AI Research Lead",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/emily-rodriguez.svg"
+        }
+      ],
+      "formTitle": "Watch the Webinar",
+      "ctaText": "Watch Now"
+    },
+    {
+      "slug": "ai-implementation-guide-nepal",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "title": "AI Implementation Guide for Nepal SMEs",
+      "subtitle": "From zero to production: A practical roadmap for Nepali businesses",
+      "description": "56% of Nepali industries cite lack of skilled manpower as the primary barrier to AI adoption. This guide bridges that gap with practical, budget-conscious implementation strategies tailored for Nepal's market conditions.",
+      "coverImage": "/assets/images/resources/ai-implementation-nepal-cover.svg",
+      "publishDate": "2026-02-25",
+      "readTime": "30 min read",
+      "whatYouGet": [
+        "AI readiness self-assessment checklist",
+        "Budget tiers: NPR 50K, 500K, and 5M implementation paths",
+        "Local vendor comparison and recommendations",
+        "Data privacy compliance for Nepal (NTA regulations)",
+        "Building vs buying: Decision framework",
+        "Training resources for in-house teams",
+        "ROI calculation templates in NPR"
+      ],
+      "authors": [
+        {
+          "name": "Sadin Shrestha",
+          "role": "Founder & CEO",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/sadin-shrestha.svg"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-native-search-nepal",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "title": "AI-Native Search for Nepal: Beyond Keyword Search",
+      "subtitle": "How Nepali businesses can leapfrog legacy search technology",
+      "description": "Traditional keyword search fails when users don't know the exact terms. AI-native search understands intent, handles Nepali-English mixed queries, and delivers direct answers. This guide shows Nepal businesses how to implement it.",
+      "coverImage": "/assets/images/resources/ai-native-search-nepal-cover.svg",
+      "publishDate": "2026-02-20",
+      "readTime": "25 min read",
+      "whatYouGet": [
+        "What is AI-native search and why it matters for Nepal",
+        "Handling Nepali-English mixed language queries",
+        "Integration with Nepali content management systems",
+        "Case study: E-commerce search in Nepali market",
+        "Technical requirements and infrastructure",
+        "Cost comparison: Build vs Zunkiree Search"
+      ],
+      "authors": [
+        {
+          "name": "Dr. Emily Rodriguez",
+          "role": "AI Research Lead",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/emily-rodriguez.svg"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "khushbu-nirman-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "How Khushbu Nirman Sewa Digitized Construction Management",
+      "subtitle": "AI-powered project tracking and resource optimization in Nepal's construction sector",
+      "description": "Khushbu Nirman Sewa, a leading Kathmandu construction company, transformed their project management with Zunkiree's AI-powered tracking system. This case study details their journey from paper-based processes to real-time AI insights.",
+      "coverImage": "/assets/images/resources/khushbu-nirman-case-study-cover.svg",
+      "publishDate": "2026-02-15",
+      "readTime": "12 min read",
+      "client": "Khushbu Nirman Sewa",
+      "industry": "Construction",
+      "location": "Kathmandu, Nepal",
+      "results": [
+        "40% reduction in project delays",
+        "NPR 2.5 crore saved in first year",
+        "Real-time visibility across 15+ active sites",
+        "85% reduction in manual reporting time"
+      ],
+      "challenge": "Managing 15+ construction sites across Kathmandu Valley with paper-based tracking, leading to delayed updates, resource misallocation, and cost overruns.",
+      "solution": "Implemented Zunkiree's AI-powered project management platform with mobile data collection, automated resource optimization, and predictive delay alerts.",
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "nepali-language-ai-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "title": "Nepali Language AI: Building Chatbots & Search in Nepali",
+      "subtitle": "Technical guide to NLP for the Nepali language",
+      "description": "Building AI systems that understand Nepali presents unique challenges: limited training data, complex morphology, and code-switching with English. This technical guide covers practical solutions for Nepali NLP in production.",
+      "coverImage": "/assets/images/resources/nepali-language-ai-cover.svg",
+      "publishDate": "2026-02-10",
+      "readTime": "35 min read",
+      "whatYouGet": [
+        "Overview of Nepali NLP landscape and available tools",
+        "Handling Devanagari script in ML pipelines",
+        "Code-switching: When users mix Nepali and English",
+        "Training data strategies for low-resource language",
+        "Integration with existing Nepali language models",
+        "Building Nepali chatbots: Practical walkthrough",
+        "Evaluation metrics for Nepali NLP systems"
+      ],
+      "authors": [
+        {
+          "name": "Dr. Emily Rodriguez",
+          "role": "AI Research Lead",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/emily-rodriguez.svg"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-vs-traditional-software-kathmandu",
+      "type": "WHITEPAPER",
+      "category": "reports",
+      "title": "AI vs Traditional Software: What Kathmandu Enterprises Need to Know",
+      "subtitle": "A decision framework for Nepal's growing tech sector",
+      "description": "79% of Nepali industries are not yet ready for AI adoption. This whitepaper helps Kathmandu enterprises understand when AI adds value versus when traditional software is the right choice, with practical decision frameworks.",
+      "coverImage": "/assets/images/resources/ai-vs-traditional-cover.svg",
+      "publishDate": "2026-02-05",
+      "readTime": "20 min read",
+      "whatYouGet": [
+        "AI vs traditional software: Decision matrix",
+        "Use cases where AI delivers clear ROI",
+        "When traditional software is the better choice",
+        "Hybrid approaches for gradual AI adoption",
+        "Risk assessment framework",
+        "Nepal-specific considerations and case examples"
+      ],
+      "authors": [
+        {
+          "name": "James Wilson",
+          "role": "VP of Strategy",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/james-wilson.svg"
+        }
+      ],
+      "formTitle": "Download Whitepaper",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-search-stack-guide",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "title": "The AI Search Stack for the Modern Enterprise",
+      "subtitle": "A comprehensive guide to building AI-native search experiences",
+      "description": "Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. This guide covers architecture patterns, implementation strategies, and real-world case studies.",
+      "coverImage": "/assets/images/resources/ai-search-stack-cover.svg",
+      "publishDate": "2026-01-25",
+      "readTime": "25 min read",
+      "whatYouGet": [
+        "Complete architecture blueprint for AI search systems",
+        "Step-by-step implementation guide with code examples",
+        "Performance benchmarks comparing AI vs keyword search",
+        "Integration patterns for enterprise data sources",
+        "Cost analysis and ROI framework",
+        "Security and compliance considerations",
+        "Migration strategies from legacy search systems"
+      ],
+      "authors": [
+        {
+          "name": "Sarah Chen",
+          "role": "Head of AI Engineering",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/sarah-chen.svg"
+        },
+        {
+          "name": "Marcus Thompson",
+          "role": "Principal Solutions Architect",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/marcus-thompson.svg"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "admizz-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "How Admizz Reduced Response Time by 45%",
+      "subtitle": "Transforming student inquiry management with AI search",
+      "description": "Learn how Admizz Education revolutionized their student inquiry process with Zunkiree Search, dramatically improving response times and student satisfaction.",
+      "coverImage": "/assets/images/resources/admizz-case-study-cover.svg",
+      "publishDate": "2026-01-20",
+      "readTime": "10 min read",
+      "client": "Admizz Education",
+      "industry": "Education",
+      "results": [
+        "45% faster response times",
+        "3x improvement in student satisfaction",
+        "60% reduction in manual inquiry handling"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "corecloud365-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Corecloud365 Achieves 60% Cost Reduction",
+      "subtitle": "Optimizing cloud operations with AI-powered automation",
+      "description": "Discover how Corecloud365 integrated AI-powered search and automation tools to achieve significant cost savings in their cloud management platform.",
+      "coverImage": "/assets/images/resources/corecloud-case-study-cover.svg",
+      "publishDate": "2026-01-15",
+      "readTime": "12 min read",
+      "client": "Corecloud365",
+      "industry": "Cloud Services",
+      "results": [
+        "60% reduction in operational costs",
+        "80% faster issue resolution",
+        "99.9% system uptime achieved"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "semantic-search-vs-keyword-search",
+      "type": "WHITEPAPER",
+      "category": "reports",
+      "title": "Semantic Search vs Keyword Search: A Technical Comparison",
+      "subtitle": "Understanding the differences and when to use each",
+      "description": "A deep technical comparison of semantic and keyword search approaches, with benchmarks, use cases, and implementation recommendations.",
+      "coverImage": "/assets/images/resources/semantic-vs-keyword-cover.svg",
+      "publishDate": "2026-01-10",
+      "readTime": "20 min read",
+      "whatYouGet": [
+        "Technical architecture comparison",
+        "Performance benchmarks",
+        "Use case recommendations",
+        "Migration strategies"
+      ],
+      "authors": [
+        {
+          "name": "Marcus Thompson",
+          "role": "Principal Solutions Architect",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/marcus-thompson.svg"
+        }
+      ],
+      "formTitle": "Download Whitepaper",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "enterprise-ai-adoption-report",
+      "type": "REPORT",
+      "category": "reports",
+      "title": "State of Enterprise AI Adoption 2026",
+      "subtitle": "Insights from 500+ enterprise technology leaders",
+      "description": "Our annual report on how enterprises are adopting AI technologies, common challenges, and best practices from industry leaders.",
+      "coverImage": "/assets/images/resources/enterprise-ai-report-cover.svg",
+      "publishDate": "2026-01-05",
+      "readTime": "40 min read",
+      "whatYouGet": [
+        "Key findings from 500+ enterprise technology leaders",
+        "AI adoption maturity model and assessment framework",
+        "Common pitfalls and how to avoid them",
+        "Budget allocation trends for AI initiatives",
+        "Vendor landscape analysis",
+        "Predictions for 2027 and beyond"
+      ],
+      "authors": [
+        {
+          "name": "James Wilson",
+          "role": "VP of Strategy",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/james-wilson.svg"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "natural-language-processing-fundamentals",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "title": "Natural Language Processing Fundamentals",
+      "subtitle": "From theory to production-ready NLP systems",
+      "description": "A practical guide to understanding and implementing NLP in enterprise applications. Covers embeddings, transformers, and fine-tuning strategies.",
+      "coverImage": "/assets/images/resources/nlp-fundamentals-cover.svg",
+      "publishDate": "2025-12-20",
+      "readTime": "30 min read",
+      "whatYouGet": [
+        "Understanding embeddings and vector spaces",
+        "Transformer architecture explained",
+        "Fine-tuning pre-trained models",
+        "Production deployment considerations"
+      ],
+      "authors": [
+        {
+          "name": "Dr. Emily Rodriguez",
+          "role": "AI Research Lead",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/team/emily-rodriguez.svg"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    }
+  ]
+}

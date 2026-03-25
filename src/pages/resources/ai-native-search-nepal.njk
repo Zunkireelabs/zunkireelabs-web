@@ -1,0 +1,183 @@
+---
+layout: base.njk
+title: AI-Native Search for Nepal | Zunkiree Labs
+description: How Nepali businesses can implement AI-native search that understands natural language, handles Nepali-English mixed queries, and delivers direct answers.
+permalink: /resources/ai-native-search-nepal/
+---
+
+{% set resource = resources.items | find("slug", "ai-native-search-nepal") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-medium tracking-wide mb-4">
+        Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/nepali-language-ai-guide/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Nepali Language AI: Building Chatbots & Search in Nepali
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/semantic-search-vs-keyword-search/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Semantic Search vs Keyword Search
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/products/search/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Explore Zunkiree Search
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">What is AI-native search?</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            <strong>AI-native search</strong> is a search paradigm that understands natural language queries instead of matching keywords. When a user types "मलाई laptop को warranty बारेमा जानकारी चाहिन्छ" (I need information about laptop warranty), AI-native search understands the intent and returns the warranty policy directly—not a list of pages containing "laptop" and "warranty."
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            For Nepal, this matters because users naturally mix Nepali and English (code-switching), and traditional keyword search fails completely with these queries. AI-native search handles "best mobile phone 20,000 samma" as naturally as it handles pure English queries.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why Nepal needs AI-native search</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50 border-l-4 border-blue-600">
+              <p class="text-lg font-medium text-warm-black mb-1">Code-switching is natural</p>
+              <p class="text-warm-600">Nepali users routinely mix languages: "yo product को delivery charge kati ho?" Keyword search can't handle this. AI search can.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-blue-600">
+              <p class="text-lg font-medium text-warm-black mb-1">Leapfrog legacy technology</p>
+              <p class="text-warm-600">Many Nepali businesses haven't invested heavily in search. This is an opportunity to skip keyword search entirely and go directly to AI-native.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-blue-600">
+              <p class="text-lg font-medium text-warm-black mb-1">Competitive advantage</p>
+              <p class="text-warm-600">Zero Nepali e-commerce sites offer AI-native search today. Early adopters will stand out immediately.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Does it work with Nepali language content?</h3>
+              <p class="text-warm-600">Yes. AI-native search can index and search content in Devanagari script, Romanized Nepali, and English. It handles code-switching automatically, matching queries against content regardless of script or language.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What about voice search in Nepali?</h3>
+              <p class="text-warm-600">Voice search requires speech-to-text as a preprocessing step. While Nepali speech recognition is still developing, the guide covers integration patterns for when reliable Nepali ASR becomes available.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">How does it compare to building our own search?</h3>
+              <p class="text-warm-600">Building AI-native search requires ML expertise, training data, and ongoing maintenance. For most Nepali businesses, using a platform like Zunkiree Search is faster and more cost-effective. The guide includes a detailed build vs. buy comparison.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Search Technology"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Nepal"
+  }
+}
+</script>

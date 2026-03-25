@@ -1,9 +1,9 @@
 {
   "name": "Zunkiree Labs",
   "tagline": "AI-native search and interaction for modern platforms",
-  "description": "ZunkireeLabs builds intelligent systems that sit closer to your data and your users. Our flagship product, Zunkiree Search, transforms information discovery and user interaction.",
-  "url": "https://zunkiree.com",
-  "email": "info@zunkireelabs.com",
+  "description": "Zunkiree Labs builds AI-native search and interaction systems that connect business data to customer-facing experiences through natural language. Our platform reduces support queries by 45% while improving information discovery 3x.",
+  "url": "https://zunkireelabs.com",
+  "email": "contact@zunkireelabs.com",
   "phone": "+977-9849839728",
   "address": {
     "street": "",
@@ -17,6 +17,6 @@
   },
   "meta": {
     "title": "Zunkiree Labs | AI-Native Search & Interaction Platform",
-    "ogImage": "/assets/images/og-image.jpg"
+    "ogImage": "/assets/images/og-image.svg"
   }
 }

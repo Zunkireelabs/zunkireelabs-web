@@ -11,6 +11,7 @@ RUN npm ci
 
 # Copy source files and config
 COPY src/ src/
+COPY public/ public/
 COPY .eleventy.js tailwind.config.js postcss.config.js ./
 
 # Build the static site

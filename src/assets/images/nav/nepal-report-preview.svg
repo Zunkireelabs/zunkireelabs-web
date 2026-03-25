@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160">
+  <defs>
+    <linearGradient id="navBg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3139"/>
+      <stop offset="100%" style="stop-color:#2d4a56"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="160" fill="url(#navBg3)" rx="8"/>
+  <!-- Document/report icon -->
+  <rect x="105" y="25" width="70" height="90" fill="rgba(255,255,255,0.9)" rx="4"/>
+  <rect x="115" y="40" width="50" height="6" fill="#1b3139" rx="3"/>
+  <rect x="115" y="52" width="40" height="4" fill="rgba(27,49,57,0.4)" rx="2"/>
+  <rect x="115" y="62" width="50" height="4" fill="rgba(27,49,57,0.4)" rx="2"/>
+  <rect x="115" y="72" width="35" height="4" fill="rgba(27,49,57,0.4)" rx="2"/>
+  <!-- Nepal flag colors accent -->
+  <rect x="115" y="85" width="20" height="20" fill="#eb1600" rx="2"/>
+  <rect x="140" y="85" width="20" height="20" fill="#1b3139" rx="2"/>
+  <!-- Text -->
+  <rect x="40" y="130" width="120" height="8" fill="rgba(255,255,255,0.3)" rx="4"/>
+  <rect x="170" y="130" width="70" height="8" fill="rgba(255,255,255,0.15)" rx="4"/>
+</svg>

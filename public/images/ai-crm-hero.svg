@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="crm-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b5c"/>
+      <stop offset="100%" style="stop-color:#eb1600"/>
+    </linearGradient>
+    <linearGradient id="crm-grad-v" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b5c"/>
+      <stop offset="100%" style="stop-color:#eb1600"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main Pipeline Container -->
+  <g transform="translate(40, 50)">
+    <rect x="0" y="0" width="520" height="300" rx="14" fill="white" opacity="0.07"/>
+    <rect x="0" y="0" width="520" height="300" rx="14" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+
+    <!-- Pipeline Header -->
+    <rect x="0" y="0" width="520" height="45" rx="14" fill="white" opacity="0.05"/>
+    <rect x="16" y="14" width="80" height="7" rx="2" fill="white" opacity="0.6"/>
+    <rect x="16" y="26" width="50" height="5" rx="1" fill="white" opacity="0.3"/>
+
+    <!-- Pipeline stats -->
+    <g transform="translate(380, 12)">
+      <rect x="0" y="0" width="60" height="22" rx="6" fill="url(#crm-grad)" opacity="0.3"/>
+      <rect x="8" y="8" width="30" height="6" rx="1" fill="white" opacity="0.7"/>
+      <rect x="70" y="0" width="60" height="22" rx="6" fill="white" opacity="0.1"/>
+      <rect x="78" y="8" width="35" height="6" rx="1" fill="white" opacity="0.5"/>
+    </g>
+
+    <!-- Pipeline Columns -->
+    <!-- Column 1: New Leads -->
+    <g transform="translate(12, 55)">
+      <rect x="0" y="0" width="120" height="235" rx="10" fill="white" opacity="0.04"/>
+      <rect x="0" y="0" width="120" height="235" rx="10" stroke="white" stroke-width="1" fill="none" opacity="0.1"/>
+
+      <!-- Column header -->
+      <rect x="10" y="10" width="55" height="5" rx="1" fill="white" opacity="0.5"/>
+      <circle cx="100" cy="12" r="10" fill="url(#crm-grad)" opacity="0.25"/>
+      <text x="100" y="16" text-anchor="middle" fill="white" opacity="0.8" font-size="10" font-weight="600" font-family="system-ui">3</text>
+
+      <!-- Lead card 1 -->
+      <g transform="translate(8, 30)">
+        <rect x="0" y="0" width="104" height="58" rx="8" fill="white" opacity="0.08"/>
+        <rect x="0" y="0" width="104" height="58" rx="8" stroke="white" stroke-width="1" fill="none" opacity="0.15"/>
+        <circle cx="18" cy="18" r="10" fill="url(#crm-grad)" opacity="0.5"/>
+        <circle cx="18" cy="15" r="4" fill="white" opacity="0.7"/>
+        <path d="M12 22 Q18 18 24 22" fill="white" opacity="0.6"/>
+        <rect x="34" y="12" width="50" height="5" rx="1" fill="white" opacity="0.6"/>
+        <rect x="34" y="20" width="60" height="4" rx="1" fill="white" opacity="0.3"/>
+        <rect x="8" y="38" width="45" height="12" rx="4" fill="url(#crm-grad)" opacity="0.3"/>
+        <rect x="14" y="43" width="30" height="4" rx="1" fill="white" opacity="0.7"/>
+        <rect x="58" y="40" width="38" height="4" rx="1" fill="white" opacity="0.25"/>
+      </g>
+
+      <!-- Lead card 2 -->
+      <g transform="translate(8, 96)">
+        <rect x="0" y="0" width="104" height="52" rx="8" fill="white" opacity="0.06"/>
+        <circle cx="16" cy="16" r="8" fill="url(#crm-grad)" opacity="0.4"/>
+        <rect x="30" y="10" width="45" height="5" rx="1" fill="white" opacity="0.5"/>
+        <rect x="30" y="18" width="55" height="4" rx="1" fill="white" opacity="0.25"/>
+        <rect x="8" y="34" width="40" height="10" rx="3" fill="url(#crm-grad)" opacity="0.25"/>
+      </g>
+
+      <!-- Lead card 3 -->
+      <g transform="translate(8, 156)">
+        <rect x="0" y="0" width="104" height="48" rx="8" fill="white" opacity="0.05"/>
+        <circle cx="14" cy="14" r="7" fill="url(#crm-grad)" opacity="0.35"/>
+        <rect x="28" y="10" width="40" height="4" rx="1" fill="white" opacity="0.4"/>
+        <rect x="28" y="18" width="50" height="3" rx="1" fill="white" opacity="0.2"/>
+        <rect x="8" y="32" width="35" height="9" rx="3" fill="url(#crm-grad)" opacity="0.2"/>
+      </g>
+    </g>
+
+    <!-- Column 2: Contacted -->
+    <g transform="translate(140, 55)">
+      <rect x="0" y="0" width="120" height="235" rx="10" fill="white" opacity="0.04"/>
+      <rect x="0" y="0" width="120" height="235" rx="10" stroke="white" stroke-width="1" fill="none" opacity="0.1"/>
+
+      <!-- Column header -->
+      <rect x="10" y="10" width="50" height="5" rx="1" fill="white" opacity="0.5"/>
+      <circle cx="100" cy="12" r="10" fill="url(#crm-grad)" opacity="0.3"/>
+      <text x="100" y="16" text-anchor="middle" fill="white" opacity="0.8" font-size="10" font-weight="600" font-family="system-ui">2</text>
+
+      <!-- Contact card 1 -->
+      <g transform="translate(8, 30)">
+        <rect x="0" y="0" width="104" height="55" rx="8" fill="white" opacity="0.07"/>
+        <rect x="0" y="0" width="104" height="55" rx="8" stroke="white" stroke-width="1" fill="none" opacity="0.12"/>
+        <circle cx="16" cy="16" r="9" fill="url(#crm-grad)" opacity="0.45"/>
+        <rect x="30" y="10" width="48" height="5" rx="1" fill="white" opacity="0.55"/>
+        <rect x="30" y="18" width="58" height="4" rx="1" fill="white" opacity="0.28"/>
+        <rect x="8" y="36" width="42" height="11" rx="4" fill="url(#crm-grad)" opacity="0.35"/>
+        <rect x="14" y="40" width="28" height="4" rx="1" fill="white" opacity="0.7"/>
+        <!-- Email indicator -->
+        <rect x="55" y="36" width="40" height="11" rx="4" fill="white" opacity="0.1"/>
+        <rect x="62" y="40" width="6" height="4" rx="1" fill="white" opacity="0.4"/>
+        <rect x="70" y="40" width="20" height="4" rx="1" fill="white" opacity="0.3"/>
+      </g>
+
+      <!-- Contact card 2 -->
+      <g transform="translate(8, 93)">
+        <rect x="0" y="0" width="104" height="50" rx="8" fill="white" opacity="0.055"/>
+        <circle cx="15" cy="15" r="8" fill="url(#crm-grad)" opacity="0.38"/>
+        <rect x="28" y="10" width="42" height="4" rx="1" fill="white" opacity="0.48"/>
+        <rect x="28" y="17" width="52" height="4" rx="1" fill="white" opacity="0.22"/>
+        <rect x="8" y="32" width="38" height="10" rx="3" fill="url(#crm-grad)" opacity="0.28"/>
+      </g>
+    </g>
+
+    <!-- Column 3: Proposal (highlighted) -->
+    <g transform="translate(268, 55)">
+      <rect x="0" y="0" width="120" height="235" rx="10" fill="url(#crm-grad)" opacity="0.08"/>
+      <rect x="0" y="0" width="120" height="235" rx="10" stroke="url(#crm-grad)" stroke-width="1.5" fill="none" opacity="0.3"/>
+
+      <!-- Column header -->
+      <rect x="10" y="10" width="45" height="5" rx="1" fill="white" opacity="0.6"/>
+      <circle cx="100" cy="12" r="10" fill="url(#crm-grad)" opacity="0.6"/>
+      <text x="100" y="16" text-anchor="middle" fill="white" opacity="0.95" font-size="10" font-weight="600" font-family="system-ui">2</text>
+
+      <!-- Proposal card 1 - Active/Primary -->
+      <g transform="translate(8, 30)">
+        <rect x="0" y="0" width="104" height="70" rx="8" fill="url(#crm-grad)" opacity="0.2"/>
+        <rect x="0" y="0" width="104" height="70" rx="8" stroke="url(#crm-grad)" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <circle cx="18" cy="18" r="10" fill="url(#crm-grad)" opacity="0.7"/>
+        <circle cx="18" cy="15" r="4" fill="white" opacity="0.85"/>
+        <path d="M12 22 Q18 18 24 22" fill="white" opacity="0.75"/>
+        <rect x="34" y="12" width="55" height="5" rx="1" fill="white" opacity="0.7"/>
+        <rect x="34" y="20" width="62" height="4" rx="1" fill="white" opacity="0.4"/>
+
+        <!-- Deal value -->
+        <rect x="8" y="38" width="50" height="14" rx="4" fill="url(#crm-grad)" opacity="0.5"/>
+        <rect x="14" y="43" width="35" height="5" rx="1" fill="white" opacity="0.85"/>
+
+        <!-- Progress bar -->
+        <rect x="8" y="56" width="88" height="6" rx="2" fill="white" opacity="0.15"/>
+        <rect x="8" y="56" width="66" height="6" rx="2" fill="url(#crm-grad)" opacity="0.7"/>
+      </g>
+
+      <!-- Proposal card 2 -->
+      <g transform="translate(8, 108)">
+        <rect x="0" y="0" width="104" height="55" rx="8" fill="white" opacity="0.06"/>
+        <circle cx="15" cy="15" r="8" fill="url(#crm-grad)" opacity="0.5"/>
+        <rect x="28" y="10" width="45" height="4" rx="1" fill="white" opacity="0.5"/>
+        <rect x="28" y="17" width="55" height="4" rx="1" fill="white" opacity="0.28"/>
+        <rect x="8" y="32" width="45" height="12" rx="4" fill="url(#crm-grad)" opacity="0.35"/>
+        <rect x="14" y="36" width="30" height="5" rx="1" fill="white" opacity="0.7"/>
+      </g>
+    </g>
+
+    <!-- Column 4: Won -->
+    <g transform="translate(396, 55)">
+      <rect x="0" y="0" width="112" height="235" rx="10" fill="white" opacity="0.04"/>
+      <rect x="0" y="0" width="112" height="235" rx="10" stroke="white" stroke-width="1" fill="none" opacity="0.1"/>
+
+      <!-- Column header with success color -->
+      <rect x="10" y="10" width="30" height="5" rx="1" fill="#4ade80" opacity="0.7"/>
+      <circle cx="92" cy="12" r="10" fill="#4ade80" opacity="0.3"/>
+      <text x="92" y="16" text-anchor="middle" fill="white" opacity="0.9" font-size="10" font-weight="600" font-family="system-ui">1</text>
+
+      <!-- Won card 1 -->
+      <g transform="translate(8, 30)">
+        <rect x="0" y="0" width="96" height="60" rx="8" fill="#4ade80" opacity="0.12"/>
+        <rect x="0" y="0" width="96" height="60" rx="8" stroke="#4ade80" stroke-width="1" fill="none" opacity="0.25"/>
+        <circle cx="16" cy="16" r="9" fill="#4ade80" opacity="0.4"/>
+        <path d="M12 16 L15 19 L21 13" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="30" y="10" width="50" height="5" rx="1" fill="white" opacity="0.6"/>
+        <rect x="30" y="18" width="56" height="4" rx="1" fill="white" opacity="0.3"/>
+
+        <!-- Won deal value -->
+        <rect x="8" y="36" width="55" height="14" rx="4" fill="#4ade80" opacity="0.35"/>
+        <rect x="14" y="41" width="40" height="5" rx="1" fill="white" opacity="0.8"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- AI Agent Panel - Right side -->
+  <g transform="translate(520, 85)">
+    <rect x="0" y="0" width="70" height="195" rx="12" fill="white" opacity="0.08"/>
+    <rect x="0" y="0" width="70" height="195" rx="12" stroke="white" stroke-width="1" fill="none" opacity="0.18"/>
+
+    <!-- AI Agent avatar -->
+    <g transform="translate(18, 15)">
+      <circle cx="17" cy="17" r="17" fill="url(#crm-grad)" opacity="0.5"/>
+      <circle cx="17" cy="17" r="14" stroke="white" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <!-- AI sparkle in center -->
+      <path d="M17 8 L19 14 L25 16 L19 18 L17 24 L15 18 L9 16 L15 14 Z" fill="white" opacity="0.85"/>
+    </g>
+
+    <rect x="12" y="55" width="46" height="4" rx="1" fill="white" opacity="0.5"/>
+    <rect x="16" y="63" width="38" height="3" rx="1" fill="white" opacity="0.3"/>
+
+    <!-- AI suggestions -->
+    <g transform="translate(8, 80)">
+      <!-- Suggestion 1 -->
+      <rect x="0" y="0" width="54" height="32" rx="6" fill="url(#crm-grad)" opacity="0.2"/>
+      <rect x="0" y="0" width="54" height="32" rx="6" stroke="url(#crm-grad)" stroke-width="1" fill="none" opacity="0.3"/>
+      <rect x="6" y="8" width="30" height="4" rx="1" fill="white" opacity="0.6"/>
+      <rect x="6" y="16" width="42" height="3" rx="1" fill="white" opacity="0.35"/>
+      <rect x="6" y="23" width="22" height="3" rx="1" fill="white" opacity="0.25"/>
+    </g>
+
+    <g transform="translate(8, 120)">
+      <!-- Suggestion 2 -->
+      <rect x="0" y="0" width="54" height="28" rx="6" fill="white" opacity="0.06"/>
+      <rect x="6" y="8" width="28" height="4" rx="1" fill="white" opacity="0.45"/>
+      <rect x="6" y="15" width="40" height="3" rx="1" fill="white" opacity="0.25"/>
+    </g>
+
+    <g transform="translate(8, 155)">
+      <!-- Suggestion 3 -->
+      <rect x="0" y="0" width="54" height="28" rx="6" fill="white" opacity="0.05"/>
+      <rect x="6" y="8" width="32" height="4" rx="1" fill="white" opacity="0.4"/>
+      <rect x="6" y="15" width="38" height="3" rx="1" fill="white" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- AI Insight Bubble -->
+  <g transform="translate(470, 300)">
+    <rect x="0" y="0" width="115" height="55" rx="10" fill="white" opacity="0.1"/>
+    <rect x="0" y="0" width="115" height="55" rx="10" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
+
+    <!-- AI sparkle -->
+    <g transform="translate(10, 12)">
+      <path d="M10 0 L12 8 L20 10 L12 12 L10 20 L8 12 L0 10 L8 8 Z" fill="url(#crm-grad)" opacity="0.8"/>
+    </g>
+
+    <rect x="35" y="12" width="65" height="5" rx="1" fill="white" opacity="0.55"/>
+    <rect x="35" y="21" width="50" height="4" rx="1" fill="white" opacity="0.35"/>
+
+    <!-- Prediction percentage -->
+    <rect x="12" y="35" width="55" height="14" rx="5" fill="url(#crm-grad)" opacity="0.55"/>
+    <rect x="18" y="40" width="35" height="5" rx="1" fill="white" opacity="0.85"/>
+
+    <!-- Trend arrow -->
+    <g transform="translate(80, 38)">
+      <path d="M0 8 L8 0 L16 8" stroke="#4ade80" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+      <line x1="8" y1="0" x2="8" y2="12" stroke="#4ade80" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Floating decorative elements -->
+  <circle cx="25" cy="90" r="4" fill="url(#crm-grad)" opacity="0.3"/>
+  <circle cx="580" cy="380" r="5" fill="white" opacity="0.08"/>
+
+  <!-- AI sparkles -->
+  <path d="M575 50 L577 56 L583 58 L577 60 L575 66 L573 60 L567 58 L573 56 Z" fill="url(#crm-grad)" opacity="0.45"/>
+  <path d="M35 360 L36 364 L40 365 L36 366 L35 370 L34 366 L30 365 L34 364 Z" fill="url(#crm-grad)" opacity="0.35"/>
+</svg>

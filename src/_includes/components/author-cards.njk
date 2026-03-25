@@ -1,0 +1,44 @@
+{# =====================================================
+   AUTHOR CARDS COMPONENT
+   Usage: {% include "components/author-cards.njk" %}
+   Variables:
+     - authors: array of { name, role, company, image }
+   ===================================================== #}
+
+{% if authors and authors.length > 0 %}
+<div class="mt-12 pt-8 border-t border-warm-border">
+  <h3 class="text-sm font-medium text-warm-400 tracking-wide uppercase mb-6">Authors</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for author in authors %}
+    <div class="flex items-center gap-4" data-reveal>
+      {# Avatar #}
+      <div class="w-14 h-14 rounded-full overflow-hidden bg-warm-surface border border-warm-border flex-shrink-0">
+        {% if author.image %}
+        <img
+          src="{{ author.image }}"
+          alt="{{ author.name }}"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        >
+        {% else %}
+        {# Placeholder avatar with initials #}
+        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-zunkiree-100 to-zunkiree-200 text-zunkiree-700 font-medium text-lg">
+          {{ author.name | first | upper }}{{ author.name.split(' ')[1] | first | upper if author.name.split(' ')[1] else '' }}
+        </div>
+        {% endif %}
+      </div>
+
+      {# Info #}
+      <div class="min-w-0">
+        <h4 class="font-medium text-warm-black truncate">{{ author.name }}</h4>
+        <p class="text-sm text-warm-600 truncate">{{ author.role }}</p>
+        {% if author.company %}
+        <p class="text-xs text-warm-400 truncate">{{ author.company }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

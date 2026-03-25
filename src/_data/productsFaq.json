@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What products does Zunkiree Labs offer?",
+    "answer": "Zunkiree Labs builds three main products: Zunkiree Search (an AI-native search platform that delivers direct answers through natural language), Gaamma (a manufacturing ERP platform for operational efficiency and digital transformation), and Dental AI Assistant (an AI-powered tool for dental practice management, currently in development)."
+  },
+  {
+    "question": "What is Zunkiree Search and how does it work?",
+    "answer": "Zunkiree Search is an AI-native search and interaction platform that connects your business data to customer-facing experiences. Unlike keyword-based search, it understands context and intent, delivering direct answers instead of link lists. Integration takes as little as 2 hours using our JavaScript widget."
+  },
+  {
+    "question": "Who is Gaamma designed for?",
+    "answer": "Gaamma is designed for manufacturing companies seeking digital transformation. It covers end-to-end operations including production planning, inventory management, quality control, and real-time analytics. It's ideal for modern factories and production workflows looking to improve operational efficiency."
+  },
+  {
+    "question": "How do I get started with Zunkiree products?",
+    "answer": "Start by scheduling a demo with our team. We'll understand your requirements, show you the product in action with your use case, and provide a custom implementation plan. Most customers go from demo to production within 2-4 weeks for Zunkiree Search and 4-8 weeks for Gaamma ERP."
+  },
+  {
+    "question": "Are Zunkiree products secure for enterprise use?",
+    "answer": "Yes. All Zunkiree products include enterprise-grade security: role-based access control, end-to-end encryption, SOC 2 compliance readiness, and options for on-premises or private cloud deployment. We sign BAAs for healthcare customers and support custom security requirements."
+  }
+]

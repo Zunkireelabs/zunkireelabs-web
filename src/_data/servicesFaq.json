@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What digital services does Zunkiree Labs offer?",
+    "answer": "Zunkiree Labs provides AI development (RAG pipelines, LLM integration, intelligent automation), custom software development, SaaS platform creation, web and mobile app development, data systems architecture, and AEO/SEO marketing services. We serve businesses across healthcare, manufacturing, education, and technology sectors."
+  },
+  {
+    "question": "How does Zunkiree Labs approach AI development projects?",
+    "answer": "We start with your specific business problem, not generic AI solutions. Our AI development process includes discovery (understanding your data and workflows), architecture design (selecting appropriate models and infrastructure), iterative development (building and testing with real data), and deployment with monitoring. Most projects launch within 8-12 weeks."
+  },
+  {
+    "question": "What industries does Zunkiree Labs serve?",
+    "answer": "We serve technology companies, e-commerce, healthcare, education, manufacturing, and professional services. Any business with customer-facing content, internal knowledge bases, or operational data can benefit from our AI and software development services."
+  },
+  {
+    "question": "How long does a typical software development project take?",
+    "answer": "Project timelines vary by scope: AI integrations typically take 4-8 weeks, custom web applications 8-16 weeks, full SaaS platforms 3-6 months, and mobile apps 8-12 weeks. We provide detailed timelines after discovery, with milestone-based delivery throughout."
+  },
+  {
+    "question": "Does Zunkiree Labs offer ongoing support after project delivery?",
+    "answer": "Yes. All projects include 30 days of post-launch support. We also offer ongoing maintenance packages covering updates, performance monitoring, security patches, and feature enhancements. Many clients transition to retainer agreements for continuous improvement."
+  }
+]

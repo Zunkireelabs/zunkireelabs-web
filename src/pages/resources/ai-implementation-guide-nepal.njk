@@ -1,0 +1,190 @@
+---
+layout: base.njk
+title: AI Implementation Guide for Nepal SMEs | Zunkiree Labs
+description: Practical AI implementation guide for Nepali businesses. Budget tiers from NPR 50K to 5M, local vendor recommendations, and step-by-step roadmap.
+permalink: /resources/ai-implementation-guide-nepal/
+---
+
+{% set resource = resources.items | find("slug", "ai-implementation-guide-nepal") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-green-600 text-white text-xs font-medium tracking-wide mb-4">
+        Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/state-of-ai-nepal-2026/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              State of AI in Nepal 2026: Industry Report
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/ai-vs-traditional-software-kathmandu/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI vs Traditional Software for Kathmandu Enterprises
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/khushbu-nirman-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khushbu Nirman Sewa
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why this guide exists</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            <strong>56% of Nepali industries</strong> cite lack of skilled manpower as the primary barrier to AI adoption. This isn't a technology problem. It's a knowledge problem. Businesses in Kathmandu and across Nepal know AI can help them compete, but they don't know where to start.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            This guide bridges that gap. We provide practical, budget-conscious implementation strategies tailored for Nepal's market conditions. Whether you're a 10-person startup or a 500-person enterprise, you'll find a path forward.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Budget tiers for Nepal</h2>
+          <div class="space-y-4">
+            <div class="p-6 bg-gray-50 border-l-4 border-green-500">
+              <p class="text-xl font-medium text-warm-black mb-2">NPR 50,000 - 200,000</p>
+              <p class="text-warm-600 mb-2"><strong>Starter tier:</strong> AI chatbots, basic automation</p>
+              <p class="text-warm-500 text-sm">Best for: Customer service automation, FAQ bots, simple data processing. Uses cloud APIs with minimal custom development.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-blue-500">
+              <p class="text-xl font-medium text-warm-black mb-2">NPR 500,000 - 2,000,000</p>
+              <p class="text-warm-600 mb-2"><strong>Growth tier:</strong> Custom AI solutions, integrations</p>
+              <p class="text-warm-500 text-sm">Best for: AI search, document processing, recommendation systems. Includes custom model training and system integration.</p>
+            </div>
+            <div class="p-6 bg-gray-50 border-l-4 border-purple-500">
+              <p class="text-xl font-medium text-warm-black mb-2">NPR 5,000,000+</p>
+              <p class="text-warm-600 mb-2"><strong>Enterprise tier:</strong> Full AI transformation</p>
+              <p class="text-warm-500 text-sm">Best for: End-to-end AI platforms, predictive analytics, autonomous operations. Includes dedicated infrastructure and ongoing optimization.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Do we need to hire AI specialists?</h3>
+              <p class="text-warm-600">Not necessarily. At the starter tier, you can implement AI using cloud APIs with existing developers. Growth tier projects benefit from AI consultants. Enterprise tier typically requires dedicated ML engineers, though you can partner with firms like Zunkiree Labs.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What about data privacy regulations in Nepal?</h3>
+              <p class="text-warm-600">Nepal's data protection framework is evolving. This guide covers current NTA regulations and best practices for data handling. We recommend local data storage for sensitive applications and provide compliance checklists.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Should we build or buy AI solutions?</h3>
+              <p class="text-warm-600">The guide includes a detailed decision framework. In general: buy for standard use cases (chatbots, search), build for competitive differentiation, and partner for complex implementations where you lack in-house expertise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Assess AI Readiness",
+      "text": "Use our self-assessment checklist to evaluate your organization's AI readiness."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choose Budget Tier",
+      "text": "Select the appropriate budget tier based on your use case and resources."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Implement and Measure",
+      "text": "Follow the implementation roadmap and track ROI using our templates."
+    }
+  ]
+}
+</script>

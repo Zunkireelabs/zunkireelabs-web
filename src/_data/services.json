@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ai-development",
+    "title": "AI Development",
+    "category": "AI & Data",
+    "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
+    "cta": "View",
+    "url": "/services/ai-development/",
+    "icon": "ai",
+    "clients": [
+      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" },
+      { "name": "Admizz", "logo": "/images/clients/admizz.png" }
+    ]
+  },
+  {
+    "id": "ai-customer-experience",
+    "title": "AI Customer Experience",
+    "category": "AI & Data",
+    "description": "AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy.",
+    "cta": "View",
+    "url": "/services/ai-customer-experience/",
+    "icon": "chat",
+    "clients": [
+      { "name": "Admizz", "logo": "/images/clients/admizz.png" },
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
+      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.png" }
+    ]
+  },
+  {
+    "id": "data-systems",
+    "title": "Data Systems",
+    "category": "AI & Data",
+    "description": "Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup.",
+    "cta": "View",
+    "url": "/services/data-systems/",
+    "icon": "data",
+    "clients": [
+      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" },
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" }
+    ]
+  },
+  {
+    "id": "custom-software",
+    "title": "Custom Software",
+    "category": "Development",
+    "description": "Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use.",
+    "cta": "View",
+    "url": "/services/custom-software/",
+    "icon": "code",
+    "clients": [
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" },
+      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.png" },
+      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" }
+    ]
+  },
+  {
+    "id": "saas-development",
+    "title": "SaaS Development",
+    "category": "Development",
+    "description": "Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years.",
+    "cta": "View",
+    "url": "/services/saas-development/",
+    "icon": "cloud",
+    "clients": [
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" },
+      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" }
+    ]
+  },
+  {
+    "id": "web-development",
+    "title": "Web Development",
+    "category": "Development",
+    "description": "High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one.",
+    "cta": "View",
+    "url": "/services/web-development/",
+    "icon": "globe",
+    "clients": [
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
+      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.png" },
+      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.png" }
+    ]
+  },
+  {
+    "id": "app-development",
+    "title": "App Development",
+    "category": "Development",
+    "description": "Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration.",
+    "cta": "View",
+    "url": "/services/app-development/",
+    "icon": "mobile",
+    "clients": [
+      { "name": "Admizz", "logo": "/images/clients/admizz.png" },
+      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" }
+    ]
+  },
+  {
+    "id": "aeo-seo",
+    "title": "AEO & SEO",
+    "category": "Marketing",
+    "description": "Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation.",
+    "cta": "View",
+    "url": "/services/aeo-seo/",
+    "icon": "search",
+    "clients": [
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" },
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" }
+    ]
+  }
+]

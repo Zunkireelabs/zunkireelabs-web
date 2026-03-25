@@ -1,238 +1,930 @@
 ---
 layout: base.njk
-title: Zunkiree Labs | AI-Native Search & Interaction Platform
-description: ZunkireeLabs builds intelligent systems for modern digital platforms. Our flagship product, Zunkiree Search, transforms information discovery and user interaction.
+title: "Zunkiree Labs | AI Infrastructure. Engineered Right."
+description: "Zunkiree Labs builds infrastructure-level AI systems, not wrappers. AI-native platforms for search, CRM, booking, and enterprise operations. Based in Kathmandu, built for the world."
 permalink: /
 ---
 
 {# =====================================================
-   SECTION 1: HERO (Duna-inspired)
+   HERO SECTION - IBM-style Minimal
    ===================================================== #}
-<section class="hero-duna relative flex items-center justify-center overflow-hidden bg-[#e8f4f8] min-h-screen px-4 md:px-6">
-  {# Background Image - covers entire hero area on all screen sizes #}
-  <div class="hero-bg absolute inset-0">
-    <img
-      src="/assets/images/hero-bg.webp"
-      alt=""
-      class="w-full h-full object-cover object-[center_30%]"
-      loading="eager"
-    />
-    {# Gradient overlay - fades at bottom for seamless transition to white sections #}
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent from-60% via-white/70 via-85% to-white"></div>
+<section class="pt-20 md:pt-24 lg:pt-28">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:min-h-[70vh]">
+      {# Left: Text Content #}
+      <div class="flex flex-col justify-center pb-16 lg:pb-24">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">AI-First Technology Company</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-8">
+          AI Infrastructure.<br>
+          Engineered Right.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
+          We build infrastructure-level AI systems, not wrappers. From intelligent search to enterprise platforms, our AI-native architecture powers modern businesses.
+        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4">
+          <a href="/products/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+            Explore Our Products
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
+            Talk to Us
+          </a>
+        </div>
+      </div>
+      {# Right: Hero Image #}
+      <div class="hidden lg:flex lg:flex-col lg:justify-end">
+        <img src="/assets/images/hero-orca-dashboard.png" alt="Orca Platform Dashboard - AI Infrastructure Management" class="w-[120%] h-auto max-w-none rounded-lg" />
+      </div>
+    </div>
   </div>
+</section>
 
-  {# Content - vertically centered in hero #}
-  <div class="relative z-10 max-w-[1200px] mx-auto text-center mt-16">
-    {# Headline - Duna style with tight letter-spacing #}
-    <h1 class="hero-headline text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-medium text-black tracking-[-0.04em] leading-[1.1] mb-6" data-reveal>
-      AI-native search and interaction<br>
-      <span class="text-black">for modern digital platforms</span>
-    </h1>
+{# =====================================================
+   SOCIAL PROOF / METRICS BAR
+   ===================================================== #}
+<section class="py-6 bg-white border-y border-gray-200">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
 
-    {# Subheadline #}
-    <p class="text-lg md:text-xl text-black max-w-2xl mx-auto mb-10 leading-relaxed tracking-[-0.01em]" data-reveal>
-      ZunkireeLabs builds AI-native systems that connect business data to customer-facing experiences. Our core platform enables users to interact with information through natural language.
-    </p>
+      {# Left: Trust Text with Divider #}
+      <div class="lg:col-span-2 flex items-center gap-4">
+        <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by forward-thinking organizations</p>
+        <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
+      </div>
 
-    {# Dual CTAs - Primary dark, Secondary outline #}
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-reveal>
-      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-warm-rich-black text-white font-medium text-base rounded-full hover:bg-warm-black transition-all duration-200 hover:-translate-y-0.5 shadow-lg">
-        Schedule a Demo
+      {# Middle: Logo Marquee #}
+      <div class="lg:col-span-7 relative overflow-hidden">
+        <div class="marquee-fade-light">
+          <div class="flex items-center gap-10 animate-marquee-scroll">
+            {# First set of logos #}
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/mach24orbital.png" alt="Mach24orbital" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/carbon-spark.png" alt="Carbon Spark" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khushbu-nirman-sewa.png" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/prime-tiles.png" alt="Prime Tiles" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/cms-group.png" alt="CMS Group" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/admizz.png" alt="Admizz" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khems-cleaning.png" alt="Khems Cleaning" class="max-w-full max-h-full object-contain" />
+            </div>
+            {# Duplicate set for seamless loop #}
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/mach24orbital.png" alt="Mach24orbital" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/carbon-spark.png" alt="Carbon Spark" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khushbu-nirman-sewa.png" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/prime-tiles.png" alt="Prime Tiles" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/cms-group.png" alt="CMS Group" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/admizz.png" alt="Admizz" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khems-cleaning.png" alt="Khems Cleaning" class="max-w-full max-h-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# Right: Stats #}
+      <div class="lg:col-span-3 flex items-center justify-end gap-8">
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">5+</p>
+          <p class="text-xs text-gray-500">Products</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">6</p>
+          <p class="text-xs text-gray-500">Industries</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">8</p>
+          <p class="text-xs text-gray-500">Services</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SERVICES SHOWCASE - IBM Style Grid
+   ===================================================== #}
+<section class="py-16 md:py-24">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="max-w-2xl mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Expert solutions to accelerate your AI journey</h2>
+      </div>
+      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all services
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
       </a>
-      <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-black/30 text-black font-medium text-base rounded-full hover:bg-black/5 transition-all duration-200">
-        Talk to Us
+    </div>
+
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    {# IBM-style bordered grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-gray-200">
+      {# Row 1 #}
+      {# Service 1: AI Development #}
+      <a href="/services/#ai" class="group relative flex flex-col justify-between p-6 border-b md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">AI Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Automate work and drive smarter decisions with intelligent agents and applications</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300 group-hover:stroke-white" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 2: Web Development #}
+      <a href="/services/#web" class="group relative flex flex-col justify-between p-6 border-b lg:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Web Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Build scalable, high-performance web applications with modern frameworks</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 3: Mobile Development #}
+      <a href="/services/#mobile" class="group relative flex flex-col justify-between p-6 border-b md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Mobile Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Create native and cross-platform mobile experiences that users love</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 4: UI/UX Design #}
+      <a href="/services/#design" class="group relative flex flex-col justify-between p-6 border-b border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">UI/UX Design</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Design intuitive interfaces that delight users and drive engagement</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Row 2 #}
+      {# Service 5: Data Engineering #}
+      <a href="/services/#data" class="group relative flex flex-col justify-between p-6 md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Data Engineering</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Build robust data pipelines and infrastructure for actionable insights</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 6: Cloud Solutions #}
+      <a href="/services/#cloud" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 lg:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Cloud Solutions</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Deploy and scale your applications with modern cloud architecture</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 7: System Integration #}
+      <a href="/services/#integration" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">System Integration</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Connect your systems and automate workflows across platforms</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 8: Technical Consulting #}
+      <a href="/services/#consulting" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Technical Consulting</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Strategic guidance to accelerate your technology initiatives</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-
 {# =====================================================
-   SECTION 3: VALUE PROPOSITION (Built around one core idea)
+   CASE STUDY CAROUSEL - Interactive Client Showcase
    ===================================================== #}
-<section class="py-16 md:py-24 lg:py-32 px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    {# Section Header - Centered #}
-    <div class="text-center max-w-3xl mx-auto mb-16" data-reveal>
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Our Philosophy</p>
-      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
-        Built around one core idea
-      </h2>
-      <p class="text-xl text-warm-600 tracking-[-0.01em] leading-relaxed">
-        Intelligence should sit closer to your data — and your users
-      </p>
-    </div>
+<section class="py-16 md:py-24" x-data="caseStudyCarousel()">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
 
-    {# Three Value Props #}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {# Value Prop 1 #}
-      <div class="group cursor-pointer p-6 rounded-2xl border border-warm-200 hover:shadow-lg transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Unified understanding</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Connect disparate data sources into a single intelligence layer that understands context across your entire platform.</p>
-      </div>
-
-      {# Value Prop 2 #}
-      <div class="group cursor-pointer p-6 rounded-2xl border border-warm-200 hover:shadow-lg transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Contextual responses</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Deliver accurate, meaningful answers by understanding intent and meaning — not just keywords.</p>
-      </div>
-
-      {# Value Prop 3 #}
-      <div class="group cursor-pointer p-6 rounded-2xl border border-warm-200 hover:shadow-lg transition-all duration-300" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Seamless integration</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Works with your existing systems and data sources without requiring a full platform rebuild.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 4: STATS (Duna-style)
-   ===================================================== #}
-<section class="py-10 md:py-14 bg-white px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-0">
-      <div class="text-center" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-2">
-          <span data-counter="10" data-suffix="x">0</span>
-        </div>
-        <p class="text-warm-600 font-medium">Faster search responses</p>
-      </div>
-      <div class="text-center md:border-l md:border-warm-border" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-2">
-          <span data-counter="99" data-suffix="%">0</span>
-        </div>
-        <p class="text-warm-600 font-medium">Query accuracy</p>
-      </div>
-      <div class="text-center md:border-l md:border-warm-border" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-2">
-          <span data-counter="24" data-suffix="/7">0</span>
-        </div>
-        <p class="text-warm-600 font-medium">System availability</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-{# =====================================================
-   SECTION 7: PLATFORM MINDSET
-   ===================================================== #}
-<section class="py-16 md:py-24 lg:py-32 px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
     {# Section Header #}
-    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
-      <h2 class="text-3xl md:text-4xl lg:text-[44px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
-        Built for systems that last
-      </h2>
-      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
-        ZunkireeLabs builds platforms with a long-term architectural mindset.
-      </p>
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">How innovators use Zunkiree</h2>
     </div>
 
-    {# 4 Focus Areas #}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-      {# Focus 1 #}
-      <div class="bg-white rounded-2xl p-6 border border-warm-border" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center text-zunkiree-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">AI-native foundations</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Built from the ground up with AI at the core, not bolted on as an afterthought.</p>
-      </div>
+    {# Logo Tab Bar #}
+    <div class="flex items-stretch gap-2">
+      {# Play/Pause Button #}
+      <button
+        @click="togglePlay()"
+        class="flex-shrink-0 w-14 h-20 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors"
+        :aria-label="isPlaying ? 'Pause carousel' : 'Play carousel'"
+      >
+        {# Play Icon #}
+        <svg x-show="!isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        {# Pause Icon #}
+        <svg x-show="isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
 
-      {# Focus 2 #}
-      <div class="bg-white rounded-2xl p-6 border border-warm-border" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center text-zunkiree-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Clean data connectivity</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Seamless integration with your existing data sources and infrastructure.</p>
-      </div>
-
-      {# Focus 3 #}
-      <div class="bg-white rounded-2xl p-6 border border-warm-border" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center text-zunkiree-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Modular design</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Extensible architecture that grows with your needs without rebuilding.</p>
-      </div>
-
-      {# Focus 4 #}
-      <div class="bg-white rounded-2xl p-6 border border-warm-border" data-reveal>
-        <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center text-zunkiree-600 mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-warm-black tracking-[-0.01em] mb-2">Evolving systems</h3>
-        <p class="text-warm-600 text-sm leading-relaxed">Designed to adapt and improve as your business needs change over time.</p>
+      {# Client Logo Tabs - Horizontal Scroll (5 visible at once) #}
+      <div
+        x-ref="tabsContainer"
+        class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
+        style="--tab-count: 5;"
+      >
+        <template x-for="(study, index) in studies" :key="study.id">
+          <button
+            @click="goTo(index)"
+            :x-ref="'tab-' + index"
+            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
+            style="min-width: calc((100% - 32px) / 5);"
+            :class="activeIndex === index ? 'bg-white shadow-sm' : 'bg-gray-100 hover:bg-gray-50'"
+          >
+            <img
+              :src="study.logo"
+              :alt="study.name"
+              class="max-h-8 max-w-[120px] object-contain transition-all duration-300"
+              :class="activeIndex === index ? 'grayscale-0 opacity-100' : 'grayscale opacity-50 hover:opacity-70'"
+            />
+            {# Progress Bar (only on active, animates while playing) #}
+            <div
+              class="absolute bottom-0 left-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && isPlaying ? '' : 'hidden'"
+              :style="`width: ${progress}%`"
+            ></div>
+            {# Static indicator (only on active, when paused) #}
+            <div
+              class="absolute bottom-0 left-0 right-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && !isPlaying ? '' : 'hidden'"
+            ></div>
+          </button>
+        </template>
       </div>
     </div>
 
-    {# Goal Statement #}
-    <p class="text-center text-lg text-warm-600 max-w-2xl mx-auto" data-reveal>
-      Our goal is to build software that compounds value over time.
-    </p>
+    {# Content Area - Separate container with gap #}
+    <div class="mt-6 bg-white border border-gray-200">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        {# Left: Content #}
+        <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[500px]">
+          <template x-for="(study, index) in studies" :key="study.id">
+            <div
+              x-show="activeIndex === index"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 transform translate-y-4"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-200 absolute"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+            >
+              {# Client Logo Large #}
+              <div class="mb-6">
+                <img
+                  :src="study.logo"
+                  :alt="study.name"
+                  class="h-10 object-contain"
+                />
+              </div>
+
+              {# Big Stat #}
+              <div class="mb-4">
+                <span class="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900" x-text="study.stat"></span>
+                <span class="text-lg text-gray-500 ml-2" x-text="study.statLabel"></span>
+              </div>
+
+              {# Headline #}
+              <h3 class="text-xl md:text-2xl font-medium text-gray-900 mb-4" x-text="study.headline"></h3>
+
+              {# Description #}
+              <p class="text-gray-600 mb-6 max-w-lg" x-text="study.description"></p>
+
+              {# CTA #}
+              <a
+                :href="study.ctaUrl"
+                class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all"
+              >
+                <span x-text="study.ctaText"></span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </template>
+        </div>
+
+        {# Right: Image #}
+        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden bg-gray-100">
+          {# Case study images with transition #}
+          <template x-for="(study, index) in studies" :key="'visual-' + study.id">
+            <div
+              class="absolute inset-0"
+              :class="activeIndex === index ? '' : 'hidden'"
+            >
+              <img
+                :src="study.image"
+                :alt="study.name + ' case study'"
+                class="w-full h-full object-cover"
+              />
+              {# Subtle overlay for better contrast #}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+          </template>
+          {# Accent line #}
+          <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-zunkiree-600"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function caseStudyCarousel() {
+    return {
+      activeIndex: 0,
+      isPlaying: true,
+      progress: 0,
+      interval: null,
+      duration: 5000, // 5 seconds per slide
+
+      studies: [
+        {
+          id: 'admizz',
+          name: 'Admizz Education',
+          logo: '/images/clients/admizz.png',
+          stat: '45%',
+          statLabel: 'faster responses',
+          headline: 'Admizz transforms student inquiry management',
+          description: 'Admizz Education revolutionized their student inquiry process with Zunkiree Search, reducing response time and dramatically improving student satisfaction across their consultancy network.',
+          image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/admizz-education/'
+        },
+        {
+          id: 'carbon-spark',
+          name: 'Carbon Spark',
+          logo: '/images/clients/carbon-spark.png',
+          stat: '3x',
+          statLabel: 'faster deployment',
+          headline: 'Carbon Spark accelerates AI adoption',
+          description: 'Carbon Spark leveraged our AI infrastructure to deploy intelligent systems 3x faster, enabling rapid scaling of their sustainability analytics platform.',
+          image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/carbon-spark/'
+        },
+        {
+          id: 'corecloud365',
+          name: 'Corecloud365',
+          logo: '/images/clients/corecloud365.svg',
+          stat: '60%',
+          statLabel: 'cost reduction',
+          headline: 'Corecloud365 optimizes cloud operations',
+          description: 'Corecloud365 achieved significant cost savings by integrating our AI-powered search and automation tools into their cloud management platform.',
+          image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/corecloud365/'
+        },
+        {
+          id: 'rapid-investment',
+          name: 'Rapid Investment',
+          logo: '/images/clients/rapid-investment.svg',
+          stat: '10x',
+          statLabel: 'faster analysis',
+          headline: 'Rapid Investment transforms due diligence',
+          description: 'Rapid Investment Group uses our AI systems to analyze investment opportunities 10x faster, giving them a competitive edge in the financial markets.',
+          image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/rapid-investment/'
+        },
+        {
+          id: 'cms-group',
+          name: 'CMS Group',
+          logo: '/images/clients/cms-group.png',
+          stat: '85%',
+          statLabel: 'automation rate',
+          headline: 'CMS Group automates enterprise workflows',
+          description: 'CMS Group achieved 85% automation of their document processing workflows, freeing their team to focus on high-value strategic work.',
+          image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/cms-group/'
+        },
+        {
+          id: 'mach24orbital',
+          name: 'Mach24 Orbital',
+          logo: '/images/clients/mach24orbital.png',
+          stat: '50%',
+          statLabel: 'faster launches',
+          headline: 'Mach24 Orbital streamlines space operations',
+          description: 'Mach24 Orbital integrated our AI systems to optimize their satellite deployment workflows, cutting launch preparation time in half.',
+          image: 'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/mach24orbital/'
+        },
+        {
+          id: 'khushbu-nirman',
+          name: 'Khushbu Nirman Sewa',
+          logo: '/images/clients/khushbu-nirman-sewa.png',
+          stat: '40%',
+          statLabel: 'efficiency gain',
+          headline: 'Khushbu Nirman digitizes construction management',
+          description: 'Khushbu Nirman Sewa transformed their construction project management with our AI-powered tracking and resource optimization tools.',
+          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/khushbu-nirman/'
+        },
+        {
+          id: 'prime-tiles',
+          name: 'Prime Tiles',
+          logo: '/images/clients/prime-tiles.png',
+          stat: '2x',
+          statLabel: 'sales growth',
+          headline: 'Prime Tiles revolutionizes customer discovery',
+          description: 'Prime Tiles deployed Zunkiree Search to help customers find the perfect tiles instantly, doubling their online conversion rates.',
+          image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/prime-tiles/'
+        },
+        {
+          id: 'khems-cleaning',
+          name: 'Khems Cleaning',
+          logo: '/images/clients/khems-cleaning.png',
+          stat: '70%',
+          statLabel: 'booking increase',
+          headline: 'Khems Cleaning scales with smart scheduling',
+          description: 'Khems Cleaning Services implemented our AI booking system, dramatically increasing their service capacity and customer satisfaction.',
+          image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop',
+          ctaText: 'Read the case study',
+          ctaUrl: '/case-studies/khems-cleaning/'
+        }
+      ],
+
+      init() {
+        this.startAutoPlay();
+      },
+
+      startAutoPlay() {
+        if (this.interval) clearInterval(this.interval);
+        this.progress = 0;
+
+        const tick = 50; // Update every 50ms for smooth progress
+        this.interval = setInterval(() => {
+          if (this.isPlaying) {
+            this.progress += (tick / this.duration) * 100;
+            if (this.progress >= 100) {
+              this.next();
+            }
+          }
+        }, tick);
+      },
+
+      next() {
+        this.activeIndex = (this.activeIndex + 1) % this.studies.length;
+        this.progress = 0;
+        this.scrollToActive();
+      },
+
+      goTo(index) {
+        this.activeIndex = index;
+        this.progress = 0;
+        this.isPlaying = false; // Pause when user manually selects
+        this.scrollToActive();
+      },
+
+      togglePlay() {
+        this.isPlaying = !this.isPlaying;
+        if (this.isPlaying) {
+          this.progress = 0; // Reset progress when resuming
+        }
+      },
+
+      scrollToActive() {
+        // Scroll only the tab container horizontally (not the page)
+        this.$nextTick(() => {
+          const container = this.$refs.tabsContainer;
+          const buttons = container.querySelectorAll('button');
+          const activeButton = buttons[this.activeIndex];
+
+          if (activeButton && container) {
+            // Calculate scroll position to center the active button
+            const containerWidth = container.offsetWidth;
+            const buttonLeft = activeButton.offsetLeft;
+            const buttonWidth = activeButton.offsetWidth;
+
+            // Scroll container only (not the page)
+            container.scrollTo({
+              left: buttonLeft - (containerWidth / 2) + (buttonWidth / 2),
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    }
+  }
+</script>
+
+{# =====================================================
+   SERVICES SLIDER
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="max-w-2xl mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">Engineering excellence at every layer</h2>
+        <p class="text-lg text-gray-600">
+          From AI systems to data platforms, we build infrastructure-level solutions that compound value over time.
+        </p>
+      </div>
+      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all services
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    {# Services Slider #}
+    <div x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ services | length }} / 2) }" class="relative">
+      {# Slider Container #}
+      <div class="overflow-hidden">
+        <div
+          class="flex transition-transform duration-500 ease-out"
+          :style="'transform: translateX(-' + (currentSlide * 100) + '%)'"
+        >
+          {% for service in services %}
+          <div class="w-full md:w-1/2 flex-shrink-0 px-2">
+            {# Service Card #}
+            <div class="bg-white border border-gray-200 overflow-hidden">
+              {# Card Top - Icon + Content #}
+              <div class="p-8 flex flex-col md:flex-row gap-6">
+                {# Icon #}
+                <div class="flex-shrink-0">
+                  <div class="w-20 h-20 flex items-center justify-center">
+                    {# SVG Gradient for service icons #}
+                    <svg width="0" height="0" class="absolute">
+                      <defs>
+                        <linearGradient id="service-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style="stop-color:#ff6b5c"/>
+                          <stop offset="100%" style="stop-color:#eb1600"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    {% if service.icon == "ai" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    {% elif service.icon == "chat" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    {% elif service.icon == "data" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                    </svg>
+                    {% elif service.icon == "code" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    {% elif service.icon == "cloud" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                    </svg>
+                    {% elif service.icon == "globe" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                    {% elif service.icon == "mobile" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    {% elif service.icon == "search" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    {% endif %}
+                  </div>
+                </div>
+
+                {# Divider #}
+                <div class="hidden md:block w-px bg-gray-200"></div>
+
+                {# Content #}
+                <div class="flex-1">
+                  <h3 class="text-2xl font-normal text-gray-900 mb-3">{{ service.title }}</h3>
+                  <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
+                  <a href="{{ service.url }}" class="inline-flex items-center justify-center px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+                    {{ service.cta }}
+                  </a>
+                </div>
+              </div>
+
+              {# Card Bottom - Client Logos #}
+              <div class="border-t border-gray-200 px-8 py-6">
+                <div class="flex items-center justify-end gap-6 md:gap-8">
+                  {% for client in service.clients %}
+                  <img
+                    src="{{ client.logo }}"
+                    alt="{{ client.name }}"
+                    class="h-5 w-auto object-contain"
+                  />
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {# Navigation #}
+      <div class="flex items-center justify-center gap-6 mt-8">
+        {# Prev Button #}
+        <button
+          @click="currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1"
+          class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        {# Dots #}
+        <div class="flex items-center gap-2">
+          <template x-for="i in totalSlides" :key="i">
+            <button
+              @click="currentSlide = i - 1"
+              class="w-2.5 h-2.5 rounded-full transition-colors"
+              :class="currentSlide === (i - 1) ? 'bg-zunkiree-600' : 'bg-gray-300 hover:bg-gray-400'"
+            ></button>
+          </template>
+        </div>
+
+        {# Next Button #}
+        <button
+          @click="currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0"
+          class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 9: CTA (Final)
+   SOLUTIONS BY INDUSTRY
    ===================================================== #}
-<section class="py-20 md:py-28 lg:py-36 relative overflow-hidden px-4 md:px-6">
-  {# Landscape Background Image #}
-  <div class="absolute inset-0">
-    <img src="/assets/images/testimonial-bg-mountains.jpg" alt="" class="w-full h-full object-cover" />
-  </div>
+<section class="py-16 md:py-24">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="max-w-2xl mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Solutions</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">AI-native systems for every industry</h2>
+    </div>
 
-  {# Dark Overlay #}
-  <div class="absolute inset-0 bg-black/30"></div>
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" class="absolute">
+      <defs>
+        <linearGradient id="solutions-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c"/>
+          <stop offset="100%" style="stop-color:#eb1600"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
-  <div class="max-w-[1200px] mx-auto relative z-10">
-    {# Frosted Glass Card #}
-    <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-8 md:p-12 lg:p-16 max-w-2xl mx-auto text-center border border-white/20" data-reveal>
-      <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-white tracking-[-0.03em] leading-[1.15] mb-6">
-        Start a conversation
-      </h2>
-      <p class="text-lg text-white/70 mb-10 leading-relaxed tracking-[-0.01em]">
-        Whether you're exploring Zunkiree Search, interested in partnerships, or learning more about our platforms, we're open to conversations.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200 hover:-translate-y-0.5">
-          Schedule a Demo
-          <span>&rarr;</span>
-        </a>
-        <a href="mailto:{{ site.email }}" class="inline-flex items-center gap-2 text-white/70 hover:text-white font-medium transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-          {{ site.email }}
-        </a>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {# Healthcare #}
+      <a href="/solutions/healthcare/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Healthcare</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
+
+      {# Manufacturing #}
+      <a href="/solutions/manufacturing/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Manufacturing</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
+
+      {# Legal #}
+      <a href="/solutions/legal/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Legal</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
+
+      {# Professional Services #}
+      <a href="/solutions/services/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Professional Services</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
+
+      {# Education #}
+      <a href="/solutions/education/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Education</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
+
+      {# Human Resources #}
+      <a href="/solutions/human-resources/" class="group flex items-center gap-6 p-6 border border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm transition-all">
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Human Resources</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      </a>
     </div>
   </div>
 </section>
+
+{# =====================================================
+   IN THE SPOTLIGHT
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Resources</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">In the spotlight</h2>
+      </div>
+      <a href="/resources/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all resources
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    {# Spotlight Cards Grid #}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {% for item in spotlight %}
+      <a href="{{ item.url }}" class="group block bg-white overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+        {# Card Image #}
+        <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+          <img
+            src="{{ item.image }}"
+            alt="{{ item.title }}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        {# Card Content #}
+        <div class="p-4">
+          {# Type Badge #}
+          <p class="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-1">{{ item.type }}</p>
+
+          {# Title #}
+          <h3 class="text-base font-normal text-gray-900 leading-snug line-clamp-2">
+            {{ item.title }}
+          </h3>
+
+          {# CTA Link #}
+          <span class="inline-flex items-center gap-1 text-sm text-blue-600 font-medium group-hover:gap-2 transition-all mt-8">
+            {{ item.cta }}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   CTA + FAQ SECTION
+   ===================================================== #}
+{% include "partials/cta-faq.njk" %}

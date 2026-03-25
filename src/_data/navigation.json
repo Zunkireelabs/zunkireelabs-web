@@ -1,64 +1,290 @@
 {
   "main": [
     {
-      "label": "Product",
+      "label": "Products",
       "hasDropdown": true,
-      "dropdownType": "product",
-      "items": [
-        {
-          "id": "zunkiree-search",
-          "label": "Zunkiree Search",
-          "description": "AI-native search and interaction",
-          "extendedDescription": "Transform how users find and engage with information. AI-native search layer for modern, data-driven platforms that delivers intelligent, context-aware results.",
-          "icon": "search",
-          "badge": "Primary",
-          "url": "/products/search/"
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "AI PRODUCTS",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "Zunkiree Search",
+                "url": "/products/search/",
+                "icon": "search",
+                "description": "AI-native search that understands natural language and delivers direct answers"
+              },
+              {
+                "label": "Dental AI",
+                "url": "/products/dental-ai/",
+                "icon": "dental",
+                "description": "Practice management software with AI-powered patient communication"
+              },
+              {
+                "label": "Gaamma",
+                "url": "/products/gaamma/",
+                "icon": "chart",
+                "description": "Business analytics platform for data-driven decisions"
+              }
+            ],
+            "seeAll": { "label": "See all products", "url": "/products/" }
+          },
+          {
+            "header": "BUSINESS TOOLS",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "AI Booking Engine",
+                "url": "/products/ai-booking-engine/",
+                "icon": "calendar",
+                "description": "Intelligent scheduling that handles complex availability"
+              },
+              {
+                "label": "AI CRM",
+                "url": "/products/ai-crm/",
+                "icon": "users",
+                "description": "Customer intelligence that predicts needs and automates outreach"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "label": "FEATURED",
+          "title": "Try Zunkiree Search Free",
+          "description": "See how AI search delivers direct answers instead of links. Transform your customer experience.",
+          "cta": { "label": "Start free trial", "url": "/products/search/" },
+          "image": "/assets/images/nav/zunkiree-search-preview.svg"
         },
-        {
-          "id": "gaamma",
-          "label": "Gaamma",
-          "description": "Manufacturing ERP platform",
-          "extendedDescription": "Full-scale manufacturing ERP focused on operational efficiency and digital transformation. Built for modern factories and production workflows.",
-          "icon": "factory",
-          "url": "/products/gaamma/"
-        },
-        {
-          "id": "dental-ai",
-          "label": "Dental AI Assistant",
-          "description": "Vertical AI for dental workflows",
-          "extendedDescription": "AI assistant designed for dental operations and customer interaction. Streamlines patient communication and practice management.",
-          "icon": "health",
-          "badge": "Coming Soon",
-          "url": "/products/dental-ai/"
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
         }
-      ]
+      }
     },
     {
       "label": "Solutions",
-      "url": "/services/"
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "OUR SERVICES",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "AI Development",
+                "url": "/services/ai-development/",
+                "icon": "ai",
+                "description": "Custom AI systems, RAG pipelines, and LLM integration"
+              },
+              {
+                "label": "AI Customer Experience",
+                "url": "/services/ai-customer-experience/",
+                "icon": "chat",
+                "description": "Intelligent chatbots and conversational AI support"
+              },
+              {
+                "label": "Data Systems",
+                "url": "/services/data-systems/",
+                "icon": "database",
+                "description": "Data pipelines and AI-ready architecture"
+              },
+              {
+                "label": "Custom Software",
+                "url": "/services/custom-software/",
+                "icon": "code",
+                "description": "Enterprise apps and business tools"
+              },
+              {
+                "label": "SaaS Development",
+                "url": "/services/saas-development/",
+                "icon": "cloud",
+                "description": "Multi-tenant platforms with subscription billing"
+              },
+              {
+                "label": "Web & App Development",
+                "url": "/services/web-development/",
+                "icon": "globe",
+                "description": "High-performance sites and mobile apps"
+              },
+              {
+                "label": "AEO & SEO",
+                "url": "/services/aeo-seo/",
+                "icon": "trending",
+                "description": "Get found by Google and AI assistants"
+              }
+            ],
+            "seeAll": { "label": "See all services", "url": "/services/" }
+          },
+          {
+            "header": "USE CASES",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "Customer Support",
+                "url": "/solutions/customer-support/",
+                "icon": "headset",
+                "description": "Reduce support tickets 45% with AI"
+              },
+              {
+                "label": "Internal Search",
+                "url": "/solutions/internal-search/",
+                "icon": "search-doc",
+                "description": "Find answers in seconds, not hours"
+              },
+              {
+                "label": "Knowledge Management",
+                "url": "/solutions/knowledge-management/",
+                "icon": "book",
+                "description": "Organize & surface institutional knowledge"
+              },
+              {
+                "label": "Digital Transformation",
+                "url": "/solutions/digital-transformation/",
+                "icon": "transform",
+                "description": "Modernize legacy systems with AI"
+              }
+            ]
+          },
+          {
+            "header": "BY INDUSTRY",
+            "type": "simple",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/" },
+              { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
+              { "label": "Legal", "url": "/solutions/legal/" },
+              { "label": "Professional Services", "url": "/solutions/services/" },
+              { "label": "Education", "url": "/solutions/education/" },
+              { "label": "Human Resources", "url": "/solutions/human-resources/" }
+            ],
+            "seeAll": { "label": "See all industries", "url": "/solutions/" }
+          }
+        ],
+        "featured": {
+          "label": "CASE STUDY",
+          "title": "Admizz reduced response time by 45%",
+          "description": "See how AI-powered search transformed student inquiry management.",
+          "cta": { "label": "Read case study", "url": "/resources/admizz-case-study/" },
+          "image": "/assets/images/nav/case-study-preview.svg"
+        },
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
     },
     {
-      "label": "Company",
+      "label": "Resources",
       "hasDropdown": true,
-      "dropdownType": "simple",
-      "items": [
-        { "label": "About", "description": "Our story and mission", "url": "/about/" },
-        { "label": "Careers", "description": "Join our team", "url": "/careers/" }
-      ]
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "LEARN",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "Reports & Research",
+                "url": "/resources/?type=report",
+                "icon": "report",
+                "description": "Industry insights and market analysis"
+              },
+              {
+                "label": "Ebooks & Guides",
+                "url": "/resources/?type=ebook",
+                "icon": "book-open",
+                "description": "Implementation playbooks and how-to resources"
+              },
+              {
+                "label": "Webinars & Events",
+                "url": "/resources/?type=webinar",
+                "icon": "video",
+                "description": "On-demand learning and upcoming events"
+              },
+              {
+                "label": "Case Studies",
+                "url": "/resources/?type=case-study",
+                "icon": "briefcase",
+                "description": "See how customers succeed with Zunkiree"
+              }
+            ],
+            "seeAll": { "label": "See all resources", "url": "/resources/" }
+          },
+          {
+            "header": "COMPANY",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "About Us",
+                "url": "/about/",
+                "icon": "building",
+                "description": "Our mission, values, and team"
+              },
+              {
+                "label": "Careers",
+                "url": "/careers/",
+                "icon": "briefcase",
+                "description": "Join the Zunkiree team"
+              },
+              {
+                "label": "Contact",
+                "url": "/contact/",
+                "icon": "mail",
+                "description": "Get in touch with us"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "label": "FEATURED REPORT",
+          "title": "State of AI in Nepal 2026",
+          "description": "The definitive guide to AI adoption across Nepali industries. Free download.",
+          "cta": { "label": "Download report", "url": "/resources/state-of-ai-nepal-2026/" },
+          "image": "/assets/images/nav/nepal-report-preview.svg"
+        },
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
     }
   ],
   "footer": {
     "products": [
       { "label": "Zunkiree Search", "url": "/products/search/" },
+      { "label": "Dental AI", "url": "/products/dental-ai/" },
       { "label": "Gaamma", "url": "/products/gaamma/" },
-      { "label": "Dental AI Assistant", "url": "/products/dental-ai/" }
+      { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
+      { "label": "AI CRM", "url": "/products/ai-crm/" }
+    ],
+    "services": [
+      { "label": "AI Development", "url": "/services/ai-development/" },
+      { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/" },
+      { "label": "Data Systems", "url": "/services/data-systems/" },
+      { "label": "Custom Software", "url": "/services/custom-software/" },
+      { "label": "SaaS Development", "url": "/services/saas-development/" },
+      { "label": "Web Development", "url": "/services/web-development/" },
+      { "label": "App Development", "url": "/services/app-development/" },
+      { "label": "AEO & SEO", "url": "/services/aeo-seo/" }
     ],
     "solutions": [
-      { "label": "Web Development", "url": "/services/#web" },
-      { "label": "AI Solutions", "url": "/services/#ai" },
-      { "label": "Mobile Apps", "url": "/services/#mobile" },
-      { "label": "UI/UX Design", "url": "/services/" },
-      { "label": "Cloud & DevOps", "url": "/services/" }
+      { "label": "Healthcare", "url": "/solutions/healthcare/" },
+      { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
+      { "label": "Legal", "url": "/solutions/legal/" },
+      { "label": "Professional Services", "url": "/solutions/services/" },
+      { "label": "Education", "url": "/solutions/education/" },
+      { "label": "Human Resources", "url": "/solutions/human-resources/" }
+    ],
+    "resources": [
+      { "label": "Reports & Research", "url": "/resources/?type=report" },
+      { "label": "Ebooks & Guides", "url": "/resources/?type=ebook" },
+      { "label": "Case Studies", "url": "/resources/?type=case-study" },
+      { "label": "Webinars", "url": "/resources/?type=webinar" }
     ],
     "company": [
       { "label": "About Us", "url": "/about/" },

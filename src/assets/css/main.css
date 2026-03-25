@@ -3,9 +3,84 @@
 @tailwind utilities;
 
 /* =====================================================
-   ZUNKIREE LABS - Light Theme Design System
-   Primary: #eb1600 (Zunkiree Red)
+   ZUNKIREE LABS - Revamp Design System
+   Primary: Navy #1b3139 | Accent: Red #eb1600
+   Style: Pure Minimal (IBM structure + Databricks colors)
    ===================================================== */
+
+/* =====================================================
+   CSS Variables - Light/Dark Theme
+   ===================================================== */
+:root {
+  /* Background colors */
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --background-muted: #f1f5f9;
+
+  /* Foreground/text colors */
+  --foreground: #0f172a;
+  --foreground-muted: #64748b;
+  --foreground-subtle: #94a3b8;
+
+  /* Card/surface colors */
+  --card: #ffffff;
+  --card-hover: #f8fafc;
+
+  /* Border colors */
+  --border: #e2e8f0;
+  --border-muted: #f1f5f9;
+
+  /* Primary (Zunkiree Red) */
+  --primary: #eb1600;
+  --primary-hover: #cc1300;
+  --primary-muted: #fef2f2;
+
+  /* Secondary (Navy) */
+  --secondary: #1b3139;
+  --secondary-hover: #152830;
+  --secondary-muted: #e0e7ea;
+
+  /* Header */
+  --header-bg: #ffffff;
+  --header-border: #e5e7eb;
+
+  /* Footer stays dark in both modes */
+  --footer-bg: #1b3139;
+}
+
+.dark {
+  /* Background colors */
+  --background: #0f172a;
+  --background-alt: #1e293b;
+  --background-muted: #334155;
+
+  /* Foreground/text colors */
+  --foreground: #f8fafc;
+  --foreground-muted: #94a3b8;
+  --foreground-subtle: #64748b;
+
+  /* Card/surface colors */
+  --card: #1e293b;
+  --card-hover: #334155;
+
+  /* Border colors */
+  --border: #334155;
+  --border-muted: #1e293b;
+
+  /* Primary (Zunkiree Red - slightly brighter in dark) */
+  --primary: #f43f5e;
+  --primary-hover: #fb7185;
+  --primary-muted: #4c1d1d;
+
+  /* Secondary (lighter for dark mode) */
+  --secondary: #cbd5e1;
+  --secondary-hover: #e2e8f0;
+  --secondary-muted: #334155;
+
+  /* Header */
+  --header-bg: #0f172a;
+  --header-border: #1e293b;
+}
 
 /* Base Styles */
 @layer base {
@@ -14,7 +89,9 @@
   }
 
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
   /* Selection */
@@ -22,21 +99,25 @@
     @apply bg-zunkiree-100 text-zunkiree-900;
   }
 
-  /* Scrollbar - Light theme */
+  .dark ::selection {
+    @apply bg-zunkiree-900 text-zunkiree-100;
+  }
+
+  /* Scrollbar - Minimal */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    background-color: var(--background-alt);
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-full;
+    background-color: var(--border);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400;
+    background-color: var(--foreground-subtle);
   }
 
   /* Focus styles */
@@ -46,15 +127,26 @@
 
   /* Typography defaults */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold text-gray-900;
+    @apply font-display font-medium;
+    color: var(--foreground);
   }
 
   p {
-    @apply text-gray-600 leading-relaxed;
+    @apply leading-relaxed;
+    color: var(--foreground-muted);
   }
 
   a {
     @apply transition-colors duration-200;
+  }
+
+  /* Smooth theme transitions */
+  body,
+  .card,
+  header,
+  footer,
+  main {
+    @apply transition-colors duration-300;
   }
 }
 
@@ -64,43 +156,63 @@
      Container
      ===================================================== */
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-6;
+  }
+
+  .container-narrow {
+    @apply max-w-narrow mx-auto px-4 sm:px-6 lg:px-6;
+  }
+
+  .container-full {
+    @apply w-full px-4 sm:px-6 lg:px-6;
   }
 
   /* =====================================================
-     Buttons
+     Buttons - Sharp Edges (Databricks Style)
      ===================================================== */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 font-medium rounded-none transition-all duration-200 cursor-pointer;
   }
 
-  /* Primary - Red filled */
+  /* Primary - Red filled (sharp edges) */
   .btn-primary {
-    @apply btn px-6 py-3 bg-zunkiree-600 text-white hover:bg-zunkiree-700 shadow-sm hover:shadow-btn active:scale-[0.98];
+    @apply btn px-7 py-3.5 bg-zunkiree-600 text-white hover:bg-zunkiree-700 active:scale-[0.98];
   }
 
   .btn-primary-lg {
-    @apply btn px-8 py-4 text-lg bg-zunkiree-600 text-white hover:bg-zunkiree-700 shadow-sm hover:shadow-btn active:scale-[0.98];
+    @apply btn px-8 py-4 text-lg bg-zunkiree-600 text-white hover:bg-zunkiree-700 active:scale-[0.98];
   }
 
-  /* Secondary - Red outline */
+  /* Secondary - Navy filled */
   .btn-secondary {
-    @apply btn px-6 py-3 bg-white text-zunkiree-600 border-2 border-zunkiree-600 hover:bg-zunkiree-50 active:scale-[0.98];
+    @apply btn px-7 py-3.5 bg-navy text-white hover:bg-navy-800 active:scale-[0.98];
   }
 
-  /* Outline - Gray */
+  .btn-secondary-lg {
+    @apply btn px-8 py-4 text-lg bg-navy text-white hover:bg-navy-800 active:scale-[0.98];
+  }
+
+  /* Outline - Navy border */
   .btn-outline {
-    @apply btn px-6 py-3 bg-transparent text-gray-700 border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98];
+    @apply btn px-7 py-3.5 bg-transparent text-navy border border-navy hover:bg-navy hover:text-white active:scale-[0.98];
+  }
+
+  .btn-outline-light {
+    @apply btn px-7 py-3.5 bg-transparent text-white border border-white hover:bg-white hover:text-navy active:scale-[0.98];
   }
 
   /* Ghost - Text only */
   .btn-ghost {
-    @apply btn px-4 py-2 text-zunkiree-600 hover:bg-zunkiree-50 rounded-lg;
+    @apply btn px-4 py-2 text-zunkiree-600 hover:bg-zunkiree-50;
   }
 
   /* Button with arrow */
   .btn-arrow {
     @apply inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200;
+  }
+
+  .btn-arrow-navy {
+    @apply inline-flex items-center gap-2 text-navy font-medium hover:gap-3 transition-all duration-200;
   }
 
   /* Button sizes */
@@ -113,10 +225,12 @@
   }
 
   /* =====================================================
-     Cards
+     Cards - Clean, Minimal (with dark mode)
      ===================================================== */
   .card {
-    @apply bg-white rounded-xl border border-gray-200 p-6 transition-all duration-300;
+    @apply p-6 transition-all duration-300;
+    background-color: var(--card);
+    border: 1px solid var(--border);
   }
 
   .card-shadow {
@@ -124,36 +238,47 @@
   }
 
   .card-hover {
-    @apply card shadow-card hover:shadow-card-hover hover:-translate-y-1;
+    @apply card shadow-subtle hover:shadow-card;
+  }
+
+  .card-hover:hover {
+    border-color: var(--border);
+    background-color: var(--card-hover);
   }
 
   .card-bordered {
-    @apply card hover:border-zunkiree-200;
+    @apply card;
   }
 
-  /* Service card with icon - use group class directly in HTML */
-  .card-service {
+  .card-bordered:hover {
+    border-color: var(--foreground-subtle);
+  }
+
+  /* Feature card */
+  .card-feature {
     @apply card-hover p-8;
   }
 
   .card-icon {
-    @apply w-12 h-12 bg-zunkiree-100 rounded-lg flex items-center justify-center text-zunkiree-600 mb-6 transition-colors duration-300;
+    @apply w-12 h-12 flex items-center justify-center mb-6 transition-colors duration-300;
+    background-color: var(--primary-muted);
+    color: var(--primary);
   }
 
   .group:hover .card-icon {
     @apply bg-zunkiree-600 text-white;
   }
 
-  /* Testimonial card */
-  .card-testimonial {
-    @apply card shadow-card p-8;
+  /* Product card */
+  .card-product {
+    @apply card-hover p-8 flex flex-col;
   }
 
   /* =====================================================
-     Sections
+     Sections - IBM-style Spacing
      ===================================================== */
   .section {
-    @apply py-16 lg:py-24;
+    @apply py-section-sm md:py-section-md lg:py-section;
   }
 
   .section-lg {
@@ -161,61 +286,115 @@
   }
 
   .section-alt {
-    @apply bg-gray-50;
+    background-color: var(--background-alt);
   }
 
   .section-dark {
-    @apply bg-gray-900 text-white;
+    @apply bg-navy text-white;
   }
 
   .section-dark p {
-    @apply text-gray-300;
+    @apply text-navy-200;
+  }
+
+  /* Dark mode keeps section-dark the same */
+  .dark .section-dark {
+    @apply bg-navy text-white;
+  }
+
+  /* Section headings */
+  .section-label {
+    @apply text-caption uppercase tracking-widest font-medium mb-4;
+    color: var(--primary);
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4;
+    @apply text-h2 md:text-display-1 font-bold mb-4 text-balance;
+    color: var(--foreground);
   }
 
   .section-heading-dark {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4;
+    @apply text-h2 md:text-display-1 font-bold text-white mb-4 text-balance;
   }
 
   .section-subheading {
-    @apply text-lg md:text-xl text-gray-600 max-w-2xl;
+    @apply text-body-lg max-w-2xl;
+    color: var(--foreground-muted);
   }
 
   .section-subheading-dark {
-    @apply text-lg md:text-xl text-gray-400 max-w-2xl;
+    @apply text-body-lg text-navy-200 max-w-2xl;
+  }
+
+  /* =====================================================
+     Hero Components
+     ===================================================== */
+  .hero {
+    @apply relative overflow-hidden;
+  }
+
+  .hero-headline {
+    @apply text-display-1 md:text-display-2 font-bold leading-tight text-balance;
+    color: var(--foreground);
+  }
+
+  .hero-headline-dark {
+    @apply text-display-1 md:text-display-2 font-bold text-white leading-tight text-balance;
+  }
+
+  .hero-subheadline {
+    @apply text-body-lg md:text-h4 max-w-2xl;
+    color: var(--foreground-muted);
   }
 
   /* =====================================================
      Tags / Badges
      ===================================================== */
   .tag {
-    @apply inline-flex items-center px-3 py-1 text-sm font-medium rounded-full;
+    @apply inline-flex items-center px-3 py-1 text-caption font-medium;
   }
 
   .tag-primary {
-    @apply tag bg-zunkiree-100 text-zunkiree-700;
+    @apply tag bg-zunkiree-50 text-zunkiree-700;
+  }
+
+  .tag-navy {
+    @apply tag bg-navy-100 text-navy;
   }
 
   .tag-neutral {
-    @apply tag bg-gray-100 text-gray-700;
+    @apply tag bg-warm-gray text-navy;
   }
 
   .tag-success {
-    @apply tag bg-green-100 text-green-700;
+    @apply tag bg-success-50 text-success-600;
   }
 
   /* =====================================================
-     Form Elements
+     Form Elements (with dark mode)
      ===================================================== */
   .input {
-    @apply w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:border-zunkiree-500 focus:ring-2 focus:ring-zunkiree-500/20 outline-none transition-all;
+    @apply w-full px-4 py-3 outline-none transition-all;
+    background-color: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+  }
+
+  .input::placeholder {
+    color: var(--foreground-subtle);
+  }
+
+  .input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(235, 22, 0, 0.1);
+  }
+
+  .dark .input:focus {
+    box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.2);
   }
 
   .input-error {
-    @apply input border-red-500 focus:border-red-500 focus:ring-red-500/20;
+    @apply input border-error focus:border-error;
   }
 
   .textarea {
@@ -224,19 +403,20 @@
 
   .select {
     @apply input appearance-none bg-no-repeat bg-right pr-10;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
     background-size: 1.5em 1.5em;
   }
 
   .label {
-    @apply block text-sm font-medium text-gray-700 mb-2;
+    @apply block text-small font-medium mb-2;
+    color: var(--foreground);
   }
 
   /* =====================================================
      Navigation
      ===================================================== */
   .nav-link {
-    @apply text-gray-600 hover:text-gray-900 font-medium transition-colors;
+    @apply text-navy hover:text-zunkiree-600 font-medium transition-colors;
   }
 
   .nav-link-active {
@@ -247,22 +427,22 @@
      Stats
      ===================================================== */
   .stat-value {
-    @apply text-4xl md:text-5xl font-bold text-zunkiree-600 mb-2;
+    @apply text-display-1 font-bold text-zunkiree-600 mb-2;
   }
 
   .stat-label {
-    @apply text-gray-600 font-medium;
+    @apply text-warm-muted font-medium;
   }
 
   /* =====================================================
      Dividers
      ===================================================== */
   .divider {
-    @apply border-t border-gray-200;
+    border-top: 1px solid var(--border);
   }
 
   .divider-dark {
-    @apply border-t border-gray-700;
+    @apply border-t border-navy-700;
   }
 
   /* =====================================================
@@ -273,66 +453,166 @@
   }
 
   .logo-cloud img {
-    @apply h-8 md:h-10 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300;
+    @apply h-8 md:h-10 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300;
   }
 
   /* =====================================================
-     FAQ Accordion
+     Logo Marquee (Social Proof Bar)
+     ===================================================== */
+  .marquee-fade-light {
+    position: relative;
+  }
+
+  .marquee-fade-light::before,
+  .marquee-fade-light::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-fade-light::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(255 255 255) 0%, transparent 100%);
+  }
+
+  .marquee-fade-light::after {
+    right: 0;
+    background: linear-gradient(to left, rgb(255 255 255) 0%, transparent 100%);
+  }
+
+  .animate-marquee-scroll {
+    animation: marquee-scroll 25s linear infinite;
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pause on hover */
+  .marquee-fade-light:hover .animate-marquee-scroll {
+    animation-play-state: paused;
+  }
+
+  /* =====================================================
+     FAQ Accordion (with dark mode)
      ===================================================== */
   .faq-item {
-    @apply border-b border-gray-200;
+    border-bottom: 1px solid var(--border);
   }
 
   .faq-question {
-    @apply w-full flex items-center justify-between py-5 text-left text-lg font-semibold text-gray-900 hover:text-zunkiree-600 transition-colors;
+    @apply w-full flex items-center justify-between py-5 text-left text-h4 font-semibold transition-colors;
+    color: var(--foreground);
+  }
+
+  .faq-question:hover {
+    color: var(--primary);
   }
 
   .faq-answer {
-    @apply pb-5 text-gray-600 leading-relaxed;
+    @apply pb-5 leading-relaxed;
+    color: var(--foreground-muted);
+  }
+
+  /* =====================================================
+     Grid Layouts
+     ===================================================== */
+  .grid-features {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  }
+
+  .grid-products {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  }
+
+  .grid-solutions {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4;
+  }
+
+  .grid-services {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+
+  /* =====================================================
+     Definition Blocks (AEO) - with dark mode
+     ===================================================== */
+  .definition-block {
+    @apply border-l-4 p-6 my-8;
+    background-color: var(--background-alt);
+    border-left-color: var(--primary);
+  }
+
+  .definition-term {
+    @apply text-h4 font-bold mb-2;
+    color: var(--foreground);
+  }
+
+  .definition-text {
+    @apply text-body;
+    color: var(--foreground-muted);
+  }
+
+  /* =====================================================
+     Logo Marquee Dark Mode
+     ===================================================== */
+  .dark .marquee-fade-light::before {
+    background: linear-gradient(to right, var(--background) 0%, transparent 100%);
+  }
+
+  .dark .marquee-fade-light::after {
+    background: linear-gradient(to left, var(--background) 0%, transparent 100%);
+  }
+
+  /* =====================================================
+     CTA Shimmer Animation
+     ===================================================== */
+  .cta-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 60%,
+      transparent 100%
+    );
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    50%, 100% {
+      left: 100%;
+    }
   }
 }
 
-/* Animation Utilities */
+/* Utilities */
 @layer utilities {
   /* Hide on Alpine x-cloak */
   [x-cloak] {
     display: none !important;
-  }
-
-  /* Reveal animations */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Stagger delays */
-  .stagger-1 { transition-delay: 0.1s; }
-  .stagger-2 { transition-delay: 0.2s; }
-  .stagger-3 { transition-delay: 0.3s; }
-  .stagger-4 { transition-delay: 0.4s; }
-  .stagger-5 { transition-delay: 0.5s; }
-
-  /* Gradient backgrounds */
-  .bg-gradient-radial {
-    background: radial-gradient(ellipse at center, var(--tw-gradient-from), var(--tw-gradient-to));
-  }
-
-  /* Hero gradient - Light theme */
-  .hero-gradient {
-    background:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(235, 22, 0, 0.08), transparent),
-      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(235, 22, 0, 0.05), transparent),
-      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(235, 22, 0, 0.03), transparent);
-  }
-
-  /* Gradient text */
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-zunkiree-600 via-zunkiree-500 to-zunkiree-700;
   }
 
   /* Text balance for headings */
@@ -340,146 +620,26 @@
     text-wrap: balance;
   }
 
-  /* Smooth image loading */
-  .img-loading {
-    @apply bg-gray-100 animate-pulse;
-  }
-
   /* Skip link */
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zunkiree-600 focus:text-white focus:rounded-lg;
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zunkiree-600 focus:text-white;
   }
-}
 
-/* =====================================================
-   Hero Visual Element - Abstract shapes
-   ===================================================== */
-.hero-visual {
-  position: relative;
-}
-
-.hero-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.5;
-}
-
-.hero-shape-1 {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, rgba(235, 22, 0, 0.2), rgba(255, 107, 92, 0.1));
-  top: -100px;
-  right: -100px;
-  animation: float 8s ease-in-out infinite;
-}
-
-.hero-shape-2 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, rgba(235, 22, 0, 0.15), rgba(255, 61, 42, 0.08));
-  bottom: -50px;
-  left: -50px;
-  animation: float 10s ease-in-out infinite reverse;
-}
-
-/* =====================================================
-   Duna-inspired Hero Section
-   ===================================================== */
-.hero-duna {
-  background-color: #FEFDFB;
-}
-
-.hero-duna .hero-bg {
-  pointer-events: none;
-}
-
-.hero-duna .hero-landscape svg {
-  filter: blur(0.5px);
-}
-
-.hero-duna .hero-headline {
-  text-wrap: balance;
-}
-
-/* Subtle parallax effect on scroll */
-@media (prefers-reduced-motion: no-preference) {
-  .hero-landscape {
-    will-change: transform;
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
-}
-
-/* =====================================================
-   Scroll animations (GSAP triggers)
-   Note: GSAP handles these animations via JavaScript.
-   Initial states are set by GSAP, not CSS.
-   ===================================================== */
-
-/* =====================================================
-   Hero Bar Animation (Equalizer effect)
-   ===================================================== */
-.hero-bar {
-  animation: barPulse 4s ease-in-out infinite;
-  transform-origin: bottom;
-  box-shadow: 0 0 30px rgba(235, 22, 0, 0.3);
-}
-
-@keyframes barPulse {
-  0%, 100% {
-    transform: scaleY(1);
-    opacity: var(--tw-opacity, 1);
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
   }
-  50% {
-    transform: scaleY(0.7);
-    opacity: calc(var(--tw-opacity, 1) * 0.6);
-  }
-}
-
-/* Staggered bar animations */
-.hero-bar:nth-child(odd) {
-  animation-duration: 3.5s;
-}
-
-.hero-bar:nth-child(3n) {
-  animation-duration: 4.5s;
-}
-
-.hero-bar:nth-child(5n) {
-  animation-duration: 5s;
-}
-
-/* Bar glow effect */
-.hero-bars {
-  filter: drop-shadow(0 0 20px rgba(235, 22, 0, 0.2));
-}
-
-/* =====================================================
-   Counter animation
-   ===================================================== */
-[data-counter] {
-  font-variant-numeric: tabular-nums;
-}
-
-/* =====================================================
-   Mobile menu animation
-   ===================================================== */
-.mobile-menu {
-  @apply fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out;
-}
-
-.mobile-menu.closed {
-  @apply translate-x-full;
-}
-
-.mobile-menu.open {
-  @apply translate-x-0;
 }
 
 /* =====================================================
    Smooth scroll offset for fixed header
    ===================================================== */
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 60px;
 }
 
 /* =====================================================
@@ -497,106 +657,4 @@ html {
   a {
     text-decoration: underline;
   }
-}
-
-/* =====================================================
-   Logo Marquee Animation
-   ===================================================== */
-.marquee-container {
-  overflow: hidden;
-  width: 100%;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 4rem;
-  animation: marquee 25s linear infinite;
-  width: max-content;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Fade edges for seamless look */
-.marquee-fade {
-  position: relative;
-}
-
-.marquee-fade::before,
-.marquee-fade::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.marquee-fade::before {
-  left: 0;
-  background: linear-gradient(to right, white, transparent);
-}
-
-.marquee-fade::after {
-  right: 0;
-  background: linear-gradient(to left, white, transparent);
-}
-
-.data-source-box,
-.user-exp-box {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.data-source-box:hover,
-.user-exp-box:hover {
-  transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(235, 22, 0, 0.1);
-}
-
-/* Mobile flow dot glow effect */
-.mobile-flow-dot {
-  filter: drop-shadow(0 0 6px rgba(235, 22, 0, 0.6));
-}
-
-/* =====================================================
-   Testimonials Marquee Animation (Twitter-style)
-   ===================================================== */
-@keyframes marquee-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes marquee-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animate-marquee-left {
-  animation: marquee-left 40s linear infinite;
-}
-
-.animate-marquee-right {
-  animation: marquee-right 40s linear infinite;
-}
-
-/* Pause marquee on hover */
-.animate-marquee-left:hover,
-.animate-marquee-right:hover {
-  animation-play-state: paused;
 }

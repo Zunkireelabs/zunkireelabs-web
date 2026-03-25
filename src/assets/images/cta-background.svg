@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <!-- Light base -->
+  <rect width="800" height="600" fill="#F9FAFB"/>
+
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3F4F6"/>
+      <stop offset="100%" style="stop-color:#F9FAFB"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E8553D;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#E8553D;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#ctaGrad)"/>
+
+  <!-- Abstract geometric shapes -->
+  <!-- Large circle top right -->
+  <circle cx="700" cy="100" r="200" fill="#E8553D" opacity="0.06"/>
+  <circle cx="700" cy="100" r="150" fill="none" stroke="#E8553D" stroke-width="1.5" opacity="0.15"/>
+  <circle cx="700" cy="100" r="100" fill="none" stroke="#E8553D" stroke-width="1" opacity="0.1"/>
+
+  <!-- Diagonal lines -->
+  <line x1="0" y1="400" x2="300" y2="100" stroke="#E8553D" stroke-width="1.5" opacity="0.12"/>
+  <line x1="0" y1="500" x2="400" y2="100" stroke="#E8553D" stroke-width="1" opacity="0.1"/>
+  <line x1="0" y1="600" x2="500" y2="100" stroke="#E8553D" stroke-width="1" opacity="0.08"/>
+
+  <!-- Grid dots pattern -->
+  <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="20" cy="20" r="1.5" fill="#E8553D" opacity="0.15"/>
+  </pattern>
+  <rect x="450" y="250" width="350" height="350" fill="url(#dots)"/>
+
+  <!-- Bottom left accent -->
+  <circle cx="50" cy="550" r="150" fill="#E8553D" opacity="0.05"/>
+  <circle cx="50" cy="550" r="100" fill="none" stroke="#E8553D" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="50" cy="550" r="60" fill="none" stroke="#E8553D" stroke-width="1" opacity="0.08"/>
+
+  <!-- Corner accents -->
+  <path d="M0 0 L120 0 L0 120 Z" fill="#E8553D" opacity="0.04"/>
+  <path d="M800 600 L680 600 L800 480 Z" fill="#E8553D" opacity="0.04"/>
+
+  <!-- Floating small elements -->
+  <circle cx="150" cy="150" r="6" fill="#E8553D" opacity="0.2"/>
+  <circle cx="600" cy="400" r="4" fill="#E8553D" opacity="0.18"/>
+  <circle cx="400" cy="80" r="3" fill="#E8553D" opacity="0.15"/>
+  <circle cx="700" cy="500" r="8" fill="#E8553D" opacity="0.12"/>
+  <circle cx="250" cy="450" r="5" fill="#E8553D" opacity="0.15"/>
+
+  <!-- Horizontal accent lines -->
+  <rect x="0" y="300" width="250" height="3" fill="url(#accentGrad)"/>
+  <rect x="600" y="200" width="200" height="2" fill="url(#accentGrad)" transform="rotate(180, 700, 201)"/>
+
+  <!-- Additional geometric elements -->
+  <rect x="650" cy="350" width="40" height="40" fill="none" stroke="#E8553D" stroke-width="1" opacity="0.1" transform="rotate(45, 670, 370)"/>
+  <rect x="100" cy="250" width="30" height="30" fill="none" stroke="#E8553D" stroke-width="1" opacity="0.08" transform="rotate(45, 115, 265)"/>
+</svg>

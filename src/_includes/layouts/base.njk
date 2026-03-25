@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Prevent FOUC: Apply theme immediately before page renders -->
+  <script>
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
   <script>
@@ -27,6 +39,86 @@
   <meta name="twitter:title" content="{{ title or site.meta.title }}">
   <meta name="twitter:description" content="{{ description or site.description }}">
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Schema.org Structured Data - Organization (Global) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zunkiree Labs",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/zunkiree-logo.png",
+    "description": "{{ site.description }}",
+    "sameAs": [
+      "{{ site.social.twitter }}",
+      "{{ site.social.linkedin }}",
+      "{{ site.social.github }}"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "contact@zunkireelabs.com",
+      "url": "{{ site.url }}/contact/"
+    }
+  }
+  </script>
+
+  <!-- Schema.org - WebSite with SearchAction -->
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zunkiree Labs",
+    "url": "{{ site.url }}/",
+    "description": "{{ site.description }}"
+  }
+  </script>
+  {% endif %}
+
+  <!-- Schema.org - Page-specific (Product/Article/FAQ) -->
+  {% if schemaType == "product" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{ title }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "{{ description }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "provider": {
+      "@type": "Organization",
+      "name": "Zunkiree Labs",
+      "url": "{{ site.url }}"
+    }
+  }
+  </script>
+  {% endif %}
+
+  {% if faqs %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for faq in faqs %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.question }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.answer }}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
@@ -40,7 +132,7 @@
   <!-- Main JS + CSS (bundled via Vite) -->
   <script type="module" src="/assets/js/main.js"></script>
 </head>
-<body class="bg-white text-gray-900 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+<body class="font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
 
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>

@@ -1,0 +1,253 @@
+---
+layout: base.njk
+title: AI vs Traditional Software for Kathmandu Enterprises | Zunkiree Labs
+description: A decision framework for Nepal's tech sector. When to use AI vs traditional software, with Nepal-specific considerations and case examples.
+permalink: /resources/ai-vs-traditional-software-kathmandu/
+---
+
+{% set resource = resources.items | find("slug", "ai-vs-traditional-software-kathmandu") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-gray-800 text-white text-xs font-medium tracking-wide mb-4">
+        Whitepaper
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/state-of-ai-nepal-2026/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              State of AI in Nepal 2026
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/ai-implementation-guide-nepal/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI Implementation Guide for Nepal SMEs
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/khushbu-nirman-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khushbu Nirman Sewa
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The AI hype vs reality</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            <strong>79% of Nepali industries</strong> are not yet ready for AI adoption. That's not necessarily a problem. Not every business process benefits from AI, and rushing into AI can waste resources on solutions that don't fit.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            This whitepaper provides a practical decision framework for Kathmandu enterprises. When does AI deliver clear ROI? When is traditional software the better choice? And when should you consider hybrid approaches?
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Decision matrix: AI vs Traditional</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b-2 border-gray-300">
+                  <th class="py-3 pr-4 text-warm-black font-medium">Criteria</th>
+                  <th class="py-3 px-4 text-warm-black font-medium">Choose AI</th>
+                  <th class="py-3 pl-4 text-warm-black font-medium">Choose Traditional</th>
+                </tr>
+              </thead>
+              <tbody class="text-warm-600">
+                <tr class="border-b border-gray-200">
+                  <td class="py-3 pr-4 font-medium">Data volume</td>
+                  <td class="py-3 px-4">Large, unstructured</td>
+                  <td class="py-3 pl-4">Small, structured</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3 pr-4 font-medium">Rules</td>
+                  <td class="py-3 px-4">Complex, hard to define</td>
+                  <td class="py-3 pl-4">Clear, explicit</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3 pr-4 font-medium">Accuracy need</td>
+                  <td class="py-3 px-4">"Good enough" acceptable</td>
+                  <td class="py-3 pl-4">100% required</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3 pr-4 font-medium">Patterns</td>
+                  <td class="py-3 px-4">Hidden, evolving</td>
+                  <td class="py-3 pl-4">Known, static</td>
+                </tr>
+                <tr class="border-b border-gray-200">
+                  <td class="py-3 pr-4 font-medium">Input type</td>
+                  <td class="py-3 px-4">Natural language, images</td>
+                  <td class="py-3 pl-4">Forms, structured data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">When AI delivers clear ROI</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-green-50 border-l-4 border-green-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Customer service automation</p>
+              <p class="text-warm-600">Chatbots handling FAQs, ticket routing, and basic support. 60-80% of queries can be automated.</p>
+            </div>
+            <div class="p-4 bg-green-50 border-l-4 border-green-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Document processing</p>
+              <p class="text-warm-600">Extracting data from invoices, contracts, and forms. Reduces manual entry by 80%+.</p>
+            </div>
+            <div class="p-4 bg-green-50 border-l-4 border-green-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Search and discovery</p>
+              <p class="text-warm-600">Finding information in large content repositories. Users find answers 3x faster with AI search.</p>
+            </div>
+            <div class="p-4 bg-green-50 border-l-4 border-green-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Predictive maintenance</p>
+              <p class="text-warm-600">Manufacturing and construction. Predict equipment failures before they happen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">When traditional software is better</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50 border-l-4 border-gray-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Accounting and compliance</p>
+              <p class="text-warm-600">When 100% accuracy is required and rules are clearly defined. AI adds risk without benefit.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-gray-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Simple CRUD applications</p>
+              <p class="text-warm-600">Basic data entry, inventory tracking, scheduling. Traditional software is simpler and cheaper.</p>
+            </div>
+            <div class="p-4 bg-gray-50 border-l-4 border-gray-500">
+              <p class="text-lg font-medium text-warm-black mb-1">Low data volume</p>
+              <p class="text-warm-600">When you have hundreds, not thousands, of records. AI needs data to learn patterns.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Is AI always more expensive than traditional software?</h3>
+              <p class="text-warm-600">Not necessarily. Cloud AI services (chatbots, document processing) can be cheaper than custom development. The cost depends on the use case, not the technology. This whitepaper includes cost comparison frameworks.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Can we start with traditional and add AI later?</h3>
+              <p class="text-warm-600">Yes, and this is often the best approach. Start with traditional software to establish processes and collect data. Add AI once you have clear use cases and sufficient training data.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What about hybrid approaches?</h3>
+              <p class="text-warm-600">Many successful implementations combine AI and traditional software. AI handles ambiguous inputs, traditional rules handle clear-cut cases. The whitepaper covers patterns for hybrid architectures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Artificial Intelligence"
+    },
+    {
+      "@type": "Thing",
+      "name": "Software Development"
+    }
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Kathmandu, Nepal"
+  }
+}
+</script>
