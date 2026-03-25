@@ -164,6 +164,11 @@ jobs:
             # Login to GHCR
             echo "${GHCR_PAT}" | docker login ghcr.io -u github --password-stdin
 
+            # Clean up any corrupted image layers (fixes "lease does not exist" errors)
+            echo "Cleaning up old images for ${IMAGE_NAME}..."
+            docker image rm "${IMAGE}" 2>/dev/null || true
+            docker image prune -f --filter "label=org.opencontainers.image.source=https://github.com/Zunkireelabs/zunkireelabs-web" 2>/dev/null || true
+
             # Pull the new image
             echo "Pulling ${IMAGE}..."
             docker pull "${IMAGE}"
