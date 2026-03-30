@@ -44,8 +44,6 @@ export default function (eleventyConfig) {
           strict: false
         },
         allowedHosts: [
-          'zunkiree.com',
-          'www.zunkiree.com',
           'zunkireelabs.com',
           'www.zunkireelabs.com',
           '.zunkireelabs.com',
