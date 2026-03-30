@@ -1,0 +1,15 @@
+---
+pagination:
+  data: glossary
+  size: 1
+  alias: term
+layout: glossary-term.njk
+permalink: /glossary/{{ term.id }}/
+eleventyComputed:
+  title: "{{ term.term }} | AI Glossary | Zunkiree Labs"
+  description: "{{ term.shortDef }} Learn what {{ term.term }} means and how it applies to AI development."
+  termId: "{{ term.id }}"
+---
+
+{# Individual glossary term pages are generated from glossary data #}
+{# Content is rendered by the glossary-term.njk layout #}

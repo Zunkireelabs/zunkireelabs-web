@@ -1,0 +1,237 @@
+---
+layout: base.njk
+---
+
+{# Get current comparison data #}
+{% set comp = null %}
+{% for c in comparisons %}
+  {% if c.id == comparisonId %}
+    {% set comp = c %}
+  {% endif %}
+{% endfor %}
+
+{# =====================================================
+   PRODUCT COMPARISON SCHEMA
+   ===================================================== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ comp.title }}",
+  "description": "{{ comp.description }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Zunkiree Search",
+          "applicationCategory": "AI Search Platform",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "{{ comp.competitor.name }}",
+          "applicationCategory": "Search Platform"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+{# =====================================================
+   HERO SECTION
+   ===================================================== #}
+<section class="pt-20 md:pt-28 pb-12 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/compare/" class="text-zunkiree-600 hover:underline">Compare</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">{{ comp.competitor.name }}</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Comparison</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight leading-[1.1] text-gray-900 mb-6">
+        {{ comp.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        {{ comp.description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   COMPARISON TABLE
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">Feature comparison</h2>
+
+    <div class="bg-white border border-gray-200 overflow-hidden">
+      {# Table Header #}
+      <div class="grid grid-cols-3 bg-gray-100 border-b border-gray-200">
+        <div class="p-4 font-medium text-gray-900">Feature</div>
+        <div class="p-4 font-medium text-zunkiree-600 text-center border-l border-gray-200">Zunkiree Search</div>
+        <div class="p-4 font-medium text-gray-700 text-center border-l border-gray-200">{{ comp.competitor.name }}</div>
+      </div>
+
+      {# Table Rows #}
+      {% for row in comp.comparison %}
+      <div class="grid grid-cols-3 border-b border-gray-200 last:border-b-0">
+        <div class="p-4 text-gray-700">{{ row.feature }}</div>
+        <div class="p-4 text-center border-l border-gray-200 bg-zunkiree-50/50">
+          <span class="text-gray-900">{{ row.zunkiree }}</span>
+        </div>
+        <div class="p-4 text-center border-l border-gray-200">
+          <span class="text-gray-600">{{ row.competitor }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   STRENGTHS & WEAKNESSES
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      {# Zunkiree Strengths #}
+      <div class="border-2 border-zunkiree-200 bg-zunkiree-50/30 p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="/assets/images/zunkireelabs-logo-round.svg" alt="Zunkiree" class="h-8 w-8" />
+          <h3 class="text-xl font-medium text-gray-900">Zunkiree Search</h3>
+        </div>
+        <p class="text-sm text-gray-600 mb-6">AI-native search that provides answers</p>
+        <ul class="space-y-3">
+          {% for strength in comp.zunkiree.strengths %}
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-gray-700">{{ strength }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      {# Competitor #}
+      <div class="border border-gray-200 p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="h-8 w-8 bg-gray-200 rounded flex items-center justify-center text-gray-500 text-xs font-medium">
+            {{ comp.competitor.name | first }}
+          </div>
+          <h3 class="text-xl font-medium text-gray-900">{{ comp.competitor.name }}</h3>
+        </div>
+        <p class="text-sm text-gray-600 mb-6">{{ comp.competitor.description }}</p>
+
+        <div class="space-y-6">
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-3">Strengths</p>
+            <ul class="space-y-2">
+              {% for strength in comp.competitor.strengths %}
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-gray-600 text-sm">{{ strength }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-3">Limitations</p>
+            <ul class="space-y-2">
+              {% for weakness in comp.competitor.weaknesses %}
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <span class="text-gray-600 text-sm">{{ weakness }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   BEST FOR / VERDICT
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">When to choose each</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white border border-gray-200 p-6">
+        <p class="text-sm font-medium text-zunkiree-600 mb-2">Choose Zunkiree Search when:</p>
+        <p class="text-gray-600">{{ comp.bestFor.zunkiree }}</p>
+      </div>
+      <div class="bg-white border border-gray-200 p-6">
+        <p class="text-sm font-medium text-gray-700 mb-2">Choose {{ comp.competitor.name }} when:</p>
+        <p class="text-gray-600">{{ comp.bestFor.competitor }}</p>
+      </div>
+    </div>
+
+    <div class="bg-white border-2 border-zunkiree-200 p-8">
+      <h3 class="text-lg font-medium text-gray-900 mb-4">Our verdict</h3>
+      <p class="text-gray-600 leading-relaxed">{{ comp.verdict }}</p>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CTA SECTION
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 text-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal mb-4">
+      Ready to try Zunkiree Search?
+    </h2>
+    <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+      See how AI-native search can transform your customer experience.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/products/search/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-zunkiree-700 font-medium hover:bg-gray-100 transition-colors" data-track="cta" data-cta-id="compare-product">
+        Explore Zunkiree Search
+      </a>
+      <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 border border-white text-white font-medium hover:bg-white/10 transition-colors" data-track="cta" data-cta-id="compare-contact">
+        Talk to Sales
+      </a>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   OTHER COMPARISONS
+   ===================================================== #}
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl font-normal text-gray-900 mb-6">Other comparisons</h2>
+    <div class="flex flex-wrap gap-3">
+      {% for c in comparisons %}
+      {% if c.id != comp.id %}
+      <a href="/compare/{{ c.id }}/" class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 hover:bg-zunkiree-50 hover:text-zunkiree-700 transition-colors">
+        {{ c.title }}
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

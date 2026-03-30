@@ -1,0 +1,170 @@
+---
+layout: base.njk
+---
+
+{# Get current term data #}
+{% set currentTerm = null %}
+{% for t in glossary %}
+  {% if t.id == termId %}
+    {% set currentTerm = t %}
+  {% endif %}
+{% endfor %}
+
+{# Get related service #}
+{% set relatedService = null %}
+{% for svc in services %}
+  {% if svc.id == currentTerm.relatedService %}
+    {% set relatedService = svc %}
+  {% endif %}
+{% endfor %}
+
+{# =====================================================
+   DEFINED TERM SCHEMA
+   ===================================================== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": "{{ site.url }}/glossary/{{ currentTerm.id }}/#term",
+  "name": "{{ currentTerm.term }}",
+  "description": "{{ currentTerm.definition | replace('"', '\\"') }}",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Zunkiree Labs AI Glossary",
+    "url": "{{ site.url }}/glossary/"
+  }
+}
+</script>
+
+{# FAQPage schema for the definition #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is {{ currentTerm.term }}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ currentTerm.definition | replace('"', '\\"') }}"
+      }
+    }
+  ]
+}
+</script>
+
+{# =====================================================
+   HERO SECTION
+   ===================================================== #}
+<section class="pt-20 md:pt-28 pb-12 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/glossary/" class="text-zunkiree-600 hover:underline">Glossary</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">{{ currentTerm.term }}</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      {# Main Content #}
+      <div class="lg:col-span-8">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">{{ currentTerm.category }}</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight leading-[1.1] text-gray-900 mb-6">
+          {{ currentTerm.term }}
+        </h1>
+
+        {# Short Definition (40-60 words for AEO) #}
+        <div class="bg-zunkiree-50 border-l-4 border-zunkiree-600 p-6 mb-8">
+          <p class="text-lg text-gray-800 font-medium leading-relaxed">
+            {{ currentTerm.shortDef }}
+          </p>
+        </div>
+
+        {# Full Definition #}
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-600 leading-relaxed">
+            {{ currentTerm.definition }}
+          </p>
+        </div>
+
+        {# Related Service Link #}
+        {% if relatedService %}
+        <div class="mt-12 p-6 bg-gray-50 border border-gray-200">
+          <p class="text-sm text-gray-500 mb-2">Related Service</p>
+          <a href="/services/{{ relatedService.id }}/" class="group flex items-center justify-between">
+            <div>
+              <h3 class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">{{ relatedService.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ relatedService.description | truncate(100) }}</p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+        {% endif %}
+      </div>
+
+      {# Sidebar #}
+      <div class="lg:col-span-4">
+        <div class="sticky top-24">
+          {# Related Terms #}
+          <div class="bg-gray-50 p-6 mb-6">
+            <h3 class="font-medium text-gray-900 mb-4">Related Terms</h3>
+            <ul class="space-y-3">
+              {% set count = 0 %}
+              {% for t in glossary %}
+                {% if t.category == currentTerm.category and t.id != currentTerm.id and count < 5 %}
+                  {% set count = count + 1 %}
+                  <li>
+                    <a href="/glossary/{{ t.id }}/" class="text-zunkiree-600 hover:underline text-sm">{{ t.term }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+
+          {# CTA #}
+          <div class="bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 p-6 text-white">
+            <h3 class="font-medium mb-2">Need help implementing {{ currentTerm.term | split('(') | first | trim }}?</h3>
+            <p class="text-white/80 text-sm mb-4">Our team can build this for your business.</p>
+            <a href="/contact/" class="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-zunkiree-700 font-medium hover:bg-gray-100 transition-colors text-sm" data-track="cta" data-cta-id="glossary-term-cta">
+              Get Expert Help
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   MORE TERMS
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-normal text-gray-900 mb-8">Explore more AI terms</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {% set count = 0 %}
+      {% for t in glossary | sort(attribute='term') %}
+        {% if t.id != currentTerm.id and count < 8 %}
+          {% set count = count + 1 %}
+          <a href="/glossary/{{ t.id }}/" class="group block bg-white border border-gray-200 p-4 hover:border-zunkiree-400 transition-colors">
+            <p class="text-xs text-zunkiree-600 mb-1">{{ t.category }}</p>
+            <h3 class="font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors text-sm">{{ t.term }}</h3>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="mt-8 text-center">
+      <a href="/glossary/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all terms
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

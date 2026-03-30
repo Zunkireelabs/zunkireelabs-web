@@ -1,0 +1,15 @@
+---
+pagination:
+  data: comparisons
+  size: 1
+  alias: comparison
+layout: comparison.njk
+permalink: /compare/{{ comparison.id }}/
+eleventyComputed:
+  title: "{{ comparison.title }} | Search Comparison | Zunkiree Labs"
+  description: "{{ comparison.description }}"
+  comparisonId: "{{ comparison.id }}"
+---
+
+{# Individual comparison pages are generated from comparisons data #}
+{# Content is rendered by the comparison.njk layout #}
