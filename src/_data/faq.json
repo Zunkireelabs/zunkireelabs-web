@@ -1,22 +1,42 @@
 [
   {
-    "question": "What is Zunkiree Search?",
-    "answer": "Zunkiree Search is an AI-native search platform that delivers direct answers through natural language queries. Unlike keyword-based search, it understands context and intent, connecting your business data to customer-facing experiences for faster information discovery."
+    "question": "What is Zunkiree Labs?",
+    "answer": "Zunkiree Labs is an AI development company in Kathmandu, Nepal that builds production-grade AI systems including RAG pipelines, AI agents, and enterprise search platforms. Founded in 2018, we serve businesses globally with custom AI infrastructure that delivers measurable results—not prototypes or wrappers."
   },
   {
-    "question": "How does AI-native search work?",
-    "answer": "AI-native search uses large language models and retrieval systems to understand what users actually mean, not just keywords. It indexes your content, processes natural language queries, and returns accurate, contextual answers instead of link lists."
-  },
-  {
-    "question": "What industries does Zunkiree serve?",
-    "answer": "Zunkiree Labs serves technology companies, e-commerce, healthcare, education, and professional services. Any business with customer-facing content, documentation, or knowledge bases can benefit from AI-powered search and interaction."
-  },
-  {
-    "question": "How long does integration take?",
-    "answer": "Most customers integrate Zunkiree Search within 2 hours using our JavaScript widget. Enterprise API integrations typically take 1-2 weeks depending on data complexity and custom requirements."
+    "question": "What AI services does Zunkiree Labs offer?",
+    "answer": "Zunkiree Labs offers comprehensive AI development services: custom AI agents, RAG (Retrieval Augmented Generation) pipelines, AI-native search implementation, LLM integration, chatbot development, document processing AI, and enterprise AI consulting. We also provide web development, mobile app development, and SaaS development services from Nepal."
   },
   {
     "question": "Is Zunkiree Labs based in Nepal?",
-    "answer": "Yes, Zunkiree Labs is headquartered in Kathmandu, Nepal. We build world-class AI products from Nepal for international markets, combining local engineering talent with global product standards."
+    "answer": "Yes, Zunkiree Labs is headquartered in Kathmandu, Nepal. We are a leading AI company in Nepal serving clients globally. Our engineering team combines deep AI expertise with cost-effective delivery, making us a competitive choice for businesses seeking quality AI development from Nepal."
+  },
+  {
+    "question": "What makes Zunkiree Labs different from other software companies in Nepal?",
+    "answer": "Unlike traditional software companies in Nepal, Zunkiree Labs specializes in AI infrastructure and production-grade AI systems. We build RAG pipelines, AI agents, and semantic search—technologies most competitors don't offer. Our focus is AI-first development, not generic outsourcing."
+  },
+  {
+    "question": "How much does AI development cost in Nepal?",
+    "answer": "AI development costs in Nepal are typically 40-60% lower than US or European rates while maintaining international quality standards. Zunkiree Labs offers flexible pricing including project-based, monthly retainers, and dedicated team models. Contact us for a custom quote based on your specific AI project requirements."
+  },
+  {
+    "question": "What is RAG and why is it important?",
+    "answer": "RAG (Retrieval Augmented Generation) is an AI architecture that combines large language models with your business data to generate accurate, contextual responses. It's essential for building AI chatbots, search systems, and knowledge assistants that answer questions using your specific content rather than generic training data. Zunkiree Labs specializes in production RAG pipelines."
+  },
+  {
+    "question": "Can Zunkiree Labs build custom AI agents for my business?",
+    "answer": "Yes, Zunkiree Labs builds custom AI agents for various business functions including customer support automation, document processing, data analysis, and workflow automation. Our AI agents integrate with your existing systems and are designed for production deployment, not just demos."
+  },
+  {
+    "question": "What is Zunkiree Search?",
+    "answer": "Zunkiree Search is our flagship AI-native search platform that delivers direct answers through natural language queries. Unlike keyword-based search, it understands context and intent, providing accurate responses from your business content. Companies using Zunkiree Search report up to 45% reduction in support tickets."
+  },
+  {
+    "question": "Does Zunkiree Labs work with international clients?",
+    "answer": "Yes, Zunkiree Labs serves clients globally from our Kathmandu office. We work with businesses in the US, Europe, Australia, and across Asia. Our team operates in overlapping time zones with both European and American business hours, ensuring smooth collaboration."
+  },
+  {
+    "question": "How do I get started with Zunkiree Labs?",
+    "answer": "Contact us through our website to schedule a free consultation. We'll discuss your AI requirements, assess technical feasibility, and provide a detailed proposal with timeline and pricing. Most projects begin within 1-2 weeks of agreement."
   }
 ]

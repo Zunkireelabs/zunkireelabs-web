@@ -1,7 +1,7 @@
 {
   "name": "Zunkiree Labs",
-  "tagline": "AI-native search and interaction for modern platforms",
-  "description": "Zunkiree Labs builds AI-native search and interaction systems that connect business data to customer-facing experiences through natural language. Our platform reduces support queries by 45% while improving information discovery 3x.",
+  "tagline": "AI Development Company in Nepal | Custom AI Systems & Software",
+  "description": "Zunkiree Labs is a leading AI development company in Kathmandu, Nepal. We build production-grade AI systems, RAG pipelines, AI agents, and enterprise software for businesses globally. Founded in 2018, we specialize in custom AI solutions, web development, and SaaS platforms.",
   "url": "https://zunkireelabs.com",
   "email": "contact@zunkireelabs.com",
   "phone": "+977-9849839728",
@@ -16,7 +16,7 @@
     "github": "https://github.com/zunkiree"
   },
   "meta": {
-    "title": "Zunkiree Labs | AI-Native Search & Interaction Platform",
+    "title": "Zunkiree Labs | AI Development Company Nepal | Custom AI Systems",
     "ogImage": "/assets/images/og-image.svg"
   }
 }
