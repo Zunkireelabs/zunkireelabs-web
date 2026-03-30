@@ -1,6 +1,9 @@
 // Import CSS (required for Vite bundling)
 import '../css/main.css';
 
+// Import GA4 analytics tracking
+import './analytics.js';
+
 // Import Alpine.js and plugins
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';

@@ -1,0 +1,48 @@
+{#
+  Optimized Picture Component
+  Usage:
+    {% include "components/picture.njk" with {
+      src: "/assets/images/hero.jpg",
+      alt: "Description",
+      width: 1200,
+      height: 800,
+      lazy: true,  (default: true, set false for above-fold hero images)
+      class: "w-full h-auto",
+      sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    } %}
+
+  Note: This component assumes images are in /assets/images/
+  For external images (Unsplash, etc.), use regular img tags with width/height
+#}
+
+{% set isLazy = lazy if lazy !== undefined else true %}
+{% set imgSizes = sizes if sizes else "(max-width: 768px) 100vw, 50vw" %}
+
+{# Extract base path and extension #}
+{% set pathParts = src | split('.') %}
+{% set extension = pathParts | last %}
+{% set basePath = src | replace('.' + extension, '') %}
+
+<picture>
+  {# AVIF format - best compression #}
+  {% if extension != 'svg' %}
+  <source
+    srcset="{{ basePath }}.avif"
+    type="image/avif"
+  />
+  {# WebP format - wide support #}
+  <source
+    srcset="{{ basePath }}.webp"
+    type="image/webp"
+  />
+  {% endif %}
+  {# Fallback to original format #}
+  <img
+    src="{{ src }}"
+    alt="{{ alt }}"
+    width="{{ width }}"
+    height="{{ height }}"
+    {% if isLazy %}loading="lazy" decoding="async"{% else %}fetchpriority="high"{% endif %}
+    {% if class %}class="{{ class }}"{% endif %}
+  />
+</picture>

@@ -57,10 +57,10 @@ schemaType: service
 
         {# CTAs - Homepage style buttons #}
         <div class="flex flex-col sm:flex-row items-start gap-4" data-reveal>
-          <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+          <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors" data-track="cta" data-cta-id="service-hero-primary">
             {{ service.cta.primaryButton.text }}
           </a>
-          <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
+          <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors" data-track="cta" data-cta-id="service-hero-secondary">
             {{ service.cta.secondaryButton.text }}
           </a>
         </div>
@@ -591,13 +591,13 @@ schemaType: service
         {{ service.cta.description }}
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-zunkiree-600 text-white font-medium text-sm hover:bg-zunkiree-700 transition-colors">
+        <a href="{{ service.cta.primaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-zunkiree-600 text-white font-medium text-sm hover:bg-zunkiree-700 transition-colors" data-track="cta" data-cta-id="service-bottom-primary">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z"/>
           </svg>
           {{ service.cta.primaryButton.text }}
         </a>
-        <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-zunkiree-600 text-zunkiree-600 font-medium text-sm hover:bg-zunkiree-50 transition-colors">
+        <a href="{{ service.cta.secondaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-zunkiree-600 text-zunkiree-600 font-medium text-sm hover:bg-zunkiree-50 transition-colors" data-track="cta" data-cta-id="service-bottom-secondary">
           {{ service.cta.secondaryButton.text }}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

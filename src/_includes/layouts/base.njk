@@ -40,6 +40,14 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
+  <!-- Preload Critical Resources for LCP -->
+  {% if page.url == "/" %}
+  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
   <!-- Schema.org Structured Data - Organization (Global) -->
   <script type="application/ld+json">
   {
