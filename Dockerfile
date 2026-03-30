@@ -1,6 +1,10 @@
 # Stage 1: Build the static site
 FROM node:20-alpine AS builder
 
+# Build arguments
+ARG GA_MEASUREMENT_ID
+ENV GA_MEASUREMENT_ID=$GA_MEASUREMENT_ID
+
 WORKDIR /app
 
 # Copy package files for dependency install

@@ -129,6 +129,8 @@ jobs:
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.resolve-env.outputs.image_tag }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
+          build-args: |
+            GA_MEASUREMENT_ID=${{ needs.resolve-env.outputs.is_production == 'true' && secrets.GA_MEASUREMENT_ID || '' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
