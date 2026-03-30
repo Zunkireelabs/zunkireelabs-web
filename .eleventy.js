@@ -78,13 +78,44 @@ export default function (eleventyConfig) {
     return array.find(item => item[attr] === value);
   });
 
-  // Date filter for sitemap (ISO format)
+  // Date filter with multiple format support
   eleventyConfig.addFilter("date", function(date, format) {
     const d = new Date(date);
     if (format === "%Y-%m-%d") {
       return d.toISOString().split('T')[0];
     }
+    if (format === "%B %d, %Y") {
+      return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    if (format === "%B %Y") {
+      return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+    }
     return d.toISOString();
+  });
+
+  // Head filter - limit array to first N items
+  eleventyConfig.addFilter("head", function(array, n) {
+    if (!array || !Array.isArray(array)) return [];
+    return array.slice(0, n);
+  });
+
+  // Reject items where attribute equals value
+  eleventyConfig.addFilter("rejectattr", function(array, attr, comparison, value) {
+    if (!array || !Array.isArray(array)) return [];
+    if (comparison === "equalto") {
+      return array.filter(item => {
+        const itemValue = attr.split('.').reduce((obj, key) => obj?.[key], item);
+        return itemValue !== value;
+      });
+    }
+    return array;
+  });
+
+  // Truncate filter
+  eleventyConfig.addFilter("truncate", function(str, length) {
+    if (!str) return '';
+    if (str.length <= length) return str;
+    return str.substring(0, length) + '...';
   });
 
   // Split filter for breadcrumbs
