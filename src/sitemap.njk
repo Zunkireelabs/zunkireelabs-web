@@ -1,0 +1,44 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.w3.org/2000/sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%- if page.url and not page.data.excludeFromSitemap %}
+{%- set priority = "0.5" %}
+{%- set changefreq = "monthly" %}
+{%- if page.url == "/" %}
+  {%- set priority = "1.0" %}
+  {%- set changefreq = "weekly" %}
+{%- elif "/services/" in page.url and page.url != "/services/" %}
+  {%- set priority = "0.9" %}
+  {%- set changefreq = "weekly" %}
+{%- elif page.url == "/services/" %}
+  {%- set priority = "0.9" %}
+  {%- set changefreq = "weekly" %}
+{%- elif "/products/" in page.url and page.url != "/products/" %}
+  {%- set priority = "0.8" %}
+  {%- set changefreq = "weekly" %}
+{%- elif page.url == "/products/" %}
+  {%- set priority = "0.8" %}
+  {%- set changefreq = "weekly" %}
+{%- elif "/resources/" in page.url %}
+  {%- set priority = "0.7" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/about/" or page.url == "/contact/" %}
+  {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/careers/" or page.url == "/customers/" or page.url == "/projects/" %}
+  {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- endif %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date | date("%Y-%m-%d") }}</lastmod>
+    <changefreq>{{ changefreq }}</changefreq>
+    <priority>{{ priority }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>

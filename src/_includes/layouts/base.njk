@@ -17,17 +17,25 @@
   <title>{{ title or site.meta.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
 
+  <!-- Robots: noindex for non-production environments -->
+  {% if env.ELEVENTY_ENV != 'production' %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or site.meta.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:image" content="{{ site.url }}{{ site.meta.ogImage }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="{{ site.name }}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title or site.meta.title }}">
   <meta name="twitter:description" content="{{ description or site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.meta.ogImage }}">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -37,10 +45,22 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
     "name": "Zunkiree Labs",
     "url": "{{ site.url }}",
-    "logo": "{{ site.url }}/assets/images/zunkiree-logo.png",
-    "description": "{{ site.description }}",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "description": "AI infrastructure company building custom AI systems, RAG pipelines, AI agents, and enterprise software. Headquartered in Kathmandu, Nepal.",
+    "foundingDate": "2018",
+    "founder": {
+      "@type": "Person",
+      "name": "Sadin Shrestha"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati Province",
+      "addressCountry": "NP"
+    },
     "sameAs": [
       "{{ site.social.twitter }}",
       "{{ site.social.linkedin }}",
@@ -49,13 +69,14 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "sales",
-      "email": "contact@zunkireelabs.com",
+      "email": "{{ site.email }}",
+      "telephone": "{{ site.phone }}",
       "url": "{{ site.url }}/contact/"
     }
   }
   </script>
 
-  <!-- Schema.org - WebSite with SearchAction -->
+  <!-- Schema.org - WebSite (Homepage only) -->
   {% if page.url == "/" %}
   <script type="application/ld+json">
   {
@@ -66,9 +87,39 @@
     "description": "{{ site.description }}"
   }
   </script>
+  <!-- Schema.org - LocalBusiness (Homepage only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "{{ site.url }}/#localbusiness",
+    "name": "Zunkiree Labs",
+    "description": "AI development company in Kathmandu, Nepal. Custom AI systems, AI agents, RAG pipelines, and enterprise software.",
+    "url": "{{ site.url }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "image": "{{ site.url }}/assets/images/og-image.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati",
+      "addressCountry": "NP"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
   {% endif %}
 
-  <!-- Schema.org - Page-specific (Product/Article/FAQ) -->
+  <!-- Schema.org - Page-specific (Product/Service/Article) -->
   {% if schemaType == "product" %}
   <script type="application/ld+json">
   {
@@ -88,13 +139,56 @@
   </script>
   {% endif %}
 
-  {% if faqs %}
+  {% if schemaType == "service" and serviceId %}
+  {%- set serviceData = servicesDetails[serviceId] -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "{{ site.url }}{{ page.url }}#service",
+    "name": "{{ serviceData.title }}",
+    "description": "{{ serviceData.description }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "serviceType": "{{ serviceData.category }}",
+    "provider": {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "Zunkiree Labs",
+      "url": "{{ site.url }}"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Nepal"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "{{ serviceData.title }} Services",
+      "itemListElement": [
+        {% for useCase in serviceData.useCases %}
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "{{ useCase.title }}",
+            "description": "{{ useCase.description }}"
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
+  {# FAQPage schema - supports both explicit faqs and service page FAQs #}
+  {%- set pageFaqs = faqs if faqs else (servicesDetails[serviceId].faq if serviceId and servicesDetails[serviceId] else null) -%}
+  {% if pageFaqs %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {% for faq in faqs %}
+      {% for faq in pageFaqs %}
       {
         "@type": "Question",
         "name": "{{ faq.question }}",
@@ -102,6 +196,35 @@
           "@type": "Answer",
           "text": "{{ faq.answer }}"
         }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- Schema.org - BreadcrumbList (all pages except homepage) -->
+  {% if page.url != "/" %}
+  {%- set urlParts = page.url | split("/") -%}
+  {%- set breadcrumbPath = "" -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ site.url }}/"
+      }{% if urlParts.length > 0 %},{% endif %}
+      {% for part in urlParts %}
+      {%- set breadcrumbPath = breadcrumbPath + "/" + part -%}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index + 1 }},
+        "name": "{{ part | titleCase }}"{% if not loop.last %},
+        "item": "{{ site.url }}{{ breadcrumbPath }}/"{% endif %}
       }{% if not loop.last %},{% endif %}
       {% endfor %}
     ]

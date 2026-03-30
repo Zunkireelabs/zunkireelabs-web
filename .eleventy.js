@@ -1,11 +1,33 @@
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import path from "path";
+import fs from "fs";
+
+// Simple Vite plugin to copy non-HTML files (like sitemap.xml) after build
+function copyNonHtmlFiles() {
+  return {
+    name: 'copy-non-html-files',
+    closeBundle() {
+      const eleventyTempDir = path.resolve(process.cwd(), '.11ty-vite');
+      const outputDir = path.resolve(process.cwd(), 'dist');
+      const filesToCopy = ['sitemap.xml', 'robots.txt'];
+
+      filesToCopy.forEach(file => {
+        const src = path.join(eleventyTempDir, file);
+        const dest = path.join(outputDir, file);
+        if (fs.existsSync(src)) {
+          fs.copyFileSync(src, dest);
+        }
+      });
+    }
+  };
+}
 
 export default function (eleventyConfig) {
   // Vite Plugin with configuration
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: {
       publicDir: "public", // Static assets copied as-is
+      plugins: [copyNonHtmlFiles()],
       build: {
         emptyOutDir: false, // Preserve Eleventy files
         rollupOptions: {
@@ -54,6 +76,27 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("find", function(array, attr, value) {
     if (!array || !Array.isArray(array)) return null;
     return array.find(item => item[attr] === value);
+  });
+
+  // Date filter for sitemap (ISO format)
+  eleventyConfig.addFilter("date", function(date, format) {
+    const d = new Date(date);
+    if (format === "%Y-%m-%d") {
+      return d.toISOString().split('T')[0];
+    }
+    return d.toISOString();
+  });
+
+  // Split filter for breadcrumbs
+  eleventyConfig.addFilter("split", function(str, separator) {
+    if (!str) return [];
+    return str.split(separator).filter(s => s.length > 0);
+  });
+
+  // Title case filter
+  eleventyConfig.addFilter("titleCase", function(str) {
+    if (!str) return '';
+    return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   });
 
   return {

@@ -4,8 +4,8 @@
   "description": "Zunkiree Labs - Premium Tech Company Website",
   "type": "module",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "dev": "ELEVENTY_ENV=development eleventy --serve",
+    "build": "ELEVENTY_ENV=production eleventy",
     "clean": "rm -rf dist"
   },
   "keywords": [
