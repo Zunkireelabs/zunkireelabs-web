@@ -288,8 +288,16 @@
     ],
     "company": [
       { "label": "About Us", "url": "/about/" },
+      { "label": "Team", "url": "/team/" },
       { "label": "Careers", "url": "/careers/" },
-      { "label": "Contact", "url": "/contact/" }
+      { "label": "Contact", "url": "/contact/" },
+      { "label": "Blog", "url": "/blog/" }
+    ],
+    "locations": [
+      { "label": "Kathmandu", "url": "/locations/kathmandu/" },
+      { "label": "Lalitpur", "url": "/locations/lalitpur/" },
+      { "label": "Bhaktapur", "url": "/locations/bhaktapur/" },
+      { "label": "Pokhara", "url": "/locations/pokhara/" }
     ]
   }
 }

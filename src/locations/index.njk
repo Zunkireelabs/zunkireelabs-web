@@ -1,0 +1,96 @@
+---
+layout: base.njk
+title: "Locations | Zunkiree Labs Service Areas"
+description: "Zunkiree Labs serves clients across Nepal and globally. Our headquarters is in Kathmandu, with service coverage throughout the Kathmandu Valley and beyond."
+permalink: /locations/
+---
+
+{# =====================================================
+   LOCATIONS INDEX PAGE
+   ===================================================== #}
+
+<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Locations</span>
+    </nav>
+
+    <h1 class="text-4xl sm:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+      Our Locations
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mb-12">
+      Zunkiree Labs is headquartered in Kathmandu, Nepal, serving clients locally and globally. We provide AI development and software services across Nepal and to international clients.
+    </p>
+
+    {# Locations Grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for location in locations %}
+      <a href="/locations/{{ location.id }}/" class="group block bg-gray-50 rounded-lg p-6 hover:bg-zunkiree-600 transition-colors">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h2 class="text-xl font-medium text-gray-900 group-hover:text-white">
+              {{ location.name }}
+            </h2>
+            <p class="text-sm text-gray-500 group-hover:text-white/70">
+              {{ location.region }}, {{ location.country }}
+            </p>
+          </div>
+          {% if location.isHeadquarters %}
+          <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-zunkiree-100 text-zunkiree-700 rounded group-hover:bg-white/20 group-hover:text-white">
+            HQ
+          </span>
+          {% endif %}
+        </div>
+        <p class="text-gray-600 group-hover:text-white/80 text-sm line-clamp-2 mb-4">
+          {{ location.intro | truncate(120) }}
+        </p>
+        <div class="flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:text-white">
+          View location
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# International Clients Section #}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+      Serving Clients Globally
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl">
+      While headquartered in Nepal, we work with clients worldwide. Our remote collaboration processes ensure seamless communication across time zones.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">United States</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">United Kingdom</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Australia</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Germany</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Singapore</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">India</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">UAE</span>
+    </div>
+  </div>
+</section>
+
+{# CTA #}
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Ready to work with us?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Whether you're in Nepal or anywhere in the world, let's discuss how we can help.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Contact Us
+    </a>
+  </div>
+</section>

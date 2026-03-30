@@ -1,0 +1,176 @@
+---
+layout: base.njk
+---
+
+{# =====================================================
+   LOCATION × SERVICE PAGE LAYOUT
+   Programmatic SEO pages for local service queries
+   ===================================================== #}
+
+{% set location = null %}
+{% for loc in locations %}
+  {% if loc.id == locationId %}
+    {% set location = loc %}
+  {% endif %}
+{% endfor %}
+
+{% set service = null %}
+{% for svc in services %}
+  {% if svc.id == serviceId %}
+    {% set service = svc %}
+  {% endif %}
+{% endfor %}
+
+{% set serviceContent = location.services[serviceId] if location.services else null %}
+
+{# =====================================================
+   SERVICE SCHEMA
+   ===================================================== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ site.url }}/locations/{{ location.id }}/{{ service.id }}/#service",
+  "name": "{{ serviceContent.title | default(service.title + ' in ' + location.name) }}",
+  "description": "{{ serviceContent.description | default(service.description) }}",
+  "url": "{{ site.url }}/locations/{{ location.id }}/{{ service.id }}/",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "{{ site.url }}/locations/{{ location.id }}/#localbusiness",
+    "name": "Zunkiree Labs - {{ location.name }}"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ location.name }}",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "{{ location.country }}"
+    }
+  },
+  "serviceType": "{{ service.category }}"
+}
+</script>
+
+{# =====================================================
+   HERO SECTION
+   ===================================================== #}
+<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/locations/" class="text-zunkiree-600 hover:underline">Locations</a>
+      <span class="text-warm-400">/</span>
+      <a href="/locations/{{ location.id }}/" class="text-zunkiree-600 hover:underline">{{ location.name }}</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">{{ service.title }}</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">
+        {{ service.category }} in {{ location.name }}
+      </p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+        {{ serviceContent.title | default(service.title + ' in ' + location.name) }}
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+        {{ serviceContent.intro | default(service.description) }}
+      </p>
+
+      {# CTAs #}
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact/" class="inline-flex items-center justify-center px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+          Get Started
+        </a>
+        <a href="/services/{{ service.id }}/" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+          Learn More About {{ service.title }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   HIGHLIGHTS
+   ===================================================== #}
+{% if serviceContent.highlights %}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+      Why Choose Us for {{ service.title }} in {{ location.name }}
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {% for highlight in serviceContent.highlights %}
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-8 h-8 bg-zunkiree-100 rounded-full flex items-center justify-center">
+          <svg class="w-4 h-4 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <p class="text-gray-700">{{ highlight }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   RELATED SERVICES IN THIS LOCATION
+   ===================================================== #}
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+      Other Services in {{ location.name }}
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {% for svc in services %}
+      {% if svc.id != service.id %}
+      <a href="/locations/{{ location.id }}/{{ svc.id }}/" class="group block p-4 bg-gray-50 rounded-lg hover:bg-zunkiree-50 transition-colors">
+        <h3 class="font-medium text-gray-900 group-hover:text-zunkiree-600 text-sm">
+          {{ svc.title }}
+        </h3>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   OTHER LOCATIONS
+   ===================================================== #}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl font-normal text-gray-900 mb-6">
+      {{ service.title }} in Other Locations
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      {% for loc in locations %}
+      {% if loc.id != location.id %}
+      <a href="/locations/{{ loc.id }}/{{ service.id }}/" class="inline-flex items-center px-4 py-2 bg-white text-gray-700 rounded-full border border-gray-200 hover:border-zunkiree-300 hover:text-zunkiree-700 transition-colors">
+        {{ loc.name }}
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CTA
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 text-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal mb-4">
+      Ready for {{ service.title }} in {{ location.name }}?
+    </h2>
+    <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+      Let's discuss your project requirements.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-zunkiree-700 font-medium hover:bg-gray-100 transition-colors">
+      Contact Us
+    </a>
+  </div>
+</section>

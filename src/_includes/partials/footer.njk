@@ -46,18 +46,15 @@
       <div>
         <h4 class="text-white font-semibold mb-5 text-small uppercase tracking-wider">Services</h4>
         <ul class="space-y-3">
-          {% for item in navigation.footer.services | slice(4) %}
+          {% for item in navigation.footer.services %}
             <li>
               <a href="{{ item.url }}" class="text-navy-200 hover:text-white text-small transition-colors duration-200">{{ item.label }}</a>
             </li>
           {% endfor %}
-          <li>
-            <a href="/services/" class="text-zunkiree-400 hover:text-zunkiree-300 text-small transition-colors duration-200">View all &rarr;</a>
-          </li>
         </ul>
       </div>
 
-      <!-- Company Links -->
+      <!-- Company & Locations Links -->
       <div>
         <h4 class="text-white font-semibold mb-5 text-small uppercase tracking-wider">Company</h4>
         <ul class="space-y-3">
@@ -66,11 +63,17 @@
               <a href="{{ item.url }}" class="text-navy-200 hover:text-white text-small transition-colors duration-200">{{ item.label }}</a>
             </li>
           {% endfor %}
-          {% for item in navigation.footer.resources %}
+        </ul>
+        <h4 class="text-white font-semibold mb-5 mt-6 text-small uppercase tracking-wider">Locations</h4>
+        <ul class="space-y-3">
+          {% for item in navigation.footer.locations %}
             <li>
               <a href="{{ item.url }}" class="text-navy-200 hover:text-white text-small transition-colors duration-200">{{ item.label }}</a>
             </li>
           {% endfor %}
+          <li>
+            <a href="/locations/" class="text-zunkiree-400 hover:text-zunkiree-300 text-small transition-colors duration-200">All locations &rarr;</a>
+          </li>
         </ul>
       </div>
     </div>

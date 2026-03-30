@@ -555,9 +555,31 @@ schemaType: service
 {% endif %}
 
 {# =====================================================
+   SECTION 10.5: AVAILABLE IN LOCATIONS
+   ===================================================== #}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Service Locations</p>
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">
+      {{ service.title }} available in
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      {% for location in locations %}
+      <a href="/locations/{{ location.id }}/{{ serviceId }}/" class="inline-flex items-center px-5 py-2.5 bg-white text-gray-700 border border-gray-200 hover:border-zunkiree-400 hover:text-zunkiree-700 transition-colors">
+        {{ location.name }}
+        <svg class="w-4 h-4 ml-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
    SECTION 11: CTA + FAQ (IBM Vertical Stack)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-gray-50">
+<section class="py-12 md:py-20 bg-white">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {# TOP: CTA Block #}

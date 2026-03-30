@@ -1,0 +1,257 @@
+---
+layout: base.njk
+title: "Our Team | AI Engineers & Data Scientists | Zunkiree Labs"
+description: "Meet the team behind Zunkiree Labs. AI engineers, data scientists, and software developers building intelligent platforms from Kathmandu, Nepal."
+permalink: /team/
+---
+
+{# =====================================================
+   PERSON SCHEMA MARKUP
+   E-E-A-T signals for expertise and authority
+   ===================================================== #}
+{% for member in team %}
+{% if member.featured %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ site.url }}/team/#{{ member.id }}",
+  "name": "{{ member.name }}",
+  "jobTitle": "{{ member.role }}",
+  "description": "{{ member.bio | replace('"', '\\"') }}",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs",
+    "@id": "{{ site.url }}/#organization"
+  },
+  "knowsAbout": [
+    {% for skill in member.expertise %}"{{ skill }}"{% if not loop.last %}, {% endif %}{% endfor %}
+  ],
+  {% if member.social.linkedin %}"sameAs": ["{{ member.social.linkedin }}"{% if member.social.github %}, "{{ member.social.github }}"{% endif %}],{% endif %}
+  "image": "{{ site.url }}{{ member.image }}"
+}
+</script>
+{% endif %}
+{% endfor %}
+
+{# =====================================================
+   HERO SECTION
+   ===================================================== #}
+<section class="pt-20 md:pt-28 pb-12 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/about/" class="text-zunkiree-600 hover:underline">About</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Team</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Team</p>
+      <h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-6">
+        Building AI from Kathmandu
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        We're a team of engineers, data scientists, and AI specialists building intelligent software platforms. Based in Nepal with a global mindset, we combine deep technical expertise with practical business understanding.
+      </p>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   LEADERSHIP SECTION
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Leadership</p>
+      <h2 class="text-3xl md:text-4xl font-normal text-gray-900">Meet the founder</h2>
+    </div>
+
+    {% for member in team %}
+    {% if member.featured %}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      {# Image #}
+      <div class="lg:col-span-4">
+        <div class="aspect-[3/4] bg-gray-200 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face"
+            alt="{{ member.name }}"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {# Content #}
+      <div class="lg:col-span-8">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-2">{{ member.name }}</h3>
+        <p class="text-zunkiree-600 font-medium mb-6">{{ member.role }}</p>
+
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          {{ member.bio }}
+        </p>
+
+        {# Expertise Tags #}
+        <div class="mb-8">
+          <p class="text-sm font-medium text-gray-900 mb-3">Areas of Expertise</p>
+          <div class="flex flex-wrap gap-2">
+            {% for skill in member.expertise %}
+            <span class="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-sm">
+              {{ skill }}
+            </span>
+            {% endfor %}
+          </div>
+        </div>
+
+        {# Social Links #}
+        {% if member.social %}
+        <div class="flex items-center gap-4">
+          {% if member.social.linkedin %}
+          <a href="{{ member.social.linkedin }}" class="inline-flex items-center gap-2 text-gray-600 hover:text-zunkiree-600 transition-colors" target="_blank" rel="noopener noreferrer">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          {% endif %}
+          {% if member.social.github %}
+          <a href="{{ member.social.github }}" class="inline-flex items-center gap-2 text-gray-600 hover:text-zunkiree-600 transition-colors" target="_blank" rel="noopener noreferrer">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{# =====================================================
+   TEAM SECTIONS
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Teams</p>
+      <h2 class="text-3xl md:text-4xl font-normal text-gray-900">Expertise across disciplines</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {% for member in team %}
+      {% if not member.featured %}
+      <div class="border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+        <h3 class="text-xl font-medium text-gray-900 mb-2">{{ member.name }}</h3>
+        <p class="text-zunkiree-600 text-sm font-medium mb-4">{{ member.role }}</p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          {{ member.bio }}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {% for skill in member.expertise %}
+          <span class="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs">
+            {{ skill }}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CULTURE & VALUES
+   ===================================================== #}
+<section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Culture</p>
+        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">How we work</h2>
+        <div class="space-y-6 text-gray-600 leading-relaxed">
+          <p>
+            We believe great software can come from anywhere. Based in Kathmandu, we've built a culture that combines Nepali craftsmanship with global engineering standards.
+          </p>
+          <p>
+            Our team values deep work, continuous learning, and ownership. We don't just write code—we solve problems and build products that make a difference.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-zunkiree-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-900 mb-1">Quality First</h3>
+            <p class="text-gray-600 text-sm">Every line of code is crafted to the highest standards</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-zunkiree-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-900 mb-1">Continuous Learning</h3>
+            <p class="text-gray-600 text-sm">We stay at the cutting edge of AI and software development</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-zunkiree-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-900 mb-1">Ownership</h3>
+            <p class="text-gray-600 text-sm">Every team member takes responsibility for their work</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-zunkiree-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-900 mb-1">Global Mindset</h3>
+            <p class="text-gray-600 text-sm">Building products that serve businesses worldwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   JOIN THE TEAM CTA
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 text-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal mb-4">
+      Join our team
+    </h2>
+    <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+      We're always looking for talented engineers who want to build world-class AI products from Nepal.
+    </p>
+    <a href="/careers/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-zunkiree-700 font-medium hover:bg-gray-100 transition-colors">
+      View Open Positions
+    </a>
+  </div>
+</section>

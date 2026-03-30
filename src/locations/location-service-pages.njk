@@ -1,0 +1,16 @@
+---
+pagination:
+  data: locationServicePages
+  size: 1
+  alias: page
+layout: location-service.njk
+permalink: "{{ page.permalink }}"
+eleventyComputed:
+  title: "{{ page.title }}"
+  description: "{{ page.description }}"
+  locationId: "{{ page.locationId }}"
+  serviceId: "{{ page.serviceId }}"
+---
+
+{# Location × Service pages are generated programmatically #}
+{# Content is rendered by the location-service.njk layout #}
