@@ -388,6 +388,200 @@
     "clients": ["admizz", "prime-tiles", "khems-cleaning"]
   },
 
+  "ai-ecommerce": {
+    "id": "ai-ecommerce",
+    "title": "AI Ecommerce Solutions",
+    "category": "AI & Data",
+    "tagline": "Build AI-powered ecommerce systems that sell smarter",
+    "description": "Agentic commerce development for online stores in Nepal and globally. We build AI shopping agents, conversational commerce systems, and smart recommendation engines that increase conversions and automate customer support.",
+    "heroImage": "/assets/images/ai-ecommerce-hero.svg",
+    "lastUpdated": "2026-03-31",
+
+    "heroCommands": [
+      { "text": "Find product for customer", "type": "Content", "offset": "top-8 right-12" },
+      { "text": "Process eSewa payment", "type": "Actions", "offset": "top-20 right-24" },
+      { "text": "Track order status", "type": "Content", "offset": "top-32 right-8" },
+      { "text": "Recommend similar items", "type": "Actions", "offset": "top-44 right-32" },
+      { "text": "Handle return request", "type": "Content", "offset": "top-56 right-16" },
+      { "text": "Recover abandoned cart", "type": "Actions", "offset": "top-68 right-4" },
+      { "text": "Answer product question", "type": "Content", "offset": "top-80 right-28" }
+    ],
+
+    "definition": {
+      "heading": "What is AI ecommerce and agentic commerce?",
+      "content": "AI Ecommerce Solutions transform online stores with intelligent automation. We build custom AI agents, conversational commerce systems, and smart recommendation engines for ecommerce businesses in Nepal and globally. Our agentic commerce approach enables autonomous shopping experiences where AI handles everything from product discovery to payment processing—integrating with Nepal payment methods like eSewa and Khalti alongside international gateways."
+    },
+
+    "stats": [
+      { "value": "40%", "label": "Cart Recovery", "description": "abandoned cart automation" },
+      { "value": "3x", "label": "Engagement", "description": "conversational commerce" },
+      { "value": "<2hr", "label": "Integration", "description": "widget deployment" },
+      { "value": "50%", "label": "Support Reduction", "description": "AI-handled queries" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "chat",
+        "title": "Conversational commerce that converts",
+        "description": "Natural language shopping experiences where customers ask questions and AI guides them to purchase. 'Show me red sneakers under Rs 5000' returns exactly what they want—no filtering, no searching."
+      },
+      {
+        "icon": "integrate",
+        "title": "Nepal market expertise",
+        "description": "Native integration with eSewa, Khalti, Fonepay, and ConnectIPS. We understand the Nepali ecommerce ecosystem—Daraz sellers, local payment preferences, and multilingual support in Nepali and English."
+      },
+      {
+        "icon": "speed",
+        "title": "Full-funnel AI automation",
+        "description": "From product discovery to post-purchase support. AI handles recommendations, cart management, checkout, order tracking, returns, and customer inquiries—24/7 without human intervention."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "daraz-sellers",
+        "title": "AI for Daraz Sellers",
+        "headline": "Automate Your Daraz Store",
+        "description": "24/7 AI agent that handles customer inquiries, provides product information, tracks orders, and manages returns for Daraz sellers in Nepal. Speak to customers in Nepali and English.",
+        "features": [
+          "Customer inquiry automation",
+          "Order status tracking",
+          "Product Q&A",
+          "Return/exchange handling"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "ecommerce-chatbot",
+        "title": "Ecommerce Chatbot Nepal",
+        "headline": "24/7 Sales Assistant",
+        "description": "Conversational AI that sells for you around the clock. Answers questions, recommends products, helps with sizing, and guides customers through checkout in Nepali and English.",
+        "features": [
+          "Multilingual support",
+          "Product recommendations",
+          "Size/fit guidance",
+          "Checkout assistance"
+        ],
+        "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "ai-recommendations",
+        "title": "AI Product Recommendations",
+        "headline": "Smart Recommendations",
+        "description": "Personalized product suggestions that increase average order value. AI learns from browsing behavior, purchase history, and similar customers to recommend relevant products.",
+        "features": [
+          "Behavioral targeting",
+          "Cross-sell/upsell",
+          "Personalization",
+          "A/B testing"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "order-management",
+        "title": "Automated Order Management",
+        "headline": "AI Order Operations",
+        "description": "Automate order status updates, shipping notifications, delivery tracking, and return processing. Customers get instant answers without waiting for support.",
+        "features": [
+          "Status automation",
+          "Shipping updates",
+          "Return processing",
+          "Exception handling"
+        ],
+        "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "inventory-ai",
+        "title": "Smart Inventory AI",
+        "headline": "Intelligent Inventory",
+        "description": "Demand forecasting and stock optimization powered by AI. Predict what customers will buy, prevent stockouts, and optimize inventory levels automatically.",
+        "features": [
+          "Demand forecasting",
+          "Stock alerts",
+          "Reorder automation",
+          "Trend analysis"
+        ],
+        "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "process": [
+      {
+        "step": 1,
+        "title": "Discovery",
+        "description": "Understand your ecommerce platform, customer journey, and automation opportunities. Map product catalog and define AI agent capabilities.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Ecommerce audit", "AI agent scope", "Integration plan"]
+      },
+      {
+        "step": 2,
+        "title": "Design",
+        "description": "Design conversation flows, product search logic, and payment integrations. Build knowledge base from your catalog and policies.",
+        "duration": "2-3 weeks",
+        "deliverables": ["Conversation design", "Integration architecture", "Catalog mapping"]
+      },
+      {
+        "step": 3,
+        "title": "Build",
+        "description": "Develop AI agents with iterative testing. Connect to your ecommerce platform, payment gateways, and customer data systems.",
+        "duration": "4-8 weeks",
+        "deliverables": ["AI agent system", "Platform integrations", "Payment setup"]
+      },
+      {
+        "step": 4,
+        "title": "Launch",
+        "description": "Deploy AI agent with monitoring. Continuous optimization based on conversion data, customer feedback, and sales patterns.",
+        "duration": "Ongoing",
+        "deliverables": ["Live AI agent", "Analytics dashboard", "Optimization reports"]
+      }
+    ],
+
+    "techStack": [
+      { "name": "OpenAI", "category": "LLM", "description": "GPT-4 Turbo", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
+      { "name": "LangChain", "category": "Framework", "description": "Agent Framework", "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg" },
+      { "name": "Shopify", "category": "Platform", "description": "Ecommerce API", "logo": "https://cdn.worldvectorlogo.com/logos/shopify.svg" },
+      { "name": "WooCommerce", "category": "Platform", "description": "WordPress Ecommerce", "logo": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg" },
+      { "name": "eSewa", "category": "Payments", "description": "Nepal Payments", "logo": "/assets/images/esewa-logo.svg" },
+      { "name": "Khalti", "category": "Payments", "description": "Nepal Payments", "logo": "/assets/images/khalti-logo.svg" },
+      { "name": "FastAPI", "category": "Framework", "description": "API Development", "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" },
+      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" }
+    ],
+
+    "faq": [
+      {
+        "question": "What is AI ecommerce and how does it help my online store?",
+        "answer": "AI ecommerce uses artificial intelligence to automate and enhance online shopping experiences. This includes conversational commerce where customers shop through natural language, AI product recommendations, automated customer support, and intelligent inventory management. Stores using AI ecommerce see 35% higher conversion rates and 50% reduction in support costs."
+      },
+      {
+        "question": "Do you build AI solutions for Daraz sellers in Nepal?",
+        "answer": "Yes. We specialize in AI solutions for Daraz sellers including automated customer support, order tracking, product Q&A, and return management. Our AI agents handle inquiries in Nepali and English, reducing your support workload while improving customer satisfaction."
+      },
+      {
+        "question": "How much does an ecommerce AI chatbot cost in Nepal?",
+        "answer": "Ecommerce AI chatbot costs in Nepal vary based on complexity and features. Basic conversational commerce widgets start at $2,000-5,000. Full agentic commerce systems with payment integration, inventory sync, and multi-platform deployment range from $10,000-25,000. Contact us for a custom quote based on your specific requirements."
+      },
+      {
+        "question": "Can AI agents handle payments through eSewa or Khalti?",
+        "answer": "Yes. Our AI Commerce systems integrate natively with eSewa, Khalti, Fonepay, and ConnectIPS for the Nepal market. Customers can complete entire transactions through conversation—browsing products, adding to cart, and paying—without leaving the chat interface."
+      },
+      {
+        "question": "What's the difference between a chatbot and an AI commerce agent?",
+        "answer": "Traditional chatbots follow scripted responses and can only answer pre-programmed questions. AI commerce agents are autonomous systems that understand context, make decisions, and take actions—like searching your catalog, updating carts, processing payments, and handling exceptions. They're the difference between a FAQ bot and an AI sales representative."
+      }
+    ],
+
+    "relatedServices": ["ai-development", "ai-customer-experience", "custom-software"],
+
+    "cta": {
+      "headline": "Ready to automate your ecommerce?",
+      "description": "See how AI agents can increase conversions and provide 24/7 sales support. We'll audit your store and show you the automation opportunities.",
+      "primaryButton": { "text": "Get Ecommerce Audit", "url": "/contact/" },
+      "secondaryButton": { "text": "View AI Commerce Agent", "url": "/products/ai-commerce-agent/" }
+    },
+
+    "clients": []
+  },
+
   "data-systems": {
     "id": "data-systems",
     "title": "Data Systems",

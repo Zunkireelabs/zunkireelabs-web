@@ -28,6 +28,16 @@
     ]
   },
   {
+    "id": "ai-ecommerce",
+    "title": "AI Ecommerce Solutions",
+    "category": "AI & Data",
+    "description": "Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration.",
+    "cta": "View",
+    "url": "/services/ai-ecommerce/",
+    "icon": "cart",
+    "clients": []
+  },
+  {
     "id": "data-systems",
     "title": "Data Systems",
     "category": "AI & Data",

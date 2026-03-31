@@ -17,6 +17,23 @@
     ]
   },
   {
+    "id": "ai-commerce-agent",
+    "title": "AI Commerce Agent",
+    "tagline": "Agentic Ecommerce Platform",
+    "category": "AI Products",
+    "status": "Available",
+    "description": "Autonomous AI agents that handle the entire customer buying journey—from product discovery to checkout. Built for ecommerce businesses in Nepal and globally with eSewa, Khalti, and international payment support.",
+    "cta": "View product",
+    "url": "/products/ai-commerce-agent/",
+    "icon": "cart",
+    "features": [
+      "Autonomous sales conversations",
+      "Nepal payment integration",
+      "Multi-platform support",
+      "24/7 AI sales agent"
+    ]
+  },
+  {
     "id": "ai-booking-engine",
     "title": "AI Booking Engine",
     "tagline": "Intelligent Scheduling Platform",

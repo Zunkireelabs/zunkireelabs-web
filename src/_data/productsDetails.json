@@ -153,6 +153,160 @@
     "clients": ["admizz", "corecloud365", "carbon-spark"]
   },
 
+  "ai-commerce-agent": {
+    "id": "ai-commerce-agent",
+    "title": "AI Commerce Agent",
+    "category": "AI Products",
+    "tagline": "Autonomous AI agents that sell for you 24/7",
+    "description": "Agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery to checkout. Built for Nepal and global markets.",
+    "heroImage": "/assets/images/ai-commerce-hero.svg",
+    "lastUpdated": "2026-03-31",
+
+    "definition": {
+      "heading": "What is agentic commerce and how does it work?",
+      "content": "AI Commerce Agent is an agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery and recommendations to cart management and checkout. Unlike traditional chatbots that follow scripts, these AI agents understand context, make decisions, and complete transactions independently. They integrate with Nepal payment methods like eSewa and Khalti, plus international gateways, enabling 24/7 conversational commerce for online stores."
+    },
+
+    "stats": [
+      { "value": "35%", "label": "Higher Conversion", "description": "AI-guided purchases" },
+      { "value": "60%", "label": "Fewer Support Tickets", "description": "automated responses" },
+      { "value": "24/7", "label": "Availability", "description": "always selling" },
+      { "value": "3x", "label": "Faster Response", "description": "instant engagement" }
+    ],
+
+    "benefits": [
+      {
+        "icon": "chat",
+        "title": "Autonomous sales conversations",
+        "description": "AI agents understand customer intent and guide them to purchase without human intervention. They answer questions, recommend products, and handle objections naturally."
+      },
+      {
+        "icon": "integrate",
+        "title": "Nepal payment integration",
+        "description": "Native support for eSewa, Khalti, Fonepay, and international gateways like Stripe. Customers complete purchases in their preferred payment method."
+      },
+      {
+        "icon": "speed",
+        "title": "Multi-platform deployment",
+        "description": "Works with Daraz, Shopify, WooCommerce, and custom ecommerce platforms. Deploy once, sell everywhere with consistent AI-powered experiences."
+      }
+    ],
+
+    "useCases": [
+      {
+        "id": "daraz",
+        "title": "Daraz Sellers",
+        "headline": "AI Agent for Daraz Nepal",
+        "description": "Automate customer inquiries, provide instant product information, track orders, and handle returns—all through conversational AI that speaks Nepali and English.",
+        "features": [
+          "24/7 customer support",
+          "Order status tracking",
+          "Product recommendations",
+          "Return/exchange handling"
+        ],
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "shopify",
+        "title": "Shopify Stores",
+        "headline": "Conversational Commerce Widget",
+        "description": "Embed an AI sales agent directly on your Shopify store. Increases conversions by guiding customers through product discovery and checkout.",
+        "features": [
+          "Product finder",
+          "Size/fit guidance",
+          "Cart assistance",
+          "Checkout completion"
+        ],
+        "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "woocommerce",
+        "title": "WooCommerce",
+        "headline": "Smart Recommendations & Recovery",
+        "description": "AI-powered product recommendations that increase average order value, plus intelligent cart recovery that brings customers back to complete purchases.",
+        "features": [
+          "Smart recommendations",
+          "Cart abandonment recovery",
+          "Upsell/cross-sell",
+          "Customer segmentation"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "id": "custom",
+        "title": "Custom Ecommerce",
+        "headline": "API-First Integration",
+        "description": "Full API access for custom ecommerce platforms. Build agentic commerce experiences tailored to your unique business requirements.",
+        "features": [
+          "REST/GraphQL APIs",
+          "Webhook integrations",
+          "Custom workflows",
+          "White-label options"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+      }
+    ],
+
+    "resources": [
+      {
+        "title": "Integration Guide",
+        "description": "Step-by-step platform setup",
+        "url": "/docs/commerce-agent/integration/",
+        "icon": "book"
+      },
+      {
+        "title": "API Reference",
+        "description": "REST API documentation",
+        "url": "/docs/commerce-agent/api/",
+        "icon": "code"
+      },
+      {
+        "title": "Nepal Payments",
+        "description": "eSewa, Khalti setup guide",
+        "url": "/docs/commerce-agent/nepal-payments/",
+        "icon": "briefcase"
+      },
+      {
+        "title": "Best Practices",
+        "description": "Optimize your AI agent",
+        "url": "/resources/commerce-agent-best-practices/",
+        "icon": "terminal"
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "What is agentic commerce?",
+        "answer": "Agentic commerce is the next evolution of ecommerce where autonomous AI agents handle the entire buying journey—from product discovery to checkout. Unlike traditional chatbots that follow scripts, agentic commerce systems understand context, make decisions, and complete transactions independently, creating a conversational shopping experience."
+      },
+      {
+        "question": "How do AI commerce agents work?",
+        "answer": "AI commerce agents use large language models combined with your product catalog and business rules to have natural conversations with customers. They understand intent, answer questions, recommend products, handle objections, and guide customers through checkout—all without human intervention."
+      },
+      {
+        "question": "Can AI agents complete purchases automatically?",
+        "answer": "Yes. AI Commerce Agent integrates with payment gateways to enable complete transactions. Customers can browse, select products, and pay entirely through conversation. The agent handles cart management, applies discounts, and processes payments securely."
+      },
+      {
+        "question": "Does it work with Nepali payment methods like eSewa and Khalti?",
+        "answer": "Yes. AI Commerce Agent has native integration with eSewa, Khalti, Fonepay, and ConnectIPS for the Nepal market. It also supports international gateways like Stripe, PayPal, and Razorpay for global customers."
+      },
+      {
+        "question": "How is this different from a chatbot?",
+        "answer": "Traditional chatbots follow pre-defined scripts and can only handle expected questions. AI Commerce Agent is an autonomous agent that understands context, handles unexpected queries, makes decisions, and takes actions like updating carts and processing payments. It's the difference between a FAQ bot and an AI sales representative."
+      }
+    ],
+
+    "cta": {
+      "headline": "Ready to automate your ecommerce sales?",
+      "description": "See how AI Commerce Agent can increase conversions and provide 24/7 sales support for your online store.",
+      "primaryButton": { "text": "Schedule Demo", "url": "/contact/" },
+      "secondaryButton": { "text": "View Pricing", "url": "/pricing/" }
+    },
+
+    "clients": []
+  },
+
   "gaamma": {
     "id": "gaamma",
     "title": "Gaamma",
