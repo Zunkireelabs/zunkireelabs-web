@@ -36,6 +36,13 @@
             "type": "descriptive",
             "items": [
               {
+                "label": "AI Commerce Agent",
+                "url": "/products/ai-commerce-agent/",
+                "icon": "cart",
+                "description": "Autonomous AI agents for ecommerce buying journeys",
+                "badge": "New"
+              },
+              {
                 "label": "AI Booking Engine",
                 "url": "/products/ai-booking-engine/",
                 "icon": "calendar",
@@ -115,6 +122,13 @@
                 "url": "/services/aeo-seo/",
                 "icon": "trending",
                 "description": "Get found by Google and AI assistants"
+              },
+              {
+                "label": "AI Ecommerce",
+                "url": "/services/ai-ecommerce/",
+                "icon": "cart",
+                "description": "Agentic commerce and AI-powered online stores",
+                "badge": "New"
               }
             ],
             "seeAll": { "label": "See all services", "url": "/services/" }
@@ -273,6 +287,7 @@
       { "label": "Gaamma", "url": "/products/gaamma/" },
       { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
       { "label": "AI CRM", "url": "/products/ai-crm/" },
+      { "label": "AI Commerce Agent", "url": "/products/ai-commerce-agent/" },
       { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [
