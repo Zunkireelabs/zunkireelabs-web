@@ -5,6 +5,14 @@
 
 export default [
   {
+    id: "agentic-commerce",
+    term: "Agentic Commerce",
+    shortDef: "AI-powered ecommerce where autonomous agents handle the entire buying journey from discovery to checkout.",
+    definition: "Agentic commerce is an emerging ecommerce paradigm where AI agents autonomously handle shopping tasks on behalf of customers. Unlike traditional online shopping that requires manual browsing, comparison, and checkout, agentic commerce systems understand customer intent through natural language, search across multiple platforms, compare options, and execute purchases automatically. These AI agents integrate with payment gateways, track orders, and handle support—transforming ecommerce from a self-service experience to an AI-assisted one. In Nepal, agentic commerce platforms integrate with eSewa, Khalti, and local marketplaces to provide seamless autonomous shopping.",
+    relatedService: "ai-ecommerce",
+    category: "AI Commerce"
+  },
+  {
     id: "rag",
     term: "RAG (Retrieval-Augmented Generation)",
     shortDef: "An AI architecture that combines information retrieval with text generation to produce accurate, context-aware responses.",
