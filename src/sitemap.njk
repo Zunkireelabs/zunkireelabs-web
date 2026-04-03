@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
-{%- if page.url and not page.data.excludeFromSitemap %}
+{%- if page.url and not page.data.excludeFromSitemap and not page.data.canonicalUrl %}
 {%- set priority = "0.5" %}
 {%- set changefreq = "monthly" %}
 {%- if page.url == "/" %}
@@ -31,6 +31,33 @@ eleventyExcludeFromCollections: true
   {%- set changefreq = "monthly" %}
 {%- elif page.url == "/careers/" or page.url == "/customers/" or page.url == "/projects/" %}
   {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/pricing/" or page.url == "/team/" %}
+  {%- set priority = "0.7" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/blog/" %}
+  {%- set priority = "0.7" %}
+  {%- set changefreq = "weekly" %}
+{%- elif "/blog/" in page.url %}
+  {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/glossary/" %}
+  {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- elif "/glossary/" in page.url %}
+  {%- set priority = "0.5" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/compare/" %}
+  {%- set priority = "0.7" %}
+  {%- set changefreq = "monthly" %}
+{%- elif "/compare/" in page.url %}
+  {%- set priority = "0.6" %}
+  {%- set changefreq = "monthly" %}
+{%- elif page.url == "/locations/" %}
+  {%- set priority = "0.5" %}
+  {%- set changefreq = "monthly" %}
+{%- elif "/locations/" in page.url %}
+  {%- set priority = "0.4" %}
   {%- set changefreq = "monthly" %}
 {%- endif %}
   <url>

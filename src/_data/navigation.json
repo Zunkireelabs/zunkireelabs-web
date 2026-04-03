@@ -210,6 +210,18 @@
                 "url": "/resources/?type=case-study",
                 "icon": "briefcase",
                 "description": "See how customers succeed with Zunkiree"
+              },
+              {
+                "label": "AI Glossary",
+                "url": "/glossary/",
+                "icon": "book",
+                "description": "Learn key AI and technology terms"
+              },
+              {
+                "label": "Compare Products",
+                "url": "/compare/",
+                "icon": "compare",
+                "description": "See how Zunkiree compares to alternatives"
               }
             ],
             "seeAll": { "label": "See all resources", "url": "/resources/" }
@@ -260,7 +272,8 @@
       { "label": "Dental AI", "url": "/products/dental-ai/" },
       { "label": "Gaamma", "url": "/products/gaamma/" },
       { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
-      { "label": "AI CRM", "url": "/products/ai-crm/" }
+      { "label": "AI CRM", "url": "/products/ai-crm/" },
+      { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [
       { "label": "AI Development", "url": "/services/ai-development/" },
@@ -284,11 +297,15 @@
       { "label": "Reports & Research", "url": "/resources/?type=report" },
       { "label": "Ebooks & Guides", "url": "/resources/?type=ebook" },
       { "label": "Case Studies", "url": "/resources/?type=case-study" },
-      { "label": "Webinars", "url": "/resources/?type=webinar" }
+      { "label": "Webinars", "url": "/resources/?type=webinar" },
+      { "label": "AI Glossary", "url": "/glossary/" },
+      { "label": "Compare Products", "url": "/compare/" }
     ],
     "company": [
       { "label": "About Us", "url": "/about/" },
       { "label": "Team", "url": "/team/" },
+      { "label": "Customers", "url": "/customers/" },
+      { "label": "Projects", "url": "/projects/" },
       { "label": "Careers", "url": "/careers/" },
       { "label": "Contact", "url": "/contact/" },
       { "label": "Blog", "url": "/blog/" }

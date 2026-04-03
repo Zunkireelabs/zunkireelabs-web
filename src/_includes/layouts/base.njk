@@ -38,7 +38,11 @@
   <meta name="twitter:image" content="{{ site.url }}{{ site.meta.ogImage }}">
 
   <!-- Canonical URL -->
+  {% if canonicalUrl %}
+  <link rel="canonical" href="{{ site.url }}{{ canonicalUrl }}">
+  {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
 
   <!-- Preload Critical Resources for LCP -->
   {% if page.url == "/" %}
