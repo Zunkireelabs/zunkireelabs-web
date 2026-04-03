@@ -138,5 +138,59 @@ export default [
       competitor: "Developers who want a self-hosted, open-source alternative to Algolia for traditional search."
     },
     verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search."
+  },
+  {
+    id: "agentic-commerce-vs-traditional-ecommerce",
+    title: "Agentic Commerce vs Traditional Ecommerce",
+    description: "Compare agentic commerce with traditional ecommerce. See how AI agents transform online shopping from self-service browsing to autonomous purchasing.",
+    competitor: {
+      name: "Traditional Ecommerce",
+      logo: "/assets/images/logos/ecommerce-icon.svg",
+      description: "Standard online shopping with manual browsing, comparison, and checkout",
+      strengths: [
+        "Familiar user experience",
+        "Full customer control over decisions",
+        "Established platforms (Shopify, WooCommerce)",
+        "Wide payment gateway support",
+        "No AI dependency"
+      ],
+      weaknesses: [
+        "High cart abandonment (70%+)",
+        "Decision fatigue for customers",
+        "Manual comparison is time-consuming",
+        "Limited personalization",
+        "Reactive customer support only"
+      ]
+    },
+    zunkiree: {
+      name: "Agentic Commerce",
+      strengths: [
+        "AI handles entire buying journey",
+        "Natural language product discovery",
+        "Autonomous cross-platform comparison",
+        "Proactive support and recommendations",
+        "Reduced cart abandonment",
+        "24/7 intelligent assistance"
+      ]
+    },
+    comparison: [
+      { feature: "Product Discovery", zunkiree: "Conversational: 'Find me a laptop for coding under NPR 150k'", competitor: "Browse categories, filters, search keywords" },
+      { feature: "Comparison Shopping", zunkiree: "AI compares across platforms automatically", competitor: "Manual tab-by-tab comparison" },
+      { feature: "Decision Making", zunkiree: "AI recommends based on preferences", competitor: "Customer analyzes all options alone" },
+      { feature: "Checkout Process", zunkiree: "Agent completes purchase autonomously", competitor: "Manual form filling and payment" },
+      { feature: "Personalization", zunkiree: "Context-aware, learns preferences", competitor: "Rule-based recommendations" },
+      { feature: "Customer Support", zunkiree: "Proactive AI assistance throughout", competitor: "Reactive helpdesk after issues" },
+      { feature: "Cart Abandonment", zunkiree: "Significantly reduced", competitor: "~70% average abandonment rate" },
+      { feature: "Multi-platform", zunkiree: "Searches Daraz, local stores, brands", competitor: "Limited to single storefront" },
+      { feature: "Payment Integration", zunkiree: "Intelligent routing (eSewa, Khalti, cards)", competitor: "Customer selects payment method" },
+      { feature: "Language Support", zunkiree: "Natural Nepali + English queries", competitor: "Interface language only" }
+    ],
+    bestFor: {
+      zunkiree: "Businesses wanting to reduce friction, increase conversions, and provide AI-powered shopping experiences. Ideal for Nepal market with eSewa/Khalti integration.",
+      competitor: "Businesses with simple product catalogs where customers prefer full control over browsing and purchasing decisions."
+    },
+    verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
+    ctaProduct: "ai-commerce-agent",
+    ctaService: "ai-ecommerce"
   }
 ];
