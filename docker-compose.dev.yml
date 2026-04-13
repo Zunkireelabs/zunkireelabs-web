@@ -1,16 +1,33 @@
 services:
-  zunkiree-dev:
-    build: .
-    container_name: zunkiree-dev
-    restart: unless-stopped
+  app:
+    container_name: zunkiree-staging
+    build:
+      context: .
+      dockerfile: Dockerfile
     networks:
       - hosting
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.zunkiree-dev.rule=Host(`dev-zunkiree.zunkireelabs.com`)"
-      - "traefik.http.routers.zunkiree-dev.entrypoints=websecure"
-      - "traefik.http.routers.zunkiree-dev.tls.certresolver=letsencrypt"
-      - "traefik.http.services.zunkiree-dev.loadbalancer.server.port=80"
+      - "traefik.docker.network=hosting"
+      # Staging domain (HTTPS)
+      - "traefik.http.routers.zunkiree-staging.rule=Host(`dev-web.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-staging.entrypoints=websecure"
+      - "traefik.http.routers.zunkiree-staging.tls=true"
+      - "traefik.http.routers.zunkiree-staging.tls.certresolver=letsencrypt"
+      # HTTP to HTTPS redirect
+      - "traefik.http.routers.zunkiree-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-staging-http.entrypoints=web"
+      - "traefik.http.routers.zunkiree-staging-http.middlewares=zunkiree-staging-redirect"
+      - "traefik.http.middlewares.zunkiree-staging-redirect.redirectscheme.scheme=https"
+      # Service port
+      - "traefik.http.services.zunkiree-staging.loadbalancer.server.port=80"
 
 networks:
   hosting:

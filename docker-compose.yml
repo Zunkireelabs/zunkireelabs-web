@@ -1,0 +1,39 @@
+services:
+  app:
+    container_name: zunkiree-production
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - hosting
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=hosting"
+      # Main domain (HTTPS)
+      - "traefik.http.routers.zunkiree-prod.rule=Host(`zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-prod.entrypoints=websecure"
+      - "traefik.http.routers.zunkiree-prod.tls=true"
+      - "traefik.http.routers.zunkiree-prod.tls.certresolver=letsencrypt"
+      # WWW domain (HTTPS)
+      - "traefik.http.routers.zunkiree-prod-www.rule=Host(`www.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-prod-www.entrypoints=websecure"
+      - "traefik.http.routers.zunkiree-prod-www.tls=true"
+      - "traefik.http.routers.zunkiree-prod-www.tls.certresolver=letsencrypt"
+      # HTTP to HTTPS redirect
+      - "traefik.http.routers.zunkiree-prod-http.rule=Host(`zunkireelabs.com`) || Host(`www.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-prod-http.entrypoints=web"
+      - "traefik.http.routers.zunkiree-prod-http.middlewares=zunkiree-prod-redirect"
+      - "traefik.http.middlewares.zunkiree-prod-redirect.redirectscheme.scheme=https"
+      # Service port
+      - "traefik.http.services.zunkiree-prod.loadbalancer.server.port=80"
+
+networks:
+  hosting:
+    external: true

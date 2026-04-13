@@ -1,0 +1,88 @@
+name: Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: "Commit SHA to rollback to"
+        required: true
+        type: string
+      environment:
+        description: "Environment to rollback"
+        required: true
+        type: choice
+        options:
+          - production
+          - staging
+      reason:
+        description: "Reason for rollback"
+        required: false
+        type: string
+        default: "Production issue"
+
+jobs:
+  rollback:
+    name: Rollback ${{ inputs.environment }} to ${{ inputs.commit_sha }}
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Rollback via SSH
+        uses: appleboy/ssh-action@v1
+        env:
+          COMMIT_SHA: ${{ inputs.commit_sha }}
+          REASON: ${{ inputs.reason }}
+          ENVIRONMENT: ${{ inputs.environment }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: COMMIT_SHA,REASON,ENVIRONMENT
+          script: |
+            if [ "$ENVIRONMENT" = "production" ]; then
+              PROJECT_DIR="/home/zunkireelabs/devprojects/zunkiree-web-prod"
+              CONTAINER_NAME="zunkiree-production"
+              COMPOSE_FILE="docker-compose.yml"
+            else
+              PROJECT_DIR="/home/zunkireelabs/devprojects/zunkiree-web-staging"
+              CONTAINER_NAME="zunkiree-staging"
+              COMPOSE_FILE="docker-compose.dev.yml"
+            fi
+
+            cd "$PROJECT_DIR"
+            echo "Rolling back to $COMMIT_SHA"
+            echo "Reason: $REASON"
+            git fetch origin
+            git checkout "$COMMIT_SHA"
+            docker compose -f "$COMPOSE_FILE" up -d --build
+            echo "Waiting for container to be healthy..."
+            sleep 10
+            for i in $(seq 1 12); do
+              STATUS=$(docker inspect --format='{{.State.Health.Status}}' "$CONTAINER_NAME" 2>/dev/null || echo "unknown")
+              if [ "$STATUS" = "healthy" ]; then
+                echo "Rollback successful! Container is healthy."
+                exit 0
+              fi
+              echo "Attempt $i/12: Status is $STATUS, waiting..."
+              sleep 10
+            done
+            echo "Rollback failed — container did not become healthy"
+            docker logs "$CONTAINER_NAME" --tail 50
+            exit 1
+
+      - name: Verify Health
+        env:
+          ENVIRONMENT: ${{ inputs.environment }}
+        run: |
+          if [ "$ENVIRONMENT" = "production" ]; then
+            URL="https://zunkireelabs.com"
+          else
+            URL="https://dev-web.zunkireelabs.com"
+          fi
+
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "Rollback verified (HTTP $HTTP_CODE)"
+          else
+            echo "Health check failed after rollback (HTTP $HTTP_CODE)"
+            exit 1
+          fi
