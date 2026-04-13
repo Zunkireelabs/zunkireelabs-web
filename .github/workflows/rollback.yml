@@ -33,9 +33,9 @@ jobs:
           REASON: ${{ inputs.reason }}
           ENVIRONMENT: ${{ inputs.environment }}
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           envs: COMMIT_SHA,REASON,ENVIRONMENT
           script: |
             if [ "$ENVIRONMENT" = "production" ]; then
