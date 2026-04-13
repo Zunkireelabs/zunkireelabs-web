@@ -3,6 +3,7 @@
     "id": "search",
     "title": "Zunkiree Search",
     "category": "AI Products",
+    "loginUrl": "https://app.zunkiree.com",
     "tagline": "AI-native search that understands intent",
     "description": "Transform how users discover information with natural language search. Deliver direct answers instead of link lists, reducing support queries by 45%.",
     "heroImage": "/assets/images/zunkiree-search-hero.svg",
@@ -155,16 +156,17 @@
 
   "ai-commerce-agent": {
     "id": "ai-commerce-agent",
-    "title": "AI Commerce Agent",
+    "title": "Stella",
     "category": "AI Products",
-    "tagline": "Autonomous AI agents that sell for you 24/7",
+    "loginUrl": "https://app.stella.ai",
+    "tagline": "AI Commerce Agent — Autonomous AI agents that sell for you 24/7",
     "description": "Agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery to checkout. Built for Nepal and global markets.",
     "heroImage": "/assets/images/ai-commerce-hero.svg",
     "lastUpdated": "2026-03-31",
 
     "definition": {
       "heading": "What is agentic commerce and how does it work?",
-      "content": "AI Commerce Agent is an agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery and recommendations to cart management and checkout. Unlike traditional chatbots that follow scripts, these AI agents understand context, make decisions, and complete transactions independently. They integrate with Nepal payment methods like eSewa and Khalti, plus international gateways, enabling 24/7 conversational commerce for online stores."
+      "content": "Stella is an agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery and recommendations to cart management and checkout. Unlike traditional chatbots that follow scripts, these AI agents understand context, make decisions, and complete transactions independently. They integrate with Nepal payment methods like eSewa and Khalti, plus international gateways, enabling 24/7 conversational commerce for online stores."
     },
 
     "stats": [
@@ -299,7 +301,7 @@
 
     "cta": {
       "headline": "Ready to automate your ecommerce sales?",
-      "description": "See how AI Commerce Agent can increase conversions and provide 24/7 sales support for your online store.",
+      "description": "See how Stella can increase conversions and provide 24/7 sales support for your online store.",
       "primaryButton": { "text": "Schedule Demo", "url": "/contact/" },
       "secondaryButton": { "text": "View Pricing", "url": "/pricing/" }
     },
@@ -311,6 +313,7 @@
     "id": "gaamma",
     "title": "Gaamma",
     "category": "Enterprise Software",
+    "loginUrl": "https://app.gaamma.com",
     "tagline": "Manufacturing intelligence that drives efficiency",
     "description": "End-to-end ERP platform built for modern manufacturing. Unify operations from raw materials to finished goods with real-time visibility and predictive insights.",
     "heroImage": "/images/gaamma-hero.svg",
@@ -465,6 +468,7 @@
     "id": "dental-ai",
     "title": "Dental AI Assistant",
     "category": "AI Products",
+    "loginUrl": "https://dental.zunkiree.com",
     "status": "coming-soon",
     "tagline": "AI-powered dental practice management",
     "description": "Intelligent assistant designed for dental operations. Automates patient communication, scheduling, and follow-ups so your team can focus on patient care.",
@@ -618,16 +622,17 @@
 
   "ai-booking-engine": {
     "id": "ai-booking-engine",
-    "title": "AI Booking Engine",
+    "title": "Zenly",
     "category": "Business Tools",
-    "tagline": "Intelligent scheduling that fills your calendar",
+    "loginUrl": "https://zenly.zunkireelabs.com/login",
+    "tagline": "AI Booking Engine — Intelligent scheduling that fills your calendar",
     "description": "Smart scheduling platform that handles complex availability, multi-resource bookings, and automatic conflict resolution. Reduce no-shows by 35% with AI-powered reminders.",
     "heroImage": "/images/ai-booking-hero.svg",
     "lastUpdated": "2026-03-24",
 
     "definition": {
       "heading": "Scheduling that thinks ahead so you don't have to",
-      "content": "AI Booking Engine is an intelligent scheduling platform that goes beyond simple calendar management. It understands complex availability rules, handles multi-resource bookings, resolves conflicts automatically, and optimizes your schedule for maximum efficiency. With AI-powered reminders and predictive analytics, businesses using AI Booking Engine see 35% fewer no-shows and 50% reduction in scheduling-related support requests."
+      "content": "Zenly is an intelligent AI booking engine that goes beyond simple calendar management. It understands complex availability rules, handles multi-resource bookings, resolves conflicts automatically, and optimizes your schedule for maximum efficiency. With AI-powered reminders and predictive analytics, businesses using Zenly see 35% fewer no-shows and 50% reduction in scheduling-related support requests."
     },
 
     "stats": [
@@ -739,16 +744,16 @@
 
     "faq": [
       {
-        "question": "What is AI Booking Engine?",
-        "answer": "AI Booking Engine is an intelligent scheduling platform that handles complex availability rules, multi-resource bookings, and automatic conflict resolution. It enables customers to self-service book while giving businesses complete control over scheduling rules."
+        "question": "What is Zenly?",
+        "answer": "Zenly is an intelligent AI booking engine that handles complex availability rules, multi-resource bookings, and automatic conflict resolution. It enables customers to self-service book while giving businesses complete control over scheduling rules."
       },
       {
-        "question": "How does AI Booking Engine reduce no-shows?",
-        "answer": "The AI sends personalized reminders via SMS, email, or voice at optimal times based on appointment type and customer behavior. It also makes rescheduling easy, so customers change appointments instead of simply not showing up."
+        "question": "How does Zenly reduce no-shows?",
+        "answer": "Zenly sends personalized reminders via SMS, email, or voice at optimal times based on appointment type and customer behavior. It also makes rescheduling easy, so customers change appointments instead of simply not showing up."
       },
       {
-        "question": "Can AI Booking Engine handle complex scheduling rules?",
-        "answer": "Yes. Define rules for buffer times, service combinations, provider specialties, equipment dependencies, and location constraints. The AI applies all rules automatically when showing availability."
+        "question": "Can Zenly handle complex scheduling rules?",
+        "answer": "Yes. Define rules for buffer times, service combinations, provider specialties, equipment dependencies, and location constraints. Zenly applies all rules automatically when showing availability."
       },
       {
         "question": "Does it integrate with payment processors?",
@@ -762,7 +767,7 @@
 
     "cta": {
       "headline": "Ready to automate your scheduling?",
-      "description": "See how AI Booking Engine can eliminate scheduling friction and reduce no-shows for your business.",
+      "description": "See how Zenly can eliminate scheduling friction and reduce no-shows for your business.",
       "primaryButton": { "text": "Start Free Trial", "url": "/contact/" },
       "secondaryButton": { "text": "Schedule Demo", "url": "/contact/" }
     },
@@ -774,6 +779,7 @@
     "id": "ai-crm",
     "title": "AI CRM",
     "category": "Business Tools",
+    "loginUrl": "https://crm.zunkiree.com",
     "tagline": "Customer intelligence that drives revenue",
     "description": "Customer relationship management powered by AI. Predicts customer needs, automates outreach, and surfaces insights that drive revenue growth.",
     "heroImage": "/images/ai-crm-hero.svg",

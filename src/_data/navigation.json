@@ -36,14 +36,18 @@
             "type": "descriptive",
             "items": [
               {
-                "label": "AI Commerce Agent",
+                "label": "Stella",
+                "subLabel": "(AI Commerce Agent)",
+                "aiPowered": true,
                 "url": "/products/ai-commerce-agent/",
                 "icon": "cart",
                 "description": "Autonomous AI agents for ecommerce buying journeys",
                 "badge": "New"
               },
               {
-                "label": "AI Booking Engine",
+                "label": "Zenly",
+                "subLabel": "(AI Booking Engine)",
+                "aiPowered": true,
                 "url": "/products/ai-booking-engine/",
                 "icon": "calendar",
                 "description": "Intelligent scheduling that handles complex availability"
@@ -285,9 +289,9 @@
       { "label": "Zunkiree Search", "url": "/products/search/" },
       { "label": "Dental AI", "url": "/products/dental-ai/" },
       { "label": "Gaamma", "url": "/products/gaamma/" },
-      { "label": "AI Booking Engine", "url": "/products/ai-booking-engine/" },
+      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/products/ai-booking-engine/" },
       { "label": "AI CRM", "url": "/products/ai-crm/" },
-      { "label": "AI Commerce Agent", "url": "/products/ai-commerce-agent/" },
+      { "label": "Stella", "url": "/products/ai-commerce-agent/" },
       { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [

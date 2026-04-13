@@ -1,0 +1,68 @@
+{# =====================================================
+   PRODUCT SECONDARY NAV
+   Sticky nav bar below main header with product name and login CTA
+   Mirrors header scroll behavior to stay in sync
+   ===================================================== #}
+
+{% if product and product.loginUrl %}
+<div
+  x-data="{
+    headerHidden: false,
+    lastScrollY: 0,
+    handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < 10) {
+        this.headerHidden = false;
+      } else if (currentScrollY > this.lastScrollY) {
+        this.headerHidden = true;
+      } else {
+        this.headerHidden = false;
+      }
+      this.lastScrollY = currentScrollY;
+    }
+  }"
+  x-init="lastScrollY = window.scrollY;"
+  @scroll.window.throttle.50ms="handleScroll()"
+  class="sticky z-40 border-b transition-all duration-300"
+  :style="'top: ' + (headerHidden ? '0' : '3.5rem') + '; background-color: var(--background); border-color: var(--border);'"
+>
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-11">
+
+      {# Left: Product Name with AI sparkle if applicable #}
+      <div class="flex items-center gap-2">
+        <span class="text-base font-semibold" style="color: var(--foreground);">
+          {{ product.title }}
+        </span>
+        {# AI Sparkle Icon for AI-powered products #}
+        {% if product.id == 'ai-booking-engine' or product.id == 'ai-commerce-agent' or product.id == 'ai-crm' or product.id == 'dental-ai' or product.id == 'search' %}
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z" fill="url(#productNavGradient)"/>
+          <defs>
+            <linearGradient id="productNavGradient" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4285F4"/>
+              <stop offset="50%" stop-color="#9B72CB"/>
+              <stop offset="100%" stop-color="#D96570"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        {% endif %}
+      </div>
+
+      {# Right: Login CTA #}
+      <a
+        href="{{ product.loginUrl }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-medium text-white bg-zunkiree-600 hover:bg-zunkiree-700 rounded transition-colors"
+      >
+        Login
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</div>
+{% endif %}

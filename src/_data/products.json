@@ -18,8 +18,8 @@
   },
   {
     "id": "ai-commerce-agent",
-    "title": "AI Commerce Agent",
-    "tagline": "Agentic Ecommerce Platform",
+    "title": "Stella",
+    "tagline": "AI Commerce Agent",
     "category": "AI Products",
     "status": "Available",
     "description": "Autonomous AI agents that handle the entire customer buying journey—from product discovery to checkout. Built for ecommerce businesses in Nepal and globally with eSewa, Khalti, and international payment support.",
@@ -35,8 +35,8 @@
   },
   {
     "id": "ai-booking-engine",
-    "title": "AI Booking Engine",
-    "tagline": "Intelligent Scheduling Platform",
+    "title": "Zenly",
+    "tagline": "AI Booking Engine",
     "category": "Business Tools",
     "status": "Available",
     "description": "Smart scheduling that handles complex availability, multi-resource bookings, and automatic conflict resolution. Reduce no-shows by 35% with AI-powered reminders.",
