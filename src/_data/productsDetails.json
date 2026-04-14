@@ -158,7 +158,7 @@
     "id": "ai-commerce-agent",
     "title": "Stella",
     "category": "AI Products",
-    "loginUrl": "https://app.stella.ai",
+    "loginUrl": "https://stella.zunkireelabs.com/login",
     "tagline": "AI Commerce Agent — Autonomous AI agents that sell for you 24/7",
     "description": "Agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery to checkout. Built for Nepal and global markets.",
     "heroImage": "/assets/images/ai-commerce-hero.svg",
