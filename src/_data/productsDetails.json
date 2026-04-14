@@ -303,7 +303,7 @@
       "headline": "Ready to automate your ecommerce sales?",
       "description": "See how Stella can increase conversions and provide 24/7 sales support for your online store.",
       "primaryButton": { "text": "Schedule Demo", "url": "/contact/" },
-      "secondaryButton": { "text": "View Pricing", "url": "/pricing/" }
+      "secondaryButton": { "text": "Contact Sales", "url": "/contact/" }
     },
 
     "clients": []
