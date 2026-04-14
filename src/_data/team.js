@@ -22,8 +22,7 @@ export default [
       }
     ],
     social: {
-      linkedin: "https://www.linkedin.com/in/sadinshrestha/",
-      github: "https://github.com/sadinshrestha"
+      linkedin: "https://www.linkedin.com/in/sadin-shrestha/"
     },
     image: "/assets/images/team/sadin-shrestha.jpg",
     featured: true
