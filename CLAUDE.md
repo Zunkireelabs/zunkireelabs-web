@@ -34,7 +34,8 @@ When the user gives ANY development request, **automatically invoke `/project-pm
 | `/project-pm` | **Orchestrator** | All development tasks - routes to specialists |
 | `/eleventy-dev` | **Templates** | Nunjucks pages, layouts, partials, Eleventy config |
 | `/animation-engineer` | **Motion** | GSAP animations, ScrollTrigger, Lenis, hero effects |
-| `/perf-engineer` | **Performance** | Animation performance, 60fps, GSAP/Lenis optimization |
+| `/perf-engineer` | **Animation Perf** | Animation performance, 60fps, GSAP/Lenis optimization |
+| `/website-speed-perf` | **Page Speed** | Core Web Vitals, LCP/FCP/TTFB, image optimization, bundle size |
 | `/tailwind-ui` | **Styling** | Tailwind classes, responsive design, design system |
 | `/page-gen` | **Generator** | Scaffold new pages quickly with correct structure |
 

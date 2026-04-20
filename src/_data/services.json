@@ -9,8 +9,8 @@
     "icon": "ai",
     "clients": [
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" },
-      { "name": "Admizz", "logo": "/images/clients/admizz.png" }
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
+      { "name": "Admizz", "logo": "/images/clients/admizz.webp" }
     ]
   },
   {
@@ -22,9 +22,9 @@
     "url": "/services/ai-customer-experience/",
     "icon": "chat",
     "clients": [
-      { "name": "Admizz", "logo": "/images/clients/admizz.png" },
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
-      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.png" }
+      { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
+      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp" }
     ]
   },
   {
@@ -47,8 +47,8 @@
     "icon": "data",
     "clients": [
       { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" },
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" }
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" }
     ]
   },
   {
@@ -60,8 +60,8 @@
     "url": "/services/custom-software/",
     "icon": "code",
     "clients": [
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" },
-      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.png" },
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" },
+      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" }
     ]
   },
@@ -74,9 +74,9 @@
     "url": "/services/saas-development/",
     "icon": "cloud",
     "clients": [
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" },
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" }
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" }
     ]
   },
   {
@@ -88,9 +88,9 @@
     "url": "/services/web-development/",
     "icon": "globe",
     "clients": [
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
-      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.png" },
-      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.png" }
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
+      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
+      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp" }
     ]
   },
   {
@@ -102,9 +102,9 @@
     "url": "/services/app-development/",
     "icon": "mobile",
     "clients": [
-      { "name": "Admizz", "logo": "/images/clients/admizz.png" },
+      { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
       { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.png" }
+      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" }
     ]
   },
   {
@@ -116,9 +116,9 @@
     "url": "/services/aeo-seo/",
     "icon": "search",
     "clients": [
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.png" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.png" },
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.png" }
+      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
+      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },
+      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" }
     ]
   }
 ]

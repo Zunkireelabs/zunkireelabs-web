@@ -46,11 +46,19 @@
 
   <!-- Preload Critical Resources for LCP -->
   {% if page.url == "/" %}
-  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high">
+  <link rel="preload" href="/assets/images/hero-orca-dashboard.webp" as="image" fetchpriority="high">
+  {% elif heroImage %}
+  <link rel="preload" href="{{ heroImage }}" as="image" fetchpriority="high">
   {% endif %}
+
+  <!-- DNS Prefetch for third-party domains -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://zunkiree-search-v1.vercel.app">
+  <link rel="dns-prefetch" href="https://api.zunkireelabs.com">
+
+  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   <!-- Schema.org Structured Data - Organization (Global) -->
   <script type="application/ld+json">
@@ -249,10 +257,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png">
 
-  <!-- Fonts - DM Sans + DM Mono from Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+  <!-- Fonts - DM Sans + DM Mono (non-render-blocking) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>
 
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
@@ -271,16 +278,40 @@
   <!-- Main JS + CSS (bundled via Vite) -->
   <script type="module" src="/assets/js/main.js"></script>
 
-  {# Zunkiree Search Widget - loads on all pages #}
-  <script
-    src="https://zunkiree-search-v1.vercel.app/zunkiree-widget.iife.js"
-    data-site-id="zunkireelabs"
-    data-api-url="https://api.zunkireelabs.com">
-  </script>
+  {# Zunkiree Search Widget - lazy loaded for performance #}
   <script>
+    // Lazy load widget after page is interactive
+    var widgetLoaded = false;
+    function loadZunkireeWidget() {
+      if (widgetLoaded) return;
+      widgetLoaded = true;
+      var script = document.createElement('script');
+      script.src = 'https://zunkiree-search-v1.vercel.app/zunkiree-widget.iife.js';
+      script.dataset.siteId = 'zunkireelabs';
+      script.dataset.apiUrl = 'https://api.zunkireelabs.com';
+      document.body.appendChild(script);
+    }
+
+    // Load on idle, user interaction, or after 3 seconds (whichever comes first)
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadZunkireeWidget, { timeout: 3000 });
+    } else {
+      setTimeout(loadZunkireeWidget, 2000);
+    }
+
+    // Also load immediately if user tries to open it
     function openZunkireeWidget() {
-      var fab = document.querySelector('.zk-fab');
-      if (fab) fab.click();
+      loadZunkireeWidget();
+      // Wait for widget to load, then click
+      var checkInterval = setInterval(function() {
+        var fab = document.querySelector('.zk-fab');
+        if (fab) {
+          clearInterval(checkInterval);
+          fab.click();
+        }
+      }, 100);
+      // Stop checking after 5 seconds
+      setTimeout(function() { clearInterval(checkInterval); }, 5000);
     }
   </script>
 

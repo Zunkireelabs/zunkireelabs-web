@@ -4,7 +4,7 @@ export default {
     name: "Sadin Shrestha",
     role: "Founder & CEO",
     bio: "Founder of Zunkiree Labs. Building AI infrastructure from Kathmandu, Nepal.",
-    avatar: "/assets/images/team/sadin-shrestha.jpg",
+    avatar: "/assets/images/team/sadin-shrestha.webp",
     social: {
       twitter: "https://twitter.com/sadinshrestha",
       linkedin: "https://linkedin.com/in/sadinshrestha",

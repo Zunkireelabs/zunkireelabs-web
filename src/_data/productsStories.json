@@ -2,7 +2,7 @@
   {
     "id": "admizz",
     "name": "Admizz Education",
-    "logo": "/images/clients/admizz.png",
+    "logo": "/images/clients/admizz.webp",
     "stat": "45%",
     "statLabel": "fewer support tickets",
     "headline": "Admizz deploys Zunkiree Search for student self-service",
@@ -14,7 +14,7 @@
   {
     "id": "corecloud365",
     "name": "CoreCloud365",
-    "logo": "/images/clients/corecloud365.png",
+    "logo": "/images/clients/corecloud365.webp",
     "stat": "3x",
     "statLabel": "faster information discovery",
     "headline": "CoreCloud365 transforms documentation with AI search",
@@ -26,7 +26,7 @@
   {
     "id": "carbon-spark",
     "name": "Carbon Spark",
-    "logo": "/images/clients/carbon-spark.png",
+    "logo": "/images/clients/carbon-spark.webp",
     "stat": "60%",
     "statLabel": "efficiency gain",
     "headline": "Carbon Spark powers internal knowledge search",

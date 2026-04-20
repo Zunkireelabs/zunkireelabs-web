@@ -5,7 +5,7 @@
     "category": "AI & Data",
     "tagline": "Build intelligent systems that solve real business problems",
     "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
-    "heroImage": "/assets/images/ai-development-hero.png",
+    "heroImage": "/assets/images/ai-development-hero.webp",
     "lastUpdated": "2026-03-23",
 
     "heroCommands": [
@@ -199,7 +199,7 @@
     "category": "AI & Data",
     "tagline": "Transform support from cost center to competitive advantage",
     "description": "AI-powered customer experience systems that resolve inquiries instantly, route complex issues intelligently, and learn from every interaction. We build support infrastructure that scales without scaling headcount.",
-    "heroImage": "/assets/images/ai-customer-experience-hero.png",
+    "heroImage": "/assets/images/ai-customer-experience-hero.webp",
     "heroBgColor": "#efefef",
     "lastUpdated": "2026-03-24",
 
@@ -588,7 +588,7 @@
     "category": "AI & Data",
     "tagline": "Turn raw data into production-ready AI infrastructure",
     "description": "Data pipelines, warehouses, and analytics infrastructure engineered for AI workloads. We build the foundation that makes machine learning actually work—clean data, reliable pipelines, and scalable architecture.",
-    "heroImage": "/assets/images/data-systems-hero.png",
+    "heroImage": "/assets/images/data-systems-hero.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [
@@ -782,7 +782,7 @@
     "category": "Development",
     "tagline": "Build systems your team will actually use",
     "description": "Enterprise applications tailored to your workflows. We build internal tools, business systems, and operational software that replaces spreadsheet chaos with purpose-built solutions.",
-    "heroImage": "/assets/images/custom-software-hero.png",
+    "heroImage": "/assets/images/custom-software-hero.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [
@@ -976,7 +976,7 @@
     "category": "Development",
     "tagline": "Launch multi-tenant products that scale",
     "description": "Multi-tenant SaaS platforms with subscription billing, user management, and architecture designed for scale. We build products that handle thousands of tenants without rewriting the foundation.",
-    "heroImage": "/assets/images/saas-development-hero.png",
+    "heroImage": "/assets/images/saas-development-hero.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [
@@ -1170,7 +1170,7 @@
     "category": "Development",
     "tagline": "Fast sites that rank and convert",
     "description": "High-performance websites and web applications built for speed, SEO, and conversion. Modern frameworks, responsive design, and architecture that handles traffic without breaking.",
-    "heroImage": "/assets/images/web-development-hero.png",
+    "heroImage": "/assets/images/web-development-hero.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [
@@ -1364,7 +1364,7 @@
     "category": "Development",
     "tagline": "Native quality, cross-platform efficiency",
     "description": "Mobile applications for iOS and Android that feel native and perform smoothly. Cross-platform development when it makes sense, native when it doesn't—the right approach for your product and users.",
-    "heroImage": "/assets/images/services-hero-bg.png",
+    "heroImage": "/assets/images/services-hero-bg.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [
@@ -1558,7 +1558,7 @@
     "category": "Marketing",
     "tagline": "Get found by Google and AI systems",
     "description": "Search optimization for the AI era. We optimize your content to rank in traditional search and get cited by AI assistants like ChatGPT, Perplexity, and Google AI Overviews. The new rules require a new approach.",
-    "heroImage": "/assets/images/aeo-seo-hero.png",
+    "heroImage": "/assets/images/aeo-seo-hero.webp",
     "lastUpdated": "2026-03-24",
 
     "heroCommands": [

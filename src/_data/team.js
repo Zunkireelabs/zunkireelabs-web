@@ -24,7 +24,7 @@ export default [
     social: {
       linkedin: "https://www.linkedin.com/in/sadin-shrestha/"
     },
-    image: "/assets/images/team/sadin-shrestha.jpg",
+    image: "/assets/images/team/sadin-shrestha.webp",
     featured: true
   },
   {

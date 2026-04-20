@@ -31,7 +31,8 @@ Use these patterns to route with precision:
 |---------------|----------|------------------|
 | `.njk` file, layout, template, Nunjucks, page structure, frontmatter, include, partial | `/eleventy-dev` | "create a page", "edit the layout", "add a section" |
 | animation, GSAP, scroll effect, reveal, parallax, entrance, motion, Lenis, smooth scroll, timeline | `/animation-engineer` | "add scroll animation", "hero effect", "animate on scroll" |
-| performance, 60fps, janky, choppy, laggy, slow animation, optimize animation, frame rate, profiling | `/perf-engineer` | "animation is slow", "fix janky scroll", "optimize for 60fps" |
+| animation performance, 60fps, janky animation, choppy scroll, laggy animation, optimize GSAP, frame rate | `/perf-engineer` | "animation is slow", "fix janky scroll", "optimize for 60fps" |
+| page speed, load time, Core Web Vitals, LCP, FCP, TTFB, Lighthouse, bundle size, image optimization, slow page | `/website-speed-perf` | "page loads slow", "improve Lighthouse score", "optimize images" |
 | style, Tailwind, responsive, color, spacing, typography, button, card, design tokens, mobile/tablet/desktop | `/tailwind-ui` | "style this section", "make it responsive", "fix the spacing" |
 | new page, scaffold page, quick page | `/page-gen` | "create a pricing page", "add an FAQ page" |
 | AI visibility, AEO, ChatGPT citation, Perplexity, AI Overviews, extractable content, definition blocks | `/aeo-optimizer` | "optimize for AI", "get cited by ChatGPT" |
@@ -201,6 +202,31 @@ Decomposition:
    └── Output: Quote text, attribution
 ```
 
+### Pattern 5: Page Speed Optimization
+
+```
+Request: "Improve page load speed" / "Fix Lighthouse score"
+
+Decomposition:
+1. [website-speed-perf] Audit current performance
+   └── Output: Lighthouse scores, bottleneck list
+
+2. [website-speed-perf] Optimize images
+   └── Output: WebP conversions, lazy loading
+
+3. [website-speed-perf] Optimize JS/CSS loading
+   └── Output: Defer strategies, critical CSS
+
+4. [eleventy-dev] Implement resource hints
+   └── Output: Updated base.njk with preloads
+
+5. [perf-engineer] Fix any animation performance issues
+   └── Output: 60fps verified
+
+6. [website-speed-perf] Verify improvements
+   └── Output: Before/after Lighthouse comparison
+```
+
 ---
 
 ## EXECUTION WORKFLOW
@@ -287,6 +313,12 @@ Skills: seo-auditor → aeo-optimizer → content-writer → schema-generator
 
 ```
 Skills: animation-engineer (single skill, direct route)
+```
+
+### "Improve page speed/Lighthouse score"
+
+```
+Skills: website-speed-perf (audit + optimize) → perf-engineer (if animation perf issues)
 ```
 
 ### "Style [X]"
