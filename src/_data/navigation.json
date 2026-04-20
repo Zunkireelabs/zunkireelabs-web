@@ -133,6 +133,14 @@
                 "icon": "cart",
                 "description": "Agentic commerce and AI-powered online stores",
                 "badge": "New"
+              },
+              {
+                "label": "Agentic as a Service",
+                "subLabel": "(GaaS)",
+                "url": "/agentic-as-a-service/",
+                "icon": "ai",
+                "description": "Autonomous AI agents deployed as managed services",
+                "badge": "New"
               }
             ],
             "seeAll": { "label": "See all services", "url": "/services/" }
@@ -196,6 +204,11 @@
       }
     },
     {
+      "label": "GaaS",
+      "hasDropdown": false,
+      "url": "/agentic-as-a-service/"
+    },
+    {
       "label": "Resources",
       "hasDropdown": true,
       "dropdownType": "megamenu",
@@ -205,6 +218,13 @@
             "header": "LEARN",
             "type": "descriptive",
             "items": [
+              {
+                "label": "What is GaaS?",
+                "url": "/resources/what-is-gaas/",
+                "icon": "ai",
+                "description": "Complete guide to Agentic as a Service",
+                "badge": "New"
+              },
               {
                 "label": "Reports & Research",
                 "url": "/resources/?type=report",
@@ -302,7 +322,8 @@
       { "label": "SaaS Development", "url": "/services/saas-development/" },
       { "label": "Web Development", "url": "/services/web-development/" },
       { "label": "App Development", "url": "/services/app-development/" },
-      { "label": "AEO & SEO", "url": "/services/aeo-seo/" }
+      { "label": "AEO & SEO", "url": "/services/aeo-seo/" },
+      { "label": "Agentic as a Service (GaaS)", "url": "/agentic-as-a-service/" }
     ],
     "solutions": [
       { "label": "Healthcare", "url": "/solutions/healthcare/" },
@@ -313,6 +334,7 @@
       { "label": "Human Resources", "url": "/solutions/human-resources/" }
     ],
     "resources": [
+      { "label": "What is GaaS?", "url": "/resources/what-is-gaas/" },
       { "label": "Reports & Research", "url": "/resources/?type=report" },
       { "label": "Ebooks & Guides", "url": "/resources/?type=ebook" },
       { "label": "Case Studies", "url": "/resources/?type=case-study" },

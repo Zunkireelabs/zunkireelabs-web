@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/gaas",
+      "destination": "/agentic-as-a-service/",
+      "permanent": true
+    },
+    {
+      "source": "/gaas/",
+      "destination": "/agentic-as-a-service/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/gaas-guide",
+      "destination": "/resources/what-is-gaas/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/gaas-guide/",
+      "destination": "/resources/what-is-gaas/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/gaas-vs-saas",
+      "destination": "/resources/what-is-gaas/#gaas-vs-saas",
+      "permanent": true
+    },
+    {
+      "source": "/resources/gaas-vs-saas/",
+      "destination": "/resources/what-is-gaas/#gaas-vs-saas",
+      "permanent": true
+    }
+  ]
+}
