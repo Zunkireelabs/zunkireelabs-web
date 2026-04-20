@@ -11,6 +11,9 @@ eleventyExcludeFromCollections: true
 {%- if page.url == "/" %}
   {%- set priority = "1.0" %}
   {%- set changefreq = "weekly" %}
+{%- elif page.url == "/agentic-as-a-service/" %}
+  {%- set priority = "0.9" %}
+  {%- set changefreq = "weekly" %}
 {%- elif "/services/" in page.url and page.url != "/services/" %}
   {%- set priority = "0.9" %}
   {%- set changefreq = "weekly" %}
