@@ -1,0 +1,221 @@
+---
+layout: base.njk
+title: "My Wishlist | Zunkiree Labs"
+description: "View and manage all your saved EMI plans in one place."
+permalink: /wishlist/
+---
+
+<section class="min-h-screen bg-gray-50 py-12 px-4">
+  <div class="max-w-2xl mx-auto" x-data="wishlistPage()" x-init="init()">
+
+    {# Page header #}
+    <div class="mb-8">
+      <h1 class="text-2xl font-medium text-gray-900">My Saved Plans</h1>
+      <p class="text-sm text-gray-500 mt-1">Enter your email to view your saved EMI plans</p>
+    </div>
+
+    {# Email lookup form #}
+    <div x-show="!email" class="bg-white border border-gray-200 rounded-2xl p-6 mb-6 shadow-sm">
+      <label class="block mb-1.5 text-sm font-medium text-gray-700">Email address</label>
+      <div class="flex gap-3">
+        <input
+          x-model="emailInput"
+          type="email"
+          placeholder="you@example.com"
+          @keydown.enter="lookup()"
+          class="flex-1 px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-zunkiree-400 focus:ring-2 focus:ring-zunkiree-100 transition-colors"
+        />
+        <button
+          @click="lookup()"
+          :disabled="loading || !emailInput.trim()"
+          class="px-5 py-2.5 bg-zunkiree-600 text-white text-sm font-medium rounded-xl hover:bg-zunkiree-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        >
+          View Plans
+        </button>
+      </div>
+      <p x-show="lookupError" class="text-xs text-red-500 mt-2" x-text="lookupError"></p>
+    </div>
+
+    {# Loading #}
+    <div x-show="loading" class="flex flex-col items-center justify-center py-20 gap-4">
+      <div class="w-10 h-10 border-2 border-zunkiree-600 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-sm text-gray-500">Loading plans...</p>
+    </div>
+
+    {# Results section #}
+    <div x-show="email && !loading">
+
+      {# Email badge + change #}
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          <span class="text-sm text-gray-600">Plans for <span class="font-medium text-gray-900" x-text="email"></span></span>
+        </div>
+        <button @click="reset()" class="text-xs text-zunkiree-600 hover:text-zunkiree-700 underline underline-offset-2">Change email</button>
+      </div>
+
+      {# Empty state #}
+      <div x-show="plans.length === 0" class="text-center py-16 bg-white border border-dashed border-gray-300 rounded-2xl">
+        <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+          </svg>
+        </div>
+        <p class="text-gray-500 text-sm mb-4">No saved plans found for this email</p>
+        <a
+          href="/agents-orchestration/ai-agents/"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-zunkiree-600 text-white text-sm font-medium rounded-xl hover:bg-zunkiree-700 transition-colors"
+        >
+          Start a new plan
+        </a>
+      </div>
+
+      {# Plan cards #}
+      <div class="space-y-4">
+        <template x-for="plan in plans" :key="plan.short_id">
+          <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+
+            {# Card header #}
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+              <div>
+                <p class="font-medium text-gray-900" x-text="plan.product_name"></p>
+                <p class="text-xs text-gray-400 mt-0.5 font-mono" x-text="'#' + plan.short_id"></p>
+              </div>
+              <span
+                class="text-xs font-medium px-2.5 py-1 rounded-full capitalize"
+                :class="{
+                  'bg-blue-50 text-blue-700': plan.status === 'saved',
+                  'bg-purple-50 text-purple-700': plan.status === 'shared',
+                  'bg-green-50 text-green-700': plan.status === 'approved'
+                }"
+                x-text="plan.status"
+              ></span>
+            </div>
+
+            {# Card body #}
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-100">
+
+              <div class="bg-white px-4 py-3">
+                <p class="text-[10px] uppercase tracking-wide text-gray-400 mb-0.5">Product Price</p>
+                <p class="text-sm font-medium text-gray-900" x-text="fmt(plan.product_price)"></p>
+              </div>
+
+              <div class="bg-white px-4 py-3">
+                <p class="text-[10px] uppercase tracking-wide text-gray-400 mb-0.5">Bank</p>
+                <p class="text-sm font-medium text-gray-900 truncate" x-text="plan.bank_name"></p>
+              </div>
+
+              <div class="bg-white px-4 py-3">
+                <p class="text-[10px] uppercase tracking-wide text-gray-400 mb-0.5">Tenure</p>
+                <p class="text-sm font-medium text-gray-900" x-text="plan.tenure_months + ' mo'"></p>
+              </div>
+
+              <div class="bg-zunkiree-600 px-4 py-3">
+                <p class="text-[10px] uppercase tracking-wide text-white/70 mb-0.5">Monthly EMI</p>
+                <p class="text-sm font-bold text-white" x-text="fmt(plan.emi_amount)"></p>
+              </div>
+
+            </div>
+
+            {# Card footer #}
+            <div class="flex items-center justify-between px-5 py-3 bg-gray-50">
+              <p class="text-xs text-gray-400" x-text="'Saved ' + formatDate(plan.created_at)"></p>
+              <div class="flex gap-2">
+                <button
+                  @click="copyPlanLink(plan)"
+                  class="text-xs px-3 py-1.5 border border-gray-200 text-gray-600 rounded-lg hover:bg-white transition-colors"
+                  x-text="plan._copied ? 'Copied!' : 'Copy Link'"
+                ></button>
+                <a
+                  :href="'/plan/' + plan.short_id"
+                  class="text-xs px-3 py-1.5 bg-zunkiree-600 text-white rounded-lg hover:bg-zunkiree-700 transition-colors"
+                >View</a>
+                <a
+                  href="/agents-orchestration/ai-agents/"
+                  class="text-xs px-3 py-1.5 border border-zunkiree-200 text-zunkiree-600 rounded-lg hover:bg-zunkiree-50 transition-colors"
+                >Resume</a>
+              </div>
+            </div>
+
+          </div>
+        </template>
+      </div>
+
+      {# New plan CTA #}
+      <div x-show="plans.length > 0" class="mt-6 text-center">
+        <a
+          href="/agents-orchestration/ai-agents/"
+          class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-sm text-gray-700 font-medium rounded-xl hover:bg-white transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+          </svg>
+          Start a new plan
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function wishlistPage() {
+  return {
+    emailInput: '',
+    email: '',
+    plans: [],
+    loading: false,
+    lookupError: '',
+
+    init() {
+      const params = new URLSearchParams(window.location.search);
+      const e = params.get('email');
+      if (e) {
+        this.emailInput = e;
+        this.lookup();
+      }
+    },
+
+    async lookup() {
+      const e = this.emailInput.trim().toLowerCase();
+      if (!e) return;
+      this.lookupError = '';
+      this.loading = true;
+      this.email = '';
+      try {
+        const res = await fetch(`/api/wishlist?email=${encodeURIComponent(e)}`);
+        if (!res.ok) throw new Error('Could not load plans');
+        const data = await res.json();
+        this.plans = data.map(p => ({ ...p, _copied: false }));
+        this.email = e;
+        window.history.replaceState({}, '', `/wishlist/?email=${encodeURIComponent(e)}`);
+      } catch (err) {
+        this.lookupError = err.message;
+      }
+      this.loading = false;
+    },
+
+    reset() {
+      this.email = '';
+      this.emailInput = '';
+      this.plans = [];
+      window.history.replaceState({}, '', '/wishlist/');
+    },
+
+    async copyPlanLink(plan) {
+      const url = `${window.location.origin}/plan/${plan.short_id}`;
+      await navigator.clipboard.writeText(url);
+      plan._copied = true;
+      setTimeout(() => plan._copied = false, 2000);
+    },
+
+    fmt(n) {
+      return 'Rs. ' + Math.round(n).toLocaleString('en-IN');
+    },
+
+    formatDate(iso) {
+      return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+  };
+}
+</script>

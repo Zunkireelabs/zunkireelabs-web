@@ -1,0 +1,852 @@
+---
+layout: base.njk
+title: "AI Agents | Intelligent Autonomous Agents | Zunkiree Labs"
+description: "Deploy AI agents that plan, reason, and act autonomously. Zunkiree Labs builds custom AI agents for enterprise automation, multi-step workflows, and intelligent task execution."
+permalink: /agents-orchestration/ai-agents/
+faqs:
+  - question: "What is an AI agent?"
+    answer: "An AI agent is an autonomous software system that perceives its environment, reasons about goals, plans a sequence of actions, and executes those actions to deliver outcomes—without requiring step-by-step human instruction. Unlike traditional software, AI agents adapt dynamically to new information and handle multi-step workflows independently."
+  - question: "How are AI agents different from chatbots or automation scripts?"
+    answer: "Chatbots respond to single-turn inputs within a conversation. Automation scripts execute fixed, predefined sequences. AI agents do neither—they reason about goals, break them into sub-tasks, choose tools, handle exceptions, and adjust their plan based on real-time feedback. They operate across multiple systems over extended timeframes."
+  - question: "What can AI agents be used for in enterprise settings?"
+    answer: "AI agents excel at any multi-step cognitive workflow: customer onboarding, lead qualification, code review and deployment, document analysis, data pipeline management, support ticket resolution, procurement workflows, and compliance monitoring. Any process that currently requires a human to coordinate across multiple systems is a candidate for AI agent automation."
+  - question: "How do you ensure AI agents don't make costly mistakes?"
+    answer: "Zunkiree Labs builds safety into the agent architecture through Human-in-the-Loop (HITL) gates for high-risk actions, a Critic Agent layer that validates outputs before delivery, ephemeral sandboxed execution environments, role-based permission scoping, and full audit logging. Agents operate within defined guardrails and escalate to human reviewers when confidence is low."
+  - question: "How long does it take to deploy a custom AI agent?"
+    answer: "A focused single-domain agent (e.g., a lead qualification agent or a code review agent) typically goes from scoping to production in 2–4 weeks. Multi-agent orchestration systems for complex enterprise workflows take 6–12 weeks depending on the number of integrations, data sources, and approval workflows required."
+---
+
+{# =====================================================
+   HERO — dark #161616 matching product pages
+   ===================================================== #}
+<section class="relative pb-0 overflow-hidden bg-[#161616]">
+  <div class="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent"></div>
+  <div class="relative max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start pt-24 md:pt-28">
+
+      {# Left #}
+      <div class="lg:col-span-5 pb-10">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-6" data-reveal>Agents Orchestration</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-normal text-white tracking-[-0.03em] leading-[1.05] mb-6" data-reveal>
+          AI Agents<br>That Think,<br>Plan &amp; Act.
+        </h1>
+        <p class="text-lg text-white/70 leading-relaxed mb-10 max-w-md" data-reveal>
+          Intelligent agents that handle multi-step workflows autonomously — integrating across your systems to deliver outcomes without human coordination.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4" data-reveal>
+          <a href="#live-demo" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+            Try Live Demo
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">
+            Deploy an Agent
+          </a>
+        </div>
+      </div>
+
+      {# Right: Animated live agent demo — exact same pattern as search page #}
+      <div class="hidden lg:flex lg:flex-col lg:col-span-7 gap-3" data-reveal
+           x-data="agentDemo()" x-init="start()">
+
+        {# Results card — always in DOM, slides in from top (same as search page) #}
+        <div class="bg-white/[0.07] backdrop-blur-xl rounded-2xl overflow-hidden shadow-2xl border border-white/[0.15] transform transition-all duration-700"
+             :class="showCard ? 'translate-y-0 opacity-100' : '-translate-y-6 opacity-0 pointer-events-none'">
+
+          {# Header #}
+          <div class="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+            <h3 class="text-white font-medium text-sm">Agent Planning</h3>
+            <span class="flex items-center gap-1.5 text-xs" :class="phase >= 4 ? 'text-emerald-400' : 'text-green-400'">
+              <span class="w-1.5 h-1.5 rounded-full" :class="phase >= 4 ? 'bg-emerald-400' : 'bg-green-400 animate-pulse'"></span>
+              <span x-text="phase >= 4 ? 'Done' : 'Running'"></span>
+            </span>
+          </div>
+
+          {# Agents list #}
+          <div class="px-5 py-5 space-y-5 min-h-[172px]">
+
+            {# Agent 1: Shopping #}
+            <div class="flex items-center justify-between transition-all duration-500"
+                 :class="phase >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
+              <div>
+                <p class="text-white font-medium">Shopping Agent</p>
+                <p class="text-white/50 text-sm mt-0.5" x-text="phase >= 2 ? 'OnePlus 12 — Rs. 89,999' : 'Searching catalogue...'"></p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1.5 transition-all duration-500"
+                    :class="phase >= 2 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-white/10 text-white/40'">
+                <svg x-show="phase >= 1 && phase < 2" class="w-3 h-3 animate-spin flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+                <span x-text="phase >= 2 ? 'Complete' : (phase >= 1 ? 'Running' : '')"></span>
+              </span>
+            </div>
+
+            {# Agent 2: EMI #}
+            <div class="flex items-center justify-between transition-all duration-500"
+                 :class="phase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
+              <div>
+                <p class="text-white font-medium">EMI Calculator</p>
+                <p class="text-white/50 text-sm mt-0.5" x-text="phase >= 3 ? 'NIC Asia — Rs. 1,583/mo at 0%' : 'Comparing bank rates...'"></p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1.5 transition-all duration-500"
+                    :class="phase >= 3 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-white/10 text-white/40'">
+                <svg x-show="phase >= 2 && phase < 3" class="w-3 h-3 animate-spin flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+                <span x-text="phase >= 3 ? 'Complete' : (phase >= 2 ? 'Running' : '')"></span>
+              </span>
+            </div>
+
+            {# Agent 3: Dealer #}
+            <div class="flex items-center justify-between transition-all duration-500"
+                 :class="phase >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
+              <div>
+                <p class="text-white font-medium">Dealer Finder</p>
+                <p class="text-white/50 text-sm mt-0.5" x-text="phase >= 4 ? '3 verified dealers near Kathmandu' : 'Locating authorised dealers...'"></p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1.5 transition-all duration-500"
+                    :class="phase >= 4 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400'">
+                <svg x-show="phase >= 3 && phase < 4" class="w-3 h-3 animate-spin flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+                <span x-text="phase >= 4 ? 'Complete' : (phase >= 3 ? 'In Progress' : '')"></span>
+              </span>
+            </div>
+
+          </div>
+
+          {# Tools used #}
+          <div class="px-5 pb-5 border-t border-white/[0.07] pt-4">
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-4 h-4 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span class="text-white/30 text-xs">Tools used</span>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-white/60 text-xs">Product Catalogue</span>
+              <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-white/60 text-xs">Bank Rates API</span>
+              <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-white/60 text-xs">Google Places</span>
+              <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-white/60 text-xs">WhatsApp Share</span>
+            </div>
+          </div>
+
+        </div>
+
+        {# Input bar — ALWAYS VISIBLE at bottom (same as search page) #}
+        <div class="bg-white/[0.07] backdrop-blur-xl rounded-2xl border border-white/[0.15] px-4 py-3.5 flex items-center gap-3" style="box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+          <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <div class="flex-1 min-h-[28px] flex items-center">
+            <span x-show="typedText === '' && !isTyping" class="text-white/40 text-base">Ask anything...</span>
+            <span x-show="typedText !== '' || isTyping" class="text-white/80 text-base" x-text="typedText"></span>
+            <span class="inline-block w-0.5 h-5 bg-white/70 ml-0.5 animate-pulse" x-show="isTyping"></span>
+          </div>
+          <button class="px-5 py-2.5 bg-zunkiree-600 text-white rounded-xl font-medium flex items-center gap-2 hover:bg-zunkiree-700 transition-colors flex-shrink-0">
+            Run
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <script>
+        function agentDemo() {
+          return {
+            phase: 0,
+            showCard: false,
+            typedText: '',
+            isTyping: false,
+            fullText: 'I need a OnePlus phone under Rs. 1,00,000',
+            async start() {
+              await this.delay(800);
+              this.isTyping = true;
+              await this.typeMessage();
+              this.isTyping = false;
+              await this.delay(600);
+              this.showCard = true;
+              await this.delay(500);
+              this.phase = 1;
+              await this.delay(1800);
+              this.phase = 2;
+              await this.delay(1800);
+              this.phase = 3;
+              await this.delay(1800);
+              this.phase = 4;
+              await this.delay(3500);
+              this.showCard = false;
+              this.phase = 0;
+              this.typedText = '';
+              this.isTyping = false;
+              await this.delay(800);
+              this.start();
+            },
+            async typeMessage() {
+              for (let i = 0; i <= this.fullText.length; i++) {
+                this.typedText = this.fullText.substring(0, i);
+                await this.delay(45 + Math.random() * 20);
+              }
+            },
+            delay(ms) {
+              return new Promise(r => setTimeout(r, ms));
+            }
+          }
+        }
+      </script>
+
+    </div>
+
+    {# ── Feature highlights — inside hero, dark-styled ── #}
+    <div class="border-t border-white/[0.08] mt-12 pb-16">
+
+      <div class="py-12 border-b border-white/[0.07] max-w-2xl" data-reveal>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Why AI Agents</p>
+        <h2 class="text-2xl md:text-3xl font-normal text-white tracking-[-0.02em] leading-[1.2]">
+          Built for enterprises that can't afford coordination bottlenecks.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px">
+        <div class="py-8 lg:pr-8 flex items-start gap-4" data-reveal>
+          <div class="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-zunkiree-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <div class="text-base font-medium text-white mb-1">Autonomous Planning</div>
+            <div class="text-sm text-white/50 leading-relaxed">Agents decompose goals and build their own execution plan</div>
+          </div>
+        </div>
+        <div class="py-8 lg:px-8 flex items-start gap-4" data-reveal>
+          <div class="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-zunkiree-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h10M4 18h6"/></svg>
+          </div>
+          <div>
+            <div class="text-base font-medium text-white mb-1">Multi-step Execution</div>
+            <div class="text-sm text-white/50 leading-relaxed">Runs across APIs, databases, and browsers in sequence</div>
+          </div>
+        </div>
+        <div class="py-8 lg:px-8 flex items-start gap-4" data-reveal>
+          <div class="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-zunkiree-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <div class="text-base font-medium text-white mb-1">Human-in-the-Loop</div>
+            <div class="text-sm text-white/50 leading-relaxed">Safety gates pause for approval before high-risk actions</div>
+          </div>
+        </div>
+        <div class="py-8 lg:pl-8 flex items-start gap-4" data-reveal>
+          <div class="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-zunkiree-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="text-base font-medium text-white mb-1">Full Audit Trail</div>
+            <div class="text-sm text-white/50 leading-relaxed">Every action logged, timestamped, and reviewable</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   DEFINITION — light, two-col with stat anchor
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-white border-b border-gray-100">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-4" data-reveal>
+        <div class="text-[5rem] md:text-[7rem] font-light text-gray-900 leading-none tracking-[-0.04em] mb-2">70<span class="text-zunkiree-600">%</span></div>
+        <p class="text-sm text-gray-400 leading-relaxed">reduction in manual coordination time on multi-system enterprise workflows</p>
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6" data-reveal>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-5">What is an AI Agent?</p>
+        <p class="text-xl md:text-2xl text-gray-900 leading-relaxed font-normal mb-6">
+          An <strong>AI agent</strong> is an autonomous software system that perceives its environment, reasons about a goal, plans a sequence of actions, executes those actions using available tools, and adapts based on feedback — all without step-by-step human instruction.
+        </p>
+        <a href="/agentic-as-a-service/" class="text-sm text-zunkiree-600 hover:text-zunkiree-700 font-medium inline-flex items-center gap-1.5 transition-colors">
+          Learn about Agentic as a Service
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   AGENT TYPES + ARCHITECTURE — coral/peach accent theme
+   ===================================================== #}
+<section class="bg-white overflow-hidden">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {# Compact header — badge pill + heading in one block #}
+    <div class="pt-16 md:pt-20 pb-10 border-b border-gray-100" data-reveal>
+      <div class="inline-flex items-center gap-1.5 bg-[#FEE2E2] px-3 py-1 rounded-full mb-5">
+        <svg class="w-3 h-3 text-[#DC2626]" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span class="text-[11px] font-bold uppercase tracking-[0.1em] text-[#DC2626]">What We Build</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-normal text-gray-900 tracking-[-0.02em] leading-[1.15]">
+        Agent types <span class="text-[#DC2626]">&amp;</span> architecture
+      </h2>
+    </div>
+
+    {# Two-column body #}
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:divide-x lg:divide-gray-100">
+
+      {# ── Left: Agent Types ── #}
+      <div class="py-10 lg:pr-12" data-reveal>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Agent Types</p>
+        <div class="space-y-3">
+
+          {# Task Agents #}
+          <div class="group flex gap-4 p-5 rounded-xl border border-transparent bg-gray-50 hover:bg-[#FFF7F4] hover:border-[#F0C4B4] transition-all duration-200 cursor-default">
+            <div class="w-9 h-9 rounded-lg bg-[#FEE2E2] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DC2626] transition-colors duration-200">
+              <svg class="w-4 h-4 text-[#DC2626] group-hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Task Agents</h4>
+              <p class="text-sm text-gray-500 leading-relaxed">Execute specific, bounded workflows end-to-end — lead qualification, invoice processing, onboarding sequences.</p>
+            </div>
+          </div>
+
+          {# Orchestrator Agents #}
+          <div class="group flex gap-4 p-5 rounded-xl border border-transparent bg-gray-50 hover:bg-[#FFF7F4] hover:border-[#F0C4B4] transition-all duration-200 cursor-default">
+            <div class="w-9 h-9 rounded-lg bg-[#FEE2E2] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DC2626] transition-colors duration-200">
+              <svg class="w-4 h-4 text-[#DC2626] group-hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Orchestrator Agents</h4>
+              <p class="text-sm text-gray-500 leading-relaxed">Coordinate teams of worker agents. Break complex goals into sub-tasks, delegate, collect results, and synthesise outcomes.</p>
+            </div>
+          </div>
+
+          {# Monitor Agents #}
+          <div class="group flex gap-4 p-5 rounded-xl border border-transparent bg-gray-50 hover:bg-[#FFF7F4] hover:border-[#F0C4B4] transition-all duration-200 cursor-default">
+            <div class="w-9 h-9 rounded-lg bg-[#FEE2E2] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DC2626] transition-colors duration-200">
+              <svg class="w-4 h-4 text-[#DC2626] group-hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Monitor Agents</h4>
+              <p class="text-sm text-gray-500 leading-relaxed">Run continuously watching systems, data streams, or events. Alert or act automatically when conditions are met.</p>
+            </div>
+          </div>
+
+          {# Code & Dev Agents #}
+          <div class="group flex gap-4 p-5 rounded-xl border border-transparent bg-gray-50 hover:bg-[#FFF7F4] hover:border-[#F0C4B4] transition-all duration-200 cursor-default">
+            <div class="w-9 h-9 rounded-lg bg-[#FEE2E2] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DC2626] transition-colors duration-200">
+              <svg class="w-4 h-4 text-[#DC2626] group-hover:text-white transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Code &amp; Dev Agents</h4>
+              <p class="text-sm text-gray-500 leading-relaxed">Review PRs, write tests, debug production issues, run deployments, and maintain codebases autonomously.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {# ── Right: Technical Architecture ── #}
+      <div class="py-10 lg:pl-12" data-reveal>
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Technical Architecture</p>
+        <p class="text-sm text-gray-500 leading-relaxed mb-6">
+          Agents are built on a <strong class="text-gray-800 font-semibold">ReAct loop</strong> — Reason, Act, Observe — with modular tool integration and a Critic Agent layer that validates every output before delivery.
+        </p>
+
+        {# Dark terminal block #}
+        <div class="rounded-xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 16px 40px rgba(0,0,0,0.12);">
+          <div class="bg-[#1A1A1A] px-4 py-3 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#28CA41]"></span>
+            <span class="text-xs text-white/30 ml-3 font-mono tracking-wide">agent.architecture</span>
+          </div>
+          <div class="bg-[#111111] divide-y divide-white/[0.05]">
+            <div class="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.03] transition-colors">
+              <span class="w-2 h-2 rounded-full bg-[#DC2626] flex-shrink-0"></span>
+              <span class="w-20 text-xs font-mono text-white/50 flex-shrink-0">Reasoning</span>
+              <span class="text-xs font-mono text-white/30">LLM goal decomposition + planning</span>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.03] transition-colors">
+              <span class="w-2 h-2 rounded-full bg-[#0D9488] flex-shrink-0"></span>
+              <span class="w-20 text-xs font-mono text-white/50 flex-shrink-0">Memory</span>
+              <span class="text-xs font-mono text-white/30">Short-term context + vector store</span>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.03] transition-colors">
+              <span class="w-2 h-2 rounded-full bg-[#3B82F6] flex-shrink-0"></span>
+              <span class="w-20 text-xs font-mono text-white/50 flex-shrink-0">Tools</span>
+              <span class="text-xs font-mono text-white/30">APIs · databases · browsers · code</span>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.03] transition-colors">
+              <span class="w-2 h-2 rounded-full bg-[#8B5CF6] flex-shrink-0"></span>
+              <span class="w-20 text-xs font-mono text-white/50 flex-shrink-0">Reflection</span>
+              <span class="text-xs font-mono text-white/30">Critic agent validates before delivery</span>
+            </div>
+            <div class="flex items-center gap-3 px-4 py-3.5 hover:bg-white/[0.03] transition-colors">
+              <span class="w-2 h-2 rounded-full bg-[#FEE2E2] flex-shrink-0"></span>
+              <span class="w-20 text-xs font-mono text-white/50 flex-shrink-0">Safety</span>
+              <span class="text-xs font-mono text-white/30">HITL gates · sandbox · audit logs</span>
+            </div>
+          </div>
+        </div>
+
+        {# Stat cards #}
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <div class="p-4 bg-[#FEE2E2] rounded-xl border border-[#F0C4B4]">
+            <div class="text-xl font-semibold text-[#DC2626] mb-0.5">2–4 wks</div>
+            <div class="text-xs text-[#A0522D] font-medium">Scoping to production</div>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <div class="text-xl font-semibold text-gray-800 mb-0.5">Cloud / On-prem</div>
+            <div class="text-xs text-gray-400 font-medium">Flexible deployment</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    {# Footer CTA strip #}
+    <div class="border-t border-gray-100 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-sm font-medium text-gray-600">Ready to deploy your first agent?</p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#DC2626] text-white text-sm font-semibold rounded-full hover:bg-[#C04E28] transition-colors flex-shrink-0">
+        Talk to us
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   AGENTS IN ACTION — dark visual break (matches search page widget style)
+   ===================================================== #}
+<section id="live-demo" class="bg-white border-y border-gray-100">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+
+      <div class="py-16 md:py-24 pr-8 lg:pr-16" data-reveal>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-5">Agents in Action</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 tracking-[-0.02em] leading-[1.1] mb-6">
+          One request.<br>Three agents at work.
+        </h2>
+        <p class="text-lg text-gray-500 leading-relaxed mb-10">
+          Tell an agent what you want to buy. It searches the product catalogue, compares EMI plans across banks, and finds authorised dealers — no coordination needed.
+        </p>
+        <a href="#step-shopping" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-zunkiree-600 transition-colors">
+          Try the live demos below
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-center py-10 px-8 lg:px-12" data-reveal>
+        <div class="w-full max-w-sm bg-white rounded-xl overflow-hidden border border-gray-200" style="box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.07);">
+          <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between bg-gray-50">
+            <span class="text-sm text-gray-900 font-medium">Agent Pipeline</span>
+            <span class="flex items-center gap-1.5 text-xs text-green-600"><span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>Running</span>
+          </div>
+
+          <div class="px-5 py-4 border-b border-gray-100 bg-gray-50/50">
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              </div>
+              <p class="text-gray-500 text-sm leading-relaxed italic">"I need a OnePlus phone under Rs. 1,00,000 with the best camera"</p>
+            </div>
+          </div>
+
+          <div class="px-5 py-4 space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-zunkiree-50 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Shopping Agent</p>
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-sm text-gray-900 font-medium truncate">OnePlus 12</span>
+                    <span class="px-1.5 py-0 bg-gray-50 text-gray-600 border border-gray-200 rounded text-[10px] font-medium whitespace-nowrap flex-shrink-0">Rs. 89,999</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-2 opacity-50">
+                    <span class="text-sm text-gray-500 truncate">OnePlus 11R</span>
+                    <span class="text-[10px] text-gray-400 whitespace-nowrap flex-shrink-0">Rs. 74,999</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-px bg-gray-100"></div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-blue-50 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">EMI Calculator</p>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-sm text-gray-900 font-medium truncate">NIC Asia — 12 mo</span>
+                  <span class="px-1.5 py-0 bg-gray-50 text-gray-600 border border-gray-200 rounded text-[10px] font-medium whitespace-nowrap flex-shrink-0">Rs. 1,583/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="h-px bg-gray-100"></div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-amber-50 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Dealer Finder</p>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-sm text-gray-900 font-medium truncate">3 dealers, Kathmandu</span>
+                  <span class="flex items-center gap-1 text-[10px] text-amber-600 whitespace-nowrap flex-shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>In Progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-5 pb-4 flex items-center gap-2 text-xs text-gray-400">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Powered by Zunkiree AI
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   STEP 1: SHOPPING AGENT
+   ===================================================== #}
+{# =====================================================
+   3-STEP FEATURE SECTION — alternating layout
+   ===================================================== #}
+<section id="step-shopping" class="bg-white" style="border-top: 0.5px solid #e5e3db; border-bottom: 0.5px solid #e5e3db;">
+  <div class="max-w-6xl mx-auto">
+
+  {# ── STEP 1: text left · card right ── #}
+  <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch" style="border-bottom: 0.5px solid #e5e3db;">
+
+    {# Text col #}
+    <div class="px-8 lg:px-12 py-12 flex flex-col justify-center" data-reveal>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-[#DC2626] flex-shrink-0" style="border: 1.5px solid #DC2626;">01</span>
+        <span class="text-[11px] font-bold uppercase tracking-[0.1em] text-[#DC2626]">Step One</span>
+      </div>
+      <h2 class="text-2xl md:text-[1.75rem] font-semibold text-[#1a1a1a] tracking-[-0.02em] leading-tight mb-3">Find the right product, instantly</h2>
+      <p class="text-sm text-[#888780] leading-relaxed mb-6">Tell the agent what you want and your budget. It searches the catalogue, scores alternatives, and surfaces the best match — no browsing required.</p>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Natural language — "OnePlus phone under 1 lakh"</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Scored by value, features, and budget fit</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Festival discount alerts built in</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Click any result → EMI calculator loads automatically</li>
+      </ul>
+    </div>
+
+    {# Live demo col #}
+    <div class="px-6 lg:px-8 py-10 flex flex-col items-stretch justify-center" style="border-left: 0.5px solid #e5e3db;" data-reveal>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-white" style="background: #DC2626;">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>Live Demo
+        </span>
+        <span class="text-[11px] text-[#888780]">Try it — type a real request</span>
+      </div>
+      {% include "components/shopping-agent.njk" %}
+    </div>
+
+  </div>
+
+  {# ── STEP 2: card left · text right ── #}
+  <div id="step-emi" class="grid grid-cols-1 lg:grid-cols-2 items-stretch" style="border-bottom: 0.5px solid #e5e3db;">
+
+    {# Live demo col #}
+    <div class="px-6 lg:px-8 py-10 flex flex-col items-stretch justify-center" data-reveal>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-white" style="background: #DC2626;">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>Live Demo
+        </span>
+        <span class="text-[11px] text-[#888780]">Compare banks in real time</span>
+      </div>
+      {% include "components/emi-calculator.njk" %}
+    </div>
+
+    {# Text col #}
+    <div class="px-8 lg:px-12 py-12 flex flex-col justify-center" style="border-left: 0.5px solid #e5e3db;" data-reveal>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-[#DC2626] flex-shrink-0" style="border: 1.5px solid #DC2626;">02</span>
+        <span class="text-[11px] font-bold uppercase tracking-[0.1em] text-[#DC2626]">Step Two</span>
+      </div>
+      <h2 class="text-2xl md:text-[1.75rem] font-semibold text-[#1a1a1a] tracking-[-0.02em] leading-tight mb-3">Plan your EMI, save your plan</h2>
+      <p class="text-sm text-[#888780] leading-relaxed mb-6">Compare rates across every major bank, adjust tenure, add a down payment — then save and share with family for approval.</p>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Auto-populates from the shopping agent</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Live rates from NIC Asia, Himalayan, Nabil &amp; more</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Save plan → shareable link via WhatsApp</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Price drop &amp; festival alerts via SMS</li>
+      </ul>
+    </div>
+
+  </div>
+
+  {# ── STEP 3: text left · card right ── #}
+  <div id="step-dealers" class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+
+    {# Text col #}
+    <div class="px-8 lg:px-12 py-12 flex flex-col justify-center" data-reveal>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-[#DC2626] flex-shrink-0" style="border: 1.5px solid #DC2626;">03</span>
+        <span class="text-[11px] font-bold uppercase tracking-[0.1em] text-[#DC2626]">Step Three</span>
+      </div>
+      <h2 class="text-2xl md:text-[1.75rem] font-semibold text-[#1a1a1a] tracking-[-0.02em] leading-tight mb-3">Find authorised dealers near you</h2>
+      <p class="text-sm text-[#888780] leading-relaxed mb-6">Once you've chosen a product, the agent surfaces verified dealers in your city — with ratings, open/closed status, and directions.</p>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Auto-fills brand from selected product</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Search by city or use GPS location</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>Verified Partner badge on authorised dealers</li>
+        <li class="flex items-start gap-3 text-sm text-[#555350]"><span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0 mt-1.5"></span>One-click call or Google Maps directions</li>
+      </ul>
+    </div>
+
+    {# Live demo col #}
+    <div class="px-6 lg:px-8 py-10 flex flex-col items-stretch justify-center" style="border-left: 0.5px solid #e5e3db;" data-reveal>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-white" style="background: #DC2626;">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>Live Demo
+        </span>
+        <span class="text-[11px] text-[#888780]">Find dealers in your city</span>
+      </div>
+      {% include "components/dealer-finder.njk" %}
+    </div>
+
+  </div>
+
+  </div>{# end max-w-6xl #}
+</section>
+
+{# =====================================================
+   HOW IT WORKS — 4-column process grid
+   ===================================================== #}
+<section id="how-it-works" class="bg-white" style="border-top: 1px solid #e5e3db;">
+
+  {# Section header #}
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-10" style="border-bottom: 0.5px solid #e5e3db;" data-reveal>
+    <p class="text-[11px] font-bold uppercase tracking-[0.1em] text-[#DC2626] mb-2">Process</p>
+    <h2 class="text-3xl md:text-4xl font-normal text-[#1a1a1a] tracking-[-0.02em]">How AI Agents Work</h2>
+  </div>
+
+  {# Steps row #}
+  <div class="max-w-screen-2xl mx-auto px-0" style="border-bottom: 0.5px solid #e5e3db;">
+    <div class="grid grid-cols-2 lg:grid-cols-4">
+
+      {# 01 — Define the Goal (completed) #}
+      <div class="px-6 lg:px-8 py-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <span class="block text-xs font-bold text-[#DC2626] mb-5">01</span>
+        <div class="w-10 h-10 rounded-lg bg-[#FEE2E2] flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-[#DC2626]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-[#1a1a1a] mb-2">Define the Goal</h3>
+        <p class="text-xs text-[#888780] leading-relaxed">You describe the outcome in plain language. No scripts, no configuration — just a clear objective.</p>
+      </div>
+
+      {# 02 — Agent Plans (completed) #}
+      <div class="px-6 lg:px-8 py-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <span class="block text-xs font-bold text-[#DC2626] mb-5">02</span>
+        <div class="w-10 h-10 rounded-lg bg-[#FEE2E2] flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-[#DC2626]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-[#1a1a1a] mb-2">Agent Plans</h3>
+        <p class="text-xs text-[#888780] leading-relaxed">The agent reasons about the goal, decomposes it into sub-tasks, selects tools, and builds an execution plan.</p>
+      </div>
+
+      {# 03 — Agent Acts (active) #}
+      <div class="px-6 lg:px-8 py-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <span class="block text-xs font-bold text-[#1a1a1a] mb-5">03</span>
+        <div class="w-10 h-10 rounded-lg bg-[#1a1a1a] flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-[#1a1a1a] mb-2">Agent Acts</h3>
+        <p class="text-xs text-[#888780] leading-relaxed">The agent executes across your systems — calling APIs, reading databases, writing responses, adapting in real time.</p>
+      </div>
+
+      {# 04 — Outcome Delivered (pending) #}
+      <div class="px-6 lg:px-8 py-8" data-reveal>
+        <span class="block text-xs font-bold text-[#c8c5be] mb-5">04</span>
+        <div class="w-10 h-10 rounded-lg bg-[#f0ede8] flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-[#c8c5be]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-[#c8c5be] mb-2">Outcome Delivered</h3>
+        <p class="text-xs text-[#c8c5be] leading-relaxed">A Critic Agent validates results before delivery. You receive a summary, updated systems, and a full audit trail.</p>
+      </div>
+
+    </div>
+  </div>
+
+  {# Detail cards row #}
+  <div class="max-w-screen-2xl mx-auto px-0" style="border-bottom: 0.5px solid #e5e3db;">
+    <div class="grid grid-cols-1 lg:grid-cols-4">
+
+      {# Card 1: Coral — user quote #}
+      <div class="p-6 lg:p-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <div class="p-5 h-full rounded-[10px] bg-[#FEE2E2]" style="border: 1px solid #FCA5A5;">
+          <svg class="w-5 h-5 text-[#DC2626] mb-3 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          <p class="text-sm text-[#888780] italic leading-relaxed">"Qualify all new leads from HubSpot and schedule demos for the high-intent ones."</p>
+        </div>
+      </div>
+
+      {# Card 2: Neutral — checklist #}
+      <div class="p-6 lg:p-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <div class="p-5 h-full rounded-[10px] bg-[#faf9f7]" style="border: 1px solid #e5e3db;">
+          <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-[#888780] mb-4">Execution plan</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0"></span>
+              <span class="text-xs text-[#1a1a1a]">Fetch leads from HubSpot API</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] flex-shrink-0"></span>
+              <span class="text-xs text-[#1a1a1a]">Score intent signals per lead</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#d5d2cc] flex-shrink-0"></span>
+              <span class="text-xs text-[#888780]">Schedule demos for high-intent leads</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#d5d2cc] flex-shrink-0"></span>
+              <span class="text-xs text-[#888780]">Update CRM with outcomes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# Card 3: Dark — live stats #}
+      <div class="p-6 lg:p-8" style="border-right: 0.5px solid #e5e3db;" data-reveal>
+        <div class="p-5 h-full rounded-[10px] bg-[#1a1a1a] space-y-3" style="border: 1px solid #2e2e2e;">
+          <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-white/30 mb-4">Live execution</p>
+          {# 47 full width #}
+          <div class="p-4 rounded-lg bg-white/[0.06]" style="border: 1px solid rgba(255,255,255,0.07);">
+            <div class="text-2xl font-semibold text-white leading-none mb-1">47</div>
+            <div class="text-xs text-white/40">Leads fetched</div>
+          </div>
+          {# 12 + 12 side by side #}
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-4 rounded-lg bg-white/[0.06]" style="border: 1px solid rgba(255,255,255,0.07);">
+              <div class="text-2xl font-semibold text-white leading-none mb-1">12</div>
+              <div class="text-xs text-white/40">High intent</div>
+            </div>
+            <div class="p-4 rounded-lg bg-white/[0.06]" style="border: 1px solid rgba(255,255,255,0.07);">
+              <div class="text-2xl font-semibold text-white leading-none mb-1">12</div>
+              <div class="text-xs text-white/40">Demos booked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# Card 4: Green — outcome delivered #}
+      <div class="p-6 lg:p-8" data-reveal>
+        <div class="p-5 h-full rounded-[10px] bg-[#EAF3DE]" style="border: 1px solid #C0DD97;">
+          <p class="text-[11px] font-bold uppercase tracking-[0.08em] text-[#3B6D11] mb-4">Report Delivered</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-full text-xs font-medium text-[#3B6D11] bg-white/70" style="border: 1px solid #C0DD97;">12 demos scheduled</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-medium text-[#3B6D11] bg-white/70" style="border: 1px solid #C0DD97;">Pipeline updated</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-medium text-[#3B6D11] bg-white/70" style="border: 1px solid #C0DD97;">Summary emailed</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-medium text-[#3B6D11] bg-white/70" style="border: 1px solid #C0DD97;">Zero human hours</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {# Footer strip #}
+  <div style="background-color: #faf9f7; border-top: 0.5px solid #e5e3db;">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <p class="text-sm text-[#888780]">Every agent run is logged, auditable, and reversible</p>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style="background-color: #EAF3DE; border: 1px solid #C0DD97;">
+        <svg class="w-3.5 h-3.5 text-[#3B6D11]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span class="text-[11px] font-bold uppercase tracking-[0.08em] text-[#3B6D11]">HITL safety gates active</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{# =====================================================
+   FAQ — light
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-warm-off-white border-y border-gray-200">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div data-reveal>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">FAQ</p>
+        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 tracking-tight mb-6">Common questions about AI agents</h2>
+        <p class="text-lg text-gray-500 mb-8">Everything enterprises need to know before deploying their first agent.</p>
+        <a href="/contact/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200 text-sm">
+          Have more questions? Talk to us
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div x-data="{ activeIndex: 0, expandAll: false }">
+        <div class="flex items-center justify-end mb-4">
+          <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0" class="text-sm text-gray-400 hover:text-gray-900 transition-colors">
+            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+          </button>
+        </div>
+        <div class="divide-y divide-gray-200">
+          {% for item in faqs %}
+          <div class="py-5" data-reveal>
+            <button @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}" class="w-full flex items-center justify-between text-left group">
+              <span class="text-base font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">{{ item.question }}</span>
+              <span class="flex-shrink-0 text-gray-400">
+                <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+              </span>
+            </button>
+            <div x-show="activeIndex === {{ loop.index }} || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="overflow-hidden">
+              <p class="pt-4 text-gray-500 leading-relaxed text-sm">{{ item.answer }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CTA — dark #161616
+   ===================================================== #}
+<section class="py-20 md:py-28 bg-[#161616]">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 text-center">
+    <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-6" data-reveal>Get Started</p>
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white tracking-[-0.02em] mb-6" data-reveal>Ready to deploy AI agents?</h2>
+    <p class="text-lg text-white/60 max-w-2xl mx-auto mb-10" data-reveal>Let autonomous agents handle the work. You focus on what only humans can do.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal>
+      <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">Deploy Your First Agent</a>
+      <a href="/agentic-as-a-service/" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">Learn About GaaS</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "AI Agents by Zunkiree Labs",
+      "description": "Autonomous AI agents that plan, reason, and execute multi-step workflows across enterprise systems.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud",
+      "provider": { "@type": "Organization", "name": "Zunkiree Labs", "url": "https://zunkireelabs.com" },
+      "url": "https://zunkireelabs.com/agents-orchestration/ai-agents/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is an AI agent?", "acceptedAnswer": { "@type": "Answer", "text": "An AI agent is an autonomous software system that perceives its environment, reasons about goals, plans a sequence of actions, and executes those actions to deliver outcomes—without requiring step-by-step human instruction." } },
+        { "@type": "Question", "name": "How are AI agents different from chatbots or automation scripts?", "acceptedAnswer": { "@type": "Answer", "text": "Chatbots respond to single-turn inputs. Automation scripts execute fixed sequences. AI agents reason about goals, break them into sub-tasks, choose tools, handle exceptions, and adjust their plan based on real-time feedback." } },
+        { "@type": "Question", "name": "What can AI agents be used for in enterprise settings?", "acceptedAnswer": { "@type": "Answer", "text": "AI agents excel at multi-step cognitive workflows: customer onboarding, lead qualification, code review, document analysis, data pipeline management, support ticket resolution, procurement, and compliance monitoring." } },
+        { "@type": "Question", "name": "How do you ensure AI agents don't make costly mistakes?", "acceptedAnswer": { "@type": "Answer", "text": "Zunkiree Labs builds safety through Human-in-the-Loop gates, a Critic Agent layer, sandboxed execution, role-based permission scoping, and full audit logging." } },
+        { "@type": "Question", "name": "How long does it take to deploy a custom AI agent?", "acceptedAnswer": { "@type": "Answer", "text": "A focused single-domain agent goes from scoping to production in 2–4 weeks. Multi-agent systems take 6–12 weeks." } }
+      ]
+    }
+  ]
+}
+</script>

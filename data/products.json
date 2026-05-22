@@ -1,0 +1,409 @@
+[
+  {
+    "id": 1,
+    "name": "Yamaha MT-15",
+    "brand": "Yamaha",
+    "price": 315000,
+    "category": "bikes",
+    "specs": {
+      "engine": "155cc liquid-cooled",
+      "power": "18.4 PS",
+      "torque": "14.1 Nm",
+      "weight": "138 kg",
+      "fuel_tank": "10L",
+      "mileage": "45 kmpl",
+      "abs": true
+    },
+    "value_score": 7.8
+  },
+  {
+    "id": 2,
+    "name": "Yamaha FZ-S V3",
+    "brand": "Yamaha",
+    "price": 165000,
+    "category": "bikes",
+    "specs": {
+      "engine": "149cc air-cooled",
+      "power": "12.2 PS",
+      "torque": "13.3 Nm",
+      "weight": "135 kg",
+      "fuel_tank": "12L",
+      "mileage": "50 kmpl",
+      "abs": true
+    },
+    "value_score": 8.4
+  },
+  {
+    "id": 3,
+    "name": "Bajaj Pulsar NS160",
+    "brand": "Bajaj",
+    "price": 155000,
+    "category": "bikes",
+    "specs": {
+      "engine": "160.3cc liquid-cooled",
+      "power": "17.2 PS",
+      "torque": "14.6 Nm",
+      "weight": "148 kg",
+      "fuel_tank": "12L",
+      "mileage": "46 kmpl",
+      "abs": true
+    },
+    "value_score": 8.9
+  },
+  {
+    "id": 4,
+    "name": "TVS Apache RTR 160 4V",
+    "brand": "TVS",
+    "price": 145000,
+    "category": "bikes",
+    "specs": {
+      "engine": "159.7cc oil-cooled",
+      "power": "17.55 PS",
+      "torque": "14.73 Nm",
+      "weight": "153 kg",
+      "fuel_tank": "12L",
+      "mileage": "47 kmpl",
+      "abs": true
+    },
+    "value_score": 9.1
+  },
+  {
+    "id": 5,
+    "name": "Suzuki Gixxer SF",
+    "brand": "Suzuki",
+    "price": 160000,
+    "category": "bikes",
+    "specs": {
+      "engine": "155cc air-cooled",
+      "power": "14.8 PS",
+      "torque": "14 Nm",
+      "weight": "140 kg",
+      "fuel_tank": "12L",
+      "mileage": "52 kmpl",
+      "abs": true
+    },
+    "value_score": 8.2
+  },
+  {
+    "id": 6,
+    "name": "Honda CB Hornet 160R",
+    "brand": "Honda",
+    "price": 148000,
+    "category": "bikes",
+    "specs": {
+      "engine": "162.71cc air-cooled",
+      "power": "15.84 PS",
+      "torque": "14.7 Nm",
+      "weight": "143 kg",
+      "fuel_tank": "12L",
+      "mileage": "48 kmpl",
+      "abs": true
+    },
+    "value_score": 8.6
+  },
+  {
+    "id": 7,
+    "name": "Hero Xpulse 200",
+    "brand": "Hero",
+    "price": 175000,
+    "category": "bikes",
+    "specs": {
+      "engine": "199.6cc oil-cooled",
+      "power": "18.4 PS",
+      "torque": "17.1 Nm",
+      "weight": "157 kg",
+      "fuel_tank": "13L",
+      "mileage": "40 kmpl",
+      "abs": true
+    },
+    "value_score": 8.7
+  },
+  {
+    "id": 8,
+    "name": "Honda Unicorn 160",
+    "brand": "Honda",
+    "price": 118000,
+    "category": "bikes",
+    "specs": {
+      "engine": "162.71cc air-cooled",
+      "power": "13.6 PS",
+      "torque": "14.6 Nm",
+      "weight": "146 kg",
+      "fuel_tank": "13L",
+      "mileage": "55 kmpl",
+      "abs": true
+    },
+    "value_score": 8.0
+  },
+  {
+    "id": 9,
+    "name": "Bajaj Pulsar 150",
+    "brand": "Bajaj",
+    "price": 125000,
+    "category": "bikes",
+    "specs": {
+      "engine": "149cc air-cooled",
+      "power": "14 PS",
+      "torque": "13.25 Nm",
+      "weight": "148 kg",
+      "fuel_tank": "15L",
+      "mileage": "50 kmpl",
+      "abs": false
+    },
+    "value_score": 7.5
+  },
+  {
+    "id": 10,
+    "name": "Hero Splendor Plus",
+    "brand": "Hero",
+    "price": 85000,
+    "category": "bikes",
+    "specs": {
+      "engine": "97.2cc air-cooled",
+      "power": "8.02 PS",
+      "torque": "8.05 Nm",
+      "weight": "112 kg",
+      "fuel_tank": "9.8L",
+      "mileage": "80 kmpl",
+      "abs": false
+    },
+    "value_score": 8.8
+  },
+  {
+    "id": 11,
+    "name": "iPhone 15",
+    "brand": "Apple",
+    "price": 155000,
+    "category": "phones",
+    "specs": {
+      "display": "6.1\" Super Retina XDR",
+      "processor": "A16 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP",
+      "battery": "3877 mAh",
+      "5g": true
+    },
+    "value_score": 7.9
+  },
+  {
+    "id": 12,
+    "name": "Samsung Galaxy S24",
+    "brand": "Samsung",
+    "price": 120000,
+    "category": "phones",
+    "specs": {
+      "display": "6.2\" Dynamic AMOLED",
+      "processor": "Exynos 2400",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 12MP + 10MP",
+      "battery": "4000 mAh",
+      "5g": true
+    },
+    "value_score": 8.6
+  },
+  {
+    "id": 13,
+    "name": "OnePlus 12",
+    "brand": "OnePlus",
+    "price": 95000,
+    "category": "phones",
+    "specs": {
+      "display": "6.82\" LTPO AMOLED",
+      "processor": "Snapdragon 8 Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 48MP + 64MP",
+      "battery": "5400 mAh",
+      "5g": true
+    },
+    "value_score": 9.2
+  },
+  {
+    "id": 14,
+    "name": "Google Pixel 8",
+    "brand": "Google",
+    "price": 105000,
+    "category": "phones",
+    "specs": {
+      "display": "6.2\" OLED",
+      "processor": "Google Tensor G3",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 12MP",
+      "battery": "4575 mAh",
+      "5g": true
+    },
+    "value_score": 8.4
+  },
+  {
+    "id": 15,
+    "name": "Xiaomi 14",
+    "brand": "Xiaomi",
+    "price": 89000,
+    "category": "phones",
+    "specs": {
+      "display": "6.36\" AMOLED",
+      "processor": "Snapdragon 8 Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 50MP + 50MP",
+      "battery": "4610 mAh",
+      "5g": true
+    },
+    "value_score": 9.4
+  },
+  {
+    "id": 16,
+    "name": "iPhone 14",
+    "brand": "Apple",
+    "price": 110000,
+    "category": "phones",
+    "specs": {
+      "display": "6.1\" Super Retina XDR",
+      "processor": "A15 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP",
+      "battery": "3279 mAh",
+      "5g": true
+    },
+    "value_score": 7.6
+  },
+  {
+    "id": 17,
+    "name": "Samsung Galaxy A55",
+    "brand": "Samsung",
+    "price": 55000,
+    "category": "phones",
+    "specs": {
+      "display": "6.6\" Super AMOLED",
+      "processor": "Exynos 1480",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 12MP + 5MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 8.8
+  },
+  {
+    "id": 18,
+    "name": "Realme GT 5",
+    "brand": "Realme",
+    "price": 45000,
+    "category": "phones",
+    "specs": {
+      "display": "6.74\" AMOLED",
+      "processor": "Snapdragon 8 Gen 2",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5240 mAh",
+      "5g": true
+    },
+    "value_score": 9.5
+  },
+  {
+    "id": 19,
+    "name": "LG 1.5T 5-Star AC",
+    "brand": "LG",
+    "price": 65000,
+    "category": "appliances",
+    "specs": {
+      "type": "Split AC",
+      "capacity": "1.5 Ton",
+      "star_rating": 5,
+      "inverter": true,
+      "cooling_area": "180 sq ft",
+      "refrigerant": "R32",
+      "wifi": true
+    },
+    "value_score": 8.9
+  },
+  {
+    "id": 20,
+    "name": "Daikin 1T Inverter AC",
+    "brand": "Daikin",
+    "price": 52000,
+    "category": "appliances",
+    "specs": {
+      "type": "Split AC",
+      "capacity": "1 Ton",
+      "star_rating": 5,
+      "inverter": true,
+      "cooling_area": "120 sq ft",
+      "refrigerant": "R32",
+      "wifi": false
+    },
+    "value_score": 8.6
+  },
+  {
+    "id": 21,
+    "name": "Samsung 8kg Front Load Washing Machine",
+    "brand": "Samsung",
+    "price": 58000,
+    "category": "appliances",
+    "specs": {
+      "type": "Front Load",
+      "capacity": "8 kg",
+      "spin_speed": "1400 RPM",
+      "energy_rating": "5 Star",
+      "steam_wash": true,
+      "wifi": true,
+      "programs": 16
+    },
+    "value_score": 8.7
+  },
+  {
+    "id": 22,
+    "name": "LG 450L Frost-Free Refrigerator",
+    "brand": "LG",
+    "price": 72000,
+    "category": "appliances",
+    "specs": {
+      "capacity": "450L",
+      "type": "Double Door",
+      "star_rating": 4,
+      "inverter": true,
+      "frost_free": true,
+      "wifi": false
+    },
+    "value_score": 8.5
+  },
+  {
+    "id": 23,
+    "name": "Sony Bravia 55\" 4K TV",
+    "brand": "Sony",
+    "price": 120000,
+    "category": "appliances",
+    "specs": {
+      "size": "55 inch",
+      "resolution": "4K UHD",
+      "panel": "LED",
+      "refresh_rate": "120Hz",
+      "smart_tv": true,
+      "hdr": "Dolby Vision",
+      "os": "Google TV"
+    },
+    "value_score": 8.2
+  },
+  {
+    "id": 24,
+    "name": "Samsung 50\" Crystal 4K TV",
+    "brand": "Samsung",
+    "price": 75000,
+    "category": "appliances",
+    "specs": {
+      "size": "50 inch",
+      "resolution": "4K UHD",
+      "panel": "LED",
+      "refresh_rate": "60Hz",
+      "smart_tv": true,
+      "hdr": "HDR10+",
+      "os": "Tizen"
+    },
+    "value_score": 8.8
+  }
+]

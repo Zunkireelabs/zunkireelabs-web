@@ -1,0 +1,98 @@
+[
+  {
+    "id": "teej-2025",
+    "name": "Teej",
+    "date": "2025-09-03",
+    "discount_min_pct": 5,
+    "discount_max_pct": 12,
+    "applies_to": ["phones"]
+  },
+  {
+    "id": "dashain-2025",
+    "name": "Dashain",
+    "date": "2025-10-03",
+    "discount_min_pct": 8,
+    "discount_max_pct": 20,
+    "applies_to": ["all"]
+  },
+  {
+    "id": "tihar-2025",
+    "name": "Tihar",
+    "date": "2025-10-22",
+    "discount_min_pct": 5,
+    "discount_max_pct": 15,
+    "applies_to": ["all"]
+  },
+  {
+    "id": "chhath-2025",
+    "name": "Chhath",
+    "date": "2025-10-28",
+    "discount_min_pct": 3,
+    "discount_max_pct": 8,
+    "applies_to": ["appliances"]
+  },
+  {
+    "id": "christmas-2025",
+    "name": "Christmas",
+    "date": "2025-12-25",
+    "discount_min_pct": 3,
+    "discount_max_pct": 10,
+    "applies_to": ["phones", "appliances"]
+  },
+  {
+    "id": "new-year-2026",
+    "name": "New Year",
+    "date": "2026-01-01",
+    "discount_min_pct": 3,
+    "discount_max_pct": 10,
+    "applies_to": ["phones", "appliances"]
+  },
+  {
+    "id": "valentines-2026",
+    "name": "Valentine's Day",
+    "date": "2026-02-14",
+    "discount_min_pct": 3,
+    "discount_max_pct": 8,
+    "applies_to": ["phones"]
+  },
+  {
+    "id": "holi-2026",
+    "name": "Holi",
+    "date": "2026-03-14",
+    "discount_min_pct": 5,
+    "discount_max_pct": 10,
+    "applies_to": ["phones"]
+  },
+  {
+    "id": "baisakh-2026",
+    "name": "Nepali New Year",
+    "date": "2026-04-14",
+    "discount_min_pct": 5,
+    "discount_max_pct": 12,
+    "applies_to": ["bikes", "phones"]
+  },
+  {
+    "id": "dashain-2026",
+    "name": "Dashain",
+    "date": "2026-09-22",
+    "discount_min_pct": 8,
+    "discount_max_pct": 20,
+    "applies_to": ["all"]
+  },
+  {
+    "id": "tihar-2026",
+    "name": "Tihar",
+    "date": "2026-10-11",
+    "discount_min_pct": 5,
+    "discount_max_pct": 15,
+    "applies_to": ["all"]
+  },
+  {
+    "id": "christmas-2026",
+    "name": "Christmas",
+    "date": "2026-12-25",
+    "discount_min_pct": 3,
+    "discount_max_pct": 10,
+    "applies_to": ["phones", "appliances"]
+  }
+]
