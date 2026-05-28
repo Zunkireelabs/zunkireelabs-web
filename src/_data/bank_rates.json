@@ -1,10 +1,15 @@
 [
-  { "bank_name": "Nepal Bank Ltd.", "interest_rate": 13.0 },
-  { "bank_name": "Standard Chartered Nepal", "interest_rate": 13.5 },
-  { "bank_name": "Nabil Bank", "interest_rate": 14.0 },
-  { "bank_name": "Nepal Investment Mega Bank", "interest_rate": 14.5 },
-  { "bank_name": "NIC Asia Bank", "interest_rate": 15.0 },
-  { "bank_name": "Himalayan Bank", "interest_rate": 15.5 },
-  { "bank_name": "Siddhartha Bank", "interest_rate": 15.75 },
-  { "bank_name": "Kumari Bank", "interest_rate": 16.0 }
+  { "bank_name": "Global IME",       "interest_rate": 12.0  },
+  { "bank_name": "NIC Asia",         "interest_rate": 12.5  },
+  { "bank_name": "Laxmi Sunrise",    "interest_rate": 12.75 },
+  { "bank_name": "Nepal Bank",       "interest_rate": 13.0  },
+  { "bank_name": "Himalayan Bank",   "interest_rate": 13.0  },
+  { "bank_name": "Everest Bank",     "interest_rate": 13.0  },
+  { "bank_name": "Machhapuchchhre",  "interest_rate": 13.0  },
+  { "bank_name": "Prabhu Bank",      "interest_rate": 13.25 },
+  { "bank_name": "Nabil Bank",       "interest_rate": 13.5  },
+  { "bank_name": "Std. Chartered",   "interest_rate": 13.5  },
+  { "bank_name": "NIMB",             "interest_rate": 14.5  },
+  { "bank_name": "Siddhartha Bank",  "interest_rate": 15.75 },
+  { "bank_name": "Kumari Bank",      "interest_rate": 16.0  }
 ]

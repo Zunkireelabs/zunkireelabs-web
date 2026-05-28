@@ -1,7 +1,15 @@
 {# =====================================================
-   AI Shopping Agent Chat Widget
+   AI Shopping Agent Chat Widget — Sierra-style design
    Usage: {% include "components/shopping-agent.njk" %}
    ===================================================== #}
+
+<style>
+  @keyframes msgPopIn {
+    0%   { opacity: 0; transform: translateY(10px) scale(0.97); }
+    100% { opacity: 1; transform: translateY(0)    scale(1); }
+  }
+  .msg-pop { animation: msgPopIn 0.28s cubic-bezier(0.16,1,0.3,1) forwards; }
+</style>
 
 <div
   x-data="shoppingAgent()"
@@ -10,139 +18,111 @@
   id="shopping-agent"
 >
 
-  {# Chat Window #}
-  <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg">
+  {# Floating Card #}
+  <div class="bg-[#faf8f4] rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
 
-    {# Header #}
-    <div class="flex items-center gap-3 px-5 py-4 bg-zunkiree-600 text-white">
-      <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-        </svg>
+    {# Agent Label — Sierra-style minimal chip #}
+    <div class="flex items-center gap-2 px-5 pt-5 pb-3">
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 py-1.5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+        <div class="w-5 h-5 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+          <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <span class="text-[11px] font-semibold text-[#1a1612] tracking-wide">Zunkiree Agent</span>
       </div>
-      <div>
-        <p class="text-sm font-medium text-white">AI Shopping Assistant</p>
-        <p class="text-xs text-white/70">Powered by Zunkiree Labs</p>
-      </div>
-      <div class="ml-auto flex items-center gap-1.5">
-        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
-        <span class="text-xs text-white/70">Online</span>
+      <div class="flex items-center gap-1.5 ml-auto">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-[10px] text-[#9c9080] font-medium">Online</span>
       </div>
     </div>
 
     {# Messages #}
     <div
-      class="h-96 overflow-y-auto p-5 space-y-4 bg-gray-50"
+      class="h-80 overflow-y-auto px-5 pb-3 space-y-5"
       x-ref="messagesContainer"
     >
-      {# Welcome message #}
-      <div class="flex gap-3">
-        <div class="w-7 h-7 bg-zunkiree-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-          <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
-        </div>
-        <div class="bg-white rounded-2xl rounded-tl-none px-4 py-3 shadow-sm border border-gray-100 max-w-xs">
-          <p class="text-sm text-gray-700">Hi! Tell me what product you're looking for and your budget — I'll find the best options for you.</p>
-        </div>
+      {# Welcome message — bold Sierra-style #}
+      <div>
+        <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug tracking-[-0.01em]">Tell me what you're looking for and your budget — I'll find the best options for you.</p>
       </div>
 
       {# Dynamic messages #}
       <template x-for="msg in messages" :key="msg.id">
-        <div>
-          {# User message #}
-          <div x-show="msg.role === 'user'" class="flex justify-end">
-            <div class="bg-zunkiree-600 text-white rounded-2xl rounded-tr-none px-4 py-3 max-w-xs shadow-sm">
-              <p class="text-sm" x-text="msg.text"></p>
+        <div class="msg-pop">
+
+          {# User message — warm pill #}
+          <div x-show="msg.role === 'user'" class="flex justify-end mb-2">
+            <div class="bg-white rounded-2xl rounded-tr-sm px-4 py-2.5 max-w-xs" style="box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.06);">
+              <p class="text-sm text-[#1a1612]" x-text="msg.text"></p>
             </div>
           </div>
 
-          {# Assistant text message #}
-          <div x-show="msg.role === 'assistant' && msg.type === 'text'" class="flex gap-3">
-            <div class="w-7 h-7 bg-zunkiree-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-              <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-            <div class="bg-white rounded-2xl rounded-tl-none px-4 py-3 shadow-sm border border-gray-100 max-w-sm">
-              <p class="text-sm text-gray-700" x-text="msg.text"></p>
-            </div>
+          {# Assistant text message — bold Sierra-style #}
+          <div x-show="msg.role === 'assistant' && msg.type === 'text'">
+            <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug tracking-[-0.01em]" x-text="msg.text"></p>
           </div>
 
-          {# Assistant product cards message #}
+          {# Assistant product cards #}
           <div x-show="msg.role === 'assistant' && msg.type === 'products'" class="space-y-3">
-            <div class="flex gap-3">
-              <div class="w-7 h-7 bg-zunkiree-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                </svg>
-              </div>
-              <div class="bg-white rounded-2xl rounded-tl-none px-4 py-3 shadow-sm border border-gray-100">
-                <p class="text-sm text-gray-700" x-text="msg.text"></p>
-              </div>
-            </div>
+            <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug tracking-[-0.01em]" x-text="msg.text"></p>
 
             {# Product cards grid #}
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3">
               <template x-for="product in msg.products" :key="product.id">
-                <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:border-zunkiree-300 hover:shadow-md transition-all cursor-pointer"
-                     @click="selectProduct(product)">
+                <div
+                  class="bg-white rounded-xl p-4 cursor-pointer transition-all"
+                  style="border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 1px 3px rgba(0,0,0,0.05);"
+                  @click="selectProduct(product)"
+                  @mouseenter="$el.style.boxShadow='0 4px 12px rgba(0,0,0,0.10)'"
+                  @mouseleave="$el.style.boxShadow='0 1px 3px rgba(0,0,0,0.05)'"
+                >
                   {# Header row #}
                   <div class="flex items-start justify-between mb-2">
                     <div>
-                      <p class="text-xs text-gray-400 uppercase tracking-wide" x-text="product.brand"></p>
-                      <p class="text-sm font-medium text-gray-900 leading-tight" x-text="product.name"></p>
+                      <p class="text-[10px] text-[#9c9080] uppercase tracking-wider font-medium" x-text="product.brand"></p>
+                      <p class="text-sm font-semibold text-[#1a1612] leading-tight" x-text="product.name"></p>
                     </div>
-                    {# Value score badge #}
-                    <div class="flex-shrink-0 ml-2">
-                      <div class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white"
-                           :class="product.value_score >= 9 ? 'bg-green-500' : product.value_score >= 8 ? 'bg-zunkiree-600' : 'bg-gray-400'">
-                        <span x-text="product.value_score.toFixed(1)"></span>
-                      </div>
-                      <p class="text-[10px] text-center text-gray-400 mt-0.5">score</p>
+                    {# Value score #}
+                    <div class="flex-shrink-0 ml-2 text-right">
+                      <p class="text-base font-bold text-[#DC2626]" x-text="product.value_score.toFixed(1)"></p>
+                      <p class="text-[9px] text-[#9c9080] uppercase tracking-wide">score</p>
                     </div>
                   </div>
 
                   {# Price #}
-                  <p class="text-base font-semibold text-gray-900 mb-2">
+                  <p class="text-sm font-semibold text-[#1a1612] mb-2">
                     Rs. <span x-text="product.price.toLocaleString('en-IN')"></span>
                   </p>
 
                   {# Highlight #}
-                  <p class="text-xs text-zunkiree-600 leading-relaxed" x-text="product.highlight"></p>
+                  <p class="text-[11px] text-[#DC2626] leading-relaxed font-medium" x-text="product.highlight"></p>
 
-                  {# Top specs (first 2) #}
-                  <div class="mt-3 pt-3 border-t border-gray-100 flex flex-wrap gap-1">
+                  {# Spec tags #}
+                  <div class="mt-3 pt-3 border-t border-[#f0ebe3] flex flex-wrap gap-1">
                     <template x-for="[key, val] in Object.entries(product.specs).slice(0, 3)" :key="key">
-                      <span class="text-[10px] bg-gray-50 text-gray-600 px-2 py-0.5 rounded-full border border-gray-200"
+                      <span class="text-[10px] bg-[#f5f0e8] text-[#6b5e50] px-2 py-0.5 rounded-full"
                             x-text="`${key.replace(/_/g, ' ')}: ${val}`"></span>
                     </template>
                   </div>
                 </div>
               </template>
             </div>
-
           </div>
 
-          {# Festival discount alert message #}
-          <div x-show="msg.role === 'assistant' && msg.type === 'festival'" class="flex gap-3">
-            <div class="w-7 h-7 bg-amber-400 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5 text-sm">
-              🎉
-            </div>
+          {# Festival alert #}
+          <div x-show="msg.role === 'assistant' && msg.type === 'festival'">
             <div
-              class="rounded-2xl rounded-tl-none px-4 py-3 shadow-sm max-w-sm"
+              class="mt-2 rounded-xl px-4 py-3"
               :class="msg.urgent ? 'bg-red-50 border border-red-200' : 'bg-amber-50 border border-amber-200'"
             >
-              <p class="text-sm font-medium mb-1" :class="msg.urgent ? 'text-red-800' : 'text-amber-900'" x-text="msg.text"></p>
+              <p class="text-sm font-medium" :class="msg.urgent ? 'text-red-800' : 'text-amber-900'" x-text="msg.text"></p>
               <div x-show="!msg.urgent && msg.savingMin > 0" class="flex items-center justify-between mt-2 pt-2 border-t" :class="msg.urgent ? 'border-red-200' : 'border-amber-200'">
                 <span class="text-xs font-medium" :class="msg.urgent ? 'text-red-700' : 'text-amber-700'">
                   Rs. <span x-text="msg.savingMin?.toLocaleString('en-IN')"></span> – Rs. <span x-text="msg.savingMax?.toLocaleString('en-IN')"></span> potential saving
                 </span>
-                <a
-                  href="#emi-calculator"
-                  class="text-xs font-medium underline underline-offset-2 whitespace-nowrap ml-3"
-                  :class="msg.urgent ? 'text-red-700' : 'text-amber-700'"
-                >Set reminder →</a>
+                <a href="#emi-calculator" class="text-xs font-semibold underline underline-offset-2 whitespace-nowrap ml-3"
+                   :class="msg.urgent ? 'text-red-700' : 'text-amber-700'">Set reminder →</a>
               </div>
             </div>
           </div>
@@ -151,43 +131,40 @@
       </template>
 
       {# Typing indicator #}
-      <div x-show="loading" class="flex gap-3">
-        <div class="w-7 h-7 bg-zunkiree-600 rounded-full flex-shrink-0 flex items-center justify-center">
-          <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
-        </div>
-        <div class="bg-white rounded-2xl rounded-tl-none px-4 py-3 shadow-sm border border-gray-100">
-          <div class="flex items-center gap-1">
-            <span class="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style="animation-delay: 0ms"></span>
-            <span class="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style="animation-delay: 150ms"></span>
-            <span class="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style="animation-delay: 300ms"></span>
-          </div>
+      <div x-show="loading">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 bg-[#c4b9aa] rounded-full animate-bounce" style="animation-delay: 0ms"></span>
+          <span class="w-2 h-2 bg-[#c4b9aa] rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+          <span class="w-2 h-2 bg-[#c4b9aa] rounded-full animate-bounce" style="animation-delay: 300ms"></span>
         </div>
       </div>
     </div>
 
+    {# Divider #}
+    <div style="height: 1px; background: rgba(0,0,0,0.06); margin: 0 20px;"></div>
+
     {# Input #}
-    <div class="px-4 py-3 bg-white border-t border-gray-100">
+    <div class="px-4 py-4">
       <form @submit.prevent="sendMessage(input)" class="flex gap-2">
         <input
           x-model="input"
           :disabled="loading"
           type="text"
-          placeholder="e.g. I want OnePlus 12, budget Rs. 1,00,000"
-          class="flex-1 text-sm px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:border-zunkiree-400 focus:ring-2 focus:ring-zunkiree-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          placeholder="e.g. OnePlus phone, budget Rs. 1,00,000"
+          class="flex-1 text-sm px-4 py-3 bg-white rounded-xl focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-[#1a1612] placeholder-[#b8ad9e]"
+          style="border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 1px 2px rgba(0,0,0,0.04);"
         />
         <button
           type="submit"
           :disabled="loading || !input.trim()"
-          class="w-10 h-10 bg-zunkiree-600 text-white rounded-xl flex items-center justify-center hover:bg-zunkiree-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex-shrink-0"
+          class="w-11 h-11 bg-[#1a1612] text-white rounded-xl flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed transition-opacity flex-shrink-0"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
           </svg>
         </button>
       </form>
-      <p class="text-[10px] text-gray-400 mt-1.5 text-center">Searches bikes, phones &amp; appliances across all budgets</p>
+      <p class="text-[10px] text-[#b8ad9e] mt-2 text-center">Searches bikes, phones &amp; appliances across all budgets</p>
     </div>
   </div>
 </div>
@@ -233,10 +210,8 @@ function buildFestivalChatMsg(festival, avgPrice) {
 
 function parseBudget(message) {
   const msg = message.toLowerCase();
-  // "1.5 lakh", "1 lakh", "2 lakhs"
   const lakhMatch = msg.match(/(\d+(?:\.\d+)?)\s*lakh/i);
   if (lakhMatch) return Math.round(parseFloat(lakhMatch[1]) * 100000);
-  // grab biggest number ≥ 1000 from message (handles "1,00,000", "uptop 100000", "100,000")
   const nums = msg.match(/\d[\d,.]*\d|\d/g) || [];
   const parsed = nums
     .map(n => parseInt(n.replace(/[,.]/g, ''), 10))
@@ -271,7 +246,6 @@ function detectBrand(message) {
 }
 
 function buildComparison(alt, requested, category) {
-  // Returns a single comparison sentence: "<Brand X> beats <Brand Y> on <axis>"
   const a = alt.specs || {};
   const r = requested.specs || {};
   const altLabel = alt.brand;
@@ -311,12 +285,10 @@ function buildComparison(alt, requested, category) {
       return `${altLabel} beats ${reqLabel} on ${axis.label}: ${a[axis.key]} vs ${r[axis.key]}`;
     }
   }
-  // price advantage fallback
   if (alt.price < requested.price) {
     const saving = (requested.price - alt.price).toLocaleString('en-IN');
     return `${altLabel} costs Rs. ${saving} less than ${reqLabel} in the same range`;
   }
-  // generic value-score fallback
   if (alt.value_score > requested.value_score) {
     return `${altLabel} scores ${alt.value_score} on value vs ${reqLabel}'s ${requested.value_score}`;
   }
@@ -336,12 +308,10 @@ function mockSearch(message) {
 
   const inBudget = PRODUCTS.filter(p => p.category === category && p.price <= budget);
 
-  // Requested brand picks (up to 2)
   const brandPicks = brand
     ? inBudget.filter(p => p.brand === brand).sort((a, b) => b.value_score - a.value_score).slice(0, 2)
     : inBudget.slice().sort((a, b) => b.value_score - a.value_score).slice(0, 2);
 
-  // Cross-brand alternatives at similar price (within ±25% of brandPicks[0].price)
   const anchor = brandPicks[0];
   let alternatives = [];
   if (anchor) {
@@ -353,7 +323,6 @@ function mockSearch(message) {
       .slice(0, 2)
       .map(alt => ({ ...alt, highlight: buildComparison(alt, anchor, category) }));
   } else if (brand) {
-    // No brand matches in budget — show top alternatives with comparison vs an out-of-budget reference
     const reference = PRODUCTS.filter(p => p.category === category && p.brand === brand).sort((a, b) => a.price - b.price)[0];
     if (reference) {
       alternatives = inBudget
@@ -367,13 +336,11 @@ function mockSearch(message) {
       .slice(2, 4);
   }
 
-  // Tag brand picks with their own highlights
   const brandHighlights = [
     'Top pick — best value among ' + (brand || 'available') + ' options',
     'Strong second pick — solid balance of price and specs'
   ];
   const taggedBrandPicks = brandPicks.map((p, i) => ({ ...p, highlight: brandHighlights[i] || brandHighlights[0] }));
-
   const products = [...taggedBrandPicks, ...alternatives];
 
   if (!products.length) {
@@ -388,12 +355,12 @@ function mockSearch(message) {
   let summary;
   if (brand && brandPicks.length) {
     summary = alternatives.length
-      ? `Found ${brandPicks.length} ${brand} ${category === 'phones' ? 'phone' + (brandPicks.length === 1 ? '' : 's') : category} under Rs. ${budget.toLocaleString('en-IN')}, plus ${alternatives.length} alternative${alternatives.length === 1 ? '' : 's'} that beat ${brand} on key specs in the same range.`
+      ? `Found ${brandPicks.length} ${brand} ${category === 'phones' ? 'phone' + (brandPicks.length === 1 ? '' : 's') : category} under Rs. ${budget.toLocaleString('en-IN')}, plus ${alternatives.length} alternative${alternatives.length === 1 ? '' : 's'} that beat ${brand} on key specs.`
       : `Found ${brandPicks.length} ${brand} option${brandPicks.length === 1 ? '' : 's'} under Rs. ${budget.toLocaleString('en-IN')}.`;
   } else if (brand && !brandPicks.length) {
-    summary = `No ${brand} ${category} under Rs. ${budget.toLocaleString('en-IN')} — here are ${alternatives.length} alternatives compared against the cheapest ${brand}.`;
+    summary = `No ${brand} ${category} under Rs. ${budget.toLocaleString('en-IN')} — here are ${alternatives.length} alternatives in the same range.`;
   } else {
-    summary = `Found ${products.length} ${category} option${products.length === 1 ? '' : 's'} under Rs. ${budget.toLocaleString('en-IN')}, sorted by value score:`;
+    summary = `Found ${products.length} ${category} option${products.length === 1 ? '' : 's'} under Rs. ${budget.toLocaleString('en-IN')}, sorted by value score.`;
   }
 
   return {
@@ -422,8 +389,6 @@ function shoppingAgent() {
       this.scrollToBottom();
 
       this.loading = true;
-
-      // Small delay so the typing indicator is visible
       await new Promise(r => setTimeout(r, 500));
 
       const data = mockSearch(text.trim());
@@ -437,7 +402,6 @@ function shoppingAgent() {
           products: data.products
         });
 
-        // Festival discount awareness
         const festival = nearestFestival(data.category);
         if (festival) {
           const avgPrice = data.products.reduce((s, p) => s + p.price, 0) / data.products.length;

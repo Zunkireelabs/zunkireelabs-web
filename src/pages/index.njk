@@ -43,16 +43,37 @@ permalink: /
    ===================================================== #}
 <section class="py-6 bg-white border-y border-gray-200">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+    <div class="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
 
-      {# Left: Trust Text with Divider #}
-      <div class="lg:col-span-2 flex items-center gap-4">
-        <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by forward-thinking organizations</p>
-        <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
+      {# Mobile: trust + stats on same row via flex; Desktop: wrapper dissolves into grid #}
+      <div class="flex items-center justify-between gap-3 lg:contents">
+
+        {# Left: Trust Text with Divider #}
+        <div class="min-w-0 lg:col-start-1 lg:col-span-2 flex items-center gap-4">
+          <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by forward-thinking organizations</p>
+          <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
+        </div>
+
+        {# Right: Stats #}
+        <div class="flex-shrink-0 lg:col-start-10 lg:col-span-3 flex items-center gap-3 lg:gap-8 lg:justify-end">
+          <div class="text-center">
+            <p class="text-2xl font-medium text-gray-900">5+</p>
+            <p class="text-xs text-gray-500">Products</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-medium text-gray-900">6</p>
+            <p class="text-xs text-gray-500">Industries</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-medium text-gray-900">8</p>
+            <p class="text-xs text-gray-500">Services</p>
+          </div>
+        </div>
+
       </div>
 
-      {# Middle: Logo Marquee #}
-      <div class="lg:col-span-7 relative overflow-hidden">
+      {# Middle: Logo Marquee — below trust+stats row on mobile, explicit center cols on desktop #}
+      <div class="lg:col-start-3 lg:col-span-7 lg:row-start-1 relative overflow-hidden">
         <div class="marquee-fade-light">
           <div class="flex items-center gap-10 animate-marquee-scroll">
             {# First set of logos #}
@@ -115,21 +136,6 @@ permalink: /
         </div>
       </div>
 
-      {# Right: Stats #}
-      <div class="lg:col-span-3 flex items-center justify-end gap-8">
-        <div class="text-center">
-          <p class="text-2xl font-medium text-gray-900">5+</p>
-          <p class="text-xs text-gray-500">Products</p>
-        </div>
-        <div class="text-center">
-          <p class="text-2xl font-medium text-gray-900">6</p>
-          <p class="text-xs text-gray-500">Industries</p>
-        </div>
-        <div class="text-center">
-          <p class="text-2xl font-medium text-gray-900">8</p>
-          <p class="text-xs text-gray-500">Services</p>
-        </div>
-      </div>
 
     </div>
   </div>

@@ -1,0 +1,224 @@
+{# =====================================================
+   Bank Comparison — standalone panel
+   ===================================================== #}
+
+<div
+  x-data="bankComparison()"
+  x-init="init()"
+  id="bank-comparison"
+  class="w-full"
+>
+
+  {# Empty state #}
+  <div x-show="!price" x-transition class="w-full">
+    <div class="bg-[#faf8f4] rounded-2xl px-6 py-14 text-center" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
+      <div class="flex items-center gap-2 justify-center mb-8">
+        <div class="flex items-center gap-2 bg-white rounded-full px-3 py-1.5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+          <div class="w-5 h-5 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-semibold text-[#1a1612] tracking-wide">Zunkiree Agent</span>
+        </div>
+      </div>
+      <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug mb-2">Bank rates appear here.</p>
+      <p class="text-sm text-[#9c9080]">Select a product to compare EMI across 13 Nepal banks.</p>
+    </div>
+  </div>
+
+  {# Waiting for income #}
+  <div x-show="price > 0 && !monthlyIncome" x-transition class="bg-[#faf8f4] rounded-2xl px-6 py-12 text-center" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
+    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto mb-4" style="border:1px solid rgba(0,0,0,0.08);">
+      <svg class="w-5 h-5 text-[#9c9080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+      </svg>
+    </div>
+    <p class="text-sm font-semibold text-[#1a1612] mb-1">Enter your monthly income</p>
+    <p class="text-xs text-[#9c9080]">Bank rates unlock once income is provided in the EMI panel.</p>
+  </div>
+
+  {# Over budget #}
+  <div x-show="price > 0 && monthlyIncome && isOverBudget" x-transition class="bg-amber-50 rounded-2xl px-6 py-12 text-center" style="border:1px solid rgba(245,158,11,0.25);">
+    <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+      <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+      </svg>
+    </div>
+    <p class="text-sm font-semibold text-amber-800 mb-1">EMI exceeds your <span x-text="emiPercentLimit + '%'"></span> cap</p>
+    <p class="text-xs text-amber-700">Raise your down payment, extend tenure, or increase income to unlock bank rates.</p>
+  </div>
+
+  {# Table card #}
+  <div x-show="price > 0 && monthlyIncome && !isOverBudget" x-transition class="bg-[#faf8f4] rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
+
+    {# Agent header #}
+    <div class="flex items-center gap-2 px-5 pt-5 pb-4">
+      <div class="flex items-center gap-2 bg-white rounded-full px-3 py-1.5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+        <div class="w-5 h-5 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+          <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+          </svg>
+        </div>
+        <span class="text-[11px] font-semibold text-[#1a1612] tracking-wide">Zunkiree Agent</span>
+      </div>
+      <div class="flex items-center gap-1.5 ml-auto">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-[10px] text-[#9c9080] font-medium">Online</span>
+      </div>
+    </div>
+
+    {# Product name + loan amount #}
+    <div class="px-5 pb-4">
+      <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug tracking-[-0.01em]" x-text="'Bank rates for ' + productName"></p>
+      <p class="text-sm text-[#9c9080] mt-1">Loan: <span class="font-semibold text-[#1a1612]" x-text="fmt(loanAmount)"></span></p>
+    </div>
+
+    <div style="height:1px;background:rgba(0,0,0,0.06);margin:0 20px 0 20px;"></div>
+
+    {# Tenure toggle #}
+    <div class="px-5 py-4">
+      <p class="text-[10px] uppercase tracking-widest text-[#9c9080] font-semibold mb-2">Tenure</p>
+      <div class="flex gap-2">
+        <template x-for="mo in [12, 24, 36]" :key="mo">
+          <button
+            @click="selectedTenure = mo"
+            :class="selectedTenure === mo ? 'bg-[#1a1612] text-white' : 'bg-white text-[#1a1612] hover:bg-[#f0ebe3]'"
+            class="flex-1 py-2 text-xs font-semibold rounded-xl transition-all"
+            style="border: 1px solid rgba(0,0,0,0.09);"
+            x-text="mo + ' mo'"
+          ></button>
+        </template>
+      </div>
+    </div>
+
+    {# Column headers #}
+    <div style="border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06);">
+      <table style="width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px;">
+        <colgroup>
+          <col style="width:42%">
+          <col style="width:14%">
+          <col style="width:24%">
+          <col style="width:20%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th style="padding:8px 8px 8px 20px;text-align:left;font-size:10px;font-weight:600;color:#9c9080;text-transform:uppercase;letter-spacing:0.05em;">Bank</th>
+            <th style="padding:8px 4px;text-align:center;font-size:10px;font-weight:600;color:#9c9080;text-transform:uppercase;letter-spacing:0.05em;">Rate</th>
+            <th style="padding:8px 4px;text-align:right;font-size:10px;font-weight:600;color:#DC2626;text-transform:uppercase;letter-spacing:0.05em;">EMI/mo</th>
+            <th style="padding:8px 20px 8px 4px;text-align:right;font-size:10px;font-weight:600;color:#9c9080;text-transform:uppercase;letter-spacing:0.05em;">Int.</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    {# Table rows #}
+    <div style="overflow-x:hidden;">
+      <table style="width:100%;table-layout:fixed;border-collapse:collapse;font-size:12px;">
+        <colgroup>
+          <col style="width:42%">
+          <col style="width:14%">
+          <col style="width:24%">
+          <col style="width:20%">
+        </colgroup>
+        <tbody>
+          <template x-for="(row, i) in emiRows" :key="row.bank_name">
+            <tr :style="i === bestBankIndex ? 'background:rgba(209,250,229,0.4)' : ''"
+                style="border-bottom:1px solid rgba(0,0,0,0.04);">
+              <td style="padding:9px 8px 9px 20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                <span style="font-weight:600;color:#1a1612;font-size:12px;" x-text="row.bank_name"></span>
+                <span x-show="i === bestBankIndex"
+                      style="display:inline-block;font-size:9px;background:#d1fae5;color:#065f46;padding:1px 5px;border-radius:20px;font-weight:700;margin-left:4px;">Best</span>
+              </td>
+              <td style="padding:9px 4px;text-align:center;color:#9c9080;white-space:nowrap;"
+                  x-text="row.interest_rate + '%'"></td>
+              <td style="padding:9px 4px;text-align:right;font-weight:700;white-space:nowrap;"
+                  :style="i === bestBankIndex ? 'color:#065f46' : 'color:#DC2626'"
+                  x-text="Math.round(row.activeEMI).toLocaleString('en-IN')"></td>
+              <td style="padding:9px 20px 9px 4px;text-align:right;color:#9c9080;white-space:nowrap;font-size:11px;"
+                  x-text="Math.round(row.totalInterest).toLocaleString('en-IN')"></td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="px-5 py-3" style="border-top:1px solid rgba(0,0,0,0.05);">
+      <p class="text-[10px] text-[#9c9080]">EMI in Rs. · <span x-text="selectedTenure + '-month loan'"></span> · Indicative rates</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const BANK_RATES_CMP = {{ bank_rates | dump | safe }};
+
+function bankComparison() {
+  return {
+    price: 0,
+    productName: '',
+    downPaymentPercent: 15,
+    selectedTenure: 24,
+    monthlyIncome: 0,
+    emiPercentLimit: 45,
+    bankRates: BANK_RATES_CMP,
+
+    get loanAmount() {
+      return this.price - Math.round(this.price * this.downPaymentPercent / 100);
+    },
+
+    get isOverBudget() {
+      if (!this.monthlyIncome || !this.emiRows.length) return false;
+      const bestEMI = this.emiRows[this.bestBankIndex]?.activeEMI || 0;
+      return bestEMI / this.monthlyIncome > this.emiPercentLimit / 100;
+    },
+
+    calcEMI(principal, annualRate, months) {
+      if (!principal || !annualRate || !months) return 0;
+      const r = annualRate / 12 / 100;
+      return principal * r * Math.pow(1 + r, months) / (Math.pow(1 + r, months) - 1);
+    },
+
+    get emiRows() {
+      return this.bankRates.map(bank => {
+        const emi = this.calcEMI(this.loanAmount, bank.interest_rate, this.selectedTenure);
+        return {
+          ...bank,
+          activeEMI: emi,
+          totalInterest: emi * this.selectedTenure - this.loanAmount
+        };
+      });
+    },
+
+    get bestBankIndex() {
+      if (!this.emiRows.length) return -1;
+      return this.emiRows.reduce((best, row, i) =>
+        row.totalInterest < this.emiRows[best].totalInterest ? i : best, 0);
+    },
+
+    fmt(n) { return 'Rs. ' + Math.round(n).toLocaleString('en-IN'); },
+
+    init() {
+      window.addEventListener('product-selected', (e) => {
+        this.price = e.detail.product.price;
+        this.productName = e.detail.product.name;
+        this.downPaymentPercent = 15;
+        this.monthlyIncome = 0;
+      });
+      window.addEventListener('emi-dp-changed', (e) => {
+        this.downPaymentPercent = e.detail.pct;
+      });
+      window.addEventListener('emi-tenure-changed', (e) => {
+        this.selectedTenure = e.detail.tenure;
+      });
+      window.addEventListener('emi-income-changed', (e) => {
+        this.monthlyIncome = Number(e.detail.income) || 0;
+      });
+      window.addEventListener('emi-percent-changed', (e) => {
+        this.emiPercentLimit = e.detail.pct;
+      });
+    }
+  };
+}
+</script>

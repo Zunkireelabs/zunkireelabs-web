@@ -3,18 +3,18 @@
     "id": 1,
     "name": "Yamaha MT-15",
     "brand": "Yamaha",
-    "price": 315000,
+    "price": 365000,
     "category": "bikes",
     "specs": {
       "engine": "155cc liquid-cooled",
-      "power": "18.4 PS",
-      "torque": "14.1 Nm",
+      "power": "18.4 BHP",
+      "torque": "13.9 Nm",
       "weight": "138 kg",
       "fuel_tank": "10L",
       "mileage": "45 kmpl",
       "abs": true
     },
-    "value_score": 7.8
+    "value_score": 8.1
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
     "category": "bikes",
     "specs": {
       "engine": "149cc air-cooled",
-      "power": "12.2 PS",
+      "power": "12.2 BHP",
       "torque": "13.3 Nm",
       "weight": "135 kg",
       "fuel_tank": "12L",
@@ -41,7 +41,7 @@
     "category": "bikes",
     "specs": {
       "engine": "160.3cc liquid-cooled",
-      "power": "17.2 PS",
+      "power": "17.2 BHP",
       "torque": "14.6 Nm",
       "weight": "148 kg",
       "fuel_tank": "12L",
@@ -58,7 +58,7 @@
     "category": "bikes",
     "specs": {
       "engine": "159.7cc oil-cooled",
-      "power": "17.55 PS",
+      "power": "17.55 BHP",
       "torque": "14.73 Nm",
       "weight": "153 kg",
       "fuel_tank": "12L",
@@ -75,7 +75,7 @@
     "category": "bikes",
     "specs": {
       "engine": "155cc air-cooled",
-      "power": "14.8 PS",
+      "power": "14.8 BHP",
       "torque": "14 Nm",
       "weight": "140 kg",
       "fuel_tank": "12L",
@@ -92,7 +92,7 @@
     "category": "bikes",
     "specs": {
       "engine": "162.71cc air-cooled",
-      "power": "15.84 PS",
+      "power": "15.84 BHP",
       "torque": "14.7 Nm",
       "weight": "143 kg",
       "fuel_tank": "12L",
@@ -105,18 +105,18 @@
     "id": 7,
     "name": "Hero Xpulse 200",
     "brand": "Hero",
-    "price": 175000,
+    "price": 195000,
     "category": "bikes",
     "specs": {
       "engine": "199.6cc oil-cooled",
-      "power": "18.4 PS",
+      "power": "18.9 BHP",
       "torque": "17.1 Nm",
       "weight": "157 kg",
       "fuel_tank": "13L",
       "mileage": "40 kmpl",
       "abs": true
     },
-    "value_score": 8.7
+    "value_score": 7.9
   },
   {
     "id": 8,
@@ -126,7 +126,7 @@
     "category": "bikes",
     "specs": {
       "engine": "162.71cc air-cooled",
-      "power": "13.6 PS",
+      "power": "13.6 BHP",
       "torque": "14.6 Nm",
       "weight": "146 kg",
       "fuel_tank": "13L",
@@ -143,7 +143,7 @@
     "category": "bikes",
     "specs": {
       "engine": "149cc air-cooled",
-      "power": "14 PS",
+      "power": "14 BHP",
       "torque": "13.25 Nm",
       "weight": "148 kg",
       "fuel_tank": "15L",
@@ -160,7 +160,7 @@
     "category": "bikes",
     "specs": {
       "engine": "97.2cc air-cooled",
-      "power": "8.02 PS",
+      "power": "8.02 BHP",
       "torque": "8.05 Nm",
       "weight": "112 kg",
       "fuel_tank": "9.8L",
@@ -173,10 +173,10 @@
     "id": 11,
     "name": "iPhone 15",
     "brand": "Apple",
-    "price": 155000,
+    "price": 109999,
     "category": "phones",
     "specs": {
-      "display": "6.1\" Super Retina XDR",
+      "display": "6.1\" Super Retina XDR OLED",
       "processor": "A16 Bionic",
       "ram": "6GB",
       "storage": "128GB",
@@ -184,7 +184,7 @@
       "battery": "3877 mAh",
       "5g": true
     },
-    "value_score": 7.9
+    "value_score": 9.0
   },
   {
     "id": 12,
@@ -241,7 +241,7 @@
     "id": 15,
     "name": "Xiaomi 14",
     "brand": "Xiaomi",
-    "price": 89000,
+    "price": 89999,
     "category": "phones",
     "specs": {
       "display": "6.36\" AMOLED",
@@ -252,16 +252,16 @@
       "battery": "4610 mAh",
       "5g": true
     },
-    "value_score": 9.4
+    "value_score": 8.8
   },
   {
     "id": 16,
     "name": "iPhone 14",
     "brand": "Apple",
-    "price": 110000,
+    "price": 89999,
     "category": "phones",
     "specs": {
-      "display": "6.1\" Super Retina XDR",
+      "display": "6.1\" Super Retina XDR OLED",
       "processor": "A15 Bionic",
       "ram": "6GB",
       "storage": "128GB",
@@ -269,13 +269,13 @@
       "battery": "3279 mAh",
       "5g": true
     },
-    "value_score": 7.6
+    "value_score": 8.5
   },
   {
     "id": 17,
     "name": "Samsung Galaxy A55",
     "brand": "Samsung",
-    "price": 55000,
+    "price": 54999,
     "category": "phones",
     "specs": {
       "display": "6.6\" Super AMOLED",
@@ -286,7 +286,7 @@
       "battery": "5000 mAh",
       "5g": true
     },
-    "value_score": 8.8
+    "value_score": 8.2
   },
   {
     "id": 18,
@@ -405,5 +405,1360 @@
       "os": "Tizen"
     },
     "value_score": 8.8
+  },
+  {
+    "id": 25,
+    "name": "Samsung Galaxy S25 Ultra",
+    "brand": "Samsung",
+    "price": 189999,
+    "category": "phones",
+    "specs": {
+      "display": "6.9\" Dynamic AMOLED 2X",
+      "processor": "Snapdragon 8 Elite",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "200MP + 10MP + 50MP + 10MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 9.4
+  },
+  {
+    "id": 26,
+    "name": "Samsung Galaxy S25+",
+    "brand": "Samsung",
+    "price": 139999,
+    "category": "phones",
+    "specs": {
+      "display": "6.7\" Dynamic AMOLED 2X",
+      "processor": "Snapdragon 8 Elite",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 10MP + 12MP",
+      "battery": "4900 mAh",
+      "5g": true
+    },
+    "value_score": 9.1
+  },
+  {
+    "id": 27,
+    "name": "OnePlus 13",
+    "brand": "OnePlus",
+    "price": 109999,
+    "category": "phones",
+    "specs": {
+      "display": "6.82\" LTPO AMOLED",
+      "processor": "Snapdragon 8 Elite",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 50MP + 50MP",
+      "battery": "6000 mAh",
+      "5g": true
+    },
+    "value_score": 9.2
+  },
+  {
+    "id": 28,
+    "name": "OnePlus 13R",
+    "brand": "OnePlus",
+    "price": 74999,
+    "category": "phones",
+    "specs": {
+      "display": "6.78\" AMOLED",
+      "processor": "Snapdragon 8 Gen 2",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.5
+  },
+  {
+    "id": 29,
+    "name": "iPhone 16 Pro Max",
+    "brand": "Apple",
+    "price": 219999,
+    "category": "phones",
+    "specs": {
+      "display": "6.9\" Super Retina XDR ProMotion",
+      "processor": "A18 Pro",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "4685 mAh",
+      "5g": true
+    },
+    "value_score": 9.6
+  },
+  {
+    "id": 30,
+    "name": "iPhone 16",
+    "brand": "Apple",
+    "price": 129999,
+    "category": "phones",
+    "specs": {
+      "display": "6.1\" Super Retina XDR",
+      "processor": "A18",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP",
+      "battery": "3561 mAh",
+      "5g": true
+    },
+    "value_score": 9.0
+  },
+  {
+    "id": 31,
+    "name": "Xiaomi Redmi Note 13 Pro",
+    "brand": "Xiaomi",
+    "price": 39999,
+    "category": "phones",
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Dimensity 7200 Ultra",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "200MP + 8MP + 2MP",
+      "battery": "5100 mAh",
+      "5g": true
+    },
+    "value_score": 8.0
+  },
+  {
+    "id": 32,
+    "name": "Vivo V30 Pro",
+    "brand": "Vivo",
+    "price": 59999,
+    "category": "phones",
+    "specs": {
+      "display": "6.78\" AMOLED",
+      "processor": "Dimensity 8200",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 50MP + 8MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 8.1
+  },
+  {
+    "id": 33,
+    "name": "Realme GT 6",
+    "brand": "Realme",
+    "price": 64999,
+    "category": "phones",
+    "specs": {
+      "display": "6.78\" AMOLED",
+      "processor": "Snapdragon 8s Gen 3",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.3
+  },
+  {
+    "id": 34,
+    "name": "Google Pixel 9",
+    "brand": "Google",
+    "price": 109999,
+    "category": "phones",
+    "specs": {
+      "display": "6.3\" OLED",
+      "processor": "Google Tensor G4",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "50MP + 48MP",
+      "battery": "4700 mAh",
+      "5g": true
+    },
+    "value_score": 9.0
+  },
+  {
+    "id": 35,
+    "name": "Royal Enfield Classic 350",
+    "brand": "Royal Enfield",
+    "price": 649000,
+    "category": "bikes",
+    "specs": {
+      "engine": "349cc air-cooled",
+      "power": "20.2 BHP",
+      "torque": "27 Nm",
+      "weight": "195 kg",
+      "fuel_tank": "13L",
+      "mileage": "36 kmpl",
+      "abs": true
+    },
+    "value_score": 8.8
+  },
+  {
+    "id": 36,
+    "name": "Royal Enfield Meteor 350",
+    "brand": "Royal Enfield",
+    "price": 589000,
+    "category": "bikes",
+    "specs": {
+      "engine": "349cc air-cooled",
+      "power": "20.2 BHP",
+      "torque": "27 Nm",
+      "weight": "191 kg",
+      "fuel_tank": "15L",
+      "mileage": "36 kmpl",
+      "abs": true
+    },
+    "value_score": 8.6
+  },
+  {
+    "id": 37,
+    "name": "Honda CB300R",
+    "brand": "Honda",
+    "price": 625000,
+    "category": "bikes",
+    "specs": {
+      "engine": "286cc liquid-cooled",
+      "power": "30.84 BHP",
+      "torque": "27.5 Nm",
+      "weight": "147 kg",
+      "fuel_tank": "11L",
+      "mileage": "30 kmpl",
+      "abs": true
+    },
+    "value_score": 8.5
+  },
+  {
+    "id": 38,
+    "name": "Honda Hornet 2.0",
+    "brand": "Honda",
+    "price": 285000,
+    "category": "bikes",
+    "specs": {
+      "engine": "184.4cc liquid-cooled",
+      "power": "17.03 BHP",
+      "torque": "16.1 Nm",
+      "weight": "142 kg",
+      "fuel_tank": "12L",
+      "mileage": "40 kmpl",
+      "abs": true
+    },
+    "value_score": 8.2
+  },
+  {
+    "id": 39,
+    "name": "Bajaj Pulsar NS200",
+    "brand": "Bajaj",
+    "price": 345000,
+    "category": "bikes",
+    "specs": {
+      "engine": "199.5cc liquid-cooled",
+      "power": "24.5 BHP",
+      "torque": "18.74 Nm",
+      "weight": "156 kg",
+      "fuel_tank": "12L",
+      "mileage": "35 kmpl",
+      "abs": true
+    },
+    "value_score": 8.3
+  },
+  {
+    "id": 40,
+    "name": "Bajaj Dominar 400",
+    "brand": "Bajaj",
+    "price": 495000,
+    "category": "bikes",
+    "specs": {
+      "engine": "373.3cc liquid-cooled",
+      "power": "40 BHP",
+      "torque": "35 Nm",
+      "weight": "182 kg",
+      "fuel_tank": "13L",
+      "mileage": "28 kmpl",
+      "abs": true
+    },
+    "value_score": 8.7
+  },
+  {
+    "id": 41,
+    "name": "KTM Duke 200",
+    "brand": "KTM",
+    "price": 425000,
+    "category": "bikes",
+    "specs": {
+      "engine": "199.5cc liquid-cooled",
+      "power": "25 BHP",
+      "torque": "19.5 Nm",
+      "weight": "159 kg",
+      "fuel_tank": "13.4L",
+      "mileage": "32 kmpl",
+      "abs": true
+    },
+    "value_score": 8.4
+  },
+  {
+    "id": 42,
+    "name": "KTM Duke 390",
+    "brand": "KTM",
+    "price": 695000,
+    "category": "bikes",
+    "specs": {
+      "engine": "373.2cc liquid-cooled",
+      "power": "43.5 BHP",
+      "torque": "37 Nm",
+      "weight": "163 kg",
+      "fuel_tank": "13.4L",
+      "mileage": "28 kmpl",
+      "abs": true
+    },
+    "value_score": 8.9
+  },
+  {
+    "id": 43,
+    "name": "Yamaha R15 V4",
+    "brand": "Yamaha",
+    "price": 415000,
+    "category": "bikes",
+    "specs": {
+      "engine": "155cc liquid-cooled",
+      "power": "18.4 BHP",
+      "torque": "14.2 Nm",
+      "weight": "142 kg",
+      "fuel_tank": "11L",
+      "mileage": "45 kmpl",
+      "abs": true
+    },
+    "value_score": 8.4
+  },
+  {
+    "id": 44,
+    "name": "TVS Apache RTR 200",
+    "brand": "TVS",
+    "price": 315000,
+    "category": "bikes",
+    "specs": {
+      "engine": "197.75cc oil-cooled",
+      "power": "20.8 BHP",
+      "torque": "17.25 Nm",
+      "weight": "153 kg",
+      "fuel_tank": "12L",
+      "mileage": "37 kmpl",
+      "abs": true
+    },
+    "value_score": 8.0
+  },
+  {
+    "id": 45,
+    "name": "Samsung 55\" 4K Smart TV",
+    "brand": "Samsung",
+    "price": 89999,
+    "category": "appliances",
+    "specs": {
+      "size": "55 inch",
+      "resolution": "4K UHD",
+      "panel": "QLED",
+      "refresh_rate": "120Hz",
+      "smart_tv": true,
+      "hdr": "HDR10+",
+      "os": "Tizen"
+    },
+    "value_score": 8.5
+  },
+  {
+    "id": 46,
+    "name": "LG 43\" 4K TV",
+    "brand": "LG",
+    "price": 64999,
+    "category": "appliances",
+    "specs": {
+      "size": "43 inch",
+      "resolution": "4K UHD",
+      "panel": "LED",
+      "refresh_rate": "60Hz",
+      "smart_tv": true,
+      "hdr": "HDR10",
+      "os": "WebOS"
+    },
+    "value_score": 8.3
+  },
+  {
+    "id": 47,
+    "name": "Sony Bravia 50\"",
+    "brand": "Sony",
+    "price": 94999,
+    "category": "appliances",
+    "specs": {
+      "size": "50 inch",
+      "resolution": "4K HDR",
+      "panel": "LED",
+      "refresh_rate": "60Hz",
+      "smart_tv": true,
+      "hdr": "Dolby Vision",
+      "os": "Google TV"
+    },
+    "value_score": 8.7
+  },
+  {
+    "id": 48,
+    "name": "Samsung 253L Refrigerator",
+    "brand": "Samsung",
+    "price": 55999,
+    "category": "appliances",
+    "specs": {
+      "capacity": "253L",
+      "type": "Double Door",
+      "star_rating": 3,
+      "inverter": true,
+      "frost_free": true,
+      "wifi": false
+    },
+    "value_score": 8.2
+  },
+  {
+    "id": 49,
+    "name": "LG 260L Refrigerator",
+    "brand": "LG",
+    "price": 59999,
+    "category": "appliances",
+    "specs": {
+      "capacity": "260L",
+      "type": "Double Door",
+      "star_rating": 4,
+      "inverter": true,
+      "frost_free": true,
+      "wifi": false
+    },
+    "value_score": 8.4
+  },
+  {
+    "id": 50,
+    "name": "Whirlpool 185L Single Door",
+    "brand": "Whirlpool",
+    "price": 28999,
+    "category": "appliances",
+    "specs": {
+      "capacity": "185L",
+      "type": "Single Door",
+      "star_rating": 3,
+      "inverter": false,
+      "frost_free": false,
+      "wifi": false
+    },
+    "value_score": 7.8
+  },
+  {
+    "id": 51,
+    "name": "Samsung 7kg Washing Machine",
+    "brand": "Samsung",
+    "price": 39999,
+    "category": "appliances",
+    "specs": {
+      "type": "Front Load",
+      "capacity": "7 kg",
+      "spin_speed": "1200 RPM",
+      "energy_rating": "4 Star",
+      "steam_wash": false,
+      "wifi": false,
+      "programs": 12
+    },
+    "value_score": 8.3
+  },
+  {
+    "id": 52,
+    "name": "LG 8kg Washing Machine",
+    "brand": "LG",
+    "price": 54999,
+    "category": "appliances",
+    "specs": {
+      "type": "Front Load",
+      "capacity": "8 kg",
+      "spin_speed": "1400 RPM",
+      "energy_rating": "5 Star",
+      "steam_wash": true,
+      "wifi": true,
+      "programs": 14
+    },
+    "value_score": 8.6
+  },
+  {
+    "id": 53,
+    "name": "Dyson V15 Vacuum",
+    "brand": "Dyson",
+    "price": 89999,
+    "category": "appliances",
+    "specs": {
+      "type": "Cordless Vacuum",
+      "capacity": "0.77L",
+      "suction": "240 AW",
+      "run_time": "60 min",
+      "weight": "3.1 kg",
+      "wifi": false
+    },
+    "value_score": 8.9
+  },
+  {
+    "id": 54,
+    "name": "Philips Air Fryer",
+    "brand": "Philips",
+    "price": 18999,
+    "category": "appliances",
+    "specs": {
+      "type": "Air Fryer",
+      "capacity": "4.1L",
+      "power": "1400W",
+      "digital": true,
+      "presets": 7,
+      "wifi": false
+    },
+    "value_score": 8.1
+  },
+  {
+    "id": 55,
+    "name": "Daikin 1.5 Ton AC",
+    "brand": "Daikin",
+    "price": 74999,
+    "category": "appliances",
+    "specs": {
+      "type": "Split AC",
+      "capacity": "1.5 Ton",
+      "star_rating": 5,
+      "inverter": true,
+      "cooling_area": "180 sq ft",
+      "refrigerant": "R32",
+      "wifi": false
+    },
+    "value_score": 8.5
+  },
+  {
+    "id": 56,
+    "name": "Mitsubishi 1.5 Ton AC",
+    "brand": "Mitsubishi",
+    "price": 89999,
+    "category": "appliances",
+    "specs": {
+      "type": "Split AC",
+      "capacity": "1.5 Ton",
+      "star_rating": 5,
+      "inverter": true,
+      "cooling_area": "180 sq ft",
+      "refrigerant": "R32",
+      "wifi": true
+    },
+    "value_score": 8.8
+  },
+  {
+    "name": "iPhone 15 Pro",
+    "brand": "Apple",
+    "price": 149999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR ProMotion OLED",
+      "processor": "A17 Pro",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "3274 mAh",
+      "5g": true
+    },
+    "value_score": 9.3,
+    "id": 57,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 15 Plus",
+    "brand": "Apple",
+    "price": 119999,
+    "specs": {
+      "display": "6.7\" Super Retina XDR OLED",
+      "processor": "A16 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP",
+      "battery": "4383 mAh",
+      "5g": true
+    },
+    "value_score": 8.9,
+    "id": 58,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "brand": "Apple",
+    "price": 129999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR ProMotion OLED",
+      "processor": "A16 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "3200 mAh",
+      "5g": true
+    },
+    "value_score": 8.8,
+    "id": 59,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 14 Plus",
+    "brand": "Apple",
+    "price": 99999,
+    "specs": {
+      "display": "6.7\" Super Retina XDR OLED",
+      "processor": "A15 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP",
+      "battery": "4323 mAh",
+      "5g": true
+    },
+    "value_score": 8.4,
+    "id": 60,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "brand": "Apple",
+    "price": 99999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR ProMotion OLED",
+      "processor": "A15 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP + 12MP",
+      "battery": "3095 mAh",
+      "5g": true
+    },
+    "value_score": 8.3,
+    "id": 61,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 13",
+    "brand": "Apple",
+    "price": 79999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR OLED",
+      "processor": "A15 Bionic",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP",
+      "battery": "3227 mAh",
+      "5g": true
+    },
+    "value_score": 8.1,
+    "id": 62,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 13 Mini",
+    "brand": "Apple",
+    "price": 69999,
+    "specs": {
+      "display": "5.4\" Super Retina XDR OLED",
+      "processor": "A15 Bionic",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP",
+      "battery": "2438 mAh",
+      "5g": true
+    },
+    "value_score": 7.9,
+    "id": 63,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 12 Pro",
+    "brand": "Apple",
+    "price": 79999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR OLED",
+      "processor": "A14 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "12MP + 12MP + 12MP",
+      "battery": "2815 mAh",
+      "5g": true
+    },
+    "value_score": 7.8,
+    "id": 64,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 12",
+    "brand": "Apple",
+    "price": 64999,
+    "specs": {
+      "display": "6.1\" Super Retina XDR OLED",
+      "processor": "A14 Bionic",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "12MP + 12MP",
+      "battery": "2815 mAh",
+      "5g": true
+    },
+    "value_score": 7.7,
+    "id": 65,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone 12 Mini",
+    "brand": "Apple",
+    "price": 54999,
+    "specs": {
+      "display": "5.4\" Super Retina XDR OLED",
+      "processor": "A14 Bionic",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "12MP + 12MP",
+      "battery": "2227 mAh",
+      "5g": true
+    },
+    "value_score": 7.5,
+    "id": 66,
+    "category": "phones"
+  },
+  {
+    "name": "iPhone SE 3rd Gen",
+    "brand": "Apple",
+    "price": 59999,
+    "specs": {
+      "display": "4.7\" Retina LCD",
+      "processor": "A15 Bionic",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "12MP",
+      "battery": "2018 mAh",
+      "5g": true
+    },
+    "value_score": 7.4,
+    "id": 67,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A35",
+    "brand": "Samsung",
+    "price": 34999,
+    "specs": {
+      "display": "6.6\" Super AMOLED",
+      "processor": "Exynos 1380",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 8MP + 5MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 8.0,
+    "id": 68,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A25",
+    "brand": "Samsung",
+    "price": 29999,
+    "specs": {
+      "display": "6.5\" Super AMOLED",
+      "processor": "Exynos 1280",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.8,
+    "id": 69,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A15 5G",
+    "brand": "Samsung",
+    "price": 24999,
+    "specs": {
+      "display": "6.5\" Super AMOLED",
+      "processor": "Dimensity 6100+",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 5MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 7.5,
+    "id": 70,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A15",
+    "brand": "Samsung",
+    "price": 19999,
+    "specs": {
+      "display": "6.5\" Super AMOLED",
+      "processor": "Helio G99",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 5MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.3,
+    "id": 71,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A05s",
+    "brand": "Samsung",
+    "price": 17999,
+    "specs": {
+      "display": "6.7\" LCD",
+      "processor": "Snapdragon 680",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "50MP + 2MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.1,
+    "id": 72,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A05",
+    "brand": "Samsung",
+    "price": 14999,
+    "specs": {
+      "display": "6.7\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.9,
+    "id": 73,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy M35",
+    "brand": "Samsung",
+    "price": 32999,
+    "specs": {
+      "display": "6.7\" Super AMOLED",
+      "processor": "Exynos 1380",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "50MP + 8MP + 5MP",
+      "battery": "6000 mAh",
+      "5g": true
+    },
+    "value_score": 7.9,
+    "id": 74,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy M15 5G",
+    "brand": "Samsung",
+    "price": 19999,
+    "specs": {
+      "display": "6.5\" Super AMOLED",
+      "processor": "Dimensity 6100+",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 5MP + 2MP",
+      "battery": "6000 mAh",
+      "5g": true
+    },
+    "value_score": 7.4,
+    "id": 75,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy F15",
+    "brand": "Samsung",
+    "price": 16999,
+    "specs": {
+      "display": "6.5\" Super AMOLED",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 5MP + 2MP",
+      "battery": "6000 mAh",
+      "5g": false
+    },
+    "value_score": 7.0,
+    "id": 76,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A04",
+    "brand": "Samsung",
+    "price": 12999,
+    "specs": {
+      "display": "6.5\" LCD",
+      "processor": "Helio P35",
+      "ram": "3GB",
+      "storage": "32GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.5,
+    "id": 77,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A04e",
+    "brand": "Samsung",
+    "price": 10999,
+    "specs": {
+      "display": "6.5\" LCD",
+      "processor": "Helio P35",
+      "ram": "3GB",
+      "storage": "32GB",
+      "camera": "13MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.2,
+    "id": 78,
+    "category": "phones"
+  },
+  {
+    "name": "Samsung Galaxy A03 Core",
+    "brand": "Samsung",
+    "price": 8999,
+    "specs": {
+      "display": "6.5\" LCD",
+      "processor": "Unisoc SC9863A",
+      "ram": "2GB",
+      "storage": "32GB",
+      "camera": "8MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 5.9,
+    "id": 79,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Redmi 13C",
+    "brand": "Xiaomi",
+    "price": 14999,
+    "specs": {
+      "display": "6.74\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.2,
+    "id": 80,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Redmi 12",
+    "brand": "Xiaomi",
+    "price": 17999,
+    "specs": {
+      "display": "6.79\" LCD",
+      "processor": "Helio G88",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.3,
+    "id": 81,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Redmi A3",
+    "brand": "Xiaomi",
+    "price": 9999,
+    "specs": {
+      "display": "6.71\" LCD",
+      "processor": "Helio G36",
+      "ram": "3GB",
+      "storage": "64GB",
+      "camera": "8MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.3,
+    "id": 82,
+    "category": "phones"
+  },
+  {
+    "name": "Realme C67",
+    "brand": "Realme",
+    "price": 19999,
+    "specs": {
+      "display": "6.72\" LCD",
+      "processor": "Snapdragon 685",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "108MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.5,
+    "id": 83,
+    "category": "phones"
+  },
+  {
+    "name": "Realme C55",
+    "brand": "Realme",
+    "price": 17499,
+    "specs": {
+      "display": "6.72\" LCD",
+      "processor": "Helio G88",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "64MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.2,
+    "id": 84,
+    "category": "phones"
+  },
+  {
+    "name": "Realme C35",
+    "brand": "Realme",
+    "price": 14999,
+    "specs": {
+      "display": "6.6\" LCD",
+      "processor": "Unisoc T616",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "50MP + 2MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.9,
+    "id": 85,
+    "category": "phones"
+  },
+  {
+    "name": "Vivo Y18",
+    "brand": "Vivo",
+    "price": 16999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.0,
+    "id": 86,
+    "category": "phones"
+  },
+  {
+    "name": "Vivo Y17s",
+    "brand": "Vivo",
+    "price": 14999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "6000 mAh",
+      "5g": false
+    },
+    "value_score": 6.8,
+    "id": 87,
+    "category": "phones"
+  },
+  {
+    "name": "Oppo A38",
+    "brand": "Oppo",
+    "price": 19999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.1,
+    "id": 88,
+    "category": "phones"
+  },
+  {
+    "name": "Oppo A18",
+    "brand": "Oppo",
+    "price": 14999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "64GB",
+      "camera": "8MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.7,
+    "id": 89,
+    "category": "phones"
+  },
+  {
+    "name": "Infinix Hot 40i",
+    "brand": "Infinix",
+    "price": 12999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.8,
+    "id": 90,
+    "category": "phones"
+  },
+  {
+    "name": "Tecno Spark 20",
+    "brand": "Tecno",
+    "price": 13999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Helio G85",
+      "ram": "4GB",
+      "storage": "128GB",
+      "camera": "64MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 6.9,
+    "id": 91,
+    "category": "phones"
+  },
+  {
+    "name": "Nokia G42",
+    "brand": "Nokia",
+    "price": 19999,
+    "specs": {
+      "display": "6.56\" LCD",
+      "processor": "Snapdragon 480+",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 7.0,
+    "id": 92,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Redmi Note 13",
+    "brand": "Xiaomi",
+    "price": 24999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 685",
+      "ram": "6GB",
+      "storage": "128GB",
+      "camera": "108MP + 2MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": false
+    },
+    "value_score": 7.8,
+    "id": 93,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Poco X6",
+    "brand": "Xiaomi",
+    "price": 34999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Dimensity 8300 Ultra",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "64MP + 8MP + 2MP",
+      "battery": "5100 mAh",
+      "5g": true
+    },
+    "value_score": 8.3,
+    "id": 94,
+    "category": "phones"
+  },
+  {
+    "name": "Xiaomi Poco F6",
+    "brand": "Xiaomi",
+    "price": 44999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 8s Gen 3",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 8.6,
+    "id": 95,
+    "category": "phones"
+  },
+  {
+    "name": "Realme GT 6T",
+    "brand": "Realme",
+    "price": 44999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 7+ Gen 3",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.4,
+    "id": 96,
+    "category": "phones"
+  },
+  {
+    "name": "Realme Narzo 70 Pro",
+    "brand": "Realme",
+    "price": 29999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Dimensity 7050",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 7.9,
+    "id": 97,
+    "category": "phones"
+  },
+  {
+    "name": "OnePlus Nord CE4",
+    "brand": "OnePlus",
+    "price": 34999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 7s Gen 2",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "50MP + 8MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.1,
+    "id": 98,
+    "category": "phones"
+  },
+  {
+    "name": "OnePlus Nord 4",
+    "brand": "OnePlus",
+    "price": 49999,
+    "specs": {
+      "display": "6.74\" AMOLED",
+      "processor": "Snapdragon 7+ Gen 3",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.4,
+    "id": 99,
+    "category": "phones"
+  },
+  {
+    "name": "Vivo V30e",
+    "brand": "Vivo",
+    "price": 39999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 6 Gen 1",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5500 mAh",
+      "5g": true
+    },
+    "value_score": 8.0,
+    "id": 100,
+    "category": "phones"
+  },
+  {
+    "name": "Vivo V29e",
+    "brand": "Vivo",
+    "price": 34999,
+    "specs": {
+      "display": "6.67\" AMOLED",
+      "processor": "Snapdragon 695",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "64MP + 8MP + 2MP",
+      "battery": "4600 mAh",
+      "5g": true
+    },
+    "value_score": 7.8,
+    "id": 101,
+    "category": "phones"
+  },
+  {
+    "name": "Oppo Reno 12",
+    "brand": "Oppo",
+    "price": 49999,
+    "specs": {
+      "display": "6.7\" AMOLED",
+      "processor": "Dimensity 7300",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "50MP + 8MP + 2MP",
+      "battery": "5000 mAh",
+      "5g": true
+    },
+    "value_score": 8.2,
+    "id": 102,
+    "category": "phones"
+  },
+  {
+    "name": "Oppo Reno 11",
+    "brand": "Oppo",
+    "price": 44999,
+    "specs": {
+      "display": "6.7\" AMOLED",
+      "processor": "Dimensity 7050",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "64MP + 8MP + 2MP",
+      "battery": "4800 mAh",
+      "5g": true
+    },
+    "value_score": 8.0,
+    "id": 103,
+    "category": "phones"
+  },
+  {
+    "name": "Google Pixel 8a",
+    "brand": "Google",
+    "price": 49999,
+    "specs": {
+      "display": "6.1\" OLED",
+      "processor": "Google Tensor G3",
+      "ram": "8GB",
+      "storage": "128GB",
+      "camera": "64MP + 13MP",
+      "battery": "4492 mAh",
+      "5g": true
+    },
+    "value_score": 8.7,
+    "id": 104,
+    "category": "phones"
   }
 ]

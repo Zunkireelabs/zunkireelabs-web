@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <!-- Red circle background -->
+  <circle cx="300" cy="300" r="298" fill="#EB1600"/>
+  <!-- Chart line: 5 connected nodes forming an upward analytics curve -->
+  <g stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 75 365 L 220 280 L 360 335 L 480 215 L 540 245"/>
+  </g>
+  <!-- Node dots -->
+  <g fill="#FFFFFF">
+    <circle cx="75"  cy="365" r="20"/>
+    <circle cx="220" cy="280" r="20"/>
+    <circle cx="360" cy="335" r="20"/>
+    <circle cx="480" cy="215" r="20"/>
+    <circle cx="540" cy="245" r="20"/>
+  </g>
+</svg>

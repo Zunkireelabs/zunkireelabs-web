@@ -141,8 +141,15 @@ faqs:
 .v3-hub::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(from 0deg,rgba(220,38,38,0.70) 0deg,rgba(255,210,195,0.14) 72deg,rgba(220,38,38,0.60) 144deg,rgba(255,210,195,0.14) 216deg,rgba(220,38,38,0.70) 288deg,rgba(255,210,195,0.14) 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));animation:v3BorderSpin 3.8s linear infinite}
 .v3-hub::after{content:'';position:absolute;left:22%;top:14%;width:28%;height:18%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,0.88) 0%,transparent 70%);filter:blur(2px);pointer-events:none}
 
-.v3-node{position:absolute;transform:translate(-50%,-50%);background:rgba(255,255,255,0.96);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,255,255,1);border-radius:14px;padding:9px 13px;display:flex;align-items:center;gap:9px;box-shadow:0 10px 30px rgba(80,40,120,0.13),0 3px 8px rgba(80,40,120,0.06),inset 0 1px 0 rgba(255,255,255,1);white-space:nowrap;z-index:15;transition:box-shadow .25s,z-index 0s;cursor:default}
+.v3-node{position:absolute;transform:translate(-50%,-50%);background:rgba(255,255,255,0.96);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,255,255,1);border-radius:14px;padding:9px 13px;display:flex;align-items:center;gap:9px;box-shadow:0 10px 30px rgba(80,40,120,0.13),0 3px 8px rgba(80,40,120,0.06),inset 0 1px 0 rgba(255,255,255,1);white-space:nowrap;z-index:15;transition:box-shadow .25s,transform .25s;cursor:pointer}
 .v3-node:hover{box-shadow:0 16px 44px rgba(80,40,120,0.20),0 6px 14px rgba(80,40,120,0.10),inset 0 1px 0 rgba(255,255,255,1);z-index:25}
+.v3-node-active{box-shadow:0 0 0 2px #DC2626,0 14px 36px rgba(220,38,38,0.22),0 4px 10px rgba(80,40,120,0.10),inset 0 1px 0 rgba(255,255,255,1)!important;z-index:26!important}
+.v3-info-card{position:absolute;left:550px;top:318px;transform:translateX(-50%);z-index:35;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border:1px solid rgba(220,38,38,0.18);border-radius:14px;padding:12px 18px 10px;box-shadow:0 10px 36px rgba(80,40,120,0.18),0 2px 8px rgba(80,40,120,0.08);width:220px;text-align:center;pointer-events:auto}
+.v3-info-card-name{font-size:12.5px;font-weight:700;color:#18181b;letter-spacing:-0.01em;font-family:'DM Sans',sans-serif;margin-bottom:3px}
+.v3-info-card-desc{font-size:10.5px;color:#6b7280;line-height:1.5;margin-bottom:9px}
+.v3-info-card-nav{display:flex;align-items:center;justify-content:center;gap:14px}
+.v3-info-card-btn{font-size:11px;font-weight:600;color:#DC2626;background:none;border:none;cursor:pointer;padding:2px 6px;border-radius:6px;transition:background .15s}.v3-info-card-btn:hover{background:rgba(220,38,38,0.08)}
+.v3-info-card-count{font-size:10px;color:#9ca3af}
 .v3-node-ico{width:30px;height:30px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .v3-node-nm{font-size:11.5px;font-weight:700;color:#18181B;letter-spacing:-0.01em;font-family:'DM Sans',sans-serif}
 .v3-node-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;background:#22c55e;box-shadow:0 0 5px rgba(34,197,94,0.65);animation:v3PulseDot 2.2s ease-in-out infinite}
@@ -227,7 +234,30 @@ faqs:
 
         <!-- Orbital diagram -->
         <!-- Orbital diagram -->
-        <div class="v3-orbital-wrap">
+        <div class="v3-orbital-wrap" x-data="{
+          active: null,
+          nodes: [
+            { id:'slack',      name:'Slack',      desc:'Real-time alerts, approvals &amp; team notifications' },
+            { id:'openai',     name:'OpenAI',     desc:'GPT-4o reasoning, generation &amp; function calling' },
+            { id:'fastapi',    name:'FastAPI',    desc:'High-performance Python API for agent backends' },
+            { id:'pinecone',   name:'Pinecone',   desc:'Vector DB for semantic memory &amp; RAG retrieval' },
+            { id:'langchain',  name:'LangChain',  desc:'Chain LLM calls, tools &amp; memory into pipelines' },
+            { id:'postgresql', name:'PostgreSQL', desc:'Structured data storage, queries &amp; audit logs' },
+            { id:'aws',        name:'AWS',        desc:'Serverless compute, S3 storage &amp; Lambda triggers' },
+            { id:'notion',     name:'Notion',     desc:'Sync docs &amp; knowledge base into agent context' }
+          ],
+          get current() { return this.nodes.find(n => n.id === this.active) },
+          get currentIdx() { return this.nodes.findIndex(n => n.id === this.active) },
+          select(id) { this.active = this.active === id ? null : id },
+          next() {
+            if (this.active === null) { this.active = this.nodes[0].id; return; }
+            this.active = this.nodes[(this.currentIdx + 1) % this.nodes.length].id;
+          },
+          prev() {
+            if (this.active === null) { this.active = this.nodes[this.nodes.length - 1].id; return; }
+            this.active = this.nodes[(this.currentIdx - 1 + this.nodes.length) % this.nodes.length].id;
+          }
+        }">
           <div class="v3-orbital">
 
             <!-- Orbit rings — elliptical -->
@@ -256,12 +286,23 @@ faqs:
             </svg>
 
             <!-- Central Hub -->
-            <div class="v3-hub" style="left:550px;top:250px;">
+            <div class="v3-hub" style="left:550px;top:250px;" @click="active=null">
               <img src="/assets/images/zunkireelabs-mark.svg" alt="Zunkiree Labs" style="width:82px;height:82px;border-radius:50%;" loading="eager"/>
             </div>
 
+            <!-- Info card — appears below hub when a node is active -->
+            <div class="v3-info-card" x-show="active" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" style="display:none;">
+              <p class="v3-info-card-name" x-text="current && current.name"></p>
+              <p class="v3-info-card-desc" x-text="current && current.desc"></p>
+              <div class="v3-info-card-nav">
+                <button class="v3-info-card-btn" @click.stop="prev()">← Prev</button>
+                <span class="v3-info-card-count" x-text="(currentIdx+1) + ' / ' + nodes.length"></span>
+                <button class="v3-info-card-btn" @click.stop="next()">Next →</button>
+              </div>
+            </div>
+
             <!-- Slack — top (550,50) -->
-            <div class="v3-node v3-n1" style="left:550px;top:50px;">
+            <div class="v3-node v3-n1" :class="active==='slack' && 'v3-node-active'" @click.stop="select('slack')" style="left:550px;top:50px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#f5ecff,#e8d8ff);">
                 <svg width="17" height="17" viewBox="0 0 24 24"><rect x="3.5" y="10.5" width="3" height="6.5" rx="1.5" fill="#E01E5A"/><circle cx="5" cy="9" r="1.5" fill="#E01E5A"/><rect x="10.5" y="3.5" width="6.5" height="3" rx="1.5" fill="#36C5F0"/><circle cx="15" cy="5" r="1.5" fill="#36C5F0"/><rect x="17.5" y="10.5" width="3" height="6.5" rx="1.5" fill="#2EB67D"/><circle cx="19" cy="15" r="1.5" fill="#2EB67D"/><rect x="10.5" y="17.5" width="6.5" height="3" rx="1.5" fill="#ECB22E"/><circle cx="9" cy="19" r="1.5" fill="#ECB22E"/></svg>
               </div>
@@ -270,7 +311,7 @@ faqs:
             </div>
 
             <!-- OpenAI — top-right (902,108) -->
-            <div class="v3-node v3-n2" style="left:902px;top:108px;">
+            <div class="v3-node v3-n2" :class="active==='openai' && 'v3-node-active'" @click.stop="select('openai')" style="left:902px;top:108px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#f0f0f0,#e6e6e6);">
                 <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><path d="M20.4 10.6a5.8 5.8 0 00-.5-4.8 6 6 0 00-6.5-2.8A6 6 0 007.6 3a6 6 0 00-5.6 4.1 5.8 5.8 0 00-1 5 5.8 5.8 0 00.5 4.8 6 6 0 006.5 2.8 5.8 5.8 0 004.4 1.9 6 6 0 005.7-4.1 5.8 5.8 0 001-5z" stroke="#111" stroke-width="1.3"/><path d="M12 8v8M9 10l3-2 3 2M9 14l3 2 3-2" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
@@ -279,7 +320,7 @@ faqs:
             </div>
 
             <!-- FastAPI — right (970,250) -->
-            <div class="v3-node v3-n3" style="left:970px;top:250px;">
+            <div class="v3-node v3-n3" :class="active==='fastapi' && 'v3-node-active'" @click.stop="select('fastapi')" style="left:970px;top:250px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#e6f5ec,#ceeadb);">
                 <svg viewBox="0 0 24 24" width="17" height="17"><circle cx="12" cy="12" r="10" fill="#059669"/><path d="M13 5l-6 8h5l-2 6 6-9h-5l2-5z" fill="#fff"/></svg>
               </div>
@@ -288,7 +329,7 @@ faqs:
             </div>
 
             <!-- Pinecone — bottom-right (902,392) -->
-            <div class="v3-node v3-n4" style="left:902px;top:392px;">
+            <div class="v3-node v3-n4" :class="active==='pinecone' && 'v3-node-active'" @click.stop="select('pinecone')" style="left:902px;top:392px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#e8f8ee,#d0f0dc);">
                 <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><path d="M12 3l3.5 5.5H8.5L12 3z" fill="#2ECC71"/><path d="M9.5 7.5L7 13h10l-2.5-5.5h-5z" fill="#27AE60"/><path d="M8 12l-1.5 5h11L16 12H8z" fill="#1E8449"/><ellipse cx="12" cy="19.5" rx="2.5" ry="1.2" fill="#145A32"/></svg>
               </div>
@@ -297,7 +338,7 @@ faqs:
             </div>
 
             <!-- LangChain — bottom (550,450) -->
-            <div class="v3-node v3-n5" style="left:550px;top:450px;">
+            <div class="v3-node v3-n5" :class="active==='langchain' && 'v3-node-active'" @click.stop="select('langchain')" style="left:550px;top:450px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#e6f5ec,#ceeadb);">
                 <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><path d="M6.5 12a2.5 2.5 0 002.5 2.5h2a2.5 2.5 0 000-5H9A2.5 2.5 0 006.5 12z" stroke="#1DC472" stroke-width="1.5"/><path d="M13 9.5h2a2.5 2.5 0 010 5" stroke="#1DC472" stroke-width="1.5" stroke-linecap="round"/><path d="M11 14.5H9a2.5 2.5 0 010-5" stroke="#1DC472" stroke-width="1.5" stroke-linecap="round"/><circle cx="6" cy="12" r="1.5" fill="#1DC472"/><circle cx="18" cy="12" r="1.5" fill="#1DC472"/></svg>
               </div>
@@ -306,7 +347,7 @@ faqs:
             </div>
 
             <!-- PostgreSQL — bottom-left (198,392) -->
-            <div class="v3-node v3-n6" style="left:198px;top:392px;">
+            <div class="v3-node v3-n6" :class="active==='postgresql' && 'v3-node-active'" @click.stop="select('postgresql')" style="left:198px;top:392px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#eef3ff,#dde8ff);">
                 <svg viewBox="0 0 24 24" width="17" height="17"><ellipse cx="12" cy="6" rx="7" ry="2.5" fill="#336791"/><path d="M5 6v5c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6" fill="none" stroke="#336791" stroke-width="1.5"/><path d="M5 11v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6" fill="none" stroke="#336791" stroke-width="1.5" stroke-dasharray="3 1"/></svg>
               </div>
@@ -315,7 +356,7 @@ faqs:
             </div>
 
             <!-- AWS — left (130,250) -->
-            <div class="v3-node v3-n7" style="left:130px;top:250px;">
+            <div class="v3-node v3-n7" :class="active==='aws' && 'v3-node-active'" @click.stop="select('aws')" style="left:130px;top:250px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#fff3e5,#ffe2c5);">
                 <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><path d="M6.5 13.5c0 1 .8 1.8 1.8 1.8.5 0 1-.2 1.3-.5.3-.3.5-.8.5-1.3V10l-1.1.3-.3 1.4-.9-.3-.3-.9H6.5v3z" fill="#FF9900"/><path d="M11.5 10v5.5h1.1V13l1.5 2.5h1.1L13.7 13l1.3-3h-1l-1 2.2V10h-1.5z" fill="#FF9900"/><path d="M3 16.5C5.5 19 9 20.5 12 20.5c2.8 0 5.6-1 7.8-2.8l-1-1.5c-1.8 1.5-4 2.3-6.8 2.3-3 0-5.5-1-7.5-2.8L3 16.5z" fill="#FF9900"/></svg>
               </div>
@@ -324,7 +365,7 @@ faqs:
             </div>
 
             <!-- Notion — top-left (198,108) -->
-            <div class="v3-node v3-n8" style="left:198px;top:108px;">
+            <div class="v3-node v3-n8" :class="active==='notion' && 'v3-node-active'" @click.stop="select('notion')" style="left:198px;top:108px;">
               <div class="v3-node-ico" style="background:linear-gradient(135deg,#f5f5f5,#ebebeb);">
                 <svg viewBox="0 0 24 24" fill="none" width="17" height="17"><rect x="3" y="3" width="18" height="18" rx="3" fill="#fff" stroke="#e5e7eb" stroke-width="1"/><path d="M7 7h4.2L16 14.5V7h1.5v11H13L8.5 11V18H7V7z" fill="#1a1a1a"/></svg>
               </div>

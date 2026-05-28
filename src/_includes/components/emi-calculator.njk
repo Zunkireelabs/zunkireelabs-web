@@ -1,7 +1,14 @@
 {# =====================================================
-   EMI Calculator — receives product via 'product-selected' event
-   Inject bank_rates from Eleventy data: bank_rates
+   EMI Calculator — Sierra-style warm card design
    ===================================================== #}
+
+<style>
+  @keyframes msgPopIn {
+    0%   { opacity: 0; transform: translateY(10px) scale(0.97); }
+    100% { opacity: 1; transform: translateY(0)    scale(1); }
+  }
+  .msg-pop { animation: msgPopIn 0.28s cubic-bezier(0.16,1,0.3,1) forwards; }
+</style>
 
 <div
   x-data="emiCalculator()"
@@ -11,114 +18,138 @@
 >
 
   {# ── Empty state ── #}
-  <div x-show="!price" x-transition class="max-w-2xl mx-auto text-center py-14 px-6 bg-white border border-dashed border-gray-300 rounded-2xl">
-    <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-      <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-      </svg>
+  <div x-show="!price" x-transition class="w-full max-w-2xl mx-auto">
+    <div class="bg-[#faf8f4] rounded-2xl px-6 py-14 text-center" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
+      <div class="flex items-center gap-2 justify-center mb-8">
+        <div class="flex items-center gap-2 bg-white rounded-full px-3 py-1.5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+          <div class="w-5 h-5 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-semibold text-[#1a1612] tracking-wide">Zunkiree Agent</span>
+        </div>
+      </div>
+      <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug mb-2">Select a product from Step 1 to calculate your EMI.</p>
+      <p class="text-sm text-[#9c9080]">I'll compare rates across all major banks instantly.</p>
     </div>
-    <p class="text-gray-500 text-sm">Select a product from the chat above to calculate EMI</p>
   </div>
 
   {# ── Calculator ── #}
-  <div x-show="price > 0" x-transition class="space-y-6">
+  <div x-show="price > 0" x-transition class="space-y-4 max-w-2xl mx-auto">
 
-    {# Product header pill #}
-    <div class="flex items-center justify-between bg-white border border-gray-200 rounded-xl px-5 py-4">
-      <div>
-        <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-0.5">Selected Product</p>
-        <p class="text-lg font-medium text-gray-900" x-text="productName"></p>
-      </div>
-      <div class="text-right">
-        <p class="text-xs text-gray-400 mb-0.5">Price</p>
-        <p class="text-xl font-semibold text-gray-900" x-text="fmt(price)"></p>
-      </div>
-    </div>
+    {# Floating card wrapper #}
+    <div class="bg-[#faf8f4] rounded-2xl overflow-hidden" style="box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);">
 
-    {# Controls row #}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-      {# Down Payment #}
-      <div class="bg-white border border-gray-200 rounded-xl p-5">
-        <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-3">Down Payment</p>
-        <div class="flex gap-2">
-          <template x-for="pct in [15, 25, 35]" :key="pct">
-            <button
-              @click="pickDP(pct)"
-              :disabled="!isDPFeasible(pct)"
-              :title="isDPFeasible(pct) ? '' : 'EMI would exceed your ' + emiPercentLimit + '% cap at ' + selectedTenure + ' mo'"
-              :class="downPaymentPercent === pct
-                ? 'bg-zunkiree-600 text-white border-zunkiree-600'
-                : (isDPFeasible(pct)
-                  ? 'bg-white text-gray-700 border-gray-200 hover:border-zunkiree-300'
-                  : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed')"
-              class="flex-1 py-2 text-sm font-medium border rounded-lg transition-all"
-              x-text="pct + '%'"
-            ></button>
-          </template>
+      {# Agent label row #}
+      <div class="flex items-center gap-2 px-5 pt-5 pb-4">
+        <div class="flex items-center gap-2 bg-white rounded-full px-3 py-1.5" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+          <div class="w-5 h-5 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-semibold text-[#1a1612] tracking-wide">Zunkiree Agent</span>
         </div>
-        <p class="text-xs text-gray-500 mt-3">
-          Amount: <span class="font-medium text-gray-800" x-text="fmt(downPaymentAmount)"></span>
-        </p>
+        <div class="flex items-center gap-1.5 ml-auto">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-[10px] text-[#9c9080] font-medium">Online</span>
+        </div>
       </div>
 
-      {# Monthly Income #}
-      <div class="bg-white border border-gray-200 rounded-xl p-5">
-        <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-3">Monthly Income</p>
-        <div class="relative">
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 font-medium">Rs.</span>
-          <input
-            x-model.number="monthlyIncome"
-            type="number"
-            min="0"
-            class="w-full pl-10 pr-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-zunkiree-400 focus:ring-2 focus:ring-zunkiree-100 transition-colors"
-          />
-        </div>
-        <div class="flex gap-2 mt-3">
-          <template x-for="pct in [15, 25, 45]" :key="pct">
-            <button
-              @click="emiPercentLimit = pct"
-              :class="emiPercentLimit === pct
-                ? 'bg-zunkiree-600 text-white border-zunkiree-600'
-                : 'bg-white text-gray-700 border-gray-200 hover:border-zunkiree-300'"
-              class="flex-1 py-1.5 text-xs font-medium border rounded-lg transition-all"
-              x-text="pct + '%'"
-            ></button>
-          </template>
-        </div>
-        <p class="text-xs text-gray-500 mt-3">
-          <span x-text="emiPercentLimit + '% cap:'"></span>
-          <span class="font-medium text-gray-800" x-text="monthlyIncome ? fmt(Math.round(monthlyIncome * emiPercentLimit / 100)) : '—'"></span>
-        </p>
+      {# Product name — bold Sierra-style #}
+      <div class="px-5 pb-4 msg-pop">
+        <p class="text-[1.05rem] font-semibold text-[#1a1612] leading-snug tracking-[-0.01em]" x-text="'EMI plan for ' + productName"></p>
+        <p class="text-sm text-[#9c9080] mt-1">Rs. <span x-text="price.toLocaleString('en-IN')"></span></p>
       </div>
 
-      {# Tenure #}
-      <div class="bg-white border border-gray-200 rounded-xl p-5">
-        <p class="text-xs uppercase tracking-widest text-gray-400 font-medium mb-3">Loan Tenure</p>
-        <div class="flex gap-2">
-          <template x-for="mo in [12, 24, 36]" :key="mo">
-            <button
-              @click="pickTenure(mo)"
-              :disabled="!isTenureFeasible(mo)"
-              :title="isTenureFeasible(mo) ? '' : 'EMI would exceed your ' + emiPercentLimit + '% cap at ' + downPaymentPercent + '% down'"
-              :class="selectedTenure === mo
-                ? 'bg-zunkiree-600 text-white border-zunkiree-600'
-                : (isTenureFeasible(mo)
-                  ? 'bg-white text-gray-700 border-gray-200 hover:border-zunkiree-300'
-                  : 'bg-gray-50 text-gray-300 border-gray-100 cursor-not-allowed')"
-              class="flex-1 py-2 text-sm font-medium border rounded-lg transition-all"
-              x-text="mo + ' mo'"
-            ></button>
-          </template>
-        </div>
-        <p class="text-xs text-gray-500 mt-3">
-          Loan: <span class="font-medium text-gray-800" x-text="fmt(loanAmount)"></span>
-        </p>
-        <p class="text-xs text-gray-500 mt-1">
-          Monthly EMI: <span class="font-medium" :class="monthlyIncome && showWarning ? 'text-red-600' : 'text-gray-800'" x-text="fmt(selectedEMI)"></span>
-        </p>
-      </div>
+      <div style="height: 1px; background: rgba(0,0,0,0.06); margin: 0 20px;"></div>
 
+      {# Controls #}
+      <div class="px-5 py-5 space-y-4">
+
+        {# Down Payment #}
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-[#9c9080] font-semibold mb-2">Down Payment</p>
+          <div class="flex gap-2">
+            <template x-for="pct in [15, 25, 35]" :key="pct">
+              <button
+                @click="pickDP(pct)"
+                :disabled="!isDPFeasible(pct)"
+                :class="downPaymentPercent === pct
+                  ? 'bg-[#1a1612] text-white'
+                  : (isDPFeasible(pct)
+                    ? 'bg-white text-[#1a1612] hover:bg-[#f0ebe3]'
+                    : 'bg-white text-[#c4b9aa] cursor-not-allowed')"
+                class="flex-1 py-2.5 text-sm font-medium rounded-xl transition-all"
+                style="border: 1px solid rgba(0,0,0,0.09);"
+                x-text="pct + '%'"
+              ></button>
+            </template>
+          </div>
+          <p class="text-xs text-[#9c9080] mt-2">
+            Amount: <span class="font-semibold text-[#1a1612]" x-text="fmt(downPaymentAmount)"></span>
+          </p>
+        </div>
+
+        {# Monthly Income #}
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-[#9c9080] font-semibold mb-2">Monthly Income</p>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-[#9c9080] font-medium">Rs.</span>
+            <input
+              x-model.number="monthlyIncome"
+              type="number"
+              min="0"
+              class="w-full pl-10 pr-3 py-2.5 bg-white text-sm text-[#1a1612] rounded-xl focus:outline-none transition-colors placeholder-[#c4b9aa]"
+              style="border: 1px solid rgba(0,0,0,0.09); box-shadow: 0 1px 2px rgba(0,0,0,0.04);"
+            />
+          </div>
+          <div class="flex gap-2 mt-2">
+            <template x-for="pct in [15, 25, 45]" :key="pct">
+              <button
+                @click="emiPercentLimit = pct"
+                :class="emiPercentLimit === pct
+                  ? 'bg-[#1a1612] text-white'
+                  : 'bg-white text-[#1a1612] hover:bg-[#f0ebe3]'"
+                class="flex-1 py-1.5 text-xs font-medium rounded-lg transition-all"
+                style="border: 1px solid rgba(0,0,0,0.09);"
+                x-text="pct + '%'"
+              ></button>
+            </template>
+          </div>
+          <p class="text-xs text-[#9c9080] mt-2">
+            <span x-text="emiPercentLimit + '% cap:'"></span>
+            <span class="font-semibold text-[#1a1612]" x-text="monthlyIncome ? fmt(Math.round(monthlyIncome * emiPercentLimit / 100)) : '—'"></span>
+          </p>
+        </div>
+
+        {# Tenure #}
+        <div>
+          <p class="text-[10px] uppercase tracking-widest text-[#9c9080] font-semibold mb-2">Loan Tenure</p>
+          <div class="flex gap-2">
+            <template x-for="mo in [12, 24, 36]" :key="mo">
+              <button
+                @click="pickTenure(mo)"
+                :disabled="!isTenureFeasible(mo)"
+                :class="selectedTenure === mo
+                  ? 'bg-[#1a1612] text-white'
+                  : (isTenureFeasible(mo)
+                    ? 'bg-white text-[#1a1612] hover:bg-[#f0ebe3]'
+                    : 'bg-white text-[#c4b9aa] cursor-not-allowed')"
+                class="flex-1 py-2.5 text-sm font-medium rounded-xl transition-all"
+                style="border: 1px solid rgba(0,0,0,0.09);"
+                x-text="mo + ' mo'"
+              ></button>
+            </template>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <p class="text-xs text-[#9c9080]">Loan: <span class="font-semibold text-[#1a1612]" x-text="fmt(loanAmount)"></span></p>
+            <p class="text-xs text-[#9c9080]">Monthly EMI: <span class="font-semibold" :class="monthlyIncome && showWarning ? 'text-red-600' : 'text-[#1a1612]'" x-text="fmt(selectedEMI)"></span></p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     {# Warning banner #}
@@ -127,159 +158,57 @@
       x-transition:enter="transition ease-out duration-300"
       x-transition:enter-start="opacity-0 -translate-y-2"
       x-transition:enter-end="opacity-100 translate-y-0"
-      class="bg-amber-50 border border-amber-200 rounded-xl p-5"
+      class="bg-amber-50 rounded-2xl p-5 msg-pop"
+      style="border: 1px solid rgba(245,158,11,0.3);"
     >
       <div class="flex items-start gap-3 mb-4">
-        <div class="w-8 h-8 bg-amber-100 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-          <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-7 h-7 bg-amber-100 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+          <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
           </svg>
         </div>
         <div class="flex-1">
-          <p class="text-amber-800 font-medium text-sm mb-0.5">This EMI may stretch your budget</p>
-          <p class="text-amber-700 text-xs">
-            The EMI exceeds <span x-text="emiPercentLimit + '%'"></span> of your stated monthly income. Lower the cap, extend tenure, or raise the down payment.
-          </p>
+          <p class="text-amber-800 font-semibold text-sm mb-0.5">This EMI may stretch your budget</p>
+          <p class="text-amber-700 text-xs">The EMI exceeds <span x-text="emiPercentLimit + '%'"></span> of your monthly income. Lower the cap, extend tenure, or raise the down payment.</p>
         </div>
-        <a
-          href="/contact/"
-          x-bind:href="companyFinancingUrl"
-          class="flex-shrink-0 text-xs font-medium text-zunkiree-600 hover:text-zunkiree-700 underline underline-offset-2 whitespace-nowrap"
-        >
-          Consider company financing →
-        </a>
+        <a href="/contact/" x-bind:href="companyFinancingUrl" class="flex-shrink-0 text-xs font-semibold text-amber-700 underline underline-offset-2 whitespace-nowrap">Company financing →</a>
       </div>
-
-      {# Warning bank comparison #}
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <template x-for="(row, i) in warningBanks.slice(0, 4)" :key="row.bank_name">
-          <div class="flex items-center justify-between bg-white border border-amber-100 rounded-lg px-3 py-2.5">
+          <div class="flex items-center justify-between bg-white rounded-xl px-3 py-2.5" style="border: 1px solid rgba(245,158,11,0.2);">
             <div>
-              <p class="text-xs font-medium text-gray-900" x-text="row.bank_name"></p>
-              <p class="text-xs text-gray-500" x-text="row.interest_rate + '% p.a.'"></p>
+              <p class="text-xs font-semibold text-[#1a1612]" x-text="row.bank_name"></p>
+              <p class="text-[10px] text-[#9c9080]" x-text="row.interest_rate + '% p.a.'"></p>
             </div>
             <div class="text-right">
-              <p class="text-sm font-semibold text-gray-900"
-                 x-text="fmt(selectedTenure === 12 ? row.emi12 : selectedTenure === 24 ? row.emi24 : row.emi36)">
-              </p>
-              <p class="text-[10px] text-gray-400">/month</p>
+              <p class="text-sm font-bold text-[#1a1612]" x-text="fmt(selectedTenure === 12 ? row.emi12 : selectedTenure === 24 ? row.emi24 : row.emi36)"></p>
+              <p class="text-[10px] text-[#9c9080]">/month</p>
             </div>
           </div>
         </template>
       </div>
     </div>
 
-    {# Income placeholder — shown when monthly income not yet entered #}
-    <div
-      x-show="!monthlyIncome"
-      x-transition
-      class="bg-white border border-dashed border-gray-300 rounded-xl px-6 py-10 text-center"
-    >
-      <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
-        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-      </div>
-      <p class="text-sm font-medium text-gray-700 mb-1">Enter your monthly income to see bank comparison</p>
-      <p class="text-xs text-gray-500">We'll only show banks where the EMI fits within your chosen <span x-text="emiPercentLimit + '%'"></span> income cap.</p>
+    {# Find Dealers shortcut #}
+    <div x-show="price > 0" x-transition class="flex items-center justify-between bg-[#faf8f4] rounded-xl px-5 py-3.5 msg-pop" style="border: 1px solid rgba(0,0,0,0.07);">
+      <p class="text-sm text-[#555350]">Ready to buy? Find authorised dealers near you.</p>
+      <a href="#dealer-finder" class="text-xs font-semibold text-[#DC2626] underline underline-offset-2 whitespace-nowrap ml-4">Find Dealers →</a>
     </div>
 
-    {# EMI Table — only shown when income entered AND EMI within 45% limit #}
-    <div x-show="monthlyIncome && !showWarning" x-transition class="bg-white border border-gray-200 rounded-xl overflow-hidden">
-      <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-        <h3 class="text-sm font-medium text-gray-900">EMI Comparison — All Banks</h3>
-        <span class="text-xs text-gray-400">Loan: <span class="font-medium text-gray-700" x-text="fmt(loanAmount)"></span></span>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead class="bg-gray-50 border-b border-gray-200">
-            <tr>
-              <th class="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide">Bank</th>
-              <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wide">Rate</th>
-              <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wide"
-                  :class="selectedTenure === 12 ? 'text-zunkiree-600' : ''">12 mo</th>
-              <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wide"
-                  :class="selectedTenure === 24 ? 'text-zunkiree-600' : ''">24 mo</th>
-              <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wide"
-                  :class="selectedTenure === 36 ? 'text-zunkiree-600' : ''">36 mo</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100">
-            <template x-for="(row, i) in emiRows" :key="row.bank_name">
-              <tr
-                :class="i === bestBankIndex
-                  ? 'bg-green-50 ring-1 ring-inset ring-green-200'
-                  : 'hover:bg-gray-50'"
-                class="transition-colors"
-              >
-                <td class="px-5 py-3.5">
-                  <div class="flex items-center gap-2">
-                    <span class="font-medium text-gray-900" x-text="row.bank_name"></span>
-                    <span
-                      x-show="i === bestBankIndex"
-                      class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium"
-                    >Best deal</span>
-                  </div>
-                </td>
-                <td class="px-4 py-3.5 text-center">
-                  <span class="text-gray-600" x-text="row.interest_rate + '%'"></span>
-                </td>
-                <td class="px-4 py-3.5 text-right"
-                    :class="selectedTenure === 12 ? 'font-semibold text-zunkiree-700' : 'text-gray-700'"
-                    x-text="fmt(row.emi12)">
-                </td>
-                <td class="px-4 py-3.5 text-right"
-                    :class="selectedTenure === 24 ? 'font-semibold text-zunkiree-700' : 'text-gray-700'"
-                    x-text="fmt(row.emi24)">
-                </td>
-                <td class="px-4 py-3.5 text-right"
-                    :class="selectedTenure === 36 ? 'font-semibold text-zunkiree-700' : 'text-gray-700'"
-                    x-text="fmt(row.emi36)">
-                </td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-      </div>
-      <div class="px-5 py-3 bg-gray-50 border-t border-gray-100 flex flex-wrap gap-4 text-xs text-gray-500">
-        <span>
-          <span class="inline-block w-3 h-3 bg-green-100 border border-green-200 rounded mr-1 align-middle"></span>
-          Lowest total interest for <span x-text="selectedTenure + ' month'"></span> tenure
-        </span>
-        <span>Active tenure column highlighted in
-          <span class="text-zunkiree-600 font-medium">blue</span>
-        </span>
-      </div>
-    </div>
-
-    {# Find Dealers shortcut — gated behind income + 45% rule #}
-    <div x-show="monthlyIncome && !showWarning" x-transition class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5">
-      <div class="flex items-center gap-2.5">
-        <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-        <p class="text-sm text-gray-600">Ready to buy? Find authorised dealers near you</p>
-      </div>
-      <a
-        href="#dealer-finder"
-        class="text-xs font-medium text-zunkiree-600 hover:text-zunkiree-700 underline underline-offset-2 whitespace-nowrap ml-4"
-      >Find Dealers ↓</a>
-    </div>
-
-    {# Save Plan CTA — gated behind income + 45% rule #}
-    <div x-show="monthlyIncome && !showWarning" x-transition class="flex items-center justify-between bg-white border border-gray-200 rounded-xl px-5 py-4">
+    {# Save Plan CTA #}
+    <div x-show="monthlyIncome && !showWarning" x-transition class="flex items-center justify-between bg-[#faf8f4] rounded-2xl px-5 py-4 msg-pop" style="box-shadow: 0 0 0 1px rgba(0,0,0,0.06);">
       <div>
-        <p class="text-sm font-medium text-gray-900">Ready to proceed?</p>
-        <p class="text-xs text-gray-500 mt-0.5">Save this plan and get a shareable link</p>
+        <p class="text-sm font-semibold text-[#1a1612]">Ready to proceed?</p>
+        <p class="text-xs text-[#9c9080] mt-0.5">Save this plan and get a shareable link</p>
       </div>
       <button
         @click="openSaveModal()"
-        class="flex items-center gap-2 px-5 py-2.5 bg-zunkiree-600 text-white text-sm font-medium rounded-xl hover:bg-zunkiree-700 transition-colors"
+        class="flex items-center gap-2 px-5 py-2.5 bg-[#1a1612] text-white text-sm font-semibold rounded-xl hover:opacity-80 transition-opacity"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
         </svg>
-        Save this plan
+        Save plan
       </button>
     </div>
 
@@ -302,78 +231,47 @@
       x-transition:enter="transition ease-out duration-200"
       x-transition:enter-start="opacity-0 scale-95"
       x-transition:enter-end="opacity-100 scale-100"
-      class="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden"
+      class="w-full max-w-sm bg-[#faf8f4] rounded-2xl shadow-2xl overflow-hidden"
+      style="border: 1px solid rgba(0,0,0,0.08);"
     >
-
-      {# Modal: default (save form) #}
       <div x-show="!saveDone">
         <div class="px-6 pt-6 pb-5">
           <div class="flex items-start justify-between mb-5">
             <div>
-              <h3 class="text-base font-semibold text-gray-900">Save this plan</h3>
-              <p class="text-xs text-gray-500 mt-0.5">We'll generate a shareable link</p>
+              <h3 class="text-base font-semibold text-[#1a1612]">Save this plan</h3>
+              <p class="text-xs text-[#9c9080] mt-0.5">We'll generate a shareable link</p>
             </div>
-            <button @click="saveModal = false" class="text-gray-400 hover:text-gray-600 transition-colors mt-0.5">
+            <button @click="saveModal = false" class="text-[#9c9080] hover:text-[#1a1612] transition-colors mt-0.5">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
               </svg>
             </button>
           </div>
-
-          {# Plan summary #}
-          <div class="bg-gray-50 rounded-xl px-4 py-3 mb-5 space-y-2 text-sm">
-            <div class="flex justify-between">
-              <span class="text-gray-500">Product</span>
-              <span class="font-medium text-gray-900" x-text="productName"></span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-gray-500">Bank</span>
-              <span class="font-medium text-gray-900" x-text="bestBankName"></span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-gray-500">Tenure</span>
-              <span class="font-medium text-gray-900" x-text="selectedTenure + ' months'"></span>
-            </div>
-            <div class="flex justify-between border-t border-gray-200 pt-2 mt-2">
-              <span class="text-gray-700 font-medium">Monthly EMI</span>
-              <span class="text-zunkiree-600 font-bold" x-text="fmt(selectedEMI)"></span>
+          <div class="bg-white rounded-xl px-4 py-3 mb-5 space-y-2 text-sm" style="border: 1px solid rgba(0,0,0,0.06);">
+            <div class="flex justify-between"><span class="text-[#9c9080]">Product</span><span class="font-semibold text-[#1a1612]" x-text="productName"></span></div>
+            <div class="flex justify-between"><span class="text-[#9c9080]">Bank</span><span class="font-semibold text-[#1a1612]" x-text="bestBankName"></span></div>
+            <div class="flex justify-between"><span class="text-[#9c9080]">Tenure</span><span class="font-semibold text-[#1a1612]" x-text="selectedTenure + ' months'"></span></div>
+            <div class="flex justify-between pt-2 mt-2" style="border-top: 1px solid rgba(0,0,0,0.06);">
+              <span class="font-semibold text-[#1a1612]">Monthly EMI</span>
+              <span class="font-bold text-[#DC2626]" x-text="fmt(selectedEMI)"></span>
             </div>
           </div>
-
-          {# Email (optional) #}
-          <label class="block mb-1.5">
-            <span class="text-xs font-medium text-gray-700">Email <span class="text-gray-400 font-normal">(optional — to access your wishlist)</span></span>
-          </label>
-          <input
-            x-model="saveEmail"
-            type="email"
-            placeholder="you@example.com"
-            class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-zunkiree-400 focus:ring-2 focus:ring-zunkiree-100 transition-colors mb-3"
-          />
-
-          {# Phone (optional — for approval notifications) #}
-          <label class="block mb-1.5">
-            <span class="text-xs font-medium text-gray-700">WhatsApp number <span class="text-gray-400 font-normal">(optional — get notified when approved)</span></span>
-          </label>
+          <label class="block mb-1.5"><span class="text-xs font-semibold text-[#1a1612]">Email <span class="text-[#9c9080] font-normal">(optional)</span></span></label>
+          <input x-model="saveEmail" type="email" placeholder="you@example.com"
+            class="w-full px-4 py-2.5 bg-white text-sm text-[#1a1612] rounded-xl focus:outline-none transition-colors mb-3 placeholder-[#c4b9aa]"
+            style="border: 1px solid rgba(0,0,0,0.09);"/>
+          <label class="block mb-1.5"><span class="text-xs font-semibold text-[#1a1612]">WhatsApp <span class="text-[#9c9080] font-normal">(optional)</span></span></label>
           <div class="relative">
-            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">+977</span>
-            <input
-              x-model="savePhone"
-              type="tel"
-              placeholder="98XXXXXXXX"
-              class="w-full pl-14 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-zunkiree-400 focus:ring-2 focus:ring-zunkiree-100 transition-colors"
-            />
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-[#9c9080]">+977</span>
+            <input x-model="savePhone" type="tel" placeholder="98XXXXXXXX"
+              class="w-full pl-14 pr-4 py-2.5 bg-white text-sm text-[#1a1612] rounded-xl focus:outline-none transition-colors placeholder-[#c4b9aa]"
+              style="border: 1px solid rgba(0,0,0,0.09);"/>
           </div>
-
           <p x-show="saveError" class="text-xs text-red-500 mt-2" x-text="saveError"></p>
         </div>
-
         <div class="px-6 pb-6">
-          <button
-            @click="savePlan()"
-            :disabled="saving"
-            class="w-full py-3 bg-zunkiree-600 text-white text-sm font-medium rounded-xl hover:bg-zunkiree-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
-          >
+          <button @click="savePlan()" :disabled="saving"
+            class="w-full py-3 bg-[#1a1612] text-white text-sm font-semibold rounded-xl hover:opacity-80 disabled:opacity-40 disabled:cursor-not-allowed transition-opacity flex items-center justify-center gap-2">
             <svg x-show="saving" class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -383,50 +281,32 @@
         </div>
       </div>
 
-      {# Modal: success state #}
       <div x-show="saveDone" class="px-6 py-8 text-center">
-        <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
           </svg>
         </div>
-        <h3 class="text-base font-semibold text-gray-900 mb-1">Plan saved!</h3>
-        <p class="text-xs text-gray-500 mb-5">Share this link with anyone</p>
-
-        {# Copy link row #}
+        <h3 class="text-base font-semibold text-[#1a1612] mb-1">Plan saved!</h3>
+        <p class="text-xs text-[#9c9080] mb-5">Share this link with anyone</p>
         <div class="flex gap-2 mb-4">
-          <input
-            type="text"
-            :value="savedUrl"
-            readonly
-            class="flex-1 px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs font-mono text-gray-700 focus:outline-none"
-          />
-          <button
-            @click="copySavedLink()"
-            class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-700 hover:bg-gray-50 transition-colors whitespace-nowrap"
-            x-text="copiedLink ? 'Copied!' : 'Copy'"
-          ></button>
+          <input type="text" :value="savedUrl" readonly
+            class="flex-1 px-3 py-2.5 bg-white rounded-xl text-xs font-mono text-[#1a1612] focus:outline-none"
+            style="border: 1px solid rgba(0,0,0,0.09);"/>
+          <button @click="copySavedLink()"
+            class="px-4 py-2.5 bg-white rounded-xl text-sm text-[#1a1612] hover:bg-[#f0ebe3] transition-colors whitespace-nowrap"
+            style="border: 1px solid rgba(0,0,0,0.09);"
+            x-text="copiedLink ? 'Copied!' : 'Copy'"></button>
         </div>
-
         <div class="flex gap-2 mb-3">
-          <a
-            :href="savedUrl"
-            target="_blank"
-            class="flex-1 py-2.5 border border-gray-200 text-sm text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-colors text-center"
-          >View Plan</a>
-          <button
-            @click="saveModal = false"
-            class="flex-1 py-2.5 bg-zunkiree-600 text-white text-sm font-medium rounded-xl hover:bg-zunkiree-700 transition-colors"
-          >Done</button>
+          <a :href="savedUrl" target="_blank"
+            class="flex-1 py-2.5 bg-white text-sm text-[#1a1612] font-semibold rounded-xl hover:bg-[#f0ebe3] transition-colors text-center"
+            style="border: 1px solid rgba(0,0,0,0.09);">View Plan</a>
+          <button @click="saveModal = false"
+            class="flex-1 py-2.5 bg-[#1a1612] text-white text-sm font-semibold rounded-xl hover:opacity-80 transition-opacity">Done</button>
         </div>
-
-        {# WhatsApp share #}
-        <a
-          :href="whatsappShareUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] text-white text-sm font-medium rounded-xl hover:bg-[#1ebe5c] transition-colors"
-        >
+        <a :href="whatsappShareUrl" target="_blank" rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.126 1.52 5.867L.058 23.486a.5.5 0 00.609.637l5.78-1.476A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.83 9.83 0 01-5.01-1.37l-.36-.214-3.427.876.907-3.305-.235-.38A9.818 9.818 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
@@ -434,15 +314,13 @@
           Share on WhatsApp
         </a>
       </div>
-
     </div>
   </div>
 
 </div>
 
 <script>
-const COMPANY_FINANCING_URL = '/contact/'; // ← configure this URL
-
+const COMPANY_FINANCING_URL = '/contact/';
 const BANK_RATES = {{ bank_rates | dump | safe }};
 
 function emiCalculator() {
@@ -458,7 +336,6 @@ function emiCalculator() {
     companyFinancingUrl: COMPANY_FINANCING_URL,
     bankRates: BANK_RATES,
 
-    // Save plan state
     saveModal: false,
     saving: false,
     saveDone: false,
@@ -468,13 +345,8 @@ function emiCalculator() {
     savedUrl: '',
     copiedLink: false,
 
-    get downPaymentAmount() {
-      return Math.round(this.price * this.downPaymentPercent / 100);
-    },
-
-    get loanAmount() {
-      return this.price - this.downPaymentAmount;
-    },
+    get downPaymentAmount() { return Math.round(this.price * this.downPaymentPercent / 100); },
+    get loanAmount() { return this.price - this.downPaymentAmount; },
 
     calcEMI(principal, annualRate, months) {
       if (!principal || !annualRate || !months) return 0;
@@ -482,24 +354,17 @@ function emiCalculator() {
       return Math.round(principal * r * Math.pow(1 + r, months) / (Math.pow(1 + r, months) - 1));
     },
 
-    // Best (lowest) bank rate across all banks — used for feasibility checks
     get cheapestRate() {
       if (!this.bankRates.length) return null;
       return Math.min(...this.bankRates.map(b => b.interest_rate));
     },
 
-    // EMI for a hypothetical down-payment % at the currently selected tenure (cheapest bank)
     emiForDP(pct) {
       const dp = Math.round(this.price * pct / 100);
       return this.calcEMI(this.price - dp, this.cheapestRate, this.selectedTenure);
     },
+    emiForTenure(months) { return this.calcEMI(this.loanAmount, this.cheapestRate, months); },
 
-    // EMI for a hypothetical tenure at the currently selected DP (cheapest bank)
-    emiForTenure(months) {
-      return this.calcEMI(this.loanAmount, this.cheapestRate, months);
-    },
-
-    // Affordability check: returns true if income empty (no cap) OR computed EMI ≤ cap
     isDPFeasible(pct) {
       if (!this.monthlyIncome || !this.price) return true;
       return this.emiForDP(pct) / this.monthlyIncome <= this.emiPercentLimit / 100;
@@ -509,15 +374,8 @@ function emiCalculator() {
       return this.emiForTenure(months) / this.monthlyIncome <= this.emiPercentLimit / 100;
     },
 
-    pickDP(pct) {
-      if (!this.isDPFeasible(pct)) return;
-      this.downPaymentPercent = pct;
-    },
-
-    pickTenure(months) {
-      if (!this.isTenureFeasible(months)) return;
-      this.selectedTenure = months;
-    },
+    pickDP(pct) { if (!this.isDPFeasible(pct)) return; this.downPaymentPercent = pct; },
+    pickTenure(months) { if (!this.isTenureFeasible(months)) return; this.selectedTenure = months; },
 
     get emiRows() {
       return this.bankRates.map(bank => ({
@@ -525,7 +383,6 @@ function emiCalculator() {
         emi12: this.calcEMI(this.loanAmount, bank.interest_rate, 12),
         emi24: this.calcEMI(this.loanAmount, bank.interest_rate, 24),
         emi36: this.calcEMI(this.loanAmount, bank.interest_rate, 36),
-        get totalInterestSelected() { return 0; } // placeholder, computed below
       })).map(row => ({
         ...row,
         totalInterest: (
@@ -540,14 +397,7 @@ function emiCalculator() {
       if (!this.savedUrl) return '#';
       const dp = Math.round(this.price * this.downPaymentPercent / 100);
       const text =
-        `Hi! I found a great deal 🛒\n\n` +
-        `*${this.productName}*\n` +
-        `Price: Rs. ${Math.round(this.price).toLocaleString('en-IN')}\n` +
-        `Down Payment: Rs. ${dp.toLocaleString('en-IN')} (${this.downPaymentPercent}%)\n` +
-        `Monthly EMI: Rs. ${Math.round(this.selectedEMI).toLocaleString('en-IN')}/month\n` +
-        `Bank: ${this.bestBankName}\n` +
-        `Tenure: ${this.selectedTenure} months\n\n` +
-        `View full plan: ${this.savedUrl}`;
+        `Hi! I found a great deal 🛒\n\n*${this.productName}*\nPrice: Rs. ${Math.round(this.price).toLocaleString('en-IN')}\nDown Payment: Rs. ${dp.toLocaleString('en-IN')} (${this.downPaymentPercent}%)\nMonthly EMI: Rs. ${Math.round(this.selectedEMI).toLocaleString('en-IN')}/month\nBank: ${this.bestBankName}\nTenure: ${this.selectedTenure} months\n\nView full plan: ${this.savedUrl}`;
       return `https://wa.me/?text=${encodeURIComponent(text)}`;
     },
 
@@ -555,29 +405,24 @@ function emiCalculator() {
       if (this.bestBankIndex < 0 || !this.emiRows.length) return '';
       return this.emiRows[this.bestBankIndex].bank_name;
     },
-
     get bestBankRate() {
       if (this.bestBankIndex < 0 || !this.emiRows.length) return null;
       return this.emiRows[this.bestBankIndex].interest_rate;
     },
-
     get bestBankIndex() {
       if (!this.emiRows.length) return -1;
       return this.emiRows.reduce((best, row, i) =>
         row.totalInterest < this.emiRows[best].totalInterest ? i : best, 0);
     },
-
     get selectedEMI() {
       if (!this.emiRows.length || this.bestBankIndex < 0) return 0;
       const row = this.emiRows[this.bestBankIndex];
       return this.selectedTenure === 12 ? row.emi12 : this.selectedTenure === 24 ? row.emi24 : row.emi36;
     },
-
     get showWarning() {
       if (!this.monthlyIncome || !this.price) return false;
       return this.selectedEMI / this.monthlyIncome > this.emiPercentLimit / 100;
     },
-
     get warningBanks() {
       return [...this.emiRows].sort((a, b) => {
         const emiA = this.selectedTenure === 12 ? a.emi12 : this.selectedTenure === 24 ? a.emi24 : a.emi36;
@@ -586,53 +431,29 @@ function emiCalculator() {
       });
     },
 
-    fmt(n) {
-      return 'Rs. ' + Math.round(n).toLocaleString('en-IN');
-    },
+    fmt(n) { return 'Rs. ' + Math.round(n).toLocaleString('en-IN'); },
 
-    openSaveModal() {
-      this.saveDone = false;
-      this.saveError = '';
-      this.savedUrl = '';
-      this.saveModal = true;
-    },
+    openSaveModal() { this.saveDone = false; this.saveError = ''; this.savedUrl = ''; this.saveModal = true; },
 
     async savePlan() {
-      this.saving = true;
-      this.saveError = '';
-
+      this.saving = true; this.saveError = '';
       const payload = {
-        product_id: this.productId,
-        product_name: this.productName,
-        product_price: this.price,
-        down_payment_pct: this.downPaymentPercent,
-        bank_name: this.bestBankName,
-        bank_interest_rate: this.bestBankRate,
-        product_category: this.productCategory || null,
-        tenure_months: this.selectedTenure,
-        monthly_income: this.monthlyIncome || null,
-        emi_amount: this.selectedEMI,
-        user_email: this.saveEmail || null,
+        product_id: this.productId, product_name: this.productName, product_price: this.price,
+        down_payment_pct: this.downPaymentPercent, bank_name: this.bestBankName,
+        bank_interest_rate: this.bestBankRate, product_category: this.productCategory || null,
+        tenure_months: this.selectedTenure, monthly_income: this.monthlyIncome || null,
+        emi_amount: this.selectedEMI, user_email: this.saveEmail || null,
         user_phone: this.savePhone ? `+977${this.savePhone.replace(/\D/g, '')}` : null
       };
-
       const saveLocally = () => {
         const slug = Math.random().toString(36).slice(2, 9);
-        try {
-          localStorage.setItem(`emi_plan_${slug}`, JSON.stringify({ ...payload, saved_at: new Date().toISOString() }));
-        } catch (_) { /* private mode etc. */ }
+        try { localStorage.setItem(`emi_plan_${slug}`, JSON.stringify({ ...payload, saved_at: new Date().toISOString() })); } catch (_) {}
         this.savedUrl = `${window.location.origin}/plan/?id=${slug}`;
         this.saveDone = true;
       };
-
       try {
-        const res = await fetch('/api/save-plan', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+        const res = await fetch('/api/save-plan', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
         const text = await res.text();
-        // Empty body or non-JSON response → API not reachable (e.g. eleventy dev server)
         if (!text) { saveLocally(); this.saving = false; return; }
         let data;
         try { data = JSON.parse(text); } catch { saveLocally(); this.saving = false; return; }
@@ -640,7 +461,6 @@ function emiCalculator() {
         this.savedUrl = window.location.origin + data.url;
         this.saveDone = true;
       } catch (e) {
-        // Network / fetch failure → still let the demo finish with local save
         if (e.name === 'TypeError') { saveLocally(); }
         else { this.saveError = e.message; }
       }
@@ -662,10 +482,12 @@ function emiCalculator() {
         this.downPaymentPercent = 15;
         this.monthlyIncome = '';
         this.selectedTenure = 24;
-        this.$nextTick(() => {
-          this.$el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
+        this.$nextTick(() => { this.$el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
       });
+      this.$watch('selectedTenure', v => window.dispatchEvent(new CustomEvent('emi-tenure-changed', { detail: { tenure: v } })));
+      this.$watch('downPaymentPercent', v => window.dispatchEvent(new CustomEvent('emi-dp-changed', { detail: { pct: v } })));
+      this.$watch('monthlyIncome', v => window.dispatchEvent(new CustomEvent('emi-income-changed', { detail: { income: v } })));
+      this.$watch('emiPercentLimit', v => window.dispatchEvent(new CustomEvent('emi-percent-changed', { detail: { pct: v } })));
     }
   };
 }

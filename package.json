@@ -4,7 +4,7 @@
   "description": "Zunkiree Labs - Premium Tech Company Website",
   "type": "module",
   "scripts": {
-    "dev": "ELEVENTY_ENV=development eleventy --serve",
+    "dev": "ELEVENTY_ENV=development eleventy --serve --port 3000",
     "dev:vercel": "vercel dev",
     "build": "ELEVENTY_ENV=production eleventy",
     "clean": "rm -rf dist"
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
+    "playwright": "^1.60.0",
     "sharp": "^0.34.5"
   }
 }
