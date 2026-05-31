@@ -151,7 +151,7 @@
       "secondaryButton": { "text": "Contact Sales", "url": "/contact/" }
     },
 
-    "clients": ["admizz", "corecloud365", "carbon-spark"]
+    "clients": ["admizz", "corecloud365"]
   },
 
   "ai-commerce-agent": {
