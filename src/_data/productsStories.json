@@ -22,17 +22,5 @@
     "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
     "ctaText": "Read the case study",
     "ctaUrl": "/resources/corecloud365-case-study/"
-  },
-  {
-    "id": "carbon-spark",
-    "name": "Carbon Spark",
-    "logo": "/images/clients/carbon-spark.png",
-    "stat": "60%",
-    "statLabel": "efficiency gain",
-    "headline": "Carbon Spark powers internal knowledge search",
-    "description": "Carbon Spark integrated Zunkiree Search to make their internal documentation searchable. Employees now find answers in seconds instead of searching through folders.",
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-    "ctaText": "Read the case study",
-    "ctaUrl": "/resources/carbon-spark-case-study/"
   }
 ]

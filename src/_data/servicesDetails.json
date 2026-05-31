@@ -190,7 +190,7 @@
       "secondaryButton": { "text": "View Our Work", "url": "/projects/" }
     },
 
-    "clients": ["corecloud365", "carbon-spark", "admizz"]
+    "clients": ["corecloud365", "admizz"]
   },
 
   "ai-customer-experience": {
@@ -1161,7 +1161,7 @@
       "secondaryButton": { "text": "View SaaS Projects", "url": "/projects/" }
     },
 
-    "clients": ["carbon-spark", "corecloud365", "mach24orbital"]
+    "clients": ["corecloud365", "mach24orbital"]
   },
 
   "web-development": {
@@ -1549,7 +1549,7 @@
       "secondaryButton": { "text": "View App Projects", "url": "/projects/" }
     },
 
-    "clients": ["admizz", "rapid-investment", "carbon-spark"]
+    "clients": ["admizz", "rapid-investment"]
   },
 
   "aeo-seo": {
