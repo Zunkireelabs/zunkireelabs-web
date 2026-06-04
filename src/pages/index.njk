@@ -141,38 +141,37 @@ bodyClass: "page-bg-active"
     </div>
 
     {# Bottom mockup wrapper — slide 0 sets height, slides 1+2 overlay absolutely #}
-    <div class="relative mt-3 lg:mt-4 hidden lg:block" style="transform: scale(0.82); transform-origin: top center; margin-bottom: -10%;">
+    <div class="relative mt-6 hidden lg:block">
 
     {# Slide 1: dashboard mockup + agent task card — sets container height #}
-    <div data-slide="0" class="hero-mockup-slide flex items-center justify-center gap-2" style="opacity:1;pointer-events:auto">
+    <div data-slide="0" class="hero-mockup-slide flex items-start gap-5" style="opacity:1;pointer-events:auto;height:420px;">
 
-      {# Browser mockup — dashboard with chrome frame #}
-      <div class="relative rounded-xl overflow-hidden" style="width:878px; max-width:100%; margin-top:-40px;">
-        {# Glassmorphism card — top-left corner #}
-        <div class="glass-card absolute top-4 left-4 p-4 w-48 z-10 hidden">
-          <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Featured</p>
-          <p class="text-sm font-semibold text-gray-900 mb-3">Explore Agentic AI</p>
-          <a href="/gaas/" class="inline-flex items-center justify-center w-full px-3 py-2 bg-zunkiree-600 text-white text-xs font-medium hover:bg-zunkiree-700 transition-colors rounded">
-            Request Demo
-          </a>
-        </div>
+      {# Browser mockup — takes remaining space, full row height #}
+      <div class="relative rounded-3xl overflow-hidden flex-1" style="height:480px; background:linear-gradient(145deg,#0a1628 0%,#0f1f35 40%,#0a1a2e 100%); border:1px solid rgba(255,255,255,0.08); box-shadow:0 0 80px rgba(111,155,52,0.12),0 32px 80px rgba(0,0,0,0.6);">
 
-        {# Dashboard screenshot #}
-        <div class="p-4">
+        {# Sparkle decorations #}
+        <span class="absolute top-6 left-8 select-none pointer-events-none z-10" style="color:#90a959;font-size:1.25rem;opacity:0.7;">✦</span>
+        <span class="absolute top-8 right-10 select-none pointer-events-none z-10" style="color:#6f9b34;font-size:0.875rem;opacity:0.5;">✦</span>
+        <span class="absolute bottom-6 left-16 select-none pointer-events-none z-10" style="color:#90a959;font-size:0.75rem;opacity:0.4;">✦</span>
+        <span class="absolute bottom-8 right-8 select-none pointer-events-none z-10" style="color:#b6cf96;font-size:1rem;opacity:0.6;">✦</span>
+
+        {# Dashboard screenshot — fills height #}
+        <div class="absolute inset-0">
           <img
-            src="/assets/images/hero-orca-dashboard.webp"
+            src="/assets/images/hero-orca-dashboard.png"
             alt="Orca Platform Dashboard - AI Infrastructure Management"
-            width="1440"
-            height="900"
-            class="w-full h-auto block rounded-lg"
+            width="1200"
+            height="720"
+            class="w-full h-full object-cover object-top rounded-lg"
             fetchpriority="high"
             decoding="async"
+            style="box-shadow:0 8px 32px rgba(0,0,0,0.4);"
           />
         </div>
       </div>
 
-      {# Agent task card #}
-      <div class="flex flex-col rounded-xl overflow-hidden flex-shrink-0 w-64" style="background:linear-gradient(160deg,#141e22 0%,#1c2c33 60%,#141e22 100%); border:1px solid rgba(111,155,52,0.2); box-shadow:0 24px 60px rgba(0,0,0,0.5);">
+      {# Agent task card — compact fixed width, shorter height, offset from top #}
+      <div class="flex flex-col justify-center rounded-3xl overflow-hidden flex-shrink-0" style="width:280px; height:290px; margin-top:24px; background:linear-gradient(160deg,#141e22 0%,#1c2c33 60%,#141e22 100%); border:1px solid rgba(111,155,52,0.2); box-shadow:0 24px 60px rgba(0,0,0,0.5);">
 
         <div class="flex justify-center pt-5 pb-3 px-4">
           <div class="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-medium text-white/90" style="background:rgba(111,155,52,0.15); border:1px solid rgba(111,155,52,0.3);">
@@ -208,7 +207,7 @@ bodyClass: "page-bg-active"
           <div class="w-px h-4" style="background:rgba(111,155,52,0.25);"></div>
         </div>
 
-        <div class="flex justify-center pb-4 pt-3 px-4">
+        <div class="flex justify-center pb-5 pt-3 px-4">
           <div class="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-medium text-white/90" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);">
             Task complete
             <svg class="w-3 h-3 text-zunkiree-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
