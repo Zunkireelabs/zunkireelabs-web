@@ -1,0 +1,257 @@
+{# =====================================================
+   PLATFORM RIBBON — a single pinned stage: the hero text
+   slides up + fades as you scroll, and the 3D twisted
+   ribbon builds in + revolves around the centre text.
+   Three.js is lazy-loaded from CDN only when the section
+   nears the viewport (perf); the canvas is transparent so
+   the page's Horizon bg shows through.
+   ===================================================== #}
+<section id="ribbon-platform" class="ribbon-platform" aria-label="Zunkiree platform — Data, AI, Agents, Search">
+  <div id="ribbon-pin" class="ribbon-pin">
+    <div class="ribbon-sticky">
+      <canvas id="ribbon-canvas"></canvas>
+
+      {# Hero text — centred overlay that slides up + fades on scroll #}
+      <div id="ribbon-hero" class="ribbon-hero">
+        <span class="rb-eyebrow">AI-Native Platform</span>
+        <h2 class="rb-headline">Delivering autonomous workflows across every corner of your business</h2>
+        <div class="rb-cta">
+          <a href="/services/" class="rb-btn rb-btn-p">Explore platform</a>
+          <a href="/contact/" class="rb-btn rb-btn-g">Get started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ribbon-platform { position: relative; }
+  .ribbon-pin { position: relative; height: 220vh; }
+  .ribbon-sticky { position: sticky; top: 0; height: 100vh; width: 100%; overflow: hidden; }
+  #ribbon-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 1; }
+
+  .ribbon-hero {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 0 24px;
+    will-change: transform, opacity;
+  }
+  .rb-eyebrow {
+    font-size: .68rem; font-weight: 700; letter-spacing: .18em;
+    text-transform: uppercase; color: rgba(61,143,212,.75); margin-bottom: 22px;
+  }
+  .rb-headline {
+    font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; line-height: 1.08;
+    max-width: 18ch; margin: 0 auto;
+    background: linear-gradient(100deg, #5a8029 0%, #6f9b34 30%, #90a959 60%, #b6cf96 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  .rb-cta { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; justify-content: center; }
+  .rb-btn { font-size: .92rem; font-weight: 600; padding: 13px 30px; border-radius: 10px; text-decoration: none; transition: background .2s ease; }
+  .rb-btn-p { background: #1f6fd0; color: #fff; box-shadow: 0 6px 30px rgba(31,111,208,.45); }
+  .rb-btn-p:hover { background: #2f7ee0; }
+  .rb-btn-g { background: rgba(61,143,212,.08); border: 1px solid rgba(61,143,212,.35); color: #9fc9ef; }
+  .rb-btn-g:hover { background: rgba(61,143,212,.16); }
+
+  @media (max-width: 767px) { .ribbon-pin { height: 190vh; } }
+</style>
+
+<script type="module">
+(() => {
+  const section = document.getElementById('ribbon-platform');
+  const pin     = document.getElementById('ribbon-pin');
+  const canvas  = document.getElementById('ribbon-canvas');
+  const heroEl  = document.getElementById('ribbon-hero');
+  if (!section || !pin || !canvas || !heroEl) return;
+
+  // Scroll progress (0 → 1) through the pinned zone.
+  function progress() {
+    const r = pin.getBoundingClientRect();
+    const total = Math.max(1, r.height - window.innerHeight);
+    return Math.min(1, Math.max(0, -r.top / total));
+  }
+
+  // Hero text slides up + fades over the first ~30% of the scroll.
+  // Driven independently of three.js so it works the instant you scroll.
+  function updateHero() {
+    const hp = Math.min(1, progress() / 0.3);
+    heroEl.style.transform = 'translateY(' + (-hp * 90) + 'px)';
+    heroEl.style.opacity = String(1 - hp);
+    heroEl.style.pointerEvents = hp > 0.5 ? 'none' : 'auto';
+  }
+  window.addEventListener('scroll', updateHero, { passive: true });
+  window.addEventListener('resize', updateHero);
+  updateHero();
+
+  // Lazy-load Three.js from CDN only when the section nears the viewport.
+  let started = false;
+  const io = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !started) {
+      started = true; io.disconnect();
+      import(/* @vite-ignore */ 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js')
+        .then(init).catch((e) => console.error('Ribbon: failed to load three', e));
+    }
+  }, { rootMargin: '300px' });
+  io.observe(section);
+
+  function init(THREE) {
+    const W = () => canvas.clientWidth  || pin.clientWidth     || 1;
+    const H = () => canvas.clientHeight || window.innerHeight  || 1;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W(), H(), false);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.25;
+    renderer.localClippingEnabled = true;
+    renderer.setClearColor(0x000000, 0); // transparent → page Horizon bg shows
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(46, W() / H(), 0.1, 100);
+    camera.position.set(0, 0.4, 7.4);
+    camera.lookAt(0, 0, 0);
+
+    // ── Lights (neutral so the sage→blue gradient reads true) ──
+    scene.add(new THREE.AmbientLight(0xffffff, 3));
+    scene.add(new THREE.HemisphereLight(0xe6f2cf, 0x0a160a, 3));
+    const key = new THREE.DirectionalLight(0xffffff, 6);   key.position.set(-1, 6, 5); scene.add(key);
+    const fill = new THREE.DirectionalLight(0xbfe27a, 2.6); fill.position.set(4, -1, 4); scene.add(fill);
+    const rim = new THREE.DirectionalLight(0x90a959, 4);   rim.position.set(0, -5, -6); scene.add(rim);
+
+    // ── Weld duplicate vertices → smooth normals (no facet stripes) ──
+    function weld(src) {
+      const pos = src.attributes.position;
+      const map = new Map(), verts = [], index = [], P = 1e4;
+      for (let i = 0; i < pos.count; i++) {
+        const x = pos.getX(i), y = pos.getY(i), z = pos.getZ(i);
+        const k = Math.round(x*P)+','+Math.round(y*P)+','+Math.round(z*P);
+        let id = map.get(k);
+        if (id === undefined) { id = verts.length/3; map.set(k, id); verts.push(x, y, z); }
+        index.push(id);
+      }
+      const g = new THREE.BufferGeometry();
+      g.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+      g.setIndex(index);
+      g.computeVertexNormals();
+      return g;
+    }
+
+    // ── Short spring ribbon with a length-wise gradient ──
+    function makeSpringRibbon({
+      turns = 2.5, length = 3.0, coilR = 1.15,
+      faceW = 0.50, edgeT = 0.065, segments = 320,
+    } = {}) {
+      const hw = faceW/2, ht = edgeT/2;
+      const shape = new THREE.Shape();
+      shape.moveTo(-hw, -ht); shape.lineTo(hw, -ht);
+      shape.lineTo(hw, ht);   shape.lineTo(-hw, ht);
+      shape.closePath();
+
+      const pts = [];
+      for (let i = 0; i <= segments; i++) {
+        const t = i/segments, a = t*turns*Math.PI*2;
+        pts.push(new THREE.Vector3((t-0.5)*length, Math.sin(a)*coilR, Math.cos(a)*coilR));
+      }
+      const curve = new THREE.CatmullRomCurve3(pts, false, 'catmullrom', 0.4);
+      let geo = weld(new THREE.ExtrudeGeometry(shape, {
+        steps: segments, bevelEnabled: false, extrudePath: curve,
+      }));
+
+      // Horizon hues (sage glow → sky-blue glow) mapped along the length.
+      const stops = [0xb6cf96, 0x90a959, 0x5f7d46, 0x1e5596, 0x3d8fd4]
+        .map(h => new THREE.Color(h).convertSRGBToLinear());
+      geo.computeBoundingBox();
+      const minX = geo.boundingBox.min.x, spanX = (geo.boundingBox.max.x - minX) || 1;
+      const p = geo.attributes.position, cols = new Float32Array(p.count*3), tmp = new THREE.Color();
+      for (let i = 0; i < p.count; i++) {
+        const u = (p.getX(i)-minX)/spanX, f = u*(stops.length-1);
+        const k = Math.min(Math.floor(f), stops.length-2);
+        tmp.copy(stops[k]).lerp(stops[k+1], f-k);
+        cols[i*3] = tmp.r; cols[i*3+1] = tmp.g; cols[i*3+2] = tmp.b;
+      }
+      geo.setAttribute('color', new THREE.BufferAttribute(cols, 3));
+
+      const mat = new THREE.MeshStandardMaterial({
+        vertexColors: true, roughness: 0.42, metalness: 0.30, side: THREE.DoubleSide,
+      });
+      return new THREE.Mesh(geo, mat);
+    }
+
+    const clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), -1.7);
+    const ribbon = makeSpringRibbon();
+    ribbon.material.clippingPlanes = [clipPlane];
+    ribbon.rotation.z = 0.04;
+    scene.add(ribbon);
+
+    // ── In-scene text panel (coils sort in front/behind → 3D wrap) ──
+    function drawText(cv) {
+      const w = 1024, h = 512, dpr = 2;
+      cv.width = w*dpr; cv.height = h*dpr;
+      const ctx = cv.getContext('2d');
+      ctx.scale(dpr, dpr); ctx.clearRect(0, 0, w, h);
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      const cx = w/2;
+
+      ctx.font = '700 26px "Outfit", sans-serif';
+      ctx.fillStyle = 'rgba(150,180,120,0.75)'; ctx.letterSpacing = '7px';
+      ctx.fillText('THE PLATFORM', cx + 4, h*0.40); ctx.letterSpacing = '0px';
+
+      ctx.font = '700 72px "Outfit", sans-serif';
+      ctx.textAlign = 'left';
+      const tokens = [
+        { t: 'Data',   c: '#eaf4dd' }, { t: ' + ', c: '#9fd0f0' },
+        { t: 'AI',     c: '#eaf4dd' }, { t: ' + ', c: '#9fd0f0' },
+        { t: 'Agents', c: '#eaf4dd' }, { t: ' + ', c: '#9fd0f0' },
+        { t: 'Search', c: '#eaf4dd' },
+      ];
+      const total = tokens.reduce((s, k) => s + ctx.measureText(k.t).width, 0);
+      let x = cx - total/2; const y = h*0.56;
+      for (const k of tokens) { ctx.fillStyle = k.c; ctx.fillText(k.t, x, y); x += ctx.measureText(k.t).width; }
+      ctx.textAlign = 'center';
+    }
+    const textCanvas = document.createElement('canvas');
+    drawText(textCanvas);
+    const textTex = new THREE.CanvasTexture(textCanvas);
+    textTex.colorSpace = THREE.SRGBColorSpace;
+    textTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    const textMat = new THREE.MeshBasicMaterial({
+      map: textTex, transparent: true, opacity: 0, depthTest: true, depthWrite: false, toneMapped: false,
+    });
+    const textPlane = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 1.7), textMat);
+    textPlane.renderOrder = 2;
+    scene.add(textPlane);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => { drawText(textCanvas); textTex.needsUpdate = true; });
+    }
+
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      const r = pin.getBoundingClientRect();
+      if (r.bottom < -50 || r.top > window.innerHeight + 50) return; // off-screen: skip render
+
+      const p = progress();
+      // Ribbon builds in as the hero text is sliding out (overlapping crossfade).
+      const buildT = Math.min(1, Math.max(0, (p - 0.2) / 0.45));
+      const eased  = buildT * buildT * (3 - 2 * buildT);
+      clipPlane.constant = THREE.MathUtils.lerp(-1.7, 1.7, eased);
+      textMat.opacity = Math.min(1, Math.max(0, (buildT - 0.6) / 0.4));
+
+      const t = clock.getElapsedTime();
+      ribbon.rotation.x = 0.30 + eased * 0.6 + p * 5.0;    // coils revolve as you scroll
+      ribbon.rotation.y = Math.sin(t * 0.12) * 0.12;
+      ribbon.rotation.z = 0.04 + Math.sin(t * 0.17) * 0.05;
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    const ro = new ResizeObserver(() => {
+      camera.aspect = W() / H(); camera.updateProjectionMatrix();
+      renderer.setSize(W(), H(), false);
+    });
+    ro.observe(canvas);
+  }
+})();
+</script>

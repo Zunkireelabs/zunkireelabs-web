@@ -3,8 +3,28 @@
 @tailwind utilities;
 
 /* =====================================================
+   Lenis Smooth Scroll (required base styles)
+   ===================================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* =====================================================
    ZUNKIREE LABS - Revamp Design System
-   Primary: Navy #1b3139 | Accent: Red #eb1600
+   Primary: Navy #1b3139 | Accent: Sage #6f9b34 (Palette B · Horizon)
    Style: Pure Minimal (IBM structure + Databricks colors)
    ===================================================== */
 
@@ -30,10 +50,10 @@
   --border: #e2e8f0;
   --border-muted: #f1f5f9;
 
-  /* Primary (Zunkiree Red) */
-  --primary: #eb1600;
-  --primary-hover: #cc1300;
-  --primary-muted: #fef2f2;
+  /* Primary (Zunkiree Sage — Palette B · Horizon) */
+  --primary: #6f9b34;
+  --primary-hover: #5a8029;
+  --primary-muted: #f4faea;
 
   /* Secondary (Navy) */
   --secondary: #1b3139;
@@ -46,6 +66,289 @@
 
   /* Footer stays dark in both modes */
   --footer-bg: #1b3139;
+
+  /* Blue section accent */
+  --accent-blue: #3d8fd4;
+  --section-blue: #235782;
+}
+
+
+/* =====================================================
+   FULL-PAGE ANIMATED BACKGROUND (Homepage)
+   ===================================================== */
+.page-bg-active {
+  background: transparent !important;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  /* Palette B · Horizon — sage glow (↙) + sky blue glow (↗) on deep navy */
+  background-color: #0a1f2b;
+  background-image:
+    radial-gradient(85% 110% at -4% 108%, rgba(144,169,89,.80) 0%, rgba(95,125,70,.28) 40%, transparent 65%),
+    radial-gradient(75% 100% at 104% -2%, rgba(61,143,212,.80) 0%, rgba(30,85,150,.30) 42%, transparent 65%);
+}
+
+.page-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+#page-blob-1 {
+  width: 900px;
+  height: 800px;
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(ellipse, rgba(61,143,212,0.12) 0%, rgba(30,85,150,0.05) 45%, transparent 70%);
+  filter: blur(90px);
+}
+
+#page-blob-2 {
+  width: 900px;
+  height: 900px;
+  top: 10%;
+  right: -10%;
+  background: radial-gradient(ellipse, rgba(61,143,212,0.10) 0%, transparent 65%);
+  filter: blur(110px);
+}
+
+#page-blob-3 {
+  width: 1100px;
+  height: 800px;
+  bottom: -10%;
+  left: 20%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.14) 0%, transparent 70%);
+  filter: blur(130px);
+}
+
+/* =====================================================
+   SECTION CORNER LIGHTS + BLUE SECTION BG
+   ===================================================== */
+.section-glow {
+  position: relative;
+  overflow: hidden;
+}
+.section-glow > * {
+  position: relative;
+  z-index: 1;
+}
+.section-glow::before,
+.section-glow::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+/* Sage corner light — bottom-left */
+.section-glow-sage::before {
+  width: 55%;
+  height: 70%;
+  bottom: -15%;
+  left: -10%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.28) 0%, transparent 70%);
+}
+
+/* Sage corner light — top-right */
+.section-glow-sage-tr::before {
+  width: 50%;
+  height: 65%;
+  top: -15%;
+  right: -10%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.24) 0%, transparent 70%);
+}
+
+/* Blue section — transparent, color comes from #page-color-overlay (GSAP-driven) */
+.section-blue {
+  background-color: transparent;
+}
+
+/* Fixed full-page color overlay — GSAP scrubs transparent → blue as section enters */
+#page-color-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: transparent;
+  pointer-events: none;
+  will-change: background-color;
+}
+
+/* Subtle sage corner glow on blue sections */
+.section-blue.section-glow::before {
+  width: 50%;
+  height: 65%;
+  bottom: -12%;
+  left: -8%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.16) 0%, transparent 70%);
+}
+/* Blue inner glow on blue sections — top-right */
+.section-blue.section-glow::after {
+  width: 45%;
+  height: 60%;
+  top: -12%;
+  right: -8%;
+  background: radial-gradient(ellipse, rgba(61, 143, 212, 0.20) 0%, transparent 70%);
+}
+
+/* =====================================================
+   HERO CAROUSEL - Dark Crimson Theme
+   ===================================================== */
+.hero-dark {
+  background: transparent;
+  position: relative;
+}
+
+/* Animated glow blobs — positions set here, motion driven by GSAP */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 0;
+}
+
+#hero-blob-1 {
+  width: 700px;
+  height: 700px;
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.20) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+#hero-blob-2 {
+  width: 500px;
+  height: 500px;
+  top: 20%;
+  right: 5%;
+  background: radial-gradient(ellipse, rgba(120, 138, 146, 0.16) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+#hero-blob-3 {
+  width: 900px;
+  height: 600px;
+  bottom: -20%;
+  left: 25%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.12) 0%, transparent 65%);
+  filter: blur(80px);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Homepage: match the clean two-corner-glow mock (P2 Stone). Quiet the
+   drifting GSAP blobs so only the static .page-bg corner glow shows.
+   Scoped to the homepage via the page-bg-active body class. */
+.page-bg-active .page-blob,
+.page-bg-active .hero-blob,
+.page-bg-active .hero-glow {
+  display: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-dot-active {
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-slide {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-slide-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.hero-slide-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-product-card {
+  background: #111827;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+
+.hero-dot-bg {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#hero-dot-pill {
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+}
+
+.hero-headline {
+  color: #ffffff;
+}
+
+/* Transparent navbar over dark hero — CSS vars cascade to all nav children */
+header.over-dark {
+  --foreground: rgba(255, 255, 255, 1);
+  --foreground-muted: rgba(255, 255, 255, 0.75);
+  --foreground-subtle: rgba(255, 255, 255, 0.5);
+  --border: rgba(255, 255, 255, 0.15);
 }
 
 
@@ -346,7 +649,7 @@
 
   .input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(235, 22, 0, 0.1);
+    box-shadow: 0 0 0 2px rgba(111, 155, 52, 0.2);
   }
 
 
@@ -422,23 +725,7 @@
 
   .marquee-fade-light::before,
   .marquee-fade-light::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .marquee-fade-light::before {
-    left: 0;
-    background: linear-gradient(to right, rgb(255 255 255) 0%, transparent 100%);
-  }
-
-  .marquee-fade-light::after {
-    right: 0;
-    background: linear-gradient(to left, rgb(255 255 255) 0%, transparent 100%);
+    display: none;
   }
 
   .animate-marquee-scroll {
@@ -520,6 +807,34 @@
 
 
   /* =====================================================
+     Pointer-follow Glow Button
+     ===================================================== */
+  .hero-btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+  .hero-btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      80px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(144, 169, 89, 0.28) 0%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+  .hero-btn-glow:hover::before {
+    opacity: 1;
+  }
+  .hero-btn-glow:hover {
+    border-color: rgba(144, 169, 89, 0.65);
+  }
+
+  /* =====================================================
      CTA Shimmer Animation
      ===================================================== */
   .cta-shimmer {
@@ -553,6 +868,212 @@
       left: 100%;
     }
   }
+
+  /* =====================================================
+     REDESIGN — Numbered Pillar Cards (S4)
+     ===================================================== */
+  .numbered-pillar-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 338px;
+    min-height: 408px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 1.125rem;
+    background: rgba(0,10,25,0.28);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: border-color 0.4s ease;
+  }
+
+  /* Hero corner glow — fades in on hover */
+  .numbered-pillar-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+      85% 110% at -4% 108%,
+      rgba(144,169,89,0.45) 0%,
+      rgba(95,125,70,0.18) 40%,
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .numbered-pillar-card:hover {
+    border-color: rgba(144,169,89,0.28);
+  }
+  .numbered-pillar-card:hover::after {
+    opacity: 1;
+  }
+
+  /* SVG arc lines */
+  .pillar-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .arc-line {
+    fill: none;
+    stroke: rgba(255,255,255,0.18);
+    stroke-width: 0.75;
+    transition: stroke 0.4s ease;
+  }
+  .numbered-pillar-card:hover .arc-line {
+    stroke: rgba(144,169,89,0.65);
+  }
+  .pillar-glow-dot {
+    fill: rgba(255,255,255,0.95);
+  }
+  .pillar-glow-halo {
+    fill: rgba(255,255,255,0.10);
+  }
+  .numbered-pillar-card:hover .pillar-glow-dot {
+    fill: rgba(176,210,120,0.95);
+  }
+  .numbered-pillar-card:hover .pillar-glow-halo {
+    fill: rgba(144,169,89,0.20);
+  }
+
+  /* Text block — bottom of card */
+  .pillar-text {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+  }
+  .pillar-text h3 {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+  .pillar-text p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.60);
+    line-height: 1.65;
+  }
+
+  /* Old-style cards (Deploy, Scale) — keep number visible */
+  .pillar-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #90a959;
+    opacity: 0.55;
+    margin-bottom: 1rem;
+  }
+
+  /* =====================================================
+     REDESIGN — Service Icon Wrap (S5)
+     ===================================================== */
+  .service-icon-wrap {
+    background: rgba(111,155,52,0.08);
+    border: 1px solid rgba(111,155,52,0.15);
+    border-radius: 12px;
+    padding: 0.75rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* =====================================================
+     REDESIGN — Case Study Stat Strip Cards (S7)
+     ===================================================== */
+  .case-stat-card {
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* =====================================================
+     REDESIGN — Solutions Industry Cards (S8)
+     ===================================================== */
+  .solution-industry-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    min-height: 180px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .solution-industry-card:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .industry-num {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6f9b34;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+  }
+
+  /* =====================================================
+     REDESIGN — Spotlight Bento Cards
+     ===================================================== */
+  .spotlight-glass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: rgba(10, 31, 43, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* =====================================================
+     REDESIGN — Dark CTA Panel (CTA+FAQ)
+     ===================================================== */
+  .cta-dark-panel {
+    position: relative;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+  }
+  .cta-dark-panel::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(111,155,52,0.25) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    border-radius: 50%;
+  }
+}
+
+/* Hero word-split spans */
+.hero-word {
+  display: inline-block;
+  will-change: transform;
 }
 
 /* Utilities */
