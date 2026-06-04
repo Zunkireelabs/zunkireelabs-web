@@ -20,6 +20,21 @@ You handle all animations and interactive motion:
 
 ---
 
+## IMPORTANT: GSAP STATUS
+
+GSAP 3.13.0 and Lenis are **installed** (`package.json`) but **not yet initialized** in the codebase. No `src/assets/js/main.js` or animation files exist yet.
+
+**When adding the first animation to any page:**
+1. Create `src/assets/js/main.js` as the entry point
+2. Create `src/assets/js/animations/` directory with appropriate files
+3. Register `ScrollTrigger` plugin once in `main.js`
+4. Initialize Lenis smooth scroll in `main.js`
+5. Import and call all animation functions inside `DOMContentLoaded`
+
+This setup only needs to happen once — after that, just add to existing files.
+
+---
+
 ## PROJECT ANIMATION STACK
 
 | Library | Purpose | Import |

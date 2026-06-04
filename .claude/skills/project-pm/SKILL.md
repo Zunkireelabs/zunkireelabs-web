@@ -38,6 +38,7 @@ Use these patterns to route with precision:
 | AI visibility, AEO, ChatGPT citation, Perplexity, AI Overviews, extractable content, definition blocks | `/aeo-optimizer` | "optimize for AI", "get cited by ChatGPT" |
 | SEO audit, meta tags, title tag, ranking, keyword placement, content score | `/seo-auditor` | "audit this page", "check SEO score" |
 | write content, copy, FAQ text, product description, comparison article | `/content-writer` | "write the hero copy", "create FAQ content" |
+| redesign content, rewrite section copy, ServiceNow pattern, redesign page copy, compare current copy, rewrite for redesign, update copy for new design | `/redesign-content` | "rewrite the services page copy", "redesign content for homepage sections", "update copy to match new design" |
 | schema, JSON-LD, structured data, FAQPage schema, Organization schema | `/schema-generator` | "add schema markup", "implement FAQ schema" |
 | new skill, skill analysis, skill optimization | `/skill-architect` | "create a new skill", "analyze skill coverage" |
 | SVG, icon, extract from URL, logo extraction, recreate icon, vector | `/svg-extractor` | "extract the logo from", "get icons from", "create an SVG icon" |
@@ -181,7 +182,65 @@ Decomposition:
    └── Output: Final checklist pass
 ```
 
-### Pattern 4: Component/Section Addition
+### Pattern 4: Redesign Content Rewrite
+
+```
+Request: "Rewrite [page] copy for the redesign" / "Update [section] content to match new design"
+
+Decomposition:
+1. [seo-auditor] Quick audit — what's currently ranking on this page
+   └── Output: Protected keywords, geo terms, existing metrics to preserve
+
+2. [redesign-content] Compare current copy + rewrite using ServiceNow patterns
+   └── Input: Page path + seo-auditor protected signals
+   └── Output: Before/after content brief per section
+
+3. [eleventy-dev] Implement the content brief
+   └── Input: redesign-content output brief
+   └── Output: Updated .njk template with new copy
+
+4. [schema-generator] Update FAQ schema if FAQ copy changed
+   └── Output: Updated FAQPage JSON-LD
+
+5. [seo-auditor] Verify rankings signals preserved
+   └── Output: Confirmation protected keywords still in correct positions
+```
+
+### Pattern 4a: Homepage Redesign
+
+```
+Request: "Redesign the homepage" / "Rebuild homepage section"
+
+IMPORTANT: Homepage has hardcoded data that must be migrated FIRST.
+
+Decomposition:
+1. [eleventy-dev] Migrate hardcoded data to _data/ JSON files
+   └── clients.json (logo marquee)
+   └── servicesGrid.json (services 8-card grid)
+   └── caseStudies.json (case study carousel)
+   └── industries.json (solutions by industry)
+   └── Output: Clean template using {% for %} loops
+
+2. [tailwind-ui] Design new section layout
+   └── Input: New design direction
+   └── Output: Component structure, classes
+
+3. [eleventy-dev] Rebuild section with data-driven template
+   └── Input: Design specs + data files
+   └── Output: Updated index.njk using _data/ files
+
+4. [animation-engineer] Add motion
+   └── Input: Completed section
+   └── Output: Scroll reveals, entrance effects
+
+5. [content-writer] Review/update copy if needed
+   └── Output: Optimized headlines, descriptions
+
+6. [seo-auditor] Final audit
+   └── Output: SEO check on updated page
+```
+
+### Pattern 5: Component/Section Addition
 
 ```
 Request: "Add a testimonials section to homepage"
@@ -285,17 +344,27 @@ Before marking ANY task complete:
 
 ## COMMON REQUEST PATTERNS
 
+### "Redesign homepage" / "Rebuild homepage section"
+
+```
+Skills: eleventy-dev (data migration first) → tailwind-ui → eleventy-dev (template) → animation-engineer → content-writer → seo-auditor
+```
+
 ### "Create a [X] page"
 
 ```
 Skills: page-gen → content-writer → tailwind-ui → animation-engineer → schema-generator
 ```
 
-### "Add [X] section to [page]"
+### "Add [X] section to [page]" / "Design [X]" / "Build [X] component"
 
 ```
-Skills: tailwind-ui → eleventy-dev → animation-engineer
+Skills: tailwind-ui → eleventy-dev → animation-engineer (ALWAYS — use GSAP for all reveals/entrance effects)
 ```
+
+> **Rule:** Every new UI section or component MUST go through `animation-engineer` as the final step.
+> `tailwind-ui` adds `data-reveal` attributes; `animation-engineer` wires up GSAP ScrollTrigger.
+> Never ship a section without GSAP animations.
 
 ### "Fix/improve [page]"
 
@@ -364,7 +433,7 @@ Skill: tailwind-ui
 Args: "Refine the pricing page at src/pages/pricing.njk:
 - Ensure pricing cards have proper hover states
 - Add responsive adjustments for the 3-column grid
-- Featured tier (Pro) should have zunkiree-600 accent
+- Featured tier (Pro) should have zunkiree-600 accent (sage green)
 - Cards are currently using border-warm-border, add shadow-card on hover"
 ```
 
