@@ -198,6 +198,14 @@ html.lenis body {
   background: radial-gradient(ellipse, rgba(61, 143, 212, 0.20) 0%, transparent 70%);
 }
 
+/* Footer gradient background */
+.footer-gradient {
+  background-color: #0c1518;
+  background-image:
+    radial-gradient(65% 70% at 10% 0%, rgba(111, 155, 52, 0.12) 0%, transparent 65%),
+    radial-gradient(55% 60% at 90% 0%, rgba(61, 143, 212, 0.07) 0%, transparent 60%);
+}
+
 /* =====================================================
    HERO CAROUSEL - Dark Crimson Theme
    ===================================================== */
@@ -876,103 +884,63 @@ header.over-dark {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    width: 338px;
-    min-height: 408px;
+    width: 100%;
+    min-height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 1.125rem;
-    background: rgba(0,10,25,0.28);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.12);
-    transition: border-color 0.4s ease;
+    align-items: flex-start;
+    border-radius: 2.08vw;
+    background: #1b3d5c;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 2.92vw;
+    padding-left: 2.92vw;
+    padding-right: 2.92vw;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
   }
-
-  /* Hero corner glow — fades in on hover */
-  .numbered-pillar-card::after {
+  /* AVIF arc overlay — CSS background-image respects alpha channel correctly */
+  .numbered-pillar-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    z-index: 0;
-    border-radius: inherit;
+    z-index: 1;
+    background-image: var(--card-bg-img);
+    background-size: contain;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.45;
+    filter: grayscale(1);
+    transition: opacity 0.4s ease, filter 0.4s ease;
     pointer-events: none;
-    background: radial-gradient(
-      85% 110% at -4% 108%,
-      rgba(144,169,89,0.45) 0%,
-      rgba(95,125,70,0.18) 40%,
-      transparent 65%
-    );
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  }
+  .numbered-pillar-card:hover::before {
+    opacity: 1;
+    filter: grayscale(0) brightness(1.1);
   }
   .numbered-pillar-card:hover {
-    border-color: rgba(144,169,89,0.28);
+    border-color: rgba(144,169,89,0.30);
+    box-shadow: 0 0 32px rgba(144,169,89,0.08);
   }
-  .numbered-pillar-card:hover::after {
-    opacity: 1;
-  }
-
-  /* SVG arc lines */
-  .pillar-lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .arc-line {
-    fill: none;
-    stroke: rgba(255,255,255,0.18);
-    stroke-width: 0.75;
-    transition: stroke 0.4s ease;
-  }
-  .numbered-pillar-card:hover .arc-line {
-    stroke: rgba(144,169,89,0.65);
-  }
-  .pillar-glow-dot {
-    fill: rgba(255,255,255,0.95);
-  }
-  .pillar-glow-halo {
-    fill: rgba(255,255,255,0.10);
-  }
-  .numbered-pillar-card:hover .pillar-glow-dot {
-    fill: rgba(176,210,120,0.95);
-  }
-  .numbered-pillar-card:hover .pillar-glow-halo {
-    fill: rgba(144,169,89,0.20);
-  }
+  /* SVG and old classes kept but hidden */
+  .pillar-lines { display: none; }
 
   /* Text block — bottom of card */
   .pillar-text {
     position: relative;
-    z-index: 2;
-    padding: 1.5rem;
+    z-index: 3;
+    padding: 0;
   }
   .pillar-text h3 {
     font-size: 1.625rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #fff;
+    color: #a3c072;
     margin-bottom: 0.75rem;
   }
   .pillar-text p {
     font-size: 0.875rem;
     color: rgba(255,255,255,0.60);
     line-height: 1.65;
-  }
-
-  /* Old-style cards (Deploy, Scale) — keep number visible */
-  .pillar-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1;
-    color: #90a959;
-    opacity: 0.55;
-    margin-bottom: 1rem;
   }
 
   /* =====================================================
@@ -1068,6 +1036,60 @@ header.over-dark {
     pointer-events: none;
     border-radius: 50%;
   }
+
+  /* =====================================================
+     REDESIGN — Standalone CTA Band Section
+     ===================================================== */
+  .cta-band-section {
+    background-color: transparent;
+  }
+  .cta-band-panel {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .cta-band-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.5rem;
+    text-decoration: none;
+    transition: background 180ms ease;
+  }
+  .cta-band-row:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .cta-band-icon {
+    flex-shrink: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(144, 169, 89, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b6cf96;
+  }
+  .cta-band-arrow {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(144, 169, 89, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #90a959;
+    transition: background 180ms ease, border-color 180ms ease;
+  }
+  .cta-band-row:hover .cta-band-arrow {
+    background: rgba(111, 155, 52, 0.18);
+    border-color: rgba(111, 155, 52, 0.75);
+    color: #b6cf96;
+  }
 }
 
 /* Hero word-split spans */
@@ -1108,6 +1130,7 @@ header.over-dark {
    ===================================================== */
 html {
   scroll-padding-top: 60px;
+  overflow-x: hidden;
 }
 
 /* =====================================================

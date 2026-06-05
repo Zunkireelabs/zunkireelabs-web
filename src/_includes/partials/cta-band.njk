@@ -1,0 +1,70 @@
+{# =====================================================
+   CTA BAND SECTION
+   Left: headline + subtext. Right: glass panel with two
+   option rows (icon → title+desc → arrow). Background is
+   transparent — GSAP green glow blends in on scroll.
+   ===================================================== #}
+{# Fixed full-viewport green overlay — GSAP scrubs in when this section enters view #}
+<div id="faq-green-glow" class="pointer-events-none" aria-hidden="true" style="position: fixed; inset: 0; z-index: -1; background: rgba(35, 80, 20, 1); opacity: 0;"></div>
+
+<section id="cta-band-section" class="cta-band-section relative py-16 md:py-24">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-center">
+
+      {# Left — headline + subtext #}
+      <div>
+        <h2 class="text-4xl md:text-5xl font-normal leading-tight mb-5">
+          <span class="text-zunkiree-300">Let's put your</span><br>
+          <span class="text-white font-semibold">data to work</span>
+        </h2>
+        <p class="text-white/65 text-base md:text-lg leading-relaxed max-w-sm">
+          Zunkiree Labs builds AI search, data integration, and automation for teams that need results — not just demos.
+        </p>
+      </div>
+
+      {# Right — glass panel with 2 option rows #}
+      <div class="cta-band-panel">
+
+        {# Row 1 — Contact #}
+        <a href="/contact/" class="cta-band-row group">
+          <div class="cta-band-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 18v-6a9 9 0 0118 0v6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-base font-semibold text-white mb-1">Talk to a Zunkiree engineer</p>
+            <p class="text-sm text-white/60 leading-snug">Tell us what you're building. We'll walk you through how Zunkiree fits — and give you an honest answer.</p>
+          </div>
+          <div class="cta-band-arrow" aria-hidden="true">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
+        <div class="mx-5 border-t border-white/10" aria-hidden="true"></div>
+
+        {# Row 2 — Demo #}
+        <a href="/products/search/" class="cta-band-row group">
+          <div class="cta-band-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-base font-semibold text-white mb-1">Explore the platform</p>
+            <p class="text-sm text-white/60 leading-snug">Get hands-on with Zunkiree's AI-native search running on real enterprise data. No slides. Just the product.</p>
+          </div>
+          <div class="cta-band-arrow" aria-hidden="true">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>

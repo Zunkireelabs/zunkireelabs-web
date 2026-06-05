@@ -1,7 +1,8 @@
 {# =====================================================
    CTA + FAQ SECTION (Reusable Component)
    ===================================================== #}
-<section class="py-16 md:py-24">
+<section id="faq-cta-section" class="py-16 md:py-24 relative">
+  {# faq-green-glow moved to cta-band.njk so it persists when FAQ is hidden #}
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
 
@@ -47,7 +48,7 @@
               @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
               class="w-full flex items-center justify-between text-left group"
             >
-              <span class="text-lg font-medium text-white group-hover:text-zunkiree-400 transition-colors pr-4">
+              <span class="text-lg font-medium text-white group-hover:text-zunkiree-200 transition-colors pr-4">
                 {{ item.question }}
               </span>
               <span class="flex-shrink-0 text-white/40">
@@ -72,7 +73,7 @@
               x-transition:leave-end="opacity-0 -translate-y-2"
               class="overflow-hidden"
             >
-              <p class="pt-4 text-white/60 leading-relaxed">
+              <p class="pt-4 text-white/80 leading-relaxed">
                 {{ item.answer }}
               </p>
             </div>

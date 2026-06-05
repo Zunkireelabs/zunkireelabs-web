@@ -13,6 +13,10 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
+// Import Lottie + Search icon animation data
+import lottie from 'lottie-web';
+import searchSparkleData from '../icons/search-sparkle.json';
+
 // Import Lenis smooth scroll
 import Lenis from 'lenis';
 
@@ -246,34 +250,15 @@ function initHeroCarousel() {
   const slides = document.querySelectorAll('[data-slide]');
   if (!slides.length) return;
 
-  // Split all hero headlines into word spans before any animation
   document.querySelectorAll('.hero-headline').forEach(splitHeadlineWords);
 
-  // Force all slides hidden immediately — overrides any inline/CSS opacity
+  const TOTAL = 3;
+  let current = 0;
+
+  // Hide everything first
   gsap.set(slides, { autoAlpha: 0, pointerEvents: 'none' });
   gsap.set(document.querySelectorAll('[data-slide] .hero-word'), { y: 24, autoAlpha: 0 });
   gsap.set(document.querySelectorAll('[data-slide] .inline-block'), { autoAlpha: 0 });
-
-  // Entrance animation for slide 0 — eyebrow then staggered words + mockup scale
-  const slide0Container = document.querySelectorAll('[data-slide="0"]');
-  gsap.set(slide0Container, { autoAlpha: 1, pointerEvents: 'auto' });
-  const eyebrow0 = document.querySelector('[data-slide="0"] .inline-block');
-  const words0   = document.querySelectorAll('[data-slide="0"] .hero-word');
-  const mockup0  = document.querySelector('.hero-mockup-slide[data-slide="0"]');
-  gsap.to(eyebrow0, { autoAlpha: 1, duration: 0.4, ease: 'power2.out' });
-  gsap.to(words0, {
-    y: 0, autoAlpha: 1,
-    duration: 0.6,
-    ease: 'power3.out',
-    stagger: 0.04,
-    delay: 0.1
-  });
-  if (mockup0) {
-    gsap.fromTo(mockup0,
-      { autoAlpha: 0, scale: 0.95 },
-      { autoAlpha: 1, scale: 1, duration: 0.7, ease: 'power2.out', delay: 0.2 }
-    );
-  }
 
   // ── Sliding pill ───────────────────────────────────────────────
   function slidePillTo(index) {
@@ -282,71 +267,87 @@ function initHeroCarousel() {
     const pill      = document.querySelector('#hero-dot-pill');
     if (!container || !dot || !pill) return;
     const x = dot.getBoundingClientRect().left - container.getBoundingClientRect().left;
-    gsap.to(pill, { x, duration: 0.7, ease: 'power3.inOut' });
+    gsap.to(pill, { x, duration: 0.5, ease: 'power3.inOut' });
   }
 
-  setTimeout(() => slidePillTo(0), 60);
+  // ── Core transition ────────────────────────────────────────────
+  function transitionTo(next, prev) {
+    // Separate content divs from mockup divs — avoids autoAlpha flash
+    const outContent = document.querySelectorAll(`[data-slide="${prev}"]:not(.hero-mockup-slide)`);
+    const inContent  = document.querySelectorAll(`[data-slide="${next}"]:not(.hero-mockup-slide)`);
+    const outMockup  = document.querySelector(`.hero-mockup-slide[data-slide="${prev}"]`);
+    const inMockup   = document.querySelector(`.hero-mockup-slide[data-slide="${next}"]`);
 
-  // Listen for slide change events dispatched from Alpine
-  document.addEventListener('hero:slide', (e) => {
-    const { prev, next } = e.detail;
+    // Kill in-flight tweens
+    outContent.forEach(el => gsap.killTweensOf(el));
+    inContent.forEach(el => gsap.killTweensOf(el));
+    if (outMockup) gsap.killTweensOf(outMockup);
+    if (inMockup)  gsap.killTweensOf(inMockup);
 
-    slidePillTo(next);
-
-    const allSlides = document.querySelectorAll('[data-slide]');
-    const outEls    = document.querySelectorAll(`[data-slide="${prev}"]`);
-    const inEls     = document.querySelectorAll(`[data-slide="${next}"]`);
-
-    // Kill ALL slide tweens — prevents abandoned slides from staying partially visible
-    gsap.killTweensOf(allSlides);
-
-    // Force-hide any slide that is neither outgoing nor incoming (orphan guard)
-    allSlides.forEach(el => {
-      const idx = el.getAttribute('data-slide');
-      if (idx !== String(prev) && idx !== String(next)) {
-        gsap.set(el, { autoAlpha: 0, y: 20, pointerEvents: 'none' });
-      }
+    // Hide any third slide that isn't involved
+    slides.forEach(el => {
+      const idx = Number(el.getAttribute('data-slide'));
+      if (idx !== prev && idx !== next) gsap.set(el, { autoAlpha: 0, pointerEvents: 'none' });
     });
 
-    // Prep in-slide: hidden, words reset to below
-    gsap.set(inEls, { autoAlpha: 0, pointerEvents: 'none' });
+    // Prep incoming
+    gsap.set(inContent, { autoAlpha: 0, pointerEvents: 'none' });
     gsap.set(document.querySelectorAll(`[data-slide="${next}"] .hero-word`), { y: 20, autoAlpha: 0 });
     gsap.set(document.querySelectorAll(`[data-slide="${next}"] .inline-block`), { autoAlpha: 0 });
 
-    // EXIT — eyebrow fades, words stagger upward, mockup scales down
+    // EXIT — eyebrow + words out, mockup scales down
     const outEyebrow = document.querySelector(`[data-slide="${prev}"] .inline-block`);
     const outWords   = document.querySelectorAll(`[data-slide="${prev}"] .hero-word`);
-    const outMockup  = document.querySelector(`.hero-mockup-slide[data-slide="${prev}"]`);
     gsap.to(outEyebrow, { autoAlpha: 0, duration: 0.2, ease: 'power2.in' });
-    if (outMockup) gsap.to(outMockup, { autoAlpha: 0, scale: 0.95, duration: 0.3, ease: 'power2.in' });
-    gsap.to(outWords, {
-      y: -16, autoAlpha: 0,
-      duration: 0.25,
-      ease: 'power2.in',
-      stagger: 0.025,
-      onComplete: () => {
-        gsap.set(outEls, { autoAlpha: 0, pointerEvents: 'none' });
+    if (outMockup) gsap.to(outMockup, { autoAlpha: 0, scale: 0.96, duration: 0.3, ease: 'power2.in' });
 
-        // ENTER — text slides in, mockup scales up
-        gsap.set(inEls, { autoAlpha: 1, pointerEvents: 'auto' });
+    const exitTarget = outWords.length ? outWords : outContent;
+    gsap.to(exitTarget, {
+      y: -14, autoAlpha: 0, duration: 0.25, ease: 'power2.in', stagger: 0.02,
+      onComplete: () => {
+        gsap.set(outContent, { autoAlpha: 0, pointerEvents: 'none' });
+
+        // ENTER — show container, animate children
+        gsap.set(inContent, { autoAlpha: 1, pointerEvents: 'auto' });
         const inEyebrow = document.querySelector(`[data-slide="${next}"] .inline-block`);
         const inWords   = document.querySelectorAll(`[data-slide="${next}"] .hero-word`);
-        const inMockup  = document.querySelector(`.hero-mockup-slide[data-slide="${next}"]`);
         gsap.to(inEyebrow, { autoAlpha: 1, duration: 0.3, ease: 'power2.out' });
-        gsap.to(inWords, {
-          y: 0, autoAlpha: 1,
-          duration: 0.5,
-          ease: 'power3.out',
-          stagger: 0.035,
-          onComplete: () => gsap.set(inEls, { pointerEvents: 'auto' })
-        });
-        if (inMockup) {
-          gsap.fromTo(inMockup,
-            { autoAlpha: 0, scale: 0.95 },
-            { autoAlpha: 1, scale: 1, duration: 0.6, ease: 'power2.out' }
-          );
-        }
+        if (inWords.length) gsap.to(inWords, { y: 0, autoAlpha: 1, duration: 0.5, ease: 'power3.out', stagger: 0.03 });
+        // Mockup separate — not part of inContent batch
+        if (inMockup) gsap.fromTo(inMockup, { autoAlpha: 0, scale: 0.96 }, { autoAlpha: 1, scale: 1, duration: 0.55, ease: 'power2.out' });
       }
+    });
+  }
+
+  // ── goTo — deduped entry point ─────────────────────────────────
+  function goTo(next) {
+    if (next === current) return;
+    const prev = current;
+    current = next;
+    slidePillTo(next);
+    transitionTo(next, prev);
+  }
+
+  // ── Entrance for slide 0 ───────────────────────────────────────
+  const slide0Content = document.querySelectorAll('[data-slide="0"]:not(.hero-mockup-slide)');
+  const mockup0       = document.querySelector('.hero-mockup-slide[data-slide="0"]');
+  gsap.set(slide0Content, { autoAlpha: 1, pointerEvents: 'auto' });
+  gsap.to(document.querySelector('[data-slide="0"] .inline-block'), { autoAlpha: 1, duration: 0.4, ease: 'power2.out' });
+  gsap.to(document.querySelectorAll('[data-slide="0"] .hero-word'), { y: 0, autoAlpha: 1, duration: 0.6, ease: 'power3.out', stagger: 0.04, delay: 0.1 });
+  if (mockup0) gsap.fromTo(mockup0, { autoAlpha: 0, scale: 0.95 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: 'power2.out', delay: 0.2 });
+  setTimeout(() => slidePillTo(0), 60);
+
+  // ── Wire dots directly — no Alpine dispatch needed ─────────────
+  document.querySelectorAll('[data-dot-pos]').forEach(btn => {
+    btn.addEventListener('click', () => goTo(Number(btn.dataset.dotPos)));
+  });
+
+  // ── Auto-advance every 5s, reset on manual click ───────────────
+  let timer = setInterval(() => goTo((current + 1) % TOTAL), 5000);
+  document.querySelectorAll('[data-dot-pos]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearInterval(timer);
+      timer = setInterval(() => goTo((current + 1) % TOTAL), 5000);
     });
   });
 }
@@ -369,59 +370,6 @@ function initScrollReveals() {
   });
 }
 
-// ─── Scroll-Controlled Hero Carousel (ScrollTrigger Pin) ─────────
-function initHeroScrollCarousel() {
-  const hero = document.querySelector('.hero-dark');
-  if (!hero) return;
-
-  let lastTarget = 0;
-
-  function goToSlide(index) {
-    const btn = document.querySelector(`[data-dot-pos="${index}"]`);
-    if (btn) btn.click();
-  }
-
-  // start: 'top -80' — pin fires after hero has scrolled 80px up,
-  // so the full dashboard mockup is visible before the viewport locks
-  ScrollTrigger.create({
-    trigger: hero,
-    start: 'top -80',
-    end: () => '+=' + window.innerHeight * 1.5,
-    pin: true,
-    pinSpacing: true,
-    onLeave: () => {
-      const metricsEl = hero.parentElement?.nextElementSibling;
-      gsap.to(hero, { opacity: 0, duration: 0.5, ease: 'power2.in' });
-      startBlobAmbient();
-      // Scroll metrics section into view while hero is fading — fills the empty spacer gap
-      gsap.delayedCall(0.2, () => {
-        if (metricsEl) scrollTo(metricsEl);
-      });
-    },
-    onEnterBack: () => {
-      stopBlobAmbient();
-      gsap.killTweensOf(hero);
-      // Reset pb1 to its start transform while hero is still opacity:0
-      const pb1 = document.querySelector('#page-blob-1');
-      if (pb1) gsap.set(pb1, { x: 0, y: 0, scaleX: 1, scaleY: 1 });
-      // Jump to pin-start (no smooth) — user sees nothing, no empty spacer flash
-      scrollTo(80, true);
-      // Rebuild the scroll-driven drift so it owns pb1 again
-      initPageBackground();
-      // Fade hero back in at the clean position
-      gsap.to(hero, { opacity: 1, duration: 0.5, ease: 'power1.out' });
-    },
-    onUpdate: (self) => {
-      let target = 0;
-      if (self.progress >= 0.67) target = 2;
-      else if (self.progress >= 0.34) target = 1;
-      if (target !== lastTarget) {
-        lastTarget = target;
-        goToSlide(target);
-      }
-    }
-  });
-}
 
 
 // ─── Blue Section Scroll-Driven Page Color Shift ──────────────────
@@ -453,16 +401,72 @@ function initBlueColorShift() {
     { opacity: 1, ease: 'none', duration: 0.3 }, '<');
 }
 
+// ─── FAQ Section — Full Green Background Shift (mirrors blue section) ─
+function initFaqGreenGlow() {
+  const ctaBand = document.getElementById('cta-band-section');
+  const faqSec  = document.getElementById('faq-cta-section');
+  const glow    = document.getElementById('faq-green-glow');
+  const trigEl  = ctaBand || faqSec;
+  if (!trigEl || !glow) return;
+
+  const blobs = gsap.utils.toArray('#page-blob-1, #page-blob-2, #page-blob-3');
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: trigEl,
+      endTrigger: faqSec || trigEl,
+      start: 'top 90%',
+      end: 'bottom 10%',
+      scrub: 2,
+    }
+  })
+  .fromTo(glow,  { opacity: 0 }, { opacity: 1, ease: 'none', duration: 0.3 }, 0)
+  .fromTo(blobs, { opacity: 1 }, { opacity: 0, ease: 'none', duration: 0.3 }, 0)
+  .to({}, { duration: 0.4 })
+  .to(glow,  { opacity: 0, ease: 'none', duration: 0.3 })
+  .to(blobs, { opacity: 1, ease: 'none', duration: 0.3 }, '<');
+}
+
+// ─── Zunkiree Search — Lottie Sparkle Icon ───────────────────────
+function initSearchIcon() {
+  const container = document.querySelector('#search-lottie');
+  if (!container) return;
+
+  // Deep-clone the animation data so we can recolor without mutating the import
+  const data = JSON.parse(JSON.stringify(searchSparkleData));
+
+  // Recolor the background circle gradient (layer index 4, shape index 1 = gradient fill)
+  // Lottie gradient format: [pos, r, g, b, pos, r, g, b, ..., pos, a, pos, a, ...]
+  // Replace teal-purple stops → brand green palette (#c8dfa0, #90a959, #6f9b34)
+  const greenStops0 = [0, 0.784, 0.875, 0.627, 0.55, 0.565, 0.663, 0.349, 1, 0.435, 0.608, 0.204, 0, 1, 0.55, 1, 1, 1];
+  const greenStops1 = [0, 0.435, 0.608, 0.204, 0.55, 0.565, 0.663, 0.349, 1, 0.784, 0.875, 0.627, 0, 1, 0.55, 1, 1, 1];
+  try {
+    const gradFill = data.layers[4].shapes[1].g.k;
+    gradFill.k[0].s = greenStops0;
+    gradFill.k[1].s = greenStops1;
+    gradFill.k[2].s = greenStops0;
+  } catch (_) { /* layer structure mismatch — use original colors */ }
+
+  lottie.loadAnimation({
+    container,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: data,
+  });
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────
 function boot() {
   Alpine.start();
   initSmoothScroll();       // smooth scroll first — ScrollTrigger syncs to Lenis
-  initHeroScrollCarousel(); // pin must be first — creates spacer before other ScrollTriggers measure positions
   initPageBackground();
   initHeroBackground();
   initHeroCarousel();
   initScrollReveals();
   initBlueColorShift();
+  initFaqGreenGlow();
+  initSearchIcon();
 }
 
 if (document.readyState === 'loading') {
