@@ -24,15 +24,7 @@ npm-debug.log*
 
 # Temp files
 temp_ss/
-src/temp-ss/
 .vercel
-
-# Local 3D ribbon preview (standalone, not part of the site build)
-/preview-3d.html
-
-# Local ServiceNow content reference docs
-docs/servicenow-content-reference.md
-docs/servicenow-content-inner-pages.md
 
 # Claude Code local settings
 .mcp.json

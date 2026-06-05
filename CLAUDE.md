@@ -45,7 +45,6 @@ When the user gives ANY development request, **automatically invoke `/project-pm
 | `/aeo-optimizer` | **AI Search** | AI visibility, ChatGPT/Perplexity citations, AEO/GEO |
 | `/seo-auditor` | **SEO Audit** | Page audits, meta tags, content structure scoring |
 | `/content-writer` | **Content** | SEO/AEO-optimized copy, FAQs, comparison articles |
-| `/redesign-content` | **Redesign Copy** | Rewrite existing page copy using ServiceNow patterns while protecting SEO rankings |
 | `/schema-generator` | **Structured Data** | JSON-LD schema markup for AI visibility |
 
 ### Utility Skills

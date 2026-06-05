@@ -142,21 +142,6 @@ Pages use clearly marked sections:
 
 ---
 
-## HOMEPAGE DATA RULE
-
-The homepage (`src/pages/index.njk`) currently has hardcoded data in the template. When redesigning or editing the homepage, **always migrate hardcoded data to `_data/` JSON files** first:
-
-| Section | Status | Target file |
-|---|---|---|
-| Client logos marquee | Hardcoded in template | `src/_data/clients.json` |
-| Services grid (8 cards) | Hardcoded in template | `src/_data/servicesGrid.json` |
-| Case study carousel | Hardcoded in `<script>` tag | `src/_data/caseStudies.json` |
-| Solutions by industry | Hardcoded in template | `src/_data/industries.json` |
-
-**Pattern:** Extract the data → create the JSON file → replace hardcoded HTML with a `{% for item in data %}` loop.
-
----
-
 ## CONSTRAINTS
 
 1. **Always use base.njk layout** unless creating a special page
@@ -165,7 +150,6 @@ The homepage (`src/pages/index.njk`) currently has hardcoded data in the templat
 4. **Add data-reveal attributes** for animated elements
 5. **Follow kebab-case** for file names
 6. **Max content width is 1200px** centered with mx-auto
-7. **Never hardcode repeatable content** — use `_data/` JSON files and Nunjucks loops
 
 ---
 

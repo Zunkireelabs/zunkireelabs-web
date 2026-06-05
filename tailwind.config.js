@@ -21,20 +21,25 @@ export default {
           900: '#1b3139', // Main navy
           950: '#141f24',
         },
-        // Brand Sage — P2 · Stone palette
+        // Accent Red (Databricks-inspired)
         'zunkiree': {
-          DEFAULT: '#6f9b34',
-          50:  '#f4faea',
-          100: '#e8f4d5',
-          200: '#d2e9ac',
-          300: '#b6cf96', // Accent text on dark backgrounds
-          400: '#a3c072',
-          500: '#90a959', // Logo / decorative sage
-          600: '#6f9b34', // Primary CTA, links, text accents
-          700: '#5a8029', // Hover state
-          800: '#476420',
-          900: '#374d18',
-          950: '#243310',
+          DEFAULT: '#eb1600',
+          50: '#fff1f0',
+          100: '#ffe1df',
+          200: '#ffc9c5',
+          300: '#ffa299',
+          400: '#ff6b5c',
+          500: '#ff3d2a',
+          600: '#eb1600', // Main brand color
+          700: '#bd2b26', // Hover state
+          800: '#a01410',
+          900: '#841815',
+          950: '#480806',
+        },
+        'red': {
+          light: '#ff3621',
+          DEFAULT: '#eb1600',
+          hover: '#bd2b26',
         },
         // Neutral Grays - Full Scale
         'warm': {
@@ -62,21 +67,6 @@ export default {
           'gray': '#e4ecf1',
           'border': '#d1dce3',
         },
-        // Blue accent — second section color (ServiceNow-style section bg)
-        'sky': {
-          DEFAULT: '#3d8fd4',
-          50:  '#eff7ff',
-          100: '#dbeffe',
-          200: '#bfe1fc',
-          300: '#93ccfa',
-          400: '#60aef5',
-          500: '#3d8fd4',
-          600: '#2673b8',
-          700: '#1d5c94',
-          800: '#1c4e7a',
-          900: '#0d2d4a',
-          950: '#081a2e',
-        },
         // Semantic colors
         'success': {
           DEFAULT: '#10b981',
@@ -101,9 +91,9 @@ export default {
         },
       },
       fontFamily: {
-        'sans': ['Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        'display': ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
-        'mono': ['Fira Code', 'Consolas', 'monospace'],
+        'sans': ['DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'display': ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        'mono': ['DM Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
       fontSize: {
         // Typography Scale (Desktop)
