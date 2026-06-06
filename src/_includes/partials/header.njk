@@ -46,12 +46,9 @@
   ></div>
 
   <header
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-    :class="[
-      (headerHidden && !activeDropdown) ? '-translate-y-full' : 'translate-y-0',
-      (!scrolled && hasDarkHero && activeDropdown === null) ? 'over-dark' : ''
-    ]"
-    :style="(scrolled || activeDropdown !== null) ? 'background: rgba(255,255,255,0.96); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 16px rgba(0,0,0,0.06);' : 'background: transparent; border-bottom: 1px solid hsla(0,0%,100%,.08); box-shadow: none;'"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 over-dark"
+    :class="(headerHidden && !activeDropdown) ? '-translate-y-full' : 'translate-y-0'"
+    :style="(scrolled || activeDropdown !== null) ? 'background: #0A1F2B; border-bottom: 1px solid rgba(255,255,255,0.10); box-shadow: 0 4px 24px rgba(0,0,0,0.22);' : 'background: #0A1F2B; border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: none;'"
   >
     <div class="flex items-center justify-between py-3 px-6">
       <!-- Left: Logo + Nav -->
@@ -101,7 +98,7 @@
             <a
               href="/ai-agents/"
               class="cta-shimmer block px-3.5 py-1 text-[13px] font-normal uppercase tracking-wider rounded-md text-white transition-all duration-200"
-              style="background-color: #6f9b34;"
+              style="background-color: #76b900;"
             >
               AI Agents + Orchestration
             </a>
@@ -194,7 +191,7 @@
         <a
           href="/contact/"
           class="nav-contact-cta hero-btn-glow flex items-center gap-2 px-4 py-2 rounded-full text-[14px] font-medium text-white transition-all hover:opacity-90"
-          style="background-color: #6f9b34;"
+          style="background-color: #76b900;"
         >
           <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           Contact us
@@ -352,8 +349,8 @@
 
   <!-- Mobile Menu (outside header for proper z-index stacking) -->
   <div
-    class="lg:hidden fixed inset-0 top-[63px] z-[60] overflow-y-auto"
-    style="background-color: #ffffff;"
+    class="lg:hidden fixed inset-0 top-[63px] z-[60] overflow-y-auto over-dark"
+    style="background-color: #0A1F2B;"
     x-show="mobileMenuOpen"
     x-transition:enter="transition ease-out duration-200"
     x-transition:enter-start="opacity-0"

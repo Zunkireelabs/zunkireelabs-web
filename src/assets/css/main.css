@@ -325,38 +325,81 @@ html.lenis body {
 }
 
 
-.hero-dot-bg {
+/* Carousel indicators — dot expands into a pill with a progress fill */
+.hero-dot {
+  position: relative;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: 9999px;
   background: rgba(255, 255, 255, 0.3);
   border: none;
   padding: 0;
   cursor: pointer;
   flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1), background-color 0.3s ease;
 }
 
-#hero-dot-pill {
+.hero-dot.is-active {
+  width: 32px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hero-dot-fill {
   position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.92);
+  transform: scaleX(0);
+  transform-origin: left center;
   pointer-events: none;
-  width: 24px;
-  height: 8px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.9);
-  top: 0;
-  left: 0;
+}
+
+/* Pause / play toggle */
+.hero-pause-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hero-pause-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-pause-btn .hero-icon-play {
+  display: none;
+}
+
+.hero-pause-btn.is-paused .hero-icon-pause {
+  display: none;
+}
+
+.hero-pause-btn.is-paused .hero-icon-play {
+  display: inline;
 }
 
 .hero-headline {
   color: #ffffff;
 }
 
-/* Transparent navbar over dark hero — CSS vars cascade to all nav children */
-header.over-dark {
+/* Dark navy navbar + dropdowns + mobile menu — CSS vars cascade to children */
+.over-dark {
   --foreground: rgba(255, 255, 255, 1);
   --foreground-muted: rgba(255, 255, 255, 0.75);
   --foreground-subtle: rgba(255, 255, 255, 0.5);
-  --border: rgba(255, 255, 255, 0.15);
+  --border: rgba(255, 255, 255, 0.12);
+  --card: #13303E;                          /* dropdown panel — elevated navy */
+  --background: #0F2734;                    /* featured / inner cards */
+  --background-alt: rgba(255, 255, 255, 0.07);  /* hover surfaces */
+  --background-muted: rgba(255, 255, 255, 0.05);
 }
 
 

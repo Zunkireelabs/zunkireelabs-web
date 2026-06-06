@@ -260,14 +260,35 @@ function initHeroCarousel() {
   gsap.set(document.querySelectorAll('[data-slide] .hero-word'), { y: 24, autoAlpha: 0 });
   gsap.set(document.querySelectorAll('[data-slide] .inline-block'), { autoAlpha: 0 });
 
-  // ── Sliding pill ───────────────────────────────────────────────
-  function slidePillTo(index) {
-    const container = document.querySelector('#hero-dots-container');
-    const dot       = document.querySelector(`[data-dot-pos="${index}"]`);
-    const pill      = document.querySelector('#hero-dot-pill');
-    if (!container || !dot || !pill) return;
-    const x = dot.getBoundingClientRect().left - container.getBoundingClientRect().left;
-    gsap.to(pill, { x, duration: 0.5, ease: 'power3.inOut' });
+  // ── Indicators: active pill + progress fill ────────────────────
+  const DURATION = 7; // seconds per slide
+  let paused = false;
+  let progressTween = null;
+  const dots = Array.from(document.querySelectorAll('[data-dot-pos]'));
+  const pauseBtn = document.querySelector('#hero-pause');
+
+  function setActiveDot(index) {
+    dots.forEach((d, i) => {
+      d.classList.toggle('is-active', i === index);
+      const fill = d.querySelector('.hero-dot-fill');
+      if (fill && i !== index) gsap.set(fill, { scaleX: 0 });
+    });
+  }
+
+  // Fill the active pill over DURATION; advance on complete. The tween
+  // IS the autoplay clock, so visual progress and advance stay in sync.
+  function startProgress() {
+    if (progressTween) progressTween.kill();
+    const fill = dots[current] && dots[current].querySelector('.hero-dot-fill');
+    if (!fill) return;
+    gsap.set(fill, { scaleX: 0 });
+    progressTween = gsap.to(fill, {
+      scaleX: 1,
+      duration: DURATION,
+      ease: 'none',
+      onComplete: () => goTo((current + 1) % TOTAL),
+    });
+    if (paused) progressTween.pause();
   }
 
   // ── Core transition ────────────────────────────────────────────
@@ -324,7 +345,8 @@ function initHeroCarousel() {
     if (next === current) return;
     const prev = current;
     current = next;
-    slidePillTo(next);
+    setActiveDot(next);
+    startProgress();
     transitionTo(next, prev);
   }
 
@@ -335,21 +357,24 @@ function initHeroCarousel() {
   gsap.to(document.querySelector('[data-slide="0"] .inline-block'), { autoAlpha: 1, duration: 0.4, ease: 'power2.out' });
   gsap.to(document.querySelectorAll('[data-slide="0"] .hero-word'), { y: 0, autoAlpha: 1, duration: 0.6, ease: 'power3.out', stagger: 0.04, delay: 0.1 });
   if (mockup0) gsap.fromTo(mockup0, { autoAlpha: 0, scale: 0.95 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: 'power2.out', delay: 0.2 });
-  setTimeout(() => slidePillTo(0), 60);
+  setActiveDot(0);
+  startProgress();
 
-  // ── Wire dots directly — no Alpine dispatch needed ─────────────
-  document.querySelectorAll('[data-dot-pos]').forEach(btn => {
+  // ── Wire dots — click to jump; goTo restarts the progress clock ─
+  dots.forEach(btn => {
     btn.addEventListener('click', () => goTo(Number(btn.dataset.dotPos)));
   });
 
-  // ── Auto-advance every 5s, reset on manual click ───────────────
-  let timer = setInterval(() => goTo((current + 1) % TOTAL), 5000);
-  document.querySelectorAll('[data-dot-pos]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      clearInterval(timer);
-      timer = setInterval(() => goTo((current + 1) % TOTAL), 5000);
+  // ── Pause / play toggle (button only) ──────────────────────────
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      paused = !paused;
+      pauseBtn.classList.toggle('is-paused', paused);
+      pauseBtn.setAttribute('aria-pressed', String(paused));
+      pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+      if (progressTween) paused ? progressTween.pause() : progressTween.resume();
     });
-  });
+  }
 }
 
 // ─── Scroll Reveal Animations ─────────────────────────────────────

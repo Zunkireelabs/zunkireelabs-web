@@ -101,9 +101,9 @@ export default {
         },
       },
       fontFamily: {
-        'sans': ['Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        'display': ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
-        'mono': ['Fira Code', 'Consolas', 'monospace'],
+        'sans': ['DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'display': ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        'mono': ['DM Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
       fontSize: {
         // Typography Scale (Desktop)

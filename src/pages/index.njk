@@ -45,93 +45,102 @@ bodyClass: "page-bg-active"
     <div class="grid grid-cols-1 lg:grid-cols-[3fr_1.7fr] gap-6 lg:gap-6 items-start">
 
       {# Left column — eyebrow, headline, dots #}
-      <div class="flex flex-col justify-start max-w-xl">
+      <div class="flex flex-col justify-start max-w-2xl">
 
         {# Slide stack — absolute positioning, GSAP controls opacity/transform #}
         <div class="relative min-h-[240px] md:min-h-[220px] lg:min-h-[210px]">
 
           {# Slide 1 — left content #}
           <div data-slide="0" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6 px-3 py-1 rounded-full border border-white/20">AI-Native Infrastructure</span>
-            <h1 class="hero-headline text-4xl md:text-5xl lg:text-5xl font-normal leading-[1.08] tracking-tight">
-              Most AI is a wrapper.<br><span style="color: #b6cf96;">We build the infrastructure.</span>
+            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">AI-Native Infrastructure</span>
+            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-normal md:font-medium leading-[1.08] tracking-[-0.02em]">
+              Most AI is a wrapper.<br><span style="color: #76b900;">We build the infrastructure.</span>
             </h1>
           </div>
 
           {# Slide 2 — left content #}
           <div data-slide="1" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6 px-3 py-1 rounded-full border border-white/20">Agentic AI · Now Available</span>
-            <h1 class="hero-headline text-4xl md:text-5xl lg:text-5xl font-normal leading-[1.08] tracking-tight">
-              AI agents that work.<br><span style="color: #b6cf96;">Not just respond.</span>
+            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">Agentic AI · Now Available</span>
+            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-normal md:font-medium leading-[1.08] tracking-[-0.02em]">
+              AI agents that work.<br><span style="color: #76b900;">Not just respond.</span>
             </h1>
           </div>
 
           {# Slide 3 — left content #}
           <div data-slide="2" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6 px-3 py-1 rounded-full border border-white/20">Built for Search · Powered by AI</span>
-            <h1 class="hero-headline text-4xl md:text-5xl lg:text-5xl font-normal leading-[1.08] tracking-tight">
-              Search that understands your business.<br><span style="color: #b6cf96;">Not just keywords.</span>
+            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">Built for Search · Powered by AI</span>
+            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-normal md:font-medium leading-[1.08] tracking-[-0.02em]">
+              Search by meaning.<br><span style="color: #76b900;">Not just keywords.</span>
             </h1>
           </div>
 
         </div>
 
-        {# Carousel nav — dim circles + sliding pill #}
-        <div class="relative flex items-center gap-2 mt-6" id="hero-dots-container" style="height:8px;">
-          <button @click="goTo(0)" data-dot-pos="0" aria-label="Slide 1" class="hero-dot-bg"></button>
-          <button @click="goTo(1)" data-dot-pos="1" aria-label="Slide 2" class="hero-dot-bg"></button>
-          <button @click="goTo(2)" data-dot-pos="2" aria-label="Slide 3" class="hero-dot-bg"></button>
-          <span id="hero-dot-pill"></span>
+        {# Carousel nav — expanding pill indicators with progress fill + pause #}
+        <div class="flex items-center gap-3 mt-6" id="hero-dots-container">
+          <div class="flex items-center gap-2">
+            <button data-dot-pos="0" aria-label="Go to slide 1" class="hero-dot"><span class="hero-dot-fill"></span></button>
+            <button data-dot-pos="1" aria-label="Go to slide 2" class="hero-dot"><span class="hero-dot-fill"></span></button>
+            <button data-dot-pos="2" aria-label="Go to slide 3" class="hero-dot"><span class="hero-dot-fill"></span></button>
+          </div>
+          <button id="hero-pause" type="button" aria-label="Pause slideshow" aria-pressed="false" class="hero-pause-btn">
+            <svg class="hero-icon-pause" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><rect x="1" y="0" width="3" height="10" rx="1"/><rect x="6" y="0" width="3" height="10" rx="1"/></svg>
+            <svg class="hero-icon-play" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M1 0.5L9 5L1 9.5V0.5Z"/></svg>
+          </button>
         </div>
       </div>
 
       {# Right column — body text + CTAs per slide #}
       <div class="flex flex-col justify-start">
 
+        {# Spacer mirrors the eyebrow's height (text-xs + mb-6) so the body
+           aligns with the headline, not the eyebrow — desktop only #}
+        <span aria-hidden="true" class="hidden lg:block text-xs mb-6 invisible select-none">&nbsp;</span>
+
         {# Slide stack — absolute positioning #}
         <div class="relative min-h-[280px] md:min-h-[260px] lg:min-h-[260px]">
 
           {# Slide 1 — right content #}
           <div data-slide="0" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-8 text-justify">
+            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-justify">
               Your business already has AI tools. What it's missing is the infrastructure to ground them, deploy them, and govern them at scale. That's what we build.
             </p>
             <div class="flex flex-col sm:flex-row items-start gap-4">
+              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
+                Book a Demo
+              </a>
               <a href="/products/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
                 See Our Products
-              </a>
-              <a href="/contact/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/30 text-white/80 font-medium hover:bg-white/10 transition-all duration-200">
-                Book a Demo
               </a>
             </div>
           </div>
 
           {# Slide 2 — right content #}
           <div data-slide="1" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-8 text-justify">
+            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-justify">
               Zunkiree's Agentic AI platform deploys autonomous agents across your workflows — handling complex tasks end-to-end, so your team focuses on what matters.
             </p>
             <div class="flex flex-col sm:flex-row items-start gap-4">
+              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
+                Book a Demo
+              </a>
               <a href="/gaas/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
                 Explore Agentic AI
-              </a>
-              <a href="/contact/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/30 text-white/80 font-medium hover:bg-white/10 transition-all duration-200">
-                See How It Works
               </a>
             </div>
           </div>
 
           {# Slide 3 — right content #}
           <div data-slide="2" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-8 text-justify">
+            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-justify">
               Zunkiree Search is an AI-native search platform built for enterprises — delivering accurate, context-aware results from day one, without months of tuning.
             </p>
             <div class="flex flex-col sm:flex-row items-start gap-4">
+              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
+                Book a Demo
+              </a>
               <a href="/products/search/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
                 Explore AI Search
-              </a>
-              <a href="/contact/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/30 text-white/80 font-medium hover:bg-white/10 transition-all duration-200">
-                Request a Demo
               </a>
             </div>
           </div>
@@ -153,7 +162,7 @@ bodyClass: "page-bg-active"
         <span class="absolute top-6 left-8 select-none pointer-events-none z-10" style="color:#90a959;font-size:1.25rem;opacity:0.7;">✦</span>
         <span class="absolute top-8 right-10 select-none pointer-events-none z-10" style="color:#6f9b34;font-size:0.875rem;opacity:0.5;">✦</span>
         <span class="absolute bottom-6 left-16 select-none pointer-events-none z-10" style="color:#90a959;font-size:0.75rem;opacity:0.4;">✦</span>
-        <span class="absolute bottom-8 right-8 select-none pointer-events-none z-10" style="color:#b6cf96;font-size:1rem;opacity:0.6;">✦</span>
+        <span class="absolute bottom-8 right-8 select-none pointer-events-none z-10" style="color:#76b900;font-size:1rem;opacity:0.6;">✦</span>
 
         {# Dashboard screenshot — fills height #}
         <div class="absolute inset-0">
@@ -407,7 +416,7 @@ bodyClass: "page-bg-active"
 
     {# Headline — same font as hero H1 #}
     <h2 class="text-4xl md:text-5xl lg:text-5xl font-normal leading-[1.08] tracking-tight text-white text-center mb-10">
-      The companies building the future<br class="hidden md:block"> <span style="color: #b6cf96;">work with Zunkiree.</span>
+      The companies building the future<br class="hidden md:block"> <span style="color: #76b900;">work with Zunkiree.</span>
     </h2>
 
     {# Logo Marquee #}
@@ -744,7 +753,7 @@ bodyClass: "page-bg-active"
       <div>
         <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Case Studies</p>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight max-w-xl">
-          Not demos. Not pilots. <span style="color: #b6cf96;">Results.</span>
+          Not demos. Not pilots. <span style="color: #76b900;">Results.</span>
         </h2>
       </div>
       <div class="flex items-center gap-3 flex-shrink-0">
@@ -820,7 +829,7 @@ bodyClass: "page-bg-active"
 
               {# Big stat #}
               <div class="mb-2">
-                <span class="text-6xl md:text-7xl font-light leading-none" style="color: #b6cf96;" x-text="study.stat"></span>
+                <span class="text-6xl md:text-7xl font-light leading-none" style="color: #76b900;" x-text="study.stat"></span>
               </div>
 
               {# One-liner #}
@@ -830,7 +839,7 @@ bodyClass: "page-bg-active"
               <a
                 :href="study.ctaUrl"
                 class="inline-flex items-center gap-2 text-sm font-medium transition-all hover:gap-3"
-                style="color: #b6cf96;"
+                style="color: #76b900;"
               >
                 Learn More
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
