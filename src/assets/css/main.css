@@ -770,31 +770,20 @@ html.lenis body {
   /* =====================================================
      Logo Marquee (Social Proof Bar)
      ===================================================== */
-  .marquee-fade-light {
-    position: relative;
+  /* JS-driven marquee: drag to slide, auto-scroll, pause on hover */
+  #logo-marquee {
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;   /* let vertical page scroll through; we handle horizontal drag */
   }
 
-  .marquee-fade-light::before,
-  .marquee-fade-light::after {
-    display: none;
+  #logo-marquee.is-grabbing {
+    cursor: grabbing;
   }
 
   .animate-marquee-scroll {
-    animation: marquee-scroll 25s linear infinite;
-  }
-
-  @keyframes marquee-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  /* Pause on hover */
-  .marquee-fade-light:hover .animate-marquee-scroll {
-    animation-play-state: paused;
+    will-change: transform;
   }
 
   /* =====================================================

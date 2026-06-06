@@ -481,6 +481,71 @@ function initSearchIcon() {
   });
 }
 
+// ─── Logo Marquee — JS auto-scroll + click-drag ──────────────────
+function initLogoMarquee() {
+  const container = document.querySelector('#logo-marquee');
+  const track     = document.querySelector('#logo-marquee-track');
+  if (!container || !track) return;
+
+  // Block native image ghost-drag so dragging moves the strip, not a logo
+  track.querySelectorAll('img').forEach(img => { img.draggable = false; });
+
+  const SPEED = 70;                  // px/sec auto-scroll (higher = faster)
+  let half = track.scrollWidth / 2;  // width of one logo set (track is duplicated)
+  let pos = 0;
+  let paused = false;                // hover pause
+  let dragging = false;
+  let startX = 0, startPos = 0, lastTs = null;
+
+  window.addEventListener('resize', () => { half = track.scrollWidth / 2; });
+
+  function wrap() {
+    if (half <= 0) return;
+    while (pos <= -half) pos += half;
+    while (pos > 0)      pos -= half;
+  }
+
+  function frame(ts) {
+    if (lastTs === null) lastTs = ts;
+    const dt = (ts - lastTs) / 1000;
+    lastTs = ts;
+    if (!paused && !dragging) {
+      pos -= SPEED * dt;
+      wrap();
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // Pause on hover
+  container.addEventListener('mouseenter', () => { paused = true; });
+  container.addEventListener('mouseleave', () => { paused = false; });
+
+  // Click-drag to slide (mouse + touch via pointer events)
+  container.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    startX = e.clientX;
+    startPos = pos;
+    container.classList.add('is-grabbing');
+    container.setPointerCapture(e.pointerId);
+  });
+  container.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    pos = startPos + (e.clientX - startX);
+    wrap();
+    track.style.transform = `translateX(${pos}px)`;
+  });
+  function endDrag(e) {
+    if (!dragging) return;
+    dragging = false;
+    container.classList.remove('is-grabbing');
+    try { container.releasePointerCapture(e.pointerId); } catch (_) {}
+  }
+  container.addEventListener('pointerup', endDrag);
+  container.addEventListener('pointercancel', endDrag);
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────
 function boot() {
   Alpine.start();
@@ -492,6 +557,7 @@ function boot() {
   initBlueColorShift();
   initFaqGreenGlow();
   initSearchIcon();
+  initLogoMarquee();
 }
 
 if (document.readyState === 'loading') {
