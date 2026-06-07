@@ -174,19 +174,6 @@
                 "description": "Modernize legacy systems with AI"
               }
             ]
-          },
-          {
-            "header": "BY INDUSTRY",
-            "type": "simple",
-            "items": [
-              { "label": "Healthcare", "url": "/solutions/healthcare/" },
-              { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
-              { "label": "Legal", "url": "/solutions/legal/" },
-              { "label": "Professional Services", "url": "/solutions/services/" },
-              { "label": "Education", "url": "/solutions/education/" },
-              { "label": "Human Resources", "url": "/solutions/human-resources/" }
-            ],
-            "seeAll": { "label": "See all industries", "url": "/solutions/" }
           }
         ],
         "featured": {
@@ -199,6 +186,49 @@
         "cta": {
           "prompt": "Ready to build with AI?",
           "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "label": "Industries",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/", "description": "AI patient communication and clinical workflow automation" },
+              { "label": "Manufacturing", "url": "/solutions/manufacturing/", "description": "Predictive operations and intelligent process automation" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Legal", "url": "/solutions/legal/", "description": "Document intelligence and contract review automation" },
+              { "label": "Professional Services", "url": "/solutions/services/", "description": "Automate client delivery and knowledge work" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Education", "url": "/solutions/education/", "description": "AI tutoring, admissions, and student support" },
+              { "label": "Human Resources", "url": "/solutions/human-resources/", "description": "Smarter hiring, onboarding, and people operations" }
+            ],
+            "seeAll": { "label": "See all industries", "url": "/solutions/" }
+          }
+        ],
+        "featured": {
+          "label": "INDUSTRY SPOTLIGHT",
+          "title": "AI across every industry",
+          "description": "From healthcare to manufacturing — see how teams deploy Zunkiree in their sector.",
+          "cta": { "label": "Explore solutions", "url": "/solutions/" },
+          "image": "/assets/images/nav/case-study-preview.svg"
+        },
+        "cta": {
+          "prompt": "Not sure where to start?",
+          "button": "Talk to our team",
           "url": "/contact/"
         }
       }
