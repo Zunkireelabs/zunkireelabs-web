@@ -67,6 +67,7 @@ export default function (eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
+  eleventyConfig.addWatchTarget("src/assets/images/");
 
   // Shortcode for current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

@@ -1,60 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
   <defs>
-    <linearGradient id="spot-playbook-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c1e2c"/>
-      <stop offset="100%" stop-color="#091828"/>
+    <linearGradient id="eb-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6f9b34"/>
+      <stop offset="100%" stop-color="#90a959"/>
+    </linearGradient>
+    <linearGradient id="eb-cover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(125,211,252,0.12)"/>
+      <stop offset="100%" stop-color="rgba(125,211,252,0.04)"/>
     </linearGradient>
   </defs>
 
-  <rect width="400" height="250" fill="url(#spot-playbook-bg)"/>
+  <!-- Book spine -->
+  <rect x="108" y="55" width="16" height="178" rx="3" fill="rgba(125,211,252,0.25)" stroke="rgba(125,211,252,0.35)" stroke-width="1"/>
 
-  <!-- Sage glow bottom-left -->
-  <ellipse cx="0" cy="260" rx="160" ry="120" fill="rgba(144,169,89,0.10)"/>
+  <!-- Book cover -->
+  <rect x="124" y="52" width="152" height="184" rx="5" fill="url(#eb-cover)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
 
-  <!-- Code editor mini -->
-  <g transform="translate(30, 50)">
-    <rect width="340" height="150" fill="rgba(255,255,255,0.03)" rx="6" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Cover top stripe -->
+  <rect x="124" y="52" width="152" height="6" rx="3" fill="url(#eb-accent)"/>
 
-    <!-- Title bar -->
-    <rect width="340" height="24" fill="rgba(255,255,255,0.04)" rx="6"/>
-    <rect y="18" width="340" height="6" fill="rgba(255,255,255,0.04)"/>
-
-    <!-- Window buttons -->
-    <circle cx="15" cy="12" r="4" fill="rgba(255,255,255,0.15)"/>
-    <circle cx="30" cy="12" r="4" fill="rgba(255,255,255,0.15)"/>
-    <circle cx="45" cy="12" r="4" fill="rgba(144,169,89,0.6)"/>
-
-    <!-- Code lines -->
-    <g font-family="monospace" font-size="10" transform="translate(15, 40)">
-      <text fill="#90a959">const</text>
-      <text x="35" fill="rgba(255,255,255,0.7)"> search = </text>
-      <text x="95" fill="#90a959">await</text>
-      <text x="130" fill="#b6cf96"> zunkiree</text>
-      <text x="185" fill="rgba(255,255,255,0.7)">.</text>
-      <text x="190" fill="#b6cf96">query</text>
-      <text x="220" fill="rgba(255,255,255,0.7)">({</text>
-    </g>
-    <g font-family="monospace" font-size="10" transform="translate(15, 58)">
-      <text fill="rgba(255,255,255,0.7)">  question: </text>
-      <text x="75" fill="#a3c072">"natural language"</text>
-    </g>
-    <g font-family="monospace" font-size="10" transform="translate(15, 76)">
-      <text fill="rgba(255,255,255,0.7)">});</text>
-    </g>
-    <g font-family="monospace" font-size="10" transform="translate(15, 100)">
-      <text fill="rgba(255,255,255,0.25)">// Returns AI-powered results</text>
-    </g>
-
-    <!-- Cursor -->
-    <rect x="95" y="115" width="2" height="12" fill="#6f9b34">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
+  <!-- Grid pattern on cover -->
+  <g opacity="0.06" stroke="#7dd3fc" stroke-width="0.8">
+    <line x1="124" y1="95" x2="276" y2="95"/>
+    <line x1="124" y1="130" x2="276" y2="130"/>
+    <line x1="124" y1="165" x2="276" y2="165"/>
+    <line x1="160" y1="58" x2="160" y2="236"/>
+    <line x1="200" y1="58" x2="200" y2="236"/>
+    <line x1="240" y1="58" x2="240" y2="236"/>
   </g>
 
-  <!-- Ebook badge -->
-  <rect x="30" y="25" width="60" height="20" fill="#6f9b34" rx="3"/>
-  <text x="60" y="39" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#fff" text-anchor="middle">EBOOK</text>
+  <!-- Sparkle icon on cover -->
+  <circle cx="200" cy="118" r="28" fill="rgba(125,211,252,0.10)" stroke="rgba(125,211,252,0.30)" stroke-width="1.5"/>
+  <path d="M200,102 C203,111 206,114 216,118 C206,122 203,125 200,134 C197,125 194,122 184,118 C194,114 197,111 200,102Z" fill="url(#eb-accent)"/>
+  <path d="M200,109 C202,114 204,116 209,118 C204,120 202,122 200,127 C198,122 196,120 191,118 C196,116 198,114 200,109Z" fill="white" opacity="0.35"/>
 
-  <!-- Playbook label -->
-  <text x="320" y="38" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#90a959" opacity="0.45" text-anchor="middle">PLAYBOOK</text>
+  <!-- Title -->
+  <text x="200" y="162" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.5">AI SEARCH</text>
+  <text x="200" y="178" font-family="system-ui,sans-serif" font-size="11" font-weight="800" fill="rgba(255,255,255,0.90)" text-anchor="middle">PLAYBOOK</text>
+  <text x="200" y="195" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,255,255,0.40)" text-anchor="middle">for Product Teams</text>
+
+  <!-- 4-point star top-right -->
+  <g transform="translate(334, 55) rotate(20)">
+    <path d="M0,-18 C3,-6 6,-3 18,0 C6,3 3,6 0,18 C-3,6 -6,3 -18,0 C-6,-3 -3,-6 0,-18Z" fill="#7dd3fc" opacity="0.85"/>
+    <path d="M0,-10 C2,-3 3,-2 10,0 C3,2 2,3 0,10 C-2,3 -3,2 -10,0 C-3,-2 -2,-3 0,-10Z" fill="white" opacity="0.40"/>
+  </g>
+
+  <!-- Orb bottom-left -->
+  <circle cx="68" cy="210" r="16" fill="rgba(125,211,252,0.12)" stroke="rgba(125,211,252,0.30)" stroke-width="1.5"/>
+  <circle cx="68" cy="210" r="7" fill="rgba(125,211,252,0.60)"/>
+
+  <!-- Badge -->
+  <rect x="20" y="22" width="56" height="20" fill="#6f9b34" rx="10"/>
+  <text x="48" y="36" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">EBOOK</text>
 </svg>

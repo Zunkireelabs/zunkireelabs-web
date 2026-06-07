@@ -20,6 +20,9 @@ import searchSparkleData from '../icons/search-sparkle.json';
 // Import Lenis smooth scroll
 import Lenis from 'lenis';
 
+// Import Three.js infinity loop
+import { initThreeInfinity } from './infinity-threejs.js';
+
 // Expose GSAP globally so Alpine x-data can reference it
 window.gsap = gsap;
 
@@ -428,10 +431,11 @@ function initBlueColorShift() {
 
 // ─── FAQ Section — Full Green Background Shift (mirrors blue section) ─
 function initFaqGreenGlow() {
-  const ctaBand = document.getElementById('cta-band-section');
-  const faqSec  = document.getElementById('faq-cta-section');
-  const glow    = document.getElementById('faq-green-glow');
-  const trigEl  = ctaBand || faqSec;
+  const spotlight = document.getElementById('spotlight-section');
+  const ctaBand   = document.getElementById('cta-band-section');
+  const faqSec    = document.getElementById('faq-cta-section');
+  const glow      = document.getElementById('faq-green-glow');
+  const trigEl    = spotlight || ctaBand || faqSec;
   if (!trigEl || !glow) return;
 
   const blobs = gsap.utils.toArray('#page-blob-1, #page-blob-2, #page-blob-3');
@@ -439,7 +443,7 @@ function initFaqGreenGlow() {
   gsap.timeline({
     scrollTrigger: {
       trigger: trigEl,
-      endTrigger: faqSec || trigEl,
+      endTrigger: faqSec || ctaBand || trigEl,
       start: 'top 90%',
       end: 'bottom 10%',
       scrub: 2,
@@ -462,9 +466,9 @@ function initSearchIcon() {
 
   // Recolor the background circle gradient (layer index 4, shape index 1 = gradient fill)
   // Lottie gradient format: [pos, r, g, b, pos, r, g, b, ..., pos, a, pos, a, ...]
-  // Replace teal-purple stops → brand green palette (#c8dfa0, #90a959, #6f9b34)
-  const greenStops0 = [0, 0.784, 0.875, 0.627, 0.55, 0.565, 0.663, 0.349, 1, 0.435, 0.608, 0.204, 0, 1, 0.55, 1, 1, 1];
-  const greenStops1 = [0, 0.435, 0.608, 0.204, 0.55, 0.565, 0.663, 0.349, 1, 0.784, 0.875, 0.627, 0, 1, 0.55, 1, 1, 1];
+  // Replace teal-purple stops → hero green palette (#a8d44a, #76b900, #5a8c00)
+  const greenStops0 = [0, 0.659, 0.831, 0.290, 0.55, 0.463, 0.725, 0, 1, 0.353, 0.549, 0, 0, 1, 0.55, 1, 1, 1];
+  const greenStops1 = [0, 0.353, 0.549, 0, 0.55, 0.463, 0.725, 0, 1, 0.659, 0.831, 0.290, 0, 1, 0.55, 1, 1, 1];
   try {
     const gradFill = data.layers[4].shapes[1].g.k;
     gradFill.k[0].s = greenStops0;
@@ -546,6 +550,18 @@ function initLogoMarquee() {
   container.addEventListener('pointercancel', endDrag);
 }
 
+// ─── Infinity Loop Animation ──────────────────────────────────────
+function initInfinityLoop() {
+  // Section A uses Three.js (see infinity-threejs.js, called in boot)
+  // Section B — corner arc paths (SVG, GSAP dashoffset comet)
+  document.querySelectorAll('.infinity-corner-path').forEach((path, i) => {
+    const len = path.getTotalLength();
+    const dash = len * 0.35;
+    gsap.set(path, { strokeDasharray: `${dash} ${len - dash}`, strokeDashoffset: 0 });
+    gsap.to(path, { strokeDashoffset: -len, duration: 3.5 + i * 0.4, ease: 'none', repeat: -1 });
+  });
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────
 function boot() {
   Alpine.start();
@@ -558,6 +574,8 @@ function boot() {
   initFaqGreenGlow();
   initSearchIcon();
   initLogoMarquee();
+  initInfinityLoop();
+  initThreeInfinity('infinity-three-canvas');
 }
 
 if (document.readyState === 'loading') {

@@ -8,69 +8,142 @@ layout: base.njk
    Data-driven via frontmatter variables
    ===================================================== #}
 
-{# Determine which data source to use #}
 {% set items = products if catalogType == "products" else services %}
 {% set categories = catalogCategories | default([]) %}
 
 {# =====================================================
-   SECTION 1: HERO - Image Background with Dark Gradient
+   SECTION 1: HERO — Lamp Effect
    ===================================================== #}
-<section class="relative min-h-[35vh] md:min-h-[45vh] overflow-hidden bg-gray-900">
-  {# Full Image Background #}
-  {% if heroImage %}
-  <img
-    src="{{ heroImage }}"
-    alt=""
-    class="absolute inset-0 w-full h-full object-cover object-right"
-    aria-hidden="true"
-  />
-  {% endif %}
+<section
+  class="relative min-h-[65vh] flex flex-col items-center justify-center overflow-hidden bg-white"
+>
 
-  {# Dark gradient overlay - fades from left to right #}
-  <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+  {# ── Lamp effect: top-center glow + conic cones ─────────── #}
+  <div class="absolute top-0 inset-x-0 pointer-events-none" style="height: 420px; overflow: hidden;" aria-hidden="true">
 
-  {# Content #}
-  <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 h-full min-h-[35vh] md:min-h-[45vh] flex flex-col justify-between pt-20 pb-6 md:pt-24 md:pb-8">
-    {# Top: Breadcrumb + Title #}
-    <div>
-      {# Breadcrumb #}
-      <nav class="mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2 text-sm">
-          <li><a href="/" class="text-blue-400 hover:text-blue-300 transition-colors">Home</a></li>
-          <li class="text-white/50">/</li>
-          <li class="text-white/70">{{ heroLabel | default(heroTitle) }}</li>
-        </ol>
-      </nav>
-
-      {# Hero title #}
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight leading-[1.1] max-w-2xl text-white">
-        {{ heroTitle }}
-      </h1>
+    {# Large ambient glow #}
+    <div class="absolute inset-x-0 top-0 flex justify-center">
+      <div style="width: 32rem; height: 12rem; transform: translateY(-65%); background: rgba(111,155,52,0.3); filter: blur(72px); border-radius: 50%;"></div>
     </div>
 
-    {# Bottom: Description #}
-    <p class="text-lg md:text-xl max-w-xl text-white/80">
+    {# Lamp head — tight glow, expands on load #}
+    <div class="absolute inset-x-0 top-0 flex justify-center">
+      <div class="catalog-lamp-head" style="width: 8rem; height: 9rem; transform: translateY(-28%); background: rgba(111,155,52,0.45); filter: blur(28px); border-radius: 50%;"></div>
+    </div>
+
+    {# Top line — expands from center #}
+    <div class="absolute inset-x-0 top-0 flex justify-center">
+      <div class="catalog-lamp-line" style="width: 12rem; height: 1px; background: rgba(111,155,52,0.65);"></div>
+    </div>
+
+    {# Left cone — right edge at center, fans down-left #}
+    <div class="catalog-lamp-left absolute top-0 right-1/2 overflow-hidden" style="width: 12rem; height: 18rem; opacity: 0.3;">
+      <div style="position: absolute; inset: 0; background: conic-gradient(from 70deg at 100% 0%, rgba(111,155,52,0.5) 0deg, transparent 65deg, transparent 360deg);"></div>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, #ffffff, transparent);"></div>
+      <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 3rem; background: linear-gradient(to right, #ffffff, transparent);"></div>
+    </div>
+
+    {# Right cone — left edge at center, fans down-right #}
+    <div class="catalog-lamp-right absolute top-0 left-1/2 overflow-hidden" style="width: 12rem; height: 18rem; opacity: 0.3;">
+      <div style="position: absolute; inset: 0; background: conic-gradient(from 295deg at 0% 0%, rgba(111,155,52,0.5) 0deg, transparent 65deg, transparent 360deg);"></div>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, #ffffff, transparent);"></div>
+      <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 3rem; background: linear-gradient(to left, #ffffff, transparent);"></div>
+    </div>
+
+  </div>
+
+  {# ── Hero content ────────────────────────────────────────── #}
+  <div
+    class="catalog-hero-content relative z-10 flex flex-col items-center text-center w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 pt-28 pb-12 md:pt-32 md:pb-14"
+    style="opacity: 0; transform: translateY(60px);"
+  >
+    {# Breadcrumb #}
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center justify-center gap-2 text-sm">
+        <li><a href="/" class="text-zunkiree-600 hover:text-zunkiree-700 transition-colors">Home</a></li>
+        <li class="text-gray-300">/</li>
+        <li class="text-gray-500">{{ heroLabel | default(heroTitle) }}</li>
+      </ol>
+    </nav>
+
+    {# Eyebrow label #}
+    {% if heroLabel %}
+    <p class="text-xs font-medium tracking-widest uppercase text-zunkiree-600 mb-5">{{ heroLabel }}</p>
+    {% endif %}
+
+    {# Title #}
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] max-w-3xl mx-auto text-gray-900 text-center">
+      {{ heroTitle }}
+    </h1>
+
+    {# Tagline #}
+    <p class="text-lg md:text-xl max-w-xl mx-auto text-gray-500 mt-6 text-center">
       {{ heroTagline }}
     </p>
   </div>
+
 </section>
+
+{# Lamp + content entrance animations #}
+<script>
+(function () {
+  var _ran = false;
+
+  function runLamp() {
+    if (_ran || !window.gsap) return;
+    _ran = true;
+    var g = window.gsap;
+    var ease = 'power2.inOut';
+    var dur  = 0.9;
+    var d    = 0.2;
+
+    {# — Lamp expand — #}
+    g.to('.catalog-lamp-line',  { width: '30rem', duration: dur, delay: d, ease: ease });
+    g.to('.catalog-lamp-head',  { width: '16rem', duration: dur, delay: d, ease: ease });
+    g.to('.catalog-lamp-left',  { width: '30rem', opacity: 1, duration: dur, delay: d, ease: ease });
+    g.to('.catalog-lamp-right', { width: '30rem', opacity: 1, duration: dur, delay: d, ease: ease });
+
+    {# — Content rises from below — #}
+    g.to('.catalog-hero-content', { y: 0, opacity: 1, duration: dur, delay: d + 0.15, ease: 'power2.out' });
+
+    {# — Glow pulse (continuous, starts after expand finishes) — #}
+    g.to('.catalog-lamp-head', {
+      scaleX: 1.4, scaleY: 1.25, opacity: 0.75,
+      duration: 2.4, repeat: -1, yoyo: true,
+      ease: 'sine.inOut', delay: d + dur
+    });
+    g.to('.catalog-lamp-line', {
+      opacity: 0.35,
+      duration: 1.9, repeat: -1, yoyo: true,
+      ease: 'sine.inOut', delay: d + dur + 0.4
+    });
+  }
+
+  {# Retry until window.gsap is ready (module scripts may not have run yet) #}
+  function tryRun() {
+    if (_ran) return;
+    if (window.gsap) { runLamp(); return; }
+    setTimeout(tryRun, 80);
+  }
+
+  document.addEventListener('DOMContentLoaded', tryRun);
+  window.addEventListener('load', tryRun);
+})();
+</script>
 
 {# =====================================================
    SECTION 2: INTRO (Two-column)
    ===================================================== #}
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);">
+<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" data-reveal>
   <div class="max-w-screen-2xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-      {# Left: Large heading #}
       <div>
-        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight leading-[1.15]" style="color: var(--foreground);">
+        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-bold tracking-tight leading-[1.15] text-white">
           {{ introHeadline }}
         </h2>
       </div>
-
-      {# Right: Supporting paragraph #}
       <div class="lg:pt-2">
-        <p class="text-lg leading-relaxed" style="color: var(--foreground-muted);">
+        <p class="text-lg leading-relaxed text-white/70">
           {{ introDescription }}
         </p>
       </div>
@@ -82,13 +155,13 @@ layout: base.njk
    SECTION 3: DEFINITION BLOCK (AEO)
    ===================================================== #}
 {% if definitionBlock %}
-<section class="pb-12 md:pb-16 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);">
+<section class="pb-12 md:pb-16 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" data-reveal>
   <div class="max-w-screen-2xl mx-auto">
-    <div class="max-w-3xl p-6 md:p-8 border-l-4 border-zunkiree-600" style="background-color: var(--background-alt);">
-      <h3 class="text-lg font-normal mb-3" style="color: var(--foreground);">
+    <div class="max-w-3xl p-6 md:p-8 border-l-4 border-zunkiree-500 rounded-r-xl" style="background: rgba(255,255,255,0.05); border-top: 1px solid rgba(255,255,255,0.08); border-right: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <h3 class="text-lg font-medium mb-3 text-white">
         {{ definitionBlock.question }}
       </h3>
-      <p class="leading-relaxed" style="color: var(--foreground-muted);">
+      <p class="leading-relaxed text-white/70">
         {{ definitionBlock.answer }}
       </p>
     </div>
@@ -101,19 +174,20 @@ layout: base.njk
    ===================================================== #}
 <section
   class="pb-16 md:pb-24 px-4 sm:px-6 lg:px-8"
-  style="background-color: var(--background);"
+  style="background: #0f1a0a;"
   x-data="{ activeTab: 'all' }"
+  data-reveal
 >
   <div class="max-w-screen-2xl mx-auto">
-    {# Tab Navigation (only show if categories exist) #}
+
+    {# Tab Navigation #}
     {% if categories.length > 0 %}
-    <div class="border-b" style="border-color: var(--border);">
+    <div class="border-b border-white/10">
       <nav class="flex gap-8 -mb-px overflow-x-auto" aria-label="{{ catalogType | capitalize }} categories">
         <button
           @click="activeTab = 'all'"
           class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === 'all' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent hover:border-gray-300'"
-          :style="activeTab !== 'all' ? 'color: var(--foreground-muted)' : ''"
+          :class="activeTab === 'all' ? 'border-zunkiree-400 text-zunkiree-400' : 'border-transparent text-white/50 hover:text-white hover:border-white/30'"
         >
           All {{ catalogType | capitalize }}
         </button>
@@ -121,8 +195,7 @@ layout: base.njk
         <button
           @click="activeTab = '{{ category.id }}'"
           class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent hover:border-gray-300'"
-          :style="activeTab !== '{{ category.id }}' ? 'color: var(--foreground-muted)' : ''"
+          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-400 text-zunkiree-400' : 'border-transparent text-white/50 hover:text-white hover:border-white/30'"
         >
           {{ category.label }}
         </button>
@@ -131,13 +204,13 @@ layout: base.njk
     </div>
     {% endif %}
 
-    {# Catalog Cards Grid - Full table-style borders #}
-    <div class="border-l {% if categories.length > 0 %}mt-0{% else %}mt-8{% endif %}" style="border-color: var(--border);">
+    {# Catalog Cards Grid #}
+    <div class="border-l border-white/10 {% if categories.length > 0 %}mt-0{% else %}mt-8{% endif %}">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{% if items.length <= 3 %}3{% else %}4{% endif %}">
         {% for item in items %}
           <article
-            class="flex flex-col p-6 transition-colors border-b border-r hover:bg-gray-50 "
-            style="background-color: var(--background); border-color: var(--border);"
+            class="flex flex-col p-6 border-b border-r border-white/10 transition-colors hover:bg-white/[0.04]"
+            style="background: rgba(255,255,255,0.02);"
             {% if categories.length > 0 %}
             x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
             x-transition:enter="transition ease-out duration-200"
@@ -145,13 +218,11 @@ layout: base.njk
             x-transition:enter-end="opacity-100"
             {% endif %}
           >
-            {# Category/Status label #}
+            {# Category or Status badge #}
             {% if item.category %}
-            <span class="text-xs font-medium mb-2" style="color: var(--foreground-subtle);">
-              {{ item.category }}
-            </span>
+            <span class="text-xs font-medium mb-2 text-white/40">{{ item.category }}</span>
             {% elif item.status %}
-            <span class="inline-flex items-center gap-1.5 text-xs font-medium mb-2 {% if item.status == 'Available' %}text-green-600{% elif item.status == 'Coming Soon' %}text-amber-600{% else %}text-blue-600{% endif %}">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium mb-2 {% if item.status == 'Available' %}text-green-400{% elif item.status == 'Coming Soon' %}text-amber-400{% else %}text-blue-400{% endif %}">
               {% if item.status == 'Available' %}
               <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
               {% elif item.status == 'Coming Soon' %}
@@ -161,36 +232,23 @@ layout: base.njk
             </span>
             {% endif %}
 
-            {# Item title #}
-            <h3 class="text-lg font-medium mb-3" style="color: var(--foreground);">
-              {{ item.title }}
-            </h3>
+            {# Title #}
+            <h3 class="text-lg font-medium mb-3 text-white">{{ item.title }}</h3>
 
-            {# Tagline (for products) #}
+            {# Tagline #}
             {% if item.tagline %}
-            <p class="text-sm font-medium text-zunkiree-600 mb-3">
-              {{ item.tagline }}
-            </p>
+            <p class="text-sm font-medium text-zunkiree-400 mb-3">{{ item.tagline }}</p>
             {% endif %}
 
             {# Description #}
-            <p class="text-sm leading-relaxed mb-8 flex-grow" style="color: var(--foreground-muted);">
-              {{ item.description }}
-            </p>
+            <p class="text-sm leading-relaxed mb-8 flex-grow text-white/65">{{ item.description }}</p>
 
-            {# View link - justified to ends #}
+            {# CTA link #}
             <div class="flex items-center justify-between mt-auto">
-              <a
-                href="{{ item.url }}"
-                class="text-sm font-medium text-zunkiree-600  hover:underline"
-              >
+              <a href="{{ item.url }}" class="text-sm font-medium text-zunkiree-400 hover:text-zunkiree-300 transition-colors hover:underline">
                 {{ item.cta | default('Learn more') }}
               </a>
-              <a
-                href="{{ item.url }}"
-                class="text-zunkiree-600  hover:translate-x-1 transition-transform"
-                aria-label="Learn more about {{ item.title }}"
-              >
+              <a href="{{ item.url }}" class="text-zunkiree-400 hover:text-zunkiree-300 hover:translate-x-1 transition-all" aria-label="Learn more about {{ item.title }}">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
@@ -200,30 +258,32 @@ layout: base.njk
         {% endfor %}
       </div>
     </div>
+
   </div>
 </section>
 
 {# =====================================================
    SECTION 5: CTA BANNER
    ===================================================== #}
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background-alt);">
+<section
+  class="py-16 md:py-24 px-4 sm:px-6 lg:px-8"
+  style="background: linear-gradient(135deg, rgba(111,155,52,0.08) 0%, #0f1a0a 60%); border-top: 1px solid rgba(255,255,255,0.06);"
+  data-reveal
+>
   <div class="max-w-screen-2xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-      {# Left: Heading #}
       <div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight" style="color: var(--foreground);">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
           {{ ctaHeadline | default('Ready to get started?') }}
         </h2>
       </div>
-
-      {# Right: Paragraph + CTA #}
       <div>
-        <p class="text-lg mb-6" style="color: var(--foreground-muted);">
+        <p class="text-lg mb-6 text-white/70">
           {{ ctaDescription | default('Let\'s discuss how we can help you achieve your goals.') }}
         </p>
         <a
           href="{{ ctaButtonUrl | default('/contact/') }}"
-          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900  text-white  text-sm font-medium hover:bg-gray-800  transition-colors"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-zunkiree-600 hover:bg-zunkiree-700 text-white text-sm font-medium transition-colors"
         >
           {{ ctaButtonText | default('Get in touch') }}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,74 +301,54 @@ layout: base.njk
 {% set stories = servicesStories if catalogType == "services" else productsStories %}
 {% if stories and stories.length > 0 %}
 <script id="catalog-stories-data" type="application/json">{{ stories | dump | safe }}</script>
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--background);" x-data="catalogCarousel()">
+<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" x-data="catalogCarousel()" data-reveal>
   <div class="max-w-screen-2xl mx-auto">
 
-    {# Section Header #}
     <div class="mb-12">
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight" style="color: var(--foreground);">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Case Studies</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
         See how our clients are building with Zunkiree
       </h2>
     </div>
 
     {# Logo Tab Bar #}
     <div class="flex items-stretch gap-2">
-      {# Play/Pause Button #}
       <button
         @click="togglePlay()"
         class="flex-shrink-0 w-14 h-20 flex items-center justify-center transition-colors"
-        style="background-color: var(--background-alt);"
+        style="background: rgba(255,255,255,0.05);"
         :aria-label="isPlaying ? 'Pause carousel' : 'Play carousel'"
       >
-        {# Play Icon #}
-        <svg x-show="!isPlaying" class="w-5 h-5" style="color: var(--foreground-muted);" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-        {# Pause Icon #}
-        <svg x-show="isPlaying" class="w-5 h-5" style="color: var(--foreground-muted);" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-        </svg>
+        <svg x-show="!isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg x-show="isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
       </button>
 
-      {# Client Logo Tabs - Horizontal Scroll #}
-      <div
-        x-ref="tabsContainer"
-        class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
-      >
+      <div x-ref="tabsContainer" class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide">
         <template x-for="(study, index) in studies" :key="study.id">
           <button
             @click="goTo(index)"
             class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
-            :style="activeIndex === index ? 'background-color: var(--background); box-shadow: 0 1px 3px rgba(0,0,0,0.1);' : 'background-color: var(--background-alt);'"
+            :style="activeIndex === index ? 'background: rgba(255,255,255,0.08);' : 'background: rgba(255,255,255,0.03);'"
             style="min-width: calc((100% - 32px) / 5);"
           >
             <img
               :src="study.logo"
               :alt="study.name"
-              class="max-h-8 max-w-[120px] object-contain transition-all duration-300"
-              :class="activeIndex === index ? 'grayscale-0 opacity-100' : 'grayscale opacity-50 hover:opacity-70'"
+              class="max-h-8 max-w-[120px] object-contain transition-all duration-300 brightness-0 invert"
+              :class="activeIndex === index ? 'opacity-100' : 'opacity-40 hover:opacity-60'"
             />
-            {# Progress Bar (only on active, animates while playing) #}
-            <div
-              class="absolute bottom-0 left-0 h-1 bg-zunkiree-600"
-              :class="activeIndex === index && isPlaying ? '' : 'hidden'"
-              :style="`width: ${progress}%`"
-            ></div>
-            {# Static indicator (only on active, when paused) #}
-            <div
-              class="absolute bottom-0 left-0 right-0 h-1 bg-zunkiree-600"
-              :class="activeIndex === index && !isPlaying ? '' : 'hidden'"
-            ></div>
+            <div class="absolute bottom-0 left-0 h-0.5 bg-zunkiree-500" :class="activeIndex === index && isPlaying ? '' : 'hidden'" :style="`width: ${progress}%`"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-zunkiree-500" :class="activeIndex === index && !isPlaying ? '' : 'hidden'"></div>
           </button>
         </template>
       </div>
     </div>
 
-    {# Content Area - Separate container with gap #}
-    <div class="mt-6 border" style="background-color: var(--background); border-color: var(--border);">
+    {# Content Area #}
+    <div class="mt-2 border border-white/10 rounded-b-xl overflow-hidden" style="background: rgba(255,255,255,0.03);">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        {# Left: Content #}
+
+        {# Left: text #}
         <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
           <template x-for="(study, index) in studies" :key="study.id">
             <div
@@ -320,61 +360,34 @@ layout: base.njk
               x-transition:leave-start="opacity-100"
               x-transition:leave-end="opacity-0"
             >
-              {# Client Logo Large #}
               <div class="mb-6">
-                <img
-                  :src="study.logo"
-                  :alt="study.name"
-                  class="h-10 object-contain"
-                />
+                <img :src="study.logo" :alt="study.name" class="h-10 object-contain brightness-0 invert opacity-80" />
               </div>
-
-              {# Big Stat #}
               <div class="mb-4">
-                <span class="text-5xl md:text-6xl lg:text-7xl font-light" style="color: var(--foreground);" x-text="study.stat"></span>
-                <span class="text-lg ml-2" style="color: var(--foreground-muted);" x-text="study.statLabel"></span>
+                <span class="text-5xl md:text-6xl lg:text-7xl font-light text-white" x-text="study.stat"></span>
+                <span class="text-lg ml-2 text-white/50" x-text="study.statLabel"></span>
               </div>
-
-              {# Headline #}
-              <h3 class="text-xl md:text-2xl font-medium mb-4" style="color: var(--foreground);" x-text="study.headline"></h3>
-
-              {# Description #}
-              <p class="mb-6 max-w-lg" style="color: var(--foreground-muted);" x-text="study.description"></p>
-
-              {# CTA #}
-              <a
-                :href="study.ctaUrl"
-                class="inline-flex items-center gap-2 text-zunkiree-600  font-medium hover:gap-3 transition-all"
-              >
+              <h3 class="text-xl md:text-2xl font-medium mb-4 text-white" x-text="study.headline"></h3>
+              <p class="mb-6 max-w-lg text-white/70" x-text="study.description"></p>
+              <a :href="study.ctaUrl" class="inline-flex items-center gap-2 text-zunkiree-400 font-medium hover:text-zunkiree-300 hover:gap-3 transition-all">
                 <span x-text="study.ctaText"></span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
               </a>
             </div>
           </template>
         </div>
 
-        {# Right: Image #}
-        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden" style="background-color: var(--background-alt);">
-          {# Case study images with transition #}
+        {# Right: image #}
+        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden" style="background: rgba(255,255,255,0.04);">
           <template x-for="(study, index) in studies" :key="'visual-' + study.id">
-            <div
-              class="absolute inset-0"
-              :class="activeIndex === index ? '' : 'hidden'"
-            >
-              <img
-                :src="study.image"
-                :alt="study.name + ' case study'"
-                class="w-full h-full object-cover"
-              />
-              {# Subtle overlay for better contrast #}
-              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            <div class="absolute inset-0" :class="activeIndex === index ? '' : 'hidden'">
+              <img :src="study.image" :alt="study.name + ' case study'" class="w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,26,10,0.4) 0%, transparent 60%);"></div>
             </div>
           </template>
-          {# Accent line #}
-          <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-zunkiree-600"></div>
+          <div class="absolute bottom-0 left-0 w-1/3 h-0.5 bg-zunkiree-500"></div>
         </div>
+
       </div>
     </div>
 
@@ -390,71 +403,30 @@ layout: base.njk
       interval: null,
       duration: 5000,
       studies: [],
-
       init() {
-        // Load data from script tag
-        const dataEl = document.getElementById('catalog-stories-data');
-        if (dataEl) {
-          try {
-            this.studies = JSON.parse(dataEl.textContent);
-          } catch (e) {
-            console.error('Failed to parse carousel data:', e);
-          }
-        }
+        const el = document.getElementById('catalog-stories-data');
+        if (el) { try { this.studies = JSON.parse(el.textContent); } catch(e) {} }
         this.startAutoPlay();
       },
-
       startAutoPlay() {
         if (this.interval) clearInterval(this.interval);
         this.progress = 0;
-
         const tick = 50;
         this.interval = setInterval(() => {
           if (this.isPlaying) {
             this.progress += (tick / this.duration) * 100;
-            if (this.progress >= 100) {
-              this.next();
-            }
+            if (this.progress >= 100) this.next();
           }
         }, tick);
       },
-
-      next() {
-        this.activeIndex = (this.activeIndex + 1) % this.studies.length;
-        this.progress = 0;
-        this.scrollToActive();
-      },
-
-      goTo(index) {
-        this.activeIndex = index;
-        this.progress = 0;
-        this.isPlaying = false;
-        this.scrollToActive();
-      },
-
-      togglePlay() {
-        this.isPlaying = !this.isPlaying;
-        if (this.isPlaying) {
-          this.progress = 0;
-        }
-      },
-
+      next() { this.activeIndex = (this.activeIndex + 1) % this.studies.length; this.progress = 0; this.scrollToActive(); },
+      goTo(i) { this.activeIndex = i; this.progress = 0; this.isPlaying = false; this.scrollToActive(); },
+      togglePlay() { this.isPlaying = !this.isPlaying; if (this.isPlaying) this.progress = 0; },
       scrollToActive() {
         this.$nextTick(() => {
-          const container = this.$refs.tabsContainer;
-          const buttons = container.querySelectorAll('button');
-          const activeButton = buttons[this.activeIndex];
-
-          if (activeButton && container) {
-            const containerWidth = container.offsetWidth;
-            const buttonLeft = activeButton.offsetLeft;
-            const buttonWidth = activeButton.offsetWidth;
-
-            container.scrollTo({
-              left: buttonLeft - (containerWidth / 2) + (buttonWidth / 2),
-              behavior: 'smooth'
-            });
-          }
+          const c = this.$refs.tabsContainer;
+          const btn = c.querySelectorAll('button')[this.activeIndex];
+          if (btn && c) c.scrollTo({ left: btn.offsetLeft - c.offsetWidth / 2 + btn.offsetWidth / 2, behavior: 'smooth' });
         });
       }
     }
@@ -465,13 +437,12 @@ layout: base.njk
 {# =====================================================
    SECTION 7: CTA + FAQ
    ===================================================== #}
-{# Use page-specific FAQ if available, otherwise use global FAQ #}
 {% set pageFaqData = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% set faq = pageFaqData if pageFaqData else faq %}
 {% include "partials/cta-faq.njk" %}
 
 {# =====================================================
-   SCHEMA MARKUP (JSON-LD)
+   SCHEMA MARKUP
    ===================================================== #}
 {% if schemaType %}
 <script type="application/ld+json">
@@ -480,25 +451,14 @@ layout: base.njk
   "@type": "{{ schemaType }}",
   "name": "{{ heroTitle }} - Zunkiree Labs",
   "description": "{{ description }}",
-  "provider": {
-    "@type": "Organization",
-    "name": "Zunkiree Labs",
-    "url": "https://zunkireelabs.com"
-  }
+  "provider": { "@type": "Organization", "name": "Zunkiree Labs", "url": "https://zunkireelabs.com" }
   {% if catalogType == "services" %},
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "{{ heroTitle }}",
     "itemListElement": [
       {% for item in items %}
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "{{ item.title }}",
-          "description": "{{ item.description }}"
-        }
-      }{% if not loop.last %},{% endif %}
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "{{ item.title }}", "description": "{{ item.description }}" } }{% if not loop.last %},{% endif %}
       {% endfor %}
     ]
   }
@@ -508,15 +468,7 @@ layout: base.njk
     "name": "{{ heroTitle }}",
     "itemListElement": [
       {% for item in items %}
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "SoftwareApplication",
-          "name": "{{ item.title }}",
-          "description": "{{ item.description }}",
-          "applicationCategory": "BusinessApplication"
-        }
-      }{% if not loop.last %},{% endif %}
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "{{ item.title }}", "description": "{{ item.description }}", "applicationCategory": "BusinessApplication" } }{% if not loop.last %},{% endif %}
       {% endfor %}
     ]
   }
@@ -525,7 +477,6 @@ layout: base.njk
 </script>
 {% endif %}
 
-{# FAQPage Schema if FAQ exists #}
 {% set schemaFaq = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% if schemaFaq and schemaFaq.length > 0 %}
 <script type="application/ld+json">
@@ -534,14 +485,7 @@ layout: base.njk
   "@type": "FAQPage",
   "mainEntity": [
     {% for item in schemaFaq %}
-    {
-      "@type": "Question",
-      "name": "{{ item.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ item.answer }}"
-      }
-    }{% if not loop.last %},{% endif %}
+    { "@type": "Question", "name": "{{ item.question }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ item.answer }}" } }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
 }

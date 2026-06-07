@@ -33,6 +33,10 @@ src/temp-ss/
 # Local ServiceNow content reference docs
 docs/servicenow-content-reference.md
 docs/servicenow-content-inner-pages.md
+docs/servicenow-headers-typography.md
+
+# Local redesign planning docs
+docs/pages-redesign-phases.md
 
 # Claude Code local settings
 .mcp.json
