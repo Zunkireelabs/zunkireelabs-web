@@ -5,59 +5,55 @@ layout: base.njk
 {# =====================================================
    SHARED CATALOG LAYOUT
    Used for: Services page, Products page
-   Data-driven via frontmatter variables
+   Inner pages — white/light bg, homepage brand colors as accents
    ===================================================== #}
 
 {% set items = products if catalogType == "products" else services %}
 {% set categories = catalogCategories | default([]) %}
 
 {# =====================================================
-   SECTION 1: HERO — Lamp Effect
+   SECTION 1: HERO — Gradient mesh aurora (white bg)
    ===================================================== #}
-<section
-  class="relative min-h-[65vh] flex flex-col items-center justify-center overflow-hidden bg-white"
->
+<section class="relative min-h-[62vh] flex flex-col items-center justify-center overflow-hidden bg-white">
 
-  {# ── Lamp effect: top-center glow + conic cones ─────────── #}
-  <div class="absolute top-0 inset-x-0 pointer-events-none" style="height: 420px; overflow: hidden;" aria-hidden="true">
+  {# Two blobs blended across the full bottom width #}
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
 
-    {# Large ambient glow #}
-    <div class="absolute inset-x-0 top-0 flex justify-center">
-      <div style="width: 32rem; height: 12rem; transform: translateY(-65%); background: rgba(111,155,52,0.3); filter: blur(72px); border-radius: 50%;"></div>
-    </div>
+    {# Sage — left half, bleeds to center #}
+    <div class="catalog-blob-sage-tl" style="
+      position: absolute;
+      bottom: -15%; left: -5%;
+      width: 65%; height: 500px;
+      background: radial-gradient(ellipse at 40% 80%, rgba(144,169,89,0.55) 0%, transparent 65%);
+      filter: blur(32px);
+      border-radius: 50%;
+      will-change: transform;
+    "></div>
 
-    {# Lamp head — tight glow, expands on load #}
-    <div class="absolute inset-x-0 top-0 flex justify-center">
-      <div class="catalog-lamp-head" style="width: 8rem; height: 9rem; transform: translateY(-28%); background: rgba(111,155,52,0.45); filter: blur(28px); border-radius: 50%;"></div>
-    </div>
+    {# Blue — right half, bleeds to center #}
+    <div class="catalog-blob-blue-tr" style="
+      position: absolute;
+      bottom: -15%; right: -5%;
+      width: 65%; height: 500px;
+      background: radial-gradient(ellipse at 60% 80%, rgba(61,143,212,0.42) 0%, transparent 65%);
+      filter: blur(36px);
+      border-radius: 50%;
+      will-change: transform;
+    "></div>
 
-    {# Top line — expands from center #}
-    <div class="absolute inset-x-0 top-0 flex justify-center">
-      <div class="catalog-lamp-line" style="width: 12rem; height: 1px; background: rgba(111,155,52,0.65);"></div>
-    </div>
+    {# White fade from top — keeps heading area clean #}
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to bottom, #ffffff, transparent);"></div>
 
-    {# Left cone — right edge at center, fans down-left #}
-    <div class="catalog-lamp-left absolute top-0 right-1/2 overflow-hidden" style="width: 12rem; height: 18rem; opacity: 0.3;">
-      <div style="position: absolute; inset: 0; background: conic-gradient(from 70deg at 100% 0%, rgba(111,155,52,0.5) 0deg, transparent 65deg, transparent 360deg);"></div>
-      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, #ffffff, transparent);"></div>
-      <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 3rem; background: linear-gradient(to right, #ffffff, transparent);"></div>
-    </div>
-
-    {# Right cone — left edge at center, fans down-right #}
-    <div class="catalog-lamp-right absolute top-0 left-1/2 overflow-hidden" style="width: 12rem; height: 18rem; opacity: 0.3;">
-      <div style="position: absolute; inset: 0; background: conic-gradient(from 295deg at 0% 0%, rgba(111,155,52,0.5) 0deg, transparent 65deg, transparent 360deg);"></div>
-      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, #ffffff, transparent);"></div>
-      <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 3rem; background: linear-gradient(to left, #ffffff, transparent);"></div>
-    </div>
+    {# Thin bottom fade — just enough to blend the hard edge #}
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 18%; background: linear-gradient(to top, #ffffff, transparent);"></div>
 
   </div>
 
-  {# ── Hero content ────────────────────────────────────────── #}
+  {# Hero content #}
   <div
-    class="catalog-hero-content relative z-10 flex flex-col items-center text-center w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 pt-28 pb-12 md:pt-32 md:pb-14"
-    style="opacity: 0; transform: translateY(60px);"
+    class="catalog-hero-content relative z-10 flex flex-col items-center text-center w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 pt-36 pb-20 md:pt-40 md:pb-24"
+    style="opacity: 0; transform: translateY(48px);"
   >
-    {# Breadcrumb #}
     <nav class="mb-6" aria-label="Breadcrumb">
       <ol class="flex items-center justify-center gap-2 text-sm">
         <li><a href="/" class="text-zunkiree-600 hover:text-zunkiree-700 transition-colors">Home</a></li>
@@ -66,128 +62,156 @@ layout: base.njk
       </ol>
     </nav>
 
-    {# Eyebrow label #}
     {% if heroLabel %}
-    <p class="text-xs font-medium tracking-widest uppercase text-zunkiree-600 mb-5">{{ heroLabel }}</p>
+    <p class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-zunkiree-600 mb-5 px-3 py-1 rounded-full bg-zunkiree-50 border border-zunkiree-200">
+      <span class="w-1.5 h-1.5 rounded-full bg-zunkiree-500 inline-block"></span>
+      {{ heroLabel }}
+    </p>
     {% endif %}
 
-    {# Title #}
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] max-w-3xl mx-auto text-gray-900 text-center">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.04] max-w-3xl mx-auto text-gray-900 text-center">
       {{ heroTitle }}
     </h1>
 
-    {# Tagline #}
-    <p class="text-lg md:text-xl max-w-xl mx-auto text-gray-500 mt-6 text-center">
+    <p class="text-xl md:text-2xl max-w-2xl mx-auto text-gray-500 mt-6 text-center leading-relaxed font-light">
       {{ heroTagline }}
     </p>
   </div>
 
 </section>
 
-{# Lamp + content entrance animations #}
+{# Hero entrance + blob float animations #}
 <script>
 (function () {
   var _ran = false;
-
-  function runLamp() {
+  function runHero() {
     if (_ran || !window.gsap) return;
     _ran = true;
     var g = window.gsap;
-    var ease = 'power2.inOut';
-    var dur  = 0.9;
-    var d    = 0.2;
 
-    {# — Lamp expand — #}
-    g.to('.catalog-lamp-line',  { width: '30rem', duration: dur, delay: d, ease: ease });
-    g.to('.catalog-lamp-head',  { width: '16rem', duration: dur, delay: d, ease: ease });
-    g.to('.catalog-lamp-left',  { width: '30rem', opacity: 1, duration: dur, delay: d, ease: ease });
-    g.to('.catalog-lamp-right', { width: '30rem', opacity: 1, duration: dur, delay: d, ease: ease });
+    g.to('.catalog-hero-content', { y: 0, opacity: 1, duration: 0.85, delay: 0.1, ease: 'power2.out' });
 
-    {# — Content rises from below — #}
-    g.to('.catalog-hero-content', { y: 0, opacity: 1, duration: dur, delay: d + 0.15, ease: 'power2.out' });
-
-    {# — Glow pulse (continuous, starts after expand finishes) — #}
-    g.to('.catalog-lamp-head', {
-      scaleX: 1.4, scaleY: 1.25, opacity: 0.75,
-      duration: 2.4, repeat: -1, yoyo: true,
-      ease: 'sine.inOut', delay: d + dur
-    });
-    g.to('.catalog-lamp-line', {
-      opacity: 0.35,
-      duration: 1.9, repeat: -1, yoyo: true,
-      ease: 'sine.inOut', delay: d + dur + 0.4
-    });
+    g.to('.catalog-blob-sage-tl', { x: 24, y: 18, duration: 7, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+    g.to('.catalog-blob-blue-tr', { x: -20, y: 22, duration: 9, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1.2 });
+    g.to('.catalog-blob-sage-c',  { x: 16, y: -14, duration: 8, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.6 });
+    g.to('.catalog-blob-navy-b',  { x: -18, y: -10, duration: 10, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 2 });
   }
-
-  {# Retry until window.gsap is ready (module scripts may not have run yet) #}
   function tryRun() {
     if (_ran) return;
-    if (window.gsap) { runLamp(); return; }
+    if (window.gsap) { runHero(); return; }
     setTimeout(tryRun, 80);
   }
-
   document.addEventListener('DOMContentLoaded', tryRun);
   window.addEventListener('load', tryRun);
 })();
 </script>
 
 {# =====================================================
-   SECTION 2: INTRO (Two-column)
+   SECTION 2+3: INTRO + DEFINITION BLOCK — white bg, glass card
    ===================================================== #}
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" data-reveal>
+<section class="pt-4 pb-16 md:pt-6 md:pb-20 px-4 sm:px-6 lg:px-8 bg-white" data-reveal>
   <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-      <div>
-        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-bold tracking-tight leading-[1.15] text-white">
-          {{ introHeadline }}
-        </h2>
+
+    {# Glass card — navy base + glass effect #}
+    <div style="
+      position: relative;
+      overflow: hidden;
+      background: rgba(10,31,43,0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1.25rem;
+      padding: 2.5rem 2.5rem;
+      box-shadow: 0 8px 40px 0 rgba(10,31,43,0.18), 0 1px 0 0 rgba(255,255,255,0.04) inset;
+    ">
+
+      {# Sage blob — bottom left corner #}
+      <div aria-hidden="true" style="
+        position: absolute; bottom: -40%; left: -10%;
+        width: 420px; height: 420px;
+        background: radial-gradient(ellipse, rgba(144,169,89,0.28) 0%, transparent 70%);
+        filter: blur(40px);
+        border-radius: 50%;
+        pointer-events: none;
+      "></div>
+
+      {# Blue blob — right corner #}
+      <div aria-hidden="true" style="
+        position: absolute; top: -40%; right: -10%;
+        width: 380px; height: 380px;
+        background: radial-gradient(ellipse, rgba(61,143,212,0.22) 0%, transparent 70%);
+        filter: blur(44px);
+        border-radius: 50%;
+        pointer-events: none;
+      "></div>
+
+      {# Intro two-column — right col stacks description + definition card #}
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
+
+        {# Left — eyebrow, headline, illustration #}
+        <div class="text-left">
+          <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color: #90a959;">What We Build</p>
+          <h2 class="text-3xl sm:text-4xl md:text-[40px] font-bold tracking-tight leading-[1.12] text-white text-left mb-4">
+            {{ introHeadline }}
+          </h2>
+          {% if catalogType == "products" %}
+          <div id="lottie-product-intro" class="w-full max-w-xs mx-auto block mt-2" style="min-height:200px;"></div>
+          {% else %}
+          <img
+            src="/assets/images/hand-coding.webp"
+            alt="Hand coding illustration"
+            class="w-full max-w-xs opacity-90 mx-auto block mt-2"
+          />
+          {% endif %}
+        </div>
+
+        {# Right — description then definition card directly below #}
+        <div class="lg:pt-1 flex flex-col gap-6">
+          <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.70);">
+            {{ introDescription }}
+          </p>
+
+          {% if definitionBlock %}
+          <div style="
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-top: 1px solid rgba(255,255,255,0.12);
+            border-radius: 0.875rem;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+          ">
+            <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color: #90a959;">Quick Definition</p>
+            <h3 class="text-base font-semibold mb-2 text-white">{{ definitionBlock.question }}</h3>
+            <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.60);">{{ definitionBlock.answer }}</p>
+          </div>
+          {% endif %}
+        </div>
+
       </div>
-      <div class="lg:pt-2">
-        <p class="text-lg leading-relaxed text-white/70">
-          {{ introDescription }}
-        </p>
-      </div>
+
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 3: DEFINITION BLOCK (AEO)
-   ===================================================== #}
-{% if definitionBlock %}
-<section class="pb-12 md:pb-16 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" data-reveal>
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="max-w-3xl p-6 md:p-8 border-l-4 border-zunkiree-500 rounded-r-xl" style="background: rgba(255,255,255,0.05); border-top: 1px solid rgba(255,255,255,0.08); border-right: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
-      <h3 class="text-lg font-medium mb-3 text-white">
-        {{ definitionBlock.question }}
-      </h3>
-      <p class="leading-relaxed text-white/70">
-        {{ definitionBlock.answer }}
-      </p>
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{# =====================================================
-   SECTION 4: TAB NAVIGATION + CATALOG CARDS
+   SECTION 4: TAB NAV + CATALOG CARDS — white bg
    ===================================================== #}
 <section
-  class="pb-16 md:pb-24 px-4 sm:px-6 lg:px-8"
-  style="background: #0f1a0a;"
+  class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
   x-data="{ activeTab: 'all' }"
   data-reveal
 >
   <div class="max-w-screen-2xl mx-auto">
 
-    {# Tab Navigation #}
     {% if categories.length > 0 %}
-    <div class="border-b border-white/10">
+    <div class="border-b border-gray-200 mb-0">
       <nav class="flex gap-8 -mb-px overflow-x-auto" aria-label="{{ catalogType | capitalize }} categories">
         <button
           @click="activeTab = 'all'"
           class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === 'all' ? 'border-zunkiree-400 text-zunkiree-400' : 'border-transparent text-white/50 hover:text-white hover:border-white/30'"
+          :class="activeTab === 'all' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent text-gray-400 hover:text-gray-700 hover:border-gray-300'"
         >
           All {{ catalogType | capitalize }}
         </button>
@@ -195,7 +219,7 @@ layout: base.njk
         <button
           @click="activeTab = '{{ category.id }}'"
           class="pb-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap"
-          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-400 text-zunkiree-400' : 'border-transparent text-white/50 hover:text-white hover:border-white/30'"
+          :class="activeTab === '{{ category.id }}' ? 'border-zunkiree-600 text-zunkiree-600' : 'border-transparent text-gray-400 hover:text-gray-700 hover:border-gray-300'"
         >
           {{ category.label }}
         </button>
@@ -204,13 +228,12 @@ layout: base.njk
     </div>
     {% endif %}
 
-    {# Catalog Cards Grid #}
-    <div class="border-l border-white/10 {% if categories.length > 0 %}mt-0{% else %}mt-8{% endif %}">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{% if items.length <= 3 %}3{% else %}4{% endif %}">
+    {# 3-col grid — 3×3 for 9 services, 2×3 for 6 products, no orphan cards #}
+    <div class="border-l border-gray-200 {% if categories.length > 0 %}mt-0{% else %}mt-8{% endif %}">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {% for item in items %}
           <article
-            class="flex flex-col p-6 border-b border-r border-white/10 transition-colors hover:bg-white/[0.04]"
-            style="background: rgba(255,255,255,0.02);"
+            class="group flex flex-col p-6 md:p-8 border-b border-r border-gray-200 transition-colors hover:bg-[#f8faf5]"
             {% if categories.length > 0 %}
             x-show="activeTab === 'all'{% for category in categories %} || (activeTab === '{{ category.id }}' && '{{ item.category }}' === '{{ category.label }}'){% endfor %}"
             x-transition:enter="transition ease-out duration-200"
@@ -218,11 +241,10 @@ layout: base.njk
             x-transition:enter-end="opacity-100"
             {% endif %}
           >
-            {# Category or Status badge #}
             {% if item.category %}
-            <span class="text-xs font-medium mb-2 text-white/40">{{ item.category }}</span>
+            <span class="text-xs font-medium mb-3 text-gray-400 uppercase tracking-wide">{{ item.category }}</span>
             {% elif item.status %}
-            <span class="inline-flex items-center gap-1.5 text-xs font-medium mb-2 {% if item.status == 'Available' %}text-green-400{% elif item.status == 'Coming Soon' %}text-amber-400{% else %}text-blue-400{% endif %}">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium mb-3 {% if item.status == 'Available' %}text-green-600{% elif item.status == 'Coming Soon' %}text-amber-600{% else %}text-blue-600{% endif %}">
               {% if item.status == 'Available' %}
               <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
               {% elif item.status == 'Coming Soon' %}
@@ -232,24 +254,20 @@ layout: base.njk
             </span>
             {% endif %}
 
-            {# Title #}
-            <h3 class="text-lg font-medium mb-3 text-white">{{ item.title }}</h3>
+            <h3 class="text-lg font-semibold mb-2 text-gray-900 group-hover:text-zunkiree-700 transition-colors">{{ item.title }}</h3>
 
-            {# Tagline #}
             {% if item.tagline %}
-            <p class="text-sm font-medium text-zunkiree-400 mb-3">{{ item.tagline }}</p>
+            <p class="text-sm font-medium text-zunkiree-600 mb-3">{{ item.tagline }}</p>
             {% endif %}
 
-            {# Description #}
-            <p class="text-sm leading-relaxed mb-8 flex-grow text-white/65">{{ item.description }}</p>
+            <p class="text-sm leading-relaxed mb-8 flex-grow text-gray-500">{{ item.description }}</p>
 
-            {# CTA link #}
             <div class="flex items-center justify-between mt-auto">
-              <a href="{{ item.url }}" class="text-sm font-medium text-zunkiree-400 hover:text-zunkiree-300 transition-colors hover:underline">
+              <a href="{{ item.url }}" class="text-sm font-medium text-zunkiree-600 hover:text-zunkiree-700 transition-colors">
                 {{ item.cta | default('Learn more') }}
               </a>
-              <a href="{{ item.url }}" class="text-zunkiree-400 hover:text-zunkiree-300 hover:translate-x-1 transition-all" aria-label="Learn more about {{ item.title }}">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="{{ item.url }}" class="text-zunkiree-600 hover:text-zunkiree-700 hover:translate-x-1 transition-all" aria-label="Learn more about {{ item.title }}">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
               </a>
@@ -263,183 +281,83 @@ layout: base.njk
 </section>
 
 {# =====================================================
-   SECTION 5: CTA BANNER
+   SECTION 5: CTA BAND — homepage design style
    ===================================================== #}
-<section
-  class="py-16 md:py-24 px-4 sm:px-6 lg:px-8"
-  style="background: linear-gradient(135deg, rgba(111,155,52,0.08) 0%, #0f1a0a 60%); border-top: 1px solid rgba(255,255,255,0.06);"
-  data-reveal
->
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+<section class="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style="background: #0a1f2b;" data-reveal>
+
+  {# Sage blob — bottom left #}
+  <div aria-hidden="true" style="position:absolute;bottom:-30%;left:-8%;width:500px;height:500px;background:radial-gradient(ellipse,rgba(144,169,89,0.22) 0%,transparent 70%);filter:blur(60px);border-radius:50%;pointer-events:none;"></div>
+  {# Blue blob — top right #}
+  <div aria-hidden="true" style="position:absolute;top:-20%;right:-5%;width:440px;height:440px;background:radial-gradient(ellipse,rgba(61,143,212,0.18) 0%,transparent 70%);filter:blur(60px);border-radius:50%;pointer-events:none;"></div>
+
+  <div class="relative z-10 max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-center">
+
+      {# Left — eyebrow + headline + description #}
       <div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-          {{ ctaHeadline | default('Ready to get started?') }}
+        <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color:#90a959;">Custom Engagements</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-5">
+          <span style="color:#90a959;">{{ ctaHeadline | default('Ready to get started?') | replace('. ', '.<br>') | safe }}</span>
         </h2>
-      </div>
-      <div>
-        <p class="text-lg mb-6 text-white/70">
+        <p class="text-base md:text-lg leading-relaxed max-w-sm" style="color:rgba(255,255,255,0.65);">
           {{ ctaDescription | default('Let\'s discuss how we can help you achieve your goals.') }}
         </p>
-        <a
-          href="{{ ctaButtonUrl | default('/contact/') }}"
-          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-zunkiree-600 hover:bg-zunkiree-700 text-white text-sm font-medium transition-colors"
-        >
-          {{ ctaButtonText | default('Get in touch') }}
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+      </div>
+
+      {# Right — glass panel with two action rows #}
+      <div class="cta-band-panel">
+
+        <a href="{{ ctaButtonUrl | default('/contact/') }}" class="cta-band-row group">
+          <div class="cta-band-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 18v-6a9 9 0 0118 0v6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-base font-semibold text-white mb-1">{{ ctaButtonText | default('Schedule a Call') }}</p>
+            <p class="text-sm leading-snug" style="color:rgba(255,255,255,0.60);">Tell us what you're trying to solve — we'll tell you exactly whether we can help, and what it would take.</p>
+          </div>
+          <div class="cta-band-arrow">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
         </a>
+
+        <div class="mx-5 border-t border-white/10" aria-hidden="true"></div>
+
+        <a href="/services/" class="cta-band-row group">
+          <div class="cta-band-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-base font-semibold text-white mb-1">See all services</p>
+            <p class="text-sm leading-snug" style="color:rgba(255,255,255,0.60);">Browse our full catalogue — AI systems, custom software, SaaS, web, mobile, and AEO.</p>
+          </div>
+          <div class="cta-band-arrow">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
       </div>
     </div>
   </div>
-</section>
-
-{# =====================================================
-   SECTION 6: CUSTOMER STORIES - Interactive Carousel
-   ===================================================== #}
-{% set stories = servicesStories if catalogType == "services" else productsStories %}
-{% if stories and stories.length > 0 %}
-<script id="catalog-stories-data" type="application/json">{{ stories | dump | safe }}</script>
-<section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style="background: #0f1a0a;" x-data="catalogCarousel()" data-reveal>
-  <div class="max-w-screen-2xl mx-auto">
-
-    <div class="mb-12">
-      <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Case Studies</p>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-        See how our clients are building with Zunkiree
-      </h2>
-    </div>
-
-    {# Logo Tab Bar #}
-    <div class="flex items-stretch gap-2">
-      <button
-        @click="togglePlay()"
-        class="flex-shrink-0 w-14 h-20 flex items-center justify-center transition-colors"
-        style="background: rgba(255,255,255,0.05);"
-        :aria-label="isPlaying ? 'Pause carousel' : 'Play carousel'"
-      >
-        <svg x-show="!isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        <svg x-show="isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-      </button>
-
-      <div x-ref="tabsContainer" class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide">
-        <template x-for="(study, index) in studies" :key="study.id">
-          <button
-            @click="goTo(index)"
-            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
-            :style="activeIndex === index ? 'background: rgba(255,255,255,0.08);' : 'background: rgba(255,255,255,0.03);'"
-            style="min-width: calc((100% - 32px) / 5);"
-          >
-            <img
-              :src="study.logo"
-              :alt="study.name"
-              class="max-h-8 max-w-[120px] object-contain transition-all duration-300 brightness-0 invert"
-              :class="activeIndex === index ? 'opacity-100' : 'opacity-40 hover:opacity-60'"
-            />
-            <div class="absolute bottom-0 left-0 h-0.5 bg-zunkiree-500" :class="activeIndex === index && isPlaying ? '' : 'hidden'" :style="`width: ${progress}%`"></div>
-            <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-zunkiree-500" :class="activeIndex === index && !isPlaying ? '' : 'hidden'"></div>
-          </button>
-        </template>
-      </div>
-    </div>
-
-    {# Content Area #}
-    <div class="mt-2 border border-white/10 rounded-b-xl overflow-hidden" style="background: rgba(255,255,255,0.03);">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-
-        {# Left: text #}
-        <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[400px] lg:min-h-[500px]">
-          <template x-for="(study, index) in studies" :key="study.id">
-            <div
-              x-show="activeIndex === index"
-              x-transition:enter="transition ease-out duration-300"
-              x-transition:enter-start="opacity-0 transform translate-y-4"
-              x-transition:enter-end="opacity-100 transform translate-y-0"
-              x-transition:leave="transition ease-in duration-200 absolute"
-              x-transition:leave-start="opacity-100"
-              x-transition:leave-end="opacity-0"
-            >
-              <div class="mb-6">
-                <img :src="study.logo" :alt="study.name" class="h-10 object-contain brightness-0 invert opacity-80" />
-              </div>
-              <div class="mb-4">
-                <span class="text-5xl md:text-6xl lg:text-7xl font-light text-white" x-text="study.stat"></span>
-                <span class="text-lg ml-2 text-white/50" x-text="study.statLabel"></span>
-              </div>
-              <h3 class="text-xl md:text-2xl font-medium mb-4 text-white" x-text="study.headline"></h3>
-              <p class="mb-6 max-w-lg text-white/70" x-text="study.description"></p>
-              <a :href="study.ctaUrl" class="inline-flex items-center gap-2 text-zunkiree-400 font-medium hover:text-zunkiree-300 hover:gap-3 transition-all">
-                <span x-text="study.ctaText"></span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-              </a>
-            </div>
-          </template>
-        </div>
-
-        {# Right: image #}
-        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden" style="background: rgba(255,255,255,0.04);">
-          <template x-for="(study, index) in studies" :key="'visual-' + study.id">
-            <div class="absolute inset-0" :class="activeIndex === index ? '' : 'hidden'">
-              <img :src="study.image" :alt="study.name + ' case study'" class="w-full h-full object-cover opacity-80" />
-              <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(15,26,10,0.4) 0%, transparent 60%);"></div>
-            </div>
-          </template>
-          <div class="absolute bottom-0 left-0 w-1/3 h-0.5 bg-zunkiree-500"></div>
-        </div>
-
-      </div>
-    </div>
-
   </div>
 </section>
 
-<script>
-  function catalogCarousel() {
-    return {
-      activeIndex: 0,
-      isPlaying: true,
-      progress: 0,
-      interval: null,
-      duration: 5000,
-      studies: [],
-      init() {
-        const el = document.getElementById('catalog-stories-data');
-        if (el) { try { this.studies = JSON.parse(el.textContent); } catch(e) {} }
-        this.startAutoPlay();
-      },
-      startAutoPlay() {
-        if (this.interval) clearInterval(this.interval);
-        this.progress = 0;
-        const tick = 50;
-        this.interval = setInterval(() => {
-          if (this.isPlaying) {
-            this.progress += (tick / this.duration) * 100;
-            if (this.progress >= 100) this.next();
-          }
-        }, tick);
-      },
-      next() { this.activeIndex = (this.activeIndex + 1) % this.studies.length; this.progress = 0; this.scrollToActive(); },
-      goTo(i) { this.activeIndex = i; this.progress = 0; this.isPlaying = false; this.scrollToActive(); },
-      togglePlay() { this.isPlaying = !this.isPlaying; if (this.isPlaying) this.progress = 0; },
-      scrollToActive() {
-        this.$nextTick(() => {
-          const c = this.$refs.tabsContainer;
-          const btn = c.querySelectorAll('button')[this.activeIndex];
-          if (btn && c) c.scrollTo({ left: btn.offsetLeft - c.offsetWidth / 2 + btn.offsetWidth / 2, behavior: 'smooth' });
-        });
-      }
-    }
-  }
-</script>
-{% endif %}
 
 {# =====================================================
-   SECTION 7: CTA + FAQ
+   SECTION 7: CTA + FAQ partial
    ===================================================== #}
 {% set pageFaqData = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% set faq = pageFaqData if pageFaqData else faq %}
-{% include "partials/cta-faq.njk" %}
+{# {% set ctaLightTheme = true %}
+{% include "partials/cta-faq.njk" %} #}
 
 {# =====================================================
    SCHEMA MARKUP

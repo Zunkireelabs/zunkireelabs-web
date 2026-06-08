@@ -3,7 +3,7 @@
     "id": "ai-development",
     "title": "AI Development",
     "category": "AI & Data",
-    "tagline": "Build intelligent systems that solve real business problems",
+    "tagline": "Most AI is advice. We build the intelligent systems that act.",
     "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
     "heroImage": "/assets/images/ai-development-hero.webp",
     "lastUpdated": "2026-03-23",
@@ -19,8 +19,8 @@
     ],
 
     "definition": {
-      "heading": "AI systems that deliver measurable business impact",
-      "content": "We architect production-grade AI systems that integrate seamlessly with your existing infrastructure. Our engineering team has deployed RAG pipelines, LLM orchestration, and intelligent automation across healthcare, finance, and manufacturing—delivering solutions that reduce operational costs by 40% and accelerate decision-making. Every system we build is designed for scale, security, and long-term maintainability."
+      "heading": "AI that acts on your business. Not just answers about it.",
+      "content": "Generic AI answers questions. Zunkiree builds AI that does the work — RAG pipelines, LLM orchestration, and intelligent automation integrated with your infrastructure. Deployed across healthcare, finance, and manufacturing, our systems reduce operational costs by 40% and reach production in under 3 months."
     },
 
     "stats": [
@@ -197,7 +197,7 @@
     "id": "ai-customer-experience",
     "title": "AI Customer Experience",
     "category": "AI & Data",
-    "tagline": "Transform support from cost center to competitive advantage",
+    "tagline": "Legacy support scales with headcount. AI support doesn't.",
     "description": "AI-powered customer experience systems that resolve inquiries instantly, route complex issues intelligently, and learn from every interaction. We build support infrastructure that scales without scaling headcount.",
     "heroImage": "/assets/images/ai-customer-experience-hero.webp",
     "heroBgColor": "#efefef",
@@ -214,8 +214,8 @@
     ],
 
     "definition": {
-      "heading": "Customer support that scales intelligently",
-      "content": "We build AI systems that handle the 80% of inquiries that don't need human intervention—accurately. Our customer experience platforms integrate with your existing support stack, understand your product deeply, and resolve issues in seconds rather than hours. The result: support teams that focus on complex problems while AI handles routine questions, billing inquiries, and status updates at enterprise scale."
+      "heading": "Resolve 80% of tickets without a single human handoff.",
+      "content": "We build AI systems that handle the 80% of inquiries that don't need human intervention — accurately. Our platforms integrate with your support stack, resolve billing and status queries in seconds, and route complex cases with full context. CSAT scores go up. Ticket volumes go down. Your team focuses on what matters."
     },
 
     "stats": [
@@ -392,7 +392,7 @@
     "id": "ai-ecommerce",
     "title": "AI Ecommerce Solutions",
     "category": "AI & Data",
-    "tagline": "Build AI-powered ecommerce systems that sell smarter",
+    "tagline": "Your store closes at midnight. AI ecommerce doesn't.",
     "description": "Agentic commerce development for online stores in Nepal and globally. We build AI shopping agents, conversational commerce systems, and smart recommendation engines that increase conversions and automate customer support.",
     "heroImage": "/assets/images/ai-ecommerce-hero.svg",
     "lastUpdated": "2026-03-31",
@@ -408,8 +408,8 @@
     ],
 
     "definition": {
-      "heading": "What is AI ecommerce and agentic commerce?",
-      "content": "AI Ecommerce Solutions transform online stores with intelligent automation. We build custom AI agents, conversational commerce systems, and smart recommendation engines for ecommerce businesses in Nepal and globally. Our agentic commerce approach enables autonomous shopping experiences where AI handles everything from product discovery to payment processing—integrating with Nepal payment methods like eSewa and Khalti alongside international gateways."
+      "heading": "Ecommerce that sells itself — AI agents, not checkout forms.",
+      "content": "AI Ecommerce replaces checkout friction with conversation. We build AI shopping agents and recommendation engines for businesses in Nepal and globally — integrating with eSewa, Khalti, and Fonepay. Customers shop through natural language. Your store handles product discovery, cart management, and payment processing without human intervention."
     },
 
     "stats": [
@@ -586,7 +586,7 @@
     "id": "data-systems",
     "title": "Data Systems",
     "category": "AI & Data",
-    "tagline": "Turn raw data into production-ready AI infrastructure",
+    "tagline": "Most AI projects need better data systems. We build them first.",
     "description": "Data pipelines, warehouses, and analytics infrastructure engineered for AI workloads. We build the foundation that makes machine learning actually work—clean data, reliable pipelines, and scalable architecture.",
     "heroImage": "/assets/images/data-systems-hero.webp",
     "lastUpdated": "2026-03-24",
@@ -602,8 +602,8 @@
     ],
 
     "definition": {
-      "heading": "Data infrastructure that AI can actually use",
-      "content": "Most AI projects fail because of data problems, not model problems. We build the infrastructure that solves this: data pipelines that handle messy real-world inputs, warehouses optimized for analytical and ML workloads, and quality systems that catch issues before they corrupt your models. Our clients skip the 6-month data cleanup phase and go straight to production ML."
+      "heading": "Data pipelines that ship to production ML. Not cleanup tickets.",
+      "content": "Most AI projects fail because of data problems, not model problems. We build pipelines, warehouses, and quality systems that skip the 6-month cleanup phase — clean inputs, reliable outputs, architecture that scales from gigabytes to petabytes. Your team ships production ML in weeks, not quarters."
     },
 
     "stats": [
@@ -780,7 +780,7 @@
     "id": "custom-software",
     "title": "Custom Software",
     "category": "Development",
-    "tagline": "Build systems your team will actually use",
+    "tagline": "Custom software your team reaches for. Not works around.",
     "description": "Enterprise applications tailored to your workflows. We build internal tools, business systems, and operational software that replaces spreadsheet chaos with purpose-built solutions.",
     "heroImage": "/assets/images/custom-software-hero.webp",
     "lastUpdated": "2026-03-24",
@@ -974,7 +974,7 @@
     "id": "saas-development",
     "title": "SaaS Development",
     "category": "Development",
-    "tagline": "Launch multi-tenant products that scale",
+    "tagline": "SaaS development built to serve 10,000 tenants without a rewrite.",
     "description": "Multi-tenant SaaS platforms with subscription billing, user management, and architecture designed for scale. We build products that handle thousands of tenants without rewriting the foundation.",
     "heroImage": "/assets/images/saas-development-hero.webp",
     "lastUpdated": "2026-03-24",
@@ -1168,7 +1168,7 @@
     "id": "web-development",
     "title": "Web Development",
     "category": "Development",
-    "tagline": "Fast sites that rank and convert",
+    "tagline": "Web development built for speed, search, and conversions that compound.",
     "description": "High-performance websites and web applications built for speed, SEO, and conversion. Modern frameworks, responsive design, and architecture that handles traffic without breaking.",
     "heroImage": "/assets/images/web-development-hero.webp",
     "lastUpdated": "2026-03-24",
@@ -1184,7 +1184,7 @@
     ],
 
     "definition": {
-      "heading": "Websites built for performance and results",
+      "heading": "Fast. SEO-ready. Converts visitors. That's our web development baseline.",
       "content": "We build websites that load fast, rank high, and convert visitors to customers. Every site ships with optimized Core Web Vitals, mobile-first responsive design, and SEO best practices baked in—not bolted on. The result: organic traffic that actually converts, page speeds that beat competitors, and infrastructure that scales."
     },
 
@@ -1362,7 +1362,7 @@
     "id": "app-development",
     "title": "App Development",
     "category": "Development",
-    "tagline": "Native quality, cross-platform efficiency",
+    "tagline": "Mobile app development for iOS and Android. One team, no tradeoffs.",
     "description": "Mobile applications for iOS and Android that feel native and perform smoothly. Cross-platform development when it makes sense, native when it doesn't—the right approach for your product and users.",
     "heroImage": "/assets/images/services-hero-bg.webp",
     "lastUpdated": "2026-03-24",
@@ -1378,8 +1378,8 @@
     ],
 
     "definition": {
-      "heading": "Mobile apps built for real-world usage",
-      "content": "We build mobile applications that work reliably in the real world: spotty connections, diverse devices, and impatient users. Our apps feel native because we respect platform conventions, perform smoothly because we optimize relentlessly, and scale because we architect for growth. Whether consumer-facing or enterprise internal tools, we build mobile experiences users actually want to open."
+      "heading": "Apps that work in the real world. Not just in the demo.",
+      "content": "We build mobile apps that work in the real world — spotty connections, diverse devices, impatient users. Our apps feel native because we respect platform conventions, and perform smoothly because we optimize relentlessly. iOS and Android, shipped from one codebase by one team, without the usual tradeoffs."
     },
 
     "stats": [
@@ -1556,7 +1556,7 @@
     "id": "aeo-seo",
     "title": "AEO & SEO",
     "category": "Marketing",
-    "tagline": "Get found by Google and AI systems",
+    "tagline": "Rank on Google. Get cited by AI. That's AEO & SEO.",
     "description": "Search optimization for the AI era. We optimize your content to rank in traditional search and get cited by AI assistants like ChatGPT, Perplexity, and Google AI Overviews. The new rules require a new approach.",
     "heroImage": "/assets/images/aeo-seo-hero.webp",
     "lastUpdated": "2026-03-24",
@@ -1572,8 +1572,8 @@
     ],
 
     "definition": {
-      "heading": "Search optimization for the AI era",
-      "content": "AI systems like ChatGPT, Perplexity, and Google AI Overviews now answer millions of queries that previously sent traffic to websites. To stay visible, your content must be optimized not just for search engines, but for AI extraction and citation. We call this AI Engine Optimization (AEO)—and it requires structured content, authoritative positioning, and technical precision that traditional SEO doesn't cover."
+      "heading": "Visible on Google. Cited by ChatGPT. That's modern search.",
+      "content": "AI systems like ChatGPT, Perplexity, and Google AI Overviews now answer millions of queries that once sent traffic to your website. Staying visible requires optimization for both search engines and AI citation — structured content, authoritative positioning, and technical precision. We call this AEO, and it's inseparable from effective SEO today."
     },
 
     "stats": [

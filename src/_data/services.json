@@ -2,9 +2,10 @@
   {
     "id": "ai-development",
     "title": "AI Development",
+    "tagline": "AI that solves problems, not just answers questions.",
     "category": "AI & Data",
     "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
-    "cta": "View",
+    "cta": "Explore AI Dev",
     "url": "/services/ai-development/",
     "icon": "ai",
     "clients": [
@@ -16,9 +17,10 @@
   {
     "id": "ai-customer-experience",
     "title": "AI Customer Experience",
+    "tagline": "40% fewer tickets. Faster answers. Happier customers.",
     "category": "AI & Data",
     "description": "AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy.",
-    "cta": "View",
+    "cta": "Explore AI CX",
     "url": "/services/ai-customer-experience/",
     "icon": "chat",
     "clients": [
@@ -30,9 +32,10 @@
   {
     "id": "ai-ecommerce",
     "title": "AI Ecommerce Solutions",
+    "tagline": "Agentic commerce, built for the Nepal market.",
     "category": "AI & Data",
     "description": "Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration.",
-    "cta": "View",
+    "cta": "Explore AI Commerce",
     "url": "/services/ai-ecommerce/",
     "icon": "cart",
     "clients": []
@@ -40,9 +43,10 @@
   {
     "id": "data-systems",
     "title": "Data Systems",
+    "tagline": "Your data, ready for AI — without months of cleanup.",
     "category": "AI & Data",
     "description": "Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup.",
-    "cta": "View",
+    "cta": "Explore Data Systems",
     "url": "/services/data-systems/",
     "icon": "data",
     "clients": [
@@ -54,9 +58,10 @@
   {
     "id": "custom-software",
     "title": "Custom Software",
+    "tagline": "Internal tools your team will actually use.",
     "category": "Development",
     "description": "Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use.",
-    "cta": "View",
+    "cta": "Explore Custom Dev",
     "url": "/services/custom-software/",
     "icon": "code",
     "clients": [
@@ -68,9 +73,10 @@
   {
     "id": "saas-development",
     "title": "SaaS Development",
+    "tagline": "From zero to multi-tenant in months, not years.",
     "category": "Development",
     "description": "Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years.",
-    "cta": "View",
+    "cta": "Explore SaaS Dev",
     "url": "/services/saas-development/",
     "icon": "cloud",
     "clients": [
@@ -82,9 +88,10 @@
   {
     "id": "web-development",
     "title": "Web Development",
+    "tagline": "Fast, SEO-ready, built to convert.",
     "category": "Development",
     "description": "High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one.",
-    "cta": "View",
+    "cta": "Explore Web Dev",
     "url": "/services/web-development/",
     "icon": "globe",
     "clients": [
@@ -96,9 +103,10 @@
   {
     "id": "app-development",
     "title": "App Development",
+    "tagline": "iOS and Android, shipped by one team.",
     "category": "Development",
     "description": "Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration.",
-    "cta": "View",
+    "cta": "Explore App Dev",
     "url": "/services/app-development/",
     "icon": "mobile",
     "clients": [
@@ -110,9 +118,10 @@
   {
     "id": "aeo-seo",
     "title": "AEO & SEO",
+    "tagline": "Found by Google and cited by AI.",
     "category": "Marketing",
     "description": "Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation.",
-    "cta": "View",
+    "cta": "Explore AEO & SEO",
     "url": "/services/aeo-seo/",
     "icon": "search",
     "clients": [

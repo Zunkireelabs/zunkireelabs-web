@@ -63,6 +63,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/icons": "assets/icons" });
   eleventyConfig.addPassthroughCopy({ "src/assets/videos": "assets/videos" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/lottie": "assets/lottie" });
 
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");

@@ -1,8 +1,102 @@
 {# =====================================================
    CTA + FAQ SECTION (Reusable Component)
+   ctaLightTheme = true → light/white styling
+   ctaLightTheme = false/unset → dark glass styling (homepage)
    ===================================================== #}
+
+{% if ctaLightTheme %}
+
+{# ---- LIGHT THEME (catalog / inner pages) ---- #}
+<section id="faq-cta-section" class="py-16 md:py-24 relative bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
+
+      {# Left — CTA panel (navy glass on white) #}
+      <div
+        class="relative overflow-hidden flex flex-col justify-center rounded-2xl p-10 md:p-12"
+        style="background: rgba(10,31,43,0.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 40px rgba(10,31,43,0.16);"
+        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
+      >
+        {# Sage blob — bottom left #}
+        <div aria-hidden="true" style="position:absolute;bottom:-40%;left:-15%;width:300px;height:300px;background:radial-gradient(ellipse,rgba(144,169,89,0.30) 0%,transparent 70%);filter:blur(36px);border-radius:50%;pointer-events:none;"></div>
+        {# Blue blob — top right #}
+        <div aria-hidden="true" style="position:absolute;top:-30%;right:-10%;width:280px;height:280px;background:radial-gradient(ellipse,rgba(61,143,212,0.22) 0%,transparent 70%);filter:blur(36px);border-radius:50%;pointer-events:none;"></div>
+
+        <div class="relative z-10">
+          <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color:#90a959;">Get Started</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+            Start your AI<br>journey today
+          </h2>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors text-sm">
+              Contact Us
+            </a>
+            <a href="/products/search/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full border text-white font-medium hover:bg-white/10 transition-colors text-sm" style="border-color:rgba(255,255,255,0.25);">
+              View Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {# Right — FAQ accordion (light) #}
+      <div x-ref="faqSection">
+        <div x-data="{ activeIndex: null, expandAll: false }">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Get to know Zunkiree</h3>
+            <button
+              @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+              class="text-sm text-gray-400 hover:text-gray-700 transition-colors"
+            >
+              <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+            </button>
+          </div>
+
+          <div class="divide-y divide-gray-200">
+            {% for item in faq %}
+            <div class="py-5">
+              <button
+                @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+                class="w-full flex items-center justify-between text-left group"
+              >
+                <span class="text-base font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+                  {{ item.question }}
+                </span>
+                <span class="flex-shrink-0 text-gray-400 group-hover:text-zunkiree-600 transition-colors">
+                  <svg
+                    class="w-5 h-5 transition-transform duration-200"
+                    :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                x-show="activeIndex === {{ loop.index }} || expandAll"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 -translate-y-2"
+                class="overflow-hidden"
+              >
+                <p class="pt-4 text-gray-600 leading-relaxed text-sm">{{ item.answer }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% else %}
+
+{# ---- DARK THEME (homepage) ---- #}
 <section id="faq-cta-section" class="py-16 md:py-24 relative">
-  {# faq-green-glow moved to cta-band.njk so it persists when FAQ is hidden #}
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
 
@@ -29,7 +123,6 @@
       {# Right Side - FAQ Accordion (dark mode) #}
       <div x-ref="faqSection">
       <div x-data="{ activeIndex: null, expandAll: false }">
-        {# Header #}
         <div class="flex items-center justify-between mb-6">
           <h3 class="text-2xl md:text-3xl font-medium text-white">Get to know Zunkiree</h3>
           <button
@@ -40,7 +133,6 @@
           </button>
         </div>
 
-        {# FAQ Items #}
         <div class="divide-y divide-white/10">
           {% for item in faq %}
           <div class="py-5">
@@ -55,9 +147,7 @@
                 <svg
                   class="w-5 h-5 transition-transform duration-200"
                   :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 >
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                 </svg>
@@ -73,9 +163,7 @@
               x-transition:leave-end="opacity-0 -translate-y-2"
               class="overflow-hidden"
             >
-              <p class="pt-4 text-white/80 leading-relaxed">
-                {{ item.answer }}
-              </p>
+              <p class="pt-4 text-white/80 leading-relaxed">{{ item.answer }}</p>
             </div>
           </div>
           {% endfor %}
@@ -86,3 +174,5 @@
     </div>
   </div>
 </section>
+
+{% endif %}

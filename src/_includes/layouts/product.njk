@@ -46,7 +46,7 @@ schemaType: product
         {% endif %}
 
         {# Title #}
-        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-normal text-white tracking-[-0.04em] leading-[1.05] mb-6" data-reveal>
+        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[64px] font-bold text-white tracking-tight leading-[1.05] mb-6" data-reveal>
           {{ product.tagline }}
         </h1>
 
@@ -57,10 +57,10 @@ schemaType: product
 
         {# CTAs #}
         <div class="flex flex-col sm:flex-row items-start gap-4" data-reveal>
-          <a href="{{ product.cta.primaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+          <a href="{{ product.cta.primaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-colors rounded-full">
             {{ product.cta.primaryButton.text }}
           </a>
-          <a href="{{ product.cta.secondaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-white/50 text-white font-medium hover:bg-white/10 transition-colors">
+          <a href="{{ product.cta.secondaryButton.url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-white/20 text-white font-medium hover:bg-white/10 transition-colors rounded-full">
             {{ product.cta.secondaryButton.text }}
           </a>
         </div>
@@ -343,8 +343,8 @@ schemaType: product
   <svg width="0" height="0" class="absolute">
     <defs>
       <linearGradient id="why-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+        <stop offset="0%" style="stop-color:#90a959;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6f9b34;stop-opacity:1" />
       </linearGradient>
     </defs>
   </svg>
@@ -352,7 +352,7 @@ schemaType: product
   <div class="relative max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Section Header #}
     <div class="mb-10 md:mb-12" data-reveal>
-      <h2 class="text-3xl sm:text-4xl md:text-[44px] font-normal text-white tracking-[-0.03em] leading-[1.1]">
+      <h2 class="text-3xl sm:text-4xl md:text-[44px] font-bold text-white tracking-tight leading-[1.08]">
         Built for accuracy.<br class="hidden sm:block"> Designed for scale.
       </h2>
     </div>
@@ -363,14 +363,14 @@ schemaType: product
       {# Feature 1: Semantic Understanding #}
       <div class="group" data-reveal>
         <div class="mb-5">
-          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] group-hover:border-white/20 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#76b900]/20 border border-[#76b900]/30 group-hover:border-[#76b900]/50 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="url(#why-icon-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/>
             </svg>
           </div>
         </div>
-        <h3 class="text-lg font-medium text-white mb-3">Semantic Understanding</h3>
-        <p class="text-white/60 leading-relaxed text-sm">
+        <h3 class="text-lg font-semibold text-white mb-3">Semantic Understanding</h3>
+        <p class="text-white/70 leading-relaxed text-sm">
           Understands meaning, not just keywords. Delivers relevant results even with typos or natural phrasing.
         </p>
       </div>
@@ -378,14 +378,14 @@ schemaType: product
       {# Feature 2: Instant Answers #}
       <div class="group" data-reveal>
         <div class="mb-5">
-          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] group-hover:border-white/20 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#76b900]/20 border border-[#76b900]/30 group-hover:border-[#76b900]/50 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="url(#why-icon-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
             </svg>
           </div>
         </div>
-        <h3 class="text-lg font-medium text-white mb-3">Instant Answers</h3>
-        <p class="text-white/60 leading-relaxed text-sm">
+        <h3 class="text-lg font-semibold text-white mb-3">Instant Answers</h3>
+        <p class="text-white/70 leading-relaxed text-sm">
           Generates direct answers from your content. Reduces support queries by eliminating endless clicking.
         </p>
       </div>
@@ -393,14 +393,14 @@ schemaType: product
       {# Feature 3: Enterprise Security #}
       <div class="group" data-reveal>
         <div class="mb-5">
-          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] group-hover:border-white/20 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#76b900]/20 border border-[#76b900]/30 group-hover:border-[#76b900]/50 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="url(#why-icon-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
             </svg>
           </div>
         </div>
-        <h3 class="text-lg font-medium text-white mb-3">Enterprise Security</h3>
-        <p class="text-white/60 leading-relaxed text-sm">
+        <h3 class="text-lg font-semibold text-white mb-3">Enterprise Security</h3>
+        <p class="text-white/70 leading-relaxed text-sm">
           SOC 2 compliant, data encrypted at rest and in transit. Your data stays yours.
         </p>
       </div>
@@ -408,14 +408,14 @@ schemaType: product
       {# Feature 4: 5-Minute Integration #}
       <div class="group" data-reveal>
         <div class="mb-5">
-          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] group-hover:border-white/20 transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-[#76b900]/20 border border-[#76b900]/30 group-hover:border-[#76b900]/50 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="url(#why-icon-gradient)" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.959.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58z"/>
             </svg>
           </div>
         </div>
-        <h3 class="text-lg font-medium text-white mb-3">5-Minute Integration</h3>
-        <p class="text-white/60 leading-relaxed text-sm">
+        <h3 class="text-lg font-semibold text-white mb-3">5-Minute Integration</h3>
+        <p class="text-white/70 leading-relaxed text-sm">
           Drop-in SDK with 50+ connectors. Works with your existing stack—no migration needed.
         </p>
       </div>
@@ -427,14 +427,14 @@ schemaType: product
 {# =====================================================
    SECTION 2: SOCIAL PROOF + STATS BAR
    ===================================================== #}
-<section class="py-6 bg-white border-y border-gray-200">
+<section class="py-6 bg-[#0a1f2b] border-y border-white/10">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
 
       {# Left: Trust Text with Divider #}
       <div class="lg:col-span-2 flex items-center gap-4">
-        <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by industry leaders</p>
-        <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
+        <p class="text-xs text-white/50 uppercase tracking-wider leading-relaxed">Trusted by industry leaders</p>
+        <div class="hidden lg:block w-px h-8 bg-white/20"></div>
       </div>
 
       {# Middle: Client Logos #}
@@ -456,8 +456,8 @@ schemaType: product
       <div class="lg:col-span-5 flex items-center justify-end gap-6 md:gap-8">
         {% for stat in product.stats %}
         <div class="text-center">
-          <p class="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">{{ stat.value }}</p>
-          <p class="text-xs text-gray-500">{{ stat.label }}</p>
+          <p class="text-xl md:text-2xl font-bold text-[#76b900]">{{ stat.value }}</p>
+          <p class="text-xs text-white/50">{{ stat.label }}</p>
         </div>
         {% endfor %}
       </div>
@@ -469,19 +469,19 @@ schemaType: product
 {# =====================================================
    SECTION 3: OVERVIEW / VALUE PROP (Two-column)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white ">
+<section class="py-12 md:py-20 bg-[#0a1f2b]">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
       {# Left: Large benefit-focused headline #}
       <div>
-        <h2 class="text-3xl sm:text-4xl md:text-[44px] lg:text-[52px] font-normal leading-[1.1] tracking-[-0.03em] bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">
+        <h2 class="text-3xl sm:text-4xl md:text-[44px] lg:text-[52px] font-bold tracking-tight leading-[1.08] text-white">
           {{ product.definition.heading }}
         </h2>
       </div>
 
       {# Right: Supporting paragraph #}
       <div class="lg:pt-2">
-        <p class="text-lg md:text-xl text-gray-600  leading-relaxed">
+        <p class="text-lg md:text-xl text-white/70 leading-relaxed">
           {{ product.definition.content }}
         </p>
       </div>
@@ -492,12 +492,12 @@ schemaType: product
 {# =====================================================
    SECTION 4: KEY BENEFITS (IBM-style minimal)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white ">
+<section class="py-12 md:py-20 bg-[#0c1d2a]">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
       {# Left: Large "Benefits" title #}
       <div class="lg:col-span-3">
-        <h2 class="text-4xl md:text-5xl font-normal text-gray-900  tracking-[-0.02em]">
+        <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">
           Benefits
         </h2>
       </div>
@@ -508,8 +508,8 @@ schemaType: product
         <svg width="0" height="0" style="position:absolute;">
           <defs>
             <linearGradient id="benefit-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+              <stop offset="0%" style="stop-color:#90a959;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#6f9b34;stop-opacity:1" />
             </linearGradient>
           </defs>
         </svg>
@@ -563,11 +563,11 @@ schemaType: product
               {% endif %}
             </div>
             {# Title #}
-            <h3 class="text-lg font-normal text-gray-900  mb-3">
+            <h3 class="text-lg font-semibold text-white mb-3">
               {{ benefit.title }}
             </h3>
             {# Description #}
-            <p class="text-gray-600  leading-relaxed">
+            <p class="text-white/70 leading-relaxed">
               {{ benefit.description }}
             </p>
           </div>
@@ -581,10 +581,10 @@ schemaType: product
 {# =====================================================
    SECTION 5: USE CASES (IBM-style Tabbed Interface)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white " x-data="{ activeTab: '{{ product.useCases[0].id }}' }">
+<section class="py-12 md:py-20 bg-[#0a1f2b]" x-data="{ activeTab: '{{ product.useCases[0].id }}' }">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Left-aligned title #}
-    <h2 class="text-4xl md:text-5xl font-normal text-gray-900  tracking-[-0.02em] mb-8">
+    <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">
       Use cases
     </h2>
 
@@ -593,8 +593,8 @@ schemaType: product
       {% for useCase in product.useCases %}
       <button
         @click="activeTab = '{{ useCase.id }}'"
-        :class="activeTab === '{{ useCase.id }}' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
+        :class="activeTab === '{{ useCase.id }}' ? 'bg-[#76b900] text-white shadow-md border-transparent' : 'bg-white/[0.05] text-white/60 border-white/10 hover:bg-white/[0.08] hover:text-white'"
+        class="px-6 py-3 rounded-full font-medium text-sm border transition-all duration-200"
       >
         {{ useCase.title }}
       </button>
@@ -612,17 +612,17 @@ schemaType: product
     >
       {# Content #}
       <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900  tracking-[-0.02em] mb-4">
+        <h3 class="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4">
           {{ useCase.headline }}
         </h3>
-        <p class="text-lg text-gray-600  leading-relaxed mb-6">
+        <p class="text-lg text-white/70 leading-relaxed mb-6">
           {{ useCase.description }}
         </p>
         {# Features list #}
         {% if useCase.features %}
         <ul class="space-y-2 mb-6">
           {% for feature in useCase.features %}
-          <li class="flex items-center gap-2 text-gray-600">
+          <li class="flex items-center gap-2 text-white/70">
             <svg class="w-4 h-4 text-zunkiree-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
@@ -631,7 +631,7 @@ schemaType: product
           {% endfor %}
         </ul>
         {% endif %}
-        <a href="/contact/" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all duration-200">
+        <a href="/contact/" class="inline-flex items-center gap-2 text-[#76b900] font-medium hover:gap-3 transition-all duration-200">
           Learn more
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -650,8 +650,8 @@ schemaType: product
             loading="lazy"
           >
           {% else %}
-          <div class="w-full h-full bg-gray-100 flex items-center justify-center">
-            <span class="text-gray-400">{{ useCase.headline }}</span>
+          <div class="w-full h-full bg-white/[0.05] flex items-center justify-center">
+            <span class="text-white/30">{{ useCase.headline }}</span>
           </div>
           {% endif %}
         </div>
@@ -676,13 +676,13 @@ schemaType: product
 {% endif %}
 
 {% if clientStories.length > 0 %}
-<section class="py-12 md:py-20 bg-gray-50" x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ clientStories.length }} / 2) }">
+<section class="py-12 md:py-20 bg-[#0c1d2a]" x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ clientStories.length }} / 2) }">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Header with logos #}
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
       <div class="mb-6 lg:mb-0">
-        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 tracking-[-0.02em]">
+        <p class="text-xs uppercase tracking-widest text-[#76b900] font-medium mb-4">Case Studies</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
           See {{ product.title }} in action
         </h2>
       </div>
@@ -709,25 +709,25 @@ schemaType: product
         {% for story in clientStories %}
         <div class="w-full md:w-1/2 flex-shrink-0 px-2">
           {# Card Container #}
-          <div class="bg-white border border-gray-200 overflow-hidden h-full flex flex-col">
+          <div class="bg-white/[0.04] border border-white/[0.08] overflow-hidden h-full flex flex-col">
             {# Card Top - Content + Image #}
             <div class="p-8 flex flex-col md:flex-row gap-6 flex-1">
               {# Content - Left side #}
               <div class="flex-1 flex flex-col order-2 md:order-1">
-                <h3 class="text-xl md:text-2xl font-normal text-gray-900 tracking-[-0.02em] mb-3">
+                <h3 class="text-xl md:text-2xl font-semibold text-white tracking-tight mb-3">
                   {{ story.headline }}
                 </h3>
-                <p class="text-gray-600 leading-relaxed mb-5 text-sm md:text-base flex-1">
+                <p class="text-white/70 leading-relaxed mb-5 text-sm md:text-base flex-1">
                   {{ story.description }}
                 </p>
 
                 {# Stat Highlight #}
                 <div class="flex items-baseline gap-2 mb-5">
-                  <span class="text-3xl md:text-4xl font-medium bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] bg-clip-text text-transparent">{{ story.stat }}</span>
-                  <span class="text-gray-500 text-sm">{{ story.statLabel }}</span>
+                  <span class="text-3xl md:text-4xl font-bold text-[#76b900]">{{ story.stat }}</span>
+                  <span class="text-white/50 text-sm">{{ story.statLabel }}</span>
                 </div>
 
-                <a href="{{ story.ctaUrl }}" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
+                <a href="{{ story.ctaUrl }}" class="inline-flex items-center gap-2 text-[#76b900] font-medium hover:gap-3 transition-all duration-200">
                   {{ story.ctaText }}
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -736,11 +736,11 @@ schemaType: product
               </div>
 
               {# Divider #}
-              <div class="hidden md:block w-px bg-gray-200 order-2"></div>
+              <div class="hidden md:block w-px bg-white/10 order-2"></div>
 
               {# Image - Right side #}
               <div class="flex-shrink-0 md:w-[45%] order-1 md:order-3 self-stretch">
-                <div class="h-full min-h-[200px] overflow-hidden bg-gray-100">
+                <div class="h-full min-h-[200px] overflow-hidden bg-white/[0.05]">
                   <img
                     src="{{ story.image }}"
                     alt="{{ story.name }} project"
@@ -752,7 +752,7 @@ schemaType: product
             </div>
 
             {# Card Bottom - Client Logo #}
-            <div class="border-t border-gray-200 px-8 py-5">
+            <div class="border-t border-white/10 px-8 py-5">
               <div class="flex items-center justify-end">
                 <img
                   src="{{ story.logo }}"
@@ -772,7 +772,7 @@ schemaType: product
     <div class="flex items-center justify-center gap-6 mt-8">
       <button
         @click="currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1"
-        class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors rounded-lg"
+        class="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:border-white/50 hover:text-white transition-colors rounded-full"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -784,14 +784,14 @@ schemaType: product
           <button
             @click="currentSlide = i - 1"
             class="w-2.5 h-2.5 rounded-full transition-colors"
-            :class="currentSlide === (i - 1) ? 'bg-zunkiree-600' : 'bg-gray-300 hover:bg-gray-400'"
+            :class="currentSlide === (i - 1) ? 'bg-[#76b900]' : 'bg-white/20 hover:bg-white/40'"
           ></button>
         </template>
       </div>
 
       <button
         @click="currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0"
-        class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors rounded-lg"
+        class="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:border-white/50 hover:text-white transition-colors rounded-full"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -807,12 +807,12 @@ schemaType: product
    SECTION 7: RESOURCES (Databricks-style cards)
    ===================================================== #}
 {% if product.resources %}
-<section class="py-12 md:py-20 bg-white">
+<section class="py-12 md:py-20 bg-[#0a1f2b]">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Header #}
     <div class="mb-12">
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Resources</p>
-      <h2 class="text-3xl md:text-4xl font-normal text-gray-900  tracking-[-0.02em]">
+      <p class="text-xs uppercase tracking-widest text-[#76b900] font-medium mb-4">Resources</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
         Learn more about {{ product.title }}
       </h2>
     </div>
@@ -820,7 +820,7 @@ schemaType: product
     {# Resources Grid - Databricks style #}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {% for resource in product.resources %}
-      <a href="{{ resource.url }}" class="group bg-[#EDF2F8] rounded-none p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+      <a href="{{ resource.url }}" class="group bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 hover:bg-white/[0.07] transition-all duration-300 flex flex-col">
         {# Top Row: Icon + Label + Arrow #}
         <div class="flex items-center justify-between mb-6">
           <div class="flex items-center gap-2.5">
@@ -849,21 +849,21 @@ schemaType: product
               {% endif %}
             </div>
             {# Category label #}
-            <span class="text-xs font-medium uppercase tracking-wider text-gray-500">Zunkiree</span>
+            <span class="text-xs font-medium uppercase tracking-wider text-[#76b900]">Zunkiree</span>
           </div>
           {# Arrow icon - top right #}
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-white/30 group-hover:text-[#76b900] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7v10"></path>
           </svg>
         </div>
 
         {# Title #}
-        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-zunkiree-600 transition-colors">
+        <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#76b900] transition-colors">
           {{ resource.title }}
         </h3>
 
         {# Description #}
-        <p class="text-gray-500 text-sm leading-relaxed">
+        <p class="text-white/60 text-sm leading-relaxed">
           {{ resource.description }}
         </p>
       </a>
@@ -876,25 +876,25 @@ schemaType: product
 {# =====================================================
    SECTION 8: CTA + FAQ (IBM Vertical Stack)
    ===================================================== #}
-<section class="py-12 md:py-20 bg-gray-50">
+<section class="py-12 md:py-20 bg-[#0c1d2a]">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {# TOP: CTA Block #}
     <div class="mb-16">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6 leading-tight tracking-[-0.02em]">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.05]">
         Take the next step
       </h2>
-      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
+      <p class="text-lg md:text-xl text-white/70 mb-8 max-w-2xl">
         {{ product.cta.description }}
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="{{ product.cta.primaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-zunkiree-600 text-white font-medium text-sm hover:bg-zunkiree-700 transition-colors">
+        <a href="{{ product.cta.primaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-colors rounded-full">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z"/>
           </svg>
           {{ product.cta.primaryButton.text }}
         </a>
-        <a href="{{ product.cta.secondaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-zunkiree-600 text-zunkiree-600 font-medium text-sm hover:bg-zunkiree-50 transition-colors">
+        <a href="{{ product.cta.secondaryButton.url }}" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-white font-medium hover:bg-white/10 transition-colors rounded-full">
           {{ product.cta.secondaryButton.text }}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -906,11 +906,11 @@ schemaType: product
     {# BOTTOM: FAQ Accordion #}
     <div x-data="{ activeIndex: null, expandAll: false }">
       {# Header #}
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+      <div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+        <h3 class="text-2xl md:text-3xl font-semibold text-white">Frequently asked questions</h3>
         <button
           @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
-          class="text-sm text-blue-600 hover:text-blue-800 transition-colors"
+          class="text-sm text-[#76b900] hover:text-[#91c733] transition-colors"
         >
           <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
         </button>
