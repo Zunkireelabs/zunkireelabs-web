@@ -569,7 +569,10 @@ bodyClass: "page-bg-active"
 {% if false %}{% include "partials/ribbon-platform.njk" %}{% endif %}
 
 {# =====================================================
-   INFINITY LOOP — Section A: Centrepiece
+   INFINITY LOOP — unified: loop canvas + tabs + text overlay
+   ===================================================== #}
+{# =====================================================
+   INFINITY LOOP — Section A: Centrepiece (unchanged)
    ===================================================== #}
 <section class="relative pt-8 pb-4 overflow-hidden" id="infinity-showcase-a">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -592,39 +595,46 @@ bodyClass: "page-bg-active"
       <div class="absolute inset-0 pointer-events-none select-none">
 
         <span data-inf="agentic-ai" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);">
-            <span data-inf-dot class="inline-block w-2 h-2 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 4px 2px rgba(255,255,255,0.35);transition:box-shadow 0.15s ease,transform 0.15s ease;"></span>
-            <span class="text-white text-sm font-semibold tracking-wide">Agentic AI</span>
-          </span>
-        </span>
-
-        <span data-inf="governance" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.12);">
-            <span data-inf-dot class="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 3px 1px rgba(255,255,255,0.3);transition:box-shadow 0.15s ease,transform 0.15s ease;"></span>
-            <span class="text-white/80 text-xs font-semibold tracking-widest uppercase">Governance</span>
+          <span class="inline-flex items-center gap-2">
+            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
+            <span class="text-white text-lg font-semibold tracking-wide">Agentic AI</span>
           </span>
         </span>
 
         <span data-inf="ai-search" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);">
-            <span data-inf-dot class="inline-block w-2 h-2 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 4px 2px rgba(255,255,255,0.35);transition:box-shadow 0.15s ease,transform 0.15s ease;"></span>
-            <span class="text-white text-sm font-semibold tracking-wide">AI Search</span>
+          <span class="inline-flex items-center gap-2">
+            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
+            <span class="text-white text-lg font-semibold tracking-wide">AI Search</span>
           </span>
         </span>
 
         <span data-inf="data-infra" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);">
-            <span data-inf-dot class="inline-block w-2 h-2 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 4px 2px rgba(255,255,255,0.35);transition:box-shadow 0.15s ease,transform 0.15s ease;"></span>
-            <span class="text-white text-sm font-semibold tracking-wide">Data Infrastructure</span>
+          <span class="inline-flex items-center gap-2">
+            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
+            <span class="text-white text-lg font-semibold tracking-wide">Data Infrastructure</span>
           </span>
         </span>
 
         <span data-inf="automation" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);">
-            <span data-inf-dot class="inline-block w-2 h-2 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 4px 2px rgba(255,255,255,0.35);transition:box-shadow 0.15s ease,transform 0.15s ease;"></span>
-            <span class="text-white text-sm font-semibold tracking-wide">Automation</span>
+          <span class="inline-flex items-center gap-2">
+            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
+            <span class="text-white text-lg font-semibold tracking-wide">Automation</span>
           </span>
         </span>
+
+        {# ✦ stars — equally spaced along the lemniscate, positioned by Three.js projection #}
+        <span data-inf-star="0"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:18px;color:rgba(255,255,255,0.55);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="1"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:14px;color:rgba(255,255,255,0.45);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="2"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:20px;color:rgba(255,255,255,0.50);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="3"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:15px;color:rgba(255,255,255,0.40);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="4"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:22px;color:rgba(255,255,255,0.55);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="5"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:16px;color:rgba(255,255,255,0.42);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="6"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:19px;color:rgba(255,255,255,0.50);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="7"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:14px;color:rgba(255,255,255,0.38);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="8"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:21px;color:rgba(255,255,255,0.52);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="9"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:15px;color:rgba(255,255,255,0.43);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="10" style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:18px;color:rgba(255,255,255,0.48);line-height:1;pointer-events:none;">✦</span>
+        <span data-inf-star="11" style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:16px;color:rgba(255,255,255,0.44);line-height:1;pointer-events:none;">✦</span>
 
       </div>
 
@@ -633,103 +643,290 @@ bodyClass: "page-bg-active"
 </section>
 
 {# =====================================================
-   INFINITY LOOP — Section B: Edges + Content
+   INFINITY LOOP — Section B: ServiceNow-style 2-col layout
+   Left: hero text · Right: browser-chrome product mockup
    ===================================================== #}
-<section class="relative py-20 overflow-hidden" id="infinity-showcase-b">
+<section class="relative py-16 overflow-hidden" id="infinity-showcase-b"
+         x-data="{ activeTab: 0, setTab(i) { this.activeTab = i; window.infinityLoop?.setTabColors(i); window.infinityLoopZoom?.setFocus(i); } }">
 
-  {# Corner arcs — top-left #}
-  <div class="absolute top-0 left-0 pointer-events-none" style="width:240px; height:160px; overflow:visible;">
-    <svg viewBox="-30 -20 260 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; overflow:visible;">
-      <defs>
-        <linearGradient id="inf-corner-grad-tl" x1="100%" y1="100%" x2="0%" y2="0%">
-          <stop offset="0%"   stop-color="#76b900"/>
-          <stop offset="60%"  stop-color="#90a959"/>
-          <stop offset="100%" stop-color="#c8dfa0" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="corner-glow-tl"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="infinity-corner-path"
-        d="M 230,155 C 230,75 165,5 95,2 C 25,0 -25,55 -25,105"
-        fill="none" stroke="url(#inf-corner-grad-tl)" stroke-width="2" filter="url(#corner-glow-tl)"/>
-      <text x="60" y="15" fill="white" font-size="12" opacity="0.6">✦</text>
-      <line x1="95" y1="2" x2="95" y2="-18" stroke="rgba(200,223,160,0.3)" stroke-width="1"/>
-    </svg>
+  {# Zoom loop — full-section background, fades out at edges #}
+  <div class="absolute inset-0 pointer-events-none" id="infinity-showcase-zoom">
+    <canvas id="infinity-three-canvas-zoom" class="w-full h-full block" style="display:block;opacity:0.82;"></canvas>
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(7,18,35,0.72) 30%,rgba(7,18,35,0.05) 65%,rgba(7,18,35,0.45) 100%);"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(7,18,35,0.4) 0%,transparent 15%,transparent 85%,rgba(7,18,35,0.4) 100%);"></div>
   </div>
 
-  {# Corner arcs — top-right #}
-  <div class="absolute top-0 right-0 pointer-events-none" style="width:240px; height:160px; overflow:visible;">
-    <svg viewBox="-30 -20 260 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; overflow:visible;">
-      <defs>
-        <linearGradient id="inf-corner-grad-tr" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%"   stop-color="#76b900"/>
-          <stop offset="60%"  stop-color="#90a959"/>
-          <stop offset="100%" stop-color="#c8dfa0" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="corner-glow-tr"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="infinity-corner-path"
-        d="M -30,155 C -30,75 35,5 105,2 C 175,0 225,55 225,105"
-        fill="none" stroke="url(#inf-corner-grad-tr)" stroke-width="2" filter="url(#corner-glow-tr)"/>
-      <text x="138" y="15" fill="white" font-size="10" opacity="0.5">✦</text>
-      <line x1="105" y1="2" x2="105" y2="-18" stroke="rgba(200,223,160,0.3)" stroke-width="1"/>
-    </svg>
-  </div>
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  {# Corner arcs — bottom-left #}
-  <div class="absolute bottom-0 left-0 pointer-events-none" style="width:240px; height:160px; overflow:visible;">
-    <svg viewBox="-30 -20 260 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; overflow:visible;">
-      <defs>
-        <linearGradient id="inf-corner-grad-bl" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#76b900"/>
-          <stop offset="60%"  stop-color="#90a959"/>
-          <stop offset="100%" stop-color="#c8dfa0" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="corner-glow-bl"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="infinity-corner-path"
-        d="M 230,5 C 230,85 165,155 95,158 C 25,160 -25,105 -25,55"
-        fill="none" stroke="url(#inf-corner-grad-bl)" stroke-width="2" filter="url(#corner-glow-bl)"/>
-      <text x="55" y="168" fill="white" font-size="9" opacity="0.45">✦</text>
-      <line x1="95" y1="158" x2="95" y2="178" stroke="rgba(200,223,160,0.3)" stroke-width="1"/>
-    </svg>
-  </div>
+    {# Tabs — centered pill #}
+    <div class="flex justify-center mb-12">
+      <div class="flex items-center gap-1 rounded-full p-1.5 w-full" style="max-width:680px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);">
+        <button @click="setTab(0)" :class="activeTab===0?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Agentic AI</button>
+        <button @click="setTab(1)" :class="activeTab===1?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">AI Search</button>
+        <button @click="setTab(2)" :class="activeTab===2?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Data Infrastructure</button>
+        <button @click="setTab(3)" :class="activeTab===3?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Automation</button>
+      </div>
+    </div>
 
-  {# Corner arcs — bottom-right #}
-  <div class="absolute bottom-0 right-0 pointer-events-none" style="width:240px; height:160px; overflow:visible;">
-    <svg viewBox="-30 -20 260 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; overflow:visible;">
-      <defs>
-        <linearGradient id="inf-corner-grad-br" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#76b900"/>
-          <stop offset="60%"  stop-color="#90a959"/>
-          <stop offset="100%" stop-color="#c8dfa0" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="corner-glow-br"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path class="infinity-corner-path"
-        d="M -30,5 C -30,85 35,155 105,158 C 175,160 225,105 225,55"
-        fill="none" stroke="url(#inf-corner-grad-br)" stroke-width="2" filter="url(#corner-glow-br)"/>
-      <text x="135" y="168" fill="white" font-size="11" opacity="0.55">✦</text>
-      <line x1="105" y1="158" x2="105" y2="178" stroke="rgba(200,223,160,0.3)" stroke-width="1"/>
-    </svg>
-  </div>
+    {# Two-column: hero text left · mockup right #}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-  {# Centre content #}
-  <div class="relative z-10 text-center max-w-2xl mx-auto px-4 sm:px-6">
+      {# ── LEFT: sliding text panels ───────────────────────────────── #}
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+             :style="`transform: translateX(-${activeTab * 100}%)`">
 
-    {# LAB badge #}
-    <span class="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 text-white" style="border:1px solid rgba(118,185,0,0.45); background:rgba(118,185,0,0.08);">LAB</span>
+          {# Tab 0: Agentic AI #}
+          <div class="w-full flex-shrink-0">
+            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">BUILD</p>
+            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
+              Agents that execute,<br>not just respond.
+            </h3>
+            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
+              We build custom AI agents using RAG pipelines and LLM integration — trained on your data, wired into your workflows, acting autonomously from day one.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/services/ai-development/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore AI Development</a>
+              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
+            </div>
+          </div>
 
-    <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white mb-5">
-      Your team's workflows,<br>now run by AI.
-    </h2>
+          {# Tab 1: AI Search #}
+          <div class="w-full flex-shrink-0">
+            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">FIND</p>
+            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
+              Search that answers.<br>Not just retrieves.
+            </h3>
+            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
+              AI-powered search that understands context, surfaces the right result, and deflects support tickets before they're raised. Clients cut ticket volume by 40%.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/products/search/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore AI Search</a>
+              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
+            </div>
+          </div>
 
-    <p class="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-xl mx-auto">
-      Zunkiree learns how your business works — then agents take it from there. From emails to dashboards, from knowledge bases to workflows.
-    </p>
+          {# Tab 2: Data Infrastructure #}
+          <div class="w-full flex-shrink-0">
+            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">GROUND</p>
+            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
+              AI is only as good as<br>the data behind it.
+            </h3>
+            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
+              We build the pipelines, warehouses, and infrastructure that give your models something real to act on — clean, structured, and ready for ML without months of cleanup.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/services/data-systems/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore Data Systems</a>
+              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
+            </div>
+          </div>
 
-    <a href="/services/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-zunkiree-500 text-white font-medium hover:bg-zunkiree-500/10 transition-all duration-200">
-      Explore the Platform
-    </a>
+          {# Tab 3: Automation #}
+          <div class="w-full flex-shrink-0">
+            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">ACT</p>
+            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
+              Manual to autonomous.<br>Without ripping out what works.
+            </h3>
+            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
+              We wire AI into the workflows your team already runs — from email triage to dashboard reporting — so the loop closes without human hand-holding.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="/services/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore Automation</a>
+              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {# ── RIGHT: browser-chrome mockup card ───────────────────────── #}
+      <div class="relative">
+
+        {# Glow behind card #}
+        <div class="absolute inset-0 rounded-2xl blur-3xl opacity-20 transition-colors duration-500"
+             :style="activeTab===0 ? 'background:radial-gradient(ellipse,#7ee8a2,transparent 70%)' :
+                     activeTab===1 ? 'background:radial-gradient(ellipse,#60a5fa,transparent 70%)' :
+                     activeTab===2 ? 'background:radial-gradient(ellipse,#fb923c,transparent 70%)' :
+                                     'background:radial-gradient(ellipse,#76b900,transparent 70%)'"></div>
+
+        {# Browser chrome frame #}
+        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="background:#102616; border:1px solid rgba(118,185,0,0.25);">
+
+          {# Browser top bar #}
+          <div class="flex items-center gap-2 px-3 py-2.5" style="background:#0b1c10; border-bottom:1px solid rgba(118,185,0,0.15);">
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#ff5f57;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#febc2e;"></span>
+            <span class="w-2.5 h-2.5 rounded-full" style="background:#28c840;"></span>
+            <div class="ml-3 flex-1 rounded-md px-3 py-1 text-xs" style="background:rgba(118,185,0,0.1); color:rgba(255,255,255,0.35); font-family:monospace;">
+              app.zunkireelabs.com
+            </div>
+          </div>
+
+          {# Mockup content — switches per tab #}
+          <div class="relative overflow-hidden" style="min-height:240px;">
+            <div class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                 :style="`transform: translateX(-${activeTab * 100}%)`">
+
+              {# Mockup 0: Agentic AI — agent run dashboard #}
+              <div class="w-full flex-shrink-0 p-4">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <p class="text-white text-sm font-semibold">Agent Run</p>
+                    <p class="text-white/40 text-xs">customer_support_bot · just now</p>
+                  </div>
+                  <span class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#76b900] animate-pulse"></span> Running
+                  </span>
+                </div>
+                <div class="space-y-2.5">
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-white/70 text-xs">Analyzed user query</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-white/70 text-xs">Retrieved 12 knowledge base docs</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-lg" style="background:rgba(118,185,0,0.06); border:1px solid rgba(118,185,0,0.2);">
+                    <span class="w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#76b900] border-t-transparent animate-spin"></span>
+                    <span class="text-white/90 text-xs">Generating response…</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.03);">
+                    <span class="w-4 h-4 flex-shrink-0 rounded-full" style="border:1.5px solid rgba(255,255,255,0.2);"></span>
+                    <span class="text-white/30 text-xs">Update CRM record</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.03);">
+                    <span class="w-4 h-4 flex-shrink-0 rounded-full" style="border:1.5px solid rgba(255,255,255,0.2);"></span>
+                    <span class="text-white/30 text-xs">Close ticket</span>
+                  </div>
+                </div>
+              </div>
+
+              {# Mockup 1: AI Search — search interface #}
+              <div class="w-full flex-shrink-0 p-4">
+                <div class="flex items-center gap-3 p-3 rounded-lg mb-4" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);">
+                  <svg class="w-4 h-4 text-white/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                  <span class="text-white/60 text-sm">How do I reset my 2FA?</span>
+                </div>
+                <p class="text-white/40 text-xs uppercase tracking-widest mb-3">Top results</p>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between p-3 rounded-lg" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
+                    <div>
+                      <p class="text-white text-sm font-medium">Authentication Setup Guide</p>
+                      <p class="text-white/40 text-xs mt-0.5">docs.help · 2FA reset walkthrough</p>
+                    </div>
+                    <span class="text-xs font-semibold" style="color:#76b900;">98%</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <div>
+                      <p class="text-white/70 text-sm">Security FAQ</p>
+                      <p class="text-white/30 text-xs mt-0.5">Frequently asked questions</p>
+                    </div>
+                    <span class="text-xs font-semibold text-white/40">94%</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <div>
+                      <p class="text-white/70 text-sm">Admin Reset Guide</p>
+                      <p class="text-white/30 text-xs mt-0.5">For IT administrators</p>
+                    </div>
+                    <span class="text-xs font-semibold text-white/40">91%</span>
+                  </div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 p-2.5 rounded-lg" style="background:rgba(118,185,0,0.1); border:1px solid rgba(118,185,0,0.2);">
+                  <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-xs" style="color:#76b900;">Ticket deflected — answer served directly</span>
+                </div>
+              </div>
+
+              {# Mockup 2: Data Infrastructure — pipeline run #}
+              <div class="w-full flex-shrink-0 p-4">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <p class="text-white text-sm font-semibold">Pipeline · customer_data_sync</p>
+                    <p class="text-white/40 text-xs">Last run: 2 min ago · Next: in 58 min</p>
+                  </div>
+                  <span class="text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">Healthy</span>
+                </div>
+                <div class="space-y-2.5">
+                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-white/70 text-xs">Extract</span>
+                    </div>
+                    <span class="text-white/40 text-xs">14,203 records</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-white/70 text-xs">Transform</span>
+                    </div>
+                    <span class="text-white/40 text-xs">0 errors</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span class="text-white/70 text-xs">Load → Warehouse</span>
+                    </div>
+                    <span class="text-white/40 text-xs">synced</span>
+                  </div>
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-2">
+                  <div class="p-3 rounded-lg text-center" style="background:rgba(118,185,0,0.08);">
+                    <p class="text-white text-lg font-bold">2.3M</p>
+                    <p class="text-white/40 text-xs">rows / hr</p>
+                  </div>
+                  <div class="p-3 rounded-lg text-center" style="background:rgba(118,185,0,0.08);">
+                    <p class="text-white text-lg font-bold">99.8%</p>
+                    <p class="text-white/40 text-xs">uptime</p>
+                  </div>
+                </div>
+              </div>
+
+              {# Mockup 3: Automation — workflow run #}
+              <div class="w-full flex-shrink-0 p-4">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <p class="text-white text-sm font-semibold">Workflow · invoice_processing</p>
+                    <p class="text-white/40 text-xs">Trigger: Email received · 0.4s elapsed</p>
+                  </div>
+                  <span class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#76b900] animate-pulse"></span> Live
+                  </span>
+                </div>
+                <div class="space-y-2.5">
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-white/70 text-xs">Extract invoice data (PDF parsed)</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-white/70 text-xs">Matched to PO #4821</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span class="text-white/70 text-xs">Routed for approval</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 rounded-lg" style="background:rgba(118,185,0,0.06); border:1px solid rgba(118,185,0,0.2);">
+                    <span class="w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#76b900] border-t-transparent animate-spin"></span>
+                    <span class="text-white/90 text-xs">Notifying approver via Slack…</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {# View all services #}
+    <div class="text-center mt-14">
+      <a href="/services/" class="inline-flex items-center gap-2 text-white/50 text-sm hover:text-white/80 transition-colors duration-200">
+        View all 9 services
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
 
   </div>
 </section>

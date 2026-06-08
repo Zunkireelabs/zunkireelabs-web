@@ -21,7 +21,7 @@ import searchSparkleData from '../icons/search-sparkle.json';
 import Lenis from 'lenis';
 
 // Import Three.js infinity loop
-import { initThreeInfinity } from './infinity-threejs.js';
+import { initThreeInfinity, initThreeInfinityZoom } from './infinity-threejs.js';
 
 // Expose GSAP globally so Alpine x-data can reference it
 window.gsap = gsap;
@@ -575,7 +575,39 @@ function boot() {
   initSearchIcon();
   initLogoMarquee();
   initInfinityLoop();
-  initThreeInfinity('infinity-three-canvas');
+  window.infinityLoop     = initThreeInfinity('infinity-three-canvas');
+  window.infinityLoopZoom = initThreeInfinityZoom('infinity-three-canvas-zoom');
+  initProductLottie();
+  initServiceHeroBlob();
+}
+
+// ─── Service hero blob — parallax down on scroll ─────────────────
+function initServiceHeroBlob() {
+  const blob = document.getElementById('service-hero-blob');
+  if (!blob) return;
+  gsap.to(blob, {
+    y: 180,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: blob.closest('section'),
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 1.2,
+    },
+  });
+}
+
+// ─── Product intro Lottie animation ─────────────────────────────
+function initProductLottie() {
+  const el = document.getElementById('lottie-product-intro');
+  if (!el) return;
+  lottie.loadAnimation({
+    container: el,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/assets/lottie/product-intro.json',
+  });
 }
 
 if (document.readyState === 'loading') {
