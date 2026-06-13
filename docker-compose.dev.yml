@@ -16,18 +16,23 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=hosting"
+      # NOTE: Traefik router/service names must be globally unique across ALL
+      # containers on the `hosting` network. The generic name "zunkiree-staging"
+      # collided with the zunkiree-search-api-staging container's router of the
+      # same name, which made Traefik drop both routes (dev-web served a 404).
+      # Keep these names project-specific (zunkiree-web-staging).
       # Staging domain (HTTPS)
-      - "traefik.http.routers.zunkiree-staging.rule=Host(`dev-web.zunkireelabs.com`)"
-      - "traefik.http.routers.zunkiree-staging.entrypoints=websecure"
-      - "traefik.http.routers.zunkiree-staging.tls=true"
-      - "traefik.http.routers.zunkiree-staging.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.zunkiree-web-staging.rule=Host(`dev-web.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
+      - "traefik.http.routers.zunkiree-web-staging.tls=true"
+      - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
       # HTTP to HTTPS redirect
-      - "traefik.http.routers.zunkiree-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
-      - "traefik.http.routers.zunkiree-staging-http.entrypoints=web"
-      - "traefik.http.routers.zunkiree-staging-http.middlewares=zunkiree-staging-redirect"
-      - "traefik.http.middlewares.zunkiree-staging-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
+      - "traefik.http.routers.zunkiree-web-staging-http.entrypoints=web"
+      - "traefik.http.routers.zunkiree-web-staging-http.middlewares=zunkiree-web-staging-redirect"
+      - "traefik.http.middlewares.zunkiree-web-staging-redirect.redirectscheme.scheme=https"
       # Service port
-      - "traefik.http.services.zunkiree-staging.loadbalancer.server.port=80"
+      - "traefik.http.services.zunkiree-web-staging.loadbalancer.server.port=80"
 
 networks:
   hosting:
