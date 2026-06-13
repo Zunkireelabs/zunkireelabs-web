@@ -8,6 +8,7 @@
     "cta": "Explore AI Dev",
     "url": "/services/ai-development/",
     "icon": "ai",
+    "mockup": "/assets/images/ai-development-hero.webp",
     "clients": [
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
       { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
@@ -23,6 +24,7 @@
     "cta": "Explore AI CX",
     "url": "/services/ai-customer-experience/",
     "icon": "chat",
+    "mockup": "/assets/images/ai-customer-experience-hero.webp",
     "clients": [
       { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
       { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
@@ -38,6 +40,7 @@
     "cta": "Explore AI Commerce",
     "url": "/services/ai-ecommerce/",
     "icon": "cart",
+    "mockup": "/assets/images/service-ai.webp",
     "clients": []
   },
   {
@@ -49,6 +52,7 @@
     "cta": "Explore Data Systems",
     "url": "/services/data-systems/",
     "icon": "data",
+    "mockup": "/assets/images/data-systems-hero.webp",
     "clients": [
       { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
       { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },
@@ -64,6 +68,7 @@
     "cta": "Explore Custom Dev",
     "url": "/services/custom-software/",
     "icon": "code",
+    "mockup": "/assets/images/custom-software-hero.webp",
     "clients": [
       { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" },
       { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
@@ -79,6 +84,7 @@
     "cta": "Explore SaaS Dev",
     "url": "/services/saas-development/",
     "icon": "cloud",
+    "mockup": "/assets/images/saas-development-hero.webp",
     "clients": [
       { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
@@ -94,6 +100,7 @@
     "cta": "Explore Web Dev",
     "url": "/services/web-development/",
     "icon": "globe",
+    "mockup": "/assets/images/web-development-hero.webp",
     "clients": [
       { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
       { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
@@ -109,6 +116,7 @@
     "cta": "Explore App Dev",
     "url": "/services/app-development/",
     "icon": "mobile",
+    "mockup": "/assets/images/service-mobile.webp",
     "clients": [
       { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
       { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
@@ -124,6 +132,7 @@
     "cta": "Explore AEO & SEO",
     "url": "/services/aeo-seo/",
     "icon": "search",
+    "mockup": "/assets/images/aeo-seo-hero.webp",
     "clients": [
       { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
       { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },

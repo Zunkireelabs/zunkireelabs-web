@@ -89,7 +89,7 @@ html.lenis body {
   /* Palette B · Horizon — sage glow (↙) + sky blue glow (↗) on deep navy */
   background-color: #0a1f2b;
   background-image:
-    radial-gradient(85% 110% at -4% 108%, rgba(144,169,89,.80) 0%, rgba(95,125,70,.28) 40%, transparent 65%),
+    radial-gradient(70% 85% at -6% 112%, rgba(144,169,89,.34) 0%, rgba(95,125,70,.12) 38%, transparent 60%),
     radial-gradient(75% 100% at 104% -2%, rgba(61,143,212,.80) 0%, rgba(30,85,150,.30) 42%, transparent 65%);
 }
 
@@ -937,7 +937,7 @@ html.lenis body {
     inset: 0;
     z-index: 1;
     background-image: var(--card-bg-img);
-    background-size: contain;
+    background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
     opacity: 0.45;
@@ -1180,4 +1180,19 @@ html {
   a {
     text-decoration: underline;
   }
+}
+
+/* =====================================================
+   INFINITY LOOP — ambient glow bed breathing pulse
+   ===================================================== */
+.infinity-glow-bed {
+  transform: translate(-50%, -50%) scale(1);
+  animation: infinityGlowPulse 6s ease-in-out infinite;
+}
+@keyframes infinityGlowPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.85; }
+  50%      { transform: translate(-50%, -50%) scale(1.07); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .infinity-glow-bed { animation: none; transform: translate(-50%, -50%); }
 }

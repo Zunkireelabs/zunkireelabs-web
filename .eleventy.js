@@ -55,6 +55,9 @@ export default function (eleventyConfig) {
     },
   });
 
+  // Allow access from local network (phones, tablets on same WiFi)
+  eleventyConfig.setServerOptions({ host: "0.0.0.0" });
+
   // Copy static assets with proper path mapping
   // Vite will process CSS through PostCSS/Tailwind during build
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });

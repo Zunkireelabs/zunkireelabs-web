@@ -7,7 +7,8 @@ export function initThreeInfinity(canvasId) {
   const container = canvas.parentElement;
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  // Slight supersample beyond DPR for crisper ribbon edges (capped for perf)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio * 1.5, 2.5));
   renderer.setClearColor(0x000000, 0);
 
   const scene  = new THREE.Scene();
@@ -15,7 +16,7 @@ export function initThreeInfinity(canvasId) {
   camera.position.set(0, 0.15, 4.7);
   camera.lookAt(0, 0, 0);
 
-  const S = 2.9;
+  const S = 2.65;
 
   class LemniscateCurve extends THREE.Curve {
     getPoint(t, target = new THREE.Vector3()) {
@@ -31,7 +32,9 @@ export function initThreeInfinity(canvasId) {
 
   const curve = new LemniscateCurve();
 
-  // ── Ribbon ────────────────────────────────────────────────────────────
+  // ── Ribbon (flat glassy band) ─────────────────────────────────────────
+  // Wide, thin rectangle extruded along the lemniscate → a flat ribbon that
+  // twists around the loop (ServiceNow look), NOT a round pipe.
   function makeRibbon(faceW, edgeT, steps) {
     const hw = faceW / 2, ht = edgeT / 2;
     const shape = new THREE.Shape();
@@ -43,17 +46,78 @@ export function initThreeInfinity(canvasId) {
     return geo;
   }
 
-  const mainGeom = makeRibbon(0.26, 0.05, 400);
+  const mainGeom = makeRibbon(0.50, 0.045, 520);
   const mainMat  = new THREE.ShaderMaterial({
-    uniforms: { uA: { value: new THREE.Color('#7ee8a2') }, uB: { value: new THREE.Color('#80deea') }, uHalf: { value: S } },
-    vertexShader:   `varying float vX; void main(){ vX=position.x; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
-    fragmentShader: `uniform vec3 uA,uB; uniform float uHalf; varying float vX;
-                     void main(){ float t=clamp((vX+uHalf)/(uHalf*2.0),0.0,1.0); gl_FragColor=vec4(mix(uA,uB,t),1.0); }`,
+    // uA = colour at loop centre, uB = colour at the outer extremes → blue/green/blue
+    uniforms: { uA: { value: new THREE.Color('#7ee8a2') }, uB: { value: new THREE.Color('#7cc6f5') }, uHalf: { value: S }, uTime: { value: 0 } },
+    vertexShader: `
+      varying float vX; varying vec3 vN; varying vec3 vV;
+      void main(){
+        vX = position.x;
+        vN = normalize(normalMatrix * normal);
+        vec4 mv = modelViewMatrix * vec4(position, 1.0);
+        vV = normalize(-mv.xyz);
+        gl_Position = projectionMatrix * mv;
+      }`,
+    fragmentShader: `
+      uniform vec3 uA, uB; uniform float uHalf; uniform float uTime;
+      varying float vX; varying vec3 vN; varying vec3 vV;
+      void main(){
+        // symmetric gradient: green-ish centre → blue outer extremes
+        float t = clamp(abs(vX) / uHalf, 0.0, 1.0);
+        t = smoothstep(0.0, 1.0, t);
+        vec3 base = mix(uA, uB, t);
+        vec3 N = normalize(vN);
+        vec3 V = normalize(vV);
+        vec3 L = normalize(vec3(0.12, 0.85, 0.5));         // fixed key light (stable body)
+        float diff  = clamp(dot(N, L), 0.0, 1.0);
+        vec3  H     = normalize(L + V);
+        float specB = pow(clamp(dot(N, H), 0.0, 1.0), 12.0); // broad soft sheen (stable)
+        // traveling glint — a second light slowly orbiting so a glass hotspot drifts around the loop
+        vec3  Ls    = normalize(vec3(0.65 * sin(uTime * 0.35), 0.72, 0.45 + 0.5 * cos(uTime * 0.35)));
+        vec3  Hs    = normalize(Ls + V);
+        float specT = pow(clamp(dot(N, Hs), 0.0, 1.0), 64.0); // tight traveling hotspot
+        float fres  = pow(1.0 - clamp(dot(N, V), 0.0, 1.0), 2.2); // edge rim
+        float sky   = 0.5 + 0.5 * N.y;                     // top-lit reflection gradient
+        vec3 col = base * (0.55 + 0.45 * diff);   // body shading
+        col += base * 0.18 * sky;                 // vertical glass sheen
+        col += base * fres * 1.05;                // colored glass edges
+        col += vec3(0.85, 0.95, 1.0) * specB * 0.28; // cool broad sheen
+        col += vec3(1.0) * specT * 0.95;          // white traveling glint
+        col = mix(col, col * 1.2 + vec3(0.05), fres * 0.9); // whiten glass rim
+        gl_FragColor = vec4(col, 1.0);
+      }`,
     side: THREE.DoubleSide,
   });
 
   const mainMesh = new THREE.Mesh(mainGeom, mainMat);
   scene.add(mainMesh);
+
+  // ── Outer glow — wider, softer ribbon shell, additive fresnel halo ─────
+  const glowGeom = makeRibbon(0.78, 0.30, 360);
+  const glowMat  = new THREE.ShaderMaterial({
+    // share colour uniforms with mainMat so tab changes recolour the glow too
+    uniforms: { uA: mainMat.uniforms.uA, uB: mainMat.uniforms.uB, uHalf: mainMat.uniforms.uHalf },
+    vertexShader: `
+      varying float vX; varying vec3 vN; varying vec3 vV;
+      void main(){
+        vX = position.x;
+        vN = normalize(normalMatrix * normal);
+        vec4 mv = modelViewMatrix * vec4(position, 1.0);
+        vV = normalize(-mv.xyz);
+        gl_Position = projectionMatrix * mv;
+      }`,
+    fragmentShader: `
+      uniform vec3 uA, uB; uniform float uHalf;
+      varying float vX; varying vec3 vN; varying vec3 vV;
+      void main(){
+        float t = clamp(abs(vX) / uHalf, 0.0, 1.0);
+        float fres = pow(1.0 - clamp(dot(normalize(vN), normalize(vV)), 0.0, 1.0), 1.7);
+        gl_FragColor = vec4(mix(uA, uB, t), fres * 0.52);
+      }`,
+    transparent: true, side: THREE.BackSide, depthWrite: false, blending: THREE.AdditiveBlending,
+  });
+  mainMesh.add(new THREE.Mesh(glowGeom, glowMat));
 
   // ── Starburst sprite texture (4-point lens-flare style) ───────────────
   function makeStarTexture(size = 128) {
@@ -308,7 +372,9 @@ export function initThreeInfinity(canvasId) {
     if (!visible) return;
 
     const t = clock.getElapsedTime();
-    mainMesh.rotation.y = Math.sin(t * 0.28) * 0.13;
+    // Static loop (no yaw) — sparkle trails provide the motion. Yaw was
+    // swinging the lobes past the canvas edges and clipping them.
+    mainMesh.rotation.y = 0;
 
     // Smooth color transition across ribbon and trails
     if (colorStartTime >= 0 && colorTarget && colorFrom) {
@@ -322,6 +388,7 @@ export function initThreeInfinity(canvasId) {
     }
 
     headMat.uniforms.uTime.value = t;
+    mainMat.uniforms.uTime.value = t;
 
     // Twinkle ✦ HTML stars — gentle independent fade in/out, no glow
     starEls.forEach(({ el, phase }) => {

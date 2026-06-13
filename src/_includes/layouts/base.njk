@@ -46,7 +46,7 @@
 
   <!-- Preload Critical Resources for LCP -->
   {% if page.url == "/" %}
-  <link rel="preload" href="/assets/images/hero-orca-dashboard.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high" media="(min-width:1024px)">
   {% elif heroImage %}
   <link rel="preload" href="{{ heroImage }}" as="image" fetchpriority="high">
   {% endif %}
