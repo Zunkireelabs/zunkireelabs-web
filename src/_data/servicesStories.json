@@ -12,18 +12,6 @@
     "ctaUrl": "/resources/admizz-case-study/"
   },
   {
-    "id": "carbon-spark",
-    "name": "Carbon Spark",
-    "logo": "/images/clients/carbon-spark.webp",
-    "stat": "3x",
-    "statLabel": "faster time to market",
-    "headline": "Carbon Spark accelerates SaaS deployment",
-    "description": "Carbon Spark partnered with us to build their SaaS platform from the ground up, launching to market in record time with a scalable architecture.",
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-    "ctaText": "Read the case study",
-    "ctaUrl": "/resources/carbon-spark-case-study/"
-  },
-  {
     "id": "corecloud365",
     "name": "CoreCloud365",
     "logo": "/images/clients/corecloud365.webp",

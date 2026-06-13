@@ -11,7 +11,6 @@
     "mockup": "/assets/images/ai-development-hero.webp",
     "clients": [
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
       { "name": "Admizz", "logo": "/images/clients/admizz.webp" }
     ]
   },
@@ -86,7 +85,6 @@
     "icon": "cloud",
     "mockup": "/assets/images/saas-development-hero.webp",
     "clients": [
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" },
       { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
       { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" }
     ]
@@ -119,8 +117,7 @@
     "mockup": "/assets/images/service-mobile.webp",
     "clients": [
       { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
-      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
-      { "name": "Carbon Spark", "logo": "/images/clients/carbon-spark.webp" }
+      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" }
     ]
   },
   {
