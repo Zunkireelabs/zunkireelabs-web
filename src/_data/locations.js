@@ -161,7 +161,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ]
+        ],
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
   }
     },
     reviewSchema: {

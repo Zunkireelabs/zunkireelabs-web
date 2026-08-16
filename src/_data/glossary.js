@@ -162,7 +162,8 @@ export default [
     shortDef: "An AI model's ability to perform tasks it wasn't explicitly trained on, without examples.",
     definition: "Zero-shot learning refers to an AI model's ability to perform tasks it wasn't explicitly trained on, without being given examples. Modern large language models exhibit strong zero-shot capabilities—you can ask them to translate, summarize, or classify text without fine-tuning. This contrasts with traditional machine learning, which required task-specific training data. Zero-shot capability makes LLMs versatile tools, though performance often improves with examples (few-shot) or fine-tuning.",
     relatedService: "ai-development",
-    category: "AI Training"
+    category: "AI Training",
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "few-shot-learning",

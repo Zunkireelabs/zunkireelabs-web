@@ -69,7 +69,7 @@ Complex availability isn't a scheduling edge case — it's the default reality f
       <div class="divide-y divide-gray-200">
         <div class="py-5">
           <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is complex availability in scheduling?</span>
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What are the key components that make scheduling complex?</span>
             <span class="flex-shrink-0 text-gray-400">
               <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -77,12 +77,12 @@ Complex availability isn't a scheduling edge case — it's the default reality f
             </span>
           </button>
           <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Complex availability is a booking scenario where multiple resources — such as a provider, a room, and equipment — need to be free at the same time, rather than a single calendar simply being free or busy.</p>
+            <p class="pt-4 text-gray-600 leading-relaxed">Scheduling becomes complex when it involves multiple resources per booking, varying appointment durations, stakeholder preferences, and the potential for cascading changes. Each of these factors complicates the need to align multiple calendars and constraints simultaneously.</p>
           </div>
         </div>
         <div class="py-5">
           <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Why can't a basic calendar app handle complex availability?</span>
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Why do simple calendar tools struggle with complex availability?</span>
             <span class="flex-shrink-0 text-gray-400">
               <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -90,12 +90,12 @@ Complex availability isn't a scheduling edge case — it's the default reality f
             </span>
           </button>
           <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Basic calendar tools are built to check one resource at a time. Complex availability requires matching several resources and constraints together, which is a matching problem, not a simple lookup.</p>
+            <p class="pt-4 text-gray-600 leading-relaxed">Simple calendar tools typically operate on a basic free/busy grid, which is insufficient for handling intricate scenarios where multiple resources need to be coordinated. They fail to address the compounded challenges posed by combining providers, rooms, and equipment, among other constraints.</p>
           </div>
         </div>
         <div class="py-5">
           <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does Zenly AI Booking Engine handle multi-resource bookings?</span>
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How do AI-powered systems like Zenly resolve complex scheduling issues?</span>
             <span class="flex-shrink-0 text-gray-400">
               <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -103,12 +103,12 @@ Complex availability isn't a scheduling edge case — it's the default reality f
             </span>
           </button>
           <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zenly evaluates provider, resource, and timing constraints together and automatically resolves conflicts, using natural language to understand booking requests instead of rigid forms.</p>
+            <p class="pt-4 text-gray-600 leading-relaxed">AI-powered systems like Zenly approach scheduling as a constraint-satisfaction problem, checking the availability of providers, resources, and buffer requirements all at once. This allows them to automatically resolve conflicts instead of requiring manual intervention.</p>
           </div>
         </div>
         <div class="py-5">
           <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Does solving complex availability also reduce no-shows?</span>
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is the difference between simple and complex availability in scheduling?</span>
             <span class="flex-shrink-0 text-gray-400">
               <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -116,7 +116,20 @@ Complex availability isn't a scheduling edge case — it's the default reality f
             </span>
           </button>
           <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Yes — Zenly pairs complex availability handling with AI-powered reminders, which together reduce no-show rates by an average of 35%.</p>
+            <p class="pt-4 text-gray-600 leading-relaxed">Simple availability answers whether a time slot is free, while complex availability involves multiple simultaneous conditions—such as specific providers, equipped rooms, and stakeholder preferences—making it a multifaceted problem that requires sophisticated solutions.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What happens when there is a cancellation in a complex availability scenario?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">A single cancellation or reschedule in a complex availability setting can have a ripple effect, freeing up or blocking multiple downstream slots across various resources, complicating the scheduling process further compared to managing a single calendar entry.</p>
           </div>
         </div>
       </div>

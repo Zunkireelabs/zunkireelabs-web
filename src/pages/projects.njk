@@ -179,3 +179,84 @@ permalink: /projects/
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"AI & Software Projects | Case Studies | Zunkiree Labs","articleBody":"Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call Our Work Projects that deliver results Explore our port"}</script><!-- SEOAI:SCHEMA:END -->
+
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What types of projects does Zunkiree Labs focus on?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs focuses on a variety of AI and software projects, including healthcare, SaaS, e-commerce, fintech, mobile apps, and education, each designed to deliver results and enhance user experience.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Can you provide an example of a healthcare project by Zunkiree Labs?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">One example is Avantra, an AI-powered dental clinic management system that includes advanced analytics, appointment scheduling, and patient management features.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What technology stack is used in the BlueShark project?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The BlueShark project uses Vue.js for the frontend, Python for the backend, and PostgreSQL for the database to create a production management system for manufacturing operations.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does StyleHub enhance the e-commerce experience?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">StyleHub enhances the e-commerce experience by incorporating AI-powered product recommendations and providing a seamless checkout experience, utilizing technologies like Next.js and Stripe.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is the focus of the industry case studies mentioned in the page?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">The industry case studies focus on analyzing the impact of AI in various sectors, providing insights into AI adoption trends and their effects on business performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What types of projects does Zunkiree Labs focus on?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs focuses on a variety of AI and software projects, including healthcare, SaaS, e-commerce, fintech, mobile apps, and education, each designed to deliver results and enhance user experience.","@type":"Answer"}},{"name":"Can you provide an example of a healthcare project by Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"One example is Avantra, an AI-powered dental clinic management system that includes advanced analytics, appointment scheduling, and patient management features.","@type":"Answer"}},{"name":"What technology stack is used in the BlueShark project?","@type":"Question","acceptedAnswer":{"text":"The BlueShark project uses Vue.js for the frontend, Python for the backend, and PostgreSQL for the database to create a production management system for manufacturing operations.","@type":"Answer"}},{"name":"How does StyleHub enhance the e-commerce experience?","@type":"Question","acceptedAnswer":{"text":"StyleHub enhances the e-commerce experience by incorporating AI-powered product recommendations and providing a seamless checkout experience, utilizing technologies like Next.js and Stripe.","@type":"Answer"}},{"name":"What is the focus of the industry case studies mentioned in the page?","@type":"Question","acceptedAnswer":{"text":"The industry case studies focus on analyzing the impact of AI in various sectors, providing insights into AI adoption trends and their effects on business performance.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->

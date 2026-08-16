@@ -293,7 +293,7 @@ The key is matching your specific needs—technical requirements, communication 
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs Team","@type":"Organization"},"@context":"https://schema.org","headline":"AI Companies in Nepal: Current Leaders and Innovations","articleBody":"A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond. Nepal's AI industry has grown significantly over the past five years. What started as a handful of companies experimenting with machine learning has evolved into a thriving ecosystem of AI-focused firms serving both local and international clients. In 2026, Nepali AI companies are building everything from natural language processing systems to computer vision applications, competing effectively with global players while offering cost advantages and specialized expertise.","dateModified":"2026-03-30","datePublished":"2026-03-30"}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
 <!-- SEOAI:QACONTENT:START --><div class="qa-content">
   <details>
     <summary><h3>What types of AI solutions are companies in Nepal focusing on?</h3></summary>

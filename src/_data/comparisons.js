@@ -98,7 +98,8 @@ export default [
       "@type": "WebPage",
       "@context": "https://schema.org",
       "description": "Zunkiree Search is a fully managed, AI-native SaaS with built-in LLM and RAG, natural-language querying, and automatic scaling — set up in hours with zero ongoing ops. Elasticsearch is self-hosted or Elastic Cloud, requires custom AI integration and manual cluster management, and takes days to weeks to set up. Choose Zunkiree Search for AI-powered search without the operational burden; choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
-    }
+    },
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "zunkiree-vs-typesense",
@@ -157,7 +158,8 @@ export default [
         "@type": "Product",
         "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
       }
-    }
+    },
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Last Updated</h3>\n      <p class=\"text-gray-600 leading-relaxed\">This page was last updated on 2026-08-16.</p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
@@ -211,6 +213,15 @@ export default [
     },
     verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
     ctaProduct: "ai-commerce-agent",
-    ctaService: "ai-ecommerce"
+    ctaService: "ai-ecommerce",
+    reviewSchema: {
+      "@type": "Review",
+      "@context": "https://schema.org",
+      "reviewBody": "Comparison Agentic Commerce vs Traditional Ecommerce Compare agentic commerce with traditional ecommerce. See how AI agents transform online shopping from self-service browsing to autonomous purchasing. Feature comparison Feature Zunkiree Search Traditional Ecommerce Product Discovery Conversational: 'Find me a laptop for coding under NPR 150k' Browse categories, filters, search keywords Comparison Shopping AI compares across platforms automatically Manual tab-by-tab comparison Decision Making AI recommends based on preferences Customer analyzes all options alone Checkout Process Agent completes purchase autonomously Manual form filling and payment Personalization Context-aware, learns preferences Rule-based recommendations Customer Support Proactive AI assistance throughout Reactive helpdesk after issues Cart Abandonment Significantly reduced ~70% average abandonment rate Multi-platform Searches Daraz, local stores, brands Limited to single storefront Payment Integration Intelligent routing (eSewa, Khalti, cards) Customer selects payment method Language Support Natural Nepali + English queries Interface language only Zunkiree Search AI-native search that provides answers AI handles entire buying journey Natural language product discovery Autonomous cross-platform comparison Proactive support and recommendations Reduced cart abandonment 24/7 intelligent assistance T Traditional Ecommerce Standard online shopping with manual browsing, comparison, and checkout Strengths Familiar user experience Full customer control over decisions Established platforms (Shopify, WooCommerce) Wide payment gateway support No AI dependency Limitations High cart abandonment (70%+) Decision fatigue for customers Manual comparison is time-consuming Limited personalization Reactive customer support only When to choose each Choose Zunkiree Search when: Businesses wanting to reduce friction, increase conversions, and provide AI-powered shopping experiences. Ideal for Nepal market with eSewa/Khalti integration. Choose Traditional Ecommerce when: Businesses with simple product catalogs where customers prefer full control over browsing and purchasing decisions. Our verdict Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog. Ready to try Zunkiree Search? See how AI-native search can transform your customer experience. Explore Zunkiree Search Talk to Sales Other comparisons Zunkiree Search vs Algolia Zunkiree Search vs Elasticsearch Zunkiree Search vs Typesense",
+      "itemReviewed": {
+        "name": "Agentic Commerce vs Traditional Ecommerce | Search Comparison | Zunkiree Labs",
+        "@type": "WebPage"
+      }
+    }
   }
 ];

@@ -871,31 +871,25 @@
     ],
 
     "resources": [
-      {
-        "title": "Getting Started",
-        "description": "Set up your CRM in 30 minutes",
-        "url": "/docs/crm/quickstart/",
-        "icon": "book"
-      },
-      {
-        "title": "Import Guide",
-        "description": "Migrate from Salesforce, HubSpot, etc.",
-        "url": "/docs/crm/migration/",
-        "icon": "code"
-      },
-      {
-        "title": "Sales Playbooks",
-        "description": "Best practices for sales teams",
-        "url": "/resources/crm-playbooks/",
-        "icon": "briefcase"
-      },
-      {
-        "title": "API Reference",
-        "description": "Build custom integrations",
-        "url": "/docs/crm/api/",
-        "icon": "terminal"
-      }
-    ],
+    {
+      "title": "Import Guide",
+      "description": "Migrate from Salesforce, HubSpot, etc.",
+      "url": "/docs/crm/migration/",
+      "icon": "code"
+    },
+    {
+      "title": "Sales Playbooks",
+      "description": "Best practices for sales teams",
+      "url": "/resources/crm-playbooks/",
+      "icon": "briefcase"
+    },
+    {
+      "title": "API Reference",
+      "description": "Build custom integrations",
+      "url": "/docs/crm/api/",
+      "icon": "terminal"
+    }
+  ],
 
     "faq": [
       {

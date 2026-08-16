@@ -43,3 +43,84 @@ We may update these Terms of Service from time to time. Continued use of the web
 ## Contact
 
 If you have questions regarding these Terms of Service, please contact us using the information provided on our Contact page.
+
+<!-- SEOAI:QACONTENT:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
+        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
+        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What should I do if I don't agree with the Terms of Service?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">If you do not agree with these terms, you should discontinue use of the Zunkiree Labs website.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Are there restrictions on how I can use the Zunkiree Labs website?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Yes, you may only use this website for lawful purposes and agree not to misuse, interfere with, or attempt unauthorized access to any part of the website or its services.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What content is protected under intellectual property laws on this website?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">All content on the Zunkiree Labs website—including text, graphics, logos, software, and other materials—is owned by Zunkiree Labs or its licensors and is protected by applicable intellectual property laws.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is the liability of Zunkiree Labs regarding website use?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">To the fullest extent permitted by law, Zunkiree Labs shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from your use of this website.</p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
+            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How will I know if the Terms of Service have been updated?</span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs may update these Terms of Service from time to time, and continued use of the website after changes become effective constitutes acceptance of the revised Terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What should I do if I don't agree with the Terms of Service?","@type":"Question","acceptedAnswer":{"text":"If you do not agree with these terms, you should discontinue use of the Zunkiree Labs website.","@type":"Answer"}},{"name":"Are there restrictions on how I can use the Zunkiree Labs website?","@type":"Question","acceptedAnswer":{"text":"Yes, you may only use this website for lawful purposes and agree not to misuse, interfere with, or attempt unauthorized access to any part of the website or its services.","@type":"Answer"}},{"name":"What content is protected under intellectual property laws on this website?","@type":"Question","acceptedAnswer":{"text":"All content on the Zunkiree Labs website—including text, graphics, logos, software, and other materials—is owned by Zunkiree Labs or its licensors and is protected by applicable intellectual property laws.","@type":"Answer"}},{"name":"What is the liability of Zunkiree Labs regarding website use?","@type":"Question","acceptedAnswer":{"text":"To the fullest extent permitted by law, Zunkiree Labs shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from your use of this website.","@type":"Answer"}},{"name":"How will I know if the Terms of Service have been updated?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs may update these Terms of Service from time to time, and continued use of the website after changes become effective constitutes acceptance of the revised Terms.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
