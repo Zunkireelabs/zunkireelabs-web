@@ -276,98 +276,20 @@ permalink: /careers/
     </div>
   </div>
 </section>
-<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
-        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is Zunkiree Search?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can I start using Zunkiree Search?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">You can start a free trial to see how AI search delivers direct answers instead of links.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What types of AI agents does Zunkiree offer?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree offers AI agents for various tasks, including e-commerce buying journeys with the Stella AI Commerce Agent and intelligent scheduling with the Zenly AI Booking Engine.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is Agentic as a Service (GaaS)?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Can Zunkiree help with customer support?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Yes, Zunkiree claims to reduce support tickets by 45% using AI.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What industries does Zunkiree cater to?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 6 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 6 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree serves a variety of industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers.","@type":"Answer"}},{"name":"How can I start using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can start a free trial to see how AI search delivers direct answers instead of links.","@type":"Answer"}},{"name":"What types of AI agents does Zunkiree offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree offers AI agents for various tasks, including e-commerce buying journeys with the Stella AI Commerce Agent and intelligent scheduling with the Zenly AI Booking Engine.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services.","@type":"Answer"}},{"name":"Can Zunkiree help with customer support?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree claims to reduce support tickets by 45% using AI.","@type":"Answer"}},{"name":"What industries does Zunkiree cater to?","@type":"Question","acceptedAnswer":{"text":"Zunkiree serves a variety of industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><dl class="container-custom py-12 md:py-20">
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What is Zunkiree Search?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">How can I start using Zunkiree Search?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">You can start a free trial to see how AI search delivers direct answers instead of links.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What types of AI agents does Zunkiree offer?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree offers AI agents for various tasks, including e-commerce buying journeys with the Stella AI Commerce Agent and intelligent scheduling with the Zenly AI Booking Engine.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What is Agentic as a Service (GaaS)?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">Can Zunkiree help with customer support?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Yes, Zunkiree claims to reduce support tickets by 45% using AI.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What industries does Zunkiree cater to?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree serves a variety of industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p></dd>
+</dl><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers.","@type":"Answer"}},{"name":"How can I start using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can start a free trial to see how AI search delivers direct answers instead of links.","@type":"Answer"}},{"name":"What types of AI agents does Zunkiree offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree offers AI agents for various tasks, including e-commerce buying journeys with the Stella AI Commerce Agent and intelligent scheduling with the Zenly AI Booking Engine.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services.","@type":"Answer"}},{"name":"Can Zunkiree help with customer support?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree claims to reduce support tickets by 45% using AI.","@type":"Answer"}},{"name":"What industries does Zunkiree cater to?","@type":"Question","acceptedAnswer":{"text":"Zunkiree serves a variety of industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Zunkiree Labs: AI & Software Engineering Careers in Nepal","articleBody":"Careers Build the future with us We're building AI-native platforms that transform how businesses interact with their data. Join our team and work on challenging problems with smart, passionate people. Why Zunkiree Labs? We believe great work comes from empowered teams working on meaningful problems. Cutting-edge Technology Work with the latest in AI, machine learning, and distributed systems. We're solving problems at the frontier of what's possible. Collaborative Culture Small teams, big impact. Everyone's voice matters and we make decisions together. No bureaucracy, just building. Remote-first Work from anywhere. We're a distributed team that values outcomes over hours. Flexible schedules that fit your life. Competitive Compensation Salary, equity, and benefits that reflect your value. We invest in our people because they're our greatest asset. Growth & Learning Conference budgets, learning stipends, and mentorship. We're committed to helping you grow your career. Health & Wellness Comprehensive health coverage, mental health support, and wellness programs. Your wellbeing comes first. Open Positions Join our team We're always looking for talented people to join us. Check out our open roles below. Senior Full-Stack Engineer Remote Engineering Full-time Apply Now Machine Learning Engineer Remote Engineering Full-time Apply Now Product Designer Remote Design Full-time Apply Now DevOps Engineer Remote Engineering Full-time Apply Now Don't see a role that fits? We're always interested in meeting talented people. Send us your resume and tell us how you'd like to contribute. Get in Touch Ready to make an impact? Join us in building AI-native platforms that transform how businesses work with data. View Open Roles → Learn About Us Frequently asked questions What is Zunkiree Search? Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers. How can I start using Zunkiree Search? You can start a free trial to see how AI search delivers direct answers instead of links. What types of AI agents does Zunkiree offer? Zunkiree offers AI agents for various tasks, including e-commerce buying journeys with the Stella AI Commerce Agent and intelligent scheduling with the Zenly AI Booking Engine. What is Agentic as a Service (GaaS)? Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services. Can Zunkiree help with customer support? Yes, Zunkiree claims to reduce support tickets by 45% using AI. What industries does Zunkiree cater to? Zunkiree serves a variety of industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources."}</script><!-- SEOAI:SCHEMA:END -->
 
