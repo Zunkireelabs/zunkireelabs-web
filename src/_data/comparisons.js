@@ -48,7 +48,7 @@ export default [
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
     verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">References</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p></div>\n  </section>\n</div>"
   },
   {
     id: "zunkiree-vs-elasticsearch",
@@ -94,7 +94,7 @@ export default [
       competitor: "Engineering teams with DevOps resources who need full control over search infrastructure and complex custom queries."
     },
     verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control.",
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-elasticsearch/\">Zunkiree Search vs Elasticsearch | Search Comparison</a>\n<a href=\"https://zunkireelabs.com/products/search/\">AI-Native Search &amp; Interaction Solutions</a>\n<a href=\"https://www.elastic.co/enterprise-search\">The open source engine for high-performance search, ...</a></p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">References</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-elasticsearch/\">Zunkiree Search vs Elasticsearch | Search Comparison</a>\n<a href=\"https://zunkireelabs.com/products/search/\">AI-Native Search &amp; Interaction Solutions</a>\n<a href=\"https://www.elastic.co/enterprise-search\">The open source engine for high-performance search, ...</a></p></div>\n  </section>\n</div>"
   },
   {
     id: "zunkiree-vs-typesense",
@@ -154,7 +154,7 @@ export default [
         "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
       }
     },
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Last Updated</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><p>This page was last updated on 2026-09-01.</p></div>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Last Updated</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>This page was last updated on 2026-09-01.</p></div>\n  </section>\n</div>"
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
@@ -209,6 +209,6 @@ export default [
     verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
     ctaProduct: "ai-commerce-agent",
     ctaService: "ai-ecommerce",
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   }
 ];

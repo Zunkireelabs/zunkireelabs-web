@@ -911,113 +911,32 @@ permalink: /
 
 
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Industries We Serve</h3>
-      <p class="text-gray-600 leading-relaxed">Zunkiree Labs provides AI infrastructure solutions across a variety of sectors, including healthcare, manufacturing, legal, professional services, education, and human resources. This diverse industry focus ensures that our AI-native architecture is adaptable and effective for different challenges and needs. By tailoring solutions specific to each industry, we help organizations enhance their operational efficiency and drive innovation. Businesses can benefit from our specialized knowledge in the nuances of their respective fields, making it easier to implement effective AI strategies.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Real-World Applications of Our AI Solutions</h3>
-      <p class="text-gray-600 leading-relaxed">Our AI solutions have demonstrated measurable impacts across various use cases. For example, in the healthcare sector, our AI-powered support systems have been instrumental in enhancing patient engagement by providing instant responses to inquiries. Similarly, in e-commerce, our agentic commerce systems facilitate smoother transactions and personalized experiences for customers. These real-world applications underline how our infrastructure-level AI systems not only optimize processes but also contribute to improved customer satisfaction across different industries.</p>
-    </div>
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Client Success Stories</h3>
-      <p class="text-gray-600 leading-relaxed">At Zunkiree Labs, we pride ourselves on partnering with forward-thinking organizations to transform their operations through AI infrastructure. Our case studies highlight how innovative companies have harnessed our services to achieve significant milestones. For instance, one client in the manufacturing space successfully automated their workflows with our tailored data systems, resulting in a 30% increase in operational efficiency. Through our client success stories, potential partners can see tangible evidence of the impact our AI solutions have on driving business growth.</p>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+  <section class="gap-3">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Industries We Serve</h2>
+    <div class="text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">Zunkiree Labs provides AI infrastructure solutions across a variety of sectors, including healthcare, manufacturing, legal, professional services, education, and human resources. This diverse industry focus ensures that our AI-native architecture is adaptable and effective for different challenges and needs. By tailoring solutions specific to each industry, we help organizations enhance their operational efficiency and drive innovation. Businesses can benefit from our specialized knowledge in the nuances of their respective fields, making it easier to implement effective AI strategies.</p></div>
+  </section>
+  <section class="gap-3">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Real-World Applications of Our AI Solutions</h2>
+    <div class="text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">Our AI solutions have demonstrated measurable impacts across various use cases. For example, in the healthcare sector, our AI-powered support systems have been instrumental in enhancing patient engagement by providing instant responses to inquiries. Similarly, in e-commerce, our agentic commerce systems facilitate smoother transactions and personalized experiences for customers. These real-world applications underline how our infrastructure-level AI systems not only optimize processes but also contribute to improved customer satisfaction across different industries.</p></div>
+  </section>
+  <section class="gap-3">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Client Success Stories</h2>
+    <div class="text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">At Zunkiree Labs, we pride ourselves on partnering with forward-thinking organizations to transform their operations through AI infrastructure. Our case studies highlight how innovative companies have harnessed our services to achieve significant milestones. For instance, one client in the manufacturing space successfully automated their workflows with our tailored data systems, resulting in a 30% increase in operational efficiency. Through our client success stories, potential partners can see tangible evidence of the impact our AI solutions have on driving business growth.</p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
-<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900">Frequently asked questions</h3>
-        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What types of products does Zunkiree Labs offer?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How does Zunkiree Labs approach AI development?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What industries does Zunkiree Labs serve?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What advantages do Zunkiree's AI-powered customer experience solutions offer?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Can Zunkiree Labs help with SaaS development?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What expertise does Zunkiree Labs provide in data engineering?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 6 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 6 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What types of products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.","@type":"Answer"}},{"name":"How does Zunkiree Labs approach AI development?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}},{"name":"What advantages do Zunkiree's AI-powered customer experience solutions offer?","@type":"Question","acceptedAnswer":{"text":"Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.","@type":"Answer"}},{"name":"Can Zunkiree Labs help with SaaS development?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.","@type":"Answer"}},{"name":"What expertise does Zunkiree Labs provide in data engineering?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><dl class="container-custom py-12 md:py-20">
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What types of products does Zunkiree Labs offer?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">How does Zunkiree Labs approach AI development?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What industries does Zunkiree Labs serve?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What advantages do Zunkiree's AI-powered customer experience solutions offer?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">Can Zunkiree Labs help with SaaS development?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.</p></dd>
+  <dt class="text-2xl md:text-3xl font-normal text-gray-900">What expertise does Zunkiree Labs provide in data engineering?</dt>
+  <dd class="text-gray-600 leading-relaxed gap-3"><p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.</p></dd>
+</dl><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What types of products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.","@type":"Answer"}},{"name":"How does Zunkiree Labs approach AI development?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}},{"name":"What advantages do Zunkiree's AI-powered customer experience solutions offer?","@type":"Question","acceptedAnswer":{"text":"Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.","@type":"Answer"}},{"name":"Can Zunkiree Labs help with SaaS development?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.","@type":"Answer"}},{"name":"What expertise does Zunkiree Labs provide in data engineering?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->

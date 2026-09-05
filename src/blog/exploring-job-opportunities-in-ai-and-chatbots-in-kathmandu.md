@@ -50,15 +50,11 @@ Summarize the opportunities and encourage readers to consider a career in AI and
 - [State of AI in Nepal](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/)
 - [AI Resources](https://zunkireelabs.com/resources/)
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">References</h3>
-      <div class="text-gray-600 leading-relaxed"><p><a href="https://zunkireelabs.com/blog/exploring-job-opportunities-in-ai-and-chatbots-in-kathmandu">Exploring Job Opportunities in AI and Chatbots in Kathmandu</a>  
-<a href="https://www.kumarijob.com/blog/career-resources/scope-of-artificial-intelligence-in-nepal">Scope of Artificial Intelligence: AI Opportunities in Nepal</a></p></div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>References</h2>
+<p><a href="https://zunkireelabs.com/blog/exploring-job-opportunities-in-ai-and-chatbots-in-kathmandu">Exploring Job Opportunities in AI and Chatbots in Kathmandu</a>  
+<a href="https://www.kumarijob.com/blog/career-resources/scope-of-artificial-intelligence-in-nepal">Scope of Artificial Intelligence: AI Opportunities in Nepal</a></p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:QACONTENT:START --><div>
 <h3>What are the current job market trends for AI and chatbots in Kathmandu?</h3>
 <p>The current job market for AI and chatbots in Kathmandu is experiencing significant growth, with rising demand highlighted by statistics and trends that underscore the expanding opportunities in this sector.</p>

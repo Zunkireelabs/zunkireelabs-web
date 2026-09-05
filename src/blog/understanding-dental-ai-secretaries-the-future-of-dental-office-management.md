@@ -35,14 +35,10 @@ An AI secretary works best as a layer on top of existing practice management sof
 
 A dental AI secretary doesn't change what a dental practice does — it changes who's doing the repetitive parts of it. The routine 80% of front-desk communication (confirmations, reminders, basic questions, rescheduling) gets handled automatically and consistently, freeing staff for the 20% that actually needs a person. If you're weighing whether this fits your practice, [see how Dental AI Assistant works](/products/dental-ai/) or [talk to our team](/contact/) about what a rollout would look like for your office.
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 last:mb-0">
-      <h3 class="text-xl md:text-2xl font-normal text-gray-900 mb-3">Comparing Dental AI Secretary Solutions</h3>
-      <div class="text-gray-600 leading-relaxed"><p>When considering dental AI secretary solutions, it's important to evaluate key features and effectiveness against other options available. Below are some points of comparison to help dental practices make informed decisions.</p></div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><div>
+<h2>Comparing Dental AI Secretary Solutions</h2>
+<p>When considering dental AI secretary solutions, it's important to evaluate key features and effectiveness against other options available. Below are some points of comparison to help dental practices make informed decisions.</p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a dental AI secretary?","@type":"Question","acceptedAnswer":{"text":"A dental AI secretary is software that handles routine front-desk tasks for a dental practice — scheduling, reminders, and common patient questions about pricing, insurance, and hours — freeing staff to focus on in-office patients.","@type":"Answer"}},{"name":"What tasks does a dental AI secretary handle?","@type":"Question","acceptedAnswer":{"text":"It handles always-on patient communication, intelligent appointment scheduling that accounts for treatment duration and provider availability, automated reminders and recall notifications, and prompting satisfied patients for reviews.","@type":"Answer"}},{"name":"How much time can a dental AI secretary save a practice?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs' Dental AI Assistant reclaims 15+ hours of administrative time per week and resolves about 90% of routine patient questions without staff involvement.","@type":"Answer"}},{"name":"Does a dental AI secretary reduce no-shows?","@type":"Question","acceptedAnswer":{"text":"Yes — smarter, better-timed automated reminders reduce no-shows by an average of 35% for practices using Dental AI Assistant.","@type":"Answer"}},{"name":"Does an AI secretary replace front-desk staff?","@type":"Question","acceptedAnswer":{"text":"No. It's designed to absorb routine, repetitive communication so staff can focus on patients in the office and on cases that genuinely need human judgment, such as clinical questions or complex insurance issues.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:QACONTENT:START --><div>
