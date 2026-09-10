@@ -5,18 +5,18 @@ export default [
     region: "Bagmati Province",
     country: "Nepal",
     countryCode: "NP",
-    isHeadquarters: true,
+    isHeadquarters: false,
 
     // SEO metadata
     title: "Zunkiree Labs - Expert AI Solutions in Kathmandu",
     description: "Explore Zunkiree Labs in Kathmandu for AI development services, including custom AI systems, intelligent chatbots, and data solutions tailored for businesses.",
 
     // Location content
-    intro: "Zunkiree Labs is headquartered in Kathmandu, Nepal's capital and technology hub. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally.",
+    intro: "Zunkiree Labs serves Kathmandu, Nepal's capital and technology hub, with our team headquartered nearby in Sanepa, Lalitpur. Our AI engineers and software developers build production-grade AI systems for businesses across Nepal and globally.",
 
     content: `Kathmandu is the center of Nepal's growing technology industry, home to thousands of software engineers and a rapidly expanding AI ecosystem. As one of Kathmandu's pioneering AI companies, Zunkiree Labs combines deep technical expertise with local market knowledge to deliver AI solutions that work.
 
-Our Kathmandu office serves as the headquarters for all operations, housing our core engineering team, project management, and client services. From here, we've delivered AI systems to clients across healthcare, finance, manufacturing, and professional services.
+Our headquarters in Sanepa, Lalitpur — just minutes from Kathmandu — houses our core engineering team, project management, and client services. From there, we've delivered AI systems to clients across healthcare, finance, manufacturing, and professional services.
 
 Working with a Kathmandu-based AI company offers distinct advantages: competitive rates compared to US or European firms, a large pool of English-speaking engineers, and time zone overlap with both Asian and European markets.`,
 
@@ -47,7 +47,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     faqs: [
       {
         question: "Where is Zunkiree Labs located in Kathmandu?",
-        answer: "Zunkiree Labs is headquartered in Thamel, Kathmandu, Nepal's capital city. Our office is easily accessible from major business districts and we serve clients both locally and internationally."
+        answer: "Zunkiree Labs is headquartered in Sanepa, Lalitpur, just minutes from Kathmandu, Nepal's capital city. Our Kathmandu team is easily accessible from major business districts and we serve clients both locally and internationally."
       },
       {
         question: "Do you work with international clients from Kathmandu?",
@@ -63,7 +63,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       },
       {
         question: "What industries do you serve from Kathmandu?",
-        answer: "From our Kathmandu headquarters, we serve clients across healthcare, financial services, manufacturing, education, legal, and professional services sectors—both in Nepal and internationally."
+        answer: "From Kathmandu and our headquarters in nearby Sanepa, Lalitpur, we serve clients across healthcare, financial services, manufacturing, education, legal, and professional services sectors—both in Nepal and internationally."
       }
     ],
 
@@ -163,14 +163,15 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ]
+        ],
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   }
     },
     reviewSchema: {
     "@type": "Article",
     "@context": "https://schema.org",
     "headline": "Zunkiree Labs - Expert AI Solutions in Kathmandu",
-    "articleBody": "Headquarters AI Development in Kathmandu Zunkiree Labs is headquartered in Kathmandu, Nepal's capital and technology hub. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally. Contact Us View Services Contact Information Kathmandu, Nepal +977-9849839728 contact@zunkireelabs.com Business Hours Monday - Friday 9:00 AM - 6:00 PM Saturday 10:00 AM - 4:00 PM Sunday Closed About Zunkiree Labs in Kathmandu Kathmandu is the center of Nepal's growing technology industry, home to thousands of software engineers and a rapidly expanding AI ecosystem. As one of Kathmandu's pioneering AI companies, Zunkiree Labs combines deep technical expertise with local market knowledge to deliver AI solutions that work. Our Kathmandu office serves as the headquarters for all operations, housing our core engineering team, project management, and client services. From here, we've delivered AI systems to clients across healthcare, finance, manufacturing, and professional services. Working with a Kathmandu-based AI company offers distinct advantages: competitive rates compared to US or European firms, a large pool of English-speaking engineers, and time zone overlap with both Asian and European markets. Services in Kathmandu AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Where is Zunkiree Labs located in Kathmandu? Zunkiree Labs is headquartered in Thamel, Kathmandu, Nepal's capital city. Our office is easily accessible."
+    "articleBody": "AI Development in Kathmandu Zunkiree Labs serves Kathmandu, Nepal's capital and technology hub, with our team headquartered nearby in Sanepa, Lalitpur. Our AI engineers and software developers build production-grade AI systems for businesses across Nepal and globally. Contact Us View Services Contact Information Kathmandu, Nepal +977-9849839728 contact@zunkireelabs.com Business Hours Monday - Friday 9:00 AM - 6:00 PM Saturday 10:00 AM - 4:00 PM Sunday Closed About Zunkiree Labs in Kathmandu Kathmandu is the center of Nepal's growing technology industry, home to thousands of software engineers and a rapidly expanding AI ecosystem. As one of Kathmandu's pioneering AI companies, Zunkiree Labs combines deep technical expertise with local market knowledge to deliver AI solutions that work. Our headquarters in Sanepa, Lalitpur — just minutes from Kathmandu — houses our core engineering team, project management, and client services. From there, we've delivered AI systems to clients across healthcare, finance, manufacturing, and professional services. Working with a Kathmandu-based AI company offers distinct advantages: competitive rates compared to US or European firms, a large pool of English-speaking engineers, and time zone overlap with both Asian and European markets. Services in Kathmandu AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Where is Zunkiree Labs located in Kathmandu? Zunkiree Labs is headquartered in Sanepa, Lalitpur, just minutes from Kathmandu, Nepal's capital city. Our Kathmandu team is easily accessible."
   },
     expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Zunkiree Labs vs Other AI Companies</h3>\n      <p class=\"text-gray-600 leading-relaxed\">When exploring AI development options, understanding the differences between Zunkiree Labs and other AI companies can help inform your decision. Below is a comparison of Zunkiree Labs' offerings with a generic AI provider.</p>\n    </div>\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Comparison Table</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><div class=\"mb-10 overflow-hidden rounded-lg border border-gray-200\"><table class=\"w-full text-sm\"><thead class=\"bg-gray-50\"><tr><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Feature</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Zunkiree Labs</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Generic AI Provider</th></tr></thead><tbody class=\"divide-y divide-gray-200\"><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Location</td><td class=\"px-4 py-3 text-gray-600\">Kathmandu, Nepal</td><td class=\"px-4 py-3 text-gray-600\">Global (various locations)</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Focus Area</td><td class=\"px-4 py-3 text-gray-600\">Custom AI systems for specific industries</td><td class=\"px-4 py-3 text-gray-600\">Generic AI solutions</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Expertise</td><td class=\"px-4 py-3 text-gray-600\">Local market knowledge &amp; deep technical expertise</td><td class=\"px-4 py-3 text-gray-600\">Broad technical knowledge</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Competitive Rates</td><td class=\"px-4 py-3 text-gray-600\">Yes</td><td class=\"px-4 py-3 text-gray-600\">Varies, often higher</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Support System Features</td><td class=\"px-4 py-3 text-gray-600\">AI-powered customer support reducing tickets</td><td class=\"px-4 py-3 text-gray-600\">Standard support options</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Targeted Solutions</td><td class=\"px-4 py-3 text-gray-600\">Tailored for Nepali market including payment integration</td><td class=\"px-4 py-3 text-gray-600\">General solutions</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Time for SaaS Products</td><td class=\"px-4 py-3 text-gray-600\">Months, streamlined process</td><td class=\"px-4 py-3 text-gray-600\">Varies significantly</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Languages Supported</td><td class=\"px-4 py-3 text-gray-600\">English and local languages</td><td class=\"px-4 py-3 text-gray-600\">Language offerings vary</td></tr></tbody></table></div>\n<p></p></div>\n    </div>\n  </div>\n</section>"
   },
@@ -180,59 +181,76 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     region: "Bagmati Province",
     country: "Nepal",
     countryCode: "NP",
-    isHeadquarters: false,
+    isHeadquarters: true,
 
-    title: "AI Development Services in Lalitpur | Zunkiree Labs",
-    description: "Zunkiree Labs serves Lalitpur businesses with AI development, custom software, and digital solutions. Based in nearby Kathmandu.",
+    title: "Zunkiree Labs Headquarters - AI Development in Lalitpur",
+    description: "Zunkiree Labs is headquartered in Sanepa, Lalitpur, serving businesses across Nepal and globally with AI development, custom software, and digital solutions.",
 
-    intro: "Zunkiree Labs serves clients in Lalitpur (Patan) from our Kathmandu headquarters, just minutes away. We work with businesses across Lalitpur's thriving commercial districts.",
+    intro: "Zunkiree Labs is headquartered in Sanepa, Lalitpur (Patan), just minutes from Kathmandu. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally.",
+
+    // Contact details
+    address: {
+      street: "Sanepa",
+      city: "Lalitpur",
+      postalCode: "44700",
+      country: "Nepal"
+    },
+    phone: "+977-9849839728",
+    email: "contact@zunkireelabs.com",
+
+    // Map embed — no API key required (text-query embed format)
+    mapEmbed: "https://maps.google.com/maps?q=Sanepa%2C+Lalitpur%2C+Nepal&output=embed",
 
     nearbyCities: ["kathmandu", "bhaktapur"],
 
     faqs: [
       {
+        question: "Where is Zunkiree Labs headquartered?",
+        answer: "Zunkiree Labs is headquartered in Sanepa, Lalitpur, just minutes from Kathmandu. Our office is easily accessible from major business districts and we serve clients both locally and internationally."
+      },
+      {
         question: "Do you serve clients in Lalitpur?",
-        answer: "Yes, we serve clients throughout Lalitpur from our Kathmandu headquarters. Lalitpur is just a short distance from our office, and we regularly meet with clients in Patan and surrounding areas."
+        answer: "Yes — Lalitpur is where our headquarters is based, so we work directly with clients throughout Lalitpur, Patan, and the surrounding areas."
       },
       {
         question: "Can you meet at our Lalitpur office?",
-        answer: "Absolutely. We're happy to meet at your Lalitpur location for project discussions, requirements gathering, and ongoing collaboration."
+        answer: "Absolutely. We're happy to meet at your Lalitpur location for project discussions, requirements gathering, and ongoing collaboration — or you're welcome to visit our Sanepa headquarters."
       }
     ],
     services: {
       "web-development": {
         title: "Web Development Services in Lalitpur",
-        description: "High-performance website development for Lalitpur businesses, delivered by our Kathmandu-based team. Modern frameworks, responsive design, and SEO optimization.",
-        intro: "We build fast, SEO-optimized websites for Lalitpur businesses using modern frameworks like Next.js, Eleventy, and Tailwind CSS — delivered by our team just minutes away in Kathmandu.",
+        description: "High-performance website development delivered by our Sanepa, Lalitpur headquarters team. Modern frameworks, responsive design, and SEO optimization.",
+        intro: "We build fast, SEO-optimized websites for Lalitpur businesses using modern frameworks like Next.js, Eleventy, and Tailwind CSS — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
           "Sub-second page load times",
           "Mobile-first responsive design",
           "Built-in SEO and AEO optimization",
-          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+          "Delivered by our Sanepa, Lalitpur headquarters team"
         ]
   },
       "app-development": {
         title: "Mobile App Development in Lalitpur",
-        description: "iOS and Android app development for Lalitpur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
-        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Lalitpur clients — delivered by our team just minutes away in Kathmandu.",
+        description: "iOS and Android app development delivered by our Sanepa, Lalitpur headquarters team. Native and cross-platform mobile applications.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Lalitpur clients — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
           "Native iOS and Android development",
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
-          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+          "Delivered by our Sanepa, Lalitpur headquarters team"
         ]
   },
       "custom-software": {
         title: "Custom Software Development in Lalitpur",
-        description: "Enterprise software development for Lalitpur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
-        intro: "We build custom enterprise applications and business systems tailored to Lalitpur businesses' workflows — delivered by our team just minutes away in Kathmandu.",
+        description: "Enterprise software development delivered by our Sanepa, Lalitpur headquarters team. Internal tools, business applications, and workflow automation.",
+        intro: "We build custom enterprise applications and business systems tailored to Lalitpur businesses' workflows — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
-          "Full-stack development team based in Kathmandu",
+          "Full-stack development team based in Sanepa, Lalitpur",
           "Experience with enterprise integrations",
           "Agile development methodology",
-          "Delivered by our Kathmandu-based team, minutes from Lalitpur"
+          "Delivered by our Sanepa, Lalitpur headquarters team"
         ],
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Custom Software Development in Lalitpur vs Other Locations</h3>\n      <p class=\"text-gray-600 leading-relaxed\">When considering custom software development for your business, it's important to weigh the benefits of working with a local team against other options in nearby locations. Here's a comparison to help you understand the advantages.</p>\n    </div>\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Comparison Table</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><div class=\"mb-10 overflow-hidden rounded-lg border border-gray-200\"><table class=\"w-full text-sm\"><thead class=\"bg-gray-50\"><tr><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Feature</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Lalitpur</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Other Locations</th></tr></thead><tbody class=\"divide-y divide-gray-200\"><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Proximity to Team</td><td class=\"px-4 py-3 text-gray-600\">Minutes away in Kathmandu</td><td class=\"px-4 py-3 text-gray-600\">Varies based on location</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Local Customization</td><td class=\"px-4 py-3 text-gray-600\">Tailored to Lalitpur businesses</td><td class=\"px-4 py-3 text-gray-600\">May not be tailored specifically</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Expertise</td><td class=\"px-4 py-3 text-gray-600\">Full-stack team experienced in enterprise</td><td class=\"px-4 py-3 text-gray-600\">Varies by provider</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Methodology</td><td class=\"px-4 py-3 text-gray-600\">Agile development</td><td class=\"px-4 py-3 text-gray-600\">Varies by provider</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Additional Services Available</td><td class=\"px-4 py-3 text-gray-600\">AI, SaaS, Web &amp; App Development</td><td class=\"px-4 py-3 text-gray-600\">May have limited service offerings</td></tr></tbody></table></div></div>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Custom Software Development in Lalitpur vs Other Locations</h3>\n      <p class=\"text-gray-600 leading-relaxed\">When considering custom software development for your business, it's important to weigh the benefits of working with a local team against other options in nearby locations. Here's a comparison to help you understand the advantages.</p>\n    </div>\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Comparison Table</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><div class=\"mb-10 overflow-hidden rounded-lg border border-gray-200\"><table class=\"w-full text-sm\"><thead class=\"bg-gray-50\"><tr><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Feature</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Lalitpur</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Other Locations</th></tr></thead><tbody class=\"divide-y divide-gray-200\"><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Proximity to Team</td><td class=\"px-4 py-3 text-gray-600\">Headquartered right here in Sanepa, Lalitpur</td><td class=\"px-4 py-3 text-gray-600\">Varies based on location</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Local Customization</td><td class=\"px-4 py-3 text-gray-600\">Tailored to Lalitpur businesses</td><td class=\"px-4 py-3 text-gray-600\">May not be tailored specifically</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Expertise</td><td class=\"px-4 py-3 text-gray-600\">Full-stack team experienced in enterprise</td><td class=\"px-4 py-3 text-gray-600\">Varies by provider</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Methodology</td><td class=\"px-4 py-3 text-gray-600\">Agile development</td><td class=\"px-4 py-3 text-gray-600\">Varies by provider</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Additional Services Available</td><td class=\"px-4 py-3 text-gray-600\">AI, SaaS, Web &amp; App Development</td><td class=\"px-4 py-3 text-gray-600\">May have limited service offerings</td></tr></tbody></table></div></div>\n    </div>\n  </div>\n</section>"
   }
     },
     expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
@@ -246,9 +264,9 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     isHeadquarters: false,
 
     title: "AI Development Services in Bhaktapur | Zunkiree Labs",
-    description: "Zunkiree Labs provides AI and software development services to Bhaktapur businesses. Headquartered in nearby Kathmandu.",
+    description: "Zunkiree Labs provides AI and software development services to Bhaktapur businesses. Headquartered in Sanepa, Lalitpur.",
 
-    intro: "Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation.",
+    intro: "Zunkiree Labs serves Bhaktapur's business community from our headquarters in Sanepa, Lalitpur, within the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation.",
 
     nearbyCities: ["kathmandu", "lalitpur"],
 
@@ -287,7 +305,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       "@type": "Article",
       "@context": "https://schema.org",
       "headline": "AI Development Services in Bhaktapur | Zunkiree Labs",
-      "articleBody": "Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation. We offer custom AI systems using RAG pipelines, LLM integration, and intelligent automation aimed at solving specific business problems. Additionally, we provide AI-powered support systems that reduce support tickets by 40%. Our AI Ecommerce Solutions include agentic commerce systems specialized for the Nepal market, as well as data systems for analytics infrastructure built for AI workloads. We also specialize in custom software, SaaS development, web development, app development, and AEO & SEO optimization."
+      "articleBody": "Zunkiree Labs serves Bhaktapur's business community from our headquarters in Sanepa, Lalitpur, within the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation. We offer custom AI systems using RAG pipelines, LLM integration, and intelligent automation aimed at solving specific business problems. Additionally, we provide AI-powered support systems that reduce support tickets by 40%. Our AI Ecommerce Solutions include agentic commerce systems specialized for the Nepal market, as well as data systems for analytics infrastructure built for AI workloads. We also specialize in custom software, SaaS development, web development, app development, and AEO & SEO optimization."
     },
     expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">AI Development Case Studies</h3>\n      <p class=\"text-gray-600 leading-relaxed\">At Zunkiree Labs, we have successfully implemented AI solutions for various businesses in Bhaktapur and beyond. Our case studies showcase how custom AI systems have led to measurable improvements in efficiency and customer satisfaction. By highlighting specific challenges faced by local enterprises, we illustrate our process of tailoring AI solutions to meet unique business needs. These real-world examples can serve as inspiration for other businesses considering AI integration.</p>\n    </div>\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Partnerships and Collaborations</h3>\n      <p class=\"text-gray-600 leading-relaxed\">Zunkiree Labs actively seeks to partner with local businesses and organizations to enhance the AI development landscape in Bhaktapur. Through strategic collaborations, we aim to leverage shared insights, resources, and technological advancements. By fostering a community of innovation, we can accelerate AI adoption and cultivate a thriving ecosystem for digital transformation across the region.</p>\n    </div>\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Ongoing Support and Maintenance</h3>\n      <p class=\"text-gray-600 leading-relaxed\">Our commitment doesn't end with the delivery of AI solutions. Zunkiree Labs offers ongoing support and maintenance services to ensure that your AI systems continue to perform optimally. We provide regular updates, troubleshooting, and enhancements to adapt to changing business environments and user needs. This focus on sustainability helps local enterprises maximize their investment in AI technology and drive long-term success.</p>\n    </div>\n  </div>\n</section>"
   },
@@ -300,9 +318,9 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     isHeadquarters: false,
 
     title: "AI Development Services in Pokhara | Zunkiree Labs",
-    description: "Zunkiree Labs serves Pokhara businesses with AI development and software solutions. Remote collaboration from our Kathmandu headquarters.",
+    description: "Zunkiree Labs serves Pokhara businesses with AI development and software solutions. Remote collaboration from our headquarters in Sanepa, Lalitpur.",
 
-    intro: "Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our Kathmandu headquarters. We've worked with tourism, hospitality, and local businesses in the Pokhara region.",
+    intro: "Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our headquarters in Sanepa, Lalitpur. We've worked with tourism, hospitality, and local businesses in the Pokhara region.",
 
     nearbyCities: ["kathmandu"],
 
@@ -313,7 +331,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       },
       {
         question: "Do you have an office in Pokhara?",
-        answer: "Our headquarters is in Kathmandu, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones."
+        answer: "Our headquarters is in Sanepa, Lalitpur, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones."
       }
     ],
 
@@ -321,7 +339,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       "app-development": {
         title: "Mobile App Development in Pokhara",
         description: "iOS and Android app development for Pokhara businesses, delivered remotely by our Kathmandu-based team. Native and cross-platform mobile applications.",
-        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Pokhara clients through remote collaboration from our Kathmandu headquarters.",
+        intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Pokhara clients through remote collaboration from our headquarters in Sanepa, Lalitpur.",
         highlights: [
           "Native iOS and Android development",
           "Cross-platform with React Native/Flutter",
@@ -335,7 +353,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       "@type": "Article",
       "@context": "https://schema.org",
       "headline": "AI Development Services in Pokhara | Zunkiree Labs",
-      "articleBody": "Service Area AI Development in Pokhara Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our Kathmandu headquarters. We've worked with tourism, hospitality, and local businesses in the Pokhara region. Contact Us View Services Contact Information +977-9849839728 contact@zunkireelabs.com Services in Pokhara AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Can you work with clients in Pokhara? Yes, we work with Pokhara clients remotely and can travel for key meetings. Our experience with international remote clients means seamless collaboration regardless of location. Do you have an office in Pokhara? Our headquarters is in Kathmandu, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones. Also Serving Kathmandu Ready to build with AI in Pokhara? Let's discuss how AI can transform your business. Schedule a Discovery Call"
+      "articleBody": "Service Area AI Development in Pokhara Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our headquarters in Sanepa, Lalitpur. We've worked with tourism, hospitality, and local businesses in the Pokhara region. Contact Us View Services Contact Information +977-9849839728 contact@zunkireelabs.com Services in Pokhara AI Development Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots. Learn more AI Customer Experience AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy. Learn more AI Ecommerce Solutions Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration. Learn more Data Systems Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup. Learn more Custom Software Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use. Learn more SaaS Development Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years. Learn more Web Development High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one. Learn more App Development Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration. Learn more AEO & SEO Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation. Learn more Frequently Asked Questions Can you work with clients in Pokhara? Yes, we work with Pokhara clients remotely and can travel for key meetings. Our experience with international remote clients means seamless collaboration regardless of location. Do you have an office in Pokhara? Our headquarters is in Sanepa, Lalitpur, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones. Also Serving Kathmandu Ready to build with AI in Pokhara? Let's discuss how AI can transform your business. Schedule a Discovery Call"
     },
     expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">AI Development in Pokhara vs Other Regions</h3>\n      <p class=\"text-gray-600 leading-relaxed\">When considering AI development services, it's essential to compare options not only in Pokhara but also in other regions. Below is a comparison of AI development services based on proximity, domain expertise, and service offerings.</p>\n    </div>\n    \n  </div>\n</section>"
   }
