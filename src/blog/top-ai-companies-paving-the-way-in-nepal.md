@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Top AI Companies Paving the Way in Nepal"
+title: "Top AI Companies in Nepal Revolutionizing Industries" # SEOAI:TITLE
 description: "Explore the leading AI companies in Nepal that are revolutionizing industries with innovative solutions. Discover key players like Zunkiree Labs and their impactful technologies."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/7172094/pexels-photo-7172094.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
