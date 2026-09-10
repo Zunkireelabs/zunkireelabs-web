@@ -163,7 +163,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "AI visibility optimization (AEO)",
           "Content strategy and creation",
           "Local SEO for Nepal businesses"
-        ]
+        ],
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">References</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p><a href=\"https://saddam.com.np\">Saddam — SEO, AEO &amp; GEO Expert in Nepal | Get Found on Google</a>\n<a href=\"https://www.upwork.com/freelancers/~016f7efb2a42279a85\">Bigyan N. - SEO and AEO Expert - Upwork Freelancer from Kathmandu</a>\n<a href=\"https://www.kamalsubedi.com/how-to-hire-seo-expert-nepal-guide\">Hire the Right SEO Expert in Nepal – Kamal Subedi's Guide</a></p></div>\n  </section>\n</div>"
   }
     },
     reviewSchema: {
