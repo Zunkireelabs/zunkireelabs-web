@@ -1,5 +1,5 @@
 ---
-title: "AI Adoption Trends in Nepal: Insights for 2026 and Beyond" # SEOAI:TITLE
+title: "AI Adoption Trends in Nepal for 2026: Key Insights" # SEOAI:TITLE
 description: "An analysis of Nepal's AI landscape in 2026. Explore adoption trends, challenges, opportunities, and predictions for the future of artificial intelligence in Nepal."
 date: 2026-03-30
 lastUpdated: 2026-03-30
