@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AEO Software: Elevate Your Digital Content Visibility" # SEOAI:TITLE
+title: "AEO Software: Enhancing Your Digital Content Visibility" # SEOAI:TITLE
 description: "Discover the essential AEO tools and software that can elevate your content's visibility across traditional and AI-driven search platforms."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/270669/pexels-photo-270669.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
