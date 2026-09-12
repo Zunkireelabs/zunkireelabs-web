@@ -154,7 +154,7 @@ export default [
         "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
       }
     },
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">Last Updated</h3>\n      <div class=\"text-gray-600 leading-relaxed\"><p>This page was last updated on 2026-09-01.</p></div>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<div class=\"py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"font-normal text-gray-900\">Last Updated</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p>This page was last updated on 2026-09-12.</p></div>\n  </section>\n</div>"
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
