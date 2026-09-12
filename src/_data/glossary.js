@@ -130,7 +130,8 @@ export default [
     shortDef: "Explore RX retrieval systems, their techniques, and their impact on AI performance. Discover important methods such as keyword and semantic search in our guide.",
     definition: "A retrieval system is a component that finds and returns relevant information from a knowledge base in response to user queries. In AI applications, retrieval systems combine multiple techniques: keyword search (BM25), semantic search (vector similarity), and hybrid approaches. The retrieval quality directly impacts RAG system performance—if irrelevant documents are retrieved, the AI will generate poor responses. Modern retrieval systems use reranking, query expansion, and metadata filtering to improve accuracy.",
     relatedService: "ai-development",
-    category: "AI Architecture"
+    category: "AI Architecture",
+    expandedContent: "<div class=\"py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "inference",

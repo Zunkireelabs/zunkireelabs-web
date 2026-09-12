@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Understanding Customer Demographics for AI E-commerce in Nepal"
+title: "Impact of AI on E-commerce Customer Demographics in Nepal" # SEOAI:TITLE
 description: "Explore the customer demographics for AI e-commerce in Nepal. Discover insights on shopping behavior, preferences, and the role of AI in transforming the online retail landscape."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/6214360/pexels-photo-6214360.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
