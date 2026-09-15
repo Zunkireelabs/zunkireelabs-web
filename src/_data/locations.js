@@ -152,7 +152,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Cross-platform with React Native/Flutter",
           "Backend API integration",
           "App Store optimization and launch"
-        ]
+        ],
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
       "aeo-seo": {
         title: "SEO & AEO Services in Kathmandu",
