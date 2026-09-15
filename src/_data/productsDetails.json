@@ -313,7 +313,7 @@
     "id": "gaamma",
     "title": "Gaamma",
     "category": "Enterprise Software",
-    "loginUrl": "https://app.gaamma.com",
+    "loginUrl": "",
     "tagline": "Manufacturing intelligence that drives efficiency",
     "description": "End-to-end ERP platform built for modern manufacturing. Unify operations from raw materials to finished goods with real-time visibility and predictive insights.",
     "heroImage": "/images/gaamma-hero.svg",
