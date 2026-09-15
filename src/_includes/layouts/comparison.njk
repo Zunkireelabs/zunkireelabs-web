@@ -208,6 +208,68 @@ layout: base.njk
 </section>
 
 {# =====================================================
+   FAQs
+   ===================================================== #}
+{% if comp.faqs and comp.faqs.length > 0 %}
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="max-w-3xl" x-data="{ activeIndex: null }">
+      {% for faq in comp.faqs %}
+      <div class="border-b border-gray-200">
+        <button
+          @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
+          class="w-full py-5 flex items-center justify-between text-left"
+        >
+          <span class="font-medium text-gray-900 pr-4">{{ faq.question }}</span>
+          <svg
+            class="w-5 h-5 text-gray-400 transition-transform"
+            :class="{ 'rotate-180': activeIndex === {{ loop.index }} }"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          x-show="activeIndex === {{ loop.index }}"
+          x-transition
+          class="pb-5 text-gray-600"
+        >
+          {{ faq.answer }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# FAQPage Schema for comparison FAQs #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in comp.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{# =====================================================
    EXPANDED CONTENT (AI-managed — written by the Action Center)
    Only rendered when comp.expandedContent is present; never fabricated
    here or by the generator that writes it — see server/generators/
