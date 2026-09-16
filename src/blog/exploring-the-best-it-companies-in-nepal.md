@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Top IT Companies in Nepal for Innovative Solutions" # SEOAI:TITLE
+title: "Top IT Companies in Nepal: Innovators in Technology" # SEOAI:TITLE
 description: "Discover the leading IT companies in Nepal that are shaping the tech landscape with innovative solutions. Find out how they contribute to the industry and drive success."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/18935831/pexels-photo-18935831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
