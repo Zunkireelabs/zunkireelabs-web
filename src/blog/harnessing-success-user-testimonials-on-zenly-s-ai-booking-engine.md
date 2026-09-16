@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Harnessing Success: User Testimonials on Zenly's AI Booking Engine"
+title: "Zenly AI Booking Engine: User Testimonials & Insights" # SEOAI:TITLE
 description: "Discover how Zenly's AI Booking Engine transforms user experience through real-life success stories and testimonials, illustrating its impact across various industries."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/6170652/pexels-photo-6170652.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
