@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Finding the Best IT Company in Nepal for Software Development"
+title: "Zunkiree Labs: Leading Software Development Company in Nepal" # SEOAI:TITLE
 description: "Explore what makes Zunkiree Labs a top choice for software development in Nepal, offering cutting-edge solutions across various industries."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/6804073/pexels-photo-6804073.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
