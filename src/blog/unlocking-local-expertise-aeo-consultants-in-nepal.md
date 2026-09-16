@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Unlocking Local Expertise: AEO Consultants in Nepal"
+title: "AEO Experts in Nepal: Enhance Your Online Presence" # SEOAI:TITLE
 description: "Discover the role of local AEO experts in Nepal and how their specialized knowledge can enhance your digital presence. Learn about key consultants and services available."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/12662875/pexels-photo-12662875.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
