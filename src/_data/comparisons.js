@@ -48,7 +48,17 @@ export default [
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
     verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
-    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p>\n    </div>\n  </div>\n</section>"
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-xl md:text-2xl font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p>\n    </div>\n  </div>\n</section>",
+    faqs: [
+      /* SEOAI:FAQ:START */
+      { question: "What are the main differences between Zunkiree Search and Algolia?", answer: "The main differences between Zunkiree Search and Algolia include the search type, response format, AI integration, and pricing model. Zunkiree Search uses semantic and AI-driven search, providing direct answers with sources and supporting conversational context. Algolia, on the other hand, relies on keyword-based search with typo tolerance and offers a ranked list of results." },
+      { question: "When should I choose Zunkiree Search?", answer: "You should choose Zunkiree Search if you are looking for AI-powered customer support, knowledge bases, and conversational search experiences." },
+      { question: "What are the pricing models for Zunkiree Search and Algolia?", answer: "Zunkiree Search has a flat monthly rate, while Algolia uses usage-based pricing, which can be expensive." },
+      { question: "What type of search results can I expect from Zunkiree Search?", answer: "With Zunkiree Search, you can expect direct answers, not just links, thanks to its AI-native semantic understanding and RAG-powered knowledge retrieval." },
+      { question: "What are the advantages of using Algolia?", answer: "The advantages of using Algolia include fast keyword search, extensive documentation, a large ecosystem of integrations, and typo tolerance." },
+      { question: "Can Zunkiree Search handle conversational follow-up queries?", answer: "Yes, Zunkiree Search can handle conversational follow-up queries as it maintains conversational context for each interaction." },
+      /* SEOAI:FAQ:END */
+    ]
   },
   {
     id: "zunkiree-vs-elasticsearch",
