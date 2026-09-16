@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Unlocking Potential: The Expertise of AI Companies in Nepal"
+title: "Leading AI Companies and Innovations in Nepal Today" # SEOAI:TITLE
 description: "Discover how AI companies in Nepal, such as Zunkiree Lab, provide innovative solutions across industries, enhancing efficiency and decision-making with cutting-edge technology."
 date: "2026-09-07"
 featuredImage: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
