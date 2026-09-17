@@ -968,7 +968,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"]
+    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"],
+    "heroAlt": "Hero image for custom software section"
   },
 
   "saas-development": {
