@@ -774,7 +774,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["rapid-investment", "mach24orbital", "cms-group"]
+    "clients": ["rapid-investment", "mach24orbital", "cms-group"],
+    "heroAlt": "Hero image for data systems section"
   },
 
   "custom-software": {
