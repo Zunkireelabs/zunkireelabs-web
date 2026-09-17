@@ -47,14 +47,22 @@ Testimonials and case studies matter because they shift the burden of proof from
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Why do testimonials and case studies matter when evaluating an AI vendor?","@type":"Question","acceptedAnswer":{"text":"They shift the burden of proof from a vendor's own description of their product to a named customer's attributable, checkable result — which is harder to fake than marketing copy.","@type":"Answer"}},{"name":"What results has Admizz Education seen using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Admizz saw 45% faster response times, a 3x improvement in student satisfaction scores, and a 60% reduction in manual inquiry handling after deploying Zunkiree Search.","@type":"Answer"}},{"name":"What results has Corecloud365 seen using Zunkiree's AI tools?","@type":"Question","acceptedAnswer":{"text":"Corecloud365 achieved a 60% reduction in operational costs, 80% faster issue resolution, and 99.9% system uptime.","@type":"Answer"}},{"name":"What should I look for in a vendor's case study?","@type":"Question","acceptedAnswer":{"text":"Look for a named customer, a specific industry, and a measured, checkable result — not a vague claim of improved efficiency without any attribution.","@type":"Answer"}},{"name":"Where can I see Zunkiree Labs' full case study library?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs' projects and case studies page lists published client results, with more added as additional deployments reach measurable outcomes.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div>
-<h3>Why do case studies matter more than product descriptions?</h3>
-<p>A case study is a claim a named customer is willing to stand behind, with a specific measured result — which is harder to fake than a vendor's own description of their product.</p>
-<h3>What happened when Admizz Education adopted Zunkiree Search?</h3>
-<p>Admizz saw 45% faster response times, a 3x improvement in student satisfaction, and a 60% reduction in manual inquiry handling.</p>
-<h3>What happened when Corecloud365 adopted Zunkiree's AI tools?</h3>
-<p>Corecloud365 reduced operational costs by 60%, resolved issues 80% faster, and maintained 99.9% system uptime.</p>
-<h3>How can I tell a real testimonial from a vague one?</h3>
-<p>A real testimonial names the customer and industry and reports a specific, checkable result. A vague one describes a feeling ("game-changing") without any attribution or number behind it.</p>
+<!-- SEOAI:QACONTENT:START --><div class="space-y-6">
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">Why do case studies matter more than product descriptions?</h3>
+  <p class="text-gray-600 leading-relaxed">A case study is a claim a named customer is willing to stand behind, with a specific measured result — which is harder to fake than a vendor's own description of their product.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">What happened when Admizz Education adopted Zunkiree Search?</h3>
+  <p class="text-gray-600 leading-relaxed">Admizz saw 45% faster response times, a 3x improvement in student satisfaction, and a 60% reduction in manual inquiry handling.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">What happened when Corecloud365 adopted Zunkiree's AI tools?</h3>
+  <p class="text-gray-600 leading-relaxed">Corecloud365 reduced operational costs by 60%, resolved issues 80% faster, and maintained 99.9% system uptime.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">How can I tell a real testimonial from a vague one?</h3>
+  <p class="text-gray-600 leading-relaxed">A real testimonial names the customer and industry and reports a specific, checkable result. A vague one describes a feeling (&quot;game-changing&quot;) without any attribution or number behind it.</p>
+</div>
 </div><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->

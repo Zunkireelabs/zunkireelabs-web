@@ -51,14 +51,22 @@ A dental AI secretary doesn't change what a dental practice does — it changes 
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a dental AI secretary?","@type":"Question","acceptedAnswer":{"text":"A dental AI secretary is software that handles routine front-desk tasks for a dental practice — scheduling, reminders, and common patient questions about pricing, insurance, and hours — freeing staff to focus on in-office patients.","@type":"Answer"}},{"name":"What tasks does a dental AI secretary handle?","@type":"Question","acceptedAnswer":{"text":"It handles always-on patient communication, intelligent appointment scheduling that accounts for treatment duration and provider availability, automated reminders and recall notifications, and prompting satisfied patients for reviews.","@type":"Answer"}},{"name":"How much time can a dental AI secretary save a practice?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs' Dental AI Assistant reclaims 15+ hours of administrative time per week and resolves about 90% of routine patient questions without staff involvement.","@type":"Answer"}},{"name":"Does a dental AI secretary reduce no-shows?","@type":"Question","acceptedAnswer":{"text":"Yes — smarter, better-timed automated reminders reduce no-shows by an average of 35% for practices using Dental AI Assistant.","@type":"Answer"}},{"name":"Does an AI secretary replace front-desk staff?","@type":"Question","acceptedAnswer":{"text":"No. It's designed to absorb routine, repetitive communication so staff can focus on patients in the office and on cases that genuinely need human judgment, such as clinical questions or complex insurance issues.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div>
-<h3>What is a dental AI secretary?</h3>
-<p>A dental AI secretary handles routine front-desk work for a dental practice — scheduling, reminders, and common patient questions — so staff can focus on in-office patients.</p>
-<h3>Can a dental AI secretary book appointments on its own?</h3>
-<p>Yes. It weighs treatment duration, provider availability, and patient preference to book appointments automatically, and can manage waitlists and rescheduling without staff involvement.</p>
-<h3>How does it help with review generation?</h3>
-<p>It automates post-visit follow-ups that prompt satisfied patients to leave reviews on platforms like Google and Yelp — a step that's easy for a busy front desk to forget.</p>
-<h3>What results have practices seen from Dental AI Assistant?</h3>
-<p>Practices using Zunkiree Labs' Dental AI Assistant see a 35% reduction in no-shows, 15+ hours of admin time saved weekly, and about 90% of routine questions resolved without staff involvement.</p>
+<!-- SEOAI:QACONTENT:START --><div class="space-y-6">
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">What is a dental AI secretary?</h3>
+  <p class="text-gray-600 leading-relaxed">A dental AI secretary handles routine front-desk work for a dental practice — scheduling, reminders, and common patient questions — so staff can focus on in-office patients.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">Can a dental AI secretary book appointments on its own?</h3>
+  <p class="text-gray-600 leading-relaxed">Yes. It weighs treatment duration, provider availability, and patient preference to book appointments automatically, and can manage waitlists and rescheduling without staff involvement.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">How does it help with review generation?</h3>
+  <p class="text-gray-600 leading-relaxed">It automates post-visit follow-ups that prompt satisfied patients to leave reviews on platforms like Google and Yelp — a step that's easy for a busy front desk to forget.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">What results have practices seen from Dental AI Assistant?</h3>
+  <p class="text-gray-600 leading-relaxed">Practices using Zunkiree Labs' Dental AI Assistant see a 35% reduction in no-shows, 15+ hours of admin time saved weekly, and about 90% of routine questions resolved without staff involvement.</p>
+</div>
 </div><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->

@@ -45,14 +45,22 @@ If your front desk spends real time on the phone answering the same handful of q
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a dental AI virtual assistant?","@type":"Question","acceptedAnswer":{"text":"A dental AI virtual assistant answers patient questions about procedures, pricing, insurance, and scheduling directly, using the practice's own data, instead of a patient having to call or wait for a callback.","@type":"Answer"}},{"name":"How is it different from a generic chatbot?","@type":"Question","acceptedAnswer":{"text":"A generic chatbot answers from general web knowledge and can get dental specifics wrong. A dental-specific virtual assistant answers using the practice's actual procedure list, pricing, insurance acceptance, and live schedule.","@type":"Answer"}},{"name":"Can a dental AI virtual assistant book appointments?","@type":"Question","acceptedAnswer":{"text":"Yes. It can check availability, book, and reschedule appointments while accounting for real appointment length and provider availability.","@type":"Answer"}},{"name":"Does it give clinical advice?","@type":"Question","acceptedAnswer":{"text":"No. It's built to handle routine administrative and informational questions and is designed to hand off clinical questions, emergencies, and complex situations to practice staff.","@type":"Answer"}},{"name":"Is there a dental AI virtual assistant available from Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Yes — Zunkiree Labs' Dental AI Assistant provides always-on patient communication, intelligent scheduling, and automated follow-up built specifically for dental practices.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:QACONTENT:START --><div>
-<h3>What can a dental AI virtual assistant answer for patients?</h3>
-<p>It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
-<h3>Is a dental AI virtual assistant the same as a general chatbot?</h3>
-<p>No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
-<h3>Will it try to give medical advice?</h3>
-<p>No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
-<h3>Is it available outside office hours?</h3>
-<p>Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
+<!-- SEOAI:QACONTENT:START --><div class="space-y-6">
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">What can a dental AI virtual assistant answer for patients?</h3>
+  <p class="text-gray-600 leading-relaxed">It can answer procedure and pricing questions, verify insurance acceptance, book or reschedule appointments, and send reminders — all using the practice's real data.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">Is a dental AI virtual assistant the same as a general chatbot?</h3>
+  <p class="text-gray-600 leading-relaxed">No. A general chatbot answers from broad web knowledge and can be wrong on specifics. A dental AI virtual assistant is grounded in the practice's own procedures, pricing, and schedule.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">Will it try to give medical advice?</h3>
+  <p class="text-gray-600 leading-relaxed">No. It's designed to hand off clinical questions and emergencies to practice staff rather than attempt to answer them itself.</p>
+</div>
+<div>
+  <h3 class="text-lg font-medium text-gray-900 mb-2">Is it available outside office hours?</h3>
+  <p class="text-gray-600 leading-relaxed">Yes — one of its main benefits is answering routine patient questions around the clock, including outside business hours when a lot of that demand actually occurs.</p>
+</div>
 </div><!-- SEOAI:QACONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
