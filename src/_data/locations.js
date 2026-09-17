@@ -113,7 +113,8 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
           "Experience with enterprise integrations",
           "Agile development methodology",
           "Long-term maintenance and support"
-        ]
+        ],
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Comparing Custom Software Development Options</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">When considering custom software development, it's essential to understand how different providers meet diverse business needs. Below, we outline how we stack up against others in the industry, focusing on our specific expertise in tailored AI and software solutions.</p></div>\n  </section>\n</div>"
   },
       "data-systems": {
         title: "Data Engineering Services in Kathmandu",
