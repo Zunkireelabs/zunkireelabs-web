@@ -35,3 +35,11 @@ As we look to the future, the potential for growth in the AI sector in Kathmandu
 The emergence of AI companies in Kathmandu not only reflects the city's commitment to technology and innovation but also presents an exciting opportunity for businesses and entrepreneurs alike. As organizations continue to leverage AI to gain a competitive edge, it will be crucial to keep an eye on industry leaders like Zunkiree Labs and their innovative strategies. The key takeaway is that Kathmandu's AI landscape is just beginning, with numerous opportunities for those willing to embrace the technology and transform their operations. Engaging with these leading companies can provide valuable insights and foster collaborations that could enhance competitive strategies across various industries. Whether you are a business owner, a tech enthusiast, or someone interested in the future of AI, immersing yourself in Kathmandu’s thriving AI community can not only expand your horizons but also contribute to a broader technological revolution in Nepal.
 
 </div>
+<!-- SEOAI:EXPANDEDCONTENT:START --><div >
+  <section class="gap-2">
+    <h2 class="font-normal text-gray-900 text-2xl">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><a href="https://github.com/amitness/ml-companies-in-nepal" class="text-zunkiree-600 hover:underline">GitHub - amitness/ml-companies-in-nepal</a>  
+<a href="https://themanifest.com/np/artificial-intelligence/companies" class="text-zunkiree-600 hover:underline">Top-Rated Artificial Intelligence &amp; AI Companies for Healthcare, FinTech, eCommerce in Nepal, Kathmandu, Pokhara | Vetted &amp; Reviewed September 2026 | The Manifest</a>  
+<a href="https://clutch.co/np/developers/artificial-intelligence" class="text-zunkiree-600 hover:underline">Top Artificial Intelligence Companies in Nepal - Sep 2026 Rankings | Clutch.co</a></p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
