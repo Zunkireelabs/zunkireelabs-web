@@ -385,7 +385,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["admizz", "prime-tiles", "khems-cleaning"]
+    "clients": ["admizz", "prime-tiles", "khems-cleaning"],
+    "heroAlt": "Hero image showcasing customer experience and AI technology"
   },
 
   "ai-ecommerce": {
