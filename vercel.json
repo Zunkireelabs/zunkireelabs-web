@@ -49,6 +49,66 @@
       "source": "/resources/gaas-vs-saas/",
       "destination": "/resources/what-is-gaas/#gaas-vs-saas",
       "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-paving-the-way-in-nepal",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-paving-the-way-in-nepal/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/finding-the-top-ai-companies-in-nepal-a-comprehensive-guide",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/finding-the-top-ai-companies-in-nepal-a-comprehensive-guide/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-top-ai-companies-in-nepal-a-comprehensive-list",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-top-ai-companies-in-nepal-a-comprehensive-list/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-in-kathmandu-innovating-the-future",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-in-kathmandu-innovating-the-future/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/leading-ai-companies-in-nepal-a-guide-to-zunkiree-labs-and-others",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/leading-ai-companies-in-nepal-a-guide-to-zunkiree-labs-and-others/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-to-watch-in-nepal",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-ai-companies-to-watch-in-nepal/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
     }
   ]
 }
