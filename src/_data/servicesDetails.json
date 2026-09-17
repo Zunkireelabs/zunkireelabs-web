@@ -1549,7 +1549,8 @@
       "secondaryButton": { "text": "View App Projects", "url": "/projects/" }
     },
 
-    "clients": ["admizz", "rapid-investment"]
+    "clients": ["admizz", "rapid-investment"],
+    "heroAlt": "Hero background image for services section."
   },
 
   "aeo-seo": {
