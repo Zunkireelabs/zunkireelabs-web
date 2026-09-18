@@ -95,31 +95,25 @@
     ],
 
     "resources": [
-      {
-        "title": "Documentation",
-        "description": "Technical guides and API reference",
-        "url": "/docs/search/",
-        "icon": "book"
-      },
-      {
-        "title": "Integration Guide",
-        "description": "Step-by-step setup instructions",
-        "url": "/resources/search-integration-guide/",
-        "icon": "code"
-      },
-      {
-        "title": "Case Studies",
-        "description": "See how customers use Zunkiree",
-        "url": "/resources/?type=case-study",
-        "icon": "briefcase"
-      },
-      {
-        "title": "API Reference",
-        "description": "REST API documentation",
-        "url": "/docs/search/api/",
-        "icon": "terminal"
-      }
-    ],
+    {
+      "title": "Documentation",
+      "description": "Technical guides and API reference",
+      "url": "/docs/search/",
+      "icon": "book"
+    },
+    {
+      "title": "Case Studies",
+      "description": "See how customers use Zunkiree",
+      "url": "/resources/?type=case-study",
+      "icon": "briefcase"
+    },
+    {
+      "title": "API Reference",
+      "description": "REST API documentation",
+      "url": "/docs/search/api/",
+      "icon": "terminal"
+    }
+  ],
 
     "faq": [
       {
