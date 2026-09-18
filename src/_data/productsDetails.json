@@ -852,14 +852,7 @@
       }
     ],
 
-    "resources": [
-    {
-      "title": "API Reference",
-      "description": "Build custom integrations",
-      "url": "/docs/crm/api/",
-      "icon": "terminal"
-    }
-  ],
+    "resources": [],
 
     "faq": [
       {
