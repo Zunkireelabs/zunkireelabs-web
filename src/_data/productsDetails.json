@@ -96,12 +96,6 @@
 
     "resources": [
     {
-      "title": "Documentation",
-      "description": "Technical guides and API reference",
-      "url": "/docs/search/",
-      "icon": "book"
-    },
-    {
       "title": "Case Studies",
       "description": "See how customers use Zunkiree",
       "url": "/resources/?type=case-study",
