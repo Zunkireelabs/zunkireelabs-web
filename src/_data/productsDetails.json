@@ -106,12 +106,6 @@
       "description": "See how customers use Zunkiree",
       "url": "/resources/?type=case-study",
       "icon": "briefcase"
-    },
-    {
-      "title": "API Reference",
-      "description": "REST API documentation",
-      "url": "/docs/search/api/",
-      "icon": "terminal"
     }
   ],
 
