@@ -35,7 +35,7 @@ Engaging with an AI expert is not merely about handing over tasks or expecting s
 Once you have successfully reached out to an AI expert and initiated a collaborative project, it is essential to consider the long-term relationship you aim to develop with the individual or organization. The field of AI is continuously evolving due to rapid advancements in technology and methods, and therefore, ongoing support may be necessary as your business grows and the landscape changes. Ensuring that your chosen expert or company offers not just initial implementation but also ongoing support can significantly contribute to the sustainability of your business goals over time. This may involve regular check-ins, updates, or access to new tools and methodologies in AI as they emerge. Additionally, maintaining a dialogue for future engagement allows your team to capitalize on new opportunities and innovations in AI. Consequently, it is advisable to invest in a relationship that facilitates not only immediate project needs but also future dialogue and support to continuously enhance and expand your AI initiatives.
 
 </div>
-<!-- SEOAI:FAQ:START --><dl class="container-custom py-12 md:py-20">
+<!-- SEOAI:FAQ:START --><dl >
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">What is Zunkiree Labs?</dt>
   <dd class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl gap-2">Zunkiree Labs is an established and reputable AI technology company in Nepal offering a range of AI services, including AI development.</dd>
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">How can I identify the right AI expert for my needs?</dt>

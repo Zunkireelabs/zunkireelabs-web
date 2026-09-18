@@ -42,7 +42,7 @@ Evaluate an employer on the work, not the logo. Ask what you will own, how close
 If the specialisation you want is applied AI — building the retrieval, evaluation, and inference infrastructure that production AI systems actually run on — that is precisely what Zunkiree Labs does, and it is the work you would be doing from your first month.
 
 </div>
-<!-- SEOAI:FAQ:START --><dl class="container-custom py-12 md:py-20">
+<!-- SEOAI:FAQ:START --><dl >
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">What type of work does Zunkiree Labs focus on?</dt>
   <dd class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl gap-2">Zunkiree Labs builds infrastructure-level AI systems that organizations run in production, such as AI-native architecture, intelligent search over websites and internal knowledge bases, and enterprise platforms. AI is the core product here, not just a feature.</dd>
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">How does Zunkiree Labs differentiate itself from other IT employers in Nepal?</dt>

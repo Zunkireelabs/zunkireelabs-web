@@ -43,7 +43,7 @@ Navigating the complexities of technology can be daunting for organizations, esp
 The tech landscape in Kathmandu is evolving rapidly, characterized by an increasing emphasis on innovation and the adoption of advanced technologies. Companies that leverage the diverse resources available in the city—ranging from AI development and robust data engineering to effective web development and strategic consulting—are better positioned to thrive in a competitive environment. As the future unfolds, embracing these tech resources will enable organizations to remain ahead of the curve and drive sustainable growth. The synergy between various tech services available in Kathmandu fosters a dynamic environment that not only supports individual company growth but also contributes to the city’s overall economic development. As more organizations recognize the importance of technology in their business strategies, Kathmandu is likely to emerge as a leading tech hub in the region, fostering innovation and encouraging entrepreneurial endeavors.
 
 </div>
-<!-- SEOAI:FAQ:START --><dl class="py-12 md:py-20">
+<!-- SEOAI:FAQ:START --><dl >
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">What types of tech resources are available for companies in Kathmandu?</dt>
   <dd class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl gap-2">Kathmandu offers essential tech resources ranging from AI infrastructure to web and mobile development solutions, designed to accelerate business growth.</dd>
   <dt class="text-2xl md:text-3xl font-normal text-gray-900">How is the tech landscape in Kathmandu evolving?</dt>
