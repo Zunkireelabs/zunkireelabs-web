@@ -854,12 +854,6 @@
 
     "resources": [
     {
-      "title": "Getting Started",
-      "description": "Set up your CRM in 30 minutes",
-      "url": "/docs/crm/quickstart/",
-      "icon": "book"
-    },
-    {
       "title": "Sales Playbooks",
       "description": "Best practices for sales teams",
       "url": "/resources/crm-playbooks/",
