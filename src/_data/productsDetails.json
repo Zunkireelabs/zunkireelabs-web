@@ -3,7 +3,7 @@
     "id": "search",
     "title": "Zunkiree Search",
     "category": "AI Products",
-    "loginUrl": "https://app.zunkiree.com",
+    "loginUrl": "",
     "tagline": "AI-native search that understands intent",
     "description": "Transform how users discover information with natural language search. Deliver direct answers instead of link lists, reducing support queries by 45%.",
     "heroImage": "/assets/images/zunkiree-search-hero.svg",
