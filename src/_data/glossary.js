@@ -34,7 +34,8 @@ export default [
     shortDef: "A database optimized for storing and searching high-dimensional vectors, enabling semantic search and AI applications.",
     definition: "A vector database is a specialized database designed to store and query high-dimensional vectors (embeddings). Unlike traditional databases that match exact keywords, vector databases find semantically similar content. When text is converted to vectors using embedding models, similar concepts cluster together in vector space. This enables semantic search, recommendation systems, and RAG applications. Popular vector databases include Pinecone, Weaviate, Qdrant, and pgvector for PostgreSQL.",
     relatedService: "data-systems",
-    category: "Data Infrastructure"
+    category: "Data Infrastructure",
+    expandedContent: "<div >\n  <section class=\"gap-2\">\n    <h2 class=\"font-normal text-gray-900 text-2xl\">Last Updated</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">This page was last updated on 2026-09-18.</p></div>\n  </section>\n</div>"
   },
   {
     id: "ai-agent",
