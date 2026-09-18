@@ -3,6 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Top IT Companies Based in Nepal: Pioneers of Innovation"
 description: "Discover the leading IT companies based in Nepal, including Zunkireelabs, which specializes in AI development, web and mobile solutions, and much more. Explore their capabilities and contributions to the tech landscape."
 date: "2026-09-17"
+featuredImage: "https://images.pexels.com/photos/17483873/pexels-photo-17483873.png?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "Abstract 3D render visualizing artificial intelligence and neural networks in digital form."
+featuredImageCredit: "Photo by Google DeepMind on Pexels"
 ---
 
 <div class="container-custom py-12 md:py-20">
