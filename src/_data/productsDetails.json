@@ -388,18 +388,6 @@
 
     "resources": [
       {
-        "title": "Implementation Guide",
-        "description": "Step-by-step deployment process",
-        "url": "/docs/gaamma/implementation/",
-        "icon": "book"
-      },
-      {
-        "title": "API Documentation",
-        "description": "Integration reference for developers",
-        "url": "/docs/gaamma/api/",
-        "icon": "code"
-      },
-      {
         "title": "Case Studies",
         "description": "Manufacturing success stories",
         "url": "/resources/?type=case-study&product=gaamma",
