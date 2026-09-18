@@ -347,12 +347,14 @@ schemaType: service
                   <span class="text-gray-500 text-sm">{{ story.statLabel }}</span>
                 </div>
 
+                {% if story.ctaUrl %}
                 <a href="{{ story.ctaUrl }}" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
                   {{ story.ctaText }}
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
                 </a>
+                {% endif %}
               </div>
 
               {# Divider #}
