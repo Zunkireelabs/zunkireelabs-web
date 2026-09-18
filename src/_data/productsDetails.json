@@ -3,7 +3,7 @@
     "id": "search",
     "title": "Zunkiree Search",
     "category": "AI Products",
-    "loginUrl": "https://app.zunkiree.com",
+    "loginUrl": "",
     "tagline": "AI-native search that understands intent",
     "description": "Transform how users discover information with natural language search. Deliver direct answers instead of link lists, reducing support queries by 45%.",
     "heroImage": "/assets/images/zunkiree-search-hero.svg",
@@ -95,31 +95,13 @@
     ],
 
     "resources": [
-      {
-        "title": "Documentation",
-        "description": "Technical guides and API reference",
-        "url": "/docs/search/",
-        "icon": "book"
-      },
-      {
-        "title": "Integration Guide",
-        "description": "Step-by-step setup instructions",
-        "url": "/resources/search-integration-guide/",
-        "icon": "code"
-      },
-      {
-        "title": "Case Studies",
-        "description": "See how customers use Zunkiree",
-        "url": "/resources/?type=case-study",
-        "icon": "briefcase"
-      },
-      {
-        "title": "API Reference",
-        "description": "REST API documentation",
-        "url": "/docs/search/api/",
-        "icon": "terminal"
-      }
-    ],
+    {
+      "title": "Case Studies",
+      "description": "See how customers use Zunkiree",
+      "url": "/resources/?type=case-study",
+      "icon": "briefcase"
+    }
+  ],
 
     "faq": [
       {
@@ -405,18 +387,6 @@
     ],
 
     "resources": [
-      {
-        "title": "Implementation Guide",
-        "description": "Step-by-step deployment process",
-        "url": "/docs/gaamma/implementation/",
-        "icon": "book"
-      },
-      {
-        "title": "API Documentation",
-        "description": "Integration reference for developers",
-        "url": "/docs/gaamma/api/",
-        "icon": "code"
-      },
       {
         "title": "Case Studies",
         "description": "Manufacturing success stories",
@@ -870,26 +840,7 @@
       }
     ],
 
-    "resources": [
-    {
-      "title": "Getting Started",
-      "description": "Set up your CRM in 30 minutes",
-      "url": "/docs/crm/quickstart/",
-      "icon": "book"
-    },
-    {
-      "title": "Sales Playbooks",
-      "description": "Best practices for sales teams",
-      "url": "/resources/crm-playbooks/",
-      "icon": "briefcase"
-    },
-    {
-      "title": "API Reference",
-      "description": "Build custom integrations",
-      "url": "/docs/crm/api/",
-      "icon": "terminal"
-    }
-  ],
+    "resources": [],
 
     "faq": [
       {
