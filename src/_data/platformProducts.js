@@ -89,7 +89,11 @@ export default [
       { question: "How long does Zunkiree Search take to integrate?", answer: "Most customers complete integration within 2 hours using our JavaScript widget. Enterprise API integrations typically take 1-2 weeks depending on data complexity and custom requirements." },
       { question: "What data sources does Zunkiree Search connect to?", answer: "Zunkiree integrates with websites, documentation, knowledge bases, CMS platforms, and custom databases through our REST API and 50+ pre-built connectors including Notion, Confluence, and PostgreSQL." },
       { question: "How does Zunkiree Search pricing work?", answer: "Zunkiree Search pricing is based on query volume and data sources connected. Contact our sales team for a custom quote based on your specific requirements and scale." },
-      { question: "Is Zunkiree Search secure for enterprise use?", answer: "Yes. Zunkiree Search includes role-based access control, end-to-end encryption, SOC 2 compliance, and can be deployed on-premises or in your own cloud environment for maximum data security." }
+      { question: "Is Zunkiree Search secure for enterprise use?", answer: "Yes. Zunkiree Search includes role-based access control, end-to-end encryption, SOC 2 compliance, and can be deployed on-premises or in your own cloud environment for maximum data security." },
+      { question: "How does Zunkiree Search understand user intent?", answer: "Zunkiree Search uses semantic understanding to grasp the meaning behind natural language queries instead of just focusing on keywords. This allows it to deliver relevant results even when users make typos or use natural phrasing." },
+      { question: "What kind of performance can businesses expect from Zunkiree Search?", answer: "Zunkiree Search is designed for enterprise-grade performance, handling millions of queries daily with sub-100ms response times and a guaranteed 99.9% uptime SLA." },
+      { question: "How does Zunkiree help reduce customer support queries?", answer: "By providing instant, accurate answers through natural language search, Zunkiree reduces support queries by 45%, enabling customers to resolve issues themselves without agent involvement." },
+      { question: "What are some use cases for Zunkiree Search?", answer: "Zunkiree Search can be applied in various scenarios such as e-commerce for product discovery, internal knowledge management for employee support, and business intelligence for querying complex datasets using plain language." }
     ],
     closingCta: {
       eyebrow: "Get Started",

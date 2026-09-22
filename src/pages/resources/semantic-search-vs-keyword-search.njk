@@ -1,0 +1,140 @@
+---
+layout: base.njk
+title: "Semantic Search vs Keyword Search: A Technical Comparison | Zunkiree Labs"
+description: A deep technical comparison of semantic and keyword search approaches, with benchmarks, use cases, and implementation recommendations.
+permalink: /resources/semantic-search-vs-keyword-search/
+excludeFromSitemap: true
+---
+
+{% set resource = resources.items | find("slug", "semantic-search-vs-keyword-search") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-gray-800 text-white text-xs font-medium tracking-wide mb-4">
+        Whitepaper
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">How keyword search actually works</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Keyword search matches the literal terms in a query against an inverted index — a map from each term to the documents containing it. Ranking functions such as BM25 then score results on term frequency, how rare the term is across the collection, and document length.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            This approach is fast, cheap to run, and completely transparent: you can always explain why a document ranked where it did. Its limitation is equally clear. A query for "reduce support tickets" will not match a document that only ever says "lower helpdesk volume", because the two share no terms.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">How semantic search differs</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Semantic search represents both the query and the documents as vectors — dense numeric embeddings produced by a language model — and retrieves by proximity in that vector space rather than by shared words. Documents about lowering helpdesk volume sit near queries about reducing support tickets because the model has learned they mean similar things.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            The trade-off is real. Embeddings must be generated and stored, similarity search needs a vector index, and results are harder to explain than a term match. Semantic retrieval also has no inherent notion of exactness, which matters when a user searches for a specific part number or error code.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Choosing between them — and why most systems use both</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            The practical answer for most production systems is hybrid retrieval: run both, then combine the rankings. Keyword search preserves exact matching for identifiers, names, and codes, while semantic search covers paraphrase and intent. Fusion methods such as reciprocal rank fusion merge the two result sets without either dominating.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            This whitepaper sets out the architecture for each approach, how to benchmark them against your own corpus rather than a public dataset, and what a staged migration from keyword-only to hybrid retrieval looks like in an existing product.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# The site's one FAQ presentation — visible accordion and FAQPage schema
+   from the same list, see components/faq-accordion.njk #}
+{% set faqItems = resourceFaq["semantic-search-vs-keyword-search"] %}
+{% include "components/faq-accordion.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>
+
+<!-- SEOAI:QACONTENT:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How does keyword search work?","@type":"Question","acceptedAnswer":{"text":"Keyword search matches the literal terms in a query against an inverted index that maps terms to documents, using ranking functions like BM25 to score results based on term frequency and rarity.","@type":"Answer"}},{"name":"What are the limitations of semantic search?","@type":"Question","acceptedAnswer":{"text":"Semantic search generates vector embeddings for queries and documents, allowing it to match similar meanings, but it requires more resources for storage and similarity search, and results are harder to explain compared to keyword matches.","@type":"Answer"}},{"name":"Why do most systems use a hybrid approach?","@type":"Question","acceptedAnswer":{"text":"Most systems employ hybrid retrieval because keyword search provides exact matches for identifiers, while semantic search captures paraphrase and intent, allowing for a more comprehensive search experience.","@type":"Answer"}},{"name":"What is the trade-off when choosing semantic search?","@type":"Question","acceptedAnswer":{"text":"The trade-off in using semantic search is that, while it can match similar meanings, it lacks inherent exactness, which is critical for specific searches like part numbers or error codes.","@type":"Answer"}},{"name":"What can I learn from this whitepaper?","@type":"Question","acceptedAnswer":{"text":"This whitepaper outlines the technical architecture of keyword and semantic search, provides performance benchmarks, offers use case recommendations, and details migration strategies from keyword-only to hybrid retrieval.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
+
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+  <section class="gap-2">
+    <h2 class="font-normal text-gray-900 text-2xl">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><a href="https://unstructured.io/insights/semantic-vs-keyword-search-key-differences-for-ai-data" class="text-zunkiree-600 hover:underline">Semantic Search vs. Keyword Search: Key Differences | Unstructured</a>
+
+<a href="https://www.thoughtspot.com/glossary/semantic-search-vs-keyword-search" class="text-zunkiree-600 hover:underline">What Is the Difference Between Semantic and Keyword Search?</a>
+
+<a href="https://redis.io/blog/semantic-search-vs-keyword-search" class="text-zunkiree-600 hover:underline">Semantic search vs. keyword search: when to use each</a></p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

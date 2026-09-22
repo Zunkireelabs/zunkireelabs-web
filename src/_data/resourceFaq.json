@@ -1,0 +1,100 @@
+{
+  "corecloud365-case-study": [
+    {
+      "question": "What operational challenges did Corecloud365 face before implementing Zunkiree Search?",
+      "answer": "Corecloud365 struggled with a mean time to resolution (MTTR) averaging 4 hours, scattered documentation across five different systems, and reliance on senior engineers for support, which hindered efficiency as their operations scaled."
+    },
+    {
+      "question": "How did Zunkiree Search improve issue resolution times for Corecloud365?",
+      "answer": "Zunkiree Search enabled engineers to describe problems in natural language and receive instant access to relevant runbooks, past incident reports, and troubleshooting steps, resulting in an 80% faster issue resolution."
+    },
+    {
+      "question": "What were the quantifiable results after Corecloud365 implemented the AI-powered solution?",
+      "answer": "After implementing Zunkiree Search, Corecloud365 achieved a 60% reduction in operational costs, 80% faster issue resolution, and maintained a 99.9% system uptime."
+    },
+    {
+      "question": "How does the Zunkiree Search system enhance the knowledge sharing among engineers?",
+      "answer": "Zunkiree Search indexes resolved incidents automatically, making previously tribal knowledge searchable and allowing junior engineers to solve problems that once required senior intervention."
+    }
+  ],
+  "khushbu-nirman-case-study": [
+    {
+      "question": "What challenges did Khushbu Nirman Sewa face before implementing the AI-powered project management solution?",
+      "answer": "Khushbu Nirman Sewa faced several challenges, including reliance on paper-based tracking, which led to 2-3 day delays in reporting, poor visibility into resource utilization, and significant material wastage and project delays."
+    },
+    {
+      "question": "How did the AI-powered solution impact project delays at Khushbu Nirman Sewa?",
+      "answer": "The implementation of the AI-powered project management platform resulted in a 40% reduction in project delays, allowing for more efficient construction site management."
+    },
+    {
+      "question": "What does the mobile data collection feature entail in Khushbu Nirman Sewa's project management system?",
+      "answer": "Site supervisors use a mobile app to log daily progress, issues, and resource usage in real-time, which improves reporting speed and accuracy significantly."
+    },
+    {
+      "question": "What financial benefits did Khushbu Nirman Sewa see from adopting the AI solution?",
+      "answer": "In the first year of using the AI-powered project management platform, Khushbu Nirman Sewa saved NPR 2.5 crore, demonstrating a measurable return on investment."
+    },
+    {
+      "question": "What are the key takeaways from Khushbu Nirman Sewa's case study?",
+      "answer": "Key takeaways include the importance of starting with good data collection, the value of predictive analytics over reactive reporting, and the clear ROI demonstrated by their savings in the first year."
+    }
+  ],
+  "semantic-search-vs-keyword-search": [
+    {
+      "question": "What is the difference between semantic search and keyword search?",
+      "answer": "Keyword search matches the literal terms in a query against an index and ranks results by term frequency and rarity. Semantic search converts the query and documents into vector embeddings and retrieves by meaning, so it can match a query to a document that expresses the same idea in entirely different words."
+    },
+    {
+      "question": "Is semantic search always better than keyword search?",
+      "answer": "No. Keyword search remains stronger for exact matches such as part numbers, error codes, and proper names, and it is cheaper to run and easier to explain. Semantic search is stronger for paraphrase and intent. Most production systems use both together rather than choosing one."
+    },
+    {
+      "question": "What is hybrid search?",
+      "answer": "Hybrid search runs keyword and semantic retrieval together and combines the two rankings, often using a fusion method such as reciprocal rank fusion. It keeps exact matching for identifiers while adding semantic coverage for natural-language queries."
+    },
+    {
+      "question": "Do I need to replace my existing search to adopt semantic search?",
+      "answer": "Not usually. A staged migration is the common path: keep the existing keyword index in place, add semantic retrieval alongside it, and combine the results. This whitepaper covers migration strategies for adding semantic retrieval to an existing product."
+    },
+    {
+      "question": "How should I benchmark the two approaches?",
+      "answer": "Benchmark against your own corpus and real user queries rather than a public dataset, since relative performance depends heavily on your content and how users phrase questions. The whitepaper sets out how to construct a representative evaluation set and which metrics to track."
+    }
+  ],
+  "enterprise-ai-adoption-report": [
+    {
+      "question": "Who is this report for?",
+      "answer": "It is written for enterprise technology leaders — CTOs, heads of engineering, and data and AI leads — who are planning or already running AI initiatives and want to compare their position against how other organisations are approaching the same decisions."
+    },
+    {
+      "question": "What does the adoption maturity model assess?",
+      "answer": "It assesses readiness across data foundations, engineering capability, governance, and clarity of the business case, so an organisation can identify which constraint is actually limiting progress before committing budget."
+    },
+    {
+      "question": "Why do so many AI projects stall after the pilot stage?",
+      "answer": "A prototype only has to work once, while a production system has to be correct repeatedly, monitored, owned by a team, and integrated with data that was never designed for it. The report examines the data-readiness, ownership, and success-criteria issues behind that gap."
+    },
+    {
+      "question": "Does the report cover budget and vendor selection?",
+      "answer": "Yes. It includes budget allocation trends across AI initiatives and an analysis of the vendor landscape, alongside the maturity model and the authors’ outlook for where enterprise adoption moves next."
+    }
+  ],
+  "natural-language-processing-fundamentals": [
+    {
+      "question": "Do I need a machine learning background to use this guide?",
+      "answer": "No. The guide explains embeddings, transformers, and fine-tuning in practical terms aimed at engineers building NLP systems rather than researchers. The goal is enough understanding to make sound architectural decisions."
+    },
+    {
+      "question": "What are embeddings and why do they matter?",
+      "answer": "An embedding maps text to a vector of numbers positioned so that texts with similar meaning sit close together, which makes distance a usable measure of semantic similarity. This one idea underpins semantic search, clustering, classification, and retrieval-augmented generation."
+    },
+    {
+      "question": "When should I fine-tune a model instead of using it as-is?",
+      "answer": "Fine-tuning is worth its cost when a task depends on domain language or output formats a general model handles poorly. In many cases careful prompting combined with retrieval performs comparably at lower cost, and the guide covers how to decide between full fine-tuning, parameter-efficient methods, and neither."
+    },
+    {
+      "question": "What does the guide cover about running NLP in production?",
+      "answer": "It covers the operational concerns that determine whether a system survives real traffic: latency and throughput budgets, inference cost, model versioning, evaluation that catches regressions, and monitoring for drift."
+    }
+  ]
+}

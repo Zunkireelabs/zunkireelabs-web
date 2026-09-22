@@ -46,7 +46,7 @@ html.lenis body {
 
 /* =====================================================
    ZUNKIREE LABS - Revamp Design System
-   Primary: Navy #1b3139 | Accent: Sage #6f9b34 (Palette B · Horizon)
+   Primary: Navy #1b3139 | Accent: Sage #6f9b34
    Style: Pure Minimal (IBM structure + Databricks colors)
    ===================================================== */
 
@@ -722,7 +722,7 @@ html.lenis body {
 
   .input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(111, 155, 52, 0.2);
+    box-shadow: 0 0 0 2px rgba(235, 22, 0, 0.1);
   }
 
 
@@ -802,6 +802,25 @@ html.lenis body {
 
   #logo-marquee.is-grabbing {
     cursor: grabbing;
+  .marquee-fade-light::before,
+  .marquee-fade-light::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .marquee-fade-light::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(255 255 255) 0%, transparent 100%);
+  }
+
+  .marquee-fade-light::after {
+    right: 0;
+    background: linear-gradient(to left, rgb(255 255 255) 0%, transparent 100%);
   }
 
   .animate-marquee-scroll {
@@ -867,34 +886,6 @@ html.lenis body {
     color: var(--foreground-muted);
   }
 
-
-  /* =====================================================
-     Pointer-follow Glow Button
-     ===================================================== */
-  .hero-btn-glow {
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
-  }
-  .hero-btn-glow::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      80px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-      rgba(144, 169, 89, 0.28) 0%,
-      transparent 100%
-    );
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    pointer-events: none;
-  }
-  .hero-btn-glow:hover::before {
-    opacity: 1;
-  }
-  .hero-btn-glow:hover {
-    border-color: rgba(144, 169, 89, 0.65);
-  }
 
   /* =====================================================
      CTA Shimmer Animation
@@ -1150,6 +1141,7 @@ html.lenis body {
 .hero-word {
   display: inline-block;
   will-change: transform;
+}
 }
 
 /* Utilities */

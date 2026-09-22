@@ -427,8 +427,8 @@ src/assets/images/
 
 ```svg
 <!-- Zunkiree brand -->
-fill="#6f9b34"           <!-- zunkiree-600 (primary sage) -->
-fill="#5a8029"           <!-- zunkiree-700 -->
+fill="#EB1600"           <!-- zunkiree-600 (primary red) -->
+fill="#C21200"           <!-- zunkiree-700 -->
 
 <!-- Monochrome -->
 fill="#333"              <!-- Dark text/icons -->

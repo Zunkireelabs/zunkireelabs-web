@@ -23,7 +23,7 @@ export default {
           900: '#1b3139', // Main navy
           950: '#141f24',
         },
-        // Brand Sage — P2 · Stone palette
+        // Accent Green (brand)
         'zunkiree': {
           DEFAULT: '#6f9b34',
           50:  '#f4faea',
@@ -37,6 +37,11 @@ export default {
           800: '#476420',
           900: '#374d18',
           950: '#243310',
+        },
+        'red': {
+          light: '#ff3621',
+          DEFAULT: '#eb1600',
+          hover: '#bd2b26',
         },
         // Neutral Grays - Full Scale
         'warm': {
@@ -63,21 +68,6 @@ export default {
         'cool': {
           'gray': '#e4ecf1',
           'border': '#d1dce3',
-        },
-        // Blue accent — second section color (ServiceNow-style section bg)
-        'sky': {
-          DEFAULT: '#3d8fd4',
-          50:  '#eff7ff',
-          100: '#dbeffe',
-          200: '#bfe1fc',
-          300: '#93ccfa',
-          400: '#60aef5',
-          500: '#3d8fd4',
-          600: '#2673b8',
-          700: '#1d5c94',
-          800: '#1c4e7a',
-          900: '#0d2d4a',
-          950: '#081a2e',
         },
         // Semantic colors
         'success': {

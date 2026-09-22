@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Resources | Zunkiree Labs
+title: "AI Products and Solutions | Zunkiree Labs" # SEOAI:TITLE
 description: Explore AI search guides, industry reports, case studies, and technical whitepapers from Zunkiree Labs. Learn how to build AI-native search experiences.
 permalink: /resources/
 bodyClass: "v2-inter"
@@ -401,7 +401,6 @@ hideChrome: true
     </div>
   </div>
 </section>
-
 {# =====================================================
    SECTION 5: CLOSING CTA BANNER
    Same navy-950 rounded-[28px] full-width banner as homepage-v2's
@@ -451,6 +450,34 @@ hideChrome: true
   </div>
 </section>
 
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+  <section class="gap-2">
+    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">About the Author</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p>By the Zunkiree Labs Team</p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+
+
 {% include "partials/footer-v2.njk" %}
 
-<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers various products including Zunkiree Search, Dental AI for practice management, Gaamma for business analytics, and business tools like Stella (AI Commerce Agent) and Zenly (AI Booking Engine).","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers rather than links.","@type":"Answer"}},{"name":"How can Zunkiree Labs help with customer support?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers AI solutions that can reduce support tickets by 45%.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) is a service that provides Autonomous AI agents deployed as managed services.","@type":"Answer"}},{"name":"Does Zunkiree Labs offer any resources for learning about AI?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree Labs provides eBooks, guides, reports, and webinars to help users learn about AI and its implementation.","@type":"Answer"}},{"name":"Can I try Zunkiree Search for free?","@type":"Question","acceptedAnswer":{"text":"Yes, you can try Zunkiree Search for free and see how it delivers direct answers.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+{% set faqItems = faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | dump | safe }} }
+    }{{ "," if not loop.last }}
+    {%- endfor %}
+  ]
+}
+</script>
+
+
+
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"AI Products and Solutions | Zunkiree Labs","articleBody":"Zunkiree Labs is an AI development company in Kathmandu, Nepal that builds production-grade AI systems including RAG pipelines, AI agents, and enterprise search platforms. Founded in 2018, we serve businesses globally with custom AI infrastructure that delivers measurable results—not prototypes or wrappers. Zunkiree Labs offers comprehensive AI development services: custom AI agents, RAG (Retrieval Augmented Generation) pipelines, AI-native search implementation, LLM integration, chatbot development, document processing AI, and enterprise AI consulting. We also provide web development, mobile app development, and SaaS development services from Nepal. Zunkiree Labs is headquartered in Kathmandu, Nepal. We are a leading AI company in Nepal serving clients globally. Our engineering team combines deep AI expertise with cost-effective delivery, making us a competitive choice for businesses seeking quality AI development from Nepal. Unlike traditional software companies in Nepal, Zunkiree Labs specializes in AI infrastructure and production-grade AI systems."}</script><!-- SEOAI:SCHEMA:END -->
+

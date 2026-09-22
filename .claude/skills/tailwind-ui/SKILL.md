@@ -23,23 +23,20 @@ You handle all styling and visual design:
 
 ### Brand Colors
 
-P2 · Stone palette — sage green is the only accent color.
-
 ```javascript
-// Primary Brand - Zunkiree Sage (P2 · Stone)
+// Primary Brand - Zunkiree Red
 'zunkiree': {
-  DEFAULT: '#6f9b34',
-  50:  '#f4faea',
-  100: '#e8f4d5',
-  200: '#d2e9ac',
-  300: '#b6cf96',  // Accent text on dark backgrounds
-  400: '#a3c072',
-  500: '#90a959',  // Logo / decorative sage
-  600: '#6f9b34',  // Primary CTA, links, text accents
-  700: '#5a8029',  // Hover state
-  800: '#476420',
-  900: '#374d18',
-  950: '#243310',
+  50: '#fff1f0',
+  100: '#ffe1df',
+  200: '#ffc9c5',
+  300: '#ffa299',
+  400: '#ff6b5c',
+  500: '#ff3d2a',
+  600: '#eb1600',  // Main brand color
+  700: '#c21200',  // Hover state
+  800: '#a01410',
+  900: '#841815',
+  950: '#480806',
 }
 
 // Warm Neutrals (Duna-inspired)
@@ -142,7 +139,7 @@ fontFamily: {
 </a>
 ```
 
-### Brand Button (Sage)
+### Brand Button (Red)
 ```html
 <a href="#" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium text-base rounded-full hover:bg-zunkiree-700 transition-all duration-200 shadow-btn hover:shadow-btn-hover">
   Button Text
@@ -207,29 +204,15 @@ boxShadow: {
 
 ---
 
-## ANIMATION RULE
-
-**NEVER use CSS animation classes for entrance/scroll/reveal effects.** All motion is handled by GSAP via the `animation-engineer` skill.
-
-- Do NOT use `animate-fade-in`, `animate-fade-up`, `animate-scale-in`, etc. for elements that should animate on load or scroll
-- Do NOT write `transition` classes for entrance animations
-- **DO** add `data-reveal` attribute to any element that should animate on scroll — GSAP picks this up automatically
-- **DO** add `data-reveal-stagger` to grid/list containers for staggered children
-- Use `transition-colors`, `transition-shadow`, `hover:` classes ONLY for micro-interactions (hover states, focus states) — these are fine in Tailwind
+## ANIMATION CLASSES
 
 ```html
-<!-- CORRECT: mark for GSAP, use Tailwind only for hover micro-interactions -->
-<div class="group p-6 border border-gray-200 hover:shadow-md transition-shadow" data-reveal>
-  <h3 class="text-lg font-medium">Title</h3>
-</div>
-
-<!-- WRONG: CSS entrance animation -->
-<div class="animate-fade-up p-6 border border-gray-200">
-  <h3 class="text-lg font-medium">Title</h3>
-</div>
+<!-- Tailwind animations from config -->
+<div class="animate-fade-in">
+<div class="animate-fade-up">
+<div class="animate-scale-in">
+<div class="animate-float">
 ```
-
-After completing any UI section with `data-reveal` elements, flag to `animation-engineer` to wire up the GSAP animations.
 
 ---
 

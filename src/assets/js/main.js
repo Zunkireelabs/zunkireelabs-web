@@ -711,17 +711,9 @@ function initProductLottie() {
   });
 }
 
+// Boot when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', boot);
 } else {
   boot();
 }
-
-// ─── Pointer-follow glow on .hero-btn-glow ──────────────────────
-document.querySelectorAll('.hero-btn-glow').forEach(btn => {
-  btn.addEventListener('mousemove', e => {
-    const r = btn.getBoundingClientRect();
-    btn.style.setProperty('--mouse-x', `${e.clientX - r.left}px`);
-    btn.style.setProperty('--mouse-y', `${e.clientY - r.top}px`);
-  });
-});

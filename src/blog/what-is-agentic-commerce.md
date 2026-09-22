@@ -10,9 +10,10 @@ tags:
   - AI Ecommerce
   - Nepal Business
   - AI Agents
-featuredImage: /assets/images/blog/agentic-commerce-hero.jpg
-featuredImageAlt: AI agent handling ecommerce transactions autonomously
+featuredImage: "https://images.pexels.com/photos/7621381/pexels-photo-7621381.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+featuredImageAlt: "A smartphone displaying an ecommerce site with a credit card, set on a wooden surface, depicting online shopping."
 readTime: 10
+featuredImageCredit: "Photo by Ivan S on Pexels"
 ---
 
 ## What is Agentic Commerce?
@@ -180,3 +181,15 @@ The companies that adopt agentic commerce early will capture customers who expec
 Zunkiree Labs builds custom agentic commerce solutions for Nepal businesses. Our AI Commerce Agent platform integrates with eSewa, Khalti, and major marketplaces.
 
 [Learn about AI Commerce Agent](/products/ai-commerce-agent/) | [Get a Free Consultation](/contact/)
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+<h2>References</h2>
+<p><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2025/agentic-commerce-explainer.html">What is agentic commerce? Your guide to AI-assisted retail</a>
+
+Agentic commerce explained: The future of AI eCommerce
+
+<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-agentic-commerce-opportunity-how-ai-agents-are-ushering-in-a-new-era-for-consumers-and-merchants">Agentic commerce: How agents are ushering in a new era</a>
+
+<a href="https://www.salesforce.com/commerce/ai/agentic-commerce/">What Is Agentic Commerce? (2026)</a>
+
+<a href="https://www.ibm.com/think/topics/agentic-commerce">What Is Agentic Commerce?</a></p>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

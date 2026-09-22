@@ -201,6 +201,35 @@ hideChrome: true
 </section>
 
 {# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when currentTerm.expandedContent is present; never
+   fabricated here or by the generator that writes it — see
+   server/generators/expand-content.js. Already a fully rendered HTML
+   block (wrapper + rows), not raw text.
+   ===================================================== #}
+{% if currentTerm.expandedContent %}
+{{ currentTerm.expandedContent | safe }}
+{% endif %}
+
+{# =====================================================
+   Q&A CONTENT (AI-managed — written by the Action Center)
+   Only rendered when currentTerm.qaContentHtml is present — see
+   server/generators/qa-content.js.
+   ===================================================== #}
+{% if currentTerm.qaContentHtml %}
+{{ currentTerm.qaContentHtml | safe }}
+{% endif %}
+
+{# =====================================================
+   RELATED / INTERNAL LINKS (AI-managed — written by the Action Center)
+   Only rendered when currentTerm.internalLinksHtml is present — see
+   server/generators/internal-links.js.
+   ===================================================== #}
+{% if currentTerm.internalLinksHtml %}
+{{ currentTerm.internalLinksHtml | safe }}
+{% endif %}
+
+{# =====================================================
    MORE TERMS — glass-card grid, same recipe as the
    /resources/ index card grid
    ===================================================== #}

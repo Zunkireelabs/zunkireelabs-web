@@ -1,0 +1,136 @@
+---
+layout: base.njk
+title: "Natural Language Processing Fundamentals | Zunkiree Labs"
+description: A practical guide to understanding and implementing NLP in enterprise applications. Covers embeddings, transformers, and fine-tuning strategies.
+permalink: /resources/natural-language-processing-fundamentals/
+excludeFromSitemap: true
+---
+
+{% set resource = resources.items | find("slug", "natural-language-processing-fundamentals") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-gray-800 text-white text-xs font-medium tracking-wide mb-4">
+        Guide
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Embeddings and vector spaces</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Modern NLP begins with representation. An embedding maps a piece of text — a word, sentence, or document — to a vector of numbers positioned so that texts with similar meaning sit close together. Distance in that space becomes a usable measure of semantic similarity.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            This single idea underpins semantic search, clustering, classification, and retrieval-augmented generation. The guide covers how embeddings are produced, how to choose dimensionality and a distance metric, and the practical question of when a general-purpose embedding model is sufficient versus when a domain-specific one earns its cost.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The transformer architecture</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Transformers process an entire sequence at once and use self-attention to let every token weigh its relationship to every other token. That parallelism, and the ability to model long-range dependencies directly, is what enabled the current generation of language models.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            The guide explains attention, positional encoding, and the encoder/decoder distinction in practical terms — enough to reason about why a model behaves as it does and what its context window costs you, without requiring a research background.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Fine-tuning and production deployment</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Most enterprise NLP work starts from a pre-trained model rather than training from scratch. The guide covers when full fine-tuning is warranted, when parameter-efficient methods are the better choice, and when careful prompting and retrieval remove the need to fine-tune at all.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            It closes on the operational concerns that decide whether an NLP system survives contact with production: latency and throughput budgets, inference cost, model versioning, evaluation that catches regressions, and monitoring for drift once real traffic arrives.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# The site's one FAQ presentation — visible accordion and FAQPage schema
+   from the same list, see components/faq-accordion.njk #}
+{% set faqItems = resourceFaq["natural-language-processing-fundamentals"] %}
+{% include "components/faq-accordion.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>
+
+<!-- SEOAI:QACONTENT:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are embeddings in natural language processing?","@type":"Question","acceptedAnswer":{"text":"Embeddings are a way to map a piece of text — like a word, sentence, or document — to a vector of numbers that positions similar texts close together. This relationship enables the measurement of semantic similarity, essential for tasks like semantic search and classification.","@type":"Answer"}},{"name":"How does the transformer architecture improve NLP models?","@type":"Question","acceptedAnswer":{"text":"The transformer architecture processes an entire sequence at once, utilizing self-attention to assess the relationship between every token. This parallel processing capability allows it to model long-range dependencies effectively, which is crucial for developing advanced language models.","@type":"Answer"}},{"name":"When is fine-tuning necessary for NLP models?","@type":"Question","acceptedAnswer":{"text":"Fine-tuning is necessary when a specific task relies on domain-specific language or output formats that a general pre-trained model does not handle well. However, the guide also discusses scenarios where careful prompting or retrieval can suffice without the need for fine-tuning.","@type":"Answer"}},{"name":"What operational concerns are important for deploying NLP systems?","@type":"Question","acceptedAnswer":{"text":"Key operational factors for deploying NLP systems include managing latency and throughput budgets, evaluating inference costs, ensuring effective model versioning, and monitoring for drift in model performance once it is in production.","@type":"Answer"}},{"name":"Do I need a machine learning background to understand this guide?","@type":"Question","acceptedAnswer":{"text":"No, the guide is designed for engineers building NLP systems and explains concepts like embeddings, transformers, and fine-tuning in practical terms, aiming to provide enough understanding for making sound architectural decisions.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
+
+<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
+  <section class="gap-2">
+    <h2 class="font-normal text-gray-900 text-2xl">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><a href="https://developer.apple.com/documentation/naturallanguage" class="text-zunkiree-600 hover:underline">Natural Language | Apple Developer Documentation</a></p></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

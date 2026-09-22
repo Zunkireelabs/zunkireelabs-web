@@ -47,7 +47,18 @@ export default [
       zunkiree: "Businesses wanting AI-powered customer support, knowledge bases, and conversational search experiences.",
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
-    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries."
+    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-[19px] md:text-[22px] font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-algolia/\">Zunkiree Search vs Algolia | Search Comparison</a></p>\n    </div>\n  </div>\n</section>",
+    faqs: [
+      /* SEOAI:FAQ:START */
+      { question: "What is Zunkiree Search?", answer: "Zunkiree Search is an AI-native search solution that provides direct answers and utilizes semantic understanding for search queries, enabling features like conversational follow-up queries and built-in AI integration." },
+      { question: "How does Zunkiree Search differ from Algolia?", answer: "Zunkiree Search focuses on providing AI-powered answers and a semantic approach, while Algolia is a traditional search-as-a-service platform that relies on keyword searches and offers fast results with typo tolerance." },
+      { question: "What are the pricing models for Zunkiree Search and Algolia?", answer: "Zunkiree Search operates on a flat monthly rate, whereas Algolia's pricing is usage-based, charging per search and per record, which can become expensive." },
+      { question: "When should I choose Zunkiree Search over Algolia?", answer: "You should choose Zunkiree Search when looking for AI-powered customer support, knowledge bases, or conversational search experiences that require semantic understanding." },
+      { question: "What are the limitations of using Algolia?", answer: "Algolia's limitations include being keyword-based rather than semantic, which restricts its AI capabilities. Its usage-based pricing model can also become expensive over time." },
+      { question: "What types of businesses benefit from using Zunkiree Search?", answer: "Businesses that want to implement AI-powered customer support, knowledge bases, or those that require advanced conversational search experiences will benefit from using Zunkiree Search." },
+      /* SEOAI:FAQ:END */
+    ]
   },
   {
     id: "zunkiree-vs-elasticsearch",
@@ -92,7 +103,8 @@ export default [
       zunkiree: "Teams wanting AI search without infrastructure complexity. Customer support, internal tools, and knowledge management.",
       competitor: "Engineering teams with DevOps resources who need full control over search infrastructure and complex custom queries."
     },
-    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
+    verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control.",
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-[19px] md:text-[22px] font-normal text-gray-900 mb-3\">References</h3>\n      <p class=\"text-gray-600 leading-relaxed\"><a href=\"https://zunkireelabs.com/compare/zunkiree-vs-elasticsearch/\">Zunkiree Search vs Elasticsearch | Search Comparison</a>\n<a href=\"https://zunkireelabs.com/products/search/\">AI-Native Search &amp; Interaction Solutions</a>\n<a href=\"https://www.elastic.co/enterprise-search\">The open source engine for high-performance search, ...</a></p>\n    </div>\n  </div>\n</section>"
   },
   {
     id: "zunkiree-vs-typesense",
@@ -137,7 +149,22 @@ export default [
       zunkiree: "Businesses wanting intelligent search that understands intent and provides direct answers to customer questions.",
       competitor: "Developers who want a self-hosted, open-source alternative to Algolia for traditional search."
     },
-    verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search."
+    verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search.",
+    reviewSchema: {
+      "@type": "Review",
+      "author": {
+        "name": "Zunkiree Labs",
+        "@type": "Organization"
+      },
+      "@context": "https://schema.org",
+      "reviewBody": "Comparison Zunkiree Search vs Typesense Compare Zunkiree Search and Typesense. See how AI-native search compares to open-source instant search. Feature comparison Feature Zunkiree Search Typesense Search Approach Semantic + AI Keyword + typo tolerance Hosting Fully managed Self-hosted or cloud AI Features Native LLM integration None built-in Response Type Answers with citations Ranked results Natural Language Full support Basic query parsing Enterprise Features SSO, analytics, API Basic analytics Open Source No Yes (GPL-3.0) Zunkiree Search AI-native search that provides answers Semantic understanding AI-generated answers Zero infrastructure Conversational search Enterprise-ready T Typesense Open-source, typo-tolerant search engine alternative to Algolia Strengths Open-source and self-hostable Fast typo-tolerant search Simple to set up Cost-effective Limitations Keyword-based, limited semantics No built-in AI features Self-hosting requires ops Returns links, not answers When to choose each Choose Zunkiree Search when: Businesses wanting intelligent search that understands intent and provides direct answers to customer questions. Choose Typesense when: Developers who want a self-hosted, open-source alternative to Algolia for traditional search. Our verdict Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search. Ready to try Zunkiree Search? See how AI-native search can transform your customer experience. Explore Zunkiree Search Talk to Sales Other comparisons Zunkiree Search vs Algolia Zunkiree Search vs Elasticsearch Agentic Commerce vs Traditional Ecommerce.",
+      "itemReviewed": {
+        "name": "Zunkiree Search",
+        "@type": "Product",
+        "description": "AI-native search that provides answers with semantic understanding and AI-generated answers. Fully managed solution."
+      }
+    },
+    expandedContent: "<div class=\"py-12 md:py-20\">\n</div>"
   },
   {
     id: "agentic-commerce-vs-traditional-ecommerce",
@@ -191,6 +218,7 @@ export default [
     },
     verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
     ctaProduct: "ai-commerce-agent",
-    ctaService: "ai-ecommerce"
+    ctaService: "ai-ecommerce",
+    expandedContent: "<section class=\"py-12 md:py-20\">\n  <div class=\"max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8\">\n    <div class=\"mb-8 last:mb-0\">\n      <h3 class=\"text-[19px] md:text-[22px] font-normal text-gray-900 mb-3\">About the Author</h3>\n      <p class=\"text-gray-600 leading-relaxed\">By the Zunkiree Labs Team</p>\n    </div>\n  </div>\n</section>"
   }
 ];

@@ -355,14 +355,6 @@
       { "label": "AEO & SEO", "url": "/services/aeo-seo/" },
       { "label": "Agentic as a Service (GaaS)", "url": "/agentic-as-a-service/" }
     ],
-    "solutions": [
-      { "label": "Healthcare", "url": "/solutions/healthcare/" },
-      { "label": "Manufacturing", "url": "/solutions/manufacturing/" },
-      { "label": "Legal", "url": "/solutions/legal/" },
-      { "label": "Professional Services", "url": "/solutions/services/" },
-      { "label": "Education", "url": "/solutions/education/" },
-      { "label": "Human Resources", "url": "/solutions/human-resources/" }
-    ],
     "resources": [
       { "label": "What is GaaS?", "url": "/resources/what-is-gaas/" },
       { "label": "Reports & Research", "url": "/resources/?type=report" },
