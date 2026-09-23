@@ -1,9 +1,12 @@
 User-agent: *
 Allow: /blog/
-Allow: /solutions/
+Allow: /services/
 Allow: /contact/
-Allow: /customers/
+Allow: /resources/
 Allow: /products/
+Allow: /locations/
+Allow: /compare/
+Allow: /glossary/
 Disallow: /?*page=
 User-agent: GPTBot
 Allow: /
