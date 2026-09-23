@@ -162,10 +162,10 @@ For businesses drowning in documentation that customers can't navigate, AI-nativ
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
 <!-- SEOAI:EXPANDEDCONTENT:START --><div>
 <h2>References</h2>
-<p class="text-gray-600 leading-relaxed"><a href="https://zunkireelabs.com/blog/what-is-ai-native-search/">What is AI-Native Search? How It Differs from Keyword ...</a>  
-<a href="https://denser.ai/blog/ai-native-search-engine/">AI-Native Search Engines: Smarter, Intent-Aware Results</a>  
-<a href="https://www.fluidtopics.com/keyword-search-vs-semantic-search/">Keyword vs Semantic Search &amp; Why Hybrid is the Way to Go</a>  
-<a href="https://www.velebit.ai/blog/ai-search-vs-traditional-search/">AI Vector Search vs Keyword Search: E-commerce Guide</a>  
-<a href="https://www.couchbase.com/blog/semantic-search-vs-keyword-search-whats-the-difference/">Semantic Search vs Keyword Search: What's the Difference?</a>  
-<a href="https://www.mindstudio.ai/blog/semantic-search-vs-keyword-search-ai-agents">Semantic Search vs Keyword Search for AI Agents</a></p>
+<p class="text-gray-600 leading-relaxed"><a href="https://zunkireelabs.com/blog/what-is-ai-native-search/" class="text-zunkiree-600 hover:underline">What is AI-Native Search? How It Differs from Keyword ...</a>  
+<a href="https://denser.ai/blog/ai-native-search-engine/" class="text-zunkiree-600 hover:underline">AI-Native Search Engines: Smarter, Intent-Aware Results</a>  
+<a href="https://www.fluidtopics.com/keyword-search-vs-semantic-search/" class="text-zunkiree-600 hover:underline">Keyword vs Semantic Search &amp; Why Hybrid is the Way to Go</a>  
+<a href="https://www.velebit.ai/blog/ai-search-vs-traditional-search/" class="text-zunkiree-600 hover:underline">AI Vector Search vs Keyword Search: E-commerce Guide</a>  
+<a href="https://www.couchbase.com/blog/semantic-search-vs-keyword-search-whats-the-difference/" class="text-zunkiree-600 hover:underline">Semantic Search vs Keyword Search: What's the Difference?</a>  
+<a href="https://www.mindstudio.ai/blog/semantic-search-vs-keyword-search-ai-agents" class="text-zunkiree-600 hover:underline">Semantic Search vs Keyword Search for AI Agents</a></p>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

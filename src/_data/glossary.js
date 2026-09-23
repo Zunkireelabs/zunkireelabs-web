@@ -35,7 +35,7 @@ export default [
     definition: "A vector database is a specialized database designed to store and query high-dimensional vectors (embeddings). Unlike traditional databases that match exact keywords, vector databases find semantically similar content. When text is converted to vectors using embedding models, similar concepts cluster together in vector space. This enables semantic search, recommendation systems, and RAG applications. Popular vector databases include Pinecone, Weaviate, Qdrant, and pgvector for PostgreSQL.",
     relatedService: "data-systems",
     category: "Data Infrastructure",
-    expandedContent: "<div >\n  <section class=\"gap-2\">\n    <h2 class=\"font-normal text-gray-900 text-2xl\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "ai-agent",
@@ -132,7 +132,7 @@ export default [
     definition: "A retrieval system is a component that finds and returns relevant information from a knowledge base in response to user queries. In AI applications, retrieval systems combine multiple techniques: keyword search (BM25), semantic search (vector similarity), and hybrid approaches. The retrieval quality directly impacts RAG system performance—if irrelevant documents are retrieved, the AI will generate poor responses. Modern retrieval systems use reranking, query expansion, and metadata filtering to improve accuracy.",
     relatedService: "ai-development",
     category: "AI Architecture",
-    expandedContent: "<div class=\"py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "inference",
@@ -157,7 +157,7 @@ export default [
     definition: "A context window is the maximum amount of text (measured in tokens) that an AI model can process in a single request. GPT-4 Turbo has a 128K token context window (roughly 100,000 words), while Claude offers up to 200K tokens. Larger context windows enable processing longer documents, maintaining conversation history, and providing more context for accurate responses. Context window size is a key differentiator between AI models and affects architecture decisions for RAG systems.",
     relatedService: "ai-development",
     category: "AI Fundamentals",
-    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-3\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-gray-600 leading-relaxed\"><p>By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
+    expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">About the Author</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">By the Zunkiree Labs Team</p></div>\n  </section>\n</div>"
   },
   {
     id: "zero-shot-learning",
