@@ -2,8 +2,13 @@
 layout: base.njk
 title: "AI & Technology Blog | Insights from Zunkiree Labs"
 description: "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company."
-permalink: /blog/
 eleventyExcludeFromCollections: true
+pagination:
+  data: collections.blog
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagination.pageNumber + 1) + '/' }}"
 ---
 
 {# =====================================================
@@ -36,8 +41,6 @@ eleventyExcludeFromCollections: true
    ===================================================== #}
 <section class="pb-16 md:pb-24 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {% set posts = collections.blog | reverse %}
 
     {% if posts.length > 0 %}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,6 +101,35 @@ eleventyExcludeFromCollections: true
       {% endfor %}
     </div>
 
+    {% if pagination.pages.length > 1 %}
+    {# Pagination — reuses this page's own real link/button/icon classes #}
+    <nav class="mt-12 flex items-center justify-between" aria-label="Blog pagination">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-900 font-medium hover:bg-gray-50 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+        </svg>
+        Previous
+      </a>
+      {% else %}
+      <span></span>
+      {% endif %}
+
+      <span class="text-sm text-gray-500">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+        Next
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      {% else %}
+      <span></span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
     {% else %}
     {# Empty state #}
     <div class="text-center py-16">
@@ -135,9 +167,15 @@ eleventyExcludeFromCollections: true
 
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","headline":"AI & Technology Blog | Insights from Zunkiree Labs","articleBody":"Insights & Guides Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs. August 7, 2026 AI & Technology Blog | Insights from Zunkiree Labs Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company. Read article August 7, 2026 The Ultimate Guide to Building an Agentic as a Service (GaaS) Application How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business. Read article August 4, 2026 Exploring Technological Innovations at Zunkiree Labs Dive into the latest technological innovations and research initiatives at Zunkiree Labs, highlighting cutting-edge advancements in AI and more. Read article July 27, 2026 Why User Testimonials Matter: Real Voices from Zunkiree Labs Why case studies and customer results matter more than marketing copy when evaluating an AI vendor, and what Zunkiree Labs' published case studies actually show. Read article July 27, 2026 What is a Dental AI Virtual Assistant? What a dental AI virtual assistant is from a patient's perspective, what it can answer on its own, and where it hands off to your dental team. Read article July 27, 2026 Understanding the Role of a Dental AI Admin Explore the essential responsibilities and skills of a Dental AI Administrator and how they contribute to modern dental practices. Read article July 27, 2026 Top AI Companies to Watch in Nepal Discover the best AI companies in Nepal, their innovative solutions, and how they're contributing to the tech landscape in 2026. Read article July 27, 2026 Revolutionizing Dental Practice Efficiency: The Impact of AI on Scheduling Discover how AI can enhance scheduling in dental practices, leading to improved efficiency, reduced no-shows, and better patient experiences. Read article July 27, 2026 Exploring Specialized AI Companies for Healthcare in Nepal Discover the emerging landscape of specialized AI companies in the healthcare sector of Nepal, their contributions, and potential impact on healthcare delivery. Read article July 27, 2026 Agentic-as-a-Service in Nepal: Exploring Availability and Options Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region. Read article July 26, 2026 Dental AI Secretary Solutions for Practices How AI-powered dental secretaries handle scheduling, reminders, and front-desk communication — and what dental practices can expect from adopting one. Read article July 26, 2026 Understanding Complex Availability in Scheduling What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zenly resolve it automatically. Read article July 26, 2026 Exploring Job Opportunities in AI.","datePublished":"2026-08-07"}</script><!-- SEOAI:SCHEMA:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Zunkiree Labs vs. Other AI Companies in Nepal</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">When considering the landscape of AI companies in Nepal, Zunkiree Labs stands out for its focus on practical applications in various sectors, including healthcare and e-commerce. Unlike some competitors, Zunkiree Labs emphasizes technical SEO automation and robust infrastructure solutions, offering a comprehensive approach to AI that enhances operational efficiency and customer engagement.</p></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Zunkiree Labs vs. Other AI Companies in Nepal</h2>
+      </div>
+      <div>
+        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-lg md:text-xl text-gray-600 leading-relaxed">When considering the landscape of AI companies in Nepal, Zunkiree Labs stands out for its focus on practical applications in various sectors, including healthcare and e-commerce. Unlike some competitors, Zunkiree Labs emphasizes technical SEO automation and robust infrastructure solutions, offering a comprehensive approach to AI that enhances operational efficiency and customer engagement.</p></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
