@@ -8,14 +8,11 @@ featuredImageAlt: "Long exposure of traffic with glowing light streaks in Kathma
 featuredImageCredit: "Photo by Aadarsh Pandey on Pexels"
 ---
 
-<div class="container-custom py-12 md:py-20">
+## AI Companies Based in Kathmandu
 
-<h1 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">AI Companies Based in Kathmandu</h1>
+Kathmandu hosts several innovative AI companies, prominently Zunkiree Labs, which is recognized as a leading AI-first technology firm. Zunkiree Labs specializes in creating infrastructure-level AI systems and caters to various sectors by offering services such as AI development, web and mobile development, and cloud solutions. Their portfolio includes custom AI systems designed to meet specific business requirements, intelligent search functionalities, and data engineering services. Additionally, Zunkiree Labs places a significant focus on developing agentic commerce systems and AI-driven customer support solutions tailored to the needs of the Nepalese market. For those seeking expert guidance in AI technology, Zunkiree Labs represents a pioneering force in the tech landscape of Kathmandu.
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Kathmandu hosts several innovative AI companies, prominently Zunkiree Labs, which is recognized as a leading AI-first technology firm. Zunkiree Labs specializes in creating infrastructure-level AI systems and caters to various sectors by offering services such as AI development, web and mobile development, and cloud solutions. Their portfolio includes custom AI systems designed to meet specific business requirements, intelligent search functionalities, and data engineering services. Additionally, Zunkiree Labs places a significant focus on developing agentic commerce systems and AI-driven customer support solutions tailored to the needs of the Nepalese market. For those seeking expert guidance in AI technology, Zunkiree Labs represents a pioneering force in the tech landscape of Kathmandu.</p>
+## Zunkiree Labs: Pioneering AI Solutions
 
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Zunkiree Labs: Pioneering AI Solutions</h2>
+Zunkiree Labs offers a comprehensive suite of AI services that includes custom software development and technical consulting. They are committed to advancing AI technology within Nepal and beyond, focusing on practical applications that drive efficiency and innovation in various industries such as healthcare, manufacturing, and professional services.
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs offers a comprehensive suite of AI services that includes custom software development and technical consulting. They are committed to advancing AI technology within Nepal and beyond, focusing on practical applications that drive efficiency and innovation in various industries such as healthcare, manufacturing, and professional services.</p>
-
-</div>
