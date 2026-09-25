@@ -528,6 +528,122 @@
       ],
       "formTitle": "Download the Guide",
       "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "stella-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026 Report" }
+      ],
+      "title": "How We Built Stella, an Autonomous AI Commerce Agent",
+      "subtitle": "Why scripted chatbots stall at checkout, and how we engineered an agent that sells for you",
+      "description": "Stella is Zunkiree Labs' AI commerce agent, built to carry shoppers from discovery through checkout without a human or a script in the loop. This case study covers why we built it, the engineering decisions behind it, and what shipped.",
+      "coverImage": "/assets/images/resources/stella-case-study-cover.svg",
+      "publishDate": "2026-09-10",
+      "readTime": "9 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Agentic Commerce",
+      "results": [
+        "Autonomous checkout, not just chat",
+        "Native eSewa, Khalti & Fonepay integration",
+        "Deploys on Daraz, Shopify & WooCommerce",
+        "Multi-turn conversations in Nepali and English"
+      ],
+      "challenge": "Scripted chatbots break the moment a shopper asks something unscripted, and support can't cover every hour a store is open. Every dead-ended conversation is a sale that quietly walks away, and there was no agent on the market built for how Nepali shoppers actually pay.",
+      "solution": "We built Stella as an autonomous agent rather than a decision-tree bot: a large language model grounded in the merchant's product catalog and business rules, so it can answer unscripted questions, recommend products, handle objections, and complete the transaction itself. Nepal payment rails (eSewa, Khalti, Fonepay) were built in from day one alongside Stripe, and the agent ships as a drop-in layer on Daraz, Shopify, WooCommerce, and custom storefronts.",
+      "formTitle": "Talk to Us About Stella",
+      "ctaText": "Schedule a Demo"
+    },
+    {
+      "slug": "zenly-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "dental-ai-case-study", "title": "Case Study: Building Dental AI Assistant" },
+        { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" }
+      ],
+      "title": "How We Built Zenly, an AI Booking Engine for Complex Availability",
+      "subtitle": "Why one calendar isn't enough, and how AI resolves scheduling conflicts automatically",
+      "description": "Zenly is Zunkiree Labs' AI-powered scheduling engine, built to handle multi-provider, multi-resource availability that a plain calendar can't represent. This case study covers the engineering behind automatic conflict resolution and no-show reduction.",
+      "coverImage": "/assets/images/resources/zenly-case-study-cover.svg",
+      "publishDate": "2026-09-05",
+      "readTime": "8 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Scheduling & Operations",
+      "results": [
+        "Automatic conflict resolution with waitlist rebooking",
+        "Multi-provider, multi-resource availability modeling",
+        "AI-timed reminders built to cut no-shows",
+        "Syncs with Google, Outlook & Apple Calendar"
+      ],
+      "challenge": "Real-world availability is never just one calendar — providers, rooms, and equipment each carry their own constraints, and double-bookings were being resolved by hand, back and forth, one message at a time. Without a timely nudge, booked slots quietly went empty.",
+      "solution": "We modeled availability as a constraint problem instead of a single calendar: providers, locations, equipment, and custom rules all feed into one engine that computes real openings and resolves conflicts by proposing alternatives or rebooking automatically with approval. On top of that we layered AI-timed, channel-aware reminders tuned to when a given customer is actually likely to respond.",
+      "formTitle": "Talk to Us About Zenly",
+      "ctaText": "Schedule a Demo"
+    },
+    {
+      "slug": "gaamma-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
+      "title": "How We Built Gaamma, an AI-Powered Manufacturing ERP",
+      "subtitle": "Turning disconnected floor systems into one predictive view of the factory",
+      "description": "Gaamma is Zunkiree Labs' manufacturing ERP, built to unify production planning, inventory, and quality control with AI-driven predictive maintenance. This case study covers why we built it and how it plugs into equipment already on the floor.",
+      "coverImage": "/assets/images/resources/gaamma-case-study-cover.svg",
+      "publishDate": "2026-08-28",
+      "readTime": "9 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Manufacturing",
+      "results": [
+        "Real-time work order, machine & operator visibility",
+        "Predictive maintenance model flags failures before they happen",
+        "Connects to PLCs, SCADA & IoT sensors without rip-and-replace",
+        "Serves discrete, process, job-shop & warehouse operations"
+      ],
+      "challenge": "Work orders, machines, and operators lived in separate systems, so no one could see exactly where a job stood. Equipment failures showed up as unplanned stops instead of scheduled maintenance, and manual reordering kept inventory turns flat.",
+      "solution": "We built Gaamma as a single production layer that both ingests floor data and predicts from it. Equipment monitoring feeds a machine-learning model that flags failures before they happen, while the same platform standardizes work order, inventory, and quality data on one source of truth — connecting to PLCs, SCADA systems, and IoT sensors already on the floor instead of asking manufacturers to replace them.",
+      "formTitle": "Talk to Us About Gaamma",
+      "ctaText": "Request a Demo"
+    },
+    {
+      "slug": "dental-ai-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
+      "title": "How We're Building Dental AI Assistant, a 24/7 Patient Communication Partner",
+      "subtitle": "Inside our private beta: automating the calls and reminders that eat every open hour",
+      "description": "Dental AI Assistant is Zunkiree Labs' in-progress product for dental practices, currently running in private beta. This case study covers why we're building it, the AI approach behind it, and what's shipped so far ahead of general availability.",
+      "coverImage": "/assets/images/resources/dental-ai-case-study-cover.svg",
+      "publishDate": "2026-08-20",
+      "readTime": "7 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Healthcare",
+      "results": [
+        "Currently in private beta with select practices",
+        "24/7 patient Q&A on procedures, pricing & insurance",
+        "AI-scheduled appointments matched to treatment time & provider",
+        "HIPAA-compliant, integrates with Dentrix, Eaglesoft & Open Dental"
+      ],
+      "challenge": "Scheduling, pricing, and insurance questions were competing with in-chair patient care for staff attention, appointments were going unreminded, and satisfied patients rarely left a review unless someone followed up right after their visit.",
+      "solution": "We're building Dental AI Assistant as an always-on layer over the practice's existing systems: it answers routine patient questions instantly, books appointments against real provider and chair availability, and sends personalized, multi-channel follow-ups — all logged and auditable to stay HIPAA-compliant. It's running in private beta with select practices ahead of general availability.",
+      "formTitle": "Join the Dental AI Waitlist",
+      "ctaText": "Join Waitlist"
     }
   ]
 }

@@ -15,6 +15,7 @@
     headerHidden: false,
     lastScrollY: 0,
     activeDropdown: null,
+    dropdownCloseTimer: null,
     mobileMenuOpen: false,
     scrolled: false,
     handleScroll() {
@@ -44,13 +45,41 @@
       if (window.__lenis) window.__lenis.start();
     },
     toggleDropdown(label) {
+      clearTimeout(this.dropdownCloseTimer);
       this.activeDropdown = this.activeDropdown === label ? null : label;
       if (this.activeDropdown !== null) this.lockPageScroll();
       else this.unlockPageScroll();
     },
     closeDropdown() {
+      clearTimeout(this.dropdownCloseTimer);
       if (this.activeDropdown !== null) this.unlockPageScroll();
       this.activeDropdown = null;
+    },
+    // Hover-intent open/close so moving the mouse from the trigger down into
+    // the panel never hits a gap that closes it early (no flicker), and the
+    // panel stays open while the pointer is anywhere over it.
+    openDropdownHover(label) {
+      clearTimeout(this.dropdownCloseTimer);
+      if (this.activeDropdown !== label) {
+        this.activeDropdown = label;
+        this.lockPageScroll();
+      }
+    },
+    scheduleCloseDropdown() {
+      clearTimeout(this.dropdownCloseTimer);
+      this.dropdownCloseTimer = setTimeout(() => {
+        // Ask the browser for real-time hover state instead of trusting JS
+        // event ordering — the header contains every trigger AND every panel,
+        // and CSS :hover is true on an ancestor whenever any descendant is
+        // hovered, so this is correct regardless of how mouseenter/mouseleave
+        // fired across the trigger/panel boundary.
+        if (this.$refs.megaNavHeader && this.$refs.megaNavHeader.matches(':hover')) return;
+        this.activeDropdown = null;
+        this.unlockPageScroll();
+      }, 150);
+    },
+    cancelCloseDropdown() {
+      clearTimeout(this.dropdownCloseTimer);
     },
     openMobileMenu() {
       this.mobileMenuOpen = true;
@@ -82,6 +111,7 @@
   ></div>
 
   <header
+    x-ref="megaNavHeader"
     class="fixed top-0 inset-x-0 z-50 transition-transform duration-500 translate-y-0"
     @click.outside="closeDropdown()"
   >
@@ -97,8 +127,8 @@
             <img
               src="/assets/images/zunkireelabs-logo-light.png"
               alt="Zunkiree Labs"
-              class="h-6 w-auto"
-              width="200" height="24"
+              class="w-44 h-auto"
+              width="176" height="53"
             />
           </a>
 
@@ -109,8 +139,8 @@
                 <button
                   type="button"
                   x-data="{ hovered: false }"
-                  @mouseenter="hovered = true"
-                  @mouseleave="hovered = false"
+                  @mouseenter="hovered = true; openDropdownHover('{{ item.label }}')"
+                  @mouseleave="hovered = false; scheduleCloseDropdown()"
                   @click="toggleDropdown('{{ item.label }}')"
                   class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
                   :style="(hovered || activeDropdown === '{{ item.label }}') ? 'color: #76B900;' : 'color: var(--foreground);'"
@@ -175,6 +205,8 @@
           style="max-height: calc(100vh - 72px);"
           data-lenis-prevent
           @click.self="closeDropdown()"
+          @mouseenter="cancelCloseDropdown()"
+          @mouseleave="scheduleCloseDropdown()"
           x-show="activeDropdown === '{{ item.label }}'"
           x-transition:enter="transition ease-out duration-150"
           x-transition:enter-start="opacity-0"
@@ -373,7 +405,7 @@
   >
     <div class="flex items-center justify-between h-[72px] px-4 sm:px-6 border-b border-gray-100">
       <a href="/" class="flex items-center" @click="closeMobileMenu()" aria-label="Zunkiree Labs home">
-        <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="h-6 w-auto" width="200" height="24" />
+        <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="w-44 h-auto" width="176" height="53" />
       </a>
       <button
         type="button"

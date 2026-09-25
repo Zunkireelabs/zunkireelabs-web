@@ -72,6 +72,17 @@ layout: base.njk
 </style>
 
 {# =====================================================
+   REVIEW / AGGREGATE RATING SCHEMA (AI-managed — written by the Action Center)
+   Only rendered when location.reviewSchema is present; never fabricated
+   here or by the generator that writes it — see server/generators/schema.js.
+   ===================================================== #}
+{% if location.reviewSchema %}
+<script type="application/ld+json">
+{{ location.reviewSchema | dump | safe }}
+</script>
+{% endif %}
+
+{# =====================================================
    HERO SECTION — breadcrumb + eyebrow + h1 + intro + CTAs on
    the left (homepage-v2 heading recipe), contact/hours glass
    card on the right (locations/index.njk HQ-card treatment).
@@ -348,6 +359,35 @@ layout: base.njk
     </div>
   </div>
 </section>
+{% endif %}
+
+{# =====================================================
+   EXPANDED CONTENT (AI-managed — written by the Action Center)
+   Only rendered when location.expandedContent is present; never
+   fabricated here or by the generator that writes it — see
+   server/generators/expand-content.js. Already a fully rendered HTML
+   block (wrapper + rows), not raw text.
+   ===================================================== #}
+{% if location.expandedContent %}
+{{ location.expandedContent | safe }}
+{% endif %}
+
+{# =====================================================
+   Q&A CONTENT (AI-managed — written by the Action Center)
+   Only rendered when location.qaContentHtml is present — see
+   server/generators/qa-content.js.
+   ===================================================== #}
+{% if location.qaContentHtml %}
+{{ location.qaContentHtml | safe }}
+{% endif %}
+
+{# =====================================================
+   RELATED / INTERNAL LINKS (AI-managed — written by the Action Center)
+   Only rendered when location.internalLinksHtml is present — see
+   server/generators/internal-links.js.
+   ===================================================== #}
+{% if location.internalLinksHtml %}
+{{ location.internalLinksHtml | safe }}
 {% endif %}
 
 {# =====================================================

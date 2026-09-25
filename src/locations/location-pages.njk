@@ -9,8 +9,8 @@ permalink: /locations/{{ location.id }}/
 hideChrome: true
 bodyClass: "v2-inter"
 eleventyComputed:
-  title: "{{ location.title }}"
-  description: "{{ location.description }}"
+  title: "{{ location.title | safe }}"
+  description: "{{ location.description | safe }}"
   locationId: "{{ location.id }}"
 ---
 

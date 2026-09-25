@@ -106,6 +106,9 @@ export default {
         'sans': ['DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
         'display': ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
         'mono': ['DM Mono', 'Fira Code', 'Consolas', 'monospace'],
+        // Editorial italic accent (Orca dark hero only, 2026-09-25) — matches the
+        // Kore.ai Artemis hero's "Meet { X }" tagline / subhead treatment.
+        'editorial': ['Instrument Serif', 'Georgia', 'serif'],
       },
       fontSize: {
         // Typography Scale (Desktop)

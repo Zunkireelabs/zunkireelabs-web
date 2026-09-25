@@ -31,9 +31,7 @@
     "statLabel": "faster analysis",
     "headline": "Rapid Investment transforms data processing",
     "description": "Rapid Investment needed real-time data analytics to power their investment decisions. We built a data system that processes millions of data points.",
-    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
-    "ctaText": "Read the case study",
-    "ctaUrl": "/resources/rapid-investment-case-study/"
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop"
   },
   {
     "id": "cms-group",
@@ -43,8 +41,6 @@
     "statLabel": "process automation",
     "headline": "CMS Group automates enterprise workflows",
     "description": "CMS Group transformed their operations with custom enterprise software that automated manual workflows and improved team collaboration.",
-    "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop",
-    "ctaText": "Read the case study",
-    "ctaUrl": "/resources/cms-group-case-study/"
+    "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop"
   }
 ]

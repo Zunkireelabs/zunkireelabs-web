@@ -385,7 +385,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["admizz", "prime-tiles", "khems-cleaning"]
+    "clients": ["admizz", "prime-tiles", "khems-cleaning"],
+    "heroAlt": "Hero image showcasing customer experience and AI technology"
   },
 
   "ai-ecommerce": {
@@ -773,7 +774,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["rapid-investment", "mach24orbital", "cms-group"]
+    "clients": ["rapid-investment", "mach24orbital", "cms-group"],
+    "heroAlt": "Hero image for data systems section"
   },
 
   "custom-software": {
@@ -967,7 +969,8 @@
       "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
     },
 
-    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"]
+    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"],
+    "heroAlt": "Hero image for custom software section"
   },
 
   "saas-development": {
@@ -1549,7 +1552,8 @@
       "secondaryButton": { "text": "View App Projects", "url": "/projects/" }
     },
 
-    "clients": ["admizz", "rapid-investment"]
+    "clients": ["admizz", "rapid-investment"],
+    "heroAlt": "Hero background image for services section."
   },
 
   "aeo-seo": {

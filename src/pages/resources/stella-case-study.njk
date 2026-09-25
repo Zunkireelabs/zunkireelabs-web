@@ -1,0 +1,96 @@
+---
+layout: resource-content.njk
+title: How We Built Stella, an Autonomous AI Commerce Agent | Zunkiree Labs
+description: Why scripted chatbots stall at checkout, and how Zunkiree Labs engineered Stella, an autonomous AI commerce agent with native eSewa, Khalti, and Fonepay support.
+permalink: /resources/stella-case-study/
+slug: stella-case-study
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why we built Stella</h2>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Most &ldquo;AI shopping assistants&rdquo; are still decision trees wearing a chat bubble&mdash;the moment a shopper asks something unscripted, the conversation dead-ends and support has to take over. That's a lost sale outside business hours, and Nepali merchants had no agent built around how their customers actually pay. We built Stella to close that gap: an agent that can carry a real conversation and finish the transaction itself.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The problem</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Scripted chatbots break the moment a shopper asks something unscripted, and support can't cover every hour a store is open. Every dead-ended conversation is a sale that quietly walks away, and there was no agent on the market built for how Nepali shoppers actually pay.
+  </p>
+  <div class="rounded-2xl border border-red-200 bg-red-50 p-6">
+    <p class="mb-2 font-medium text-[#111827]">What scripted bots miss:</p>
+    <ul class="space-y-2 text-[14px] leading-relaxed text-[#6B7280]">
+      <li>&bull; Any question outside the script ends the conversation instead of moving toward checkout</li>
+      <li>&bull; No coverage outside business hours, so buying questions go unanswered</li>
+      <li>&bull; Carts get abandoned quietly, with no nudge at the moment that matters</li>
+      <li>&bull; Most agents on the market aren't built for eSewa, Khalti, or Fonepay</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How we built it</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    We built Stella as an autonomous agent rather than a decision-tree bot: a large language model grounded in the merchant's product catalog and business rules, so it can answer unscripted questions, recommend products, handle objections, and complete the transaction itself. Nepal payment rails (eSewa, Khalti, Fonepay) were built in from day one alongside Stripe, and the agent ships as a drop-in layer on Daraz, Shopify, WooCommerce, and custom storefronts.
+  </p>
+  <div class="space-y-3">
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Catalog-grounded conversation</p>
+      <p class="text-[13.5px] text-[#6B7280]">Stella's model is grounded in the merchant's live product catalog and business rules, so it recommends real inventory and answers real policy questions instead of hallucinating either.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Nepal payments built in from day one</p>
+      <p class="text-[13.5px] text-[#6B7280]">eSewa, Khalti, and Fonepay integrate at the same level as Stripe&mdash;payment wasn't bolted on after the fact, it shaped how the checkout flow was designed.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Autonomous checkout, not a handoff</p>
+      <p class="text-[13.5px] text-[#6B7280]">Stella manages the cart, applies discounts, and processes payment inside the conversation&mdash;it doesn't hand the shopper off to a separate checkout page.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">One agent, multiple storefronts</p>
+      <p class="text-[13.5px] text-[#6B7280]">The same agent deploys as a drop-in layer on Daraz, Shopify, and WooCommerce, or through a REST/GraphQL API for a custom storefront.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What shipped</h2>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    {% for result in resource.results %}
+    <div class="rounded-2xl border border-[#76B900]/20 bg-[#76B900]/[0.06] p-5">
+      <p class="text-[15px] font-medium text-[#111827]">{{ result }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Key engineering decisions</h2>
+  <div class="space-y-4">
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">01</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Ground the model in real inventory:</strong> Recommendations and answers come from the merchant's actual catalog, not a general-purpose model guessing.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">02</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Local payment rails aren't an afterthought:</strong> Designing for eSewa and Khalti from the start avoided retrofitting a checkout flow built only for Stripe.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">03</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Finish the transaction, don't just chat:</strong> An agent that recommends but can't check out still loses the sale to friction&mdash;Stella closes the loop itself.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "about": { "@type": "SoftwareApplication", "name": "Stella", "applicationCategory": "BusinessApplication" }
+}
+</script>

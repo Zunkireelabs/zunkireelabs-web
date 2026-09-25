@@ -45,7 +45,7 @@ bodyClass: "v2-inter"
    Background — REVISED 2026-07-28:
    using image.webp as the background image for the hero section, no scrim/tint on top.
    ===================================================== #}
-<div class="relative overflow-x-clip" style="background-image: url('/assets/images/image.webp'); background-size: cover; background-position: top center; background-repeat: no-repeat;">
+<div class="relative overflow-x-clip bg-white">
 
 {# Section starts at the very top of the document since the navbar is `fixed`
    (out of flow, 72px tall, z-50) — pt-32/36/44 clears it before the headline,
@@ -69,7 +69,7 @@ bodyClass: "v2-inter"
          line 2 while both stay centered on the same axis. -->
     <h1
       id="hero-v2-heading"
-      class="mt-[20px] text-center text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
+      class="mt-[20px] text-center text-balance text-[38px] font-light leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
     >
       Building AI to make lives better.
     </h1>
@@ -108,36 +108,50 @@ bodyClass: "v2-inter"
 
 {# =====================================================
    PLATFORM TEASER — Website V2
-   Follows Kore.ai's "Meet {Artemis}" pattern instead of their
-   generic platform strip — names one flagship, already-shipped
-   product (Zunkiree Search) directly in the headline instead of
-   an abstract "platform" claim. Same dark rounded card shell as
-   before: mono eyebrow → headline w/ bracket-styled product name
-   + "Live" badge → one-line support copy (reused verbatim from
-   productsDetails.json.search.description, the same copy powering
-   /products/search/) → circular arrow CTA on the right, on a dark
-   navy-950 surface with the existing green/navy gradient bloom.
-   Text-only card, per explicit direction — no photographic/render
-   asset (that's Kore's approach, deliberately not copied here).
-   ASCII/glyph texture was tried and rejected (didn't read well) —
-   visual richness now comes from just the enlarged, slow-drifting
-   version of the existing green/slate bloom, behind the text, no
-   layout or DOM structure change.
+   Follows Kore.ai's "Meet {Artemis}" pattern — names one flagship
+   product directly in the headline instead of an abstract "platform"
+   claim. Swapped 2026-09-25 from Zunkiree Search to Orca (per explicit
+   direction — same card shell/layout kept as-is, only content changes).
+   Orca has no shipped product yet (src/_data/platformProducts.js's own
+   comment: "no fabricated stats, clients, or FAQ"), so no "Live" badge —
+   uses a "Coming Soon" hint badge instead. Subhead is a rephrased version
+   of Orca's real description (still just CRM/email/marketing-tool
+   orchestration — nothing added), matching the punchier tone of the
+   kore.ai reference rather than quoting platformProducts.js verbatim.
+   Same dark rounded card shell as before: mono eyebrow → headline w/
+   bracket-styled product name + hint badge → one-line support copy →
+   circular arrow CTA on the right, on a dark navy-950 surface with the
+   existing green/navy gradient bloom. Text-only card, per explicit
+   direction — no photographic/render asset (that's Kore's approach,
+   deliberately not copied here). ASCII/glyph texture was tried and
+   rejected (didn't read well) — visual richness comes from just the
+   enlarged, slow-drifting version of the existing green/slate bloom,
+   behind the text.
 
-   Links to /products/search/ — Search already has a real, fully
-   built product page, so the CTA now goes straight there instead
-   of the old /services/ placeholder.
+   Links to /products/orca/ — Orca already has a real product page.
    ===================================================== #}
 <section class="relative z-10 mt-6 px-4 pb-8 sm:-mt-10 sm:px-6 sm:pb-10 lg:-mt-12 lg:px-8 lg:pb-12" data-reveal>
   <div class="mx-auto max-w-5xl">
     <a
-      href="/products/search/"
+      href="/products/orca/"
       class="group relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl bg-navy-950 p-6 transition-colors duration-200 hover:bg-navy-900 sm:gap-8 sm:p-10 md:flex-row md:items-center lg:p-12"
       style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
     >
       <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10). Enlarged + slow drift vs. the original static version. -->
       <div
-        class="search-card-bloom pointer-events-none absolute inset-0 z-0"
+        class="orca-card-bloom pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Marble swirl texture — same green/navy palette, SVG feTurbulence (no external image), slow independent drift so it reads as smoke rather than static noise. -->
+      <div
+        class="orca-card-swirl pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Fine grain overlay — very low opacity, matches the grain treatment used on the blog featured images. -->
+      <div
+        class="orca-card-grain pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
       ></div>
 
@@ -145,23 +159,20 @@ bodyClass: "v2-inter"
         <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
           A Zunkiree Labs Product
         </span>
-        <h2 class="mb-3 text-[22px] font-medium leading-[1.25] text-white sm:text-[26px] lg:text-[30px]">
-          Introducing <span class="text-[#76B900]">{</span> <span class="italic">Zunkiree Search</span> <span class="text-[#76B900]">}</span>
-          <span class="ml-2 inline-flex translate-y-[-0.15em] items-center rounded-full bg-[#76B900] px-2.5 py-1 align-middle text-[10px] font-semibold uppercase tracking-wider text-white">
-            Live
-          </span>
+        <h2 class="mb-3 text-[28px] font-medium leading-[1.2] text-white sm:text-[34px] lg:text-[40px]">
+          Introducing <span class="text-[#76B900]">{</span> <span class="italic text-[#76B900]">Orca</span> <span class="text-[#76B900]">}</span>
         </h2>
         <p class="text-[14px] leading-relaxed text-white/60">
-          Transform how users discover information with natural language search.
-          Deliver direct answers instead of link lists, reducing support queries by 45%.
+          Orca connects your CRM, email, and marketing tools into one coordinated layer —
+          agent workflows that act across systems, not just within one.
         </p>
       </div>
 
       <span
-        class="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-white text-navy-950 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+        class="absolute right-6 top-6 z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-white text-navy-950 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 sm:right-8 sm:top-8 lg:right-10 lg:top-10"
         aria-hidden="true"
       >
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 17L17 7M17 7H8m9 0v9" />
         </svg>
       </span>
@@ -170,18 +181,46 @@ bodyClass: "v2-inter"
 </section>
 
 <style>
-  .search-card-bloom {
+  .orca-card-bloom {
     background:
       radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
       radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
-    animation: search-card-bloom-drift 14s ease-in-out infinite;
+    animation: orca-card-bloom-drift 14s ease-in-out infinite;
   }
-  @keyframes search-card-bloom-drift {
+  @keyframes orca-card-bloom-drift {
     0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
     50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
   }
+
+  /* Marble swirl — feTurbulence colorized to the same brand green (#76B900) + slate-navy pair used in
+     .orca-card-bloom, so it reads as texture on that gradient rather than a new hue. Opacity kept low
+     (mix-blend: screen, ~0.5) to protect text contrast per accessibility requirements. */
+  .orca-card-swirl {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='s' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.014' numOctaves='4' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='matrix' values='0 0 0 0 0.29  0 0 0 0 0.55  0 0 0 0 0.13  0 0 0 0.85 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+    background-size: 140% 140%;
+    background-position: 30% 85%;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+    animation: orca-card-swirl-drift 22s ease-in-out infinite;
+  }
+  @keyframes orca-card-swirl-drift {
+    0%, 100% { background-position: 30% 85%; transform: scale(1); }
+    50% { background-position: 42% 95%; transform: scale(1.08); }
+  }
+
+  /* Fine grain — same texture family as the blog featured-image treatment, kept very subtle here. */
+  .orca-card-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: screen;
+    opacity: 0.18;
+    -webkit-mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
+    mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .search-card-bloom { animation: none; }
+    .orca-card-bloom { animation: none; }
+    .orca-card-swirl { animation: none; }
   }
 </style>
 
@@ -873,7 +912,7 @@ app = platform.init(
         Industries
       </span>
 
-      <h2 id="industry-showcase-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+      <h2 id="industry-showcase-heading" class="mb-6 text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
         Find the industry that looks like yours
       </h2>
 
@@ -1012,7 +1051,7 @@ app = platform.init(
 
           <!-- Headline overlaid top-left on the image -->
           <div class="absolute left-6 top-6 right-40 sm:left-8 sm:top-8 sm:right-auto sm:max-w-md z-20 text-left">
-            <h3 class="text-[20px] font-semibold leading-[1.3] text-white sm:text-[24px] drop-shadow-md">
+            <h3 class="text-[20px] font-medium leading-[1.3] text-white sm:text-[24px] drop-shadow-md">
               {{ item.headline }}
             </h3>
           </div>
@@ -1266,7 +1305,7 @@ app = platform.init(
           <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
             A Zunkiree Labs Platform
           </span>
-          <h2 id="platform-visual-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+          <h2 id="platform-visual-heading" class="text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
             One platform. Every capability.
           </h2>
           <a
@@ -1339,7 +1378,7 @@ app = platform.init(
         <!-- Panel heading — Kore.ai "purpose-built applications" pattern (screenshot ref, 2026-07-28).
              Subheading reuses pillars[0].description verbatim — already fact-checked (HOMEPAGE_V2_COPY.md §1). -->
         <div class="mb-6">
-          <h3 class="text-[22px] font-semibold leading-[1.3] text-[#111827] sm:text-[24px]">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
             Applications already live for your industry
           </h3>
           <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
@@ -1420,7 +1459,7 @@ app = platform.init(
       >
         <!-- Panel heading — subheading reuses pillars[1].description verbatim (already fact-checked). -->
         <div class="mb-6">
-          <h3 class="text-[22px] font-semibold leading-[1.3] text-[#111827] sm:text-[24px]">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
             Built to deploy, not just demo
           </h3>
           <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
@@ -1504,7 +1543,7 @@ app = platform.init(
       >
         <!-- Panel heading — subheading reuses pillars[2].description verbatim (already fact-checked). -->
         <div class="mb-6">
-          <h3 class="text-[22px] font-semibold leading-[1.3] text-[#111827] sm:text-[24px]">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
             One platform that scales with you
           </h3>
           <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
@@ -1683,6 +1722,33 @@ app = platform.init(
   <circle cx="320" cy="70" r="6" fill="#76B900" opacity="0.85" />
 </svg>
 {% endmacro %}
+{# Bento card: short title overlaid centered on the image (ElevenLabs "Latest updates"
+   pattern), full date + title below like before. Reused for all 5 AI Insights cards
+   (now laid out as a 3-up row + 2-up row, per the widget-grid layout reference). #}
+{% macro bentoCard(post, variant, cls, titleCls) %}
+<a href="{{ post.url }}" class="group flex flex-col {{ cls }}">
+  <div class="relative min-h-0 flex-1 overflow-hidden rounded-2xl bg-navy-100">
+    {% if post.data.featuredImage and (post.data.featuredImage | fileExists) %}
+      <img src="{{ post.data.featuredImage }}" alt="{{ post.data.featuredImageAlt or '' }}" class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+    {% else %}
+      {{ coverArt(variant, "absolute inset-0 h-full w-full transition-transform duration-300 group-hover:scale-105") }}
+    {% endif %}
+    <div class="absolute inset-0 flex items-center justify-center bg-black/10 p-6">
+      <h3 class="{{ titleCls }} text-center font-normal leading-[1.3] text-white drop-shadow-md">
+        {{ post.data.shortLabel or (post.data.title | shortLabel) }}
+      </h3>
+    </div>
+  </div>
+  <div class="shrink-0 pt-3">
+    <span class="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+      {{ post.data.date | date("%B %d, %Y") }}
+    </span>
+    <h3 class="{{ titleCls }} line-clamp-2 min-h-[2.6em] font-normal leading-[1.3] text-[#111827] transition-colors group-hover:text-navy-600">
+      {{ post.data.title }}
+    </h3>
+  </div>
+</a>
+{% endmacro %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="insights-heading">
   <div class="mx-auto max-w-5xl">
     <div class="mb-10 flex flex-wrap items-end justify-between gap-4 md:mb-12" data-reveal>
@@ -1690,7 +1756,7 @@ app = platform.init(
         <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
           Resources
         </span>
-        <h2 id="insights-heading" class="text-[28px] font-semibold leading-[1.2] text-[#111827] sm:text-[30px] lg:text-[32px]">
+        <h2 id="insights-heading" class="text-[28px] font-light leading-[1.2] text-[#111827] sm:text-[30px] lg:text-[32px]">
           AI Insights
         </h2>
       </div>
@@ -1704,46 +1770,20 @@ app = platform.init(
     </div>
 
     {% if sortedPosts.length %}
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3" data-reveal-stagger>
+      {# Bento: 3-up row + 2-up row, mirrors the widget-grid layout reference #}
+      <div class="flex flex-col gap-4 sm:gap-5" data-reveal-stagger>
 
-        <!-- Featured post -->
-        {% set featured = sortedPosts[0] %}
-        <a href="{{ featured.url }}" class="group relative flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-2xl bg-navy-100 p-6 lg:col-span-2 sm:p-8">
-          {% if featured.data.featuredImage and (featured.data.featuredImage | fileExists) %}
-            <img src="{{ featured.data.featuredImage }}" alt="{{ featured.data.featuredImageAlt or '' }}" class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="960" height="540" />
-          {% else %}
-            {{ coverArt(coverVariants[0], "absolute inset-0 h-full w-full transition-transform duration-300 group-hover:scale-105") }}
-          {% endif %}
-          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" aria-hidden="true"></div>
-          <div class="relative z-10">
-            <span class="mb-3 inline-block font-mono text-[12px] uppercase tracking-wider text-white/70">
-              {{ featured.data.date | date("%B %d, %Y") }}
-            </span>
-            <h3 class="max-w-xl text-[22px] font-medium leading-[1.3] text-white sm:text-[26px]">
-              {{ featured.data.title }}
-            </h3>
-          </div>
-        </a>
+        <!-- Top row: 3 equal cards, on a 6-col grid so each card = 2 cols -->
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5">
+          {{ bentoCard(sortedPosts[0], coverVariants[0], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+          {{ bentoCard(sortedPosts[1], coverVariants[1], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+          {{ bentoCard(sortedPosts[2], coverVariants[2], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+        </div>
 
-        <!-- Secondary posts -->
-        <div class="flex flex-col gap-6" data-reveal-stagger>
-          {% for post in sortedPosts.slice(1, 5) %}
-            <a href="{{ post.url }}" class="group flex items-start gap-4 rounded-xl border border-navy-100 bg-white p-4 transition-colors hover:border-navy-300">
-              {% if post.data.featuredImage and (post.data.featuredImage | fileExists) %}
-                <img src="{{ post.data.featuredImage }}" alt="{{ post.data.featuredImageAlt or '' }}" class="h-20 w-20 flex-shrink-0 rounded-lg object-cover" loading="lazy" width="80" height="80" />
-              {% else %}
-                {{ coverArt(coverVariants[(loop.index0 + 1) % 3], "h-20 w-20 flex-shrink-0 rounded-lg") }}
-              {% endif %}
-              <div class="min-w-0">
-                <h3 class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600">
-                  {{ post.data.title }}
-                </h3>
-                <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-                  {{ post.data.date | date("%B %d, %Y") }}{% if post.data.readTime %} &middot; {{ post.data.readTime }} min{% endif %}
-                </span>
-              </div>
-            </a>
-          {% endfor %}
+        <!-- Bottom row: same card width as the top row, centered under it (1 empty col on each side) -->
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5">
+          {{ bentoCard(sortedPosts[3], coverVariants[1], "sm:col-start-2 sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+          {{ bentoCard(sortedPosts[4], coverVariants[2], "sm:col-start-4 sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
         </div>
 
       </div>
@@ -1803,7 +1843,7 @@ app = platform.init(
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
         Support
       </span>
-      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+      <h2 id="faq-heading" class="text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
         Frequently asked questions
       </h2>
     </div>
@@ -1882,7 +1922,7 @@ app = platform.init(
       <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
         Get Started
       </span>
-      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-light leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
         See it running for your industry
       </h2>
       <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">

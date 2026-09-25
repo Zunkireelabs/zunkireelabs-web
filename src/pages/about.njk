@@ -648,6 +648,53 @@ bodyClass: "v2-inter"
 </section>
 
 {# =====================================================
+   INFRASTRUCTURE-LEVEL AI COMPARISON
+   Recovered from commit 8d68e55 (SEOAI expanded-content
+   block, since removed) and re-homed into the v2 layout.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
+  <div class="mx-auto max-w-content">
+    <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">Infrastructure-Level AI, Not Wrappers</h2>
+    <div class="mt-4 max-w-2xl text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
+      <p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p>
+      <div class="mt-8 mb-2 overflow-hidden rounded-lg border border-gray-200">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">Feature</th>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">Alternative</th>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">This Option</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Foundation</td>
+              <td class="px-4 py-3 text-gray-600">API wrapper over a third-party model</td>
+              <td class="px-4 py-3 text-gray-600">Owned AI-native infrastructure (RAG pipelines, knowledge systems)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Data readiness</td>
+              <td class="px-4 py-3 text-gray-600">Ad-hoc, project-by-project</td>
+              <td class="px-4 py-3 text-gray-600">Scalable data pipelines and AI-ready infrastructure built in</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Engagement model</td>
+              <td class="px-4 py-3 text-gray-600">One-off project delivery</td>
+              <td class="px-4 py-3 text-gray-600">Ongoing platform that compounds value over time</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Service scope</td>
+              <td class="px-4 py-3 text-gray-600">Single point solution</td>
+              <td class="px-4 py-3 text-gray-600">AI development, data engineering, custom software, and platform engineering together</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
    CLOSING CTA — sanctioned dark-card radial-gradient
    component (COMPONENT_LIBRARY.md §2.6 / industry.njk),
    replacing the bespoke cta-background.svg treatment.

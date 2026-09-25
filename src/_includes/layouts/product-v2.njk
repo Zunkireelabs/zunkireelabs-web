@@ -249,7 +249,56 @@ layout: base.njk
    Orca (no fabricated live-search feature on products that
    don't have one).
    ===================================================== #}
-<section class="relative flex flex-col items-center justify-center overflow-hidden px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-44" aria-labelledby="hero-heading">
+{# =====================================================
+   Dark hero variant — opt-in per product via hero.theme == "dark"
+   (Orca only, 2026-09-25). Kore.ai's Artemis hero is a near-black,
+   left-aligned layout with a large aurora-style color wash behind
+   a bold headline. We match that structure — left alignment, an
+   oversized headline, an aurora wash — using our own brand palette
+   (brand-green/slate/sky) and an original CSS gradient recipe, not
+   Kore's actual background image or copy. Search and AI CRM don't
+   set this flag, so their hero (centered, light) is untouched.
+   ===================================================== #}
+{% set heroDark = product.hero.theme == "dark" %}
+{% set heroGlow = "from-[#76B900]/25 via-[#577782]/20 to-transparent" if heroDark else "from-sky-200/50 via-sky-100/25 to-transparent" %}
+{% set heroEyebrowClass = "border-white/15 bg-white/5 text-white/70" if heroDark else "border-sky-200/60 bg-gradient-to-br from-sky-50 to-white text-navy-500" %}
+{% set heroHeadlineClass = "text-white" if heroDark else "text-[#111827]" %}
+{% set heroSubheadClass = "text-white/60" if heroDark else "text-[#6B7280]" %}
+{% set heroPillClass = "border-white/15 bg-white/5 text-white/80" if heroDark else "border-navy-100/60 bg-white text-navy-600 shadow-subtle" %}
+{% set heroBadgeTileClass = "border border-white/15 bg-white/10 backdrop-blur-md text-white" if heroDark else "bg-navy-950 text-white" %}
+
+{% if heroDark %}
+{# =====================================================
+   CONTINUOUS DARK GROUND (heroDark only, 2026-09-25) — bloom + grain
+   render ONCE here as a single field spanning from the very top of the
+   hero all the way to the closing CTA (closed at the bottom of the
+   file, just before the footer include). Kore.ai's hero pattern reads
+   as one uninterrupted canvas, not a hero layer stitched to a second
+   "page ground" layer below it — two separately-bounded gradients can
+   never line up pixel-for-pixel at their shared edge, which is what
+   produced the hard seam this replaces. Swirl stays hero-only (see
+   .hero-dark-swirl below) since it's a hero accent, not part of the
+   base ground, and it fades out on its own before the hero ends.
+
+   `fixed` (not `absolute`), 2026-09-25: bloom/grain sit inside a
+   wrapper that now spans the whole page (hero through closing CTA),
+   so `absolute inset-0` stretched their box to full page height —
+   the gradient's percentage-based stops (tuned for one hero-height
+   box) then resolved almost entirely off-screen, reading as a
+   flat, colorless page with only stray per-card glows visible.
+   `fixed inset-0` pins the gradient to the viewport instead, so the
+   tuned recipe renders correctly and stays visible while scrolling.
+   ===================================================== #}
+<div class="relative overflow-hidden bg-navy-950">
+  <div class="hero-dark-bloom pointer-events-none fixed inset-0 z-0" aria-hidden="true"></div>
+  <div class="hero-dark-grain pointer-events-none fixed inset-0 z-0" style="opacity: 0.08;" aria-hidden="true"></div>
+{% endif %}
+
+<section class="relative flex flex-col overflow-hidden pb-8 pt-32 sm:pt-36 lg:pt-44{{ ' items-start' if heroDark else ' items-center justify-center px-4 sm:px-6 lg:px-8' }}" aria-labelledby="hero-heading">
+
+  {% if heroDark %}
+    <div class="hero-dark-swirl pointer-events-none absolute inset-0 z-0" aria-hidden="true"></div>
+  {% endif %}
 
   {% if product.hero.badges and product.hero.badges.length %}
     <div class="pointer-events-none absolute inset-0 z-0 hidden md:block" aria-hidden="true">
@@ -257,8 +306,8 @@ layout: base.njk
            top-[124px] clears the fixed navbar (72px tall, z-50) — the hero section starts at the
            very top of the document since the nav is `fixed`/out of flow, so anything above ~72px
            renders underneath it. -->
-      <div class="absolute left-[calc(50%-400px)] top-[124px] h-56 w-56 -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-200/50 via-sky-100/25 to-transparent blur-3xl"></div>
-      <div class="absolute right-[calc(50%-400px)] top-[124px] h-56 w-56 translate-x-1/2 rounded-full bg-gradient-to-bl from-sky-200/50 via-sky-100/25 to-transparent blur-3xl"></div>
+      <div class="absolute left-[calc(50%-400px)] top-[124px] h-56 w-56 -translate-x-1/2 rounded-full bg-gradient-to-br {{ heroGlow }} blur-3xl"></div>
+      <div class="absolute right-[calc(50%-400px)] top-[124px] h-56 w-56 translate-x-1/2 rounded-full bg-gradient-to-bl {{ heroGlow }} blur-3xl"></div>
 
       {# Anchored to the hero's horizontal center via calc(), so the cluster
          hugs the headline's edge regardless of container width — not the
@@ -275,7 +324,7 @@ layout: base.njk
           {% set posClass = "right-[calc(50%-390px)] top-[132px] rotate-6" %}
         {% endif %}
         <div
-          class="tile-float absolute flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-navy-950 text-white shadow-md {{ posClass }}"
+          class="tile-float absolute flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl {{ heroBadgeTileClass }} shadow-md {{ posClass }}"
           style="animation-delay: {{ loop.index0 * 0.6 }}s; box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.5);"
         >
           <div
@@ -290,7 +339,17 @@ layout: base.njk
     </div>
   {% endif %}
 
-  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
+  {% if heroDark %}
+    {# Left edge matches navbar-v2.njk's own container exactly (max-w-[1280px]
+       mx-auto px-4 sm:px-6 lg:px-8) instead of a fixed px-* on the section, so
+       the hero text lines up flush with the logo above it at every viewport
+       width — a fixed px-* would drift from the navbar's centered container
+       past 1280px. Only wraps the text content, not the swirl/badge layers
+       above, which stay full-bleed across the whole section. #}
+    <div class="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:pl-20 lg:pr-8 xl:pl-28 xl:pr-8">
+  {% endif %}
+
+  <div class="relative z-10 flex max-w-[56rem] flex-col {{ 'items-start text-left' if heroDark else 'mx-auto items-center text-center' }}" data-reveal-stagger>
 
     {% if product.hero.statusBadge %}
       <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3.5 py-1.5">
@@ -299,16 +358,30 @@ layout: base.njk
       </span>
     {% endif %}
 
-    <span class="mb-4 inline-flex items-center rounded-full border border-sky-200/60 bg-gradient-to-br from-sky-50 to-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
-      {{ product.eyebrow }}
-    </span>
+    {% if heroDark %}
+      {# Kore.ai Artemis hero text treatment (2026-09-25): plain (unpilled) mono
+         green eyebrow, then an italic "Meet { X }" tagline in Instrument Serif
+         mixing a light-italic "Meet" with a bold-italic "{ X }" — same recipe
+         as the reference screenshot, built from product.eyebrow so it's
+         data-driven rather than a hardcoded string. #}
+      <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-[#9ee62f]">
+        {{ product.eyebrow }}
+      </span>
+      <p class="font-editorial mb-2 text-[30px] italic leading-none text-white sm:text-[36px]">
+        <span class="font-normal">Meet</span> <span class="font-bold">{ {{ product.eyebrow }} }</span>
+      </p>
+    {% else %}
+      <span class="mb-4 inline-flex items-center rounded-full border {{ heroEyebrowClass }} px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider shadow-subtle">
+        {{ product.eyebrow }}
+      </span>
+    {% endif %}
 
-    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+    <h1 id="hero-heading" class="text-balance tracking-tight {{ heroHeadlineClass }} {{ 'text-left font-bold text-[40px] leading-[1.08] sm:text-[52px] sm:leading-[1.06] lg:text-[64px] lg:leading-[1.04] max-w-[18ch]' if heroDark else 'text-center font-medium text-[34px] leading-[1.15] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]' }}">
       {{ product.hero.headline }}
     </h1>
 
     {% if product.hero.subhead %}
-      <p class="mt-4 max-w-[560px] px-4 text-center text-[18px] font-medium leading-relaxed tracking-tight text-[#6B7280] sm:max-w-none sm:text-[20px]">
+      <p class="mt-4 max-w-[560px] {{ heroSubheadClass }} {{ 'font-editorial text-left text-[22px] italic leading-snug sm:text-[26px]' if heroDark else 'text-[18px] font-medium leading-relaxed tracking-tight px-4 text-center sm:max-w-none sm:text-[20px]' }}">
         {{ product.hero.subhead | safe }}
       </p>
     {% endif %}
@@ -376,7 +449,7 @@ layout: base.njk
     {% elif product.hero.interaction.type == "pills" %}
       <div class="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-2.5" data-reveal-stagger>
         {% for item in product.hero.interaction.items %}
-          <span class="inline-flex items-center gap-1.5 rounded-full border border-navy-100/60 bg-white px-3.5 py-2 font-mono text-[12px] text-navy-600 shadow-subtle">
+          <span class="inline-flex items-center gap-1.5 rounded-full border {{ heroPillClass }} px-3.5 py-2 font-mono text-[12px]">
             <svg class="h-3.5 w-3.5 text-[#76B900]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path></svg>
             {{ item.label }}
           </span>
@@ -384,6 +457,7 @@ layout: base.njk
       </div>
     {% endif %}
 
+    {% if not heroDark %}
     <div class="mt-8 flex items-center justify-center">
       <a
         href="{{ product.hero.ctaPrimary.href }}"
@@ -393,8 +467,263 @@ layout: base.njk
         <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
       </a>
     </div>
+    {% endif %}
+
+    {% if product.hero.anchorPills and product.hero.anchorPills.length %}
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-2" data-reveal-stagger>
+        {% for pill in product.hero.anchorPills %}
+          <a href="{{ pill.href }}" class="inline-flex items-center gap-1.5 rounded-full border {{ 'border-white/15 bg-white/5 text-white/70 hover:bg-white/10' if heroDark else 'border-navy-100/60 bg-white text-navy-500 hover:bg-navy-50' }} px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wide transition-colors duration-200">
+            {{ '{' }} {{ pill.label }} {{ '}' }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  {% if heroDark %}
+    </div>
+  {% endif %}
+</section>
+
+<style>
+  /* Dark hero background layers (heroDark only) — same recipe as the
+     homepage's Orca CTA card (.orca-card-bloom/-swirl/-grain), enlarged and
+     strengthened so the wash fully blankets the much wider hero section
+     instead of sitting as two separate corner blobs — matches how densely
+     the blend reads on the smaller card. */
+  .hero-dark-bloom {
+    background:
+      radial-gradient(ellipse 110% 90% at 12% 105%, rgba(118, 185, 0, 0.32) 0%, transparent 68%),
+      radial-gradient(ellipse 95% 85% at 100% -5%, rgba(87, 119, 130, 0.38) 0%, transparent 68%),
+      radial-gradient(ellipse 100% 90% at 50% 50%, rgba(87, 119, 130, 0.16) 0%, transparent 72%);
+    animation: hero-dark-bloom-drift 14s ease-in-out infinite;
+  }
+  @keyframes hero-dark-bloom-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
+  }
+
+  .hero-dark-swirl {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='s' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.014' numOctaves='4' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='matrix' values='0 0 0 0 0.29  0 0 0 0 0.55  0 0 0 0 0.13  0 0 0 0.85 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+    background-size: 180% 180%;
+    background-position: 30% 85%;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+    animation: hero-dark-swirl-drift 22s ease-in-out infinite;
+    /* Swirl is a hero-only accent layered on top of the continuous bloom/
+       grain ground — it fades to 0 over the hero's own last 40% so the
+       accent dissolves on its own instead of cutting off hard when the
+       hero <section> ends. The ground underneath keeps going unbroken. */
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  }
+  @keyframes hero-dark-swirl-drift {
+    0%, 100% { background-position: 30% 85%; transform: scale(1); }
+    50% { background-position: 42% 95%; transform: scale(1.08); }
+  }
+
+  .hero-dark-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: screen;
+    opacity: 0.12;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-dark-bloom, .hero-dark-swirl { animation: none; }
+  }
+
+  /* Pillar tab auto-advance timer bar — fills left to right over the tab's
+     dwell time, so the active tab visibly counts down to the next one. */
+  .tab-progress {
+    animation-name: tab-progress-fill;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes tab-progress-fill {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tab-progress { animation: none; transform: scaleX(1); }
+  }
+</style>
+
+{# =====================================================
+   Everything from here through the closing CTA stacks above the single
+   continuous bloom/grain ground opened before the hero <section> — the
+   wrapper div itself is already open (heroDark only); this just starts
+   the z-10 content layer on top of it. Closed just before the footer
+   include. Search/AI CRM don't set heroDark, so their page stays the
+   existing white ground, untouched.
+   ===================================================== #}
+{% if heroDark %}
+  <div class="relative z-10">
+{% endif %}
+
+{# =====================================================
+   PILLAR DEEP-DIVES — interactive tabbed showcase (agent-platform
+   product-demo pattern): a { BRACKET }-style tab strip above a
+   floating light "window" card (macOS chrome dots + a left
+   description/workflow-steps panel + a right visual panel), set
+   against the page's dark ground with a soft color wash behind it.
+   Sits directly under the hero (replaces the old flat 3-up Outcome
+   Cards, 2026-09-25). Sized to what Orca actually has: 3 real
+   capabilities (Connect/Coordinate/Observe), each with a short
+   bullet list — no invented sub-product names or diagrams. Renders
+   only when a product supplies `pillars` (Orca only, so heroDark is
+   always true here).
+   ===================================================== #}
+{% if product.pillars and product.pillars.length %}
+<section
+  class="relative px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+  aria-labelledby="pillars-heading"
+  x-data="{
+    active: 0,
+    duration: 5000,
+    timer: null,
+    go(i) { this.active = i; this.restart() },
+    restart() {
+      clearInterval(this.timer)
+      this.timer = setInterval(() => { this.active = (this.active + 1) % {{ product.pillars.length }} }, this.duration)
+    }
+  }"
+  x-init="restart()"
+>
+  <div class="mx-auto max-w-6xl">
+    <h2 id="pillars-heading" class="sr-only">How {{ product.eyebrow }} works</h2>
+
+    {# Tab bar sits opaque on the plain dark ground, above the pattern stage
+       (agent-platform reference: the { BUILD } bar is a solid strip separate
+       from the colorful area below it, not blended into the pattern). Each
+       tab auto-advances on a 5s timer, with a filling progress line on the
+       active tab (Kore.ai/Linear-style timed tab rotation) — reset via
+       `restart()` whenever a tab is chosen manually, so a click doesn't get
+       overridden a moment later by the pending auto-advance. #}
+    <div role="tablist" aria-label="How {{ product.eyebrow }} works" class="relative z-10 mx-auto grid max-w-4xl grid-cols-1 gap-px overflow-hidden rounded-t-xl border border-b-0 border-white/10 bg-white/10 sm:grid-cols-3" data-reveal>
+      {% for pillar in product.pillars %}
+        <button
+          type="button"
+          role="tab"
+          id="pillar-tab-{{ loop.index0 }}"
+          aria-controls="pillar-panel-{{ loop.index0 }}"
+          :aria-selected="active === {{ loop.index0 }} ? 'true' : 'false'"
+          :tabindex="active === {{ loop.index0 }} ? 0 : -1"
+          @click="go({{ loop.index0 }})"
+          @keydown.right.prevent="go((active + 1) % {{ product.pillars.length }}); $nextTick(() => $refs['pillarTab' + active].focus())"
+          @keydown.left.prevent="go((active - 1 + {{ product.pillars.length }}) % {{ product.pillars.length }}); $nextTick(() => $refs['pillarTab' + active].focus())"
+          x-ref="pillarTab{{ loop.index0 }}"
+          class="relative flex flex-col gap-1 bg-navy-950 px-5 py-4 text-left transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-inset"
+          :class="active === {{ loop.index0 }} ? 'bg-navy-950' : 'bg-navy-900 hover:bg-navy-900/80'"
+        >
+          <span class="absolute inset-x-0 top-0 h-[2px] bg-white/10" aria-hidden="true"></span>
+          <template x-if="active === {{ loop.index0 }}">
+            <span class="tab-progress absolute inset-x-0 top-0 h-[2px] origin-left bg-[#9ee62f]" :style="'animation-duration: ' + duration + 'ms'" aria-hidden="true"></span>
+          </template>
+          <span class="font-mono text-[11px] uppercase tracking-wider" :class="active === {{ loop.index0 }} ? 'text-[#9ee62f]' : 'text-white/40'">{ {{ pillar.eyebrow | upper }} }</span>
+          <span class="text-[13px] font-medium text-white/80">{{ pillar.heading }}</span>
+        </button>
+      {% endfor %}
+    </div>
+
+    {# Stage — a large color-wash panel (grain/gradient texture, agent-platform
+       reference) that frames the window with generous padding so the pattern
+       stays visible as background on every side, instead of the white window
+       filling the whole section edge-to-edge. #}
+    <div class="relative overflow-hidden rounded-3xl p-6 sm:p-12 lg:p-16" style="background-image: url('/assets/images/products/orca-pillars-gradient.jpg'); background-size: cover; background-position: center;">
+      <div class="mx-auto max-w-4xl">
+
+        <div class="relative overflow-hidden rounded-2xl border border-navy-100/60 bg-white" style="box-shadow: 0 50px 80px -30px rgba(15, 23, 42, 0.55);" data-reveal>
+          <div class="flex items-center gap-2 border-b border-navy-100/70 bg-[#F5F6F7] px-4 py-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></span>
+            <span class="ml-3 truncate font-mono text-[11px] text-navy-400">orca.zunkireelabs.com</span>
+          </div>
+
+          {% for pillar in product.pillars %}
+            <div
+              id="pillar-panel-{{ loop.index0 }}"
+              role="tabpanel"
+              aria-labelledby="pillar-tab-{{ loop.index0 }}"
+              x-show="active === {{ loop.index0 }}"
+              {% if not loop.first %}x-cloak{% endif %}
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              class="grid grid-cols-1 lg:grid-cols-2"
+            >
+              <div class="border-b border-navy-100/70 p-8 sm:p-10 lg:border-b-0 lg:border-r">
+                <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-navy-500">{{ pillar.eyebrow }}</span>
+                <h3 class="text-[22px] font-semibold leading-[1.2] text-[#111827] sm:text-[24px]">{{ pillar.heading }}</h3>
+                <p class="mt-3 text-[14px] leading-relaxed text-[#6B7280]">{{ pillar.description }}</p>
+
+                {% if pillar.bullets and pillar.bullets.length %}
+                  <div class="mt-6 rounded-xl border border-navy-100/70 bg-[#FAFBFC] p-4">
+                    <span class="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#F0F5E8] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">AI Workflow</span>
+                    <ul class="space-y-3">
+                      {% for bullet in pillar.bullets %}
+                        <li class="flex items-center gap-3">
+                          <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg border border-navy-100/70 bg-white text-[#5a9100] shadow-sm" aria-hidden="true">
+                            {{ useCaseIcon(loop.index0, "h-3.5 w-3.5") }}
+                          </span>
+                          <span class="text-[13px] font-medium text-[#111827]">{{ bullet }}</span>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="relative flex min-h-[280px] items-center justify-center bg-gradient-to-br from-sky-50/60 via-white to-white p-8" aria-hidden="true">
+                {{ benefitVisual(pillar.visual) }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
+{% endif %}
+
+{# =====================================================
+   NARRATIVE BLOCK — single dark statement panel, same navy-950 +
+   brand-green/slate treatment as the dark hero. Renders only when
+   a product supplies `narrative` (Orca only).
+   ===================================================== #}
+{% if product.narrative %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="narrative-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-2xl border {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }} p-8 text-center sm:p-14" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <span class="relative z-10 mb-3 block font-mono text-[11px] uppercase tracking-wider text-white/50">{{ product.narrative.eyebrow }}</span>
+      <h2 id="narrative-heading" class="relative z-10 mx-auto max-w-2xl text-[26px] font-medium leading-[1.25] text-white sm:text-[32px]">{{ product.narrative.heading }}</h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">{{ product.narrative.body }}</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   VALUE BULLETS — flat 3-up text grid, no icons/visuals (Kore's
+   "designed for what actually matters" pattern). Renders only
+   when a product supplies `valueBullets`.
+   ===================================================== #}
+{% if product.valueBullets %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="value-bullets-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="value-bullets-heading" class="mb-8 text-center text-[24px] font-semibold leading-[1.2] sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ product.valueBullets.heading }}</h2>
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3" data-reveal-stagger-x>
+      {% for item in product.valueBullets.items %}
+        <div class="border-t-2 border-[#76B900] pt-4">
+          <p class="text-[16px] font-semibold {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ item.title }}</p>
+          <p class="mt-2 text-[14px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {# =====================================================
    CHALLENGE STRIP — short framing strip, 3 compact blocks.
@@ -405,17 +734,17 @@ layout: base.njk
 {% if product.challenges %}
 <section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="challenges-heading">
   <div class="mx-auto max-w-5xl">
-    <h2 id="challenges-heading" class="mb-8 text-center text-[26px] font-semibold leading-[1.2] text-[#111827] sm:text-[28px]">
+    <h2 id="challenges-heading" class="mb-8 text-center text-[26px] font-semibold leading-[1.2] sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
       {{ product.challenges.heading }}
     </h2>
-    <div class="overflow-hidden rounded-xl border border-navy-100/60 bg-gradient-to-br from-sky-50/60 via-white to-white shadow-card transition-shadow duration-300 hover:shadow-card-hover" data-reveal-stagger>
-      <div class="flex flex-col divide-y divide-navy-200 sm:flex-row sm:divide-y-0">
+    <div class="overflow-hidden rounded-xl border shadow-card transition-shadow duration-300 hover:shadow-card-hover {{ 'border-white/10 bg-white/5' if heroDark else 'border-navy-100/60 bg-gradient-to-br from-sky-50/60 via-white to-white' }}" data-reveal-stagger>
+      <div class="flex flex-col sm:flex-row {{ 'divide-white/10' if heroDark else 'divide-y divide-navy-200 sm:divide-y-0' }}">
         {% for block in product.challenges.blocks %}
           {% if loop.index == 1 %}
-            <div class="flex min-h-[360px] flex-col justify-center p-8 sm:w-3/5 sm:border-r sm:border-navy-200 lg:p-12">
-              <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-sky-600">Primary</p>
-              <p class="text-[26px] font-semibold leading-snug text-[#111827] sm:text-[28px]">{{ block.title }}</p>
-              <p class="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-[#6B7280]">{{ block.description }}</p>
+            <div class="flex min-h-[360px] flex-col justify-center p-8 sm:w-3/5 lg:p-12 {{ 'sm:border-r sm:border-white/10' if heroDark else 'sm:border-r sm:border-navy-200' }}">
+              <p class="mb-2 font-mono text-[11px] uppercase tracking-wider {{ 'text-[#9ee62f]' if heroDark else 'text-sky-600' }}">Primary</p>
+              <p class="text-[26px] font-semibold leading-snug sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ block.title }}</p>
+              <p class="mt-2 max-w-[38ch] text-[15px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ block.description }}</p>
               {{ painPointVisual(1) }}
             </div>
           {% endif %}
@@ -423,9 +752,9 @@ layout: base.njk
         <div class="flex flex-col sm:w-2/5">
           {% for block in product.challenges.blocks %}
             {% if loop.index != 1 %}
-              <div class="flex min-h-[180px] flex-1 flex-col justify-center p-7 lg:p-9{% if loop.index == 2 %} border-b border-navy-200{% endif %}">
-                <p class="text-[19px] font-semibold leading-snug text-[#111827]">{{ block.title }}</p>
-                <p class="mt-1.5 text-[13px] leading-relaxed text-[#6B7280]">{{ block.description }}</p>
+              <div class="flex min-h-[180px] flex-1 flex-col justify-center p-7 lg:p-9{% if loop.index == 2 %}{{ ' border-b border-white/10' if heroDark else ' border-b border-navy-200' }}{% endif %}">
+                <p class="text-[19px] font-semibold leading-snug {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ block.title }}</p>
+                <p class="mt-1.5 text-[13px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ block.description }}</p>
                 {{ painPointVisual(loop.index) }}
               </div>
             {% endif %}
@@ -563,20 +892,20 @@ layout: base.njk
       {% for benefit in product.benefits %}
         <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12" data-reveal-stagger>
           <div class="{{ 'lg:order-2' if loop.index0 % 2 == 1 else '' }}">
-            <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-navy-500">{{ '0' + (loop.index) | string }}</span>
-            <h3 class="text-[24px] font-semibold leading-[1.2] text-[#111827] sm:text-[28px]">
+            <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider {{ 'text-white/50' if heroDark else 'text-navy-500' }}">{{ '0' + (loop.index) | string }}</span>
+            <h3 class="text-[24px] font-semibold leading-[1.2] sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
               {{ benefit.title }}
             </h3>
-            <p class="mt-4 max-w-lg text-[15px] leading-relaxed text-[#6B7280]">
+            <p class="mt-4 max-w-lg text-[15px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">
               {{ benefit.description }}
             </p>
           </div>
 
-          <div class="{{ 'lg:order-1' if loop.index0 % 2 == 1 else '' }} relative flex min-h-[220px] items-center justify-center rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 backdrop-blur-md" aria-hidden="true">
-            <div class="tile-float flex w-full max-w-[260px] flex-col items-center rounded-xl border border-white/70 bg-white p-5 shadow-md">
+          <div class="{{ 'lg:order-1' if loop.index0 % 2 == 1 else '' }} relative flex min-h-[220px] items-center justify-center rounded-xl border p-6 backdrop-blur-md {{ 'border-white/10 bg-white/5' if heroDark else 'border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40' }}" aria-hidden="true">
+            <div class="tile-float flex w-full max-w-[260px] flex-col items-center rounded-xl border p-5 shadow-md {{ 'border-white/10 bg-navy-900/70' if heroDark else 'border-white/70 bg-white' }}">
               <div class="mb-4 flex w-full items-center gap-2">
                 <span class="h-2 w-2 rounded-full bg-[#76B900]"></span>
-                <span class="font-mono text-[10px] uppercase tracking-wider text-navy-500">{{ product.eyebrow }}</span>
+                <span class="font-mono text-[10px] uppercase tracking-wider {{ 'text-white/50' if heroDark else 'text-navy-500' }}">{{ product.eyebrow }}</span>
               </div>
               <div class="flex flex-1 items-center justify-center">
                 {{ benefitVisual(benefit.visual) }}
@@ -736,7 +1065,7 @@ layout: base.njk
    ===================================================== #}
 <section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="usecases-heading" x-data="{ active: 0 }">
   <div class="mx-auto max-w-5xl">
-    <h2 id="usecases-heading" class="mb-8 text-center text-[26px] font-semibold leading-[1.2] text-[#111827] sm:text-[30px]">
+    <h2 id="usecases-heading" class="mb-8 text-center text-[26px] font-semibold leading-[1.2] sm:text-[30px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
       {{ product.useCases.heading }}
     </h2>
 
@@ -755,7 +1084,7 @@ layout: base.njk
             @keydown.left.prevent="active = (active - 1 + {{ product.useCases.items.length }}) % {{ product.useCases.items.length }}; $nextTick(() => $refs['usecaseTab' + active].focus())"
             x-ref="usecaseTab{{ loop.index0 }}"
             class="rounded-full px-4 py-2 font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-            :class="active === {{ loop.index0 }} ? 'bg-navy-900 text-white' : 'bg-navy-50/70 text-navy-500 hover:bg-navy-100'"
+            :class="active === {{ loop.index0 }} ? '{{ 'bg-white text-navy-950' if heroDark else 'bg-navy-900 text-white' }}' : '{{ 'bg-white/5 text-white/60 hover:bg-white/10' if heroDark else 'bg-navy-50/70 text-navy-500 hover:bg-navy-100' }}'"
           >
             {{ item.title }}
           </button>
@@ -773,21 +1102,21 @@ layout: base.njk
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 translate-y-1"
         x-transition:enter-end="opacity-100 translate-y-0"
-        class="grid grid-cols-1 overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-subtle lg:grid-cols-2"
+        class="grid grid-cols-1 overflow-hidden rounded-2xl border shadow-subtle lg:grid-cols-2 {{ 'border-white/10 bg-white/5' if heroDark else 'border-navy-100/60 bg-white' }}"
         data-reveal
       >
         <div class="flex flex-col justify-center p-8 sm:p-10">
-          <p class="text-[20px] font-semibold leading-snug text-[#111827] sm:text-[22px]">{{ item.title }}</p>
-          <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.description }}</p>
+          <p class="text-[20px] font-semibold leading-snug sm:text-[22px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ item.title }}</p>
+          <p class="mt-2 text-[14px] leading-relaxed sm:text-[15px] {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.description }}</p>
 
           {% if item.features and item.features.length %}
-            <ul class="mt-6 border-t border-navy-100/70">
+            <ul class="mt-6 border-t {{ 'border-white/10' if heroDark else 'border-navy-100/70' }}">
               {% for feature in item.features %}
-                <li class="flex items-center gap-3 border-b border-navy-100/70 py-3.5">
-                  <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+                <li class="flex items-center gap-3 border-b py-3.5 {{ 'border-white/10' if heroDark else 'border-navy-100/70' }}">
+                  <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg {{ 'bg-white/10 text-[#9ee62f]' if heroDark else 'bg-[#F0F5E8] text-[#5a9100]' }}" aria-hidden="true">
                     {{ useCaseIcon(loop.index0) }}
                   </span>
-                  <span class="text-[14px] font-medium text-[#111827]">{{ feature }}</span>
+                  <span class="text-[14px] font-medium {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ feature }}</span>
                 </li>
               {% endfor %}
             </ul>
@@ -795,18 +1124,18 @@ layout: base.njk
 
           <a
             href="{{ product.hero.ctaPrimary.href }}"
-            class="mt-7 inline-flex w-fit items-center gap-2 rounded-md border border-navy-200 px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide text-navy-700 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+            class="mt-7 inline-flex w-fit items-center gap-2 rounded-md border px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 {{ 'border-white/20 text-white hover:border-white/40 hover:bg-white/10' if heroDark else 'border-navy-200 text-navy-700 hover:border-navy-400 hover:bg-navy-50' }}"
           >
             {{ product.hero.ctaPrimary.label }}
             <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
           </a>
         </div>
 
-        <div class="relative flex items-center justify-center bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 sm:p-10" aria-hidden="true">
-          <div class="flex w-full max-w-[260px] flex-col items-center gap-5 rounded-xl border border-white/70 bg-white p-6 shadow-md">
-            <span class="flex items-center gap-2 self-start rounded-full bg-navy-50 px-3 py-1.5">
+        <div class="relative flex items-center justify-center p-8 sm:p-10 {{ 'bg-white/5' if heroDark else 'bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40' }}" aria-hidden="true">
+          <div class="flex w-full max-w-[260px] flex-col items-center gap-5 rounded-xl border p-6 shadow-md {{ 'border-white/10 bg-navy-900/70' if heroDark else 'border-white/70 bg-white' }}">
+            <span class="flex items-center gap-2 self-start rounded-full px-3 py-1.5 {{ 'bg-white/10' if heroDark else 'bg-navy-50' }}">
               <span class="usecase-engine-ping h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
-              <span class="font-mono text-[10px] uppercase tracking-wider text-navy-500">{{ item.title }}</span>
+              <span class="font-mono text-[10px] uppercase tracking-wider {{ 'text-white/60' if heroDark else 'text-navy-500' }}">{{ item.title }}</span>
             </span>
 
             <div class="relative flex h-[68px] w-full items-center justify-center">
@@ -821,9 +1150,9 @@ layout: base.njk
             {% if item.features and item.features.length %}
               <div class="w-full space-y-2">
                 {% for feature in item.features %}
-                  <div class="benefit-list-row flex items-center gap-2 rounded-md bg-navy-50/70 px-3 py-2" style="animation-delay: {{ loop.index0 * 0.5 }}s">
+                  <div class="benefit-list-row flex items-center gap-2 rounded-md px-3 py-2 {{ 'bg-white/10' if heroDark else 'bg-navy-50/70' }}" style="animation-delay: {{ loop.index0 * 0.5 }}s">
                     <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
-                    <span class="truncate text-[11px] text-navy-600">{{ feature }}</span>
+                    <span class="truncate text-[11px] {{ 'text-white/70' if heroDark else 'text-navy-600' }}">{{ feature }}</span>
                   </div>
                 {% endfor %}
               </div>
@@ -858,7 +1187,7 @@ layout: base.njk
 <section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="platform-tie-in-heading">
   <div class="mx-auto max-w-5xl">
     <div
-      class="relative overflow-hidden rounded-2xl bg-navy-950 p-8 sm:p-10 lg:p-12"
+      class="relative overflow-hidden rounded-2xl border p-8 sm:p-10 lg:p-12 {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }}"
       style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
       data-reveal
     >
@@ -944,16 +1273,16 @@ layout: base.njk
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
   <div class="mx-auto max-w-content">
     <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
-      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider {{ 'text-white/50' if heroDark else 'text-[#9CA3AF]' }}">
         Support
       </span>
-      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight sm:text-[32px] lg:text-[36px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
         Frequently asked questions
       </h2>
     </div>
 
     <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
-      <div class="divide-y divide-navy-100" data-reveal-stagger>
+      <div class="{{ 'divide-y divide-white/10' if heroDark else 'divide-y divide-navy-100' }}" data-reveal-stagger>
         {% for item in product.faq %}
           <div class="py-5">
             <button
@@ -962,10 +1291,10 @@ layout: base.njk
               :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
               aria-controls="faq-answer-{{ loop.index }}"
             >
-              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+              <span class="text-[16px] font-medium leading-snug transition-colors sm:text-[17px] {{ 'text-white group-hover:text-white/80' if heroDark else 'text-[#111827] group-hover:text-navy-600' }}">
                 {{ item.question }}
               </span>
-              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border transition-transform duration-200 {{ 'border-white/20 text-white/70' if heroDark else 'border-navy-200 text-navy-500' }}" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
                 <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                 </svg>
@@ -982,7 +1311,7 @@ layout: base.njk
               x-transition:leave-end="opacity-0 -translate-y-2"
               class="overflow-hidden"
             >
-              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed sm:text-[15px] {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.answer }}</p>
             </div>
           </div>
         {% endfor %}
@@ -999,7 +1328,7 @@ layout: base.njk
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
   <div class="mx-auto max-w-5xl">
     <div
-      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      class="relative overflow-hidden rounded-[28px] border px-6 py-14 text-center sm:px-12 sm:py-16 {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }}"
       style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
       data-reveal
     >
@@ -1037,5 +1366,10 @@ layout: base.njk
     </div>
   </div>
 </section>
+
+{% if heroDark %}
+  </div>
+</div>
+{% endif %}
 
 {% include "partials/footer-v2.njk" %}

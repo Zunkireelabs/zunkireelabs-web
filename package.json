@@ -4,9 +4,9 @@
   "description": "Zunkiree Labs - Premium Tech Company Website",
   "type": "module",
   "scripts": {
-    "dev": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
-    "clean": "rmdir /s /q dist"
+    "dev": "cross-env ELEVENTY_ENV=development eleventy --serve --port=8082",
+    "build": "cross-env ELEVENTY_ENV=production eleventy",
+    "clean": "rm -rf dist"
   },
   "keywords": [
     "zunkiree",

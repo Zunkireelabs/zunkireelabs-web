@@ -1,34 +1,19 @@
-# Zunkiree Labs - robots.txt
-# Allow all crawlers including AI bots
-
 User-agent: *
-Allow: /
-
-# Allow AI search bots (critical for AI visibility)
+Allow: /blog/
+Allow: /solutions/
+Allow: /contact/
+Allow: /customers/
+Allow: /products/
+Disallow: /?*page=
 User-agent: GPTBot
 Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: ClaudeBot
 Allow: /
-
-User-agent: anthropic-ai
+User-agent: PerplexityBot
 Allow: /
-
 User-agent: Google-Extended
 Allow: /
-
-User-agent: Bingbot
+User-agent: Applebot-Extended
 Allow: /
-
-# Block training-only crawlers (optional - allows citation but blocks training)
-# User-agent: CCBot
-# Disallow: /
-
-# Sitemap
-Sitemap: https://zunkireelabs.com/sitemap.xml
+User-agent: Bytespider
+Disallow: /

@@ -269,8 +269,32 @@
   <!-- Fonts - Inter (Homepage V2 preview only, cloned from kore.ai's actual typeface — MASTER_DESIGN_SPEC.md §5) -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+  <!-- Fonts - Instrument Serif italic (Orca dark hero only, 2026-09-25) — the
+       "Meet { X }" tagline / subhead accent, matching the Kore.ai Artemis hero's
+       editorial-italic treatment. Loaded alongside Inter since only v2-inter
+       pages use font-editorial. -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"></noscript>
   {% endif %}
 
+  <!-- SEOAI:HEAD:START -->
+<!-- SEOAI:ANALYTICSSCRIPTGA4:START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2ZQRDS0D14');
+</script><!-- SEOAI:ANALYTICSSCRIPTGA4:END -->
+<!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:START --><script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2104437347081359');
+  fbq('track', 'PageView');
+</script><!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:END --><!-- SEOAI:HEAD:END -->
 </head>
 <body class="font-sans antialiased overflow-x-clip {% if hideChrome %}bg-white{% endif %} {{ bodyClass }}">
 

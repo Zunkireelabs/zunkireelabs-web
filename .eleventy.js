@@ -155,6 +155,23 @@ export default function (eleventyConfig) {
     return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   });
 
+  // Short 2-word topic label derived from a post title (fallback when no
+  // explicit `shortLabel` frontmatter is set) — strips filler words so the
+  // overlay reads as a topic ("Cloud Solutions") rather than a title fragment.
+  const SHORT_LABEL_STOPWORDS = new Set([
+    'a', 'an', 'the', 'why', 'what', 'how', 'is', 'are', 'to', 'of', 'for',
+    'with', 'your', 'you', 'as', 'in', 'on', 'and', 'or', 'from', 'this',
+    'that', 'exploring', 'understanding', 'unlocking', 'discovering'
+  ]);
+  eleventyConfig.addFilter("shortLabel", function(title) {
+    if (!title) return '';
+    const words = title
+      .replace(/[:?!,]/g, '')
+      .split(' ')
+      .filter(w => w && !SHORT_LABEL_STOPWORDS.has(w.toLowerCase()));
+    return words.slice(0, 2).join(' ');
+  });
+
   return {
     dir: {
       input: "src",
