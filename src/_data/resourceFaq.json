@@ -1,4 +1,92 @@
 {
+  "rapid-investment-case-study": [
+    {
+      "question": "What due-diligence challenges did Rapid Investment face before working with Zunkiree Labs?",
+      "answer": "Rapid Investment's analysts spent most of their time manually gathering and cross-referencing financials, filings, and market data for each opportunity, which meant due diligence on a single deal often took days and time-sensitive opportunities were sometimes missed."
+    },
+    {
+      "question": "How does Zunkiree's AI system speed up investment analysis for Rapid Investment?",
+      "answer": "Zunkiree's AI systems pull financials, filings, and market signals into a single structured research brief per opportunity, so analysts start from a synthesized baseline instead of raw source documents, cutting analysis time by roughly 10x."
+    },
+    {
+      "question": "Does automating due diligence reduce research quality for Rapid Investment?",
+      "answer": "No. Every deal now gets the same depth of structured research regardless of which analyst is running it, which improved consistency compared to the prior manual, analyst-dependent process."
+    },
+    {
+      "question": "What results has Rapid Investment seen since implementing Zunkiree's AI systems?",
+      "answer": "Rapid Investment now analyzes investment opportunities roughly 10x faster, with consistent due-diligence coverage across every deal and a faster time-to-decision on time-sensitive opportunities."
+    }
+  ],
+  "cms-group-case-study": [
+    {
+      "question": "What document processing challenges did CMS Group face before Zunkiree Labs?",
+      "answer": "CMS Group manually classified, reviewed, and routed a high volume of contracts, invoices, compliance forms, and internal records, which consumed hours of staff time daily and caused routing errors and delays between teams."
+    },
+    {
+      "question": "How does Zunkiree's AI system automate document processing for CMS Group?",
+      "answer": "Zunkiree's AI systems classify incoming documents automatically, extract the relevant data, and route each document to the right team without manual intervention, so staff review only the exceptions the system flags."
+    },
+    {
+      "question": "What percentage of CMS Group's document workflows are now automated?",
+      "answer": "85% of CMS Group's document processing workflows are now automated, freeing their team to focus on high-value strategic work instead of manual classification and routing."
+    }
+  ],
+  "mach24orbital-case-study": [
+    {
+      "question": "What launch coordination challenges did Mach24 Orbital face before Zunkiree Labs?",
+      "answer": "Mach24 Orbital coordinated satellite launches by manually cross-referencing checklists, schedules, and readiness reports scattered across teams, and a single missed dependency could delay a launch window by days or weeks."
+    },
+    {
+      "question": "How does Zunkiree's AI system help Mach24 Orbital prepare for launches?",
+      "answer": "Zunkiree's AI systems pull readiness data from every team into a single unified view, automatically flag scheduling conflicts, and surface dependency gaps before they become blockers."
+    },
+    {
+      "question": "How much faster is launch preparation for Mach24 Orbital now?",
+      "answer": "Mach24 Orbital cut launch preparation time in half after integrating Zunkiree's AI systems into their satellite deployment workflows."
+    }
+  ],
+  "prime-tiles-case-study": [
+    {
+      "question": "Why did keyword search fail Prime Tiles' online customers?",
+      "answer": "Customers often couldn't describe products in the exact catalog terms Prime Tiles' keyword search expected, so searches for things like \"grey bathroom tiles\" returned no useful results and customers left without buying."
+    },
+    {
+      "question": "How does Zunkiree Search help Prime Tiles' customers find products?",
+      "answer": "Zunkiree Search lets customers describe what they want in natural language and matches products by attributes and semantic meaning, not just exact keywords, including recovering searches that would otherwise return zero results."
+    },
+    {
+      "question": "What impact did AI-native search have on Prime Tiles' online sales?",
+      "answer": "Prime Tiles doubled its online conversion rate after deploying Zunkiree Search, as customers could find the right product instantly instead of abandoning empty searches."
+    }
+  ],
+  "khems-cleaning-case-study": [
+    {
+      "question": "What scheduling challenges did Khems Cleaning face before Zunkiree Labs?",
+      "answer": "Khems Cleaning ran booking and scheduling through phone calls and manual calendar updates, which capped how many bookings the team could handle and led to regular double-bookings and coverage gaps."
+    },
+    {
+      "question": "How does Zunkiree's AI booking system work for Khems Cleaning?",
+      "answer": "Zunkiree's AI booking system matches bookings to available cleaners automatically, lets customers book directly online without a phone call, and offers cancelled slots to a waitlist instead of leaving them empty."
+    },
+    {
+      "question": "What results has Khems Cleaning seen from AI-powered scheduling?",
+      "answer": "Khems Cleaning increased bookings by 70% after implementing Zunkiree's AI scheduling system, while also increasing service capacity and improving customer satisfaction without adding staff."
+    }
+  ],
+  "chayce-properties-case-study": [
+    {
+      "question": "What does Zunkiree Labs manage for Chayce Properties?",
+      "answer": "Zunkiree Labs manages the full digital stack for Chayce Properties, a UK real estate company: the website itself, the AI systems built on top of it, and ongoing technical delivery, not a single one-off project."
+    },
+    {
+      "question": "Why does Chayce Properties use one partner instead of separate vendors for its website and AI systems?",
+      "answer": "Owning the whole stack means Zunkiree Labs doesn't have to hand off between vendors when a website change affects an AI feature or an AI feature needs a change on the site, giving Chayce Properties one point of accountability across every system it runs on."
+    },
+    {
+      "question": "Is Zunkiree Labs' work with Chayce Properties a one-time project?",
+      "answer": "No. Zunkiree Labs provides ongoing technical delivery for Chayce Properties, including continuous fixes, features, and technical work, rather than a one-time website handoff."
+    }
+  ],
   "corecloud365-case-study": [
     {
       "question": "What operational challenges did Corecloud365 face before implementing Zunkiree Search?",

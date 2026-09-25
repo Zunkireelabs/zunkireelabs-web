@@ -240,6 +240,121 @@
       "ctaText": "Read Full Story"
     },
     {
+      "slug": "rapid-investment-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Rapid Investment Analyzes Deals 10x Faster",
+      "subtitle": "AI-powered due diligence for faster, more confident investment decisions",
+      "description": "How Rapid Investment Group uses Zunkiree's AI systems to analyze investment opportunities 10x faster, giving them a competitive edge in the financial markets.",
+      "publishDate": "2026-03-05",
+      "readTime": "9 min read",
+      "client": "Rapid Investment",
+      "industry": "Financial Services",
+      "results": [
+        "10x faster deal analysis",
+        "Consistent due-diligence coverage across every deal",
+        "Faster time-to-decision on time-sensitive opportunities"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "cms-group-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "CMS Group Automates 85% of Enterprise Workflows",
+      "subtitle": "AI-powered document processing frees teams for higher-value work",
+      "description": "How CMS Group achieved 85% automation of their document processing workflows with Zunkiree's AI systems, freeing their team to focus on high-value strategic work.",
+      "publishDate": "2026-03-10",
+      "readTime": "9 min read",
+      "client": "CMS Group",
+      "industry": "Enterprise Operations",
+      "results": [
+        "85% of document workflows automated",
+        "Fewer manual handoffs across teams",
+        "Strategic work capacity freed up for staff"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "mach24orbital-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Mach24 Orbital Cuts Launch Prep Time in Half",
+      "subtitle": "AI-optimized satellite deployment workflows",
+      "description": "How Mach24 Orbital integrated Zunkiree's AI systems to optimize satellite deployment workflows, cutting launch preparation time in half.",
+      "publishDate": "2026-03-12",
+      "readTime": "9 min read",
+      "client": "Mach24 Orbital",
+      "industry": "Aerospace",
+      "results": [
+        "50% faster launch preparation",
+        "Optimized satellite deployment scheduling",
+        "Fewer manual coordination steps pre-launch"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "prime-tiles-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Prime Tiles Doubles Online Conversion Rates",
+      "subtitle": "AI-native search helps customers find the right product instantly",
+      "description": "How Prime Tiles deployed Zunkiree Search to help customers find the perfect tiles instantly, doubling their online conversion rates.",
+      "publishDate": "2026-03-14",
+      "readTime": "8 min read",
+      "client": "Prime Tiles",
+      "industry": "Retail & E-commerce",
+      "results": [
+        "2x online conversion rate",
+        "Faster product discovery for customers",
+        "Fewer abandoned searches on-site"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "khems-cleaning-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Khems Cleaning Increases Bookings by 70%",
+      "subtitle": "AI-powered scheduling scales service capacity",
+      "description": "How Khems Cleaning Services implemented Zunkiree's AI booking system, dramatically increasing their service capacity and customer satisfaction.",
+      "publishDate": "2026-03-16",
+      "readTime": "8 min read",
+      "client": "Khems Cleaning",
+      "industry": "Professional Services",
+      "results": [
+        "70% increase in bookings",
+        "Higher service capacity without adding staff",
+        "Improved customer satisfaction scores"
+      ],
+      "formTitle": "Download Case Study",
+      "ctaText": "Read Full Story"
+    },
+    {
+      "slug": "chayce-properties-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "title": "Chayce Properties Runs Its Entire Digital Operation on Zunkiree Infrastructure",
+      "subtitle": "A UK real estate company's website, AI systems, and ongoing technical delivery, managed end to end",
+      "description": "For Chayce Properties, a UK real estate company, Zunkiree Labs is not a vendor for one task. We own the whole stack: website, AI systems, and ongoing technical delivery, end to end.",
+      "publishDate": "2026-09-24",
+      "readTime": "7 min read",
+      "client": "Chayce Properties",
+      "industry": "Real Estate",
+      "location": "United Kingdom",
+      "results": [
+        "Full website, AI, and technical delivery under one partner",
+        "Ongoing technical delivery, not a one-off engagement",
+        "Single point of accountability across every system"
+      ],
+      "formTitle": "Talk to Us",
+      "ctaText": "Get in Touch"
+    },
+    {
       "slug": "nepali-language-ai-guide",
       "type": "GUIDE",
       "category": "ebooks",

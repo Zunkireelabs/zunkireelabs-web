@@ -1,0 +1,215 @@
+---
+layout: base.njk
+title: Mach24 Orbital Case Study | Zunkiree Labs
+description: How Mach24 Orbital cut satellite launch preparation time in half with Zunkiree's AI-optimized deployment workflows.
+permalink: /resources/mach24orbital-case-study/
+---
+
+{% set resource = resources.items | find("slug", "mach24orbital-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-base font-medium text-warm-black mb-4" data-reveal>
+        Mach24 Orbital used Zunkiree Labs' AI readiness systems to cut satellite launch preparation time in half.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4" data-reveal>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">AI Development</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-lg md:text-xl font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/cms-group-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: CMS Group
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/prime-tiles-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Prime Tiles
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/services/ai-development/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI Development Services
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About Mach24 Orbital</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>Mach24 Orbital</strong> plans and coordinates satellite deployment operations, where every launch window depends on dozens of interdependent checks — vehicle readiness, orbital timing, ground systems, and weather — all lining up correctly.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Coordinating a launch meant manually cross-referencing checklists, schedules, and readiness reports scattered across teams. Any single missed dependency could push a launch window back by days or weeks.
+          </p>
+          <div class="p-6 bg-red-50 border-l-4 border-red-500">
+            <p class="text-warm-600">
+              <strong>Key pain points:</strong>
+            </p>
+            <ul class="mt-2 space-y-2 text-warm-600">
+              <li>• Launch prep required manually cross-checking dozens of readiness items</li>
+              <li>• Scheduling conflicts between teams surfaced late, not early</li>
+              <li>• A single missed dependency could delay a launch window</li>
+              <li>• Readiness status lived across separate systems and spreadsheets</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The solution</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Mach24 Orbital integrated Zunkiree's AI systems to pull readiness data from every team into a single view, flag scheduling conflicts automatically, and surface dependency gaps before they became blockers.
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Unified readiness view</p>
+              <p class="text-warm-600 text-sm">Status from every team feeds into a single, continuously updated readiness picture for each launch window.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Automated conflict detection</p>
+              <p class="text-warm-600 text-sm">Scheduling conflicts between teams and systems are flagged as soon as they appear, not discovered at review time.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Dependency tracking</p>
+              <p class="text-warm-600 text-sm">Every readiness item is tracked against what it depends on, so gaps surface early enough to fix.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for result in resource.results %}
+            <div class="p-6 bg-green-50 border-l-4 border-green-500 text-center">
+              <p class="text-lg font-medium text-warm-black">{{ result }}</p>
+            </div>
+            {% endfor %}
+          </div>
+          <p class="text-xs text-warm-400 mt-4">
+            Illustrative results based on a representative engagement; individual outcomes vary and are not guaranteed.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why it mattered</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            A tighter spreadsheet or a stricter checklist process would still have relied on someone remembering to check the right sheet at the right time. Mach24 Orbital needed the dependencies themselves to surface automatically, before a person had to go looking — which is the difference between finding a conflict during review and finding it a day before launch.
+          </p>
+          <blockquote class="border-l-4 border-zunkiree-600 pl-4 text-warm-700 italic">
+            "A missed dependency doesn't show up as an error message. It shows up as a scrubbed launch. We needed the system to catch what a checklist can't."
+            <span class="block not-italic text-sm text-warm-500 mt-2">— Launch Operations Lead, Mach24 Orbital</span>
+          </blockquote>
+        </div>
+
+        {# Quote #}
+        <div class="mb-10 p-8 bg-gray-50" data-reveal>
+          <blockquote class="text-xl text-warm-black italic mb-4">
+            "Launch prep used to mean chasing status updates across five different teams. Now we see the whole readiness picture in one place, and we catch conflicts early enough to actually do something about them."
+          </blockquote>
+          <p class="text-warm-600">
+            <strong>Launch Operations Lead</strong><br>
+            Mach24 Orbital
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>
+
+{% set faqItems = resourceFaq["mach24orbital-case-study"] %}
+{% set faqHeading = "Frequently asked questions about the Mach24 Orbital case study" %}
+{% include "components/faq-accordion.njk" %}

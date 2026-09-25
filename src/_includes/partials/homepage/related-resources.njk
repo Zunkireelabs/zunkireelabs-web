@@ -1,0 +1,22 @@
+{#
+  Homepage related-resources internal-links block. Shared structure across
+  all locales. URLs are absolute zunkireelabs.com links pointing at the
+  (English-only) destination pages, same as the original per-locale copies.
+
+  Expects: relatedHeading, relatedLinks — array of exactly 5 {label, url}
+#}
+<!-- SEOAI:INTERNALLINKS:START --><section class="py-12 md:py-20">
+  <div class="container-custom">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">{{ relatedHeading }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+      {% for link in relatedLinks %}
+      <a href="{{ link.url }}" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">{{ link.label }}</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- SEOAI:INTERNALLINKS:END -->

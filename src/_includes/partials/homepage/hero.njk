@@ -1,0 +1,37 @@
+{#
+  Homepage hero section. Shared structure across all locales (en/de/nl) —
+  editing this file changes the design for every language at once.
+
+  Expects (set by the calling page before including):
+    heroEyebrow, heroTitleLine1, heroTitleLine2, heroDescription,
+    heroCta1Url, heroCta1Text, heroCta2Url, heroCta2Text, heroImageAlt
+#}
+<section class="pt-20 md:pt-24 lg:pt-28">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:min-h-[70vh]">
+      {# Left: Text Content #}
+      <div class="flex flex-col justify-center pb-16 lg:pb-24">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">{{ heroEyebrow }}</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+          {{ heroTitleLine1 }}<br>
+          {{ heroTitleLine2 }}
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
+          {{ heroDescription }}
+        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4">
+          <a href="{{ heroCta1Url }}" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors" data-track="cta" data-cta-id="hero-products">
+            {{ heroCta1Text }}
+          </a>
+          <a href="{{ heroCta2Url }}" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors" data-track="cta" data-cta-id="hero-contact">
+            {{ heroCta2Text }}
+          </a>
+        </div>
+      </div>
+      {# Right: Hero Image #}
+      <div class="hidden lg:flex lg:flex-col lg:justify-end">
+        <img src="/assets/images/hero-orca-dashboard.webp" alt="{{ heroImageAlt }}" width="1440" height="900" class="w-[120%] h-auto max-w-none rounded-lg" fetchpriority="high" decoding="async" />
+      </div>
+    </div>
+  </div>
+</section>

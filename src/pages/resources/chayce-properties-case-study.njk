@@ -1,0 +1,177 @@
+---
+layout: base.njk
+title: Chayce Properties Case Study | Zunkiree Labs
+description: How Zunkiree Labs runs the full digital operation for Chayce Properties, a UK real estate company — website, AI systems, and ongoing technical delivery.
+permalink: /resources/chayce-properties-case-study/
+---
+
+{% set resource = resources.items | find("slug", "chayce-properties-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-base font-medium text-warm-black mb-4" data-reveal>
+        Chayce Properties works with Zunkiree Labs as a single technical partner for its website, AI systems, and ongoing delivery — not separate vendors for each.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4" data-reveal>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Website</span>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">AI Systems</span>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Ongoing Delivery</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+        <span><strong>Location:</strong> {{ resource.location }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-base md:text-lg font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          <img src="/images/clients/chayce-properties.webp" alt="Chayce Properties" class="w-full h-full object-contain p-12 bg-white" />
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/global-delivery/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Global AI &amp; Software Delivery
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/khems-cleaning-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Khems Cleaning
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/services/web-development/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Web Development Services
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About Chayce Properties</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>Chayce Properties</strong> is a real estate company based in the United Kingdom. Zunkiree Labs works with Chayce as an embedded technical partner rather than a single-project vendor.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The engagement</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Most engagements start with one deliverable — a website build, an SEO project, a single integration — and end there. For Chayce Properties, Zunkiree Labs owns the full digital stack: the website itself, the AI systems built on top of it, and the ongoing technical delivery that keeps both running and improving.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">What we manage</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Website</p>
+              <p class="text-warm-600 text-sm">Ongoing development, maintenance, and improvements to the Chayce Properties website.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">AI systems</p>
+              <p class="text-warm-600 text-sm">AI-powered features built into the Chayce Properties platform, designed around how the business actually operates.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Ongoing technical delivery</p>
+              <p class="text-warm-600 text-sm">Continuous delivery of fixes, features, and technical work — not a one-time handoff.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why it works</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            Owning the whole stack means Zunkiree Labs doesn't have to hand off between vendors when a website change affects an AI feature, or when an AI feature needs a change on the site. One team, one point of accountability, across every system Chayce Properties runs on.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "Chayce Properties",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    }
+  }
+}
+</script>
+
+{% set faqItems = resourceFaq["chayce-properties-case-study"] %}
+{% set faqHeading = "Frequently asked questions about the Chayce Properties engagement" %}
+{% include "components/faq-accordion.njk" %}
