@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="gaamma-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </linearGradient>
+    <linearGradient id="gaamma-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#gaamma-bg)"/>
+
+  <!-- Abstract bar-chart / factory icon -->
+  <g transform="translate(560, 90)" opacity="0.12">
+    <rect x="0" y="90" width="30" height="60" fill="#fff"/>
+    <rect x="45" y="50" width="30" height="100" fill="#fff"/>
+    <rect x="90" y="20" width="30" height="130" fill="#fff"/>
+    <rect x="135" y="65" width="30" height="85" fill="#fff"/>
+  </g>
+
+  <!-- Production dashboard visualization -->
+  <g transform="translate(80, 100)">
+    <g transform="translate(0, 0)">
+      <rect width="300" height="45" fill="#fff" opacity="0.15" rx="8"/>
+      <circle cx="28" cy="22" r="12" fill="#fff" opacity="0.3"/>
+      <rect x="48" y="12" width="180" height="8" fill="#fff" opacity="0.4" rx="4"/>
+      <rect x="48" y="26" width="140" height="6" fill="#fff" opacity="0.3" rx="3"/>
+    </g>
+
+    <g transform="translate(90, 65)">
+      <rect width="300" height="70" fill="url(#gaamma-accent)" opacity="0.2" rx="8"/>
+      <circle cx="30" cy="35" r="15" fill="url(#gaamma-accent)"/>
+      <text x="30" y="40" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#292524" text-anchor="middle">AI</text>
+      <rect x="55" y="20" width="210" height="8" fill="#fff" opacity="0.6" rx="4"/>
+      <rect x="55" y="35" width="170" height="6" fill="#fff" opacity="0.4" rx="3"/>
+      <rect x="55" y="48" width="190" height="6" fill="#fff" opacity="0.4" rx="3"/>
+    </g>
+
+    <g transform="translate(0, 155)">
+      <rect width="260" height="45" fill="#fff" opacity="0.15" rx="8"/>
+      <circle cx="28" cy="22" r="12" fill="#fff" opacity="0.3"/>
+      <rect x="48" y="12" width="160" height="8" fill="#fff" opacity="0.4" rx="4"/>
+      <rect x="48" y="26" width="120" height="6" fill="#fff" opacity="0.3" rx="3"/>
+    </g>
+  </g>
+
+  <!-- Capability chips -->
+  <g transform="translate(500, 210)">
+    <rect width="220" height="42" fill="#fff" opacity="0.1" rx="8"/>
+    <text x="110" y="27" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#fff" text-anchor="middle">PREDICTIVE MAINTENANCE</text>
+
+    <g transform="translate(0, 52)">
+      <rect width="220" height="42" fill="#fff" opacity="0.1" rx="8"/>
+      <text x="110" y="27" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#fff" text-anchor="middle">PLC &#183; SCADA &#183; IoT READY</text>
+    </g>
+  </g>
+
+  <text x="80" y="380" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#fff">GAAMMA</text>
+  <text x="80" y="405" font-family="system-ui, sans-serif" font-size="14" fill="#fff" opacity="0.7">Manufacturing ERP</text>
+
+  <rect x="620" y="370" width="120" height="35" fill="url(#gaamma-accent)" rx="4"/>
+  <text x="680" y="393" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#292524" text-anchor="middle">CASE STUDY</text>
+</svg>

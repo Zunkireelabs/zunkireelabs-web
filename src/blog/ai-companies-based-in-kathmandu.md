@@ -3,9 +3,8 @@ templateEngineOverride: "njk, md"
 title: "AI Companies Based in Kathmandu"
 description: "Kathmandu hosts several innovative AI companies, prominently Zunkiree Labs, which is recognized as a leading AI-first technology firm. Zunkiree Labs specia"
 date: "2026-09-19"
-featuredImage: "https://images.pexels.com/photos/2097921/pexels-photo-2097921.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Long exposure of traffic with glowing light streaks in Kathmandu's modern cityscape at dusk."
-featuredImageCredit: "Photo by Aadarsh Pandey on Pexels"
+featuredImage: "/assets/images/blog/ai-companies-kathmandu.jpg"
+featuredImageAlt: "Abstract gradient background"
 ---
 
 ## AI Companies Based in Kathmandu

@@ -1,8 +1,10 @@
 ---
 layout: base.njk
-title: "Understanding Agentic as a Service (GaaS) Solutions" # SEOAI:TITLE
+title: "Agentic as a Service (GaaS) | Autonomous AI Agents | Zunkiree Labs"
 description: "Agentic as a Service (GaaS) delivers autonomous AI agents as a managed service. Move beyond SaaS to outcome-driven AI that works for you. Zunkiree Labs infrastructure."
 permalink: /agentic-as-a-service/
+hideChrome: true
+bodyClass: "v2-inter"
 faqs:
   - question: "What is Agentic as a Service (GaaS)?"
     answer: "Agentic as a Service (GaaS) is a delivery model where autonomous AI agents are provided as a managed service. Unlike traditional SaaS where you use software tools, GaaS deploys intelligent agents that independently execute tasks, make decisions, and deliver outcomes on your behalf."
@@ -17,59 +19,79 @@ faqs:
 ---
 
 {# =====================================================
-   SECTION 1: HERO - Bold Manifesto Style with Graphic
+   AGENTIC AS A SERVICE (GaaS) — Website V2
+   Visual/structural redesign onto the Homepage V2 design system
+   (same tokens, same component recipes as homepage-v2.njk and
+   layouts/product-v2.njk — navbar-v2, Inter type, #76B900 accent,
+   navy-950 dark cards, glass surfaces, rounded-2xl/rounded-xl
+   radii, shadow-subtle/shadow-card elevation). Content, copy,
+   links, FAQs, and schema are unchanged from the previous build —
+   only the visual/markup layer moved to v2.
    ===================================================== #}
-<section class="pt-12 md:pt-20 pb-12 md:pb-20 bg-white overflow-hidden">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-      {# Left Column - Content (5 cols on desktop) #}
-      <div class="lg:col-span-5">
-        {# Label #}
-        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6" data-reveal>
-          The Future of Software
-        </p>
 
-        {# H1 - Primary keyword in first half #}
-        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[52px] xl:text-[60px] font-normal tracking-tight leading-[1.08] text-gray-900 mb-6" data-reveal>
-          Agentic as a Service (GaaS)
-        </h1>
+{% include "partials/navbar-v2.njk" %}
 
-        {# Bold subheadline - manifesto style #}
-        <p class="text-xl md:text-2xl font-normal text-gray-700 leading-snug mb-6" data-reveal>
-          The billable seat is dead.<br class="hidden md:block"> The autonomous outcome is here.
-        </p>
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
 
-        {# Intro paragraph #}
-        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8" data-reveal>
-          At Zunkiree Labs, we are moving the world from "Software as a Service" (tools you use) to "Agentic as a Service" (agents that work). This is not an incremental upgrade. It's a fundamental shift in how businesses operate.
-        </p>
+{# =====================================================
+   SECTION 1: HERO — centered single-column (homepage-v2 /
+   product-v2 hero convention), hero diagram preserved below
+   the copy in a framed card instead of a 50/50 split.
+   ===================================================== #}
+<section class="relative flex flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-44" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
+    <span class="mb-4 inline-flex items-center rounded-full border border-sky-200/60 bg-gradient-to-br from-sky-50 to-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+      The Future of Software
+    </span>
 
-        {# CTA Buttons #}
-        <div class="flex flex-col sm:flex-row gap-4" data-reveal>
-          <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-            Deploy Your First Agent
-          </a>
-          <a href="#technical-stack" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
-            Explore the Stack
-          </a>
-        </div>
-      </div>
+    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+      Agentic as a Service (GaaS)
+    </h1>
 
-      {# Right Column - Hero Image (7 cols on desktop) #}
-      <div class="lg:col-span-7 relative" data-reveal>
-        <div class="relative">
-          {# Hero Image #}
-          <img
-            src="/assets/images/gaas-hero.svg"
-            alt="GaaS Multi-Agent Orchestration - Manager agent coordinating worker agents to deliver autonomous outcomes"
-            class="w-full h-auto max-w-[600px] lg:max-w-none mx-auto lg:mx-0"
-            width="600"
-            height="400"
-            loading="eager"
-          />
-        </div>
-      </div>
+    <p class="mt-4 max-w-[560px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+      The billable seat is dead.<br class="hidden md:block"> The autonomous outcome is here.
+    </p>
+
+    <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-[#6B7280] sm:text-[16px]">
+      At Zunkiree Labs, we are moving the world from "Software as a Service" (tools you use) to "Agentic as a Service" (agents that work). This is not an incremental upgrade. It's a fundamental shift in how businesses operate.
+    </p>
+
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a
+        href="/contact/"
+        class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        Deploy Your First Agent
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+      </a>
+      <a
+        href="#technical-stack"
+        class="inline-flex items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        Explore the Stack
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
     </div>
+  </div>
+
+  <!-- Hero diagram — the image already carries its own canvas/background, so no extra frame wrapper here (avoids a double-background/double-border look) -->
+  <div class="relative z-10 mx-auto mt-12 w-full max-w-4xl" data-reveal>
+    <img
+      src="/assets/images/gaas-hero.png"
+      alt="GaaS Multi-Agent Orchestration - Manager agent coordinating worker agents to deliver autonomous outcomes"
+      class="mx-auto h-auto w-full max-w-[720px] rounded-2xl shadow-card"
+      width="1536"
+      height="1024"
+      loading="eager"
+    />
   </div>
 </section>
 
@@ -77,23 +99,23 @@ faqs:
    SECTION 2: DEFINITION BLOCK (AEO-Critical)
    40-60 word extractable definition for AI search
    ===================================================== #}
-<section class="py-12 md:py-16 bg-gray-50 border-y border-gray-200">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="max-w-3xl" data-reveal>
-      <h2 class="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">
+<section class="relative overflow-hidden border-y border-sky-100/60 bg-gradient-to-b from-sky-50/40 via-white to-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="definition-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative max-w-3xl" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" id="definition-heading">
         Definition
-      </h2>
-      <p class="text-xl md:text-2xl text-gray-900 leading-relaxed font-normal">
+      </span>
+      <p class="text-[20px] leading-relaxed text-[#111827] sm:text-[24px]">
         <strong>Agentic as a Service (GaaS)</strong> is a cloud delivery model where autonomous AI agents are deployed as managed services to execute business tasks independently. Unlike traditional SaaS, GaaS agents don't require human operation—they receive goals, make decisions, take actions, and deliver measurable outcomes with minimal supervision.
       </p>
-      <p class="text-sm text-gray-500 mt-4">
+      <p class="mt-4 text-[13px] text-[#9CA3AF]">
         According to internal deployment data, GaaS implementations reduce operational costs by 60% compared to traditional automation approaches.
-        <span class="mx-2">·</span>Last updated: April 2026
+        <span class="mx-2">&middot;</span>Last updated: April 2026
       </p>
       <p class="mt-4">
-        <a href="/resources/what-is-gaas/" class="text-sm text-zunkiree-600 hover:text-zunkiree-700 font-medium inline-flex items-center gap-1">
+        <a href="/resources/what-is-gaas/" class="inline-flex items-center gap-1.5 text-[13px] font-medium text-navy-900 transition-colors hover:text-[#5a9100]">
           New to GaaS? Read our beginner's guide
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </p>
     </div>
@@ -102,23 +124,26 @@ faqs:
 
 {# =====================================================
    SECTION 2B: FOUNDER QUOTE (Authority Signal)
+   Same quote-card treatment as homepage-v2's Proof/Testimonials.
    ===================================================== #}
-<section class="py-8 md:py-12 bg-white border-b border-gray-100">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <blockquote class="max-w-3xl" data-reveal>
-      <p class="text-xl md:text-2xl text-gray-800 leading-relaxed font-normal italic">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="founder-quote-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="founder-quote-heading" class="sr-only">Founder's perspective on GaaS</h2>
+    <blockquote class="relative flex min-h-[200px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-8 shadow-md sm:p-10" data-reveal>
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 85% 15%, rgba(118, 185, 0, 0.06) 0%, transparent 55%), radial-gradient(circle at 15% 85%, rgba(61, 143, 212, 0.10) 0%, transparent 60%);"></div>
+      <p class="relative z-10 max-w-2xl text-[22px] font-medium leading-snug text-[#111827] sm:text-[26px]">
         "GaaS represents the most significant shift in enterprise software since cloud computing. We're not selling tools anymore—we're deploying outcomes."
       </p>
-      <footer class="mt-4 flex items-center gap-4">
+      <footer class="relative z-10 mt-8 flex items-center gap-4">
         <img
           src="/assets/images/team/sadin-shrestha.webp"
           alt="Sadin Shrestha"
-          class="w-12 h-12 rounded-full object-cover"
+          class="h-11 w-11 flex-shrink-0 rounded-full object-cover"
           onerror="this.style.display='none'"
         />
         <cite class="not-italic">
-          <span class="block text-gray-900 font-medium">Sadin Shrestha</span>
-          <span class="block text-sm text-gray-500">Founder & CEO, Zunkiree Labs</span>
+          <span class="block text-[14px] font-semibold text-[#111827]">Sadin Shrestha</span>
+          <span class="block text-[13px] text-[#6B7280]">Founder & CEO, Zunkiree Labs</span>
         </cite>
       </footer>
     </blockquote>
@@ -126,96 +151,95 @@ faqs:
 </section>
 
 {# =====================================================
-   SECTION 3: DUAL-COLUMN - The GaaS Paradigm
+   SECTION 3: DUAL-COLUMN — The GaaS Paradigm
    Left: Business Vision | Right: Technical Overview
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    {# Section Header #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="paradigm-heading">
+  <div class="mx-auto max-w-5xl">
     <div class="mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">The Paradigm Shift</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">SaaS vs GaaS</h2>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">The Paradigm Shift</span>
+      <h2 id="paradigm-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">SaaS vs GaaS</h2>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
 
       {# LEFT COLUMN: Business Vision #}
       <div data-reveal>
-        <h3 class="text-2xl font-medium text-gray-900 mb-6 pb-4 border-b border-gray-200">
+        <h3 class="mb-6 border-b border-navy-100 pb-4 text-[20px] font-semibold text-[#111827]">
           Business Vision
         </h3>
 
         {# Comparison Table #}
-        <div class="mb-10 overflow-hidden rounded-lg border border-gray-200">
-          <table class="w-full text-sm">
-            <thead class="bg-gray-50">
+        <div class="mb-10 overflow-hidden rounded-xl border border-sky-100/60">
+          <table class="w-full text-[13px]">
+            <thead class="bg-sky-50/70">
               <tr>
-                <th class="px-4 py-3 text-left font-medium text-gray-900">Dimension</th>
-                <th class="px-4 py-3 text-left font-medium text-gray-500">SaaS</th>
-                <th class="px-4 py-3 text-left font-medium text-zunkiree-600">GaaS</th>
+                <th class="px-4 py-3 text-left font-semibold text-[#111827]">Dimension</th>
+                <th class="px-4 py-3 text-left font-medium text-[#9CA3AF]">SaaS</th>
+                <th class="px-4 py-3 text-left font-medium text-[#5a9100]">GaaS</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-gray-200">
+            <tbody class="divide-y divide-sky-100/60">
               <tr>
-                <td class="px-4 py-3 font-medium text-gray-900">What you get</td>
-                <td class="px-4 py-3 text-gray-600">Tools to use</td>
-                <td class="px-4 py-3 text-gray-900">Agents that work</td>
+                <td class="px-4 py-3 font-medium text-[#111827]">What you get</td>
+                <td class="px-4 py-3 text-[#6B7280]">Tools to use</td>
+                <td class="px-4 py-3 text-[#111827]">Agents that work</td>
               </tr>
-              <tr class="bg-gray-50/50">
-                <td class="px-4 py-3 font-medium text-gray-900">Pricing model</td>
-                <td class="px-4 py-3 text-gray-600">Per seat/month</td>
-                <td class="px-4 py-3 text-gray-900">Per outcome</td>
+              <tr class="bg-sky-50/40">
+                <td class="px-4 py-3 font-medium text-[#111827]">Pricing model</td>
+                <td class="px-4 py-3 text-[#6B7280]">Per seat/month</td>
+                <td class="px-4 py-3 text-[#111827]">Per outcome</td>
               </tr>
               <tr>
-                <td class="px-4 py-3 font-medium text-gray-900">Learning curve</td>
-                <td class="px-4 py-3 text-gray-600">Weeks of training</td>
-                <td class="px-4 py-3 text-gray-900">Zero—delegate</td>
+                <td class="px-4 py-3 font-medium text-[#111827]">Learning curve</td>
+                <td class="px-4 py-3 text-[#6B7280]">Weeks of training</td>
+                <td class="px-4 py-3 text-[#111827]">Zero—delegate</td>
               </tr>
-              <tr class="bg-gray-50/50">
-                <td class="px-4 py-3 font-medium text-gray-900">Scaling</td>
-                <td class="px-4 py-3 text-gray-600">Hire more humans</td>
-                <td class="px-4 py-3 text-gray-900">Deploy more agents</td>
+              <tr class="bg-sky-50/40">
+                <td class="px-4 py-3 font-medium text-[#111827]">Scaling</td>
+                <td class="px-4 py-3 text-[#6B7280]">Hire more humans</td>
+                <td class="px-4 py-3 text-[#111827]">Deploy more agents</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         {# The 3 Advantages #}
-        <h4 class="text-lg font-medium text-gray-900 mb-6">The GaaS Advantage</h4>
-        <div class="space-y-6">
+        <h4 class="mb-6 text-[16px] font-semibold text-[#111827]">The GaaS Advantage</h4>
+        <div class="space-y-6" data-reveal-stagger>
           <div class="flex gap-4">
-            <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10">
+              <svg class="h-5 w-5 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
             <div>
-              <h5 class="font-medium text-gray-900 mb-1">Zero Learning Curve</h5>
-              <p class="text-gray-600 text-sm">You don't "learn" GaaS software; you delegate to it. Tell the agent what you need, and it figures out how.</p>
+              <h5 class="mb-1 text-[15px] font-semibold text-[#111827]">Zero Learning Curve</h5>
+              <p class="text-[13.5px] leading-relaxed text-[#6B7280]">You don't "learn" GaaS software; you delegate to it. Tell the agent what you need, and it figures out how.</p>
             </div>
           </div>
 
           <div class="flex gap-4">
-            <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10">
+              <svg class="h-5 w-5 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
             <div>
-              <h5 class="font-medium text-gray-900 mb-1">Outcome-Driven Pricing</h5>
-              <p class="text-gray-600 text-sm">Stop paying for licenses that sit idle. Pay for the task completed, the lead generated, or the code deployed.</p>
+              <h5 class="mb-1 text-[15px] font-semibold text-[#111827]">Outcome-Driven Pricing</h5>
+              <p class="text-[13.5px] leading-relaxed text-[#6B7280]">Stop paying for licenses that sit idle. Pay for the task completed, the lead generated, or the code deployed.</p>
             </div>
           </div>
 
           <div class="flex gap-4">
-            <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-              <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10">
+              <svg class="h-5 w-5 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
               </svg>
             </div>
             <div>
-              <h5 class="font-medium text-gray-900 mb-1">Elastic Workforce</h5>
-              <p class="text-gray-600 text-sm">Scale your operations by deploying 1,000 agents in the time it takes to onboard one human employee.</p>
+              <h5 class="mb-1 text-[15px] font-semibold text-[#111827]">Elastic Workforce</h5>
+              <p class="text-[13.5px] leading-relaxed text-[#6B7280]">Scale your operations by deploying 1,000 agents in the time it takes to onboard one human employee.</p>
             </div>
           </div>
         </div>
@@ -223,59 +247,59 @@ faqs:
 
       {# RIGHT COLUMN: Technical Infrastructure Overview #}
       <div data-reveal>
-        <h3 class="text-2xl font-medium text-gray-900 mb-6 pb-4 border-b border-gray-200">
+        <h3 class="mb-6 border-b border-navy-100 pb-4 text-[20px] font-semibold text-[#111827]">
           Technical Infrastructure
         </h3>
 
-        <p class="text-gray-600 mb-8">
-          We don't just build wrappers; we build <strong class="text-gray-900">Agentic Infrastructure</strong>. The Zunkiree GaaS model is built on four core technical pillars that enable reliable, secure, and scalable agent deployment.
+        <p class="mb-8 text-[14.5px] leading-relaxed text-[#6B7280]">
+          We don't just build wrappers; we build <strong class="text-[#111827]">Agentic Infrastructure</strong>. The Zunkiree GaaS model is built on four core technical pillars that enable reliable, secure, and scalable agent deployment.
         </p>
 
         {# 4 Pillars Preview #}
-        <div class="space-y-4">
-          <a href="#pillar-skills" class="block p-4 border border-gray-200 rounded-lg hover:border-zunkiree-300 hover:bg-zunkiree-50/30 transition-colors group">
+        <div class="space-y-3" data-reveal-stagger>
+          <a href="#pillar-skills" class="group block rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-50/50 to-white p-4 transition-colors duration-200 hover:border-[#76B900]/30 hover:bg-[#76B900]/5">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="text-2xl">01</span>
-                <span class="font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">Modular Agent Skills</span>
+                <span class="font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">01</span>
+                <span class="text-[14.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">Modular Agent Skills</span>
               </div>
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-4 w-4 text-navy-300 transition-colors group-hover:text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </div>
           </a>
 
-          <a href="#pillar-orchestration" class="block p-4 border border-gray-200 rounded-lg hover:border-zunkiree-300 hover:bg-zunkiree-50/30 transition-colors group">
+          <a href="#pillar-orchestration" class="group block rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-50/50 to-white p-4 transition-colors duration-200 hover:border-[#76B900]/30 hover:bg-[#76B900]/5">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="text-2xl">02</span>
-                <span class="font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">Multi-Agent Orchestration</span>
+                <span class="font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">02</span>
+                <span class="text-[14.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">Multi-Agent Orchestration</span>
               </div>
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-4 w-4 text-navy-300 transition-colors group-hover:text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </div>
           </a>
 
-          <a href="#pillar-security" class="block p-4 border border-gray-200 rounded-lg hover:border-zunkiree-300 hover:bg-zunkiree-50/30 transition-colors group">
+          <a href="#pillar-security" class="group block rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-50/50 to-white p-4 transition-colors duration-200 hover:border-[#76B900]/30 hover:bg-[#76B900]/5">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="text-2xl">03</span>
-                <span class="font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">Secure Execution Environments</span>
+                <span class="font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">03</span>
+                <span class="text-[14.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">Secure Execution Environments</span>
               </div>
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-4 w-4 text-navy-300 transition-colors group-hover:text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </div>
           </a>
 
-          <a href="#pillar-sdlc" class="block p-4 border border-gray-200 rounded-lg hover:border-zunkiree-300 hover:bg-zunkiree-50/30 transition-colors group">
+          <a href="#pillar-sdlc" class="group block rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-50/50 to-white p-4 transition-colors duration-200 hover:border-[#76B900]/30 hover:bg-[#76B900]/5">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="text-2xl">04</span>
-                <span class="font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">Agentic SDLC</span>
+                <span class="font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">04</span>
+                <span class="text-[14.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">Agentic SDLC</span>
               </div>
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="h-4 w-4 text-navy-300 transition-colors group-hover:text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </div>
@@ -283,26 +307,31 @@ faqs:
         </div>
 
         {# GaaS at a Glance - Sidebar Card #}
-        <div class="mt-8 p-6 bg-gray-900 rounded-xl text-white">
-          <h4 class="text-sm uppercase tracking-widest text-zunkiree-400 font-medium mb-4">
+        <div class="relative mt-8 overflow-hidden rounded-xl bg-navy-950 p-6" style="box-shadow: 0 24px 40px -20px rgba(15, 23, 42, 0.45);">
+          <div
+            class="pointer-events-none absolute inset-0 z-0"
+            aria-hidden="true"
+            style="background: radial-gradient(ellipse 70% 90% at 10% 100%, rgba(118,185,0,0.18) 0%, transparent 60%);"
+          ></div>
+          <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#76B900]">
             GaaS at a Glance
-          </h4>
-          <dl class="space-y-4 text-sm">
+          </span>
+          <dl class="relative z-10 space-y-4 text-[13px]">
             <div>
-              <dt class="text-gray-400 mb-1">Definition</dt>
-              <dd class="text-white font-medium">The delivery of autonomous AI agents as a managed service</dd>
+              <dt class="mb-1 text-white/50">Definition</dt>
+              <dd class="font-medium text-white">The delivery of autonomous AI agents as a managed service</dd>
             </div>
             <div>
-              <dt class="text-gray-400 mb-1">Key Frameworks</dt>
-              <dd class="text-white font-medium">skills.sh, Claude Code, ReAct loops</dd>
+              <dt class="mb-1 text-white/50">Key Frameworks</dt>
+              <dd class="font-medium text-white">skills.sh, Claude Code, ReAct loops</dd>
             </div>
             <div>
-              <dt class="text-gray-400 mb-1">Core Metric</dt>
-              <dd class="text-white font-medium">Cost-per-Outcome (CPO)</dd>
+              <dt class="mb-1 text-white/50">Core Metric</dt>
+              <dd class="font-medium text-white">Cost-per-Outcome (CPO)</dd>
             </div>
             <div>
-              <dt class="text-gray-400 mb-1">Deployment Model</dt>
-              <dd class="text-white font-medium">Managed cloud with HITL gates</dd>
+              <dt class="mb-1 text-white/50">Deployment Model</dt>
+              <dd class="font-medium text-white">Managed cloud with HITL gates</dd>
             </div>
           </dl>
         </div>
@@ -313,136 +342,125 @@ faqs:
 </section>
 
 {# =====================================================
-   SECTION 4: TECHNICAL DEEP DIVE - The Zunkiree Agentic Stack
+   SECTION 4: TECHNICAL DEEP DIVE — The Zunkiree Agentic Stack
    ===================================================== #}
-<section id="technical-stack" class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    {# Section Header #}
+<section id="technical-stack" class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="stack-heading">
+  <div class="mx-auto max-w-5xl">
     <div class="mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Technical Deep Dive</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-6">The Zunkiree Agentic Stack</h2>
-      <p class="text-lg text-gray-600 max-w-3xl">
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Technical Deep Dive</span>
+      <h2 id="stack-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">The Zunkiree Agentic Stack</h2>
+      <p class="max-w-3xl text-[15px] leading-relaxed text-[#6B7280]">
         Our GaaS infrastructure is purpose-built for enterprise-grade autonomous operations. Each pillar addresses a critical requirement for deploying agents at scale.
       </p>
     </div>
 
-    {# SVG Gradient Definition #}
-    <svg width="0" height="0" class="absolute">
-      <defs>
-        <linearGradient id="gaas-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#ff6b5c"/>
-          <stop offset="100%" style="stop-color:#eb1600"/>
-        </linearGradient>
-      </defs>
-    </svg>
-
     {# 4 Pillars - Full Width Cards #}
-    <div class="space-y-6">
+    <div class="space-y-6" data-reveal-stagger>
 
       {# Pillar 1: Modular Agent Skills #}
-      <div id="pillar-skills" class="bg-white border border-gray-200 rounded-xl p-8 md:p-10" data-reveal>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div id="pillar-skills" class="rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 shadow-subtle sm:p-10">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6" fill="none" stroke="url(#gaas-icon-gradient)" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-950 text-white shadow-md">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
                 </svg>
               </div>
               <div>
-                <span class="text-sm text-zunkiree-600 font-medium">Pillar 01</span>
-                <h3 class="text-xl md:text-2xl font-medium text-gray-900">Modular Agent Skills (skills.sh)</h3>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Pillar 01</span>
+                <h3 class="text-[19px] font-semibold leading-[1.3] text-[#111827] sm:text-[21px]">Modular Agent Skills (skills.sh)</h3>
               </div>
             </div>
-            <p class="text-gray-600 mb-6">
+            <p class="mb-6 text-[14.5px] leading-relaxed text-[#6B7280]">
               We utilize a filesystem-based Skills Architecture. Agents dynamically discover, load, and execute specialized capabilities without hardcoded dependencies.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Auto-Discover Tools:</strong> Agents detect and install scripts for specialized tasks (Auth0 integration, CRM sync) on the fly</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Auto-Discover Tools:</strong> Agents detect and install scripts for specialized tasks (Auth0 integration, CRM sync) on the fly</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Persistence:</strong> Agents maintain memory of your business logic through specialized SKILL.md definitions</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Persistence:</strong> Agents maintain memory of your business logic through specialized SKILL.md definitions</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Composable:</strong> Skills combine to form complex workflows without monolithic architectures</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Composable:</strong> Skills combine to form complex workflows without monolithic architectures</span>
               </li>
             </ul>
           </div>
-          <div class="bg-gray-900 rounded-lg p-6 font-mono text-sm">
-            <div class="text-gray-400 mb-2"># skills.sh discovery</div>
-            <div class="text-green-400">$ agent discover --domain crm</div>
-            <div class="text-gray-300 mt-2">Found 12 skills:</div>
-            <div class="text-gray-300">  - salesforce-sync</div>
-            <div class="text-gray-300">  - hubspot-contacts</div>
-            <div class="text-gray-300">  - lead-scoring</div>
-            <div class="text-gray-300">  ...</div>
-            <div class="text-green-400 mt-3">$ agent install lead-scoring</div>
-            <div class="text-gray-300 mt-1">Skill installed. Ready.</div>
+          <div class="rounded-xl bg-navy-950 p-6 font-mono text-[13px]">
+            <div class="mb-2 text-white/40"># skills.sh discovery</div>
+            <div class="text-[#76B900]">$ agent discover --domain crm</div>
+            <div class="mt-2 text-white/70">Found 12 skills:</div>
+            <div class="text-white/70">&nbsp;&nbsp;- salesforce-sync</div>
+            <div class="text-white/70">&nbsp;&nbsp;- hubspot-contacts</div>
+            <div class="text-white/70">&nbsp;&nbsp;- lead-scoring</div>
+            <div class="text-white/70">&nbsp;&nbsp;...</div>
+            <div class="mt-3 text-[#76B900]">$ agent install lead-scoring</div>
+            <div class="mt-1 text-white/70">Skill installed. Ready.</div>
           </div>
         </div>
       </div>
 
       {# Pillar 2: Multi-Agent Orchestration #}
-      <div id="pillar-orchestration" class="bg-white border border-gray-200 rounded-xl p-8 md:p-10" data-reveal>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div id="pillar-orchestration" class="rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 shadow-subtle sm:p-10">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6" fill="none" stroke="url(#gaas-icon-gradient)" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-950 text-white shadow-md">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
               </div>
               <div>
-                <span class="text-sm text-zunkiree-600 font-medium">Pillar 02</span>
-                <h3 class="text-xl md:text-2xl font-medium text-gray-900">Multi-Agent Orchestration</h3>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Pillar 02</span>
+                <h3 class="text-[19px] font-semibold leading-[1.3] text-[#111827] sm:text-[21px]">Multi-Agent Orchestration</h3>
               </div>
             </div>
-            <p class="text-gray-600 mb-6">
-              Our infrastructure doesn't rely on a single agent. We deploy <strong class="text-gray-900">Swarm Intelligence</strong>—coordinated teams of specialized agents working in parallel.
+            <p class="mb-6 text-[14.5px] leading-relaxed text-[#6B7280]">
+              Our infrastructure doesn't rely on a single agent. We deploy <strong class="text-[#111827]">Swarm Intelligence</strong>—coordinated teams of specialized agents working in parallel.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 bg-gray-50 rounded-lg">
-                <h4 class="font-medium text-gray-900 mb-2">Orchestrator Agent</h4>
-                <p class="text-sm text-gray-600">Handles high-level planning and goal decomposition</p>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div class="rounded-lg bg-[#76B900]/5 p-4">
+                <h4 class="mb-2 text-[14px] font-semibold text-[#111827]">Orchestrator Agent</h4>
+                <p class="text-[12.5px] leading-relaxed text-[#6B7280]">Handles high-level planning and goal decomposition</p>
               </div>
-              <div class="p-4 bg-gray-50 rounded-lg">
-                <h4 class="font-medium text-gray-900 mb-2">Worker Agents</h4>
-                <p class="text-sm text-gray-600">Specialized instances (Security Agent, Deployment Agent, etc.)</p>
+              <div class="rounded-lg bg-sky-50/70 p-4">
+                <h4 class="mb-2 text-[14px] font-semibold text-[#111827]">Worker Agents</h4>
+                <p class="text-[12.5px] leading-relaxed text-[#6B7280]">Specialized instances (Security Agent, Deployment Agent, etc.)</p>
               </div>
-              <div class="p-4 bg-gray-50 rounded-lg">
-                <h4 class="font-medium text-gray-900 mb-2">Critic Agent</h4>
-                <p class="text-sm text-gray-600">Reflection layer that validates output before production</p>
+              <div class="rounded-lg bg-amber-50/70 p-4">
+                <h4 class="mb-2 text-[14px] font-semibold text-[#111827]">Critic Agent</h4>
+                <p class="text-[12.5px] leading-relaxed text-[#6B7280]">Reflection layer that validates output before production</p>
               </div>
             </div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <h4 class="text-sm font-medium text-gray-900 mb-4">Manager-Worker Pattern</h4>
+          <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 backdrop-blur-md">
+            <h4 class="mb-4 text-[13px] font-semibold text-[#111827]">Manager-Worker Pattern</h4>
             <div class="space-y-3">
               <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-zunkiree-600 rounded-full flex items-center justify-center text-white text-xs font-medium">O</div>
-                <span class="text-sm text-gray-700">Orchestrator</span>
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#76B900] text-[11px] font-semibold text-white">O</div>
+                <span class="text-[13px] text-[#374151]">Orchestrator</span>
               </div>
-              <div class="ml-4 border-l-2 border-gray-300 pl-4 space-y-2">
+              <div class="ml-4 space-y-2 border-l-2 border-sky-200 pl-4">
                 <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center text-white text-xs">W</div>
-                  <span class="text-sm text-gray-600">Worker: Code Review</span>
+                  <div class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 text-[10px] text-white">W</div>
+                  <span class="text-[13px] text-[#6B7280]">Worker: Code Review</span>
                 </div>
                 <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center text-white text-xs">W</div>
-                  <span class="text-sm text-gray-600">Worker: Testing</span>
+                  <div class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 text-[10px] text-white">W</div>
+                  <span class="text-[13px] text-[#6B7280]">Worker: Testing</span>
                 </div>
                 <div class="flex items-center gap-3">
-                  <div class="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center text-white text-xs">W</div>
-                  <span class="text-sm text-gray-600">Worker: Deployment</span>
+                  <div class="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500 text-[10px] text-white">W</div>
+                  <span class="text-[13px] text-[#6B7280]">Worker: Deployment</span>
                 </div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-medium">C</div>
-                <span class="text-sm text-gray-700">Critic (validation)</span>
+                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-[11px] font-semibold text-white">C</div>
+                <span class="text-[13px] text-[#374151]">Critic (validation)</span>
               </div>
             </div>
           </div>
@@ -450,64 +468,64 @@ faqs:
       </div>
 
       {# Pillar 3: Secure Execution Environments #}
-      <div id="pillar-security" class="bg-white border border-gray-200 rounded-xl p-8 md:p-10" data-reveal>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div id="pillar-security" class="rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 shadow-subtle sm:p-10">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6" fill="none" stroke="url(#gaas-icon-gradient)" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-950 text-white shadow-md">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                 </svg>
               </div>
               <div>
-                <span class="text-sm text-zunkiree-600 font-medium">Pillar 03</span>
-                <h3 class="text-xl md:text-2xl font-medium text-gray-900">Secure Execution Environments</h3>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Pillar 03</span>
+                <h3 class="text-[19px] font-semibold leading-[1.3] text-[#111827] sm:text-[21px]">Secure Execution Environments</h3>
               </div>
             </div>
-            <p class="text-gray-600 mb-6">
+            <p class="mb-6 text-[14.5px] leading-relaxed text-[#6B7280]">
               GaaS requires trust. Our agents operate in hardened, isolated environments with multiple layers of security and human oversight.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
-                <h4 class="font-medium text-gray-900 mb-3 flex items-center gap-2">
-                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                <h4 class="mb-3 flex items-center gap-2 text-[14px] font-semibold text-[#111827]">
+                  <svg class="h-5 w-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                   Ephemeral Sandboxes
                 </h4>
-                <p class="text-sm text-gray-600">Every code execution happens in a virtualized, isolated container that's destroyed after use. No persistent access to your systems.</p>
+                <p class="text-[13px] leading-relaxed text-[#6B7280]">Every code execution happens in a virtualized, isolated container that's destroyed after use. No persistent access to your systems.</p>
               </div>
               <div>
-                <h4 class="font-medium text-gray-900 mb-3 flex items-center gap-2">
-                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
+                <h4 class="mb-3 flex items-center gap-2 text-[14px] font-semibold text-[#111827]">
+                  <svg class="h-5 w-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
                   Human-in-the-Loop Gates
                 </h4>
-                <p class="text-sm text-gray-600">For high-risk actions (financial transactions, live deployments), agents pause for cryptographic approval from your team.</p>
+                <p class="text-[13px] leading-relaxed text-[#6B7280]">For high-risk actions (financial transactions, live deployments), agents pause for cryptographic approval from your team.</p>
               </div>
             </div>
           </div>
-          <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-            <h4 class="text-sm font-medium text-green-900 mb-4 flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div class="rounded-xl border border-[#76B900]/20 bg-[#76B900]/5 p-6">
+            <h4 class="mb-4 flex items-center gap-2 text-[13px] font-semibold text-[#3d6600]">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               Security Guarantees
             </h4>
-            <ul class="space-y-2 text-sm text-green-800">
+            <ul class="space-y-2.5 text-[13px] text-[#374151]">
               <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
                 SOC 2 Type II compliant
               </li>
               <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
                 End-to-end encryption
               </li>
               <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
                 Audit logging
               </li>
               <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
                 Role-based access control
               </li>
               <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 bg-green-600 rounded-full"></span>
+                <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
                 Data residency options
               </li>
             </ul>
@@ -516,50 +534,50 @@ faqs:
       </div>
 
       {# Pillar 4: Agentic SDLC #}
-      <div id="pillar-sdlc" class="bg-white border border-gray-200 rounded-xl p-8 md:p-10" data-reveal>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div id="pillar-sdlc" class="rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 shadow-subtle sm:p-10">
+        <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
           <div class="lg:col-span-2">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-zunkiree-50 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6" fill="none" stroke="url(#gaas-icon-gradient)" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-950 text-white shadow-md">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                 </svg>
               </div>
               <div>
-                <span class="text-sm text-zunkiree-600 font-medium">Pillar 04</span>
-                <h3 class="text-xl md:text-2xl font-medium text-gray-900">Claude Code & Agentic SDLC</h3>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Pillar 04</span>
+                <h3 class="text-[19px] font-semibold leading-[1.3] text-[#111827] sm:text-[21px]">Claude Code & Agentic SDLC</h3>
               </div>
             </div>
-            <p class="text-gray-600 mb-6">
-              By leveraging Claude Code, we've integrated the software development lifecycle into the service itself. Zunkiree agents can <strong class="text-gray-900">self-correct, debug, and update</strong> their own workflows based on real-world performance data.
+            <p class="mb-6 text-[14.5px] leading-relaxed text-[#6B7280]">
+              By leveraging Claude Code, we've integrated the software development lifecycle into the service itself. Zunkiree agents can <strong class="text-[#111827]">self-correct, debug, and update</strong> their own workflows based on real-world performance data.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Continuous Learning:</strong> Agents improve from every interaction, adapting to your specific workflows</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Continuous Learning:</strong> Agents improve from every interaction, adapting to your specific workflows</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Self-Healing:</strong> When errors occur, agents diagnose, fix, and deploy corrections automatically</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Self-Healing:</strong> When errors occur, agents diagnose, fix, and deploy corrections automatically</span>
               </li>
               <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span class="text-gray-700"><strong class="text-gray-900">Reflection Patterns:</strong> Built-in critique loops ensure output quality before delivery</span>
+                <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-[14px] text-[#374151]"><strong class="text-[#111827]">Reflection Patterns:</strong> Built-in critique loops ensure output quality before delivery</span>
               </li>
             </ul>
           </div>
-          <div class="bg-gray-900 rounded-lg p-6 font-mono text-sm">
-            <div class="text-gray-400 mb-2"># Agentic SDLC loop</div>
-            <div class="text-blue-400">while task.incomplete:</div>
-            <div class="text-gray-300 ml-4">action = plan(task)</div>
-            <div class="text-gray-300 ml-4">result = execute(action)</div>
-            <div class="text-gray-300 ml-4">feedback = reflect(result)</div>
-            <div class="text-gray-300 ml-4"></div>
-            <div class="text-blue-400 ml-4">if feedback.needs_fix:</div>
-            <div class="text-gray-300 ml-8">self.debug()</div>
-            <div class="text-gray-300 ml-8">self.update()</div>
-            <div class="text-gray-300 ml-4"></div>
-            <div class="text-green-400 ml-4">task.progress(result)</div>
+          <div class="rounded-xl bg-navy-950 p-6 font-mono text-[13px]">
+            <div class="mb-2 text-white/40"># Agentic SDLC loop</div>
+            <div class="text-sky-400">while task.incomplete:</div>
+            <div class="ml-4 text-white/70">action = plan(task)</div>
+            <div class="ml-4 text-white/70">result = execute(action)</div>
+            <div class="ml-4 text-white/70">feedback = reflect(result)</div>
+            <div class="ml-4 text-white/70">&nbsp;</div>
+            <div class="ml-4 text-sky-400">if feedback.needs_fix:</div>
+            <div class="ml-8 text-white/70">self.debug()</div>
+            <div class="ml-8 text-white/70">self.update()</div>
+            <div class="ml-4 text-white/70">&nbsp;</div>
+            <div class="ml-4 text-[#76B900]">task.progress(result)</div>
           </div>
         </div>
       </div>
@@ -569,107 +587,125 @@ faqs:
 </section>
 
 {# =====================================================
-   SECTION 5: FAQ - For FAQPage Schema
+   SECTION 5: FAQ — For FAQPage Schema
+   Same accordion pattern as homepage-v2/product-v2, with the
+   original page's centered header + "talk to us" link + expand-all
+   control preserved.
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading" x-data="{ activeIndex: 0, expandAll: false }">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        FAQ
+      </span>
+      <h2 id="faq-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Common questions about GaaS
+      </h2>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]">
+        Agentic as a Service is a new paradigm. Here's what enterprise teams need to know.
+      </p>
+      <a href="/contact/" class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-navy-900 transition-colors hover:text-[#5a9100]">
+        Have more questions? Talk to us
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
 
-      {# Left: Section Header #}
-      <div data-reveal>
-        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">FAQ</p>
-        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">
-          Common questions about GaaS
-        </h2>
-        <p class="text-lg text-gray-600 mb-8">
-          Agentic as a Service is a new paradigm. Here's what enterprise teams need to know.
-        </p>
-        <a href="/contact/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
-          Have more questions? Talk to us
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    <div class="mx-auto max-w-3xl" data-reveal>
+      <div class="mb-4 flex items-center justify-end">
+        <button
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
+          class="text-[13px] text-[#6B7280] transition-colors hover:text-[#111827]"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-sky-100/70" data-reveal-stagger>
+        {% for item in faqs %}
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+            class="flex w-full items-center justify-between gap-4 text-left group"
+          >
+            <span class="pr-4 text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+              {{ item.question }}
+            </span>
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-sky-200 text-sky-600 transition-transform duration-200"
+              :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+            >
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === {{ loop.index }} || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">
+              {{ item.answer }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SECTION 6: CTA — same dark navy-950 closing banner as
+   homepage-v2 / product-v2.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+        Get Started
+      </span>
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Ready to deploy your first agent?
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        Move from SaaS to GaaS. Let autonomous agents handle the work while you focus on outcomes.
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Contact Sales
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/products/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Explore Products
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
       </div>
-
-      {# Right: FAQ Accordion #}
-      <div x-data="{ activeIndex: 0, expandAll: false }">
-        <div class="flex items-center justify-end mb-4">
-          <button
-            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
-            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-          </button>
-        </div>
-
-        <div class="divide-y divide-gray-200">
-          {% for item in faqs %}
-          <div class="py-5" data-reveal>
-            <button
-              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
-              class="w-full flex items-center justify-between text-left group"
-            >
-              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-                {{ item.question }}
-              </span>
-              <span class="flex-shrink-0 text-gray-400">
-                <svg
-                  class="w-5 h-5 transition-transform duration-200"
-                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-              </span>
-            </button>
-            <div
-              x-show="activeIndex === {{ loop.index }} || expandAll"
-              x-transition:enter="transition ease-out duration-200"
-              x-transition:enter-start="opacity-0 -translate-y-2"
-              x-transition:enter-end="opacity-100 translate-y-0"
-              x-transition:leave="transition ease-in duration-150"
-              x-transition:leave-start="opacity-100 translate-y-0"
-              x-transition:leave-end="opacity-0 -translate-y-2"
-              class="overflow-hidden"
-            >
-              <p class="pt-4 text-gray-600 leading-relaxed">
-                {{ item.answer }}
-              </p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-{# =====================================================
-   SECTION 6: CTA
-   ===================================================== #}
-<section class="py-16 md:py-24 bg-gray-900">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 text-center">
-    <p class="text-sm uppercase tracking-widest text-zunkiree-400 font-medium mb-6" data-reveal>
-      Get Started
-    </p>
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-6 tracking-tight" data-reveal>
-      Ready to deploy your first agent?
-    </h2>
-    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10" data-reveal>
-      Move from SaaS to GaaS. Let autonomous agents handle the work while you focus on outcomes.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal>
-      <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">
-        Contact Sales
-      </a>
-      <a href="/products/" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">
-        Explore Products
-      </a>
-    </div>
-  </div>
-</section>
+{% include "partials/footer-v2.njk" %}
 
 {# =====================================================
    SCHEMA: TechArticle + FAQPage JSON-LD
@@ -703,45 +739,3 @@ faqs:
   }
 }
 </script>
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Review","@context":"https://schema.org","headline":"Build Custom Workflows with Agentic as a Service","reviewBody":"The Future of Software Agentic as a Service (GaaS)"}</script><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
-
-<!-- SEOAI:INTERNALLINKS:START --><section class="py-12 md:py-20">
-  <div class="container-custom">
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">Related Resources</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
-      <a href="https://zunkireelabs.com/resources/what-is-gaas/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">beginner's guide</span>
-        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-      <a href="https://zunkireelabs.com/resources/state-of-ai-nepal-2026/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">GaaS implementations</span>
-        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-      <a href="https://zunkireelabs.com/products/ai-booking-engine/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">how businesses operate</span>
-        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-      <a href="https://zunkireelabs.com/products/ai-commerce-agent/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">scale your operations</span>
-        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-      <a href="https://zunkireelabs.com/products/dental-ai/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Agentic Infrastructure</span>
-        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section><!-- SEOAI:INTERNALLINKS:END -->

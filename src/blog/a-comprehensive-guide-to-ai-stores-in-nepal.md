@@ -3,9 +3,8 @@ templateEngineOverride: "njk, md"
 title: "A Comprehensive Guide to AI Stores in Nepal"
 description: "Discover essential insights about AI stores in Nepal, including their services, offerings, and how they can impact local businesses."
 date: "2026-09-01"
-featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up of a typewriter showcasing 'ARTIFICIAL INTELLIGENCE' on paper."
-featuredImageCredit: "Photo by Markus Winkler on Pexels"
+featuredImage: "/assets/images/blog/ai-stores-nepal.jpg"
+featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -1,114 +1,144 @@
 ---
 layout: base.njk
-title: "Contact Zunkiree Labs | Book a Free AI Consultation" # SEOAI:TITLE
+title: "Contact Zunkiree Labs | AI Development Company Nepal | Free Consultation"
 description: "Contact Zunkiree Labs in Kathmandu for AI development, custom software, and web solutions. Schedule a free discovery call with Nepal's leading AI company."
 permalink: /contact/
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   HERO SECTION - Dark with extra bottom padding for overlap
+   CONTACT — WEBSITE V2
+   Rebuilt to sit on the same visual system as homepage-v2.njk /
+   industry.njk / product-v2.njk: navbar-v2 + footer-v2 chrome,
+   Inter type, flat #F8FAFC body, navy/#76B900 token language,
+   glass-surface cards, font-mono uppercase labels.
+
+   Functionality is unchanged — same CRM iframe embed (real lead
+   form, per COMPONENT_LIBRARY.md §7.1), same quick-link
+   destinations, same site.* data bindings. Only the shell around
+   the iframe and the surrounding layout are redesigned.
    ===================================================== #}
-<section class="pt-28 pb-32 md:pt-36 md:pb-44 lg:pb-52" style="background-color: #EDF2F8;">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="max-w-2xl">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight mb-4">
-        We'd love to hear from you
-      </h1>
-      <p class="text-lg text-gray-600">
-        Fill out the form and a Zunkiree Labs team member will reach out
-      </p>
-    </div>
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO — centered single-column, same shell as industry.njk's
+   secondary-page hero (plain white ground, no bg image — this is
+   a utility page, not a re-run of the homepage's signature visual).
+   ===================================================== #}
+<section class="relative flex flex-col items-center justify-center px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
+
+    <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+      Contact
+    </span>
+
+    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+      We'd love to hear from you
+    </h1>
+
+    <p class="mt-4 max-w-[560px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+      Fill out the form and a Zunkiree Labs team member will reach out.
+    </p>
   </div>
 </section>
 
 {# =====================================================
-   CONTACT FORM SECTION - Overlapping Two Column Layout
+   CONTACT FORM SECTION — glass-surface form card (left) +
+   quick-links rail (right), reusing the same card recipe as
+   homepage-v2's Platform Pillars / industry.njk's Flagship Proof
+   (rounded-2xl, white/60 border, sky gradient wash, shadow-subtle).
    ===================================================== #}
-<section class="pb-12 md:pb-16 lg:pb-20 -mt-20 md:-mt-28 lg:-mt-36 relative overflow-hidden">
-  {# Background SVG - Right aligned #}
-  <div class="absolute top-0 right-0 w-1/2 h-full pointer-events-none hidden lg:block">
-    <img src="/assets/images/contact-bg.svg" alt="" class="absolute top-1/2 right-0 -translate-y-1/2 w-auto h-[120%] max-w-none" aria-hidden="true">
-  </div>
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24" aria-labelledby="contact-form-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="contact-form-heading" class="sr-only">Contact form and quick links</h2>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12" data-reveal-stagger>
 
-      {# Left: Contact Form (3/5 width) - Floating Card overlaps into hero #}
-      <div class="lg:col-span-3">
-        <div class="bg-white shadow-xl px-6 pt-6 lg:px-8 lg:pt-8">
-          <iframe
-            src="https://dev-lead-crm.zunkireelabs.com/form/zunkireelabs-crm/scholarship"
-            width="100%"
-            height="580"
-            frameborder="0"
-            style="border:none;"
-            title="Contact Form"
-          ></iframe>
-        </div>
-      </div>
+      {# Left: Quick Links (2/5 width) #}
+      <div class="lg:col-span-2 lg:order-1">
+        <div class="rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle sm:p-7">
+          <span class="mb-6 block font-mono text-[11px] uppercase tracking-wider text-navy-500">
+            Need help with something specific?
+          </span>
 
-      {# Right: Quick Links (2/5 width) - Pushed down to normal level #}
-      <div class="lg:col-span-2 mt-20 md:mt-28 lg:mt-36 pt-8 lg:pt-12">
-        <div class="lg:pl-8 lg:border-t border-gray-200 lg:pt-8">
-          <h2 class="text-lg font-medium text-gray-900 mb-8">Need help with something specific?</h2>
-
-          <div class="space-y-8">
+          <div class="space-y-6">
             {# Email Us #}
-            <a href="mailto:{{ site.email }}" class="group block">
-              <div class="flex items-start gap-3">
-                <span class="text-zunkiree-600 font-medium group-hover:underline">Email Us</span>
-                <svg class="w-4 h-4 text-zunkiree-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="mailto:{{ site.email }}" class="group flex items-start justify-between gap-3">
+              <div>
+                <span class="text-[15px] font-medium text-[#111827] transition-colors group-hover:text-navy-600">Email Us</span>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Direct contact for quick questions</p>
+              </div>
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100] transition-colors duration-200 group-hover:bg-[#76B900] group-hover:text-white" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
-              </div>
-              <p class="text-sm text-gray-500 mt-1">Direct contact for quick questions</p>
+              </span>
             </a>
 
             {# Schedule a Call #}
-            <a href="tel:{{ site.phone }}" class="group block">
-              <div class="flex items-start gap-3">
-                <span class="text-zunkiree-600 font-medium group-hover:underline">Schedule a Call</span>
-                <svg class="w-4 h-4 text-zunkiree-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="tel:{{ site.phone }}" class="group flex items-start justify-between gap-3 border-t border-navy-100/60 pt-6">
+              <div>
+                <span class="text-[15px] font-medium text-[#111827] transition-colors group-hover:text-navy-600">Schedule a Call</span>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Book a discovery call with our team</p>
+              </div>
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100] transition-colors duration-200 group-hover:bg-[#76B900] group-hover:text-white" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
-              </div>
-              <p class="text-sm text-gray-500 mt-1">Book a discovery call with our team</p>
+              </span>
             </a>
 
             {# Resources #}
-            <a href="/resources/" class="group block">
-              <div class="flex items-start gap-3">
-                <span class="text-zunkiree-600 font-medium group-hover:underline">Resources</span>
-                <svg class="w-4 h-4 text-zunkiree-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="/resources/" class="group flex items-start justify-between gap-3 border-t border-navy-100/60 pt-6">
+              <div>
+                <span class="text-[15px] font-medium text-[#111827] transition-colors group-hover:text-navy-600">Resources</span>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Documentation, guides, and case studies</p>
+              </div>
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100] transition-colors duration-200 group-hover:bg-[#76B900] group-hover:text-white" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
-              </div>
-              <p class="text-sm text-gray-500 mt-1">Documentation, guides, and case studies</p>
+              </span>
             </a>
 
             {# Our Location #}
-            <div class="block">
-              <div class="flex items-start gap-3">
-                <span class="text-zunkiree-600 font-medium">Our Location</span>
-                <svg class="w-4 h-4 text-zunkiree-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
+            <div class="flex items-start justify-between gap-3 border-t border-navy-100/60 pt-6">
+              <div>
+                <span class="text-[15px] font-medium text-[#111827]">Our Location</span>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">{{ site.address.city }}, {{ site.address.country }}</p>
               </div>
-              <p class="text-sm text-gray-500 mt-1">{{ site.address.city }}, {{ site.address.country }}</p>
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </span>
             </div>
           </div>
 
           {# Social Links #}
-          <div class="mt-12 pt-8 border-t border-gray-200">
-            <p class="text-sm text-gray-500 mb-4">Follow us</p>
-            <div class="flex items-center gap-4">
-              <a href="{{ site.social.twitter }}" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="Twitter">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <div class="mt-8 border-t border-navy-100/60 pt-6">
+            <p class="mb-4 font-mono text-[11px] uppercase tracking-wider text-navy-500">Follow us</p>
+            <div class="flex items-center gap-5 text-navy-400">
+              <a href="{{ site.social.twitter }}" class="transition-colors hover:text-navy-900" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
-              <a href="{{ site.social.linkedin }}" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="LinkedIn">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <a href="{{ site.social.linkedin }}" class="transition-colors hover:text-navy-900" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
-              <a href="{{ site.social.github }}" class="text-gray-400 hover:text-gray-600 transition-colors" aria-label="GitHub">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <a href="{{ site.social.github }}" class="transition-colors hover:text-navy-900" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               </a>
             </div>
           </div>
@@ -116,248 +146,134 @@ permalink: /contact/
         </div>
       </div>
 
+      {# Right: Contact Form (3/5 width) — glass-surface shell matching the
+         sky/white gradient card recipe used on industry.njk's Flagship Proof /
+         homepage-v2's Platform Pillars (rounded-2xl, border-white/60, sky-100/
+         sky-50/white gradient, backdrop-blur-md), with a floating opaque white
+         tile inside for the form itself (same "white tile inside a glass card"
+         motif as those pages' mockup slots). The form is a cross-origin CRM
+         iframe (dev-lead-crm.zunkireelabs.com) — its internal fields, heading,
+         and Submit button can't be restyled from this page (see note above the
+         Quick Links card), so only this outer shell carries the brand color. #}
+      <div class="lg:col-span-3 lg:order-2">
+        <div class="overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4 shadow-subtle backdrop-blur-md sm:p-6">
+          <div class="overflow-hidden rounded-xl border border-white/70 bg-white shadow-sm">
+            <iframe
+              src="https://dev-lead-crm.zunkireelabs.com/form/zunkireelabs-crm/scholarship"
+              width="100%"
+              height="660"
+              frameborder="0"
+              style="border:none; display:block;"
+              title="Contact Form"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="container-custom">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6">
-        <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Frequently asked questions</h3>
-        <button
-          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
-          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-        >
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
 
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              How can I get in touch with Zunkiree Labs?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 1 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 1 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              You can get in touch with us by visiting our Contact page.
-            </p>
+{# =====================================================
+   FAQ — Website V2
+   Replaces the raw unstyled `<dl class="faq">` SEOAI block (rendered
+   in default browser dt/dd styling below the footer — the "off"
+   look flagged for this page) with the same accordion component used
+   on homepage-v2.njk/product-v2.njk/industry.njk.
+
+   Content also corrects the same stale "six industries" framing
+   (healthcare, manufacturing, legal, professional services,
+   education, HR) that homepage-v2.njk's FAQ section already flagged
+   and fixed for the exact same source data (see homepage-v2.njk's
+   FAQ section comment) — reusing that already-corrected 4-vertical
+   content here rather than keeping two conflicting FAQ answers live
+   on the site. JSON-LD mirrors the visible copy 1:1.
+   ===================================================== #}
+{% set contactFaq = [
+  {
+    question: "What industries does ZunkireeLabs build for?",
+    answer: "Four core verticals today: Education, Agencies, Healthcare, and Real Estate — each running on the same shared platform underneath. Education and Agencies are live in production now; Healthcare and Real Estate are built to the same standard."
+  },
+  {
+    question: "What happens after I submit the form?",
+    answer: "A Zunkiree Labs team member reviews your message and reaches out directly, usually within one business day, to schedule a discovery call or answer your question."
+  },
+  {
+    question: "Can I try Zunkiree Search before talking to sales?",
+    answer: "Yes — Zunkiree Search, our AI-native search product, offers a free trial. Reach out through this form or email us directly to get started."
+  },
+  {
+    question: "Do you work with companies outside Nepal?",
+    answer: "Yes. ZunkireeLabs is based in Kathmandu but serves clients globally — Healthcare vertical work specifically targets Australian providers, and several current clients are outside Nepal."
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in contactFaq %}
+          <div class="py-5">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="flex w-full items-center justify-between gap-4 text-left group"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="faq-answer-{{ loop.index }}"
+            >
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              id="faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
+            </div>
           </div>
-        </div>
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              What is the best way to schedule a call with Zunkiree Labs?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 2 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 2 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              To schedule a call with us, you can use the 'Schedule a call' option available on our website.
-            </p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              What is the response time for inquiries sent to Zunkiree Labs?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 3 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 3 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              The page does not specify the exact response time for inquiries. However, we are committed to timely responses.
-            </p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              Is there a specific support channel I should use for customer assistance?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 4 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 4 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              You can reach out to us through the Contact page for any customer assistance you may need.
-            </p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              Where is Zunkiree Labs located?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 5 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 5 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              The page does not provide specific information regarding our office location.
-            </p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button
-            @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6"
-            class="w-full flex items-center justify-between text-left group"
-          >
-            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-              Can I ask a question about your products directly through the Contact page?
-            </span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg
-                class="w-5 h-5 transition-transform duration-200"
-                :class="{ 'rotate-45': activeIndex === 6 || expandAll }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div
-            x-show="activeIndex === 6 || expandAll"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-2"
-            class="overflow-hidden"
-          >
-            <p class="pt-4 text-gray-600 leading-relaxed">
-              Yes, you can ask questions about our products through our Contact page.
-            </p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
-</section><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How can I get in touch with Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"You can get in touch with us by visiting our Contact page.","@type":"Answer"}},{"name":"What is the best way to schedule a call with Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"To schedule a call with us, you can use the 'Schedule a call' option available on our website.","@type":"Answer"}},{"name":"What is the response time for inquiries sent to Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"The page does not specify the exact response time for inquiries. However, we are committed to timely responses.","@type":"Answer"}},{"name":"Is there a specific support channel I should use for customer assistance?","@type":"Question","acceptedAnswer":{"text":"You can reach out to us through the Contact page for any customer assistance you may need.","@type":"Answer"}},{"name":"Where is Zunkiree Labs located?","@type":"Question","acceptedAnswer":{"text":"The page does not provide specific information regarding our office location.","@type":"Answer"}},{"name":"Can I ask a question about your products directly through the Contact page?","@type":"Question","acceptedAnswer":{"text":"Yes, you can ask questions about our products through our Contact page.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Contact Zunkiree Labs | Book a Free AI Consultation","articleBody":"We'd love to hear from you Fill out the form and a Zunkiree Labs team member will reach out Need help with something specific? Email Us Direct contact for quick questions Schedule a Call Book a discovery call with our team Resources Documentation, guides, and case studies Our Location Kathmandu, Nepal Follow us Frequently asked questions How can I get in touch with Zunkiree Labs? You can get in touch with us by visiting our Contact page. What is the best way to schedule a call with Zunkiree Labs? To schedule a call with us, you can use the 'Schedule a call' option available on our website. What is the response time for inquiries sent to Zunkiree Labs? The page does not specify the exact response time for inquiries. However, we are committed to timely responses. Is there a specific support channel I should use for customer assistance? You can reach out to us through the Contact page for any customer assistance you may need. Where is Zunkiree Labs located? The page does not provide specific information regarding our office location. Can I ask a question about your products directly through the Contact page? Yes, you can ask questions about our products through our Contact page."}</script><!-- SEOAI:SCHEMA:END -->
+</section>
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Zunkiree Labs vs. Other AI Consultation Services</h2>
-      </div>
-      <div>
-        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-lg md:text-xl text-gray-600 leading-relaxed">When considering AI consultation services, Zunkiree Labs stands out due to its commitment to personalized engagement and accessibility. Unlike other competitors, we prioritize timely responses and provide multiple contact options to cater to specific needs. For clients seeking direct communication, our scheduling feature allows for appointments with ease, which is sometimes lacking in other services. Furthermore, while several competitors may offer more generalized resources, Zunkiree Labs focuses on tailored solutions and documentation that address the unique challenges faced by our clients.</p></div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+{% include "partials/footer-v2.njk" %}
+
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in contactFaq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script><!-- SEOAI:FAQ:END -->

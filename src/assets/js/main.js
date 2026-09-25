@@ -405,7 +405,7 @@ function initHeroCarousel() {
 function initScrollReveals() {
   // Honour reduced-motion: don't animate opacity/y if user prefers reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('[data-reveal], [data-reveal-stagger] > *').forEach((el) => {
+    document.querySelectorAll('[data-reveal], [data-reveal-stagger] > *, [data-reveal-stagger-x] > *').forEach((el) => {
       el.style.opacity = '1';
       el.style.transform = 'none';
       el.classList.add('revealed');
@@ -449,6 +449,33 @@ function initScrollReveals() {
         duration: 0.8,
         ease: 'power3.out',
         stagger: 0.12,
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+        onComplete: () => {
+          children.forEach(child => child.classList.add('revealed'));
+        }
+      }
+    );
+  });
+
+  // Staggered reveals sliding in from the left (direct children of a
+  // container), one after another as the container scrolls into view.
+  const staggersX = document.querySelectorAll('[data-reveal-stagger-x]');
+  staggersX.forEach((container) => {
+    const children = Array.from(container.children);
+    if (children.length === 0) return;
+
+    gsap.fromTo(children,
+      { x: -40, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.out',
+        stagger: 0.15,
         scrollTrigger: {
           trigger: container,
           start: 'top 88%',

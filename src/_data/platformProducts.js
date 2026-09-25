@@ -81,8 +81,7 @@ export default [
     },
     relatedSolutions: [
       { title: "AI CRM", description: "Customer intelligence that drives revenue.", href: "/products/ai-crm/" },
-      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" },
-      { title: "Gaamma", description: "Manufacturing ERP with predictive insights.", href: "/products/gaamma/" }
+      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" }
     ],
     faq: [
       { question: "What is Zunkiree Search?", answer: "Zunkiree Search is an AI-native search and interaction platform that enables businesses to deliver direct answers through natural language queries. Unlike traditional keyword-based search, it understands context and user intent." },
@@ -168,8 +167,7 @@ export default [
     },
     relatedSolutions: [
       { title: "Zunkiree Search", description: "AI-native search that understands intent.", href: "/products/search/" },
-      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" },
-      { title: "AI Booking Engine", description: "Intelligent scheduling that fills your calendar.", href: "/products/ai-booking-engine/" }
+      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" }
     ],
     faq: [
       { question: "What is AI CRM?", answer: "AI CRM is an intelligent customer relationship platform that combines traditional CRM functionality with AI-powered insights, automation, and predictions. It helps sales teams prioritize leads, automate outreach, and close deals faster." },
@@ -192,28 +190,55 @@ export default [
     description: "Orca is the AI orchestration layer that coordinates agent workflows across your CRM, email, and marketing tools — one shared platform underneath every deployment.",
     eyebrow: "Orca",
     hero: {
+      theme: "dark",
       headline: "One orchestration layer, every system connected",
       subhead: "Orca is the AI orchestration layer that sits above your CRM, email,<br class=\"hidden sm:block\" />and marketing tools, coordinating agent workflows across systems.",
       ctaPrimary: { label: "Talk to our team", href: "/contact/" },
       ctaSecondary: { label: "Explore the platform", href: "/#platform" },
-      badges: [
-        { icon: "workflow", side: "left", offset: "outer" },
-        { icon: "mail", side: "left", offset: "inner" },
-        { icon: "users", side: "right", offset: "inner" },
-        { icon: "database", side: "right", offset: "outer" }
-      ],
-      interaction: {
-        type: "pills",
-        items: [
-          { label: "Sync CRM to email" },
-          { label: "Route lead to sales" },
-          { label: "Update campaign status" },
-          { label: "Coordinate agent handoff" }
-        ]
-      }
+      badges: [],
+      interaction: { type: "none" }
     },
     clients: [],
     testimonial: null,
+    outcomes: [
+      { statLine: "One layer", title: "Connected by default", description: "Every tool Orca touches shares one coordination layer, so work started in one system finishes correctly in the others." },
+      { statLine: "Zero manual sync", title: "No manual handoffs", description: "Agents pass context and status between CRM, email, and marketing tools automatically, instead of relying on someone updating the next one." },
+      { statLine: "Shared platform", title: "Built on shared infrastructure", description: "Orca runs on the same multi-tenant platform underneath every Zunkiree deployment, so orchestration logic isn't rebuilt per client." }
+    ],
+    valueBullets: {
+      heading: "Built for how systems actually connect",
+      items: [
+        { title: "Nothing to migrate", description: "Orca connects to the CRM, email, and marketing tools you already run — it doesn't ask you to replace them." },
+        { title: "Every handoff visible", description: "Cross-system actions Orca coordinates are traceable, so teams can see what moved, where, and why." },
+        { title: "Works with what you run", description: "Orca sits above your existing stack as a coordination layer, not a new system to adopt." }
+      ]
+    },
+    pillars: [
+      {
+        id: "pillar-connect",
+        eyebrow: "Connect",
+        heading: "Link every connected tool into one layer",
+        description: "Orca connects your CRM, email, and marketing tools — including the ones we build — so agents can read and act across systems instead of one at a time.",
+        bullets: ["Works across CRM, email, and marketing tools", "Extends to new tools without rebuilding orchestration logic", "No data migration required"],
+        visual: "connect"
+      },
+      {
+        id: "pillar-coordinate",
+        eyebrow: "Coordinate",
+        heading: "Keep every system moving in step",
+        description: "When work starts in one connected tool, Orca coordinates the matching follow-through in the others — automatically.",
+        bullets: ["Cross-system status sync", "Automated handoff triggers", "No manual relay step between tools"],
+        visual: "sync"
+      },
+      {
+        id: "pillar-observe",
+        eyebrow: "Observe",
+        heading: "See what moved, where, and why",
+        description: "Every cross-system action Orca coordinates stays visible, so teams can trust what happened without digging through each tool separately.",
+        bullets: ["Traceable cross-system actions", "One place to see coordination activity", "No stale records left behind"],
+        visual: "list"
+      }
+    ],
     challenges: {
       heading: "Disconnected tools mean disconnected work",
       blocks: [
@@ -263,298 +288,4 @@ export default [
       ctaSecondary: { label: "Explore the platform", href: "/#platform" }
     }
   },
-  {
-    id: "gaamma",
-    title: "Gaamma: Manufacturing ERP Platform | Zunkiree Labs",
-    description: "End-to-end manufacturing ERP that unifies production planning, inventory management, and quality control. See 30% less downtime and 25% better inventory turns.",
-    eyebrow: "Gaamma",
-    icon: "chart",
-    hero: {
-      headline: "Manufacturing operations, unified and intelligent",
-      subhead: "",
-      ctaPrimary: { label: "Request Demo", href: "/contact/" },
-      ctaSecondary: { label: "Explore the platform", href: "/#platform" },
-      interaction: {
-        type: "pills",
-        items: [
-          { label: "Track work order status", reply: "Work order #482 is in final assembly — on schedule." },
-          { label: "Predict maintenance windows", reply: "Line 3 flagged for maintenance in 6 hours." },
-          { label: "Check inventory levels", reply: "214 units in stock — reorder point met for SKU-118." },
-          { label: "Optimize production schedule", reply: "Schedule rebalanced — 12% faster changeover." }
-        ]
-      }
-    },
-    clients: [],
-    testimonial: null,
-    challenges: {
-      heading: "Disconnected floor systems slow every decision down",
-      blocks: [
-        { title: "Production visibility gaps", description: "Work orders, machines, and operators live in separate systems, so no one can see exactly where a job stands." },
-        { title: "Downtime catches you by surprise", description: "Without predictive signals, equipment failures show up as unplanned stops instead of scheduled maintenance." },
-        { title: "Inventory turns stay flat", description: "Manual reordering and disconnected warehouse data keep stock levels guessing instead of optimized." }
-      ]
-    },
-    benefits: [
-      { title: "Complete production visibility", description: "Track every work order, machine, and operator in real-time. Know exactly where every product is in your manufacturing process at any moment.", visual: "stack" },
-      { title: "Predictive maintenance intelligence", description: "AI-powered equipment monitoring predicts failures before they happen. Reduce unplanned downtime by scheduling maintenance at optimal times.", visual: "pulse" },
-      { title: "Connects to your existing systems", description: "Integrates with PLCs, SCADA systems, accounting software, and IoT sensors. No rip-and-replace required — Gaamma works alongside your current setup.", visual: "connect" }
-    ],
-    useCases: {
-      heading: "Built for how modern factories actually run",
-      items: [
-        { title: "Discrete Manufacturing", description: "Manage complex BOMs, work orders, and assembly operations. Track serialized parts and maintain complete product genealogy.", features: ["Multi-level BOM management", "Work order scheduling", "Serial/lot tracking"] },
-        { title: "Process Manufacturing", description: "Handle batch processing, recipe management, and yield optimization. Maintain strict compliance with industry regulations.", features: ["Recipe/formula management", "Batch tracking", "Yield optimization"] },
-        { title: "Job Shop", description: "Handle high-mix, low-volume production with ease. Quote accurately, schedule efficiently, and deliver on time.", features: ["Quote management", "Dynamic scheduling", "Job costing"] },
-        { title: "Warehouse & Distribution", description: "Optimize stock levels, automate reordering, and manage multi-warehouse operations with intelligent inventory control.", features: ["Multi-warehouse management", "Automated reordering", "Shipping integration"] }
-      ]
-    },
-    platformTieIn: {
-      heading: "Runs on the same platform as AI CRM and Orca",
-      body: "Gaamma shares its underlying multi-tenant architecture with AI CRM and Orca, so manufacturing operations plug into the broader Zunkiree platform rather than sitting in a silo.",
-      pillars: [
-        { name: "AI CRM", description: "Multi-tenant customer intelligence platform.", href: "/products/ai-crm/" },
-        { name: "Orca", description: "Orchestration layer coordinating workflows across CRM, email, and marketing tools.", href: "/products/orca/" }
-      ],
-      cta: { label: "Explore the platform", href: "/#platform" }
-    },
-    relatedSolutions: [
-      { title: "AI CRM", description: "Customer intelligence that drives revenue.", href: "/products/ai-crm/" },
-      { title: "Zunkiree Search", description: "AI-native search that understands intent.", href: "/products/search/" },
-      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" }
-    ],
-    faq: [
-      { question: "What is Gaamma?", answer: "Gaamma is an end-to-end manufacturing ERP platform that unifies production planning, inventory management, quality control, and analytics. It's designed for manufacturers seeking to digitize operations and gain real-time visibility across their entire production process." },
-      { question: "How long does Gaamma take to implement?", answer: "Implementation typically takes 8-12 weeks for core modules. This includes data migration, system configuration, integration with existing equipment, and staff training. Phased rollouts are available for larger operations." },
-      { question: "Does Gaamma integrate with our existing equipment?", answer: "Yes. Gaamma connects to PLCs, SCADA systems, IoT sensors, and most industrial equipment through standard protocols (OPC-UA, MQTT, Modbus). We also integrate with popular accounting systems like QuickBooks and SAP." },
-      { question: "Is Gaamma suitable for small manufacturers?", answer: "Gaamma scales from single-facility operations to multi-plant enterprises. We offer modular pricing so you only pay for the capabilities you need, with the ability to add modules as you grow." },
-      { question: "What kind of support does Gaamma include?", answer: "All Gaamma plans include 24/7 technical support, regular software updates, and access to our customer success team. Enterprise plans add dedicated account management and on-site training options." }
-    ],
-    closingCta: {
-      eyebrow: "Get Started",
-      headline: "Ready to modernize your factory?",
-      body: "See how Gaamma can transform your manufacturing operations with a personalized demo.",
-      ctaPrimary: { label: "Request Demo", href: "/contact/" },
-      ctaSecondary: { label: "Contact Sales", href: "/contact/" }
-    }
-  },
-  {
-    id: "dental-ai",
-    title: "Dental AI Assistant: AI-Powered Dental Practice Management | Zunkiree Labs",
-    description: "Intelligent assistant for dental practices. Automates patient communication, scheduling, and follow-ups. Reduce no-shows by 35% and save 15+ hours weekly.",
-    eyebrow: "Dental AI Assistant",
-    icon: "dental",
-    hero: {
-      statusBadge: "Coming Soon",
-      headline: "Your practice's always-on patient communication partner",
-      subhead: "",
-      ctaPrimary: { label: "Join Waitlist", href: "/contact/" },
-      ctaSecondary: { label: "Explore the platform", href: "/#platform" },
-      interaction: {
-        type: "pills",
-        items: [
-          { label: "Book next appointment", reply: "Booked Tuesday 2:30pm with Dr. Shah." },
-          { label: "Answer insurance question", reply: "Your plan covers 80% of this procedure." },
-          { label: "Send visit reminder", reply: "Reminder sent via SMS for tomorrow's visit." },
-          { label: "Request a review", reply: "Review request sent — thanks for visiting!" }
-        ]
-      }
-    },
-    clients: [],
-    testimonial: null,
-    challenges: {
-      heading: "Routine patient communication eats every open hour",
-      blocks: [
-        { title: "Calls stack up during office hours", description: "Scheduling, pricing, and insurance questions compete with in-chair patient care for staff attention." },
-        { title: "No-shows go unmanaged", description: "Without timely, personalized reminders, patients forget appointments and chairs sit empty." },
-        { title: "Reviews go unrequested", description: "Satisfied patients rarely leave a review unless someone follows up right after their visit." }
-      ]
-    },
-    benefits: [
-      { title: "24/7 patient communication", description: "Patients get instant answers to questions about procedures, pricing, and availability — anytime. No more missed calls or voicemails stacking up.", visual: "pulse" },
-      { title: "Intelligent appointment scheduling", description: "AI considers treatment duration, provider availability, and patient preferences to book optimal appointment times automatically.", visual: "sync" },
-      { title: "Personalized follow-up automation", description: "Automated reminders, post-visit check-ins, and recall notifications via SMS, email, or voice — personalized to each patient's preferences.", visual: "stack" }
-    ],
-    useCases: {
-      heading: "Built for how patients actually reach your practice",
-      items: [
-        { title: "Patient Communication", description: "Answer common questions about procedures, pricing, insurance, and availability instantly — without staff involvement.", features: ["Procedure FAQs", "Pricing inquiries", "Insurance questions"] },
-        { title: "Smart Scheduling", description: "AI schedules appointments considering treatment time, chair availability, provider schedules, and patient preferences.", features: ["Online booking", "Waitlist management", "Provider matching"] },
-        { title: "Appointment Reminders", description: "Multi-channel reminders that adapt to patient preferences. Confirmations, day-before reminders, and easy rescheduling options.", features: ["SMS reminders", "Email confirmations", "Easy rescheduling"] },
-        { title: "Review Management", description: "Automated post-visit follow-ups that encourage satisfied patients to leave reviews on Google, Yelp, and healthcare directories.", features: ["Post-visit surveys", "Review requests", "Reputation monitoring"] }
-      ]
-    },
-    platformTieIn: {
-      heading: "Built on the same platform as AI CRM and Orca",
-      body: "Dental AI Assistant runs on the same multi-tenant architecture as our AI CRM and Orca orchestration layer, so patient communication plugs into the broader Zunkiree platform rather than sitting in a silo.",
-      pillars: [
-        { name: "AI CRM", description: "Multi-tenant customer intelligence platform.", href: "/products/ai-crm/" },
-        { name: "Orca", description: "Orchestration layer coordinating workflows across CRM, email, and marketing tools.", href: "/products/orca/" }
-      ],
-      cta: { label: "Explore the platform", href: "/#platform" }
-    },
-    relatedSolutions: [
-      { title: "AI Booking Engine", description: "Intelligent scheduling that fills your calendar.", href: "/products/ai-booking-engine/" },
-      { title: "AI CRM", description: "Customer intelligence that drives revenue.", href: "/products/ai-crm/" }
-    ],
-    faq: [
-      { question: "What is Dental AI Assistant?", answer: "Dental AI Assistant is an intelligent platform that automates patient communication, appointment scheduling, and follow-ups for dental practices. It handles routine inquiries 24/7 so your staff can focus on in-office patient care." },
-      { question: "Is Dental AI Assistant HIPAA compliant?", answer: "Yes. Dental AI Assistant is fully HIPAA compliant with end-to-end encryption, secure data storage, and BAA agreements available. All patient communications are logged and auditable." },
-      { question: "Does it integrate with my practice management software?", answer: "Dental AI Assistant integrates with major dental practice management systems including Dentrix, Eaglesoft, Open Dental, and Curve. Integration typically takes 1-2 days." },
-      { question: "When will Dental AI Assistant be available?", answer: "Dental AI Assistant is currently in private beta with select practices. Join our waitlist to be notified when we open general availability, expected Q3 2026." },
-      { question: "What does Dental AI Assistant cost?", answer: "Pricing will be based on practice size and feature requirements. Early waitlist members will receive preferred pricing. Contact us for details." }
-    ],
-    closingCta: {
-      eyebrow: "Coming Soon",
-      headline: "Be the first to transform your practice",
-      body: "Join the waitlist for early access to Dental AI Assistant and help shape the future of dental practice automation.",
-      ctaPrimary: { label: "Join Waitlist", href: "/contact/" },
-      ctaSecondary: { label: "Request Early Access", href: "/contact/" }
-    }
-  },
-  {
-    id: "ai-commerce-agent",
-    title: "Stella: AI Commerce Agent for Agentic Ecommerce | Zunkiree Labs",
-    description: "Autonomous AI agents that handle the entire ecommerce buying journey. Agentic commerce platform with eSewa, Khalti integration. Built for Nepal and global markets.",
-    eyebrow: "Stella — AI Commerce Agent",
-    icon: "cart",
-    hero: {
-      headline: "Autonomous AI agents that sell for you, 24/7",
-      subhead: "",
-      ctaPrimary: { label: "Schedule Demo", href: "/contact/" },
-      ctaSecondary: { label: "Explore the platform", href: "/#platform" },
-      interaction: {
-        type: "pills",
-        items: [
-          { label: "Recommend a product", reply: "Suggested the Aria Runner in navy, size 8." },
-          { label: "Answer sizing question", reply: "Runs true to size — order your usual." },
-          { label: "Recover abandoned cart", reply: "Cart recovered — 10% off applied." },
-          { label: "Complete checkout", reply: "Payment confirmed via eSewa. Order #2291." }
-        ]
-      }
-    },
-    clients: [],
-    testimonial: null,
-    challenges: {
-      heading: "Scripted chatbots stall right where a sale is won or lost",
-      blocks: [
-        { title: "Scripts break on real questions", description: "The moment a shopper asks something unscripted, the conversation dead-ends instead of moving toward checkout." },
-        { title: "Support can't cover every hour", description: "Buying questions that arrive outside business hours go unanswered until a human is back online." },
-        { title: "Carts get abandoned quietly", description: "Without a nudge at the right moment, hesitant shoppers close the tab and don't come back." }
-      ]
-    },
-    benefits: [
-      { title: "Autonomous sales conversations", description: "AI agents understand customer intent and guide them to purchase without human intervention. They answer questions, recommend products, and handle objections naturally.", visual: "connect" },
-      { title: "Nepal payment integration", description: "Native support for eSewa, Khalti, Fonepay, and international gateways like Stripe. Customers complete purchases in their preferred payment method.", visual: "sync" },
-      { title: "Multi-platform deployment", description: "Works with Daraz, Shopify, WooCommerce, and custom ecommerce platforms. Deploy once, sell everywhere with consistent AI-powered experiences.", visual: "stack" }
-    ],
-    useCases: {
-      heading: "Built for how customers actually buy online",
-      items: [
-        { title: "Daraz Sellers", description: "Automate customer inquiries, provide instant product information, track orders, and handle returns — all through conversational AI that speaks Nepali and English.", features: ["24/7 customer support", "Order status tracking", "Return/exchange handling"] },
-        { title: "Shopify Stores", description: "Embed an AI sales agent directly on your Shopify store. Increases conversions by guiding customers through product discovery and checkout.", features: ["Product finder", "Cart assistance", "Checkout completion"] },
-        { title: "WooCommerce", description: "AI-powered product recommendations that increase average order value, plus intelligent cart recovery that brings customers back to complete purchases.", features: ["Smart recommendations", "Cart abandonment recovery", "Upsell/cross-sell"] },
-        { title: "Custom Ecommerce", description: "Full API access for custom ecommerce platforms. Build agentic commerce experiences tailored to your unique business requirements.", features: ["REST/GraphQL APIs", "Webhook integrations", "White-label options"] }
-      ]
-    },
-    platformTieIn: {
-      heading: "Built on the same platform as AI CRM and Orca",
-      body: "Stella runs on the same multi-tenant architecture as our AI CRM and Orca orchestration layer, so every conversation and transaction plugs into the broader Zunkiree platform rather than sitting in a silo.",
-      pillars: [
-        { name: "AI CRM", description: "Multi-tenant customer intelligence platform.", href: "/products/ai-crm/" },
-        { name: "Orca", description: "Orchestration layer coordinating workflows across CRM, email, and marketing tools.", href: "/products/orca/" }
-      ],
-      cta: { label: "Explore the platform", href: "/#platform" }
-    },
-    relatedSolutions: [
-      { title: "AI CRM", description: "Customer intelligence that drives revenue.", href: "/products/ai-crm/" },
-      { title: "Orca", description: "AI orchestration across CRM, email, and marketing tools.", href: "/products/orca/" }
-    ],
-    faq: [
-      { question: "What is agentic commerce?", answer: "Agentic commerce is the next evolution of ecommerce where autonomous AI agents handle the entire buying journey — from product discovery to checkout. Unlike traditional chatbots that follow scripts, agentic commerce systems understand context, make decisions, and complete transactions independently, creating a conversational shopping experience." },
-      { question: "How do AI commerce agents work?", answer: "AI commerce agents use large language models combined with your product catalog and business rules to have natural conversations with customers. They understand intent, answer questions, recommend products, handle objections, and guide customers through checkout — all without human intervention." },
-      { question: "Can AI agents complete purchases automatically?", answer: "Yes. Stella integrates with payment gateways to enable complete transactions. Customers can browse, select products, and pay entirely through conversation. The agent handles cart management, applies discounts, and processes payments securely." },
-      { question: "Does it work with Nepali payment methods like eSewa and Khalti?", answer: "Yes. Stella has native integration with eSewa, Khalti, Fonepay, and ConnectIPS for the Nepal market. It also supports international gateways like Stripe, PayPal, and Razorpay for global customers." },
-      { question: "How is this different from a chatbot?", answer: "Traditional chatbots follow pre-defined scripts and can only handle expected questions. Stella is an autonomous agent that understands context, handles unexpected queries, makes decisions, and takes actions like updating carts and processing payments. It's the difference between a FAQ bot and an AI sales representative." }
-    ],
-    closingCta: {
-      eyebrow: "Get Started",
-      headline: "Ready to automate your ecommerce sales?",
-      body: "See how Stella can increase conversions and provide 24/7 sales support for your online store.",
-      ctaPrimary: { label: "Schedule Demo", href: "/contact/" },
-      ctaSecondary: { label: "Contact Sales", href: "/contact/" }
-    }
-  },
-  {
-    id: "ai-booking-engine",
-    title: "Zenly: AI Booking Engine for Intelligent Scheduling | Zunkiree Labs",
-    description: "Smart scheduling that handles complex availability, multi-resource bookings, and conflict resolution. Reduce no-shows by 35% with AI-powered reminders.",
-    eyebrow: "Zenly — AI Booking Engine",
-    icon: "calendar",
-    hero: {
-      headline: "Scheduling that thinks ahead so you don't have to",
-      subhead: "",
-      ctaPrimary: { label: "Start Free Trial", href: "/contact/" },
-      ctaSecondary: { label: "Explore the platform", href: "/#platform" },
-      interaction: {
-        type: "pills",
-        items: [
-          { label: "Find next opening", reply: "Next opening: Thursday 10am with Priya." },
-          { label: "Resolve a conflict", reply: "Rebooked the overlapping slot to 3pm." },
-          { label: "Send booking reminder", reply: "Reminder sent — appointment in 2 hours." },
-          { label: "Sync my calendar", reply: "Synced with Google Calendar." }
-        ]
-      }
-    },
-    clients: [],
-    testimonial: null,
-    challenges: {
-      heading: "Manual scheduling can't keep up with real-world constraints",
-      blocks: [
-        { title: "Availability is more than one calendar", description: "Providers, locations, and equipment all have their own constraints that a simple calendar can't represent." },
-        { title: "Conflicts get resolved by hand", description: "Double-bookings and last-minute changes turn into back-and-forth instead of an automatic rebooking." },
-        { title: "No-shows drain the schedule", description: "Without timely, personalized reminders, booked slots quietly go empty." }
-      ]
-    },
-    benefits: [
-      { title: "Complex availability, simplified", description: "Handle multiple providers, locations, equipment dependencies, and custom rules. The AI figures out what's available without endless back-and-forth.", visual: "stack" },
-      { title: "Intelligent conflict resolution", description: "When conflicts arise, the AI suggests alternatives, handles waitlists, and can automatically rebook affected appointments with customer approval.", visual: "pulse" },
-      { title: "Connects to your existing calendars", description: "Syncs with Google Calendar, Outlook, Apple Calendar, and major scheduling systems. Embed booking widgets anywhere with our JavaScript SDK.", visual: "connect" }
-    ],
-    useCases: {
-      heading: "Built for how bookings actually happen",
-      items: [
-        { title: "Service Businesses", description: "Perfect for consultants, salons, clinics, and any service business. Customers book online, you control the rules.", features: ["Online self-service", "Provider selection", "Payment integration"] },
-        { title: "Resource Scheduling", description: "Manage meeting rooms, equipment, vehicles, or any shared resource. Prevent double-booking and optimize utilization.", features: ["Room booking", "Equipment checkout", "Usage analytics"] },
-        { title: "Team Scheduling", description: "Coordinate schedules across team members, handle round-robin assignments, and balance workload automatically.", features: ["Round-robin booking", "Load balancing", "Team availability"] },
-        { title: "Event Registration", description: "Handle recurring classes, workshops, and events. Manage capacity, waitlists, and session-based scheduling.", features: ["Class scheduling", "Capacity limits", "Series bookings"] }
-      ]
-    },
-    platformTieIn: {
-      heading: "Built on the same platform as AI CRM and Orca",
-      body: "Zenly runs on the same multi-tenant architecture as our AI CRM and Orca orchestration layer, so every booking plugs into the broader Zunkiree platform rather than sitting in a silo.",
-      pillars: [
-        { name: "AI CRM", description: "Multi-tenant customer intelligence platform.", href: "/products/ai-crm/" },
-        { name: "Orca", description: "Orchestration layer coordinating workflows across CRM, email, and marketing tools.", href: "/products/orca/" }
-      ],
-      cta: { label: "Explore the platform", href: "/#platform" }
-    },
-    relatedSolutions: [
-      { title: "Dental AI Assistant", description: "AI-powered dental practice management.", href: "/products/dental-ai/" },
-      { title: "AI CRM", description: "Customer intelligence that drives revenue.", href: "/products/ai-crm/" }
-    ],
-    faq: [
-      { question: "What is Zenly?", answer: "Zenly is an intelligent AI booking engine that handles complex availability rules, multi-resource bookings, and automatic conflict resolution. It enables customers to self-service book while giving businesses complete control over scheduling rules." },
-      { question: "How does Zenly reduce no-shows?", answer: "Zenly sends personalized reminders via SMS, email, or voice at optimal times based on appointment type and customer behavior. It also makes rescheduling easy, so customers change appointments instead of simply not showing up." },
-      { question: "Can Zenly handle complex scheduling rules?", answer: "Yes. Define rules for buffer times, service combinations, provider specialties, equipment dependencies, and location constraints. Zenly applies all rules automatically when showing availability." },
-      { question: "Does it integrate with payment processors?", answer: "Zenly integrates with Stripe, Square, and PayPal for deposits, prepayments, and full payments at booking. You can also connect to your existing payment infrastructure via API." },
-      { question: "What's the pricing model?", answer: "Pricing is based on the number of bookings per month and features required. Plans start at $29/month for small businesses. Enterprise custom pricing available. All plans include unlimited calendar connections." }
-    ],
-    closingCta: {
-      eyebrow: "Get Started",
-      headline: "Ready to automate your scheduling?",
-      body: "See how Zenly can eliminate scheduling friction and reduce no-shows for your business.",
-      ctaPrimary: { label: "Start Free Trial", href: "/contact/" },
-      ctaSecondary: { label: "Schedule Demo", href: "/contact/" }
-    }
-  }
 ];

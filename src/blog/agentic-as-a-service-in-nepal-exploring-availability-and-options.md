@@ -2,9 +2,8 @@
 title: "Agentic-as-a-Service in Nepal: Exploring Availability and Options"
 description: "Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region."
 date: "2026-07-27"
-featuredImage: "https://images.pexels.com/photos/6170644/pexels-photo-6170644.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Close-up of a woman planning her schedule on a desk calendar in an office setting."
-featuredImageCredit: "Photo by RDNE Stock project on Pexels"
+featuredImage: "/assets/images/blog/gaas-nepal-availability.jpg"
+featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Introduction to Agentic-as-a-Service

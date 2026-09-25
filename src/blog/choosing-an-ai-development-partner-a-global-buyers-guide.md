@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "Choosing an AI Development Partner: A Global Buyer's Guide"
 description: "What to actually look for when evaluating an AI development company, wherever you're based — architecture, real integration experience, and how to tell infrastructure-level work from a thin wrapper."
 date: "2026-09-24"
-featuredImage: "https://images.pexels.com/photos/7988758/pexels-photo-7988758.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Team conducting a business presentation with technology in a modern office setting."
-featuredImageCredit: "Photo by Mikhail Nilov on Pexels"
+shortLabel: "AI Partner"
+featuredImage: "/assets/images/blog/ai-development-partner-guide.jpg"
+featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

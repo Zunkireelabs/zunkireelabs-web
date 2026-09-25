@@ -3,9 +3,9 @@ templateEngineOverride: "njk, md"
 title: "What is AI? Understanding Artificial Intelligence in the Modern World"
 description: "Discover what artificial intelligence (AI) is, its applications, and how it shapes industries globally. Learn how AI influences technology, business, and more."
 date: "2026-09-21"
-featuredImage: "https://images.pexels.com/photos/8294605/pexels-photo-8294605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "White robot toy casting a shadow in a dark studio setting, highlighting artificial intelligence."
-featuredImageCredit: "Photo by Pavel Danilyuk on Pexels"
+shortLabel: "What Is AI"
+featuredImage: "/assets/images/blog/what-is-ai.jpg"
+featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Defining AI: A Concise Overview

@@ -78,39 +78,6 @@
                 "icon": "transform",
                 "description": "AI orchestration layer coordinating agent workflows across CRMs, email, and marketing tools"
               }
-            ]
-          },
-          {
-            "header": "PRODUCTS",
-            "type": "descriptive",
-            "items": [
-              {
-                "label": "Gaamma",
-                "url": "/products/gaamma/",
-                "icon": "chart",
-                "description": "Business analytics platform for data-driven decisions"
-              },
-              {
-                "label": "Dental AI",
-                "url": "/products/dental-ai/",
-                "icon": "dental",
-                "description": "Practice management software with AI-powered patient communication"
-              },
-              {
-                "label": "Stella",
-                "subLabel": "(AI Commerce Agent)",
-                "url": "/products/ai-commerce-agent/",
-                "icon": "cart",
-                "description": "Autonomous AI agents for ecommerce buying journeys",
-                "badge": "New"
-              },
-              {
-                "label": "Zenly",
-                "subLabel": "(AI Booking Engine)",
-                "url": "/products/ai-booking-engine/",
-                "icon": "calendar",
-                "description": "Intelligent scheduling that handles complex availability"
-              }
             ],
             "seeAll": { "label": "See all products", "url": "/products/" }
           }

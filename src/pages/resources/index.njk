@@ -1,226 +1,184 @@
 ---
 layout: base.njk
-title: "AI Products and Solutions | Zunkiree Labs" # SEOAI:TITLE
+title: Resources | Zunkiree Labs
 description: Explore AI search guides, industry reports, case studies, and technical whitepapers from Zunkiree Labs. Learn how to build AI-native search experiences.
 permalink: /resources/
+bodyClass: "v2-inter"
+hideChrome: true
 ---
 
-{# =====================================================
-   RESOURCES INDEX PAGE - IBM Newsroom Style
-   Sections:
-   1. Hero - Featured resource + sidebar
-   2. Resource Tools - 3 icon cards for categories
-   3. Featured Banner - Highlighted report
-   4. Latest Resources - 6-card grid
-   5. Inside Zunkiree Labs - 3 link cards
-   6. Newsletter CTA - Dark section
-   ===================================================== #}
+{#
+  DIRECTION CONTRACT
+  THESIS: The resources index reads as the platform's own library, not a
+  bolted-on blog — homepage-v2's navy/green/glass system carries a
+  content-browsing task instead of a marketing narrative.
+  OWN-WORLD: #F8FAFC/white ground, #76B900 the one accent (badges, active
+  filter states, CTA), navy-950 dark cards for the featured banner and CTA,
+  mono uppercase eyebrows/labels, rounded-2xl glass-tinted cards
+  (border-white/60, gradient sky-100/60 via sky-50/25 to white/50,
+  backdrop-blur-sm, shadow-subtle), Inter at homepage-v2 weights.
+  STORY: visitor scans the featured story, sees the standout report, then
+  filters/browses the full library and converts on a CTA that matches the
+  rest of the site.
+  FIRST VIEWPORT: left-aligned "Resources" H1 over a featured story (image +
+  meta + title) with a "More Resources" list beside it — same structural
+  split as before, homepage-v2's card and type vocabulary applied.
+  FORM: extend the established homepage-v2/what-is-gaas world onto this
+  index — content, data bindings, and filter logic inherited unchanged, no
+  new visual system invented.
+#}
 
-{% set featuredResource = resources.items | find("slug", resources.featured) %}
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
 {% set bannerResource = resources.items | find("slug", resources.featuredBanner) %}
 
 {# =====================================================
-   SECTION 1: HERO - Featured Resource + Sidebar
+   HERO — same shell as customer-stories/about/contact:
+   mono eyebrow chip + headline + supporting copy, centered
+   single column.
    ===================================================== #}
-<section class="bg-white pt-24 md:pt-28 pb-12 md:pb-16 px-4 md:px-6">
-  <div class="max-w-screen-2xl mx-auto">
+<section class="relative px-4 pb-10 pt-32 sm:px-6 sm:pt-36 sm:pb-14 lg:px-8 lg:pt-40 lg:pb-16" aria-labelledby="hero-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl" data-reveal-stagger>
+      <span class="mb-5 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+        Resources
+      </span>
+      <h1 id="hero-heading" class="mb-5 text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+        Explore the platform library
+      </h1>
+      <p class="text-[18px] leading-relaxed text-[#6B7280] sm:text-[19px]">
+        eBooks, guides, reports, and technical whitepapers to help you build AI-native search.
+      </p>
+    </div>
+  </div>
+</section>
 
-    {# Page Title #}
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 tracking-tight mb-12" data-reveal>
-      Resources
-    </h1>
-
-    {# Featured Resource + Sidebar Grid #}
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-
-      {# Left: Featured Resource Card (7 cols) #}
-      <div class="lg:col-span-7" data-reveal>
-        <a href="/resources/{{ featuredResource.slug }}/" class="group block">
-          {# Featured Badge #}
-          <span class="inline-block px-3 py-1 bg-zunkiree-600 text-white text-xs font-medium tracking-wide mb-4">
-            Featured
+{# =====================================================
+   SECTION 1: FEATURED REPORT — rebuilt to match customer-stories'
+   featured-story card (badge / headline / description / dashed-
+   border CTA box / full-bleed cover right), bound to the featured
+   banner resource.
+   ===================================================== #}
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="featured-report-heading">
+  <h2 id="featured-report-heading" class="sr-only">Featured report</h2>
+  <div class="mx-auto max-w-5xl">
+    <div class="overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-card" data-reveal>
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        {# Text column #}
+        <div class="flex flex-col justify-center bg-sky-50/60 p-7 sm:p-10 lg:p-12">
+          <span class="mb-5 inline-flex w-fit items-center rounded-full bg-[#76B900]/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">
+            Featured Report
           </span>
-
-          {# Cover Image #}
-          <div class="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 mb-6 overflow-hidden">
-            {% if featuredResource.coverImage %}
-              <img
-                src="{{ featuredResource.coverImage }}"
-                alt="{{ featuredResource.title }}"
-                class="w-full h-full object-cover"
-              />
-            {% else %}
-              <div class="w-full h-full relative bg-gradient-to-br from-slate-800 to-slate-900">
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <span class="text-white/20 text-5xl md:text-7xl font-bold tracking-tighter">{{ featuredResource.type }}</span>
-                </div>
-              </div>
-            {% endif %}
-          </div>
-
-          {# Content #}
-          <div class="flex items-start gap-4">
-            <div class="flex-1">
-              <p class="text-xs text-zunkiree-600 font-medium tracking-wide mb-2">
-                {{ featuredResource.type }} | {{ featuredResource.publishDate }}
-              </p>
-              <h2 class="text-xl md:text-2xl font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors mb-2">
-                {{ featuredResource.title }}
-              </h2>
-              <p class="text-gray-600 text-sm md:text-base">
-                {{ featuredResource.subtitle }}
-              </p>
-            </div>
-            <span class="flex-shrink-0 mt-1">
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h3 class="text-[26px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[30px] lg:text-[34px]">
+            {{ bannerResource.title }}
+          </h3>
+          <p class="mt-4 max-w-md text-[16px] leading-relaxed text-[#6B7280]">
+            {{ bannerResource.description }}
+          </p>
+          <div class="mt-8 w-fit rounded-lg border border-dashed border-navy-200 p-2">
+            <a
+              href="/resources/{{ bannerResource.slug }}/"
+              class="inline-flex items-center gap-2 rounded-md bg-navy-900 px-5 py-3 font-mono text-[12px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-navy-800"
+            >
+              Download the report
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
-            </span>
+            </a>
           </div>
-        </a>
-      </div>
+        </div>
 
-      {# Right: More Resources Sidebar (5 cols) #}
-      <div class="lg:col-span-5" data-reveal>
-        <h3 class="text-xs font-semibold text-gray-900 tracking-wide uppercase mb-6">More Resources</h3>
-
-        <div class="divide-y divide-gray-200">
-          {# Show first 4 resources that are NOT the featured resource #}
-          {% for resource in resources.items %}
-            {% if resource.slug != resources.featured and loop.index <= 5 %}
-              <a href="/resources/{{ resource.slug }}/" class="group block py-5 first:pt-0">
-                <p class="text-xs text-gray-500 mb-1">{{ resource.type }}</p>
-                <p class="text-base text-gray-900 group-hover:text-zunkiree-600 transition-colors leading-snug mb-2">
-                  {{ resource.title }}
-                </p>
-                <span class="inline-flex items-center text-gray-900">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </span>
-              </a>
-            {% endif %}
-          {% endfor %}
+        {# Cover column #}
+        <div class="relative min-h-[280px] lg:min-h-full">
+          <img
+            src="{{ bannerResource.coverImage }}"
+            alt="{{ bannerResource.title }}"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 2: FEATURED BANNER - Highlighted Report
+   SECTION 3: LATEST RESOURCES — Sidebar + Grid Layout
    ===================================================== #}
-<section class="bg-[#fff9f8] py-16 md:py-20 px-4 md:px-6">
-  <div class="max-w-screen-2xl mx-auto">
+<section class="bg-white px-4 py-16 md:px-6 md:py-24" x-data="resourceFilter()" x-init="initFromQuery()">
+  <div class="mx-auto max-w-5xl">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-
-      {# Left: Content #}
-      <div data-reveal>
-        <span class="inline-block text-zunkiree-600 text-xs font-medium tracking-wide uppercase mb-4">Featured</span>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 leading-tight mb-4">
-          {{ bannerResource.title }}
-        </h2>
-        <p class="text-lg text-gray-600 mb-8 max-w-lg">
-          {{ bannerResource.subtitle }}
-        </p>
-        <a href="/resources/{{ bannerResource.slug }}/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
-          Download the report
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
-      </div>
-
-      {# Right: Abstract Visual - Chart bars + floating shapes #}
-      <div class="hidden lg:block">
-        <div class="relative h-64 lg:h-80">
-          {# Chart-like bars in center #}
-          <div class="absolute bottom-8 left-1/4 flex items-end gap-4">
-            <div class="w-10 h-20 bg-zunkiree-200 rounded-t"></div>
-            <div class="w-10 h-32 bg-zunkiree-300 rounded-t"></div>
-            <div class="w-10 h-44 bg-zunkiree-400 rounded-t"></div>
-            <div class="w-10 h-28 bg-zunkiree-200 rounded-t"></div>
-            <div class="w-10 h-36 bg-zunkiree-300 rounded-t"></div>
-          </div>
-          {# Floating abstract shapes #}
-          <div class="absolute top-0 right-0 w-32 h-32 bg-zunkiree-100 rounded-2xl transform rotate-12"></div>
-          <div class="absolute top-20 right-16 w-20 h-20 bg-zunkiree-200 rounded-xl transform -rotate-6"></div>
-          <div class="absolute bottom-4 right-4 w-24 h-24 bg-zunkiree-50 rounded-3xl transform rotate-3"></div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 3: LATEST RESOURCES - Sidebar + Grid Layout
-   ===================================================== #}
-<section class="bg-white py-16 md:py-24 px-4 md:px-6" x-data="resourceFilter()">
-  <div class="max-w-screen-2xl mx-auto">
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
 
       {# LEFT SIDEBAR - Filters #}
       <div class="lg:col-span-3" data-reveal>
         <div class="lg:sticky lg:top-24">
-          {# Section Title #}
-          <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-8">Latest resources</h2>
+          <h2 class="mb-8 text-[24px] font-medium leading-[1.2] text-[#111827] md:text-[28px]">Latest resources</h2>
 
           {# Search Bar #}
-          <div class="flex mb-8">
+          <div class="mb-8 flex overflow-hidden rounded-lg border border-navy-100/60 bg-white focus-within:border-navy-300">
             <input
               type="text"
               x-model="searchQuery"
               @input="filterResources()"
               placeholder="Search..."
-              class="flex-1 px-4 py-3 border border-gray-300 border-r-0 text-sm focus:outline-none focus:border-gray-400 bg-white"
+              class="flex-1 bg-transparent px-4 py-3 text-[14px] text-[#111827] placeholder:text-navy-300 focus:outline-none"
             />
-            <button class="px-5 py-3 bg-gray-800 text-white text-sm font-medium hover:bg-gray-900 transition-colors">
-              search
+            <button class="flex items-center justify-center px-4 text-navy-400 transition-colors hover:text-sky-700" aria-label="Search">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
             </button>
           </div>
 
           {# Resource Type Filter #}
-          <div class="mb-6">
+          <div class="mb-6 rounded-xl border border-navy-100/60">
             <button
               @click="filterOpen = !filterOpen"
-              class="w-full flex items-center justify-between py-3 border-t border-gray-300"
+              class="flex w-full items-center justify-between px-4 py-3"
+              :aria-expanded="filterOpen"
             >
-              <span class="text-base font-medium text-gray-900">Resource Type</span>
+              <span class="font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">Resource Type</span>
               <div class="flex items-center gap-2">
                 <span
                   x-show="selectedTypes.length > 0"
                   x-text="selectedTypes.length"
-                  class="w-6 h-6 flex items-center justify-center text-xs font-medium text-gray-600 border border-gray-300 rounded-full"
+                  class="flex h-5 w-5 items-center justify-center rounded-full bg-sky-100 text-[11px] font-medium text-sky-700"
                 ></span>
                 <svg
-                  class="w-4 h-4 text-gray-500 transition-transform"
+                  class="h-4 w-4 text-navy-400 transition-transform"
                   :class="{ 'rotate-180': filterOpen }"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
                 </svg>
               </div>
             </button>
 
-            {# Filter Options #}
-            <div x-show="filterOpen" x-transition class="py-4 space-y-4">
+            <div x-show="filterOpen" x-collapse class="space-y-3 px-4 pb-4">
               <template x-for="type in resourceTypes" :key="type.value">
-                <label class="flex items-center gap-3 cursor-pointer group">
+                <label class="group flex cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     :value="type.value"
                     x-model="selectedTypes"
                     @change="filterResources()"
-                    class="w-5 h-5 border-2 border-gray-300 rounded-sm text-zunkiree-600 focus:ring-zunkiree-500 cursor-pointer"
+                    class="h-4 w-4 rounded border-navy-200 text-sky-600 focus:ring-sky-500 focus:ring-offset-0"
                   />
-                  <span class="text-sm text-gray-700 group-hover:text-gray-900" x-text="type.label"></span>
+                  <span class="text-[14px] text-navy-500 transition-colors group-hover:text-[#111827]" x-text="type.label"></span>
                 </label>
               </template>
             </div>
@@ -230,18 +188,18 @@ permalink: /resources/
           <button
             x-show="selectedTypes.length > 0 || searchQuery.length > 0"
             @click="clearFilters()"
-            class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8"
+            class="mb-8 flex items-center gap-2 text-[13px] text-navy-400 transition-colors hover:text-[#111827]"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
             </svg>
-            clear all
+            Clear all
           </button>
 
           {# Subscribe CTA #}
           <a
             href="/contact/?source=newsletter"
-            class="block w-full px-6 py-4 bg-gray-800 text-white text-center font-medium hover:bg-gray-900 transition-colors"
+            class="block w-full rounded-md bg-[#76B900] px-6 py-3.5 text-center font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100]"
           >
             Subscribe to Newsletter
           </a>
@@ -250,53 +208,48 @@ permalink: /resources/
 
       {# RIGHT - Resource Cards Grid #}
       <div class="lg:col-span-9">
-        {# Resources Grid #}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-reveal-stagger>
           {% for resource in resources.items %}
             <a
               href="/resources/{{ resource.slug }}/"
-              class="resource-card group block bg-gray-50 overflow-hidden transition-shadow duration-300 hover:shadow-xl"
-              data-reveal
+              class="resource-card group block overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 shadow-subtle backdrop-blur-sm transition-shadow duration-300 hover:shadow-card-hover"
               data-type="{{ resource.type }}"
               data-title="{{ resource.title }}"
               x-show="isVisible('{{ resource.type }}', '{{ resource.title | replace("'", "\\'") }}')"
               x-transition
             >
-              {# Card Image #}
-              <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+              <div class="relative aspect-[16/10] overflow-hidden bg-navy-50">
                 {% if resource.coverImage %}
                   <img
                     src="{{ resource.coverImage }}"
                     alt="{{ resource.title }}"
-                    class="w-full h-full object-cover"
+                    class="h-full w-full object-cover"
                     loading="lazy"
                   />
                 {% else %}
-                  {# Fallback gradient placeholder #}
-                  <div class="w-full h-full flex items-center justify-center
-                    {% if resource.type == 'EBOOK' or resource.type == 'GUIDE' %}bg-gradient-to-br from-slate-700 to-slate-900
-                    {% elif resource.type == 'REPORT' or resource.type == 'WHITEPAPER' %}bg-gradient-to-br from-zunkiree-500 to-zunkiree-700
-                    {% elif resource.type == 'CASE STUDY' %}bg-gradient-to-br from-gray-600 to-gray-800
-                    {% else %}bg-gradient-to-br from-gray-500 to-gray-700{% endif %}">
-                    <span class="text-white/30 text-2xl font-bold tracking-tight uppercase">{{ resource.type }}</span>
+                  <div class="relative flex h-full w-full items-center justify-center bg-navy-950">
+                    <div
+                      class="pointer-events-none absolute inset-0"
+                      aria-hidden="true"
+                      style="background: radial-gradient(ellipse 70% 70% at 100% 100%, rgba(118,185,0,0.2) 0%, transparent 60%);"
+                    ></div>
+                    <span class="relative font-mono text-2xl font-bold uppercase tracking-tight text-white/15">{{ resource.type }}</span>
                   </div>
                 {% endif %}
               </div>
 
-              {# Card Content #}
-              <div class="p-4">
-                {# Type Badge #}
-                <p class="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-1">{{ resource.type }}</p>
+              <div class="p-5">
+                <p class="mb-3">
+                  <span class="inline-flex items-center rounded-full border border-sky-300/40 bg-sky-100/60 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-sky-700">{{ resource.type }}</span>
+                </p>
 
-                {# Title #}
-                <h3 class="text-base font-normal text-gray-900 leading-snug line-clamp-2">
+                <h3 class="mb-6 text-[15.5px] font-medium leading-snug text-[#111827] line-clamp-2">
                   {{ resource.title }}
                 </h3>
 
-                {# CTA Link #}
-                <span class="inline-flex items-center gap-1 text-sm text-zunkiree-600 font-medium group-hover:gap-2 transition-all mt-8">
+                <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-sky-700 transition-all group-hover:gap-2.5">
                   Read now
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
                 </span>
@@ -311,25 +264,23 @@ permalink: /resources/
           x-transition
           class="py-16 text-center"
         >
-          <p class="text-gray-500">No resources match your filters.</p>
-          <button @click="clearFilters()" class="mt-4 text-zunkiree-600 font-medium hover:text-zunkiree-700">
+          <p class="text-navy-400">No resources match your filters.</p>
+          <button @click="clearFilters()" class="mt-4 font-medium text-sky-700 hover:text-sky-800">
             Clear filters
           </button>
         </div>
 
         {# Pagination Footer #}
-        <div class="flex items-center justify-between mt-12 pt-8 border-t border-gray-200" data-reveal>
-          {# Left: Page indicator #}
+        <div class="mt-12 flex items-center justify-between border-t border-navy-100/50 pt-8" data-reveal>
           <div class="flex items-center gap-3">
-            <span class="text-base text-gray-900">Page</span>
-            <span class="w-10 h-10 flex items-center justify-center bg-gray-900 text-white text-sm font-medium">
+            <span class="text-[14px] text-navy-500">Page</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-navy-950 font-mono text-[13px] font-medium text-white">
               1
             </span>
           </div>
 
-          {# Right: Resource count #}
           <div>
-            <span class="text-zunkiree-600 font-medium" x-text="'Showing 1-' + filteredCount + ' of ' + {{ resources.items | length }} + ' resources'">
+            <span class="font-mono text-[12px] uppercase tracking-wide text-navy-400" x-text="'Showing 1-' + filteredCount + ' of ' + {{ resources.items | length }} + ' resources'">
               Showing 1-{{ resources.items | length }} of {{ resources.items | length }} resources
             </span>
           </div>
@@ -355,6 +306,16 @@ permalink: /resources/
         { value: 'CASE STUDY', label: 'Case Studies' },
         { value: 'WHITEPAPER', label: 'Whitepapers' }
       ],
+
+      initFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const typeMap = { 'case-study': 'CASE STUDY', 'ebook': 'EBOOK', 'guide': 'GUIDE', 'report': 'REPORT', 'whitepaper': 'WHITEPAPER' };
+        if (type && typeMap[type]) {
+          this.selectedTypes = [typeMap[type]];
+        }
+        this.filterResources();
+      },
 
       isVisible(type, title) {
         const typeMatch = this.selectedTypes.length === 0 || this.selectedTypes.includes(type);
@@ -384,80 +345,46 @@ permalink: /resources/
 </script>
 
 {# =====================================================
-   SECTION 4: CTA + FAQ SECTION
+   SECTION 4: FAQ
+   Same structure/tokens as homepage-v2's FAQ section: centered
+   mono eyebrow + H2, flat divide-y question list (no per-item
+   card chrome), plus-circle toggle. Content is this page's own
+   `faq` global data (unchanged), reformatted to the homepage-v2
+   layout rather than the card-accordion treatment used before.
    ===================================================== #}
-<section class="py-16 md:py-24 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
+<section class="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="resources-faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mx-auto mb-10 max-w-2xl text-center md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="resources-faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Frequently asked questions
+      </h2>
+    </div>
 
-      {# Left Side - CTA Box #}
-      <div
-        class="relative p-10 md:p-14 lg:p-16 flex flex-col justify-center overflow-hidden"
-        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
-        data-reveal
-      >
-        {# Background Image #}
-        <img
-          src="/assets/images/cta-background.svg"
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        {# Content overlay #}
-        <div class="relative z-10">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-8 leading-tight">
-            Start your AI<br>journey today
-          </h2>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-              Contact Us
-            </a>
-            <a href="/products/search/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
-              View Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {# Right Side - FAQ Accordion #}
-      <div x-ref="faqSection" data-reveal>
-      <div x-data="{ activeIndex: null, expandAll: false }">
-        {# Header #}
-        <div class="flex items-center justify-between mb-6">
-          <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Get to know Zunkiree</h3>
-          <button
-            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
-            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-          </button>
-        </div>
-
-        {# FAQ Items #}
-        <div class="divide-y divide-gray-200">
-          {% for item in faq %}
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in faq %}
           <div class="py-5">
             <button
-              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
-              class="w-full flex items-center justify-between text-left group"
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="group flex w-full items-center justify-between gap-4 text-left"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="resources-faq-answer-{{ loop.index }}"
             >
-              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
                 {{ item.question }}
               </span>
-              <span class="flex-shrink-0 text-gray-400">
-                <svg
-                  class="w-5 h-5 transition-transform duration-200"
-                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                 </svg>
               </span>
             </button>
             <div
-              x-show="activeIndex === {{ loop.index }} || expandAll"
+              id="resources-faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
               x-transition:enter="transition ease-out duration-200"
               x-transition:enter-start="opacity-0 -translate-y-2"
               x-transition:enter-end="opacity-100 translate-y-0"
@@ -466,40 +393,64 @@ permalink: /resources/
               x-transition:leave-end="opacity-0 -translate-y-2"
               class="overflow-hidden"
             >
-              <p class="pt-4 text-gray-600 leading-relaxed">
-                {{ item.answer }}
-              </p>
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
             </div>
           </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
       </div>
-      </div>
-
     </div>
   </div>
 </section>
-{% set faqItems = faq %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {%- for item in faqItems %}
-    {
-      "@type": "Question",
-      "name": {{ item.question | dump | safe }},
-      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | dump | safe }} }
-    }{{ "," if not loop.last }}
-    {%- endfor %}
-  ]
-}
-</script>
 
+{# =====================================================
+   SECTION 5: CLOSING CTA BANNER
+   Same navy-950 rounded-[28px] full-width banner as homepage-v2's
+   Closing CTA — centered eyebrow + H2 + support copy + dual CTA.
+   Copy/links kept as this page's own ("Start your AI journey
+   today" / Contact Us / View Demo), just the layout matched.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="resources-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
 
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+        Get Started
+      </span>
+      <h2 id="resources-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Start your AI journey today
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        Talk to our team about what you're building, or explore the platform running underneath every deployment.
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Contact Us
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/products/search/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          View Demo
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"AI Products and Solutions | Zunkiree Labs","articleBody":"Zunkiree Labs is an AI development company in Kathmandu, Nepal that builds production-grade AI systems including RAG pipelines, AI agents, and enterprise search platforms. Founded in 2018, we serve businesses globally with custom AI infrastructure that delivers measurable results—not prototypes or wrappers. Zunkiree Labs offers comprehensive AI development services: custom AI agents, RAG (Retrieval Augmented Generation) pipelines, AI-native search implementation, LLM integration, chatbot development, document processing AI, and enterprise AI consulting. We also provide web development, mobile app development, and SaaS development services from Nepal. Zunkiree Labs is headquartered in Kathmandu, Nepal. We are a leading AI company in Nepal serving clients globally. Our engineering team combines deep AI expertise with cost-effective delivery, making us a competitive choice for businesses seeking quality AI development from Nepal. Unlike traditional software companies in Nepal, Zunkiree Labs specializes in AI infrastructure and production-grade AI systems."}</script><!-- SEOAI:SCHEMA:END -->
+{% include "partials/footer-v2.njk" %}
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers various products including Zunkiree Search, Dental AI for practice management, Gaamma for business analytics, and business tools like Stella (AI Commerce Agent) and Zenly (AI Booking Engine).","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers rather than links.","@type":"Answer"}},{"name":"How can Zunkiree Labs help with customer support?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers AI solutions that can reduce support tickets by 45%.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) is a service that provides Autonomous AI agents deployed as managed services.","@type":"Answer"}},{"name":"Does Zunkiree Labs offer any resources for learning about AI?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree Labs provides eBooks, guides, reports, and webinars to help users learn about AI and its implementation.","@type":"Answer"}},{"name":"Can I try Zunkiree Search for free?","@type":"Question","acceptedAnswer":{"text":"Yes, you can try Zunkiree Search for free and see how it delivers direct answers.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->

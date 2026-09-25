@@ -62,17 +62,6 @@ layout: base.njk
 </style>
 
 {# =====================================================
-   REVIEW / AGGREGATE RATING SCHEMA (AI-managed — written by the Action Center)
-   Only rendered when comp.reviewSchema is present; never fabricated
-   here or by the generator that writes it — see server/generators/schema.js.
-   ===================================================== #}
-{% if comp.reviewSchema %}
-<script type="application/ld+json">
-{{ comp.reviewSchema | dump | safe }}
-</script>
-{% endif %}
-
-{# =====================================================
    HERO — matches the /compare/ index hero (breadcrumb + mono
    eyebrow + H1 + subhead), extended with the competitor name
    as the final breadcrumb crumb.
@@ -241,100 +230,6 @@ layout: base.njk
     </div>
   </div>
 </section>
-
-{# =====================================================
-   FAQs
-   ===================================================== #}
-{% if comp.faqs and comp.faqs.length > 0 %}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="comparison-faq-heading">
-  <div class="mx-auto max-w-5xl">
-    <h2 id="comparison-faq-heading" class="mb-8 text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">
-      Frequently Asked Questions
-    </h2>
-
-    <div class="max-w-3xl" x-data="{ activeIndex: null }">
-      {% for faq in comp.faqs %}
-      <div class="border-b border-navy-100">
-        <button
-          @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
-          class="flex w-full items-center justify-between py-5 text-left"
-        >
-          <span class="pr-4 font-medium text-[#111827]">{{ faq.question }}</span>
-          <svg
-            class="h-5 w-5 flex-shrink-0 text-navy-400 transition-transform"
-            :class="{ 'rotate-180': activeIndex === {{ loop.index }} }"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div
-          x-show="activeIndex === {{ loop.index }}"
-          x-transition
-          class="pb-5 text-[14px] leading-relaxed text-navy-600"
-        >
-          {{ faq.answer }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-{# FAQPage Schema for comparison FAQs #}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for faq in comp.faqs %}
-    {
-      "@type": "Question",
-      "name": "{{ faq.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ faq.answer }}"
-      }
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
-  ]
-}
-</script>
-{% endif %}
-
-{# =====================================================
-   EXPANDED CONTENT (AI-managed — written by the Action Center)
-   Only rendered when comp.expandedContent is present; never fabricated
-   here or by the generator that writes it — see server/generators/
-   expand-content.js. Already a fully rendered HTML block (wrapper + rows),
-   not raw text — see server/implementers/lib/marker-merge.js's
-   renderExpandedHtml, the same renderer a per-file template's marker
-   splice uses.
-   ===================================================== #}
-{% if comp.expandedContent %}
-{{ comp.expandedContent | safe }}
-{% endif %}
-
-{# =====================================================
-   Q&A CONTENT (AI-managed — written by the Action Center)
-   Only rendered when comp.qaContentHtml is present; same rendering
-   pipeline as FAQ above but a distinct field/marker — see
-   server/generators/qa-content.js.
-   ===================================================== #}
-{% if comp.qaContentHtml %}
-{{ comp.qaContentHtml | safe }}
-{% endif %}
-
-{# =====================================================
-   RELATED / INTERNAL LINKS (AI-managed — written by the Action Center)
-   Only rendered when comp.internalLinksHtml is present — see
-   server/generators/internal-links.js.
-   ===================================================== #}
-{% if comp.internalLinksHtml %}
-{{ comp.internalLinksHtml | safe }}
-{% endif %}
 
 {# =====================================================
    CTA SECTION — same navy-950 rounded-[28px] dual-CTA banner

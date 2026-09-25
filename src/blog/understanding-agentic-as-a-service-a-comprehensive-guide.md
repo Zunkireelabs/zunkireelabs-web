@@ -2,7 +2,7 @@
 title: "Understanding Agentic as a Service: A Comprehensive Guide"
 description: "Explore what Agentic as a Service is, how it operates, and its significance in the tech landscape today."
 date: "2026-07-20"
-featuredImage: "/assets/images/blog/agentic-search.jpg"
+featuredImage: "/assets/images/blog/agentic-as-a-service.jpg"
 featuredImageAlt: "Diagram illustrating how Agentic as a Service (GaaS) automates business workflows"
 ---
 

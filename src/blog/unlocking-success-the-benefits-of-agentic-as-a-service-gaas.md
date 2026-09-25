@@ -2,7 +2,7 @@
 title: "Unlocking Success: The Benefits of Agentic as a Service (GaaS)"
 description: "Explore the transformative benefits of Agentic as a Service (GaaS) for businesses, from enhanced efficiency to tailored solutions."
 date: "2026-07-20"
-featuredImage: "/assets/images/blog/agentic-search.jpg"
+featuredImage: "/assets/images/blog/gaas-benefits.jpg"
 featuredImageAlt: "Business team benefiting from AI agents automating tasks under a GaaS model"
 ---
 

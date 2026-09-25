@@ -1,177 +1,47 @@
 ---
-layout: base.njk
+layout: resource-content.njk
 title: The AI Search Stack for the Modern Enterprise | Zunkiree Labs
 description: Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. Free ebook with architecture patterns and implementation strategies.
 permalink: /resources/ai-search-stack-guide/
+slug: ai-search-stack-guide
 ---
 
-{# =====================================================
-   RESOURCE PAGE: AI Search Stack Guide
-   Layout: Databricks-style hero with overlapping elements
-   ===================================================== #}
-
-{% set resource = resources.items | find("slug", "ai-search-stack-guide") %}
-
-{# =====================================================
-   HERO SECTION - IBM Style (Light background, stacked layout)
-   ===================================================== #}
-<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
-  <div class="max-w-screen-2xl mx-auto">
-
-    {# Title Area - Left column only #}
-    <div class="mb-8">
-      {# Title #}
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
-        {{ resource.title }}
-      </h1>
-
-      {# Subtitle #}
-      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
-        {{ resource.subtitle }}
-      </p>
-
-      {# Date #}
-      <p class="text-sm text-warm-500" data-reveal>
-        {{ resource.publishDate | replace("-", " ") }}
-      </p>
-    </div>
-
-    {# Image + Sidebar Row - Both aligned at same vertical level #}
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      {# Hero Image (7 cols) #}
-      <div class="lg:col-span-7" data-reveal>
-        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
-          {% if resource.coverImage %}
-            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
-          {% else %}
-            <div class="w-full h-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
-              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
-            </div>
-          {% endif %}
-        </div>
-      </div>
-
-      {# Sidebar - More Articles (5 cols) - aligned with image #}
-      <div class="lg:col-span-5" data-reveal>
-        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">more articles</h3>
-
-        <div class="space-y-6">
-          {# Article 1 #}
-          <a href="#" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              How AI Search Transforms Customer Experience in E-commerce
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-
-          <hr class="border-warm-200">
-
-          {# Article 2 #}
-          <a href="#" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              Building Semantic Search: A Technical Deep Dive
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-
-          <hr class="border-warm-200">
-
-          {# Article 3 #}
-          <a href="#" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              Enterprise AI Adoption: Lessons from Fortune 500 Companies
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-{# =====================================================
-   CONTENT SECTION - White Background
-   ===================================================== #}
-<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-
-      {# Left Column: Content (7 cols on desktop) #}
-      <div class="lg:col-span-7">
-        {# Introduction #}
-        <div class="mb-8" data-reveal>
-          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
-            {{ resource.description }}
-          </p>
-        </div>
-
-        {# What You Get Section #}
-        <div class="mb-10" data-reveal>
-          <h2 class="text-lg font-medium text-warm-black mb-4">
-            What you get:
-          </h2>
-
-          <ul class="space-y-3">
-            {% for item in resource.whatYouGet %}
-            <li class="flex items-start gap-3">
-              <span class="text-warm-black mt-1.5">•</span>
-              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-
-      </div>
-
-      {# Right Column: Sticky Form (5 cols) #}
-      <div class="lg:col-span-5" data-reveal>
-        {% set formTitle = "Please tell us about yourself" %}
-        {% set ctaText = resource.ctaText %}
-        {% include "components/lead-capture-form.njk" %}
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Comparison of AI Search Solutions</h2>
-      </div>
-      <div>
-        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-lg md:text-xl text-gray-600 leading-relaxed">When it comes to implementing AI-driven search solutions, Zunkiree Labs offers a robust framework that stands out against other platforms. Key differentiators include a comprehensive architecture blueprint and an emphasis on security and compliance, which may not be as thoroughly covered by other providers.</p></div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"The AI Search Stack for the Modern Enterprise | Zunkiree Labs","articleBody":"A comprehensive overview of products and services offered by Zunkiree Labs, including AI-native search, dental practice management software, business analytics platforms, and various AI development services. It highlights the benefits of AI-powered solutions for customer experience and enterprise applications."}</script><!-- SEOAI:SCHEMA:END -->
-
-<!-- SEOAI:QACONTENT:START --><div class="container-custom">
-<div class="mt-10 p-6 bg-gray-50 rounded-lg">
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What are the key benefits of using AI-powered search over traditional keyword search?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">AI-powered search enhances customer experience by providing more accurate and relevant results through natural language understanding, moving beyond the limitations of traditional keyword searches.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What does the architecture blueprint for AI search systems include?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The architecture blueprint includes a comprehensive design for building AI-native search experiences tailored for enterprises, ensuring a robust foundation for implementation.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What can I expect from the step-by-step implementation guide?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The implementation guide provides detailed instructions and code examples, assisting organizations in effectively deploying AI search technologies within their existing systems.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How does the performance of AI search compare to keyword search?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The guide offers performance benchmarks that illustrate the efficiency and effectiveness of AI search compared to traditional keyword search, highlighting its superior capabilities.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What security measures are covered for AI search implementation?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The guide outlines security and compliance considerations essential for safeguarding enterprise data during the implementation of AI search systems.</p>
+{# Introduction #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">About this guide</h2>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    {{ resource.description }}
+  </p>
 </div>
-</div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are the key benefits of using AI-powered search over traditional keyword search?","@type":"Question","acceptedAnswer":{"text":"AI-powered search enhances customer experience by providing more accurate and relevant results through natural language understanding, moving beyond the limitations of traditional keyword searches.","@type":"Answer"}},{"name":"What does the architecture blueprint for AI search systems include?","@type":"Question","acceptedAnswer":{"text":"The architecture blueprint includes a comprehensive design for building AI-native search experiences tailored for enterprises, ensuring a robust foundation for implementation.","@type":"Answer"}},{"name":"What can I expect from the step-by-step implementation guide?","@type":"Question","acceptedAnswer":{"text":"The implementation guide provides detailed instructions and code examples, assisting organizations in effectively deploying AI search technologies within their existing systems.","@type":"Answer"}},{"name":"How does the performance of AI search compare to keyword search?","@type":"Question","acceptedAnswer":{"text":"The guide offers performance benchmarks that illustrate the efficiency and effectiveness of AI search compared to traditional keyword search, highlighting its superior capabilities.","@type":"Answer"}},{"name":"What security measures are covered for AI search implementation?","@type":"Question","acceptedAnswer":{"text":"The guide outlines security and compliance considerations essential for safeguarding enterprise data during the implementation of AI search systems.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
+
+{# What You Get #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  },
+  "bookFormat": "EBook"
+}
+</script>

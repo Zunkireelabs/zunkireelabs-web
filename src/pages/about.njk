@@ -1,666 +1,635 @@
 ---
 layout: base.njk
-
-title: "Zunkiree Labs: AI Infrastructure & Software Solutions" # SEOAI:TITLE
-
+title: "About Zunkiree Labs | Top AI & Software Company in Nepal | Founded 2018"
 description: "Zunkiree Labs is a leading AI company in Kathmandu, Nepal founded in 2018. We build custom AI systems, RAG pipelines, and enterprise software for global clients."
 permalink: /about/
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   SECTION 1: HERO - Databricks Style Two-Column
-   ===================================================== #}
-<section class="pt-20 md:pt-28 pb-12 md:pb-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+   ABOUT — WEBSITE V2
+   Sits on the same visual system as homepage-v2.njk /
+   contact.njk / industry.njk: navbar-v2 + footer-v2 chrome, Inter
+   type, flat #ffffff background, navy/#76B900 token language,
+   soft-elevation + glass-surface cards, font-mono uppercase labels.
+   Base section order follows MASTER_DESIGN_SPEC.md §19 "About page"
+   template (hero → mission → capability grid → timeline → values
+   → FAQ → closing CTA); two sections below extend that template
+   with structure borrowed from Kore.ai's about page IA, rebuilt
+   entirely on this site's existing tokens (no gradient backdrops —
+   §10 retires those outside the one sanctioned glass-card tint).
 
-      {# Left: Content #}
-      <div class="order-2 lg:order-1">
-        {# Large headline #}
-        <h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-8" data-reveal>
+   2026-07-30 revamp (Kore.ai reference, kept the "AI & Machine
+   Learning" featured capability card's photo/radial-glow treatment
+   pixel-identical per explicit request):
+   - Hero gets a small round brand-mark chip above the eyebrow,
+     mirroring Kore.ai's icon-in-circle motif restyled to the
+     hairline-border/no-gradient system.
+   - New "Proof at scale" section: real client-logo marquee
+     (Logo Cloud, marquee variant — COMPONENT_LIBRARY.md §2.5),
+     reusing homepage-v2's exact client list/scroll recipe, placed
+     right under the mission statement — matches Kore.ai's "Proven
+     at enterprise scale" placement.
+   - "Vision & Global Impact" 3-photo scrim mosaic replaced with a
+     honest single-HQ "Vision & presence" section (Kathmandu info
+     card + one clean bordered photo, no fabricated multi-office
+     map) — folds the same product-first/AI-native/global claims
+     into card copy instead of duplicated photo-caption chrome.
+
+   Content is otherwise unchanged — same origin timeline entries,
+   same values, same aboutFaq.json data, same Organization/FAQPage
+   schema. Prior redesign notes, still true:
+   - Decorative stock-photo hero collage removed (not real content,
+     no product/business fact lost) in favor of the same centered
+     hero shell used by contact.njk/industry.njk.
+   - Gradient mission headline removed — MASTER_DESIGN_SPEC.md §24
+     bans gradient text; emphasis now carried by weight/size instead.
+   - Values section moved off a full-bleed dark background — full
+     dark sections are retired sitewide (§3/§10); rebuilt as a light
+     4-up icon row consistent with the Capability grid above it.
+   - FAQ split into its own full-width section (contact.njk's exact
+     accordion recipe) instead of a side-by-side CTA+FAQ combo, and
+     the "Expand All" toggle is dropped so this page's accordion
+     matches the one shared component used sitewide.
+   - Closing CTA reuses the same dark-card radial-gradient component
+     industry.njk keeps as its deliberate signature closer
+     (COMPONENT_LIBRARY.md §2.6) instead of a bespoke cta-background.
+     svg image.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO — two-column header (left: eyebrow + headline, right:
+   supporting copy + CTAs) over a full-width photo, per the
+   reference layout supplied 2026-07-31. Photo reuses the
+   "Founded in Kathmandu" image from the Origin/Timeline section
+   below (aboutJourney[0]) instead of a new asset. Brand-mark chip
+   removed per request. Supporting copy restored to the fuller
+   two-paragraph version this hero carried before the 2026-07-30
+   trim (git d31b180) — same wording, not new copy.
+   ===================================================== #}
+<section class="relative px-4 pb-8 pt-32 sm:px-6 sm:pt-36 sm:pb-10 lg:px-8 lg:pt-40 lg:pb-12" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto max-w-5xl">
+
+    <div class="mb-3 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" data-reveal-stagger>
+      <div>
+        <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+          About
+        </span>
+        <h1 id="hero-heading" class="text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
           The AI infrastructure company
         </h1>
+      </div>
 
-        {# Body paragraphs #}
-        <div class="space-y-6 mb-10" data-reveal>
-          <p class="text-lg text-gray-600 leading-relaxed">
-            We build intelligent software platforms that connect data, systems, and human interaction through AI. Built on an AI-native architecture, our platforms provide a unified foundation for search, automation, and data intelligence—combined with AI models tuned to each organization's unique needs.
-          </p>
-          <p class="text-lg text-gray-600 leading-relaxed">
-            With origins in Nepal and a global mindset, Zunkiree Labs was founded in 2018 by engineers who believe great software can come from anywhere. Today, we're building the next generation of AI-native platforms for businesses worldwide.
-          </p>
-        </div>
+      <div class="flex flex-col justify-end lg:pb-2">
+        <p class="text-[19px] leading-relaxed text-[#6B7280] sm:text-[20px]">
+          We build intelligent software platforms that connect data, systems, and human interaction through AI, on an AI-native architecture that unifies search, automation, and data intelligence. Founded in Nepal in 2018 with a global mindset, we're building the next generation of AI-native platforms for businesses worldwide.
+        </p>
 
-        {# CTA Button #}
-        <div data-reveal>
-          <a href="/products/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row" data-reveal>
+          <a
+            href="/products/"
+            class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          >
             Explore Our Products
+            <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+          </a>
+          <a
+            href="/contact/"
+            class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          >
+            Talk to Us
+            <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
           </a>
         </div>
       </div>
+    </div>
 
-      {# Right: Creative Collage (HTML/CSS based) #}
-      <div class="order-1 lg:order-2 flex justify-center lg:justify-end" data-reveal>
-        <div class="relative w-full max-w-md lg:max-w-lg aspect-square">
-
-          {# Large triangle - top left #}
-          <div class="absolute left-0 top-[16%] w-[36%] h-[40%] bg-zunkiree-600" style="clip-path: polygon(0 0, 100% 100%, 0 100%);"></div>
-
-          {# Medium triangle - bottom right #}
-          <div class="absolute right-0 bottom-[16%] w-[36%] h-[28%] bg-zunkiree-400" style="clip-path: polygon(100% 0, 0 100%, 100% 100%);"></div>
-
-          {# Small triangle - right side #}
-          <div class="absolute right-0 top-[32%] w-[8%] h-[8%] bg-zunkiree-600" style="clip-path: polygon(0 100%, 100% 0, 100% 100%);"></div>
-
-          {# Circular image - top right #}
-          <div class="absolute right-[8%] top-[2%] w-[22%] aspect-square rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop&crop=face"
-              alt="Team member"
-              class="w-full h-full object-cover grayscale"
-            />
-          </div>
-
-          {# Rectangular image - center #}
-          <div class="absolute left-[36%] top-[20%] w-[32%] h-[40%] overflow-hidden shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face"
-              alt="Team member"
-              class="w-full h-full object-cover grayscale"
-            />
-          </div>
-
-          {# Dark circle with terminal icon #}
-          <div class="absolute left-[24%] top-[30%] w-[20%] aspect-square rounded-full bg-gray-900 flex items-center justify-center shadow-xl z-10">
-            <span class="text-white font-mono text-2xl font-bold">&gt;_</span>
-          </div>
-
-          {# Rectangular image - bottom right #}
-          <div class="absolute right-[4%] bottom-[12%] w-[36%] h-[28%] overflow-hidden shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
-              alt="Team collaboration"
-              class="w-full h-full object-cover grayscale"
-            />
-          </div>
-
-          {# Circular image - bottom left #}
-          <div class="absolute left-[4%] bottom-[8%] w-[28%] aspect-square rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
-              alt="Team member"
-              class="w-full h-full object-cover grayscale"
-            />
-          </div>
-
-          {# Dot pattern #}
-          <div class="absolute right-[20%] top-[52%] flex gap-1.5">
-            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
-            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
-            <div class="w-2 h-2 rounded-full bg-zunkiree-600"></div>
-          </div>
-
-        </div>
-      </div>
-
+    <div class="overflow-hidden rounded-2xl border border-navy-100/60 shadow-card" data-reveal>
+      <img
+        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&h=900&fit=crop"
+        alt="Founding team"
+        class="h-[360px] w-full object-cover sm:h-[440px] lg:h-[500px]"
+        loading="eager"
+      />
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SECTION 2: MISSION STATEMENT - Two Column
+   MISSION — founder-voiced, 50/50 split per §6 Grid System.
+   Gradient headline replaced with solid navy-900 text; emphasis
+   now carried by size/weight only (§24 bans gradient text).
    ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      {# Left: Large Headline #}
-      <div data-reveal>
-        <p class="text-xs uppercase tracking-widest text-gray-900 font-medium mb-6">Our Mission</p>
-        <h2 class="text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight leading-[1.15] bg-gradient-to-r from-zunkiree-600 via-zunkiree-500 to-orange-500 bg-clip-text text-transparent">
-          We build infrastructure-level AI systems, not wrappers—products that compound value over time.
-        </h2>
-      </div>
-
-      {# Right: Supporting Text #}
-      <div class="lg:pt-12" data-reveal>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          Zunkiree Labs combines AI engineering, data systems, and modern software architecture to transform how organizations operate. We don't retrofit AI onto existing systems. We design with intelligence at the core, creating platforms that serve businesses internationally while staying rooted in Nepal's growing tech ecosystem.
-        </p>
-        <p class="text-sm text-gray-500 font-medium">
-          — Sadin Shrestha, Founder & CEO
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 3: WHAT WE DO - Capability Grid
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    {# Section Header #}
-    <div class="mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Expertise</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Technology & services</h2>
-    </div>
-
-    {# SVG Gradient Definition #}
-    <svg width="0" height="0" class="absolute">
-      <defs>
-        <linearGradient id="about-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#ff6b5c"/>
-          <stop offset="100%" style="stop-color:#eb1600"/>
-        </linearGradient>
-      </defs>
-    </svg>
-
-    {# Capability Grid - IBM Style #}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-gray-200">
-      {# Card 1: AI & Machine Learning #}
-      <div class="p-8 border-b md:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">AI & Machine Learning</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Design and deploy intelligent systems powered by RAG, knowledge systems, AI-powered search, and automation.</p>
-      </div>
-
-      {# Card 2: Data Engineering #}
-      <div class="p-8 border-b lg:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Data Engineering</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Build scalable data pipelines, warehouses, and AI-ready infrastructure that turns raw data into business intelligence.</p>
-      </div>
-
-      {# Card 3: Custom Software #}
-      <div class="p-8 border-b md:border-r lg:border-r-0 border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Custom Software</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Create modern SaaS applications, web platforms, and enterprise systems with API-driven, scalable architecture.</p>
-      </div>
-
-      {# Card 4: AI Integration #}
-      <div class="p-8 border-b lg:border-b-0 md:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">AI Integration</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Embed AI capabilities into existing workflows—automation, support systems, and internal productivity tools.</p>
-      </div>
-
-      {# Card 5: Platform Engineering #}
-      <div class="p-8 border-b md:border-b-0 lg:border-r border-gray-200 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Platform Engineering</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Architect cloud-native platforms with microservices, scalable backends, and seamless system connectivity.</p>
-      </div>
-
-      {# Card 6: Technical Consulting #}
-      <div class="p-8 hover:bg-gray-50 transition-colors" data-reveal>
-        <svg class="w-12 h-12 mb-6" fill="none" stroke="url(#about-icon-gradient)" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-        </svg>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Technical Consulting</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">Provide strategic guidance on AI adoption, architecture decisions, and technology roadmaps.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 5: ORIGIN STORY - Tabbed Interface
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-gray-50" x-data="{ activeTab: '2018' }">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    {# Section Header #}
-    <div class="mb-8" data-reveal>
-      <h2 class="text-4xl md:text-5xl font-normal text-gray-900 tracking-[-0.02em]">Our journey</h2>
-    </div>
-
-    {# Tab Navigation - Rounded with gradient active #}
-    <div class="flex flex-wrap gap-2 mb-12" data-reveal>
-      <button
-        @click="activeTab = '2018'"
-        :class="activeTab === '2018' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
-      >
-        2018
-      </button>
-      <button
-        @click="activeTab = '2020'"
-        :class="activeTab === '2020' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
-      >
-        2020
-      </button>
-      <button
-        @click="activeTab = '2023'"
-        :class="activeTab === '2023' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
-      >
-        2023
-      </button>
-      <button
-        @click="activeTab = '2024'"
-        :class="activeTab === '2024' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
-      >
-        2024
-      </button>
-      <button
-        @click="activeTab = 'next'"
-        :class="activeTab === 'next' ? 'bg-gradient-to-r from-[#ff6b5c] to-[#eb1600] text-white shadow-md border-transparent' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium text-sm border transition-all duration-200"
-      >
-        Next
-      </button>
-    </div>
-
-    {# Tab Content: 2018 - Founded #}
-    <div
-      x-show="activeTab === '2018'"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-    >
-      <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
-          Founded in Kathmandu
-        </h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          Zunkiree Labs started with a simple belief: technology companies can emerge from anywhere. Based in Kathmandu, we set out to build globally relevant software products—not just services.
-        </p>
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Product-first mindset from day one</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">AI-native architecture as core principle</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Global ambition, local engineering talent</span>
-          </li>
-        </ul>
-      </div>
-      <div class="relative">
-        <div class="aspect-[16/10] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop" alt="Founding team" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-    {# Tab Content: 2020 - First Clients #}
-    <div
-      x-show="activeTab === '2020'"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-    >
-      <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
-          First enterprise clients
-        </h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          We landed our first enterprise clients, proving that quality engineering transcends borders. These early partnerships validated our approach and funded our product development.
-        </p>
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Delivered custom AI solutions for enterprises</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Established reputation for engineering excellence</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Grew team with top local engineering talent</span>
-          </li>
-        </ul>
-      </div>
-      <div class="relative">
-        <div class="aspect-[16/10] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop" alt="Team collaboration" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-    {# Tab Content: 2023 - Zunkiree Search #}
-    <div
-      x-show="activeTab === '2023'"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-    >
-      <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
-          Zunkiree Search launches
-        </h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          Our flagship AI-native search platform launched, enabling businesses to connect their data to natural language queries. This marked our transition from services to products.
-        </p>
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">AI-native search with natural language understanding</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">RAG-powered knowledge systems</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Embeddable widget for any website</span>
-          </li>
-        </ul>
-        <a href="/products/search/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
-          Explore Zunkiree Search
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
-      </div>
-      <div class="relative">
-        <div class="aspect-[16/10] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop" alt="AI Search platform" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-    {# Tab Content: 2024 - Gaamma ERP #}
-    <div
-      x-show="activeTab === '2024'"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-    >
-      <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
-          Gaamma ERP launches
-        </h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          We expanded into enterprise software with Gaamma, an ERP platform designed specifically for manufacturing businesses. This demonstrated our capability to build large-scale systems.
-        </p>
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Complete manufacturing operations management</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Real-time production visibility</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">AI-powered process optimization</span>
-          </li>
-        </ul>
-        <a href="/products/gaamma/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
-          Explore Gaamma
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
-      </div>
-      <div class="relative">
-        <div class="aspect-[16/10] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop" alt="Manufacturing ERP" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-    {# Tab Content: Next - Future #}
-    <div
-      x-show="activeTab === 'next'"
-      x-transition:enter="transition ease-out duration-300"
-      x-transition:enter-start="opacity-0"
-      x-transition:enter-end="opacity-100"
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
-    >
-      <div class="pt-4">
-        <h3 class="text-2xl md:text-3xl font-normal text-gray-900 tracking-[-0.02em] mb-4">
-          Vertical AI products
-        </h3>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          We're building specialized AI solutions for specific industries—healthcare, dental, legal, and more. Each vertical product applies our AI infrastructure expertise to solve domain-specific problems.
-        </p>
-        <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Dental AI Assistant for clinic operations</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Healthcare AI for patient interactions</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-zunkiree-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-gray-600">Industry-specific knowledge systems</span>
-          </li>
-        </ul>
-        <a href="/contact/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
-          Partner with us
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-        </a>
-      </div>
-      <div class="relative">
-        <div class="aspect-[16/10] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop" alt="Healthcare AI" class="w-full h-full object-cover" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 6: VISION & IMPACT - Image Mosaic
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    {# Section Header #}
-    <div class="mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Vision</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Global impact</h2>
-    </div>
-
-    {# Image Grid with Commitment Cards #}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {# Card 1: Product-First #}
-      <div class="relative group overflow-hidden" data-reveal>
-        <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
-          alt="Team collaboration"
-          class="w-full h-64 md:h-80 object-cover"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="text-lg font-medium text-white mb-2">Product-First Mindset</h3>
-          <p class="text-sm text-white/80">We build proprietary platforms, not just client projects. Long-term value over short-term revenue.</p>
-        </div>
-      </div>
-
-      {# Card 2: AI-Native #}
-      <div class="relative group overflow-hidden" data-reveal>
-        <img
-          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
-          alt="AI visualization"
-          class="w-full h-64 md:h-80 object-cover"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="text-lg font-medium text-white mb-2">AI-Native Architecture</h3>
-          <p class="text-sm text-white/80">Systems designed with AI at the core, not retrofitted. Intelligence is infrastructure.</p>
-        </div>
-      </div>
-
-      {# Card 3: Global from Nepal #}
-      <div class="relative group overflow-hidden" data-reveal>
-        <img
-          src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&h=400&fit=crop"
-          alt="Nepal mountains"
-          class="w-full h-64 md:h-80 object-cover"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="text-lg font-medium text-white mb-2">Global from Nepal</h3>
-          <p class="text-sm text-white/80">World-class products built from Kathmandu. Proving great software can come from anywhere.</p>
-        </div>
-      </div>
-    </div>
-
-    {# Vision Statement #}
-    <div class="mt-12 max-w-3xl" data-reveal>
-      <p class="text-xl text-gray-600 leading-relaxed">
-        Our long-term vision is to grow from a services-supported startup into a product-led technology company—developing a portfolio of AI-native software platforms that serve multiple industries worldwide.
-      </p>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 7: VALUES - Condensed Horizontal
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-gray-900">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="text-center mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Principles</p>
-      <h2 class="text-3xl md:text-4xl font-normal text-white">What drives us</h2>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-      {# Value 1 #}
-      <div class="text-center" data-reveal>
-        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-white mb-2">Excellence</h3>
-        <p class="text-sm text-gray-400">Every line of code crafted to the highest standards</p>
-      </div>
-
-      {# Value 2 #}
-      <div class="text-center" data-reveal>
-        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-white mb-2">Innovation</h3>
-        <p class="text-sm text-gray-400">Embracing new technologies to deliver cutting-edge solutions</p>
-      </div>
-
-      {# Value 3 #}
-      <div class="text-center" data-reveal>
-        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-white mb-2">Partnership</h3>
-        <p class="text-sm text-gray-400">Your success is our success—invested in your growth</p>
-      </div>
-
-      {# Value 4 #}
-      <div class="text-center" data-reveal>
-        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-          <svg class="w-8 h-8 text-zunkiree-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-medium text-white mb-2">Reliability</h3>
-        <p class="text-sm text-gray-400">We deliver on promises—deadlines met, quality consistent</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   SECTION 8: CTA + FAQ
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" x-data="{ ctaHeight: null }" x-init="$nextTick(() => { ctaHeight = $refs.faqSection.offsetHeight })">
-
-      {# Left Side - CTA Box #}
-      <div
-        class="relative p-10 md:p-14 lg:p-16 flex flex-col justify-center overflow-hidden"
-        :style="ctaHeight ? 'height: ' + ctaHeight + 'px' : ''"
-        data-reveal
-      >
-        {# Background Image #}
-        <img
-          src="/assets/images/cta-background.svg"
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-        {# Content overlay #}
+<section class="px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 lg:px-8 lg:pt-12 lg:pb-20" aria-labelledby="mission-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+      {# Glass-surface bloom card — §3 technique 2 sanctioned sky-tint
+         gradient only, plain (no secondary green radial accent). #}
+      <div class="relative flex min-h-[220px] flex-col justify-center overflow-hidden rounded-2xl border border-navy-100/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-7 shadow-subtle backdrop-blur-md sm:p-8" data-reveal>
         <div class="relative z-10">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8 leading-tight">
-            Ready to build<br>something great?
+          <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Our Mission</span>
+          <h2 id="mission-heading" class="text-balance text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+            We build infrastructure-level AI systems, not wrappers&mdash;products that compound value over time.
           </h2>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-              Contact Us
-            </a>
-            <a href="/team/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
-              Meet Our Team
-            </a>
-          </div>
         </div>
       </div>
 
-      {# Right Side - FAQ Accordion #}
-      <div x-ref="faqSection">
-      <div x-data="{ activeIndex: null, expandAll: false }">
-        {# Header #}
-        <div class="flex items-center justify-between mb-6">
-          <h3 class="text-2xl md:text-3xl font-medium text-gray-900">About Zunkiree Labs</h3>
-          <button
-            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
-            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-          </button>
+      {# Sky tint + green radial accent, applied as an ambient backdrop
+         (no border/shadow) rather than a second bordered card. #}
+      <div class="relative flex h-full w-full min-h-[220px] flex-col justify-center overflow-hidden rounded-2xl p-7 sm:p-8" data-reveal>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-bl from-sky-100/60 via-sky-50/20 to-transparent" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background-image: radial-gradient(circle at 15% 85%, rgba(118, 185, 0, 0.08) 0%, transparent 55%);"></div>
+        <div class="relative z-10">
+          <p class="text-[14px] leading-relaxed text-[#374151] sm:text-[17px]">
+            Zunkiree Labs combines AI engineering, data systems, and modern software architecture to transform how organizations operate. We don't retrofit AI onto existing systems. We design with intelligence at the core, creating platforms that serve businesses internationally while staying rooted in Nepal's growing tech ecosystem.
+          </p>
+          <div class="mt-6 flex items-center gap-3">
+            <img
+              src="/assets/images/team/sadin-shrestha.webp"
+              alt="Sadin Shrestha, Founder & CEO"
+              class="h-11 w-11 flex-shrink-0 rounded-full border border-navy-100/60 object-cover shadow-subtle"
+              loading="lazy"
+            />
+            <p class="text-[14px] font-medium text-[#6B7280]">
+              Sadin Shrestha<br class="sm:hidden" /><span class="hidden sm:inline">, </span>Founder &amp; CEO
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   PROOF AT SCALE — Logo Cloud, marquee variant
+   (COMPONENT_LIBRARY.md §2.5). Card-tile item styling follows
+   the magicui.design Marquee recipe (rounded-xl bordered tile,
+   fixed width, subtle bg/hover shift, edge fade overlays,
+   pause-on-hover) rebuilt on this site's navy/#76B900 tokens
+   instead of magicui's neutral gray defaults. Kore.ai-inspired
+   placement: a proof band directly beneath the founder mission
+   statement, before capability detail. Real client logos only,
+   per §24 anti-fabrication guardrail.
+   ===================================================== #}
+{# Row 1 scrolls left, row 2 scrolls right (magicui.design's two-row
+   opposite-direction marquee pattern). Rapid Investment has no real
+   logo file yet (its .webp/.png exports are blank) — uses its
+   confirmed .svg text-wordmark fallback instead of a broken image. #}
+{% set aboutProvenClientsRow1 = [
+  { name: "Admizz", logo: "/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/images/clients/rapid-investment.svg" },
+  { name: "CMS Group", logo: "/images/clients/cms-group.webp" }
+] %}
+{% set aboutProvenClientsRow2 = [
+  { name: "Mach24 Orbital", logo: "/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/images/clients/khems-cleaning.webp" }
+] %}
+<style>
+  @keyframes about-marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .about-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: about-marquee-scroll 32s linear infinite;
+  }
+  .about-marquee-track--reverse {
+    animation-direction: reverse;
+  }
+  .about-marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .about-marquee-track {
+      animation: none;
+    }
+  }
+</style>
+<section class="pb-8 sm:pb-10 lg:pb-12" aria-labelledby="proof-heading" data-reveal>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <p id="proof-heading" class="mb-6 text-center font-mono text-[11px] uppercase tracking-wider text-navy-500">
+      Trusted by teams building with us
+    </p>
+  </div>
+  {# Constrained to the same max-w-5xl container as the Mission card
+     section above it, instead of a full-bleed edge-to-edge track. #}
+  <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 sm:px-6 lg:px-8">
+    <div class="relative w-full overflow-hidden">
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white via-white/80 to-transparent backdrop-blur-[2px] sm:w-28" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white via-white/80 to-transparent backdrop-blur-[2px] sm:w-28" aria-hidden="true"></div>
+      <div class="about-marquee-track items-center gap-4">
+        {% for i in range(0, 4) %}
+          {% for client in aboutProvenClientsRow1 %}
+            <div class="flex h-20 w-44 flex-shrink-0 items-center justify-center rounded-xl border border-navy-100 bg-white p-4 transition-colors duration-200 hover:border-navy-300 hover:bg-[#F8FAFC]"{% if i > 0 %} aria-hidden="true"{% endif %}>
+              <img src="{{ client.logo }}" alt="{% if i == 0 %}{{ client.name }}{% endif %}" class="h-7 w-auto max-w-[80%] object-contain select-none pointer-events-none" loading="lazy" />
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="relative w-full overflow-hidden">
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white via-white/80 to-transparent backdrop-blur-[2px] sm:w-28" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white via-white/80 to-transparent backdrop-blur-[2px] sm:w-28" aria-hidden="true"></div>
+      <div class="about-marquee-track about-marquee-track--reverse items-center gap-4">
+        {% for i in range(0, 4) %}
+          {% for client in aboutProvenClientsRow2 %}
+            <div class="flex h-20 w-44 flex-shrink-0 items-center justify-center rounded-xl border border-navy-100 bg-white p-4 transition-colors duration-200 hover:border-navy-300 hover:bg-[#F8FAFC]"{% if i > 0 %} aria-hidden="true"{% endif %}>
+              <img src="{{ client.logo }}" alt="{% if i == 0 %}{{ client.name }}{% endif %}" class="h-7 w-auto max-w-[80%] object-contain select-none pointer-events-none" loading="lazy" />
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   WHAT WE DO — capability grid, restyled to the sitewide
+   feature-card recipe (radius-md, hairline border, shadow-subtle,
+   icon badge) per MASTER_DESIGN_SPEC.md §13.
+   ===================================================== #}
+{% set aboutCapabilities = [
+  {
+    title: "AI & Machine Learning",
+    description: "Design and deploy intelligent systems powered by RAG, knowledge systems, AI-powered search, and automation.",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+  },
+  {
+    title: "Data Engineering",
+    description: "Build scalable data pipelines, warehouses, and AI-ready infrastructure that turns raw data into business intelligence.",
+    icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+  },
+  {
+    title: "Custom Software",
+    description: "Create modern SaaS applications, web platforms, and enterprise systems with API-driven, scalable architecture.",
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+  },
+  {
+    title: "AI Integration",
+    description: "Embed AI capabilities into existing workflows&mdash;automation, support systems, and internal productivity tools.",
+    icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+  },
+  {
+    title: "Platform Engineering",
+    description: "Architect cloud-native platforms with microservices, scalable backends, and seamless system connectivity.",
+    icon: "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+  },
+  {
+    title: "Technical Consulting",
+    description: "Provide strategic guidance on AI adoption, architecture decisions, and technology roadmaps.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="capabilities-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Expertise</span>
+      <h2 id="capabilities-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Technology &amp; services
+      </h2>
+    </div>
+
+    {% set featuredCapability = aboutCapabilities[0] %}
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-12" data-reveal-stagger>
+      {# Featured capability — matches homepage-v2's testimonial-card recipe (pattern
+         background, radial accent, hover border) instead of a same-size icon tile. #}
+      <div class="relative flex min-h-[280px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-7 shadow-md transition-all duration-300 hover:shadow-lg hover:border-[#76B900]/30 sm:p-8 lg:col-span-5">
+        <div class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.3]" style="background-image: url('/assets/images/card-info-02.avif');"></div>
+        <div class="pointer-events-none absolute inset-0" style="background-image: radial-gradient(circle at 80% 15%, rgba(118, 185, 0, 0.08) 0%, transparent 60%);"></div>
+        <span class="relative z-10 flex h-11 w-11 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ featuredCapability.icon | safe }}"></path>
+          </svg>
+        </span>
+        <div class="relative z-10">
+          <span class="mb-2 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Core capability</span>
+          <h3 class="mb-2 text-[20px] font-semibold text-[#111827]">{{ featuredCapability.title }}</h3>
+          <p class="max-w-sm text-[14px] leading-relaxed text-[#6B7280]">{{ featuredCapability.description | safe }}</p>
+        </div>
+      </div>
+
+      {# Remaining capabilities — compact list rows (homepage-v2's AI Insights
+         secondary-post recipe) rather than a repeated icon-tile grid. #}
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7" data-reveal-stagger>
+        {% for item in aboutCapabilities.slice(1) %}
+          <div class="group flex items-start gap-4 rounded-xl border border-navy-100 bg-white p-4 transition-colors hover:border-navy-300">
+            <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ item.icon | safe }}"></path>
+              </svg>
+            </span>
+            <div class="min-w-0">
+              <h3 class="mb-1 text-[15px] font-semibold text-[#111827] transition-colors group-hover:text-navy-600">{{ item.title }}</h3>
+              <p class="text-[14px] leading-relaxed text-[#6B7280]">{{ item.description | safe }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   ORIGIN / TIMELINE — sticky-left intro + scrolling vertical
+   timeline on the right, replacing the Alpine tab-switcher.
+   Structure follows the reference layout (text column pinned
+   left, connected timeline entries down the right, occasional
+   inline image), rebuilt entirely on this site's navy/#76B900
+   tokens — dot/line accent uses the single sanctioned brand
+   accent color (§4) instead of the reference's blue, and the
+   "scrolling effect" is the existing sitewide [data-reveal]
+   scroll-in convention (§18) applied per entry, not a new
+   scroll-linked/JS mechanism. Same five milestones, same copy,
+   same images — markup only.
+   ===================================================== #}
+{% set aboutJourney = [
+  {
+    year: "2018",
+    title: "Founded in Kathmandu",
+    description: "Zunkiree Labs started with a simple belief: technology companies can emerge from anywhere. Based in Kathmandu, we set out to build globally relevant software products&mdash;not just services.",
+    bullets: ["Product-first mindset from day one", "AI-native architecture as core principle", "Global ambition, local engineering talent"],
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
+    imageAlt: "Founding team"
+  },
+  {
+    year: "2020",
+    title: "First enterprise clients",
+    description: "We landed our first enterprise clients, proving that quality engineering transcends borders. These early partnerships validated our approach and funded our product development.",
+    bullets: ["Delivered custom AI solutions for enterprises", "Established reputation for engineering excellence", "Grew team with top local engineering talent"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
+    imageAlt: "Team collaboration"
+  },
+  {
+    year: "2023",
+    title: "Zunkiree Search launches",
+    description: "Our flagship AI-native search platform launched, enabling businesses to connect their data to natural language queries. This marked our transition from services to products.",
+    bullets: ["AI-native search with natural language understanding", "RAG-powered knowledge systems", "Embeddable widget for any website"],
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=500&fit=crop",
+    imageAlt: "AI Search platform",
+    link: { href: "/products/search/", label: "Explore Zunkiree Search" }
+  },
+  {
+    year: "2024",
+    title: "Gaamma ERP launches",
+    description: "We expanded into enterprise software with Gaamma, an ERP platform designed specifically for manufacturing businesses. This demonstrated our capability to build large-scale systems.",
+    bullets: ["Complete manufacturing operations management", "Real-time production visibility", "AI-powered process optimization"],
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
+    imageAlt: "Manufacturing ERP",
+    link: { href: "/products/gaamma/", label: "Explore Gaamma" }
+  },
+  {
+    year: "Next",
+    title: "Vertical AI products",
+    description: "We're building specialized AI solutions for specific industries&mdash;healthcare, dental, legal, and more. Each vertical product applies our AI infrastructure expertise to solve domain-specific problems.",
+    bullets: ["Dental AI Assistant for clinic operations", "Healthcare AI for patient interactions", "Industry-specific knowledge systems"],
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+    imageAlt: "Healthcare AI",
+    link: { href: "/contact/", label: "Partner with us" }
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="journey-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+      {# Sticky intro column — pins under the navbar while the
+         timeline column scrolls past it. #}
+      <div class="lg:sticky lg:top-32 lg:col-span-4 lg:self-start" data-reveal>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Origin</span>
+        <h2 id="journey-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+          Our journey
+        </h2>
+        <p class="text-[14px] leading-relaxed text-[#6B7280] sm:text-[16px]">
+          From a founding team in Kathmandu to AI infrastructure running in production for clients worldwide&mdash;here's how we got here, one product at a time.
+        </p>
+      </div>
+
+      {# Vertical timeline — connecting line + dot per entry. Uses the
+         [data-reveal-stagger] container convention (animates direct
+         children) instead of per-entry [data-reveal], matching every
+         other repeated-item section on this page. #}
+      <div class="relative border-l-2 border-navy-100 pl-8 lg:col-span-8 sm:pl-10" data-reveal-stagger>
+        {% for entry in aboutJourney %}
+          <div class="relative {% if not loop.last %}pb-14 sm:pb-16{% endif %}">
+            {# Dot sits ON the connecting line: the line lives at x=0 of the
+               OUTER pl-8/pl-10 container, but this entry is already inset by
+               that padding, so the dot must offset back out by the exact
+               padding amount (-left-8 / sm:-left-10) before centering on it —
+               using left-0 here landed the dot on top of the year text instead. #}
+            <span class="absolute -left-8 top-1 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-white bg-[#76B900] ring-4 ring-white sm:-left-10" aria-hidden="true"></span>
+
+            <span class="mb-3 inline-flex items-center rounded-full bg-[#76B900]/10 px-2.5 py-1 font-mono text-[12px] font-semibold uppercase tracking-wider text-[#5a9100]">{{ entry.year }}</span>
+            <h3 class="mb-4 text-[22px] font-semibold tracking-tight text-[#111827] sm:text-[24px]">{{ entry.title }}</h3>
+            <p class="mb-6 max-w-2xl text-[14px] leading-relaxed text-[#6B7280] sm:text-[16px]">{{ entry.description | safe }}</p>
+
+            <ul class="mb-6 space-y-3">
+              {% for bullet in entry.bullets %}
+                <li class="flex items-start gap-3">
+                  <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span class="text-[14px] text-[#374151]">{{ bullet | safe }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% if entry.link %}
+              <a href="{{ entry.link.href }}" class="mb-6 inline-flex items-center gap-2 font-medium text-[#5a9100] transition-all duration-200 hover:gap-3">
+                {{ entry.link.label }}
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+            {% endif %}
+
+            <div class="max-w-xl overflow-hidden rounded-xl border border-navy-100/60 shadow-subtle {% if entry.link %}mt-6{% endif %}">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="{{ entry.image }}" alt="{{ entry.imageAlt }}" class="h-full w-full object-cover" loading="lazy">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   VALUES — restyled from a full-bleed dark section (retired,
+   §3/§10) into a light 4-up icon row consistent with the
+   Capability grid above. Moved ahead of Vision & Presence
+   per explicit reorder request.
+   ===================================================== #}
+{% set aboutValues = [
+  {
+    title: "Excellence",
+    description: "Every line of code crafted to the highest standards",
+    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "Innovation",
+    description: "Embracing new technologies to deliver cutting-edge solutions",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z"
+  },
+  {
+    title: "Partnership",
+    description: "Your success is our success&mdash;invested in your growth",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+  },
+  {
+    title: "Reliability",
+    description: "We deliver on promises&mdash;deadlines met, quality consistent",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="values-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl text-center md:mb-12 mx-auto" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Principles</span>
+      <h2 id="values-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        What drives us
+      </h2>
+    </div>
+
+    {# Asymmetric featured-first layout: first value leads as a larger,
+       tinted card; remaining three stack as a tighter divided column
+       beside it — breaks the four-equal-tiles pattern for hierarchy. #}
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-5" data-reveal-stagger>
+      {% set featured = aboutValues[0] %}
+      <div class="rounded-2xl border border-zunkiree-200/70 bg-zunkiree-50 p-7 sm:p-8 lg:col-span-2 lg:p-10">
+        <span class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-zunkiree-600 text-white">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="{{ featured.icon }}" />
+          </svg>
+        </span>
+        <h3 class="mb-2.5 text-[20px] font-semibold text-[#111827] sm:text-[22px]">{{ featured.title }}</h3>
+        <p class="max-w-xs text-[14.5px] leading-relaxed text-[#6B7280]">{{ featured.description | safe }}</p>
+      </div>
+
+      <div class="grid grid-cols-1 divide-y divide-navy-100 rounded-2xl border border-navy-100/60 bg-white shadow-subtle sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:col-span-3 lg:grid-cols-1 lg:divide-x-0 lg:divide-y">
+        {% for value in aboutValues %}
+          {% if not loop.first %}
+            <div class="flex flex-col gap-1 p-6 sm:p-7 lg:flex-row lg:items-baseline lg:gap-4 lg:px-8 lg:py-6">
+              <h3 class="text-[16px] font-semibold text-[#111827] lg:w-32 lg:shrink-0">{{ value.title }}</h3>
+              <p class="text-[13.5px] leading-relaxed text-[#6B7280]">{{ value.description | safe }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   VISION & PRESENCE — Kore.ai's "Global presence" location
+   card + image pairing, adapted honestly to Zunkiree's actual
+   footprint: one real HQ, not a fabricated multi-office map.
+   Replaces the prior 3-photo scrim mosaic (dark gradient
+   overlay was legal per §10 but read as generic stock-collage
+   filler); a single clean bordered photo + info cards matches
+   §17's image-treatment rule and folds the same three claims
+   (product-first, AI-native, global-from-Nepal) into copy
+   instead of duplicated caption chrome.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="vision-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Vision &amp; presence</span>
+      <h2 id="vision-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Global impact, built from Kathmandu
+      </h2>
+    </div>
+
+    <p class="mb-10 max-w-3xl text-[14px] leading-relaxed text-[#374151] sm:text-[18px] md:mb-12" data-reveal>
+      Our long-term vision is to grow from a services-supported startup into a product-led technology company&mdash;developing a portfolio of AI-native software platforms that serve multiple industries worldwide.
+    </p>
+
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-12" data-reveal-stagger>
+      <div class="overflow-hidden rounded-xl border border-navy-100/60 shadow-subtle lg:col-span-7">
+        <img
+          src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=900&h=650&fit=crop"
+          alt="Kathmandu, Nepal"
+          class="h-72 w-full object-cover sm:h-96 lg:h-full"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex flex-col gap-5 lg:col-span-5">
+        <div class="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle sm:p-7">
+          <span class="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </span>
+          <h3 class="mb-1 text-[17px] font-semibold text-[#111827]">Kathmandu, Nepal</h3>
+          <p class="text-[14px] leading-relaxed text-[#6B7280]">Headquarters&mdash;engineering, product, and delivery, all under one roof.</p>
         </div>
 
-        {# FAQ Items #}
-        <div class="divide-y divide-gray-200">
-          {% for item in aboutFaq %}
+        <div class="flex-1 rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle sm:p-7">
+          <p class="mb-4 text-[14px] leading-relaxed text-[#374151]">
+            One team, one office&mdash;serving clients across Education, Agencies, Healthcare, and Real Estate, with production systems running for organizations from Nepal to Australia.
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="rounded-full border border-navy-100 bg-[#F8FAFC] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-navy-600">Product-first</li>
+            <li class="rounded-full border border-navy-100 bg-[#F8FAFC] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-navy-600">AI-native</li>
+            <li class="rounded-full border border-navy-100 bg-[#F8FAFC] px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-navy-600">Global clients</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   FAQ — same aboutFaq.json data, restyled to the sitewide
+   accordion recipe used on contact.njk/homepage-v2.njk.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in aboutFaq %}
           <div class="py-5">
             <button
-              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
-              class="w-full flex items-center justify-between text-left group"
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="flex w-full items-center justify-between gap-4 text-left group"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="about-faq-answer-{{ loop.index }}"
             >
-              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
                 {{ item.question }}
               </span>
-              <span class="flex-shrink-0 text-gray-400">
-                <svg
-                  class="w-5 h-5 transition-transform duration-200"
-                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                 </svg>
               </span>
             </button>
             <div
-              x-show="activeIndex === {{ loop.index }} || expandAll"
+              id="about-faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
               x-transition:enter="transition ease-out duration-200"
               x-transition:enter-start="opacity-0 -translate-y-2"
               x-transition:enter-end="opacity-100 translate-y-0"
@@ -669,26 +638,160 @@ permalink: /about/
               x-transition:leave-end="opacity-0 -translate-y-2"
               class="overflow-hidden"
             >
-              <p class="pt-4 text-gray-600 leading-relaxed">
-                {{ item.answer }}
-              </p>
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
             </div>
           </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
       </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 {# =====================================================
-   SCHEMA MARKUP (JSON-LD) - Organization
+   INFRASTRUCTURE-LEVEL AI COMPARISON
+   Recovered from commit 8d68e55 (SEOAI expanded-content
+   block, since removed) and re-homed into the v2 layout.
    ===================================================== #}
-<script type="application/ld+json"></script>
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
+  <div class="mx-auto max-w-content">
+    <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">Infrastructure-Level AI, Not Wrappers</h2>
+    <div class="mt-4 max-w-2xl text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
+      <p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p>
+      <div class="mt-8 mb-2 overflow-hidden rounded-lg border border-gray-200">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">Feature</th>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">Alternative</th>
+              <th class="px-4 py-3 text-left font-medium text-gray-900">This Option</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Foundation</td>
+              <td class="px-4 py-3 text-gray-600">API wrapper over a third-party model</td>
+              <td class="px-4 py-3 text-gray-600">Owned AI-native infrastructure (RAG pipelines, knowledge systems)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Data readiness</td>
+              <td class="px-4 py-3 text-gray-600">Ad-hoc, project-by-project</td>
+              <td class="px-4 py-3 text-gray-600">Scalable data pipelines and AI-ready infrastructure built in</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Engagement model</td>
+              <td class="px-4 py-3 text-gray-600">One-off project delivery</td>
+              <td class="px-4 py-3 text-gray-600">Ongoing platform that compounds value over time</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-gray-900">Service scope</td>
+              <td class="px-4 py-3 text-gray-600">Single point solution</td>
+              <td class="px-4 py-3 text-gray-600">AI development, data engineering, custom software, and platform engineering together</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
-{# FAQPage Schema #}
+{# =====================================================
+   CLOSING CTA — sanctioned dark-card radial-gradient
+   component (COMPONENT_LIBRARY.md §2.6 / industry.njk),
+   replacing the bespoke cta-background.svg treatment.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Ready to build something great?
+      </h2>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Contact Us
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/team/"
+          class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Meet Our Team
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}
+
+{# =====================================================
+   SCHEMA MARKUP (JSON-LD) — Organization + FAQPage, unchanged
+   ===================================================== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zunkiree Labs",
+  "url": "https://zunkireelabs.com",
+  "logo": "https://zunkireelabs.com/assets/images/zunkiree-logo.png",
+  "description": "Zunkiree Labs is a product-first AI and software engineering company from Kathmandu, Nepal. We build intelligent platforms like Zunkiree Search and Gaamma ERP.",
+  "foundingDate": "2018",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Kathmandu, Nepal"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "Nepal"
+  },
+  "sameAs": [],
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Data Engineering",
+    "Custom Software Development",
+    "AI Integration",
+    "Platform Engineering"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Products & Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Zunkiree Search",
+          "description": "AI-native search and interaction platform"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareApplication",
+          "name": "Gaamma",
+          "description": "Enterprise resource planning platform for manufacturing"
+        }
+      }
+    ]
+  }
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -707,18 +810,3 @@ permalink: /about/
   ]
 }
 </script>
-
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"About Zunkiree Labs: AI Development & Software Services","articleBody":"The AI infrastructure company We build intelligent software platforms that connect data, systems, and human interaction through AI. Built on an AI-native architecture, our platforms provide a unified foundation for search, automation, and data intelligence—combined with AI models tuned to each organization's unique needs. With origins in Nepal and a global mindset, Zunkiree Labs was founded in 2018 by engineers who believe great software can come from anywhere. Today, we're building the next generation of AI-native platforms for businesses worldwide. Explore Our Products >_ Our Mission We build infrastructure-level AI systems, not wrappers—products that compound value over time. Zunkiree Labs combines AI engineering, data systems, and modern software architecture to transform how organizations operate. We don't retrofit AI onto existing systems. We design with intelligence at the core, creating platforms that serve businesses internationally while staying rooted in Nepal's growing tech ecosystem. — Sadin Shrestha, Founder & CEO Expertise Technology & services AI & Machine Learning Design and deploy intelligent systems powered by RAG, knowledge systems, AI-powered search, and automation. Data Engineering Build scalable data pipelines, warehouses, and AI-ready infrastructure that turns raw data into business intelligence. Custom Software Create modern SaaS applications, web platforms, and enterprise systems with API-driven, scalable architecture. AI Integration Embed AI capabilities into existing workflows—automation, support systems, and internal productivity tools. Platform Engineering Architect cloud-native platforms with microservices, scalable backends, and seamless system connectivity. Technical Consulting Provide strategic guidance on AI adoption, architecture decisions, and technology roadmaps. Our journey 2018 2020 2023 2024 Next Founded in Kathmandu Zunkiree Labs started with a simple belief: technology companies can emerge from anywhere. Based in Kathmandu, we set out to build globally relevant software products—not just services. Product-first mindset from day one AI-native architecture as core principle Global ambition, local engineering talent First enterprise clients We landed our first enterprise clients, proving that quality engineering transcends borders. These early partnerships validated our approach and funded our product development. Delivered custom AI solutions for enterprises Established reputation for engineering excellence Grew team with top local engineering talent Zunkiree Search launches Our flagship AI-native search platform launched, enabling businesses to connect their data to natural language queries. This marked our transition from services to products. AI-native search with natural language understanding RAG-powered knowledge systems Embeddable widget for any website Explore Zunkiree Search Gaamma ERP launches We expanded into enterprise software with Gaamma, an ERP platform designed specifically for manufacturing."}</script><!-- SEOAI:SCHEMA:END -->
-
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Infrastructure-Level AI, Not Wrappers</h2>
-      </div>
-      <div>
-        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p><div class="mb-10 overflow-hidden rounded-lg border border-gray-200"><table class="w-full text-sm"><thead class="bg-gray-50"><tr><th class="px-4 py-3 text-left font-medium text-gray-900">Feature</th><th class="px-4 py-3 text-left font-medium text-gray-900">Alternative</th><th class="px-4 py-3 text-left font-medium text-gray-900">This Option</th></tr></thead><tbody class="divide-y divide-gray-200"><tr><td class="px-4 py-3 font-medium text-gray-900">Foundation</td><td class="px-4 py-3 text-gray-600">API wrapper over a third-party model</td><td class="px-4 py-3 text-gray-600">Owned AI-native infrastructure (RAG pipelines, knowledge systems)</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">Data readiness</td><td class="px-4 py-3 text-gray-600">Ad-hoc, project-by-project</td><td class="px-4 py-3 text-gray-600">Scalable data pipelines and AI-ready infrastructure built in</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">Engagement model</td><td class="px-4 py-3 text-gray-600">One-off project delivery</td><td class="px-4 py-3 text-gray-600">Ongoing platform that compounds value over time</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">Service scope</td><td class="px-4 py-3 text-gray-600">Single point solution</td><td class="px-4 py-3 text-gray-600">AI development, data engineering, custom software, and platform engineering together</td></tr></tbody></table></div></div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->

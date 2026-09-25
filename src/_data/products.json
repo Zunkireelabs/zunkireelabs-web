@@ -18,42 +18,6 @@
     ]
   },
   {
-    "id": "ai-commerce-agent",
-    "title": "Stella",
-    "tagline": "The sales agent that never clocks out.",
-    "category": "AI Products",
-    "status": "Available",
-    "description": "AI sales agent that handles discovery, questions, and checkout — 24/7. Supports eSewa, Khalti, and international payments from day one.",
-    "cta": "View product",
-    "url": "/products/ai-commerce-agent/",
-    "icon": "cart",
-    "mockup": "/assets/images/product-mockup-dashboard.avif",
-    "features": [
-      "Autonomous sales conversations",
-      "Nepal payment integration",
-      "Multi-platform support",
-      "24/7 AI sales agent"
-    ]
-  },
-  {
-    "id": "ai-booking-engine",
-    "title": "Zenly",
-    "tagline": "35% fewer no-shows. Zero scheduling chaos.",
-    "category": "Business Tools",
-    "status": "Available",
-    "description": "AI reminders cut no-shows by 35%. Handles availability, multi-resource conflicts, and scheduling automatically — for clinics, studios, and any service business.",
-    "cta": "View product",
-    "url": "/products/ai-booking-engine/",
-    "icon": "calendar",
-    "mockup": "/assets/images/product-mockup-dashboard.avif",
-    "features": [
-      "Complex availability handling",
-      "Multi-resource booking",
-      "AI-powered reminders",
-      "Calendar integrations"
-    ]
-  },
-  {
     "id": "ai-crm",
     "title": "AI CRM",
     "tagline": "CRM that sells. Not just stores.",
@@ -69,42 +33,6 @@
       "Automated outreach",
       "Customer insights",
       "Pipeline intelligence"
-    ]
-  },
-  {
-    "id": "gaamma",
-    "title": "Gaamma",
-    "tagline": "Your factory, fully visible.",
-    "category": "Enterprise Software",
-    "status": "Available",
-    "description": "Production planning, inventory, quality control, and analytics — one platform. Replace fragmented spreadsheets with a single source of truth your factory runs on.",
-    "cta": "View product",
-    "url": "/products/gaamma/",
-    "icon": "factory",
-    "mockup": "/assets/images/product-mockup-dashboard.avif",
-    "features": [
-      "Production planning",
-      "Inventory management",
-      "Quality control",
-      "Real-time analytics"
-    ]
-  },
-  {
-    "id": "dental-ai",
-    "title": "Dental AI Assistant",
-    "tagline": "Less admin. More dentistry.",
-    "category": "AI Products",
-    "status": "Coming Soon",
-    "description": "Automates patient communication, scheduling, and follow-up reminders. Front desk time shifts from admin to patients. Built for dental practices in Nepal.",
-    "cta": "Join waitlist",
-    "url": "/products/dental-ai/",
-    "icon": "tooth",
-    "mockup": "/assets/images/product-mockup-dashboard.avif",
-    "features": [
-      "Patient communication",
-      "Appointment scheduling",
-      "Follow-up automation",
-      "Practice analytics"
     ]
   }
 ]
