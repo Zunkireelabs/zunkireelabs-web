@@ -42,5 +42,15 @@
     "headline": "CMS Group automates enterprise workflows",
     "description": "CMS Group transformed their operations with custom enterprise software that automated manual workflows and improved team collaboration.",
     "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop"
+  },
+  {
+    "id": "chayce-properties",
+    "name": "Chayce Properties",
+    "logo": "/images/clients/chayce-properties.webp",
+    "stat": "End-to-end",
+    "statLabel": "digital operations managed",
+    "headline": "Chayce Properties runs on Zunkiree infrastructure",
+    "description": "For Chayce Properties, a UK real estate company, Zunkiree Labs doesn't just handle SEO — we manage the full digital operation: website, AI systems, and ongoing technical delivery.",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
   }
 ]

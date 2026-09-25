@@ -1,11 +1,19 @@
 [
   {
     "question": "What products does Zunkiree Labs offer?",
-    "answer": "Zunkiree Labs builds three main products: Zunkiree Search (an AI-native search platform that delivers direct answers through natural language), Gaamma (a manufacturing ERP platform for operational efficiency and digital transformation), and Dental AI Assistant (an AI-powered tool for dental practice management, currently in development)."
+    "answer": "Zunkiree Labs builds six AI products: Zunkiree Search (AI-native search that delivers direct answers), Dental AI (AI-powered dental practice management), Gaamma (a manufacturing ERP platform), Stella (an autonomous AI Commerce Agent for ecommerce), Zenly (an AI Booking Engine for scheduling), and AI CRM (AI-powered customer intelligence)."
   },
   {
     "question": "What is Zunkiree Search and how does it work?",
     "answer": "Zunkiree Search is an AI-native search and interaction platform that connects your business data to customer-facing experiences. Unlike keyword-based search, it understands context and intent, delivering direct answers instead of link lists. Integration takes as little as 2 hours using our JavaScript widget."
+  },
+  {
+    "question": "What is Zenly, Zunkiree's AI Booking Engine?",
+    "answer": "Zenly is Zunkiree Labs' AI-powered scheduling platform. It handles complex availability, multi-resource bookings, and automatic conflict resolution, and reduces no-shows by an average of 35% with AI-powered reminders."
+  },
+  {
+    "question": "What is Stella, Zunkiree's AI Commerce Agent?",
+    "answer": "Stella is an autonomous AI agent that handles the entire ecommerce buying journey—from product discovery to checkout—so it can sell around the clock without a human in the loop. It's built to serve ecommerce businesses globally, wherever they operate."
   },
   {
     "question": "Who is Gaamma designed for?",
@@ -18,5 +26,9 @@
   {
     "question": "Are Zunkiree products secure for enterprise use?",
     "answer": "Yes. All Zunkiree products include enterprise-grade security: role-based access control, end-to-end encryption, SOC 2 compliance readiness, and options for on-premises or private cloud deployment. We sign BAAs for healthcare customers and support custom security requirements."
+  },
+  {
+    "question": "Are Zunkiree Labs products available to businesses globally?",
+    "answer": "Yes. Zunkiree Labs' products and implementation teams serve clients globally, including across the US, UK, India, Australia, Canada, Switzerland, and the Netherlands, with remote onboarding and time-zone-overlapping support — delivery isn't tied to any single location."
   }
 ]

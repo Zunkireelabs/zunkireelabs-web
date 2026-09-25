@@ -1,6 +1,10 @@
 {
   "ai-development": {
     "id": "ai-development",
+    "relatedCaseStudies": [
+      { "slug": "rapid-investment-case-study", "title": "Rapid Investment", "stat": "10x faster deal analysis" },
+      { "slug": "mach24orbital-case-study", "title": "Mach24 Orbital", "stat": "50% faster launch prep" }
+    ],
     "title": "AI Development",
     "category": "AI & Data",
     "tagline": "Build intelligent systems that solve real business problems",
@@ -195,6 +199,10 @@
 
   "ai-customer-experience": {
     "id": "ai-customer-experience",
+    "relatedCaseStudies": [
+      { "slug": "admizz-case-study", "title": "Admizz Education", "stat": "45% faster response times" },
+      { "slug": "khems-cleaning-case-study", "title": "Khems Cleaning", "stat": "70% increase in bookings" }
+    ],
     "title": "AI Customer Experience",
     "category": "AI & Data",
     "tagline": "Transform support from cost center to competitive advantage",
@@ -391,6 +399,9 @@
 
   "ai-ecommerce": {
     "id": "ai-ecommerce",
+    "relatedCaseStudies": [
+      { "slug": "prime-tiles-case-study", "title": "Prime Tiles", "stat": "2x online conversion rate" }
+    ],
     "title": "AI Ecommerce Solutions",
     "category": "AI & Data",
     "tagline": "Build AI-powered ecommerce systems that sell smarter",
@@ -585,6 +596,10 @@
 
   "data-systems": {
     "id": "data-systems",
+    "relatedCaseStudies": [
+      { "slug": "cms-group-case-study", "title": "CMS Group", "stat": "85% of workflows automated" },
+      { "slug": "corecloud365-case-study", "title": "Corecloud365", "stat": "60% cost reduction" }
+    ],
     "title": "Data Systems",
     "category": "AI & Data",
     "tagline": "Turn raw data into production-ready AI infrastructure",
@@ -780,6 +795,9 @@
 
   "custom-software": {
     "id": "custom-software",
+    "relatedCaseStudies": [
+      { "slug": "khushbu-nirman-case-study", "title": "Khushbu Nirman Sewa", "stat": "40% reduction in delays" }
+    ],
     "title": "Custom Software",
     "category": "Development",
     "tagline": "Build systems your team will actually use",
@@ -1169,6 +1187,9 @@
 
   "web-development": {
     "id": "web-development",
+    "relatedCaseStudies": [
+      { "slug": "chayce-properties-case-study", "title": "Chayce Properties", "stat": "Full-stack digital ownership" }
+    ],
     "title": "Web Development",
     "category": "Development",
     "tagline": "Fast sites that rank and convert",

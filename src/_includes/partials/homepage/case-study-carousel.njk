@@ -1,0 +1,223 @@
+{#
+  Homepage interactive case-study carousel (Alpine.js). Shared structure
+  across all locales; only the studies' translated text and the JS function
+  name (kept per-locale to avoid any cross-page collision) vary.
+
+  Expects: carouselEyebrow, carouselHeading, playLabel, pauseLabel,
+  carouselFnName (e.g. "caseStudyCarousel", "caseStudyCarouselDe", "caseStudyCarouselNl"),
+  studies — array of {id, name, logo, stat, statLabel, headline, description,
+  image, ctaText, ctaUrl}, caseStudyAltSuffix (e.g. "case study" / "Fallstudie" / "case study")
+#}
+<section class="py-16 md:py-24" x-data="{{ carouselFnName }}()">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+
+    {# Section Header #}
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">{{ carouselEyebrow }}</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">{{ carouselHeading }}</h2>
+    </div>
+
+    {# Logo Tab Bar #}
+    <div class="flex items-stretch gap-2">
+      {# Play/Pause Button #}
+      <button
+        @click="togglePlay()"
+        class="flex-shrink-0 w-14 h-20 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors"
+        :aria-label="isPlaying ? '{{ pauseLabel }}' : '{{ playLabel }}'"
+      >
+        {# Play Icon #}
+        <svg x-show="!isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        {# Pause Icon #}
+        <svg x-show="isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+
+      {# Client Logo Tabs - Horizontal Scroll (5 visible at once) #}
+      <div
+        x-ref="tabsContainer"
+        class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
+        style="--tab-count: 5;"
+      >
+        <template x-for="(study, index) in studies" :key="study.id">
+          <button
+            @click="goTo(index)"
+            :x-ref="'tab-' + index"
+            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
+            style="min-width: calc((100% - 32px) / 5);"
+            :class="activeIndex === index ? 'bg-white shadow-sm' : 'bg-gray-100 hover:bg-gray-50'"
+          >
+            <img
+              :src="study.logo"
+              :alt="study.name"
+              class="max-h-8 max-w-[120px] object-contain transition-all duration-300"
+              :class="activeIndex === index ? 'grayscale-0 opacity-100' : 'grayscale opacity-50 hover:opacity-70'"
+            />
+            {# Progress Bar (only on active, animates while playing) #}
+            <div
+              class="absolute bottom-0 left-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && isPlaying ? '' : 'hidden'"
+              :style="`width: ${progress}%`"
+            ></div>
+            {# Static indicator (only on active, when paused) #}
+            <div
+              class="absolute bottom-0 left-0 right-0 h-1 bg-zunkiree-600"
+              :class="activeIndex === index && !isPlaying ? '' : 'hidden'"
+            ></div>
+          </button>
+        </template>
+      </div>
+    </div>
+
+    {# Content Area - Separate container with gap #}
+    <div class="mt-6 bg-white border border-gray-200">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        {# Left: Content #}
+        <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[500px]">
+          <template x-for="(study, index) in studies" :key="study.id">
+            <div
+              x-show="activeIndex === index"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 transform translate-y-4"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-200 absolute"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+            >
+              {# Client Logo Large #}
+              <div class="mb-6">
+                <img
+                  :src="study.logo"
+                  :alt="study.name"
+                  class="h-10 object-contain"
+                />
+              </div>
+
+              {# Big Stat #}
+              <div class="mb-4">
+                <span class="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900" x-text="study.stat"></span>
+                <span class="text-lg text-gray-500 ml-2" x-text="study.statLabel"></span>
+              </div>
+
+              {# Headline #}
+              <h3 class="text-xl md:text-2xl font-medium text-gray-900 mb-4" x-text="study.headline"></h3>
+
+              {# Description #}
+              <p class="text-gray-600 mb-6 max-w-lg" x-text="study.description"></p>
+
+              {# CTA #}
+              <a
+                :href="study.ctaUrl"
+                class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all"
+              >
+                <span x-text="study.ctaText"></span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </template>
+        </div>
+
+        {# Right: Image #}
+        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden bg-gray-100">
+          {# Case study images with transition #}
+          <template x-for="(study, index) in studies" :key="'visual-' + study.id">
+            <div
+              class="absolute inset-0"
+              :class="activeIndex === index ? '' : 'hidden'"
+            >
+              <img
+                :src="study.image"
+                :alt="study.name + ' {{ caseStudyAltSuffix }}'"
+                class="w-full h-full object-cover"
+              />
+              {# Subtle overlay for better contrast #}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+          </template>
+          {# Accent line #}
+          <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-zunkiree-600"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function {{ carouselFnName }}() {
+    return {
+      activeIndex: 0,
+      isPlaying: true,
+      progress: 0,
+      interval: null,
+      duration: 5000, // 5 seconds per slide
+
+      studies: {{ studies | dump | safe }},
+
+      init() {
+        this.startAutoPlay();
+      },
+
+      startAutoPlay() {
+        if (this.interval) clearInterval(this.interval);
+        this.progress = 0;
+
+        const tick = 50; // Update every 50ms for smooth progress
+        this.interval = setInterval(() => {
+          if (this.isPlaying) {
+            this.progress += (tick / this.duration) * 100;
+            if (this.progress >= 100) {
+              this.next();
+            }
+          }
+        }, tick);
+      },
+
+      next() {
+        this.activeIndex = (this.activeIndex + 1) % this.studies.length;
+        this.progress = 0;
+        this.scrollToActive();
+      },
+
+      goTo(index) {
+        this.activeIndex = index;
+        this.progress = 0;
+        this.isPlaying = false; // Pause when user manually selects
+        this.scrollToActive();
+      },
+
+      togglePlay() {
+        this.isPlaying = !this.isPlaying;
+        if (this.isPlaying) {
+          this.progress = 0; // Reset progress when resuming
+        }
+      },
+
+      scrollToActive() {
+        // Scroll only the tab container horizontally (not the page)
+        this.$nextTick(() => {
+          const container = this.$refs.tabsContainer;
+          const buttons = container.querySelectorAll('button');
+          const activeButton = buttons[this.activeIndex];
+
+          if (activeButton && container) {
+            // Calculate scroll position to center the active button
+            const containerWidth = container.offsetWidth;
+            const buttonLeft = activeButton.offsetLeft;
+            const buttonWidth = activeButton.offsetWidth;
+
+            // Scroll container only (not the page)
+            container.scrollTo({
+              left: buttonLeft - (containerWidth / 2) + (buttonWidth / 2),
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    }
+  }
+</script>

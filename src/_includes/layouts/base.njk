@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="{{ lang or 'en' }}" class="scroll-smooth">
 <head>
   <!-- Google Analytics -->
   {% if env.GA_MEASUREMENT_ID %}
@@ -28,7 +28,7 @@
   <meta property="og:image" content="{{ site.url }}{{ site.meta.ogImage }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="{{ ogLocale or 'en_US' }}">
   <meta property="og:site_name" content="{{ site.name }}">
 
   <!-- Twitter -->
@@ -42,6 +42,13 @@
   <link rel="canonical" href="{{ site.url }}{{ canonicalUrl }}">
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+
+  <!-- Hreflang alternates (language/region variants of this page) -->
+  {% if hreflangAlternates %}
+  {% for alt in hreflangAlternates %}
+  <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ site.url }}{{ alt.url }}">
+  {% endfor %}
   {% endif %}
 
   <!-- Preload Critical Resources for LCP -->
