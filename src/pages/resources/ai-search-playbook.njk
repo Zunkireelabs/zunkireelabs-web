@@ -1,165 +1,172 @@
 ---
-layout: resource-content.njk
+layout: base.njk
 title: "AI Search Playbook for Product Teams | Zunkiree Labs" # SEOAI:TITLE
 description: A hands-on playbook for product managers and engineers implementing AI-native search. Code examples, architecture patterns, and lessons from 20+ implementations.
 permalink: /resources/ai-search-playbook/
-slug: ai-search-playbook
 ---
 
-{# Who is this for #}
-<div class="mb-12" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Who is this playbook for?</h2>
-  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
-    This playbook is designed for <strong class="font-semibold text-[#111827]">product managers</strong> planning AI search features and <strong class="font-semibold text-[#111827]">engineers</strong> implementing them. Whether you're adding search to a new product or replacing legacy keyword search, this guide provides the frameworks, code patterns, and lessons learned from 20+ real-world implementations.
-  </p>
-  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
-    We cover everything from initial scoping and user research to production deployment and monitoring. Each chapter includes practical exercises, code snippets in Python and JavaScript, and decision frameworks you can use immediately.
-  </p>
-</div>
+{% set resource = resources.items | find("slug", "ai-search-playbook") %}
 
-{# What's inside #}
-<div class="mb-12" data-reveal>
-  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What's inside</h2>
-  <div class="space-y-4">
-    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
-      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 1: Scoping AI Search Projects</p>
-      <p class="text-[14px] leading-relaxed text-[#6B7280]">How to identify high-impact search use cases and build a business case for AI search investment.</p>
-    </div>
-    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
-      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 2: User Research for Search</p>
-      <p class="text-[14px] leading-relaxed text-[#6B7280]">Templates and methodologies for understanding how users search and what they expect from results.</p>
-    </div>
-    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
-      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 3: Architecture Patterns</p>
-      <p class="text-[14px] leading-relaxed text-[#6B7280]">From simple widget integration to complex multi-source enterprise deployments.</p>
-    </div>
-    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
-      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 4: Implementation Guide</p>
-      <p class="text-[14px] leading-relaxed text-[#6B7280]">Step-by-step code examples for Python, JavaScript, and REST API integrations.</p>
-    </div>
-    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
-      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 5: Testing & Quality</p>
-      <p class="text-[14px] leading-relaxed text-[#6B7280]">A/B testing frameworks and metrics for measuring search quality improvements.</p>
-    </div>
-  </div>
-</div>
-
-{# What You Get #}
-<div class="mb-12" data-reveal>
-  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
-  <ul class="space-y-3.5">
-    {% for item in resource.whatYouGet %}
-    <li class="flex items-start gap-3">
-      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
-        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-        </svg>
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-slate-800 text-white text-xs font-medium tracking-wide mb-4">
+        Ebook
       </span>
-      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-sm text-warm-500" data-reveal>
+        {{ resource.publishDate }} &bull; {{ resource.readTime }}
+      </p>
+    </div>
 
-{# FAQ Section #}
-<div data-reveal>
-  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-
-  <div x-data="{ activeIndex: null }">
-    <div class="divide-y divide-navy-100">
-      <div class="py-5">
-        <button
-          @click="activeIndex = (activeIndex === 1) ? null : 1"
-          class="group flex w-full items-center justify-between gap-4 text-left"
-          :aria-expanded="activeIndex === 1 ? 'true' : 'false'"
-          aria-controls="faq-answer-1"
-        >
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
-            Do I need machine learning experience?
-          </span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 1 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-            </svg>
-          </span>
-        </button>
-        <div
-          id="faq-answer-1"
-          x-show="activeIndex === 1"
-          x-transition:enter="transition ease-out duration-200"
-          x-transition:enter-start="opacity-0 -translate-y-2"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-150"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-2"
-          class="overflow-hidden"
-        >
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">No. This playbook is designed for product teams, not ML specialists. We explain concepts in practical terms and provide ready-to-use code that doesn't require deep ML knowledge.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
         </div>
       </div>
-      <div class="py-5">
-        <button
-          @click="activeIndex = (activeIndex === 2) ? null : 2"
-          class="group flex w-full items-center justify-between gap-4 text-left"
-          :aria-expanded="activeIndex === 2 ? 'true' : 'false'"
-          aria-controls="faq-answer-2"
-        >
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
-            What programming languages are covered?
-          </span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 2 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-            </svg>
-          </span>
-        </button>
-        <div
-          id="faq-answer-2"
-          x-show="activeIndex === 2"
-          x-transition:enter="transition ease-out duration-200"
-          x-transition:enter-start="opacity-0 -translate-y-2"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-150"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-2"
-          class="overflow-hidden"
-        >
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Code examples are provided in Python and JavaScript, with REST API patterns that work with any language. We also include curl examples for quick testing.</p>
-        </div>
-      </div>
-      <div class="py-5">
-        <button
-          @click="activeIndex = (activeIndex === 3) ? null : 3"
-          class="group flex w-full items-center justify-between gap-4 text-left"
-          :aria-expanded="activeIndex === 3 ? 'true' : 'false'"
-          aria-controls="faq-answer-3"
-        >
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
-            Is this specific to Zunkiree Search?
-          </span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 3 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-            </svg>
-          </span>
-        </button>
-        <div
-          id="faq-answer-3"
-          x-show="activeIndex === 3"
-          x-transition:enter="transition ease-out duration-200"
-          x-transition:enter-start="opacity-0 -translate-y-2"
-          x-transition:enter-end="opacity-100 translate-y-0"
-          x-transition:leave="transition ease-in duration-150"
-          x-transition:leave-start="opacity-100 translate-y-0"
-          x-transition:leave-end="opacity-0 -translate-y-2"
-          class="overflow-hidden"
-        >
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">While examples use Zunkiree APIs, the concepts, patterns, and frameworks apply to any AI search implementation. The playbook is designed to be practical regardless of your vendor choice.</p>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/ai-search-stack-guide/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              The AI Search Stack for the Modern Enterprise
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/webinar-ai-search-implementation/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Watch: AI Search Implementation Webinar
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/natural-language-processing-fundamentals/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Natural Language Processing Fundamentals
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Who is this playbook for?</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            This playbook is designed for <strong>product managers</strong> planning AI search features and <strong>engineers</strong> implementing them. Whether you're adding search to a new product or replacing legacy keyword search, this guide provides the frameworks, code patterns, and lessons learned from 20+ real-world implementations.
+          </p>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            We cover everything from initial scoping and user research to production deployment and monitoring. Each chapter includes practical exercises, code snippets in Python and JavaScript, and decision frameworks you can use immediately.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">What's inside</h2>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="text-lg font-medium text-warm-black mb-1">Chapter 1: Scoping AI Search Projects</p>
+              <p class="text-warm-600">How to identify high-impact search use cases and build a business case for AI search investment.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="text-lg font-medium text-warm-black mb-1">Chapter 2: User Research for Search</p>
+              <p class="text-warm-600">Templates and methodologies for understanding how users search and what they expect from results.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="text-lg font-medium text-warm-black mb-1">Chapter 3: Architecture Patterns</p>
+              <p class="text-warm-600">From simple widget integration to complex multi-source enterprise deployments.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="text-lg font-medium text-warm-black mb-1">Chapter 4: Implementation Guide</p>
+              <p class="text-warm-600">Step-by-step code examples for Python, JavaScript, and REST API integrations.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="text-lg font-medium text-warm-black mb-1">Chapter 5: Testing & Quality</p>
+              <p class="text-warm-600">A/B testing frameworks and metrics for measuring search quality improvements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
+          <ul class="space-y-3">
+            {% for item in resource.whatYouGet %}
+            <li class="flex items-start gap-3">
+              <span class="text-zunkiree-600 mt-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Do I need machine learning experience?</h3>
+              <p class="text-warm-600">No. This playbook is designed for product teams, not ML specialists. We explain concepts in practical terms and provide ready-to-use code that doesn't require deep ML knowledge.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">What programming languages are covered?</h3>
+              <p class="text-warm-600">Code examples are provided in Python and JavaScript, with REST API patterns that work with any language. We also include curl examples for quick testing.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-warm-black mb-2">Is this specific to Zunkiree Search?</h3>
+              <p class="text-warm-600">While examples use Zunkiree APIs, the concepts, patterns, and frameworks apply to any AI search implementation. The playbook is designed to be practical regardless of your vendor choice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <script type="application/ld+json">
 {
@@ -178,9 +185,15 @@ slug: ai-search-playbook
 
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is 'The AI Search Playbook for Product Teams' about?","@type":"Question","acceptedAnswer":{"text":"The AI Search Playbook for Product Teams is a practical guide that provides implementation patterns, code examples, and real results for product managers and engineers involved in AI search features. It covers everything from scoping projects to production deployment and monitoring.","@type":"Answer"}},{"name":"Who is the target audience for the playbook?","@type":"Question","acceptedAnswer":{"text":"This playbook is designed for product managers planning AI search features and engineers implementing them, whether they are adding search to a new product or replacing legacy keyword search.","@type":"Answer"}},{"name":"What programming languages are included in the examples?","@type":"Question","acceptedAnswer":{"text":"The playbook provides code examples in Python and JavaScript, along with REST API patterns that work with any language. It also includes curl examples for quick testing.","@type":"Answer"}},{"name":"Do I need machine learning experience to use this playbook?","@type":"Question","acceptedAnswer":{"text":"No, you do not need machine learning experience. The playbook explains concepts in practical terms and provides ready-to-use code that doesn't require deep ML knowledge.","@type":"Answer"}},{"name":"Are the concepts in the playbook specific to Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"While the examples use Zunkiree APIs, the concepts, patterns, and frameworks presented in the playbook apply to any AI search implementation, making it practical regardless of your vendor choice.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Zunkiree Labs vs. Competitors in AI Search Implementation</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p>Zunkiree Labs offers a comprehensive AI Search Playbook specifically tailored for product teams, providing practical guidance, implementation patterns, and code snippets. When compared to other industry players, there are several notable distinctions worth exploring.</p><table><thead><tr><th>Feature</th><th>Alternative</th><th>Zunkiree Labs</th></tr></thead><tbody><tr><td>Target Audience</td><td>Focuses on specialists or broader audiences.</td><td>Designed for product managers and engineers</td></tr><tr><td>Implementation Guidance</td><td>May provide frameworks but lacks detailed coding guidance.</td><td>Step-by-step implementation roadmap with code examples</td></tr><tr><td>Programming Language Support</td><td>Limited language examples or focuses on one programming language.</td><td>Offers examples in Python, JavaScript, and REST APIs</td></tr><tr><td>User Research Components</td><td>User research often inadequately addressed or not included.</td><td>Includes templates and methodologies for user research</td></tr></tbody></table></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Zunkiree Labs vs. Competitors in AI Search Implementation</h2>
+      </div>
+      <div>
+        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p>Zunkiree Labs offers a comprehensive AI Search Playbook specifically tailored for product teams, providing practical guidance, implementation patterns, and code snippets. When compared to other industry players, there are several notable distinctions worth exploring.</p><div class="mb-10 overflow-hidden rounded-lg border border-gray-200"><table class="w-full text-sm"><thead class="bg-gray-50"><tr><th class="px-4 py-3 text-left font-medium text-gray-900">Feature</th><th class="px-4 py-3 text-left font-medium text-gray-900">Alternative</th><th class="px-4 py-3 text-left font-medium text-gray-900">Zunkiree Labs</th></tr></thead><tbody class="divide-y divide-gray-200"><tr><td class="px-4 py-3 font-medium text-gray-900">Target Audience</td><td class="px-4 py-3 text-gray-600">Focuses on specialists or broader audiences.</td><td class="px-4 py-3 text-gray-600">Designed for product managers and engineers</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">Implementation Guidance</td><td class="px-4 py-3 text-gray-600">May provide frameworks but lacks detailed coding guidance.</td><td class="px-4 py-3 text-gray-600">Step-by-step implementation roadmap with code examples</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">Programming Language Support</td><td class="px-4 py-3 text-gray-600">Limited language examples or focuses on one programming language.</td><td class="px-4 py-3 text-gray-600">Offers examples in Python, JavaScript, and REST APIs</td></tr><tr><td class="px-4 py-3 font-medium text-gray-900">User Research Components</td><td class="px-4 py-3 text-gray-600">User research often inadequately addressed or not included.</td><td class="px-4 py-3 text-gray-600">Includes templates and methodologies for user research</td></tr></tbody></table></div></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->

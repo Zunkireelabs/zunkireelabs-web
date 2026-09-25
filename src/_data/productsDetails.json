@@ -3,7 +3,7 @@
     "id": "search",
     "title": "Zunkiree Search",
     "category": "AI Products",
-    "loginUrl": "https://app.zunkiree.com",
+    "loginUrl": "",
     "tagline": "AI-native search that understands intent",
     "description": "Transform how users discover information with natural language search. Deliver direct answers instead of link lists, reducing support queries by 45%.",
     "heroImage": "/assets/images/zunkiree-search-hero.svg",
@@ -94,33 +94,6 @@
       }
     ],
 
-    "resources": [
-      {
-        "title": "Documentation",
-        "description": "Technical guides and API reference",
-        "url": "/docs/search/",
-        "icon": "book"
-      },
-      {
-        "title": "Integration Guide",
-        "description": "Step-by-step setup instructions",
-        "url": "/resources/search-integration-guide/",
-        "icon": "code"
-      },
-      {
-        "title": "Case Studies",
-        "description": "See how customers use Zunkiree",
-        "url": "/resources/?type=case-study",
-        "icon": "briefcase"
-      },
-      {
-        "title": "API Reference",
-        "description": "REST API documentation",
-        "url": "/docs/search/api/",
-        "icon": "terminal"
-      }
-    ],
-
     "faq": [
       {
         "question": "What is Zunkiree Search?",
@@ -158,7 +131,7 @@
     "id": "ai-commerce-agent",
     "title": "Stella",
     "category": "AI Products",
-    "loginUrl": "https://stella.zunkireelabs.com/login",
+    "loginUrl": "",
     "tagline": "AI Commerce Agent — Autonomous AI agents that sell for you 24/7",
     "description": "Agentic ecommerce platform that deploys autonomous AI agents to handle the entire customer buying journey—from product discovery to checkout. Built for Nepal and global markets.",
     "heroImage": "/assets/images/ai-commerce-hero.svg",
@@ -249,33 +222,6 @@
       }
     ],
 
-    "resources": [
-      {
-        "title": "Integration Guide",
-        "description": "Step-by-step platform setup",
-        "url": "/docs/commerce-agent/integration/",
-        "icon": "book"
-      },
-      {
-        "title": "API Reference",
-        "description": "REST API documentation",
-        "url": "/docs/commerce-agent/api/",
-        "icon": "code"
-      },
-      {
-        "title": "Nepal Payments",
-        "description": "eSewa, Khalti setup guide",
-        "url": "/docs/commerce-agent/nepal-payments/",
-        "icon": "briefcase"
-      },
-      {
-        "title": "Best Practices",
-        "description": "Optimize your AI agent",
-        "url": "/resources/commerce-agent-best-practices/",
-        "icon": "terminal"
-      }
-    ],
-
     "faq": [
       {
         "question": "What is agentic commerce?",
@@ -313,7 +259,7 @@
     "id": "gaamma",
     "title": "Gaamma",
     "category": "Enterprise Software",
-    "loginUrl": "https://app.gaamma.com",
+    "loginUrl": "",
     "tagline": "Manufacturing intelligence that drives efficiency",
     "description": "End-to-end ERP platform built for modern manufacturing. Unify operations from raw materials to finished goods with real-time visibility and predictive insights.",
     "heroImage": "/images/gaamma-hero.svg",
@@ -404,33 +350,6 @@
       }
     ],
 
-    "resources": [
-      {
-        "title": "Implementation Guide",
-        "description": "Step-by-step deployment process",
-        "url": "/docs/gaamma/implementation/",
-        "icon": "book"
-      },
-      {
-        "title": "API Documentation",
-        "description": "Integration reference for developers",
-        "url": "/docs/gaamma/api/",
-        "icon": "code"
-      },
-      {
-        "title": "Case Studies",
-        "description": "Manufacturing success stories",
-        "url": "/resources/?type=case-study&product=gaamma",
-        "icon": "briefcase"
-      },
-      {
-        "title": "ROI Calculator",
-        "description": "Estimate your potential savings",
-        "url": "/resources/gaamma-roi-calculator/",
-        "icon": "terminal"
-      }
-    ],
-
     "faq": [
       {
         "question": "What is Gaamma?",
@@ -468,7 +387,7 @@
     "id": "dental-ai",
     "title": "Dental AI Assistant",
     "category": "AI Products",
-    "loginUrl": "https://dental.zunkiree.com",
+    "loginUrl": "",
     "status": "coming-soon",
     "tagline": "AI-powered dental practice management",
     "description": "Intelligent assistant designed for dental operations. Automates patient communication, scheduling, and follow-ups so your team can focus on patient care.",
@@ -557,33 +476,6 @@
           "Reputation monitoring"
         ],
         "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop"
-      }
-    ],
-
-    "resources": [
-      {
-        "title": "Product Overview",
-        "description": "Detailed feature walkthrough",
-        "url": "/docs/dental-ai/overview/",
-        "icon": "book"
-      },
-      {
-        "title": "Integration Guide",
-        "description": "Connect with your practice software",
-        "url": "/docs/dental-ai/integration/",
-        "icon": "code"
-      },
-      {
-        "title": "ROI Calculator",
-        "description": "Estimate your practice savings",
-        "url": "/resources/dental-ai-roi/",
-        "icon": "briefcase"
-      },
-      {
-        "title": "HIPAA Compliance",
-        "description": "Security and compliance details",
-        "url": "/docs/dental-ai/compliance/",
-        "icon": "terminal"
       }
     ],
 
@@ -715,33 +607,6 @@
       }
     ],
 
-    "resources": [
-      {
-        "title": "Quick Start Guide",
-        "description": "Get booking in 15 minutes",
-        "url": "/docs/booking/quickstart/",
-        "icon": "book"
-      },
-      {
-        "title": "Widget Customization",
-        "description": "Embed and style your booking widget",
-        "url": "/docs/booking/widgets/",
-        "icon": "code"
-      },
-      {
-        "title": "API Reference",
-        "description": "Build custom integrations",
-        "url": "/docs/booking/api/",
-        "icon": "terminal"
-      },
-      {
-        "title": "Best Practices",
-        "description": "Optimize your scheduling workflow",
-        "url": "/resources/booking-best-practices/",
-        "icon": "briefcase"
-      }
-    ],
-
     "faq": [
       {
         "question": "What is Zenly?",
@@ -867,33 +732,6 @@
           "Revenue insights"
         ],
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
-      }
-    ],
-
-    "resources": [
-      {
-        "title": "Getting Started",
-        "description": "Set up your CRM in 30 minutes",
-        "url": "/docs/crm/quickstart/",
-        "icon": "book"
-      },
-      {
-        "title": "Import Guide",
-        "description": "Migrate from Salesforce, HubSpot, etc.",
-        "url": "/docs/crm/migration/",
-        "icon": "code"
-      },
-      {
-        "title": "Sales Playbooks",
-        "description": "Best practices for sales teams",
-        "url": "/resources/crm-playbooks/",
-        "icon": "briefcase"
-      },
-      {
-        "title": "API Reference",
-        "description": "Build custom integrations",
-        "url": "/docs/crm/api/",
-        "icon": "terminal"
       }
     ],
 

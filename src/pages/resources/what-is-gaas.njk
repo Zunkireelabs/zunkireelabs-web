@@ -3,8 +3,6 @@ layout: base.njk
 title: "GaaS vs SaaS: Understanding Agentic vs Software Services" # SEOAI:TITLE
 description: "Learn what Agentic as a Service (GaaS) means, how it differs from SaaS, real-world use cases, and why businesses are adopting autonomous AI agents. Complete beginner's guide."
 permalink: /resources/what-is-gaas/
-bodyClass: "v2-inter"
-hideChrome: true
 faqs:
   - question: "What does GaaS stand for?"
     answer: "GaaS stands for 'Agentic as a Service.' It's a cloud delivery model where autonomous AI agents are deployed as managed services to execute business tasks independently, without requiring human operation for each action."
@@ -20,98 +18,55 @@ faqs:
     answer: "GaaS agents work 24/7 without breaks, can be scaled instantly (deploy 1,000 agents in minutes vs. months of hiring), cost a fraction of human labor for routine tasks, and maintain perfect consistency. However, they complement rather than replace humans for judgment-heavy work."
 ---
 
-{#
-  DIRECTION CONTRACT
-  THESIS: A reference guide reads like it was engineered, not blogged —
-  the platform's own visual system (navy/green, mono labels, glass
-  cards) applied to long-form explanation instead of a generic prose article.
-  OWN-WORLD: #F8FAFC ground, #76B900 the one accent (definition callouts,
-  step numerals, active states), navy-950 for dark proof cards, mono
-  uppercase eyebrows/labels, rounded-2xl glass-tinted cards with hairline
-  navy-100 borders, Inter type at homepage-v2 weights or medium/semibold.
-  STORY: reader lands, gets the one-sentence definition immediately, then
-  moves through mechanism → comparison → proof → action without leaving
-  the platform's voice.
-  FIRST VIEWPORT: breadcrumb + mono eyebrow badge + H1 + subhead, meta
-  row, quick-nav glass card — all left-aligned inside a contained hero,
-  matching homepage-v2's restrained hero rhythm rather than a full-bleed
-  splash (this is Read mode, not Persuade).
-  FORM: extend the established homepage-v2 world onto a new Read-mode
-  surface — content/structure inherited from the existing guide, no new
-  visual system invented.
-#}
-
-{% include "partials/navbar-v2.njk" %}
-
-<script>
-  document.documentElement.classList.add('js-reveal-hidden');
-</script>
-<style>
-  .js-reveal-hidden [data-reveal]:not(.revealed),
-  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
-    opacity: 0;
-  }
-</style>
-
 {# =====================================================
-   HERO — Educational Resource, Website V2 system
+   HERO SECTION - Educational Resource Style
    ===================================================== #}
-<section class="bg-white pt-28 md:pt-36 pb-10 md:pb-14 px-4 md:px-6">
-  <div class="mx-auto max-w-5xl">
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
     <div class="max-w-4xl">
       {# Breadcrumb #}
       <nav class="mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
-          <li><a href="/resources/" class="transition-colors hover:text-[#5a9100]">Resources</a></li>
-          <li aria-hidden="true">/</li>
-          <li class="text-navy-900">Guide</li>
+        <ol class="flex items-center gap-2 text-sm text-gray-500">
+          <li><a href="/resources/" class="hover:text-zunkiree-600">Resources</a></li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-gray-900">Guide</li>
         </ol>
       </nav>
 
       {# Badge #}
-      <span
-        class="mb-5 inline-flex items-center gap-2 rounded-full border border-[#76B900]/25 bg-[#76B900]/10 px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]"
-        data-reveal
-      >
-        <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+      <span class="inline-block px-3 py-1 bg-zunkiree-600 text-white text-xs font-medium tracking-wide mb-4" data-reveal>
         Complete Guide
       </span>
 
-      {# H1 #}
-      <h1
-        class="mb-6 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] lg:text-[48px]"
-        data-reveal
-      >
+      {# H1 - Optimized for "What is GaaS" queries #}
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-gray-900 tracking-[-0.03em] leading-[1.1] mb-6" data-reveal>
         What is GaaS? The Complete Guide to Agentic as a Service
       </h1>
 
       {# Subtitle #}
-      <p class="mb-6 max-w-2xl text-[18px] leading-relaxed text-navy-400 md:text-[19px]" data-reveal>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6" data-reveal>
         Everything you need to know about the shift from software tools to autonomous AI agents—explained in plain language.
       </p>
 
       {# Meta info #}
-      <div class="mb-8 flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-navy-300" data-reveal>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8" data-reveal>
         <span>Updated: April 2026</span>
-        <span aria-hidden="true">&bull;</span>
+        <span class="hidden sm:inline">•</span>
         <span>12 min read</span>
-        <span aria-hidden="true">&bull;</span>
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-300/40 bg-sky-100/60 px-2.5 py-1 text-sky-700">
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-500" aria-hidden="true"></span>
-          Beginner-friendly
-        </span>
+        <span class="hidden sm:inline">•</span>
+        <span>Beginner-friendly</span>
       </div>
 
       {# Quick navigation #}
-      <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm" data-reveal>
-        <p class="mb-4 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">In this guide</p>
-        <div class="grid grid-cols-1 gap-x-6 gap-y-3 text-[14.5px] sm:grid-cols-2">
-          <a href="#definition" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">What is GaaS?</a>
-          <a href="#how-it-works" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">How GaaS Works</a>
-          <a href="#gaas-vs-saas" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">GaaS vs SaaS Comparison</a>
-          <a href="#use-cases" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">Real-World Use Cases</a>
-          <a href="#benefits" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">Benefits of GaaS</a>
-          <a href="#getting-started" class="font-medium text-navy-900 transition-colors hover:text-[#5a9100]">Getting Started</a>
+      <div class="p-6 bg-gray-50 rounded-xl" data-reveal>
+        <p class="text-sm font-medium text-gray-900 mb-4">In this guide:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="#definition" class="text-zunkiree-600 hover:text-zunkiree-700">What is GaaS?</a>
+          <a href="#how-it-works" class="text-zunkiree-600 hover:text-zunkiree-700">How GaaS Works</a>
+          <a href="#gaas-vs-saas" class="text-zunkiree-600 hover:text-zunkiree-700">GaaS vs SaaS Comparison</a>
+          <a href="#use-cases" class="text-zunkiree-600 hover:text-zunkiree-700">Real-World Use Cases</a>
+          <a href="#benefits" class="text-zunkiree-600 hover:text-zunkiree-700">Benefits of GaaS</a>
+          <a href="#getting-started" class="text-zunkiree-600 hover:text-zunkiree-700">Getting Started</a>
         </div>
       </div>
     </div>
@@ -121,47 +76,46 @@ faqs:
 {# =====================================================
    MAIN CONTENT
    ===================================================== #}
-<section class="bg-white px-4 pb-16 pt-4 md:px-6 md:pb-20">
-  <div class="mx-auto max-w-5xl">
-    <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+<section class="bg-white px-4 md:px-6 py-12 md:py-16">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
       {# Main Content Column #}
       <div class="lg:col-span-8">
-        <article class="max-w-none">
+        <article class="prose prose-lg max-w-none">
 
           {# SECTION: Definition #}
           <section id="definition" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               What is GaaS (Agentic as a Service)?
             </h2>
 
             {# Featured Definition Box - AEO Optimized #}
-            <div class="mb-6 rounded-2xl border border-[#76B900]/20 bg-[#76B900]/[0.06] p-6">
-              <span class="mb-3 block font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]">Definition</span>
-              <p class="mb-0 text-[17px] leading-relaxed text-navy-900">
-                <strong class="font-semibold">Agentic as a Service (GaaS)</strong> is a cloud delivery model where autonomous AI agents are provided as managed services. Instead of using software tools yourself, you delegate tasks to AI agents that independently plan, execute, and deliver results—much like hiring a capable employee who figures out how to accomplish goals without step-by-step instructions.
+            <div class="p-6 bg-zunkiree-50 border-l-4 border-zunkiree-600 rounded-r-lg mb-6">
+              <p class="text-lg text-gray-900 leading-relaxed mb-0">
+                <strong>Agentic as a Service (GaaS)</strong> is a cloud delivery model where autonomous AI agents are provided as managed services. Instead of using software tools yourself, you delegate tasks to AI agents that independently plan, execute, and deliver results—much like hiring a capable employee who figures out how to accomplish goals without step-by-step instructions.
               </p>
             </div>
 
-            <p class="mb-6 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-6">
               The term "GaaS" was coined to describe the next evolution beyond SaaS (Software as a Service). While SaaS gives you <em>tools to use</em>, GaaS gives you <em>agents that work</em>.
             </p>
 
-            <p class="mb-6 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-6">
               Think of it this way: SaaS is like buying a hammer. GaaS is like hiring a carpenter. You don't need to learn how to use the hammer—you just describe what you want built.
             </p>
 
             {# Simple Analogy Box #}
-            <div class="mb-6 rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-              <h3 class="mb-4 text-[18px] font-medium text-[#111827]">The Simple Explanation</h3>
-              <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class="p-6 bg-gray-50 rounded-xl mb-6">
+              <h3 class="text-lg font-medium text-gray-900 mb-4">The Simple Explanation</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p class="mb-2 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">SaaS (Old Way)</p>
-                  <p class="text-[14px] text-navy-400">"Here's a spreadsheet tool. Learn it, use it, do the work yourself."</p>
+                  <p class="font-medium text-gray-900 mb-2">SaaS (Old Way)</p>
+                  <p class="text-gray-600 text-sm">"Here's a spreadsheet tool. Learn it, use it, do the work yourself."</p>
                 </div>
                 <div>
-                  <p class="mb-2 font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]">GaaS (New Way)</p>
-                  <p class="text-[14px] text-navy-400">"Tell me what analysis you need. I'll gather the data, run the numbers, and deliver a report."</p>
+                  <p class="font-medium text-gray-900 mb-2">GaaS (New Way)</p>
+                  <p class="text-gray-600 text-sm">"Tell me what analysis you need. I'll gather the data, run the numbers, and deliver a report."</p>
                 </div>
               </div>
             </div>
@@ -169,55 +123,55 @@ faqs:
 
           {# SECTION: How GaaS Works #}
           <section id="how-it-works" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               How Does GaaS Work?
             </h2>
 
-            <p class="mb-8 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-6">
               GaaS platforms deploy AI agents that operate through a continuous loop of planning, acting, and learning. Here's the process in simple terms:
             </p>
 
             {# Step by Step #}
-            <div class="mb-8 space-y-6">
+            <div class="space-y-6 mb-8">
               <div class="flex gap-4">
-                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] font-mono text-[14px] font-semibold text-white">1</div>
+                <div class="w-10 h-10 bg-zunkiree-600 text-white rounded-full flex items-center justify-center font-medium flex-shrink-0">1</div>
                 <div>
-                  <h3 class="mb-2 font-medium text-[#111827]">You Define the Goal</h3>
-                  <p class="text-navy-400">Describe what you want accomplished in plain language. "Process all incoming support tickets and respond to common questions automatically" or "Review this contract and flag any unusual terms."</p>
+                  <h3 class="font-medium text-gray-900 mb-2">You Define the Goal</h3>
+                  <p class="text-gray-600">Describe what you want accomplished in plain language. "Process all incoming support tickets and respond to common questions automatically" or "Review this contract and flag any unusual terms."</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] font-mono text-[14px] font-semibold text-white">2</div>
+                <div class="w-10 h-10 bg-zunkiree-600 text-white rounded-full flex items-center justify-center font-medium flex-shrink-0">2</div>
                 <div>
-                  <h3 class="mb-2 font-medium text-[#111827]">The Agent Plans</h3>
-                  <p class="text-navy-400">The AI agent breaks down your goal into subtasks, identifies what tools and data it needs, and creates an execution plan. This happens automatically—you don't write workflows.</p>
+                  <h3 class="font-medium text-gray-900 mb-2">The Agent Plans</h3>
+                  <p class="text-gray-600">The AI agent breaks down your goal into subtasks, identifies what tools and data it needs, and creates an execution plan. This happens automatically—you don't write workflows.</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] font-mono text-[14px] font-semibold text-white">3</div>
+                <div class="w-10 h-10 bg-zunkiree-600 text-white rounded-full flex items-center justify-center font-medium flex-shrink-0">3</div>
                 <div>
-                  <h3 class="mb-2 font-medium text-[#111827]">The Agent Executes</h3>
-                  <p class="text-navy-400">The agent takes action—reading documents, calling APIs, sending emails, updating databases. For high-risk actions, it pauses for human approval (this is called Human-in-the-Loop or HITL).</p>
+                  <h3 class="font-medium text-gray-900 mb-2">The Agent Executes</h3>
+                  <p class="text-gray-600">The agent takes action—reading documents, calling APIs, sending emails, updating databases. For high-risk actions, it pauses for human approval (this is called Human-in-the-Loop or HITL).</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] font-mono text-[14px] font-semibold text-white">4</div>
+                <div class="w-10 h-10 bg-zunkiree-600 text-white rounded-full flex items-center justify-center font-medium flex-shrink-0">4</div>
                 <div>
-                  <h3 class="mb-2 font-medium text-[#111827]">The Agent Learns</h3>
-                  <p class="text-navy-400">After each task, the agent evaluates what worked and what didn't. It adapts to your specific preferences and processes over time, getting better with each interaction.</p>
+                  <h3 class="font-medium text-gray-900 mb-2">The Agent Learns</h3>
+                  <p class="text-gray-600">After each task, the agent evaluates what worked and what didn't. It adapts to your specific preferences and processes over time, getting better with each interaction.</p>
                 </div>
               </div>
 
               <div class="flex gap-4">
-                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-medium flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 </div>
                 <div>
-                  <h3 class="mb-2 font-medium text-[#111827]">You Get the Outcome</h3>
-                  <p class="text-navy-400">The agent delivers completed work—not a tool for you to use, but actual results. You pay for the outcome, not for access to software.</p>
+                  <h3 class="font-medium text-gray-900 mb-2">You Get the Outcome</h3>
+                  <p class="text-gray-600">The agent delivers completed work—not a tool for you to use, but actual results. You pay for the outcome, not for access to software.</p>
                 </div>
               </div>
             </div>
@@ -225,78 +179,73 @@ faqs:
 
           {# SECTION: GaaS vs SaaS Comparison #}
           <section id="gaas-vs-saas" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               GaaS vs SaaS: What's the Difference?
             </h2>
 
-            <p class="mb-6 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-6">
               The shift from SaaS to GaaS is comparable to the shift from on-premise software to cloud software. It's not just a technical change—it's a fundamental rethinking of how businesses consume technology.
             </p>
 
             {# Detailed Comparison Table #}
-            <div class="mb-8 overflow-hidden overflow-x-auto rounded-2xl border border-navy-100/40 shadow-subtle">
-              <table class="w-full min-w-[640px] border-collapse">
+            <div class="overflow-x-auto mb-8">
+              <table class="w-full border-collapse">
                 <thead>
-                  <tr class="bg-navy-950 text-white">
-                    <th class="px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-wider">Aspect</th>
-                    <th class="bg-sky-900/40 px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-sky-100">SaaS</th>
-                    <th class="bg-[#76B900] px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-navy-950">GaaS</th>
+                  <tr class="bg-gray-900 text-white">
+                    <th class="px-4 py-3 text-left font-medium">Aspect</th>
+                    <th class="px-4 py-3 text-left font-medium">SaaS (Software as a Service)</th>
+                    <th class="px-4 py-3 text-left font-medium bg-zunkiree-700">GaaS (Agentic as a Service)</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-navy-100/40 bg-white">
+                <tbody class="divide-y divide-gray-200">
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">What you get</td>
-                    <td class="px-4 py-4 text-navy-400">Software tools to use yourself</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">AI agents that do the work for you</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">What you get</td>
+                    <td class="px-4 py-4 text-gray-600">Software tools to use yourself</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">AI agents that do the work for you</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Pricing model</td>
-                    <td class="px-4 py-4 text-navy-400">Per user/seat per month</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">Per outcome delivered (CPO)</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Pricing model</td>
+                    <td class="px-4 py-4 text-gray-600">Per user/seat per month</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">Per outcome delivered (CPO)</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Learning required</td>
-                    <td class="px-4 py-4 text-navy-400">Weeks of training and adoption</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">None—just delegate</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Learning required</td>
+                    <td class="px-4 py-4 text-gray-600">Weeks of training and adoption</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">None—just delegate</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Scaling</td>
-                    <td class="px-4 py-4 text-navy-400">Hire more humans to use the software</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">Deploy more agents instantly</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Scaling</td>
+                    <td class="px-4 py-4 text-gray-600">Hire more humans to use the software</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">Deploy more agents instantly</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Availability</td>
-                    <td class="px-4 py-4 text-navy-400">When humans are working</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">24/7/365</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Availability</td>
+                    <td class="px-4 py-4 text-gray-600">When humans are working</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">24/7/365</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Consistency</td>
-                    <td class="px-4 py-4 text-navy-400">Varies by user skill and attention</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">Perfect consistency every time</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Consistency</td>
+                    <td class="px-4 py-4 text-gray-600">Varies by user skill and attention</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">Perfect consistency every time</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Adaptability</td>
-                    <td class="px-4 py-4 text-navy-400">Fixed workflows, manual updates</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">Learns and adapts automatically</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Adaptability</td>
+                    <td class="px-4 py-4 text-gray-600">Fixed workflows, manual updates</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">Learns and adapts automatically</td>
                   </tr>
                   <tr>
-                    <td class="bg-navy-50/60 px-4 py-4 font-medium text-[#111827]">Example</td>
-                    <td class="px-4 py-4 text-navy-400">Salesforce CRM—you enter data, run reports</td>
-                    <td class="bg-[#76B900]/[0.06] px-4 py-4 text-navy-900">AI agent—automatically updates CRM, qualifies leads, sends follow-ups</td>
+                    <td class="px-4 py-4 font-medium text-gray-900 bg-gray-50">Example</td>
+                    <td class="px-4 py-4 text-gray-600">Salesforce CRM—you enter data, run reports</td>
+                    <td class="px-4 py-4 text-gray-900 bg-zunkiree-50">AI agent—automatically updates CRM, qualifies leads, sends follow-ups</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             {# Key Insight Box #}
-            <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-6 text-white" style="box-shadow: 0 30px 50px -25px rgba(15, 23, 42, 0.45);">
-              <div
-                class="pointer-events-none absolute inset-0 z-0"
-                aria-hidden="true"
-                style="background: radial-gradient(ellipse 60% 80% at 10% 110%, rgba(118,185,0,0.22) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% -10%, rgba(87,119,130,0.28) 0%, transparent 60%);"
-              ></div>
-              <p class="relative z-10 mb-2 font-mono text-[11px] font-medium uppercase tracking-wider text-[#76B900]">Key Insight</p>
-              <p class="relative z-10 mb-0 text-[17px] leading-relaxed text-white/90">
+            <div class="p-6 bg-gray-900 text-white rounded-xl">
+              <p class="text-sm text-zunkiree-400 font-medium mb-2">Key Insight</p>
+              <p class="text-lg leading-relaxed mb-0">
                 SaaS made software accessible. GaaS makes <em>outcomes</em> accessible. You no longer need to know how to use tools—you just need to know what results you want.
               </p>
             </div>
@@ -304,107 +253,107 @@ faqs:
 
           {# SECTION: Real-World Use Cases #}
           <section id="use-cases" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               Real-World GaaS Use Cases
             </h2>
 
-            <p class="mb-8 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-8">
               GaaS applies wherever repetitive cognitive work exists. Here are concrete examples across industries:
             </p>
 
             {# Use Case Cards #}
-            <div class="space-y-4" data-reveal-stagger>
+            <div class="space-y-6">
 
               {# Use Case 1: Software Development #}
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+              <div class="p-6 border border-gray-200 rounded-xl">
                 <div class="flex items-start gap-4">
-                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50">
-                    <svg class="h-6 w-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="mb-2 text-[17px] font-medium text-[#111827]">Software Development</h3>
-                    <p class="mb-3 text-navy-400">GaaS agents handle code review, write unit tests, fix bugs, update documentation, and deploy to staging environments—all autonomously.</p>
-                    <div class="text-[14px]">
-                      <span class="font-medium text-[#111827]">Example outcome:</span>
-                      <span class="text-navy-400"> "Review this PR, run tests, fix any issues, and deploy to staging" &rarr; Agent delivers a tested, deployed feature.</span>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Software Development</h3>
+                    <p class="text-gray-600 mb-4">GaaS agents handle code review, write unit tests, fix bugs, update documentation, and deploy to staging environments—all autonomously.</p>
+                    <div class="text-sm">
+                      <span class="font-medium text-gray-900">Example outcome:</span>
+                      <span class="text-gray-600"> "Review this PR, run tests, fix any issues, and deploy to staging" → Agent delivers a tested, deployed feature.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {# Use Case 2: Customer Service #}
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+              <div class="p-6 border border-gray-200 rounded-xl">
                 <div class="flex items-start gap-4">
-                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50">
-                    <svg class="h-6 w-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="mb-2 text-[17px] font-medium text-[#111827]">Customer Service</h3>
-                    <p class="mb-3 text-navy-400">Agents resolve support tickets, answer customer questions, process refunds, update account information, and escalate complex issues to humans.</p>
-                    <div class="text-[14px]">
-                      <span class="font-medium text-[#111827]">Example outcome:</span>
-                      <span class="text-navy-400"> "Handle all Tier 1 support tickets" &rarr; 70% of tickets resolved without human involvement.</span>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Customer Service</h3>
+                    <p class="text-gray-600 mb-4">Agents resolve support tickets, answer customer questions, process refunds, update account information, and escalate complex issues to humans.</p>
+                    <div class="text-sm">
+                      <span class="font-medium text-gray-900">Example outcome:</span>
+                      <span class="text-gray-600"> "Handle all Tier 1 support tickets" → 70% of tickets resolved without human involvement.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {# Use Case 3: Data Operations #}
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+              <div class="p-6 border border-gray-200 rounded-xl">
                 <div class="flex items-start gap-4">
-                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50">
-                    <svg class="h-6 w-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="mb-2 text-[17px] font-medium text-[#111827]">Data Operations</h3>
-                    <p class="mb-3 text-navy-400">Agents extract data from documents, clean and transform datasets, generate reports, update dashboards, and alert teams to anomalies.</p>
-                    <div class="text-[14px]">
-                      <span class="font-medium text-[#111827]">Example outcome:</span>
-                      <span class="text-navy-400"> "Process all invoices and update the financial dashboard daily" &rarr; Zero manual data entry.</span>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Data Operations</h3>
+                    <p class="text-gray-600 mb-4">Agents extract data from documents, clean and transform datasets, generate reports, update dashboards, and alert teams to anomalies.</p>
+                    <div class="text-sm">
+                      <span class="font-medium text-gray-900">Example outcome:</span>
+                      <span class="text-gray-600"> "Process all invoices and update the financial dashboard daily" → Zero manual data entry.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {# Use Case 4: Sales & Marketing #}
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+              <div class="p-6 border border-gray-200 rounded-xl">
                 <div class="flex items-start gap-4">
-                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50">
-                    <svg class="h-6 w-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="mb-2 text-[17px] font-medium text-[#111827]">Sales & Marketing</h3>
-                    <p class="mb-3 text-navy-400">Agents research prospects, personalize outreach emails, qualify leads, update CRM records, and schedule follow-up tasks.</p>
-                    <div class="text-[14px]">
-                      <span class="font-medium text-[#111827]">Example outcome:</span>
-                      <span class="text-navy-400"> "Research and send personalized emails to 500 prospects" &rarr; Qualified meetings booked automatically.</span>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sales & Marketing</h3>
+                    <p class="text-gray-600 mb-4">Agents research prospects, personalize outreach emails, qualify leads, update CRM records, and schedule follow-up tasks.</p>
+                    <div class="text-sm">
+                      <span class="font-medium text-gray-900">Example outcome:</span>
+                      <span class="text-gray-600"> "Research and send personalized emails to 500 prospects" → Qualified meetings booked automatically.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {# Use Case 5: Legal & Compliance #}
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+              <div class="p-6 border border-gray-200 rounded-xl">
                 <div class="flex items-start gap-4">
-                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-navy-50">
-                    <svg class="h-6 w-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="mb-2 text-[17px] font-medium text-[#111827]">Legal & Compliance</h3>
-                    <p class="mb-3 text-navy-400">Agents review contracts, flag unusual clauses, check regulatory compliance, extract key terms, and prepare summary documents.</p>
-                    <div class="text-[14px]">
-                      <span class="font-medium text-[#111827]">Example outcome:</span>
-                      <span class="text-navy-400"> "Review all vendor contracts for liability clauses" &rarr; Risk summary delivered in hours, not weeks.</span>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Legal & Compliance</h3>
+                    <p class="text-gray-600 mb-4">Agents review contracts, flag unusual clauses, check regulatory compliance, extract key terms, and prepare summary documents.</p>
+                    <div class="text-sm">
+                      <span class="font-medium text-gray-900">Example outcome:</span>
+                      <span class="text-gray-600"> "Review all vendor contracts for liability clauses" → Risk summary delivered in hours, not weeks.</span>
                     </div>
                   </div>
                 </div>
@@ -415,150 +364,138 @@ faqs:
 
           {# SECTION: Benefits of GaaS #}
           <section id="benefits" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               Benefits of GaaS for Businesses
             </h2>
 
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-2" data-reveal-stagger>
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">Pay for Results, Not Access</h3>
-                <p class="text-[14px] text-navy-400">No more paying for software licenses that sit unused. GaaS aligns costs with value—you pay when outcomes are delivered.</p>
+                <h3 class="font-medium text-gray-900 mb-2">Pay for Results, Not Access</h3>
+                <p class="text-gray-600 text-sm">No more paying for software licenses that sit unused. GaaS aligns costs with value—you pay when outcomes are delivered.</p>
               </div>
 
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">Instant Scalability</h3>
-                <p class="text-[14px] text-navy-400">Deploy 100 or 10,000 agents in minutes. No hiring, training, or onboarding. Scale up for busy periods, scale down when quiet.</p>
+                <h3 class="font-medium text-gray-900 mb-2">Instant Scalability</h3>
+                <p class="text-gray-600 text-sm">Deploy 100 or 10,000 agents in minutes. No hiring, training, or onboarding. Scale up for busy periods, scale down when quiet.</p>
               </div>
 
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">24/7 Operations</h3>
-                <p class="text-[14px] text-navy-400">Agents don't sleep, take breaks, or call in sick. Critical tasks get handled around the clock without overtime costs.</p>
+                <h3 class="font-medium text-gray-900 mb-2">24/7 Operations</h3>
+                <p class="text-gray-600 text-sm">Agents don't sleep, take breaks, or call in sick. Critical tasks get handled around the clock without overtime costs.</p>
               </div>
 
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">Perfect Consistency</h3>
-                <p class="text-[14px] text-navy-400">Every task executed the same way, every time. No variation due to fatigue, distraction, or different skill levels.</p>
+                <h3 class="font-medium text-gray-900 mb-2">Perfect Consistency</h3>
+                <p class="text-gray-600 text-sm">Every task executed the same way, every time. No variation due to fatigue, distraction, or different skill levels.</p>
               </div>
 
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">Continuous Improvement</h3>
-                <p class="text-[14px] text-navy-400">Agents learn from every interaction. They get better at your specific processes over time without retraining.</p>
+                <h3 class="font-medium text-gray-900 mb-2">Continuous Improvement</h3>
+                <p class="text-gray-600 text-sm">Agents learn from every interaction. They get better at your specific processes over time without retraining.</p>
               </div>
 
-              <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
-                <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10">
-                  <svg class="h-5 w-5 text-[#4a7a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-zunkiree-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
                 </div>
-                <h3 class="mb-2 font-medium text-[#111827]">Free Up Your Team</h3>
-                <p class="text-[14px] text-navy-400">Let humans focus on creative, strategic, and relationship-driven work while agents handle repetitive cognitive tasks.</p>
+                <h3 class="font-medium text-gray-900 mb-2">Free Up Your Team</h3>
+                <p class="text-gray-600 text-sm">Let humans focus on creative, strategic, and relationship-driven work while agents handle repetitive cognitive tasks.</p>
               </div>
             </div>
           </section>
 
           {# SECTION: Getting Started #}
           <section id="getting-started" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               Getting Started with GaaS
             </h2>
 
-            <p class="mb-6 leading-relaxed text-navy-400">
+            <p class="text-gray-600 leading-relaxed mb-6">
               Ready to move from tools to agents? Here's how to begin:
             </p>
 
-            <div class="mb-8 space-y-3">
-              <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-4 backdrop-blur-sm">
-                <p class="mb-1 font-medium text-[#111827]">1. Identify repetitive cognitive work</p>
-                <p class="text-[14px] text-navy-400">Look for tasks that are rule-based, time-consuming, and don't require human judgment. Data entry, report generation, and ticket triage are good starting points.</p>
+            <div class="space-y-4 mb-8">
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="font-medium text-gray-900 mb-1">1. Identify repetitive cognitive work</p>
+                <p class="text-gray-600 text-sm">Look for tasks that are rule-based, time-consuming, and don't require human judgment. Data entry, report generation, and ticket triage are good starting points.</p>
               </div>
-              <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-4 backdrop-blur-sm">
-                <p class="mb-1 font-medium text-[#111827]">2. Start small with a pilot</p>
-                <p class="text-[14px] text-navy-400">Don't try to automate everything at once. Pick one process, deploy an agent, and measure the results before expanding.</p>
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="font-medium text-gray-900 mb-1">2. Start small with a pilot</p>
+                <p class="text-gray-600 text-sm">Don't try to automate everything at once. Pick one process, deploy an agent, and measure the results before expanding.</p>
               </div>
-              <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-4 backdrop-blur-sm">
-                <p class="mb-1 font-medium text-[#111827]">3. Define success metrics</p>
-                <p class="text-[14px] text-navy-400">What outcomes matter? Tasks completed, time saved, error reduction, cost per outcome? Measure before and after.</p>
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="font-medium text-gray-900 mb-1">3. Define success metrics</p>
+                <p class="text-gray-600 text-sm">What outcomes matter? Tasks completed, time saved, error reduction, cost per outcome? Measure before and after.</p>
               </div>
-              <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-4 backdrop-blur-sm">
-                <p class="mb-1 font-medium text-[#111827]">4. Plan for human oversight</p>
-                <p class="text-[14px] text-navy-400">Decide which actions require human approval. GaaS works best with appropriate Human-in-the-Loop gates for sensitive operations.</p>
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <p class="font-medium text-gray-900 mb-1">4. Plan for human oversight</p>
+                <p class="text-gray-600 text-sm">Decide which actions require human approval. GaaS works best with appropriate Human-in-the-Loop gates for sensitive operations.</p>
               </div>
             </div>
 
             {# CTA Box #}
-            <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-8" style="box-shadow: 0 30px 50px -25px rgba(15, 23, 42, 0.45);">
-              <div
-                class="pointer-events-none absolute inset-0 z-0"
-                aria-hidden="true"
-                style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
-              ></div>
-              <div class="relative z-10">
-                <h3 class="mb-4 text-[22px] font-medium text-white">Want to go deeper?</h3>
-                <p class="mb-6 max-w-xl text-navy-300">
-                  Read our comprehensive technical guide to understand the infrastructure behind GaaS—including skills architecture, multi-agent orchestration, and security models.
-                </p>
-                <a
-                  href="/agentic-as-a-service/"
-                  class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
-                >
-                  Explore GaaS Infrastructure
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
+            <div class="p-8 bg-gray-900 text-white rounded-xl">
+              <h3 class="text-xl font-medium mb-4">Want to go deeper?</h3>
+              <p class="text-gray-300 mb-6">
+                Read our comprehensive technical guide to understand the infrastructure behind GaaS—including skills architecture, multi-agent orchestration, and security models.
+              </p>
+              <a href="/agentic-as-a-service/" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">
+                Explore GaaS Infrastructure
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
             </div>
           </section>
 
           {# SECTION: FAQ #}
           <section id="faq" class="mb-16" data-reveal>
-            <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
 
-            <div class="space-y-3" x-data="{ activeIndex: null }">
+            <div class="space-y-6" x-data="{ activeIndex: null }">
               {% for item in faqs %}
-              <div class="overflow-hidden rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 backdrop-blur-sm">
+              <div class="border-b border-gray-200 pb-6">
                 <button
                   @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
-                  class="group flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                  :aria-expanded="activeIndex === {{ loop.index }}"
+                  class="w-full flex items-center justify-between text-left group"
                 >
-                  <span class="text-[15.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
+                  <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
                     {{ item.question }}
                   </span>
-                  <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-navy-50 text-navy-400">
+                  <span class="flex-shrink-0 text-gray-400">
                     <svg
-                      class="h-4 w-4 transition-transform duration-200"
+                      class="w-5 h-5 transition-transform duration-200"
                       :class="{ 'rotate-45': activeIndex === {{ loop.index }} }"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      aria-hidden="true"
                     >
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
@@ -571,7 +508,7 @@ faqs:
                   x-transition:enter-end="opacity-100 translate-y-0"
                   class="overflow-hidden"
                 >
-                  <p class="px-5 pb-5 leading-relaxed text-navy-400">
+                  <p class="pt-4 text-gray-600 leading-relaxed">
                     {{ item.answer }}
                   </p>
                 </div>
@@ -585,77 +522,68 @@ faqs:
 
       {# Sidebar Column #}
       <aside class="lg:col-span-4">
-        <div class="space-y-6 lg:sticky lg:top-24">
+        <div class="lg:sticky lg:top-24 space-y-8">
 
           {# GaaS Quick Reference Card #}
-          <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-6 text-white" data-reveal style="box-shadow: 0 30px 50px -25px rgba(15, 23, 42, 0.45);">
-            <div
-              class="pointer-events-none absolute inset-0 z-0"
-              aria-hidden="true"
-              style="background: radial-gradient(ellipse 70% 70% at 100% 0%, rgba(118,185,0,0.18) 0%, transparent 60%);"
-            ></div>
-            <h3 class="relative z-10 mb-4 font-mono text-[11px] font-medium uppercase tracking-wider text-[#76B900]">
+          <div class="p-6 bg-gray-900 text-white rounded-xl" data-reveal>
+            <h3 class="text-sm uppercase tracking-widest text-zunkiree-400 font-medium mb-4">
               GaaS Quick Reference
             </h3>
-            <dl class="relative z-10 space-y-4 text-[14px]">
+            <dl class="space-y-4 text-sm">
               <div>
-                <dt class="mb-1 text-navy-300">Full Name</dt>
-                <dd class="font-medium text-white">Agentic as a Service</dd>
+                <dt class="text-gray-400 mb-1">Full Name</dt>
+                <dd class="text-white font-medium">Agentic as a Service</dd>
               </div>
               <div>
-                <dt class="mb-1 text-navy-300">Core Concept</dt>
-                <dd class="font-medium text-white">Autonomous AI agents delivered as managed services</dd>
+                <dt class="text-gray-400 mb-1">Core Concept</dt>
+                <dd class="text-white font-medium">Autonomous AI agents delivered as managed services</dd>
               </div>
               <div>
-                <dt class="mb-1 text-navy-300">Pricing Model</dt>
-                <dd class="font-medium text-white">Cost-per-Outcome (CPO)</dd>
+                <dt class="text-gray-400 mb-1">Pricing Model</dt>
+                <dd class="text-white font-medium">Cost-per-Outcome (CPO)</dd>
               </div>
               <div>
-                <dt class="mb-1 text-navy-300">Key Differentiator</dt>
-                <dd class="font-medium text-white">Agents work for you vs. tools you use</dd>
+                <dt class="text-gray-400 mb-1">Key Differentiator</dt>
+                <dd class="text-white font-medium">Agents work for you vs. tools you use</dd>
               </div>
             </dl>
           </div>
 
           {# Related Resources #}
-          <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm" data-reveal>
-            <h3 class="mb-4 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">Related Resources</h3>
+          <div class="p-6 border border-gray-200 rounded-xl" data-reveal>
+            <h3 class="text-sm font-semibold text-gray-900 tracking-wide mb-4">Related Resources</h3>
             <div class="space-y-4">
-              <a href="/agentic-as-a-service/" class="group block">
-                <p class="mb-1 font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">
+              <a href="/agentic-as-a-service/" class="block group">
+                <p class="text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-1">
                   GaaS Technical Infrastructure Guide
                 </p>
-                <p class="text-[13px] text-navy-400">Deep dive into the Zunkiree Agentic Stack</p>
+                <p class="text-sm text-gray-500">Deep dive into the Zunkiree Agentic Stack</p>
               </a>
-              <hr class="border-navy-100/40">
-              <a href="/products/" class="group block">
-                <p class="mb-1 font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">
+              <hr class="border-gray-200">
+              <a href="/products/" class="block group">
+                <p class="text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-1">
                   Zunkiree Labs Products
                 </p>
-                <p class="text-[13px] text-navy-400">AI-native platforms built on GaaS</p>
+                <p class="text-sm text-gray-500">AI-native platforms built on GaaS</p>
               </a>
-              <hr class="border-navy-100/40">
-              <a href="/contact/" class="group block">
-                <p class="mb-1 font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">
+              <hr class="border-gray-200">
+              <a href="/contact/" class="block group">
+                <p class="text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-1">
                   Talk to Our Team
                 </p>
-                <p class="text-[13px] text-navy-400">Discuss GaaS for your organization</p>
+                <p class="text-sm text-gray-500">Discuss GaaS for your organization</p>
               </a>
             </div>
           </div>
 
           {# CTA Card #}
-          <div class="rounded-2xl border border-[#76B900]/25 bg-[#76B900]/[0.06] p-6" data-reveal>
-            <h3 class="mb-3 font-medium text-[#111827]">Ready to deploy agents?</h3>
-            <p class="mb-5 text-[14px] text-navy-400">
+          <div class="p-6 bg-zunkiree-50 border border-zunkiree-200 rounded-xl" data-reveal>
+            <h3 class="font-medium text-gray-900 mb-3">Ready to deploy agents?</h3>
+            <p class="text-sm text-gray-600 mb-4">
               See how Zunkiree Labs can help you move from SaaS to GaaS with enterprise-grade infrastructure.
             </p>
-            <a
-              href="/contact/"
-              class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-4 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-            >
+            <a href="/contact/" class="inline-flex items-center justify-center w-full px-4 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors rounded-lg">
               Contact Sales
-              <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
             </a>
           </div>
 
@@ -734,27 +662,17 @@ faqs:
   ]
 }
 </script>
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="py-12 md:py-20">
-  <section class="gap-2 font-normal text-gray-900">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Real-World Applications of GaaS</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Agentic as a Service (GaaS) is reshaping industries by enabling companies to streamline operations and improve efficiency through autonomous AI agents. For example, in customer support, GaaS can handle incoming queries, automatically filtering and responding to common issues, which frees human agents to focus on more complex tasks. Similarly, in compliance and legal fields, GaaS can perform contract reviews and highlight anomalies, accelerating the due diligence process significantly. These real-world applications illustrate not just the versatility of GaaS, but also how it can be tailored to meet the unique needs of various sectors, providing significant value.</p></div>
-  </section>
-  <section class="gap-2 font-normal text-gray-900">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Choosing the Right GaaS Provider</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">When selecting a GaaS provider, it's crucial to evaluate factors such as industry expertise, flexibility, and customer support. Unlike traditional providers, GaaS offerings encompass not just the technology but also the management and customization necessary to ensure successful implementation. For instance, some companies like CloudFactory focus on data processing, while others may emphasize AI training. It's important to choose a provider that not only meets immediate technical requirements but also demonstrates a commitment to ongoing learning and adaptation, ensuring that the AI agents continually improve and align with business objectives.</p></div>
-  </section>
-  <section class="gap-2 font-normal text-gray-900">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Addressing Concerns with GaaS Implementation</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Despite the many advantages of GaaS, potential adopters may have concerns regarding data security, control, and the initial transition process. GaaS generally involves transferring sensitive information to an external provider, which raises questions about data privacy and compliance with regulations. The integration of Human-in-the-Loop (HITL) processes mitigates risks by allowing for human oversight of critical tasks. Moreover, support during the transition phase is essential; choosing a provider that offers comprehensive onboarding and training can help smooth the adoption process, easing the shift from a traditional SaaS model to a more autonomous solution.</p></div>
-  </section>
-</div>
-<!-- SEOAI:FOCUS:content-refresh --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Updated Understanding of GaaS</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">In the evolving landscape of cloud services, Agentic as a Service (GaaS) has become increasingly significant as organizations seek to optimize efficiency and workflow through automation. GaaS is more than a cloud delivery model; it represents a paradigm shift in how businesses approach task management, moving away from traditional software tools to leveraging autonomous AI agents. As the technology around GaaS matures, the potential applications continue to expand. Not only do these AI agents offer the capability to handle routine tasks, they are now being equipped with advanced learning algorithms that enable them to adapt to increasingly complex environments and user preferences. This adaptability further distinguishes GaaS from Software as a Service (SaaS), indicating that companies can expect not just static benefits, but an evolving partnership with technology that grows more insightful with each interaction. With the rise of AI ethics and regulations, understanding the role and benefits of GaaS is crucial for organizations aiming to stay ahead in an increasingly competitive landscape.</p></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Real-World Applications of GaaS</h2>
+      </div>
+      <div>
+        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-lg md:text-xl text-gray-600 leading-relaxed">Agentic as a Service (GaaS) is reshaping industries by enabling companies to streamline operations and improve efficiency through autonomous AI agents. For example, in customer support, GaaS can handle incoming queries, automatically filtering and responding to common issues, which frees human agents to focus on more complex tasks. Similarly, in compliance and legal fields, GaaS can perform contract reviews and highlight anomalies, accelerating the due diligence process significantly. These real-world applications illustrate not just the versatility of GaaS, but also how it can be tailored to meet the unique needs of various sectors, providing significant value.</p></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
-
-{% include "partials/footer-v2.njk" %}

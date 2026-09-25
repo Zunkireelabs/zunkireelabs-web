@@ -3,94 +3,54 @@ layout: base.njk
 title: "Locations | Zunkiree Labs Service Areas"
 description: "Zunkiree Labs serves clients across Nepal and globally. Our headquarters is in Kathmandu, with service coverage throughout the Kathmandu Valley and beyond."
 permalink: /locations/
-hideChrome: true
-bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   LOCATIONS INDEX PAGE — Website V2
-   Reskin only: content, copy, headings, links, and the
-   `locations` data binding are unchanged from the prior
-   version. Chrome and section styling rebuilt to match
-   homepage-v2.njk / catalog.njk exactly (same navbar-v2 +
-   footer-v2 chrome, hero recipe, card recipe, closing-CTA
-   recipe) per explicit "Homepage V2 is the single source of
-   truth" direction — no new copy, no SEO/structure changes.
+   LOCATIONS INDEX PAGE
    ===================================================== #}
 
-{% include "partials/navbar-v2.njk" %}
-
-<script>
-  document.documentElement.classList.add('js-reveal-hidden');
-</script>
-<style>
-  .js-reveal-hidden [data-reveal]:not(.revealed),
-  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
-    opacity: 0;
-  }
-</style>
-
-{# =====================================================
-   HERO — centered single-column, matches catalog.njk /
-   homepage-v2.njk's hero typography and breadcrumb recipe.
-   ===================================================== #}
-<section class="relative z-10 flex flex-col items-center justify-center px-4 pb-12 pt-40 sm:px-6 sm:pt-44 lg:px-8 lg:pt-48" aria-labelledby="hero-heading">
-  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
-
-    <nav aria-label="Breadcrumb" class="mb-5">
-      <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
-        <li><a href="/" class="transition-colors hover:text-navy-700">Home</a></li>
-        <li aria-hidden="true">/</li>
-        <li class="text-navy-600">Locations</li>
-      </ol>
+<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    {# Breadcrumb #}
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Locations</span>
     </nav>
 
-    <h1 id="hero-heading" class="text-center text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+    <h1 class="text-4xl sm:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
       Our Locations
     </h1>
-
-    <p class="mt-4 max-w-[640px] text-center text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mb-12">
       Zunkiree Labs is headquartered in Kathmandu, Nepal, serving clients locally and globally. We provide AI development and software services across Nepal and to international clients.
     </p>
-  </div>
-</section>
 
-{# =====================================================
-   LOCATIONS GRID — restyled as homepage-v2's glass-surface
-   card (COMPONENT_LIBRARY.md card recipe). Data loop, hrefs,
-   HQ badge, and truncated intro copy are unchanged.
-   ===================================================== #}
-<section class="px-4 pb-12 sm:px-6 lg:px-8" data-reveal>
-  <div class="mx-auto max-w-5xl">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+    {# Locations Grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for location in locations %}
-      <a
-        href="/locations/{{ location.id }}/"
-        class="group flex flex-col p-6 shadow-subtle transition-all duration-300 hover:shadow-card-hover {% if location.isHeadquarters %}rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 backdrop-blur-md hover:border-[#76B900]/30{% else %}rounded-2xl border border-navy-100/60 bg-white hover:border-[#76B900]/30{% endif %}"
-      >
-        <div class="mb-4 flex items-start justify-between gap-3">
+      <a href="/locations/{{ location.id }}/" class="group block bg-gray-50 rounded-lg p-6 hover:bg-zunkiree-600 transition-colors">
+        <div class="flex items-start justify-between mb-4">
           <div>
-            <h2 class="text-[18px] font-semibold leading-snug text-[#111827] transition-colors group-hover:text-[#4d7a00]">
+            <h2 class="text-xl font-medium text-gray-900 group-hover:text-white">
               {{ location.name }}
             </h2>
-            <p class="mt-1 text-[13px] text-[#6B7280]">
+            <p class="text-sm text-gray-500 group-hover:text-white/70">
               {{ location.region }}, {{ location.country }}
             </p>
           </div>
           {% if location.isHeadquarters %}
-          <span class="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full bg-[#76B900]/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-[#4d7a00]">
-            <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+          <span class="inline-flex items-center px-2 py-1 text-xs font-medium bg-zunkiree-100 text-zunkiree-700 rounded group-hover:bg-white/20 group-hover:text-white">
             HQ
           </span>
           {% endif %}
         </div>
-        <p class="mb-5 flex-grow text-[14px] leading-relaxed text-[#6B7280] line-clamp-2">
+        <p class="text-gray-600 group-hover:text-white/80 text-sm line-clamp-2 mb-4">
           {{ location.intro | truncate(120) }}
         </p>
-        <div class="inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-wide text-navy-900 transition-colors group-hover:text-[#4d7a00]">
+        <div class="flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:text-white">
           View location
-          <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </div>
       </a>
@@ -99,83 +59,44 @@ bodyClass: "v2-inter"
   </div>
 </section>
 
-{# =====================================================
-   INTERNATIONAL CLIENTS — restyled as homepage-v2's
-   section-header (eyebrow + headline) with pill chips
-   matching the card border/mono-label language. Copy and
-   country list unchanged.
-   ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" data-reveal>
-  <div class="mx-auto max-w-5xl">
-    <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-      Global Reach
-    </span>
-    <h2 class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
+{# International Clients Section #}
+<section class="py-12 md:py-16 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">
       Serving Clients Globally
     </h2>
-    <p class="mt-4 max-w-2xl text-body-lg leading-relaxed text-[#6B7280]">
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl">
       While headquartered in Nepal, we work with clients worldwide. Our remote collaboration processes ensure seamless communication across time zones.
     </p>
-    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-      {% set globalClients = ["United States", "United Kingdom", "Australia", "Germany", "Singapore", "India", "UAE"] %}
-      {% for country in globalClients %}
-      <div class="flex items-center gap-2.5 rounded-xl border border-navy-100/60 bg-white px-4 py-3 text-[14px] font-medium text-navy-700 shadow-subtle">
-        <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
-        {{ country }}
-      </div>
-      {% endfor %}
+    <div class="flex flex-wrap gap-4">
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">United States</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">United Kingdom</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Australia</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Germany</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">Singapore</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">India</span>
+      <span class="px-4 py-2 bg-white rounded-full text-gray-700 border border-gray-200">UAE</span>
     </div>
   </div>
 </section>
 
-{# =====================================================
-   CLOSING CTA — homepage-v2/catalog.njk's dark navy +
-   green-glow shell (COMPONENT_LIBRARY.md §2.6 dark variant).
-   Copy and single "Contact Us" link unchanged.
-   ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="locations-cta-heading">
-  <div class="mx-auto max-w-5xl">
-    <div
-      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
-      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
-      data-reveal
-    >
-      <div
-        class="pointer-events-none absolute inset-0 z-0"
-        aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
-      ></div>
-
-      <h2 id="locations-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
-        Ready to work with us?
-      </h2>
-      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
-        Whether you're in Nepal or anywhere in the world, let's discuss how we can help.
-      </p>
-      <div class="relative z-10 mt-8 flex justify-center">
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-        >
-          Contact Us
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>
+{# CTA #}
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Ready to work with us?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Whether you're in Nepal or anywhere in the world, let's discuss how we can help.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Contact Us
+    </a>
   </div>
 </section>
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers several products including Zunkiree Search, Dental AI, and Gaamma, which is a business analytics platform.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial on their website.","@type":"Answer"}},{"name":"What is the purpose of the AI Development services offered by Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"The AI Development services at Zunkiree Labs include creating custom AI systems, RAG pipelines, and LLM integration.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs cater to?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs caters to various industries including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the autonomous AI agents deployed as managed services by Zunkiree Labs.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Locations | Zunkiree Labs Service Areas","articleBody":"Our Locations Zunkiree Labs is headquartered in Kathmandu, Nepal, serving clients locally and globally. We provide AI development and software services across Nepal and to international clients. Kathmandu Bagmati Province, Nepal HQ Zunkiree Labs is headquartered in Kathmandu, Nepal's capital and technology hub. Our team of AI engineers and software d... View location Lalitpur Bagmati Province, Nepal Zunkiree Labs serves clients in Lalitpur (Patan) from our Kathmandu headquarters, just minutes away. We work with busine... View location Bhaktapur Bagmati Province, Nepal Zunkiree Labs serves Bhaktapur's business community from our Kathmandu headquarters in the Kathmandu Valley. We work wit... View location Pokhara Gandaki Province, Nepal Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our Kathmandu he... View location Serving Clients Globally While headquartered in Nepal, we work with clients worldwide. Our remote collaboration processes ensure seamless communication across time zones. United States United Kingdom Australia Germany Singapore India UAE Ready to work with us? Whether you're in Nepal or anywhere in the world, let's discuss how we can help. Contact Us"}</script><!-- SEOAI:SCHEMA:END -->
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">References</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p><a href="https://zunkireelabs.com">Zunkiree Labs</a>
 
-Zunkiree Labs - Crunchbase Company Profile &amp; Funding
-
-<a href="https://www.startupsnepal.tech/startup/zunkiree-labs">Zunkiree Labs | Startups Nepal</a></p></div>
-  </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
-
-{% include "partials/footer-v2.njk" %}

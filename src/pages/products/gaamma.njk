@@ -1,29 +1,251 @@
 ---
-layout: product-app.njk
+layout: product.njk
 title: "Gaamma: Manufacturing ERP Platform | Zunkiree Labs"
 description: "End-to-end manufacturing ERP that unifies production planning, inventory management, and quality control. See 30% less downtime and 25% better inventory turns."
 permalink: /products/gaamma/
 productId: gaamma
-hideChrome: true
-bodyClass: "v2-inter"
 lastUpdated: 2026-03-24
 ---
-<!-- SEOAI:FAQ:START --><dl class="container-custom py-12 md:py-20">
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">What is Gaamma?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Gaamma is a comprehensive manufacturing ERP platform designed to unify operations from raw materials to finished goods, providing real-time visibility and predictive insights for modern manufacturing.</dd>
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">How does Gaamma improve manufacturing operations?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Manufacturers using Gaamma experience a 30% reduction in downtime, a 25% improvement in inventory turns, and better overall efficiency through features like complete production visibility and predictive maintenance intelligence.</dd>
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">Can Gaamma integrate with my existing systems?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Yes, Gaamma connects seamlessly with your current systems, including PLCs, SCADA systems, accounting software, and IoT sensors, without requiring any rip-and-replace.</dd>
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">What kind of visibility does Gaamma provide?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Gaamma offers complete production visibility by enabling users to track every work order, machine, and operator in real-time, ensuring you know the status of every product in the manufacturing process at any moment.</dd>
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">What industries can benefit from Gaamma?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Gaamma is tailored for various manufacturing processes including discrete manufacturing, formula-based production, and custom order management, making it suitable for diverse industries.</dd>
-  <dt class="text-[19px] md:text-[22px] font-normal text-gray-900">How secure is my data with Gaamma?</dt>
-  <dd class="text-gray-600 leading-relaxed gap-3">Gaamma ensures enterprise-level security by being SOC 2 compliant and encrypting data both at rest and in transit, meaning your data remains secure and privately owned.</dd>
-</dl><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="container-custom">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Frequently asked questions</h3>
+        <button
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What is Gaamma?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 1 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 1 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Gaamma is a comprehensive manufacturing ERP platform designed to unify operations from raw materials to finished goods, providing real-time visibility and predictive insights for modern manufacturing.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              How does Gaamma improve manufacturing operations?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 2 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 2 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Manufacturers using Gaamma experience a 30% reduction in downtime, a 25% improvement in inventory turns, and better overall efficiency through features like complete production visibility and predictive maintenance intelligence.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              Can Gaamma integrate with my existing systems?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 3 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 3 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Yes, Gaamma connects seamlessly with your current systems, including PLCs, SCADA systems, accounting software, and IoT sensors, without requiring any rip-and-replace.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What kind of visibility does Gaamma provide?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 4 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 4 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Gaamma offers complete production visibility by enabling users to track every work order, machine, and operator in real-time, ensuring you know the status of every product in the manufacturing process at any moment.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What industries can benefit from Gaamma?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 5 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 5 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Gaamma is tailored for various manufacturing processes including discrete manufacturing, formula-based production, and custom order management, making it suitable for diverse industries.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              How secure is my data with Gaamma?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 6 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 6 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Gaamma ensures enterprise-level security by being SOC 2 compliant and encrypting data both at rest and in transit, meaning your data remains secure and privately owned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:FAQ:END -->
 
 <!-- SEOAI:QACONTENT:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are the key benefits of using Gaamma for manufacturing operations?","@type":"Question","acceptedAnswer":{"text":"Gaamma offers comprehensive benefits, including complete production visibility, predictive maintenance intelligence, and seamless integration with existing systems, which can lead to significant improvements in efficiency such as 30% less downtime and 25% better inventory management.","@type":"Answer"}},{"name":"How does Gaamma ensure data security for its users?","@type":"Question","acceptedAnswer":{"text":"Gaamma is SOC 2 compliant and employs data encryption both at rest and in transit, ensuring that user data remains secure and private throughout its operations.","@type":"Answer"}},{"name":"What types of manufacturing processes does Gaamma support?","@type":"Question","acceptedAnswer":{"text":"Gaamma supports a variety of manufacturing processes including discrete manufacturing, formula-based production, and custom order management, allowing it to cater to diverse operational needs.","@type":"Answer"}},{"name":"Is it difficult to integrate Gaamma with existing systems?","@type":"Question","acceptedAnswer":{"text":"No, Gaamma features a drop-in SDK with over 50 connectors, which allows it to integrate smoothly with current systems such as PLCs, SCADA systems, and accounting software without requiring a complete migration.","@type":"Answer"}},{"name":"What kind of visibility does Gaamma provide to manufacturers?","@type":"Question","acceptedAnswer":{"text":"Gaamma provides real-time visibility across the entire manufacturing operation, tracking every work order, machine, and operator, so manufacturers can know the exact status of their products at any given moment.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Last Updated</h2>
+      </div>
+      <div>
+        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p>This page was last updated on 2026-09-11.</p></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->

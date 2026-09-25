@@ -2,290 +2,144 @@
 layout: base.njk
 title: "AI & Technology Blog | Insights from Zunkiree Labs"
 description: "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company."
-permalink: /blog/
-hideChrome: true
-bodyClass: "v2-inter"
 eleventyExcludeFromCollections: true
+pagination:
+  data: collections.blog
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagination.pageNumber + 1) + '/' }}"
 ---
 
 {# =====================================================
-   BLOG LISTING — Website V2
-   Visual/structural redesign onto the Homepage V2 design system
-   (navbar-v2, footer-v2, Inter type, #76B900 accent, navy-950 dark
-   CTA, glass card surfaces, rounded-2xl radii, shadow-subtle/
-   shadow-card elevation, data-reveal fade-ins — same tokens and
-   component recipes as homepage-v2.njk and agentic-as-a-service.njk).
-   Content, copy, links, and functionality are unchanged from the
-   previous build — only the visual/markup layer moved to v2.
+   BLOG LISTING PAGE
    ===================================================== #}
-
-{% include "partials/navbar-v2.njk" %}
-
-<script>
-  document.documentElement.classList.add('js-reveal-hidden');
-</script>
-<style>
-  .js-reveal-hidden [data-reveal]:not(.revealed),
-  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
-    opacity: 0;
-  }
-
-  /* Featured card bloom — same recipe as homepage-v2's Platform Teaser card */
-  .search-card-bloom {
-    background:
-      radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
-      radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
-    animation: search-card-bloom-drift 14s ease-in-out infinite;
-  }
-  @keyframes search-card-bloom-drift {
-    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .search-card-bloom { animation: none; }
-  }
-</style>
 
 {# =====================================================
    HERO SECTION
    ===================================================== #}
-<section class="relative overflow-hidden px-4 pb-12 pt-32 sm:px-6 sm:pt-36 sm:pb-16 lg:px-8 lg:pt-44" aria-labelledby="blog-hero-heading">
-  <div class="mx-auto max-w-5xl" data-reveal-stagger>
+<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Breadcrumb #}
-    <nav class="mb-8 flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider" aria-label="Breadcrumb">
-      <a href="/" class="text-navy-500 transition-colors hover:text-[#5a9100]">Home</a>
-      <span class="text-navy-300" aria-hidden="true">/</span>
-      <span class="text-[#111827]">Blog</span>
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Blog</span>
     </nav>
 
-    <h1 id="blog-hero-heading" class="text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[52px]">
-      Insights &amp; Guides
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+      Insights & Guides
     </h1>
-    <p class="mt-4 max-w-2xl text-[19px] leading-relaxed text-[#6B7280] sm:text-[20px]">
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
       Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs.
     </p>
   </div>
 </section>
 
-{% set posts = collections.blog | reverse %}
-{% set featuredPost = posts[0] %}
-
 {# =====================================================
-   FEATURED + LATEST — Kore.ai blog layout reference (featured
-   post left, "Latest" list right). Featured card reuses the
-   homepage-v2 Platform Teaser template verbatim (navy-950 card,
-   green/navy gradient bloom, mono eyebrow, circular arrow CTA).
+   BLOG POSTS GRID
    ===================================================== #}
-{% if posts.length > 0 %}
-<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="blog-featured-heading">
-  <div class="mx-auto max-w-5xl">
-    <h2 id="blog-featured-heading" class="sr-only">Featured article</h2>
-
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3" data-reveal-stagger>
-
-      {# Featured — homepage-v2 Platform Teaser card, adapted with the latest post's real content #}
-      <a
-        href="{{ featuredPost.url }}"
-        class="group relative flex flex-col overflow-hidden rounded-2xl bg-navy-950 transition-colors duration-200 hover:bg-navy-900 lg:col-span-2"
-        style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
-      >
-        <div class="search-card-bloom pointer-events-none absolute inset-0 z-0" aria-hidden="true"></div>
-
-        {% if featuredPost.data.featuredImage %}
-        <div class="relative z-10 aspect-[16/9] overflow-hidden sm:aspect-[21/9]">
-          <img
-            src="{{ featuredPost.data.featuredImage }}"
-            alt="{{ featuredPost.data.title }}"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="eager"
-          />
-          <div class="pointer-events-none absolute inset-0 bg-sky-500/45 mix-blend-color" aria-hidden="true"></div>
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/10 to-transparent" aria-hidden="true"></div>
-        </div>
-        {% endif %}
-
-        <div class="relative z-10 flex flex-1 flex-col justify-between gap-6 p-8 sm:p-10">
-          <div>
-            <span class="mb-4 inline-flex items-center rounded-full bg-white/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-[#76B900]">
-              Featured
-            </span>
-            <h3 class="mb-3 text-[22px] font-medium leading-[1.3] text-white sm:text-[26px]">
-              {{ featuredPost.data.title }}
-            </h3>
-            {% if featuredPost.data.description %}
-            <p class="max-w-2xl text-[14px] leading-relaxed text-white/60 sm:text-[15px]">
-              {{ featuredPost.data.description }}
-            </p>
-            {% endif %}
-          </div>
-
-          <div class="flex items-center justify-between gap-6">
-            <div class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-white/40">
-              {% if featuredPost.data.category %}
-              <span>{{ featuredPost.data.category }}</span>
-              <span aria-hidden="true">&middot;</span>
-              {% endif %}
-              <time datetime="{{ featuredPost.date | date('%Y-%m-%d') }}">{{ featuredPost.date | date('%B %d, %Y') }}</time>
-            </div>
-            <span
-              class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white text-navy-950 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-              aria-hidden="true"
-            >
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 17L17 7M17 7H8m9 0v9" />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </a>
-
-      {# Latest — compact stacked list, Kore.ai sidebar pattern. Stretched to the Featured
-         card's full height (grid row stretch) and the list distributed with justify-between
-         so the column never leaves dead space below the last item; a "View all" link fills
-         the remaining space instead of an empty gap. #}
-      <div class="flex h-full flex-col gap-5 lg:col-span-1">
-        <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Latest</span>
-        <div class="flex flex-1 flex-col justify-between divide-y divide-sky-100">
-          {% for post in posts %}
-          {% if loop.index0 >= 1 and loop.index0 <= 4 %}
-          <a href="{{ post.url }}" class="group flex items-start gap-4 py-4 first:pt-0">
-            <div class="relative h-14 w-16 flex-shrink-0 overflow-hidden rounded-lg bg-navy-950">
-              {% if post.data.featuredImage %}
-              <img
-                src="{{ post.data.featuredImage }}"
-                alt=""
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div class="pointer-events-none absolute inset-0 bg-sky-500/45 mix-blend-color" aria-hidden="true"></div>
-              {% else %}
-              <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 90% 100% at 10% 105%, rgba(61, 143, 212, 0.35) 0%, transparent 62%), radial-gradient(ellipse 80% 90% at 105% -5%, rgba(118, 185, 0, 0.22) 0%, transparent 62%);"></div>
-              {% endif %}
-            </div>
-            <div class="min-w-0 flex-1">
-              <div class="mb-1.5 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-navy-400">
-                {% if post.data.category %}
-                <span class="text-[#5a9100]">{{ post.data.category }}</span>
-                <span aria-hidden="true">&middot;</span>
-                {% endif %}
-                <time datetime="{{ post.date | date('%Y-%m-%d') }}">{{ post.date | date('%B %d, %Y') }}</time>
-              </div>
-              <h4 class="line-clamp-2 text-[14px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-[#5a9100]">
-                {{ post.data.title }}
-              </h4>
-            </div>
-          </a>
-          {% endif %}
-          {% endfor %}
-        </div>
-
-        {% if posts.length > 5 %}
-        <a href="#blog-posts-heading" class="mt-auto flex items-center gap-1.5 border-t border-sky-100 pt-4 font-mono text-[12px] uppercase tracking-wider text-navy-900 transition-colors hover:text-[#5a9100]">
-          View all articles
-          <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
-        {% endif %}
-      </div>
-
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{# =====================================================
-   ALL ARTICLES GRID
-   ===================================================== #}
-<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24" aria-labelledby="blog-posts-heading">
-  <div class="mx-auto max-w-5xl">
-
-    {% if posts.length > 5 %}
-    <span class="mb-8 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" id="blog-posts-heading">
-      All Articles
-    </span>
-    {% else %}
-    <h2 id="blog-posts-heading" class="sr-only">Latest articles</h2>
-    {% endif %}
+<section class="pb-16 md:pb-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {% if posts.length > 0 %}
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for post in posts %}
-      {% if loop.index0 >= 5 or posts.length <= 5 %}
-      <a href="{{ post.url }}" class="group relative flex flex-col overflow-hidden rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 shadow-subtle transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2">
+      <a href="{{ post.url }}" class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
         {# Featured Image #}
         {% if post.data.featuredImage %}
-        <div class="relative aspect-[16/9] overflow-hidden bg-navy-950">
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
           <img
             src="{{ post.data.featuredImage }}"
             alt="{{ post.data.title }}"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />
-          <!-- Sky-blue tint overlay — mix-blend-color keeps the image's luminosity/detail while recasting hue to the site's sky accent -->
-          <div class="pointer-events-none absolute inset-0 bg-sky-500/45 mix-blend-color" aria-hidden="true"></div>
         </div>
         {% else %}
-        <div class="relative aspect-[16/9] overflow-hidden bg-navy-950">
-          <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 80% 100% at 10% 105%, rgba(61, 143, 212, 0.35) 0%, transparent 62%), radial-gradient(ellipse 70% 90% at 105% -5%, rgba(118, 185, 0, 0.22) 0%, transparent 62%);"></div>
-          <svg class="absolute inset-0 m-auto h-10 w-10 text-white/25" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <div class="aspect-[16/9] bg-gradient-to-br from-zunkiree-500 to-zunkiree-700 flex items-center justify-center">
+          <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
           </svg>
         </div>
         {% endif %}
 
         {# Content #}
-        <div class="flex flex-1 flex-col p-6">
+        <div class="p-6">
           {# Category + Date #}
-          <div class="mb-3 flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider">
+          <div class="flex items-center gap-3 mb-3">
             {% if post.data.category %}
-            <span class="text-[#5a9100]">{{ post.data.category }}</span>
-            <span class="text-navy-200" aria-hidden="true">&middot;</span>
+            <span class="text-xs font-medium text-zunkiree-600">{{ post.data.category }}</span>
+            <span class="text-gray-300">·</span>
             {% endif %}
-            <time class="text-navy-400" datetime="{{ post.date | date('%Y-%m-%d') }}">
+            <time class="text-sm text-gray-500" datetime="{{ post.date | date('%Y-%m-%d') }}">
               {{ post.date | date('%B %d, %Y') }}
             </time>
           </div>
 
           {# Title #}
-          <h3 class="mb-3 line-clamp-2 text-[18px] font-medium leading-[1.35] text-[#111827] transition-colors group-hover:text-[#5a9100]">
+          <h2 class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors mb-3 line-clamp-2">
             {{ post.data.title }}
-          </h3>
+          </h2>
 
           {# Description #}
           {% if post.data.description %}
-          <p class="line-clamp-2 text-[14px] leading-relaxed text-[#6B7280]">
+          <p class="text-gray-600 text-sm line-clamp-2">
             {{ post.data.description }}
           </p>
           {% endif %}
 
           {# Read more #}
-          <div class="mt-5 flex items-center gap-2 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-all group-hover:gap-3">
+          <div class="mt-4 flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:gap-3 transition-all">
             Read article
-            <svg class="h-4 w-4 text-[#5a9100]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </div>
         </div>
       </a>
-      {% endif %}
       {% endfor %}
     </div>
 
+    {% if pagination.pages.length > 1 %}
+    {# Pagination — reuses this page's own real link/button/icon classes #}
+    <nav class="mt-12 flex items-center justify-between" aria-label="Blog pagination">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-900 font-medium hover:bg-gray-50 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+        </svg>
+        Previous
+      </a>
+      {% else %}
+      <span></span>
+      {% endif %}
+
+      <span class="text-sm text-gray-500">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+        Next
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      {% else %}
+      <span></span>
+      {% endif %}
+    </nav>
+    {% endif %}
+
     {% else %}
     {# Empty state #}
-    <div class="rounded-2xl border border-sky-200/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 px-6 py-16 text-center shadow-subtle sm:py-20" data-reveal>
-      <svg class="mx-auto mb-6 h-14 w-14 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <div class="text-center py-16">
+      <svg class="w-16 h-16 text-gray-300 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
       </svg>
-      <h3 class="mb-2 text-[20px] font-medium text-[#111827]">Coming soon</h3>
-      <p class="mb-8 text-[15px] text-[#6B7280]">We're working on our first articles. Check back soon.</p>
-      <a
-        href="/"
-        class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-      >
+      <h2 class="text-xl font-medium text-gray-900 mb-2">Coming soon</h2>
+      <p class="text-gray-600 mb-8">We're working on our first articles. Check back soon.</p>
+      <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
         Back to Home
-        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
       </a>
     </div>
     {% endif %}
@@ -294,52 +148,34 @@ eleventyExcludeFromCollections: true
 </section>
 
 {# =====================================================
-   CTA SECTION — same dark navy-950 closing banner as
-   homepage-v2 / agentic-as-a-service.
+   CTA SECTION
    ===================================================== #}
-<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="blog-cta-heading">
-  <div class="mx-auto max-w-5xl">
-    <div
-      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
-      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
-      data-reveal
-    >
-      <div
-        class="pointer-events-none absolute inset-0 z-0"
-        aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
-      ></div>
-
-      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
-        Get Started
-      </span>
-      <h2 id="blog-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
-        Want to build with AI?
-      </h2>
-      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
-        Let's discuss how AI can transform your business operations.
-      </p>
-      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-        >
-          Schedule a Discovery Call
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Want to build with AI?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Let's discuss how AI can transform your business operations.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Schedule a Discovery Call
+    </a>
   </div>
 </section>
 <!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers AI products and solutions, including AI-native search, practice management software for dental care, and business analytics platforms.","@type":"Answer"}},{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers products such as Zunkiree Search, Dental AI, Gaamma for business analytics, Stella (AI Commerce Agent), Zenly (AI Booking Engine), and AI CRM.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial available on their website.","@type":"Answer"}},{"name":"What services does Zunkiree Labs provide?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides services including AI development, AI customer experience, data systems, custom software development, SaaS development, web & app development, and SEO.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs serves various industries, including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is the purpose of the Agentic as a Service (GaaS) offering?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) provides autonomous AI agents deployed as managed services to enhance business workflows.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","headline":"AI & Technology Blog | Insights from Zunkiree Labs","articleBody":"Insights & Guides Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs. August 7, 2026 AI & Technology Blog | Insights from Zunkiree Labs Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company. Read article August 7, 2026 The Ultimate Guide to Building an Agentic as a Service (GaaS) Application How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business. Read article August 4, 2026 Exploring Technological Innovations at Zunkiree Labs Dive into the latest technological innovations and research initiatives at Zunkiree Labs, highlighting cutting-edge advancements in AI and more. Read article July 27, 2026 Why User Testimonials Matter: Real Voices from Zunkiree Labs Why case studies and customer results matter more than marketing copy when evaluating an AI vendor, and what Zunkiree Labs' published case studies actually show. Read article July 27, 2026 What is a Dental AI Virtual Assistant? What a dental AI virtual assistant is from a patient's perspective, what it can answer on its own, and where it hands off to your dental team. Read article July 27, 2026 Understanding the Role of a Dental AI Admin Explore the essential responsibilities and skills of a Dental AI Administrator and how they contribute to modern dental practices. Read article July 27, 2026 Top AI Companies to Watch in Nepal Discover the best AI companies in Nepal, their innovative solutions, and how they're contributing to the tech landscape in 2026. Read article July 27, 2026 Revolutionizing Dental Practice Efficiency: The Impact of AI on Scheduling Discover how AI can enhance scheduling in dental practices, leading to improved efficiency, reduced no-shows, and better patient experiences. Read article July 27, 2026 Exploring Specialized AI Companies for Healthcare in Nepal Discover the emerging landscape of specialized AI companies in the healthcare sector of Nepal, their contributions, and potential impact on healthcare delivery. Read article July 27, 2026 Agentic-as-a-Service in Nepal: Exploring Availability and Options Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region. Read article July 26, 2026 Dental AI Secretary Solutions for Practices How AI-powered dental secretaries handle scheduling, reminders, and front-desk communication — and what dental practices can expect from adopting one. Read article July 26, 2026 Understanding Complex Availability in Scheduling What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zenly resolve it automatically. Read article July 26, 2026 Exploring Job Opportunities in AI.","datePublished":"2026-08-07"}</script><!-- SEOAI:SCHEMA:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Zunkiree Labs vs. Other AI Companies in Nepal</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">When considering the landscape of AI companies in Nepal, Zunkiree Labs stands out for its focus on practical applications in various sectors, including healthcare and e-commerce. Unlike some competitors, Zunkiree Labs emphasizes technical SEO automation and robust infrastructure solutions, offering a comprehensive approach to AI that enhances operational efficiency and customer engagement.</p></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
-
-{% include "partials/footer-v2.njk" %}
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Zunkiree Labs vs. Other AI Companies in Nepal</h2>
+      </div>
+      <div>
+        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-lg md:text-xl text-gray-600 leading-relaxed">When considering the landscape of AI companies in Nepal, Zunkiree Labs stands out for its focus on practical applications in various sectors, including healthcare and e-commerce. Unlike some competitors, Zunkiree Labs emphasizes technical SEO automation and robust infrastructure solutions, offering a comprehensive approach to AI that enhances operational efficiency and customer engagement.</p></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->

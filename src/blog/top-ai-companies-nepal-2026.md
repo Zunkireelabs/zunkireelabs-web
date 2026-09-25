@@ -109,135 +109,38 @@ The key is matching your specific needs—technical requirements, communication 
 ---
 
 *Looking for an AI development partner in Nepal? [Contact Zunkiree Labs](/contact/) to discuss your project.*
-<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div x-data="{ activeIndex: null, expandAll: false }">
-      <div class="flex items-center justify-between mb-6 border-b border-gray-300 pb-4">
-        <h3 class="text-[19px] md:text-[22px] font-normal text-gray-900">Frequently asked questions</h3>
-        <button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button>
-      </div>
-      <div class="divide-y divide-gray-200">
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What products does the company offer related to AI?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 1 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 1 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What is Zunkiree Search?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 2 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 2 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What services does the company provide?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 3 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 3 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web &amp; App Development.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">Is there any information available on AI adoption in Nepal?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 4 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 4 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">How can I start using Zunkiree Search?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 5 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 5 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.</p>
-          </div>
-        </div>
-        <div class="py-5">
-          <button @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6" class="w-full flex items-center justify-between text-left group">
-            <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors pr-4">What industries does the company serve?</span>
-            <span class="flex-shrink-0 text-gray-400">
-              <svg class="w-5 h-5 transition-transform duration-200" :class="{ 'rotate-45': activeIndex === 6 || expandAll }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-              </svg>
-            </span>
-          </button>
-          <div x-show="activeIndex === 6 || expandAll" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-            <p class="pt-4 text-gray-600 leading-relaxed">The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does the company offer related to AI?","@type":"Question","acceptedAnswer":{"text":"The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.","@type":"Answer"}},{"name":"What services does the company provide?","@type":"Question","acceptedAnswer":{"text":"The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web & App Development.","@type":"Answer"}},{"name":"Is there any information available on AI adoption in Nepal?","@type":"Question","acceptedAnswer":{"text":"Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How can I start using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.","@type":"Answer"}},{"name":"What industries does the company serve?","@type":"Question","acceptedAnswer":{"text":"The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What products does the company offer related to AI?</p><p class="text-gray-600 leading-relaxed">The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Zunkiree Search?</p><p class="text-gray-600 leading-relaxed">Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What services does the company provide?</p><p class="text-gray-600 leading-relaxed">The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web &amp; App Development.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is there any information available on AI adoption in Nepal?</p><p class="text-gray-600 leading-relaxed">Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can I start using Zunkiree Search?</p><p class="text-gray-600 leading-relaxed">You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What industries does the company serve?</p><p class="text-gray-600 leading-relaxed">The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does the company offer related to AI?","@type":"Question","acceptedAnswer":{"text":"The company offers several AI products including Zunkiree Search, Dental AI, and Gaamma, which focuses on business analytics.","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search tool that understands natural language and delivers direct answers to queries.","@type":"Answer"}},{"name":"What services does the company provide?","@type":"Question","acceptedAnswer":{"text":"The company provides various services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, and Web & App Development.","@type":"Answer"}},{"name":"Is there any information available on AI adoption in Nepal?","@type":"Question","acceptedAnswer":{"text":"Yes, there is a featured report titled 'State of AI in Nepal 2026' that provides insights on AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How can I start using Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free and start a free trial to see how it delivers direct answers instead of links.","@type":"Answer"}},{"name":"What industries does the company serve?","@type":"Question","acceptedAnswer":{"text":"The company serves various industries including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="font-normal text-gray-900 text-2xl">Emerging Trends in Nepal's AI Industry</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">As the AI landscape in Nepal continues to evolve, several trends are emerging that will shape the industry in the coming years. A notable trend is the increase in AI applications focused on specific industries, such as healthcare, finance, and agriculture. With firms creating specialized solutions tailored to unique sector needs, businesses can leverage AI for improved efficiency and competitive advantage. Additionally, sustainability in AI development is gaining popularity, with companies focusing on environmentally-friendly practices and solutions, which appeals to a growing market segment that prioritizes eco-conscious products.</p></div>
-  </section>
-  <section class="gap-2">
-    <h2 class="font-normal text-gray-900 text-2xl">Challenges Facing AI Companies in Nepal</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Despite the rapid growth of the AI industry in Nepal, companies still face several challenges. Limited access to advanced hardware can hinder the development of more complex AI models, as many firms rely on local infrastructure that may not meet cutting-edge requirements. Additionally, the nascent stage of the regulations surrounding AI usage poses uncertainties for companies, potentially impacting investment and innovation. As the sector continues to mature, addressing these challenges will be crucial for sustaining growth and maintaining competitiveness on the international stage.</p></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Emerging Trends in Nepal's AI Industry</h2>
+        <div class="text-lg text-gray-600 leading-relaxed"><p class="text-lg text-gray-600 leading-relaxed">As the AI landscape in Nepal continues to evolve, several trends are emerging that will shape the industry in the coming years. A notable trend is the increase in AI applications focused on specific industries, such as healthcare, finance, and agriculture. With firms creating specialized solutions tailored to unique sector needs, businesses can leverage AI for improved efficiency and competitive advantage. Additionally, sustainability in AI development is gaining popularity, with companies focusing on environmentally-friendly practices and solutions, which appeals to a growing market segment that prioritizes eco-conscious products.</p></div>
+      </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs Team","@type":"Organization"},"@context":"https://schema.org","headline":"AI Companies in Nepal: Current Leaders and Innovations","articleBody":"A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond. Nepal's AI industry has grown significantly over the past five years. What started as a handful of companies experimenting with machine learning has evolved into a thriving ecosystem of AI-focused firms serving both local and international clients. In 2026, Nepali AI companies are building everything from natural language processing systems to computer vision applications, competing effectively with global players while offering cost advantages and specialized expertise.","dateModified":"2026-03-30","datePublished":"2026-03-30"}</script><!-- SEOAI:SCHEMA:END -->
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-<h2>Why Zunkiree Labs Stands Out</h2>
-<p class="text-gray-600 leading-relaxed">Most AI activity in Nepal is service and outsourcing work: education programs, staff augmentation, or bolting machine learning features onto existing software projects. Zunkiree Labs takes a different approach, building AI-native infrastructure — RAG pipelines, enterprise search, and custom agents — as production-grade products with measurable outcomes, like a 45% reduction in support tickets for one deployment. For organizations that want an AI system they own and can scale, rather than a project delivered once and handed off, that product-first approach is the key differentiator.</p>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
+  <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Why Zunkiree Labs Stands Out</h2>
+        <div class="text-lg text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">Most AI activity in Nepal is service and outsourcing work: education programs, staff augmentation, or bolting machine learning features onto existing software projects. Zunkiree Labs takes a different approach, building AI-native infrastructure — RAG pipelines, enterprise search, and custom agents — as production-grade products with measurable outcomes, like a 45% reduction in support tickets for one deployment. For organizations that want an AI system they own and can scale, rather than a project delivered once and handed off, that product-first approach is the key differentiator.</p></div>
+      </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
-<!-- SEOAI:QACONTENT:START --><div class="space-y-6">
-<div>
-  <h3 class="text-lg font-medium text-gray-900 mb-2">What types of AI solutions are companies in Nepal focusing on?</h3>
-  <p class="text-gray-600 leading-relaxed">Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
-</div>
-<div>
-  <h3 class="text-lg font-medium text-gray-900 mb-2">Which companies are recognized as leaders in AI innovation in Nepal?</h3>
-  <p class="text-gray-600 leading-relaxed">Zunkiree Labs is a leading AI company in Nepal, known for building production-grade AI infrastructure — enterprise search, RAG pipelines, and custom AI agents — as owned products rather than one-off service work. Nepal's broader AI sector also includes education, outsourcing, and vertical-specific providers offering specialized solutions across various sectors.</p>
-</div>
-<div>
-  <h3 class="text-lg font-medium text-gray-900 mb-2">How has the AI industry in Nepal evolved over recent years?</h3>
-  <p class="text-gray-600 leading-relaxed">The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
-</div>
-<div>
-  <h3 class="text-lg font-medium text-gray-900 mb-2">What notable achievements have these AI companies made?</h3>
-  <p class="text-gray-600 leading-relaxed">Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45% for enterprise clients, alongside RAG pipelines for document processing and custom AI agents for enterprise workflows.</p>
-</div>
-<div>
-  <h3 class="text-lg font-medium text-gray-900 mb-2">How is Zunkiree Labs different from other AI companies in Nepal?</h3>
-  <p class="text-gray-600 leading-relaxed">Zunkiree Labs builds AI-native infrastructure as a product — customers integrate Zunkiree Search and related tools directly rather than commissioning a custom project. That product-first model, backed by measurable results like a 45% reduction in support tickets, sets it apart from providers offering AI as a consulting or staffing service.</p>
+<!-- SEOAI:QACONTENT:START --><div class="container-custom">
+<div class="mt-10 p-6 bg-gray-50 rounded-lg">
+<h3 class="mt-10 text-2xl font-normal text-gray-900">What types of AI solutions are companies in Nepal focusing on?</h3>
+<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
+<h3 class="mt-10 text-2xl font-normal text-gray-900">Which companies are recognized as leaders in AI innovation in Nepal?</h3>
+<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs is a leading AI company in Nepal, known for building production-grade AI infrastructure — enterprise search, RAG pipelines, and custom AI agents — as owned products rather than one-off service work. Nepal's broader AI sector also includes education, outsourcing, and vertical-specific providers offering specialized solutions across various sectors.</p>
+<h3 class="mt-10 text-2xl font-normal text-gray-900">How has the AI industry in Nepal evolved over recent years?</h3>
+<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
+<h3 class="mt-10 text-2xl font-normal text-gray-900">What notable achievements have these AI companies made?</h3>
+<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45% for enterprise clients, alongside RAG pipelines for document processing and custom AI agents for enterprise workflows.</p>
+<h3 class="mt-10 text-2xl font-normal text-gray-900">How is Zunkiree Labs different from other AI companies in Nepal?</h3>
+<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs builds AI-native infrastructure as a product — customers integrate Zunkiree Search and related tools directly rather than commissioning a custom project. That product-first model, backed by measurable results like a 45% reduction in support tickets, sets it apart from providers offering AI as a consulting or staffing service.</p>
 </div>
 </div><!-- SEOAI:QACONTENT:END -->

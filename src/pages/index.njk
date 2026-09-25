@@ -2,685 +2,127 @@
 layout: base.njk
 title: "Zunkiree Labs: AI Infrastructure for Modern Business Needs" # SEOAI:TITLE
 description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
-permalink: /home-legacy/
-bodyClass: "page-bg-active"
+permalink: /
 ---
 
-{# Full-page animated background layer #}
-<div class="page-bg" aria-hidden="true">
-  <div class="page-blob" id="page-blob-1"></div>
-  <div class="page-blob" id="page-blob-2"></div>
-  <div class="page-blob" id="page-blob-3"></div>
-</div>
-
-{# GSAP-driven color overlay — animates page from dark → blue as blue section enters #}
-<div id="page-color-overlay" aria-hidden="true"></div>
-
 {# =====================================================
-   HERO SECTION - 3-Slide Carousel (GSAP-animated)
+   HERO SECTION - IBM-style Minimal
    ===================================================== #}
-<section
-  class="hero-dark min-h-[85vh] flex flex-col justify-center relative overflow-hidden"
-  x-data="{
-    current: 0,
-    total: 3,
-    goTo(index) {
-      if (index === this.current) return
-      const prev = this.current
-      this.current = index
-      this.$dispatch('hero:slide', { prev, next: index })
-    }
-  }"
->
-  {# Animated background blobs (GSAP-driven drift) #}
-  <div class="hero-blob" id="hero-blob-1"></div>
-  <div class="hero-blob" id="hero-blob-2"></div>
-  <div class="hero-blob" id="hero-blob-3"></div>
-  {# Subtle centre glow #}
-  <div class="hero-glow"></div>
-
-  <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-4">
-
-    {# Top 2-col: left = eyebrow + headline + dots | right = body + CTAs #}
-    <div class="grid grid-cols-1 lg:grid-cols-[3fr_1.7fr] gap-6 lg:gap-6 items-start">
-
-      {# Left column — eyebrow, headline, dots #}
-      <div class="flex flex-col justify-start max-w-2xl">
-
-        {# Slide stack — absolute positioning, GSAP controls opacity/transform #}
-        <div class="relative min-h-[240px] md:min-h-[220px] lg:min-h-[210px]">
-
-          {# Slide 1 — left content #}
-          <div data-slide="0" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">AI-Native Infrastructure</span>
-            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em]">
-              Most AI is a wrapper.<br><span style="color: #76b900;">We build the infrastructure.</span>
-            </h1>
-          </div>
-
-          {# Slide 2 — left content #}
-          <div data-slide="1" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">Agentic AI · Now Available</span>
-            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em]">
-              AI agents that work.<br><span style="color: #76b900;">Not just respond.</span>
-            </h1>
-          </div>
-
-          {# Slide 3 — left content #}
-          <div data-slide="2" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <span class="inline-block text-xs font-medium tracking-widest uppercase text-white/60 mb-6">Built for Search · Powered by AI</span>
-            <h1 class="hero-headline text-4xl md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em]">
-              Search by meaning.<br><span style="color: #76b900;">Not just keywords.</span>
-            </h1>
-          </div>
-
-        </div>
-
-        {# Carousel nav — expanding pill indicators with progress fill + pause #}
-        <div class="flex items-center gap-3 mt-6" id="hero-dots-container">
-          <div class="flex items-center gap-2">
-            <button data-dot-pos="0" aria-label="Go to slide 1" class="hero-dot"><span class="hero-dot-fill"></span></button>
-            <button data-dot-pos="1" aria-label="Go to slide 2" class="hero-dot"><span class="hero-dot-fill"></span></button>
-            <button data-dot-pos="2" aria-label="Go to slide 3" class="hero-dot"><span class="hero-dot-fill"></span></button>
-          </div>
-          <button id="hero-pause" type="button" aria-label="Pause slideshow" aria-pressed="false" class="hero-pause-btn">
-            <svg class="hero-icon-pause" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><rect x="1" y="0" width="3" height="10" rx="1"/><rect x="6" y="0" width="3" height="10" rx="1"/></svg>
-            <svg class="hero-icon-play" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M1 0.5L9 5L1 9.5V0.5Z"/></svg>
-          </button>
+<section class="pt-20 md:pt-24 lg:pt-28">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:min-h-[70vh]">
+      {# Left: Text Content #}
+      <div class="flex flex-col justify-center pb-16 lg:pb-24">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6">AI-First Technology Company</p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+          AI Infrastructure.<br>
+          Engineered Right.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
+          We build infrastructure-level AI systems, not wrappers. From intelligent search to enterprise platforms, our AI-native architecture powers modern businesses.
+        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-4">
+          <a href="/products/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors" data-track="cta" data-cta-id="hero-products">
+            Explore Our Products
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors" data-track="cta" data-cta-id="hero-contact">
+            Talk to Us
+          </a>
         </div>
       </div>
-
-      {# Right column — body text + CTAs per slide #}
-      <div class="flex flex-col justify-start">
-
-        {# Spacer mirrors the eyebrow's height (text-xs + mb-6) so the body
-           aligns with the headline, not the eyebrow — desktop only #}
-        <span aria-hidden="true" class="hidden lg:block text-xs mb-6 invisible select-none">&nbsp;</span>
-
-        {# Slide stack — absolute positioning #}
-        <div class="relative min-h-[280px] md:min-h-[260px] lg:min-h-[260px]">
-
-          {# Slide 1 — right content #}
-          <div data-slide="0" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left md:text-justify">
-              Your business already has AI tools. What it's missing is the infrastructure to ground them, deploy them, and govern them at scale. That's what we build.
-            </p>
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
-                Book a Demo
-              </a>
-              <a href="/products/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
-                See Our Products
-              </a>
-            </div>
-          </div>
-
-          {# Slide 2 — right content #}
-          <div data-slide="1" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left md:text-justify">
-              Zunkiree's Agentic AI platform deploys autonomous agents across your workflows — handling complex tasks end-to-end, so your team focuses on what matters.
-            </p>
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
-                Book a Demo
-              </a>
-              <a href="/gaas/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
-                Explore Agentic AI
-              </a>
-            </div>
-          </div>
-
-          {# Slide 3 — right content #}
-          <div data-slide="2" class="absolute top-0 left-0 right-0" style="opacity:0;pointer-events:none">
-            <p class="text-lg md:text-xl text-white leading-relaxed mb-8 text-left md:text-justify">
-              Zunkiree Search is an AI-native search platform built for enterprises — delivering accurate, context-aware results from day one, without months of tuning.
-            </p>
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-              <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#76b900] hover:bg-[#91c733] text-white font-medium transition-all duration-200">
-                Book a Demo
-              </a>
-              <a href="/products/search/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/60 text-white font-medium hover:bg-white/10 transition-all duration-200">
-                Explore AI Search
-              </a>
-            </div>
-          </div>
-
-        </div>
+      {# Right: Hero Image #}
+      <div class="hidden lg:flex lg:flex-col lg:justify-end">
+        <img src="/assets/images/hero-orca-dashboard.webp" alt="Orca Platform Dashboard - AI Infrastructure Management" width="1440" height="900" class="w-[120%] h-auto max-w-none rounded-lg" fetchpriority="high" decoding="async" />
       </div>
     </div>
-
-    {# Bottom mockup wrapper — slide 0 sets height, slides 1+2 overlay absolutely #}
-    <div class="relative mt-6 hidden lg:block">
-
-    {# Slide 1: dashboard mockup + agent task card — sets container height #}
-    <div data-slide="0" class="hero-mockup-slide flex items-center gap-5" style="opacity:1;pointer-events:auto;">
-
-      {# Browser mockup — takes remaining space, full row height #}
-      <div class="relative rounded-3xl overflow-hidden flex-1" style="aspect-ratio:2/1; max-width:72%; background:linear-gradient(145deg,#0a1628 0%,#0f1f35 40%,#0a1a2e 100%); border:1px solid rgba(255,255,255,0.08); box-shadow:0 0 80px rgba(111,155,52,0.12),0 32px 80px rgba(0,0,0,0.6);">
-
-        {# Sparkle decorations #}
-        <span class="absolute top-6 left-8 select-none pointer-events-none z-10" style="color:#90a959;font-size:1.25rem;opacity:0.7;">✦</span>
-        <span class="absolute top-8 right-10 select-none pointer-events-none z-10" style="color:#6f9b34;font-size:0.875rem;opacity:0.5;">✦</span>
-        <span class="absolute bottom-6 left-16 select-none pointer-events-none z-10" style="color:#90a959;font-size:0.75rem;opacity:0.4;">✦</span>
-        <span class="absolute bottom-8 right-8 select-none pointer-events-none z-10" style="color:#76b900;font-size:1rem;opacity:0.6;">✦</span>
-
-        {# Dashboard screenshot — fills height #}
-        <div class="absolute inset-0">
-          <img
-            src="/assets/images/hero-orca-dashboard.png"
-            alt="Orca Platform Dashboard - AI Infrastructure Management"
-            width="1200"
-            height="720"
-            class="w-full h-full object-contain rounded-3xl"
-            fetchpriority="high"
-            decoding="async"
-            style="box-shadow:0 8px 32px rgba(0,0,0,0.4);"
-          />
-        </div>
-      </div>
-
-      {# Agent task card — image mockup #}
-      <div class="rounded-3xl overflow-hidden flex-shrink-0" style="width:360px; height:380px;">
-        <img
-          src="/assets/images/hero-slide1-mockup.png"
-          alt="AI Agent Processing Workflow - Zunkiree Labs"
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-    </div>
-
-    {# Slide 2: Agentic AI 3-card mockup — absolutely overlays slide 0's space #}
-    <div data-slide="1" class="hero-mockup-slide absolute inset-0 flex items-start justify-center gap-4 pt-6" style="opacity:0;pointer-events:none">
-
-      {# Left card — Agent chat initiation (dark glassmorphism) #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0 w-56" style="background:linear-gradient(160deg,#141e22 0%,#1c2c33 70%,#141e22 100%); border:1px solid rgba(111,155,52,0.25); box-shadow:0 20px 50px rgba(0,0,0,0.55);">
-        <div class="px-4 pt-4 pb-3">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(111,155,52,0.2); border:1px solid rgba(111,155,52,0.35);">
-              <svg class="w-3.5 h-3.5 text-zunkiree-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-            </div>
-            <span class="text-xs font-medium text-white/60 uppercase tracking-wide">New request</span>
-          </div>
-          <div class="rounded-xl p-3 mb-3" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
-            <p class="text-sm text-white/90 leading-snug">"Handle my vendor onboarding — contracts, access, and docs."</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-zunkiree-500 animate-pulse flex-shrink-0"></span>
-            <span class="text-xs text-white/50">Zuki Agent accepted</span>
-          </div>
-        </div>
-        <div class="mx-4 mb-4 rounded-xl p-3 flex items-center gap-3" style="background:rgba(111,155,52,0.1); border:1px solid rgba(111,155,52,0.2);">
-          <svg class="w-4 h-4 text-zunkiree-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <div>
-            <p class="text-xs font-semibold text-white/80">3 agents deployed</p>
-            <p class="text-xs text-white/40">Working in parallel</p>
-          </div>
-        </div>
-      </div>
-
-      {# Center card — Bold stats with concentric rings visual #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0 relative" style="width:400px; background:linear-gradient(145deg,#0d1a1e 0%,#182530 45%,#1e2e38 100%); border:1px solid rgba(111,155,52,0.18); box-shadow:0 28px 70px rgba(0,0,0,0.7);">
-        <div class="relative flex items-center justify-center pt-8 pb-4">
-          <svg width="200" height="200" viewBox="0 0 200 200" class="opacity-70">
-            <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(111,155,52,0.12)" stroke-width="1"/>
-            <circle cx="100" cy="100" r="72" fill="none" stroke="rgba(111,155,52,0.18)" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="54" fill="none" stroke="rgba(111,155,52,0.28)" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="36" fill="none" stroke="rgba(111,155,52,0.4)" stroke-width="2"/>
-            <circle cx="100" cy="100" r="20" fill="rgba(111,155,52,0.15)" stroke="rgba(111,155,52,0.55)" stroke-width="2"/>
-            <circle cx="100" cy="100" r="8" fill="rgba(111,155,52,0.8)"/>
-          </svg>
-          <div class="absolute inset-0 flex flex-col items-center justify-center">
-            <p class="text-5xl font-black text-white leading-none">47</p>
-            <p class="text-xs text-white/50 uppercase tracking-widest mt-1">tasks automated</p>
-          </div>
-        </div>
-        <div class="px-6 pb-6">
-          <p class="text-center text-white/40 text-xs uppercase tracking-wider mb-4">across 6 active workflows</p>
-          <div class="grid grid-cols-3 gap-2">
-            <div class="rounded-lg p-2.5 text-center" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
-              <p class="text-lg font-bold text-white">12</p>
-              <p class="text-xs text-white/40">Agents</p>
-            </div>
-            <div class="rounded-lg p-2.5 text-center" style="background:rgba(111,155,52,0.1); border:1px solid rgba(111,155,52,0.2);">
-              <p class="text-lg font-bold text-zunkiree-400">99%</p>
-              <p class="text-xs text-white/40">Success</p>
-            </div>
-            <div class="rounded-lg p-2.5 text-center" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
-              <p class="text-lg font-bold text-white">2.4s</p>
-              <p class="text-xs text-white/40">Avg time</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {# Right card — Completed workflow (white light card) #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0 w-56 bg-white" style="box-shadow:0 20px 50px rgba(0,0,0,0.4);">
-        <div class="px-4 pt-4 pb-3 border-b border-gray-100">
-          <div class="flex items-center gap-2 mb-1">
-            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-              <svg class="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <p class="text-sm font-semibold text-gray-900">Onboarding Complete</p>
-          </div>
-          <p class="text-xs text-gray-400">Zuki Agent · 1m 42s</p>
-        </div>
-        <div class="px-4 py-3 space-y-2.5">
-          <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-xs text-gray-700">Vendor profile created</span>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-xs text-gray-700">NDA signed &amp; filed</span>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-xs text-gray-700">System access provisioned</span>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-xs text-gray-700">Welcome email sent</span>
-          </div>
-        </div>
-        <div class="mx-4 mb-4 rounded-lg px-3 py-2 flex items-center justify-between" style="background:#f9fafb; border:1px solid #e5e7eb;">
-          <span class="text-xs text-gray-500">View full report</span>
-          <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </div>
-      </div>
-
-    </div>
-
-    {# Slide 3: AI Search 3-card mockup — absolutely overlays slide 0's space #}
-    <div data-slide="2" class="hero-mockup-slide absolute inset-0 flex items-start justify-center gap-4 pt-6" style="opacity:0;pointer-events:none">
-
-      {# Left card — Suggested queries (blue gradient, slight left tilt) #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0 w-52" style="background:linear-gradient(160deg,#a8d8f8 0%,#5aaad8 50%,#2d6db5 100%); border:1px solid rgba(255,255,255,0.25); box-shadow:0 20px 50px rgba(0,0,0,0.55); transform:rotate(-1.5deg);">
-        <div class="px-4 pt-4 pb-3">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" style="color:rgba(13,34,68,0.5)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <span class="text-xs uppercase tracking-wide" style="color:rgba(13,34,68,0.6)">Suggested</span>
-          </div>
-          <div class="space-y-2">
-            <div class="flex items-center gap-2.5 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.45); border:1px solid rgba(255,255,255,0.60); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-              <svg class="w-3 h-3 flex-shrink-0" style="color:#4a7c1a" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <span class="text-xs font-medium" style="color:#0d2244">What is our refund policy?</span>
-            </div>
-            <div class="flex items-center gap-2.5 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-              <svg class="w-3 h-3 flex-shrink-0" style="color:rgba(13,34,68,0.4)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <span class="text-xs" style="color:rgba(13,34,68,0.75)">How do I request PTO?</span>
-            </div>
-            <div class="flex items-center gap-2.5 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-              <svg class="w-3 h-3 flex-shrink-0" style="color:rgba(13,34,68,0.4)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <span class="text-xs" style="color:rgba(13,34,68,0.75)">Who handles escalations?</span>
-            </div>
-            <div class="flex items-center gap-2.5 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-              <svg class="w-3 h-3 flex-shrink-0" style="color:rgba(13,34,68,0.4)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <span class="text-xs" style="color:rgba(13,34,68,0.75)">Q4 compliance checklist</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {# Center card — AI search result (tallest, straight) #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0" style="width:440px; background:linear-gradient(160deg,#a8d8f8 0%,#5aaad8 50%,#2d6db5 100%); border:1px solid rgba(255,255,255,0.25); box-shadow:0 28px 70px rgba(0,0,0,0.65);">
-        <div class="mx-4 mt-5 mb-4 flex items-center gap-3 rounded-xl px-4 py-3" style="background:rgba(255,255,255,0.40); border:1px solid rgba(255,255,255,0.55); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-          <svg class="w-4 h-4 flex-shrink-0" style="color:rgba(13,34,68,0.45)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <span class="text-sm flex-1 font-medium" style="color:#0d2244">enterprise refund policy</span>
-          <div class="flex items-center gap-1.5 px-2 py-1 rounded-md" style="background:rgba(74,124,26,0.18); border:1px solid rgba(74,124,26,0.35);">
-            <span class="w-1.5 h-1.5 rounded-full bg-zunkiree-600 animate-pulse"></span>
-            <span class="text-xs font-semibold" style="color:#3a6212">AI</span>
-          </div>
-        </div>
-        <div class="mx-4 mb-4 rounded-xl p-4" style="background:rgba(255,255,255,0.35); border:1px solid rgba(255,255,255,0.50); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-          <div class="flex items-center gap-2 mb-2.5">
-            <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(74,124,26,0.20);">
-              <svg class="w-3 h-3" style="color:#4a7c1a" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <span class="text-xs font-semibold" style="color:rgba(13,34,68,0.75)">Zunkiree Search · AI Answer</span>
-          </div>
-          <p class="text-sm leading-relaxed mb-3" style="color:rgba(13,34,68,0.85)">Enterprise customers may request full refunds within <span class="font-bold" style="color:#0d2244">30 days</span> of purchase. Extended plans include a 60-day window with account credit options available.</p>
-          <div class="flex items-center gap-2">
-            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full" style="background:rgba(22,163,74,0.15); border:1px solid rgba(22,163,74,0.35);">
-              <svg class="w-3 h-3 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-xs font-medium text-green-700">Confidence 98%</span>
-            </div>
-            <span class="text-xs" style="color:rgba(13,34,68,0.50)">· 3 sources</span>
-          </div>
-        </div>
-        <div class="mx-4 mb-5 space-y-2">
-          <div class="flex items-center gap-3 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" style="color:rgba(13,34,68,0.40)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            <span class="text-xs flex-1" style="color:rgba(13,34,68,0.80)">Billing Policy v4.2 · Enterprise</span>
-            <span class="text-xs font-medium" style="color:rgba(13,34,68,0.55)">98%</span>
-          </div>
-          <div class="flex items-center gap-3 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.25); border:1px solid rgba(255,255,255,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" style="color:rgba(13,34,68,0.40)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            <span class="text-xs flex-1" style="color:rgba(13,34,68,0.80)">Support Handbook · Section 7</span>
-            <span class="text-xs font-medium" style="color:rgba(13,34,68,0.55)">84%</span>
-          </div>
-        </div>
-      </div>
-
-      {# Right card — Sources (white/light, slight right tilt) #}
-      <div class="flex flex-col rounded-2xl overflow-hidden flex-shrink-0 w-52 bg-white" style="box-shadow:0 20px 50px rgba(0,0,0,0.4); transform:rotate(1.5deg);">
-        <div class="px-4 pt-4 pb-3 border-b border-gray-100">
-          <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Sources</p>
-        </div>
-        <div class="px-4 py-3 space-y-3">
-          <div>
-            <div class="flex items-center gap-2 mb-1.5">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span class="text-xs font-medium text-gray-700 truncate">Billing Policy v4.2</span>
-            </div>
-            <div class="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-              <div class="h-full rounded-full bg-zunkiree-500" style="width:98%"></div>
-            </div>
-            <p class="text-xs text-gray-400 mt-0.5">98% relevance</p>
-          </div>
-          <div>
-            <div class="flex items-center gap-2 mb-1.5">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span class="text-xs font-medium text-gray-700 truncate">Support Handbook §7</span>
-            </div>
-            <div class="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-              <div class="h-full rounded-full bg-zunkiree-500" style="width:84%"></div>
-            </div>
-            <p class="text-xs text-gray-400 mt-0.5">84% relevance</p>
-          </div>
-          <div>
-            <div class="flex items-center gap-2 mb-1.5">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span class="text-xs font-medium text-gray-700 truncate">Contract T&amp;C 2024</span>
-            </div>
-            <div class="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-              <div class="h-full rounded-full bg-zunkiree-500" style="width:71%"></div>
-            </div>
-            <p class="text-xs text-gray-400 mt-0.5">71% relevance</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    </div>{# end bottom mockup wrapper #}
-
   </div>
 </section>
 
 {# =====================================================
    SOCIAL PROOF / METRICS BAR
    ===================================================== #}
-<section class="pt-8 pb-16 mt-4" data-reveal>
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {# Headline — same font as hero H1 #}
-    <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white text-center mb-14 md:mb-16">
-      Companies going AI-native with <span style="color:#76b900;">Zunkireelabs.</span>
-    </h2>
-  </div>
-
-  {# Logo Marquee — full-bleed (edge-to-edge), capped on ultra-wide screens #}
-  <div id="logo-marquee" class="w-full relative overflow-hidden mb-16 md:mb-20 min-[1920px]:max-w-[1920px] min-[1920px]:mx-auto">
-        <div id="logo-marquee-track" class="flex items-center gap-10 animate-marquee-scroll">
-          {# First set #}
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/mach24orbital.webp" alt="Mach24orbital" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/khushbu-nirman-sewa.webp" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/cms-group.webp" alt="CMS Group" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/admizz.webp" alt="Admizz" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/khems-cleaning.webp" alt="Khems Cleaning" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          {# Duplicate set for seamless loop #}
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/mach24orbital.webp" alt="Mach24orbital" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/khushbu-nirman-sewa.webp" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/cms-group.webp" alt="CMS Group" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/admizz.webp" alt="Admizz" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-          <div class="w-40 h-10 flex items-center justify-center flex-shrink-0">
-            <img src="/images/clients/khems-cleaning.webp" alt="Khems Cleaning" class="max-w-full max-h-full object-contain brightness-0 invert" loading="lazy" width="128" height="32" />
-          </div>
-        </div>
-  </div>
-
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    {# Stat cards — full-width landscape layout #}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="rounded-2xl px-8 py-7" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
-        <p class="text-6xl font-bold leading-none" style="color:#76b900;">5+</p>
-        <p class="text-sm text-white/60 mt-3 tracking-wide">Products</p>
-      </div>
-      <div class="rounded-2xl px-8 py-7" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
-        <p class="text-6xl font-bold leading-none" style="color:#76b900;">6</p>
-        <p class="text-sm text-white/60 mt-3 tracking-wide">Industries</p>
-      </div>
-      <div class="rounded-2xl px-8 py-7" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
-        <p class="text-6xl font-bold leading-none" style="color:#76b900;">8</p>
-        <p class="text-sm text-white/60 mt-3 tracking-wide">Services</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-{# =====================================================
-   PLATFORM PILLARS + SEARCH SPOTLIGHT
-   ===================================================== #}
-<section class="section-blue pt-8 pb-16 md:pt-12 md:pb-24">
+<section class="py-6 bg-white border-y border-gray-200">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
 
-    {# Section Header #}
-    <div class="mb-6 text-center">
-      <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white mb-8">
-        AI infrastructure, <span style="color:#76b900;">built to scale.</span>
-      </h2>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-        <a href="/services/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-zunkiree-500 text-zunkiree-400 font-medium hover:bg-zunkiree-500/10 transition-all duration-200">
-          Explore Platform
-        </a>
+      {# Left: Trust Text with Divider #}
+      <div class="lg:col-span-2 flex items-center gap-4">
+        <p class="text-xs text-gray-500 uppercase tracking-wider leading-relaxed">Trusted by forward-thinking organizations</p>
+        <div class="hidden lg:block w-px h-8 bg-gray-200"></div>
       </div>
-    </div>
 
-    {# 3-card single row — Pillar Cards #}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-
-      {# Card 1 — Engineering AI infrastructure #}
-      <div class="numbered-pillar-card" style="--card-bg-img: url('/assets/images/card-info-01.avif')">
-        <div class="pillar-text">
-          <h3>Engineering AI<br>infrastructure</h3>
-          <p>Custom AI systems and agents built from scratch and wired into your existing stack.</p>
+      {# Middle: Logo Marquee #}
+      <div class="lg:col-span-7 relative overflow-hidden">
+        <div class="marquee-fade-light">
+          <div class="flex items-center gap-10 animate-marquee-scroll">
+            {# First set of logos #}
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/mach24orbital.webp" alt="Mach24orbital" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khushbu-nirman-sewa.webp" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/prime-tiles.webp" alt="Prime Tiles" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/cms-group.webp" alt="CMS Group" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/admizz.webp" alt="Admizz" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khems-cleaning.webp" alt="Khems Cleaning" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            {# Duplicate set for seamless loop #}
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/mach24orbital.webp" alt="Mach24orbital" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/corecloud365.svg" alt="Corecloud365" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/rapid-investment.svg" alt="Rapid Investment" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khushbu-nirman-sewa.webp" alt="Khushbu Nirman Sewa" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/prime-tiles.webp" alt="Prime Tiles" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/cms-group.webp" alt="CMS Group" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/admizz.webp" alt="Admizz" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+            <div class="w-32 h-8 flex items-center justify-center flex-shrink-0">
+              <img src="/images/clients/khems-cleaning.webp" alt="Khems Cleaning" class="max-w-full max-h-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy" width="128" height="32" />
+            </div>
+          </div>
         </div>
       </div>
 
-      {# Card 2 — Deploy #}
-      <div class="numbered-pillar-card" style="--card-bg-img: url('/assets/images/card-info-02.avif')">
-        <div class="pillar-text">
-          <h3>Deploy to<br>production</h3>
-          <p>Fully tested, monitored systems shipped on schedule — from staging to live without surprises.</p>
+      {# Right: Stats #}
+      <div class="lg:col-span-3 flex items-center justify-end gap-8">
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">5+</p>
+          <p class="text-xs text-gray-500">Products</p>
         </div>
-      </div>
-
-      {# Card 3 — Scale #}
-      <div class="numbered-pillar-card" style="--card-bg-img: url('/assets/images/card-info-03.avif')">
-        <div class="pillar-text">
-          <h3>Scale without<br>limits</h3>
-          <p>Architecture designed to grow with demand — more users, more data, more complexity without rebuilding.</p>
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">6</p>
+          <p class="text-xs text-gray-500">Industries</p>
         </div>
-      </div>
-
-      {# Card 4 — Own it #}
-      <div class="numbered-pillar-card" style="--card-bg-img: url('/assets/images/card-info-02.avif')">
-        <div class="pillar-text">
-          <h3>Own it<br>completely</h3>
-          <p>Your code, your infrastructure, your IP. No vendor lock-in, ever.</p>
+        <div class="text-center">
+          <p class="text-2xl font-medium text-gray-900">8</p>
+          <p class="text-xs text-gray-500">Services</p>
         </div>
-      </div>
-
-    </div>
-
-
-    {# Zunkiree Search — clean glass card (ServiceNow "Meet Otto" style) #}
-    <div class="rounded-2xl py-10 lg:py-12" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);">
-      {# Inner content constrained to same max-w as pillar grid, with matching card left-padding #}
-      {# Mobile: stacked column (icon → title → text → CTA). Desktop: icon left, content right. #}
-      <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 lg:gap-14 px-6 sm:px-8 lg:px-12">
-
-        {# Icon — Lottie sparkle animation (loaded via main.js / lottie-web) #}
-        <div class="flex-shrink-0 flex items-center justify-start md:justify-center">
-          <div id="search-lottie" class="w-24 h-24 md:w-[130px] md:h-[130px]"></div>
-        </div>
-
-        {# Text + CTA #}
-        <div>
-          <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4" style="color:#76b900;">Zunkiree Search</h3>
-          <p class="text-white/80 text-base md:text-lg leading-relaxed mb-6 max-w-4xl text-left md:text-justify">
-            Zunkiree Search™ puts AI to work across your entire product catalog, knowledge base, and customer data. You ask. Zunkiree Search gets results — accurate, context-aware, and personalized from day one, on a platform that already understands your business without months of tuning.
-          </p>
-          <a href="/products/search/" class="inline-flex items-center justify-center gap-2 w-full md:w-auto px-7 py-3 rounded-full bg-zunkiree-600 text-white font-semibold hover:bg-zunkiree-700 transition-colors">
-            Explore Search
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-{% if false %}{% include "partials/ribbon-platform.njk" %}{% endif %}
-
-{# =====================================================
-   INFINITY LOOP — unified: loop canvas + tabs + text overlay
-   ===================================================== #}
-{# =====================================================
-   INFINITY LOOP — Section A: Centrepiece (unchanged)
-   ===================================================== #}
-<section class="relative pt-8 pb-4 overflow-hidden" id="infinity-showcase-a">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {# Header #}
-    <div class="text-center mb-8">
-      <p class="text-xs uppercase tracking-widest font-medium mb-4" style="color:rgba(255,255,255,0.55);">From Manual to Autonomous</p>
-      <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white">
-        Your team's workflows, now run by <span style="color:#76b900;">AI.</span>
-      </h2>
-    </div>
-
-    {# Infinity Loop Visual #}
-    <div class="relative w-full mx-auto" style="max-width:1100px; isolation:isolate;">
-
-      {# Ambient glow bed — soft radial bloom behind the loop, gently breathing #}
-      <div class="absolute pointer-events-none infinity-glow-bed" aria-hidden="true"
-           style="z-index:-1; left:50%; top:50%; width:86%; height:62%;
-                  background:radial-gradient(ellipse at center, rgba(90,200,170,0.20) 0%, rgba(70,140,210,0.12) 42%, transparent 70%);
-                  filter:blur(46px);"></div>
-
-      {# Three.js canvas — 3D ribbon rendered via WebGL #}
-      <canvas id="infinity-three-canvas" class="w-full block" style="display:block;"></canvas>
-
-      {# ServiceNow-style portraits inside the loop lobes (desktop only) #}
-      <div class="hidden md:block absolute inset-0 pointer-events-none select-none" style="z-index:4;">
-
-        {# Left lobe — Your Team #}
-        <div class="absolute" style="left:31%; top:50%; width:24%; transform:translate(-50%,-55%);">
-          <img src="/assets/images/loop-person-team.png" alt="Your team using Zunkiree AI" class="w-full h-auto block" loading="lazy" decoding="async"
-               style="-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 98%); mask-image:linear-gradient(to bottom,#000 70%,transparent 98%); filter:drop-shadow(0 18px 32px rgba(0,0,0,0.5));" />
-          <span class="absolute left-1/2" style="bottom:14%; transform:translateX(-50%);">
-            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white whitespace-nowrap" style="background:#76b900; box-shadow:0 4px 14px rgba(118,185,0,0.45);">Your Team</span>
-          </span>
-        </div>
-
-        {# Right lobe — Your Customers #}
-        <div class="absolute" style="left:69%; top:50%; width:24%; transform:translate(-50%,-55%);">
-          <img src="/assets/images/loop-person-customers.png" alt="Your customers served by Zunkiree AI" class="w-full h-auto block" loading="lazy" decoding="async"
-               style="-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 98%); mask-image:linear-gradient(to bottom,#000 70%,transparent 98%); filter:drop-shadow(0 18px 32px rgba(0,0,0,0.5));" />
-          <span class="absolute left-1/2" style="bottom:14%; transform:translateX(-50%);">
-            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide text-white whitespace-nowrap" style="background:#3d8fd4; box-shadow:0 4px 14px rgba(61,143,212,0.45);">Your Customers</span>
-          </span>
-        </div>
-
-      </div>
-
-      {# Center crossover text #}
-      <div class="hidden md:block absolute left-1/2 top-1/2 pointer-events-none select-none" style="transform:translate(-50%,-50%); z-index:6;">
-        <p class="text-lg lg:text-2xl font-bold text-white text-center whitespace-nowrap" style="text-shadow:0 2px 18px rgba(7,18,35,0.9);">
-          Data <span style="color:#76b900;">+</span> AI <span style="color:#76b900;">+</span> Agents <span style="color:#76b900;">+</span> Automation
-        </p>
-      </div>
-
-      {# Labels — positioned by Three.js projection, glass badge style #}
-      <div class="absolute inset-0 pointer-events-none select-none">
-
-        <span data-inf="agentic-ai" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2">
-            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
-            <span class="text-white text-lg font-semibold tracking-wide">Agentic AI</span>
-          </span>
-        </span>
-
-        <span data-inf="ai-search" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2">
-            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
-            <span class="text-white text-lg font-semibold tracking-wide">AI Search</span>
-          </span>
-        </span>
-
-        <span data-inf="data-infra" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2">
-            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
-            <span class="text-white text-lg font-semibold tracking-wide">Data Infrastructure</span>
-          </span>
-        </span>
-
-        <span data-inf="automation" class="absolute whitespace-nowrap" style="opacity:0;transform:translate(-50%,-50%);">
-          <span class="inline-flex items-center gap-2">
-            <span data-inf-dot class="inline-block w-3.5 h-3.5 rounded-full flex-shrink-0" style="background:white;box-shadow:0 0 8px 3px rgba(255,255,255,0.5);"></span>
-            <span class="text-white text-lg font-semibold tracking-wide">Automation</span>
-          </span>
-        </span>
-
-        {# ✦ stars — equally spaced along the lemniscate, positioned by Three.js projection #}
-        <span data-inf-star="0"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:18px;color:rgba(255,255,255,0.55);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="1"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:14px;color:rgba(255,255,255,0.45);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="2"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:20px;color:rgba(255,255,255,0.50);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="3"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:15px;color:rgba(255,255,255,0.40);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="4"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:22px;color:rgba(255,255,255,0.55);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="5"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:16px;color:rgba(255,255,255,0.42);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="6"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:19px;color:rgba(255,255,255,0.50);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="7"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:14px;color:rgba(255,255,255,0.38);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="8"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:21px;color:rgba(255,255,255,0.52);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="9"  style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:15px;color:rgba(255,255,255,0.43);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="10" style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:18px;color:rgba(255,255,255,0.48);line-height:1;pointer-events:none;">✦</span>
-        <span data-inf-star="11" style="position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:16px;color:rgba(255,255,255,0.44);line-height:1;pointer-events:none;">✦</span>
-
       </div>
 
     </div>
@@ -688,309 +130,16 @@ bodyClass: "page-bg-active"
 </section>
 
 {# =====================================================
-   INFINITY LOOP — Section B: ServiceNow-style 2-col layout
-   Left: hero text · Right: browser-chrome product mockup
+   SERVICES SHOWCASE - IBM Style Grid
    ===================================================== #}
-<section class="relative py-16 overflow-hidden" id="infinity-showcase-b"
-         x-data="{ activeTab: 0, setTab(i) { this.activeTab = i; window.infinityLoop?.setTabColors(i); window.infinityLoopZoom?.setFocus(i); } }">
-
-  {# Zoom loop — full-section background, fades out at edges #}
-  <div class="absolute inset-0 pointer-events-none" id="infinity-showcase-zoom">
-    <canvas id="infinity-three-canvas-zoom" class="w-full h-full block" style="display:block;opacity:0.82;"></canvas>
-    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(7,18,35,0.72) 30%,rgba(7,18,35,0.05) 65%,rgba(7,18,35,0.45) 100%);"></div>
-    <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(7,18,35,0.4) 0%,transparent 15%,transparent 85%,rgba(7,18,35,0.4) 100%);"></div>
-  </div>
-
-  <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {# Tabs — centered pill #}
-    <div class="flex justify-center mb-12">
-      <div class="flex items-center gap-1 rounded-full p-1.5 w-full" style="max-width:680px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);">
-        <button @click="setTab(0)" :class="activeTab===0?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Agentic AI</button>
-        <button @click="setTab(1)" :class="activeTab===1?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">AI Search</button>
-        <button @click="setTab(2)" :class="activeTab===2?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Data Infrastructure</button>
-        <button @click="setTab(3)" :class="activeTab===3?'bg-white text-gray-900 shadow-sm':'text-white/60 hover:text-white'" class="flex-1 py-2.5 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap">Automation</button>
-      </div>
-    </div>
-
-    {# Two-column: hero text left · mockup right #}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
-
-      {# ── LEFT: sliding text panels ───────────────────────────────── #}
-      <div class="overflow-hidden">
-        <div class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-             :style="`transform: translateX(-${activeTab * 100}%)`">
-
-          {# Tab 0: Agentic AI #}
-          <div class="w-full flex-shrink-0">
-            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">BUILD</p>
-            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
-              Agents that execute,<br>not just respond.
-            </h3>
-            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
-              We build custom AI agents using RAG pipelines and LLM integration — trained on your data, wired into your workflows, acting autonomously from day one.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a href="/services/ai-development/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore AI Development</a>
-              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
-            </div>
-          </div>
-
-          {# Tab 1: AI Search #}
-          <div class="w-full flex-shrink-0">
-            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">FIND</p>
-            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
-              Search that answers.<br>Not just retrieves.
-            </h3>
-            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
-              AI-powered search that understands context, surfaces the right result, and deflects support tickets before they're raised. Clients cut ticket volume by 40%.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a href="/products/search/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore AI Search</a>
-              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
-            </div>
-          </div>
-
-          {# Tab 2: Data Infrastructure #}
-          <div class="w-full flex-shrink-0">
-            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">GROUND</p>
-            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
-              AI is only as good as<br>the data behind it.
-            </h3>
-            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
-              We build the pipelines, warehouses, and infrastructure that give your models something real to act on — clean, structured, and ready for ML without months of cleanup.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a href="/services/data-systems/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore Data Systems</a>
-              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
-            </div>
-          </div>
-
-          {# Tab 3: Automation #}
-          <div class="w-full flex-shrink-0">
-            <p class="text-xs uppercase tracking-widest font-semibold mb-5" style="color:#76b900;">ACT</p>
-            <h3 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.06] tracking-tight">
-              Manual to autonomous.<br>Without ripping out what works.
-            </h3>
-            <p class="text-white/60 text-base leading-relaxed mb-8 max-w-[440px]">
-              We wire AI into the workflows your team already runs — from email triage to dashboard reporting — so the loop closes without human hand-holding.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a href="/services/" class="inline-flex items-center px-6 py-3 rounded-full text-white text-sm font-semibold transition-colors duration-200" style="background:#76b900;">Explore Automation</a>
-              <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-full border text-white/80 text-sm font-semibold hover:text-white transition-all duration-200" style="border-color:rgba(255,255,255,0.2);">Book a Call</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      {# ── RIGHT: browser-chrome mockup card ───────────────────────── #}
-      <div class="relative">
-
-        {# Glow behind card #}
-        <div class="absolute inset-0 rounded-2xl blur-3xl opacity-20 transition-colors duration-500"
-             :style="activeTab===0 ? 'background:radial-gradient(ellipse,#7ee8a2,transparent 70%)' :
-                     activeTab===1 ? 'background:radial-gradient(ellipse,#60a5fa,transparent 70%)' :
-                     activeTab===2 ? 'background:radial-gradient(ellipse,#fb923c,transparent 70%)' :
-                                     'background:radial-gradient(ellipse,#76b900,transparent 70%)'"></div>
-
-        {# Browser chrome frame #}
-        <div class="relative rounded-xl overflow-hidden shadow-2xl" style="background:#102616; border:1px solid rgba(118,185,0,0.25);">
-
-          {# Browser top bar #}
-          <div class="flex items-center gap-2 px-3 py-2.5" style="background:#0b1c10; border-bottom:1px solid rgba(118,185,0,0.15);">
-            <span class="w-2.5 h-2.5 rounded-full" style="background:#ff5f57;"></span>
-            <span class="w-2.5 h-2.5 rounded-full" style="background:#febc2e;"></span>
-            <span class="w-2.5 h-2.5 rounded-full" style="background:#28c840;"></span>
-            <div class="ml-3 flex-1 rounded-md px-3 py-1 text-xs" style="background:rgba(118,185,0,0.1); color:rgba(255,255,255,0.35); font-family:monospace;">
-              app.zunkireelabs.com
-            </div>
-          </div>
-
-          {# Mockup content — switches per tab #}
-          <div class="relative overflow-hidden" style="min-height:240px;">
-            <div class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-                 :style="`transform: translateX(-${activeTab * 100}%)`">
-
-              {# Mockup 0: Agentic AI — agent run dashboard #}
-              <div class="w-full flex-shrink-0 p-4">
-                <div class="flex items-center justify-between mb-4">
-                  <div>
-                    <p class="text-white text-sm font-semibold">Agent Run</p>
-                    <p class="text-white/40 text-xs">customer_support_bot · just now</p>
-                  </div>
-                  <span class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#76b900] animate-pulse"></span> Running
-                  </span>
-                </div>
-                <div class="space-y-2.5">
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="text-white/70 text-xs">Analyzed user query</span>
-                  </div>
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="text-white/70 text-xs">Retrieved 12 knowledge base docs</span>
-                  </div>
-                  <div class="flex items-center gap-3 p-3 rounded-lg" style="background:rgba(118,185,0,0.06); border:1px solid rgba(118,185,0,0.2);">
-                    <span class="w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#76b900] border-t-transparent animate-spin"></span>
-                    <span class="text-white/90 text-xs">Generating response…</span>
-                  </div>
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.03);">
-                    <span class="w-4 h-4 flex-shrink-0 rounded-full" style="border:1.5px solid rgba(255,255,255,0.2);"></span>
-                    <span class="text-white/30 text-xs">Update CRM record</span>
-                  </div>
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.03);">
-                    <span class="w-4 h-4 flex-shrink-0 rounded-full" style="border:1.5px solid rgba(255,255,255,0.2);"></span>
-                    <span class="text-white/30 text-xs">Close ticket</span>
-                  </div>
-                </div>
-              </div>
-
-              {# Mockup 1: AI Search — search interface #}
-              <div class="w-full flex-shrink-0 p-4">
-                <div class="flex items-center gap-3 p-3 rounded-lg mb-4" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);">
-                  <svg class="w-4 h-4 text-white/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                  <span class="text-white/60 text-sm">How do I reset my 2FA?</span>
-                </div>
-                <p class="text-white/40 text-xs uppercase tracking-widest mb-3">Top results</p>
-                <div class="space-y-2">
-                  <div class="flex items-center justify-between p-3 rounded-lg" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);">
-                    <div>
-                      <p class="text-white text-sm font-medium">Authentication Setup Guide</p>
-                      <p class="text-white/40 text-xs mt-0.5">docs.help · 2FA reset walkthrough</p>
-                    </div>
-                    <span class="text-xs font-semibold" style="color:#76b900;">98%</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <div>
-                      <p class="text-white/70 text-sm">Security FAQ</p>
-                      <p class="text-white/30 text-xs mt-0.5">Frequently asked questions</p>
-                    </div>
-                    <span class="text-xs font-semibold text-white/40">94%</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <div>
-                      <p class="text-white/70 text-sm">Admin Reset Guide</p>
-                      <p class="text-white/30 text-xs mt-0.5">For IT administrators</p>
-                    </div>
-                    <span class="text-xs font-semibold text-white/40">91%</span>
-                  </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 p-2.5 rounded-lg" style="background:rgba(118,185,0,0.1); border:1px solid rgba(118,185,0,0.2);">
-                  <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                  <span class="text-xs" style="color:#76b900;">Ticket deflected — answer served directly</span>
-                </div>
-              </div>
-
-              {# Mockup 2: Data Infrastructure — pipeline run #}
-              <div class="w-full flex-shrink-0 p-4">
-                <div class="flex items-center justify-between mb-4">
-                  <div>
-                    <p class="text-white text-sm font-semibold">Pipeline · customer_data_sync</p>
-                    <p class="text-white/40 text-xs">Last run: 2 min ago · Next: in 58 min</p>
-                  </div>
-                  <span class="text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">Healthy</span>
-                </div>
-                <div class="space-y-2.5">
-                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <div class="flex items-center gap-3">
-                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                      <span class="text-white/70 text-xs">Extract</span>
-                    </div>
-                    <span class="text-white/40 text-xs">14,203 records</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <div class="flex items-center gap-3">
-                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                      <span class="text-white/70 text-xs">Transform</span>
-                    </div>
-                    <span class="text-white/40 text-xs">0 errors</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <div class="flex items-center gap-3">
-                      <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                      <span class="text-white/70 text-xs">Load → Warehouse</span>
-                    </div>
-                    <span class="text-white/40 text-xs">synced</span>
-                  </div>
-                </div>
-                <div class="mt-4 grid grid-cols-2 gap-2">
-                  <div class="p-3 rounded-lg text-center" style="background:rgba(118,185,0,0.08);">
-                    <p class="text-white text-lg font-bold">2.3M</p>
-                    <p class="text-white/40 text-xs">rows / hr</p>
-                  </div>
-                  <div class="p-3 rounded-lg text-center" style="background:rgba(118,185,0,0.08);">
-                    <p class="text-white text-lg font-bold">99.8%</p>
-                    <p class="text-white/40 text-xs">uptime</p>
-                  </div>
-                </div>
-              </div>
-
-              {# Mockup 3: Automation — workflow run #}
-              <div class="w-full flex-shrink-0 p-4">
-                <div class="flex items-center justify-between mb-4">
-                  <div>
-                    <p class="text-white text-sm font-semibold">Workflow · invoice_processing</p>
-                    <p class="text-white/40 text-xs">Trigger: Email received · 0.4s elapsed</p>
-                  </div>
-                  <span class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full" style="background:rgba(118,185,0,0.15); color:#76b900;">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#76b900] animate-pulse"></span> Live
-                  </span>
-                </div>
-                <div class="space-y-2.5">
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="text-white/70 text-xs">Extract invoice data (PDF parsed)</span>
-                  </div>
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="text-white/70 text-xs">Matched to PO #4821</span>
-                  </div>
-                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(118,185,0,0.08);">
-                    <svg class="w-4 h-4 flex-shrink-0" style="color:#76b900;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <span class="text-white/70 text-xs">Routed for approval</span>
-                  </div>
-                  <div class="flex items-center gap-3 p-3 rounded-lg" style="background:rgba(118,185,0,0.06); border:1px solid rgba(118,185,0,0.2);">
-                    <span class="w-4 h-4 flex-shrink-0 rounded-full border-2 border-[#76b900] border-t-transparent animate-spin"></span>
-                    <span class="text-white/90 text-xs">Notifying approver via Slack…</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    {# View all services #}
-    <div class="text-center mt-14">
-      <a href="/services/" class="inline-flex items-center gap-2 text-white/50 text-sm hover:text-white/80 transition-colors duration-200">
-        View all 9 services
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-{# =====================================================
-   SERVICES SLIDER
-   ===================================================== #}
-<section class="pt-8 pb-16 md:pt-12 md:pb-24 hidden">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    {# Section Header #}
+<section class="py-16 md:py-24">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
       <div class="max-w-2xl mb-6 lg:mb-0">
-        <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Our Services</p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">Engineering excellence at every layer</h2>
-        <p class="text-lg text-white/70">
-          From AI systems to data platforms, we build infrastructure-level solutions that compound value over time.
-        </p>
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Expert solutions to accelerate your AI journey</h2>
       </div>
-      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-400 font-medium hover:gap-3 transition-all">
+      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
         View all services
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -998,294 +147,287 @@ bodyClass: "page-bg-active"
       </a>
     </div>
 
-    {# Services Slider #}
-    <div x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ services | length }} / 2) }" class="relative">
-      {# Slider Container #}
-      <div class="overflow-hidden">
-        <div
-          class="flex transition-transform duration-500 ease-out"
-          :style="'transform: translateX(-' + (currentSlide * 100) + '%)'"
-        >
-          {% for service in services %}
-          <div class="w-full md:w-1/2 flex-shrink-0 px-2">
-            {# Service Card #}
-            <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-              {# Card Top - Icon + Content #}
-              <div class="p-8 lg:p-10 flex flex-col md:flex-row gap-6">
-                {# Icon #}
-                <div class="flex-shrink-0">
-                  <div class="service-icon-wrap w-16 h-16">
-                    <svg width="0" height="0" class="absolute">
-                      <defs>
-                        <linearGradient id="service-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style="stop-color:#a3c072"/>
-                          <stop offset="100%" style="stop-color:#6f9b34"/>
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    {% if service.icon == "ai" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                    </svg>
-                    {% elif service.icon == "chat" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                    </svg>
-                    {% elif service.icon == "data" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                    </svg>
-                    {% elif service.icon == "code" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                    </svg>
-                    {% elif service.icon == "cloud" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                    </svg>
-                    {% elif service.icon == "globe" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                    </svg>
-                    {% elif service.icon == "mobile" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                    </svg>
-                    {% elif service.icon == "search" %}
-                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                    </svg>
-                    {% endif %}
-                  </div>
-                </div>
-                <div class="hidden md:block w-px bg-gray-200"></div>
-                <div class="flex-1">
-                  <h3 class="text-2xl font-normal text-gray-900 mb-3">{{ service.title }}</h3>
-                  <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
-                  <a href="{{ service.url }}" class="inline-flex items-center justify-center px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-                    {{ service.cta }}
-                  </a>
-                </div>
-              </div>
-              <div class="border-t border-gray-100 px-8 lg:px-10 py-5 bg-gray-50/50">
-                <div class="flex items-center justify-end gap-6 md:gap-8">
-                  {% for client in service.clients %}
-                  <img src="{{ client.logo }}" alt="{{ client.name }}" class="h-5 w-auto object-contain" />
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    {# IBM-style bordered grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-gray-200">
+      {# Row 1 #}
+      {# Service 1: AI Development #}
+      <a href="/services/#ai" class="group relative flex flex-col justify-between p-6 border-b md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">AI Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Automate work and drive smarter decisions with intelligent agents and applications</p>
         </div>
-      </div>
-      <div class="flex items-center justify-center gap-6 mt-8">
-        <button @click="currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white/50 hover:border-white hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <div class="flex items-center gap-2">
-          <template x-for="i in totalSlides" :key="i">
-            <button @click="currentSlide = i - 1" class="w-2.5 h-2.5 rounded-full transition-colors" :class="currentSlide === (i - 1) ? 'bg-zunkiree-500' : 'bg-white/20 hover:bg-white/40'"></button>
-          </template>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300 group-hover:stroke-white" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </div>
-        <button @click="currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white/50 hover:border-white hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
-      </div>
+      </a>
+
+      {# Service 2: Web Development #}
+      <a href="/services/#web" class="group relative flex flex-col justify-between p-6 border-b lg:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Web Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Build scalable, high-performance web applications with modern frameworks</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 3: Mobile Development #}
+      <a href="/services/#mobile" class="group relative flex flex-col justify-between p-6 border-b md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Mobile Development</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Create native and cross-platform mobile experiences that users love</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 4: UI/UX Design #}
+      <a href="/services/#design" class="group relative flex flex-col justify-between p-6 border-b border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">UI/UX Design</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Design intuitive interfaces that delight users and drive engagement</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Row 2 #}
+      {# Service 5: Data Engineering #}
+      <a href="/services/#data" class="group relative flex flex-col justify-between p-6 md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Data Engineering</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Build robust data pipelines and infrastructure for actionable insights</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 6: Cloud Solutions #}
+      <a href="/services/#cloud" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 lg:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Cloud Solutions</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Deploy and scale your applications with modern cloud architecture</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 7: System Integration #}
+      <a href="/services/#integration" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 md:border-r border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">System Integration</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Connect your systems and automate workflows across platforms</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+
+      {# Service 8: Technical Consulting #}
+      <a href="/services/#consulting" class="group relative flex flex-col justify-between p-6 border-t md:border-t-0 border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">Technical Consulting</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">Strategic guidance to accelerate your technology initiatives</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#icon-gradient)" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
     </div>
-  </div>
-</section>
-
-{# =====================================================
-   PLATFORM ECOSYSTEM MOCKUP
-   ===================================================== #}
-<section class="pt-8 pb-16 md:pt-12 md:pb-24">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-
-    {# Centered header on top — hero image below #}
-    <div class="max-w-3xl mx-auto text-center mb-4">
-<h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white mb-5">
-        One platform. <span style="color:#76b900;">Every capability.</span>
-      </h2>
-    </div>
-
-    {# Hero mockup image — shifted up to clip top whitespace #}
-    <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden" style="background: radial-gradient(ellipse at 50% 50%, rgba(26,75,115,0.80) 0%, rgba(18,52,85,0.45) 50%, transparent 75%);">
-      <img
-        src="/assets/images/platform-ecosystem-mockup.png"
-        alt="Zunkiree Platform Ecosystem — Zuki Agent, Orca Platform, Zunkiree Search, Gaamma ERP"
-        class="w-full h-auto"
-        loading="lazy"
-        width="1200"
-        height="800"
-        style="transform: translateY(-60px); margin-bottom: -60px;"
-      />
-    </div>
-
   </div>
 </section>
 
 {# =====================================================
    CASE STUDY CAROUSEL - Interactive Client Showcase
    ===================================================== #}
-<section class="section-glow section-glow-sage-tr pt-8 pb-16 md:pt-12 md:pb-24 !overflow-visible" x-data="caseStudyCarousel()">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 md:py-24" x-data="caseStudyCarousel()">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
 
     {# Section Header #}
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
-      <div>
-        <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Case Studies</p>
-        <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white">
-          Not demos. Not pilots. <span style="color:#76b900;">Results.</span>
-        </h2>
-      </div>
-      <div class="flex items-center gap-3 flex-shrink-0">
-        <button
-          @click="goTo((activeIndex - 1 + studies.length) % studies.length)"
-          class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white/50 hover:border-white hover:text-white transition-colors"
-          aria-label="Previous case study"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-        <button
-          @click="next()"
-          class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white/50 hover:border-white hover:text-white transition-colors"
-          aria-label="Next case study"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </button>
-      </div>
+    <div class="mb-12">
+      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Case Studies</p>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">How innovators use Zunkiree</h2>
     </div>
 
-    {# Content Area — Full-width image + sage gradient overlay + glass content box #}
-    <div class="relative overflow-hidden rounded-2xl shadow-lg" style="min-height: 420px; border: 1px solid rgba(111,155,52,0.2);">
-
-      {# Full-width background images — fade between slides #}
-      <template x-for="(study, index) in studies" :key="'visual-' + study.id">
-        <div class="absolute inset-0 transition-opacity duration-500"
-             :class="activeIndex === index ? 'opacity-100' : 'opacity-0'">
-          <img
-            :src="study.image"
-            :alt="study.name + ' case study'"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </template>
-
-      {# Sage gradient overlay — fades in from right (desktop) #}
-      <div class="absolute inset-0 pointer-events-none hidden md:block"
-           style="background: linear-gradient(to right, transparent 28%, rgba(11,26,8,0.85) 50%, rgba(10,31,43,0.97) 100%);"></div>
-
-      {# Mobile overlay — bottom-up darkening so the full-width text box stays readable #}
-      <div class="absolute inset-0 pointer-events-none md:hidden"
-           style="background: linear-gradient(to top, rgba(8,20,30,0.94) 0%, rgba(8,20,30,0.78) 45%, rgba(8,20,30,0.4) 100%);"></div>
-
-      {# Sage glow — top right corner #}
-      <div class="absolute top-0 right-0 w-72 h-72 pointer-events-none"
-           style="background: radial-gradient(ellipse, rgba(144,169,89,0.2) 0%, transparent 70%);"></div>
-
-      {# Right side content with glass box #}
-      <div class="absolute left-0 right-0 top-0 bottom-0 md:left-auto flex items-center p-6 sm:p-8 w-full md:w-[34%]">
-        <template x-for="(study, index) in studies" :key="study.id">
-          <div
-            class="w-full"
-            x-show="activeIndex === index"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform translate-y-4"
-            x-transition:enter-end="opacity-100 transform translate-y-0"
-            x-transition:leave="transition ease-in duration-200 absolute inset-0 flex items-center px-8 lg:px-12"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-          >
-            {# Glass box #}
-            <div class="rounded-2xl p-7 lg:p-9 w-full"
-                 style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
-
-              {# Client logo — white #}
-              <div class="mb-6">
-                <img
-                  :src="study.logo"
-                  :alt="study.name"
-                  class="h-7 object-contain brightness-0 invert opacity-90"
-                />
-              </div>
-
-              {# Big stat #}
-              <div class="mb-2">
-                <span class="text-6xl md:text-7xl font-light leading-none" style="color: #76b900;" x-text="study.stat"></span>
-              </div>
-
-              {# One-liner #}
-              <p class="text-white/70 text-sm mb-7 leading-relaxed" x-text="study.cardText"></p>
-
-              {# Learn More #}
-              <a
-                :href="study.ctaUrl"
-                class="inline-flex items-center gap-2 text-sm font-medium transition-all hover:gap-3"
-                style="color: #76b900;"
-              >
-                Learn More
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </template>
-      </div>
-
-    </div>
-
-    {# Brand Logo Bar — below card #}
-    <div class="flex items-stretch gap-2 mt-4">
+    {# Logo Tab Bar #}
+    <div class="flex items-stretch gap-2">
       {# Play/Pause Button #}
       <button
         @click="togglePlay()"
-        class="flex-shrink-0 w-14 h-16 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+        class="flex-shrink-0 w-14 h-20 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors"
         :aria-label="isPlaying ? 'Pause carousel' : 'Play carousel'"
       >
-        <svg x-show="!isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24">
+        {# Play Icon #}
+        <svg x-show="!isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
           <path d="M8 5v14l11-7z"/>
         </svg>
-        <svg x-show="isPlaying" class="w-5 h-5 text-white/50" fill="currentColor" viewBox="0 0 24 24">
+        {# Pause Icon #}
+        <svg x-show="isPlaying" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
           <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
         </svg>
       </button>
 
-      {# Client Logo Tabs #}
+      {# Client Logo Tabs - Horizontal Scroll (5 visible at once) #}
       <div
         x-ref="tabsContainer"
         class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
+        style="--tab-count: 5;"
       >
         <template x-for="(study, index) in studies" :key="study.id">
           <button
             @click="goTo(index)"
-            class="relative h-16 px-5 flex items-center justify-center transition-all duration-300 flex-shrink-0 rounded-lg"
+            :x-ref="'tab-' + index"
+            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
             style="min-width: calc((100% - 32px) / 5);"
-            :class="activeIndex === index ? 'bg-white/10' : 'bg-white/5 hover:bg-white/8'"
+            :class="activeIndex === index ? 'bg-white shadow-sm' : 'bg-gray-100 hover:bg-gray-50'"
           >
             <img
               :src="study.logo"
               :alt="study.name"
-              class="max-h-7 max-w-[110px] object-contain transition-all duration-300 brightness-0 invert"
-              :class="activeIndex === index ? 'opacity-100' : 'opacity-40 hover:opacity-60'"
+              class="max-h-8 max-w-[120px] object-contain transition-all duration-300"
+              :class="activeIndex === index ? 'grayscale-0 opacity-100' : 'grayscale opacity-50 hover:opacity-70'"
             />
-            {# Progress bar #}
+            {# Progress Bar (only on active, animates while playing) #}
             <div
-              class="absolute bottom-0 left-0 h-0.5 rounded-b-lg bg-zunkiree-400"
+              class="absolute bottom-0 left-0 h-1 bg-zunkiree-600"
               :class="activeIndex === index && isPlaying ? '' : 'hidden'"
               :style="`width: ${progress}%`"
             ></div>
+            {# Static indicator (only on active, when paused) #}
             <div
-              class="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-lg bg-zunkiree-400"
+              class="absolute bottom-0 left-0 right-0 h-1 bg-zunkiree-600"
               :class="activeIndex === index && !isPlaying ? '' : 'hidden'"
             ></div>
           </button>
         </template>
+      </div>
+    </div>
+
+    {# Content Area - Separate container with gap #}
+    <div class="mt-6 bg-white border border-gray-200">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        {# Left: Content #}
+        <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[500px]">
+          <template x-for="(study, index) in studies" :key="study.id">
+            <div
+              x-show="activeIndex === index"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 transform translate-y-4"
+              x-transition:enter-end="opacity-100 transform translate-y-0"
+              x-transition:leave="transition ease-in duration-200 absolute"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+            >
+              {# Client Logo Large #}
+              <div class="mb-6">
+                <img
+                  :src="study.logo"
+                  :alt="study.name"
+                  class="h-10 object-contain"
+                />
+              </div>
+
+              {# Big Stat #}
+              <div class="mb-4">
+                <span class="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900" x-text="study.stat"></span>
+                <span class="text-lg text-gray-500 ml-2" x-text="study.statLabel"></span>
+              </div>
+
+              {# Headline #}
+              <h3 class="text-xl md:text-2xl font-medium text-gray-900 mb-4" x-text="study.headline"></h3>
+
+              {# Description #}
+              <p class="text-gray-600 mb-6 max-w-lg" x-text="study.description"></p>
+
+              {# CTA #}
+              <a
+                :href="study.ctaUrl"
+                class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all"
+              >
+                <span x-text="study.ctaText"></span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </template>
+        </div>
+
+        {# Right: Image #}
+        <div class="relative h-64 lg:h-auto lg:min-h-[500px] overflow-hidden bg-gray-100">
+          {# Case study images with transition #}
+          <template x-for="(study, index) in studies" :key="'visual-' + study.id">
+            <div
+              class="absolute inset-0"
+              :class="activeIndex === index ? '' : 'hidden'"
+            >
+              <img
+                :src="study.image"
+                :alt="study.name + ' case study'"
+                class="w-full h-full object-cover"
+              />
+              {# Subtle overlay for better contrast #}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+          </template>
+          {# Accent line #}
+          <div class="absolute bottom-0 left-0 w-1/3 h-1 bg-zunkiree-600"></div>
+        </div>
       </div>
     </div>
 
@@ -1308,11 +450,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/admizz.webp',
           stat: '45%',
           statLabel: 'faster responses',
-          headline: 'Admizz answers students 45% faster',
-          description: 'Student inquiries used to pile up for days. With Zunkiree Search, Admizz now responds in hours — without adding headcount.',
-          cardText: 'Student inquiries resolved 45% faster — without adding headcount.',
+          headline: 'Admizz transforms student inquiry management',
+          description: 'Admizz Education revolutionized their student inquiry process with Zunkiree Search, reducing response time and dramatically improving student satisfaction across their consultancy network.',
           image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/admizz-education/'
         },
         {
@@ -1321,11 +462,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/corecloud365.svg',
           stat: '60%',
           statLabel: 'cost reduction',
-          headline: 'Corecloud365 cuts costs by 60%',
-          description: 'AI-powered automation replaced manual cloud ops. Corecloud365 now runs leaner without sacrificing a single capability.',
-          cardText: 'Leaner cloud operations, zero capability trade-offs.',
+          headline: 'Corecloud365 optimizes cloud operations',
+          description: 'Corecloud365 achieved significant cost savings by integrating our AI-powered search and automation tools into their cloud management platform.',
           image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/corecloud365/'
         },
         {
@@ -1334,11 +474,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/rapid-investment.svg',
           stat: '10x',
           statLabel: 'faster analysis',
-          headline: 'Due diligence in days, not weeks',
-          description: 'Rapid Investment analyzes opportunities 10x faster with Zunkiree\'s AI systems — without missing a single signal.',
-          cardText: 'Investment opportunities analyzed in days, not weeks.',
+          headline: 'Rapid Investment transforms due diligence',
+          description: 'Rapid Investment Group uses our AI systems to analyze investment opportunities 10x faster, giving them a competitive edge in the financial markets.',
           image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/rapid-investment/'
         },
         {
@@ -1347,11 +486,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/cms-group.webp',
           stat: '85%',
           statLabel: 'automation rate',
-          headline: 'CMS Group automates 85% of document work',
-          description: 'Their team used to drown in paperwork. Now 85% runs automatically, and the team focuses on strategy.',
-          cardText: '85% of document workflows now run without human input.',
+          headline: 'CMS Group automates enterprise workflows',
+          description: 'CMS Group achieved 85% automation of their document processing workflows, freeing their team to focus on high-value strategic work.',
           image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/cms-group/'
         },
         {
@@ -1360,11 +498,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/mach24orbital.webp',
           stat: '50%',
           statLabel: 'faster launches',
-          headline: 'Mach24 halves satellite launch prep time',
-          description: 'Deployment workflows are complex. Zunkiree\'s AI systems cut Mach24\'s preparation window from weeks to days.',
-          cardText: 'Satellite launch prep cut from weeks to days.',
+          headline: 'Mach24 Orbital streamlines space operations',
+          description: 'Mach24 Orbital integrated our AI systems to optimize their satellite deployment workflows, cutting launch preparation time in half.',
           image: 'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/mach24orbital/'
         },
         {
@@ -1373,11 +510,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/khushbu-nirman-sewa.webp',
           stat: '40%',
           statLabel: 'efficiency gain',
-          headline: 'Khushbu Nirman runs 40% leaner',
-          description: 'Manual follow-ups and tracking used to eat hours. AI-powered oversight gave them back 40% of their operational capacity.',
-          cardText: '40% of operational hours reclaimed through AI oversight.',
+          headline: 'Khushbu Nirman digitizes construction management',
+          description: 'Khushbu Nirman Sewa transformed their construction project management with our AI-powered tracking and resource optimization tools.',
           image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/khushbu-nirman/'
         },
         {
@@ -1386,11 +522,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/prime-tiles.webp',
           stat: '2x',
           statLabel: 'sales growth',
-          headline: 'Prime Tiles doubles sales with AI search',
-          description: 'Customers couldn\'t find what they wanted — so they left. Zunkiree Search fixed that. Conversions doubled in the first quarter.',
-          cardText: 'Customers find what they want. Conversions doubled.',
+          headline: 'Prime Tiles revolutionizes customer discovery',
+          description: 'Prime Tiles deployed Zunkiree Search to help customers find the perfect tiles instantly, doubling their online conversion rates.',
           image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/prime-tiles/'
         },
         {
@@ -1399,11 +534,10 @@ bodyClass: "page-bg-active"
           logo: '/images/clients/khems-cleaning.webp',
           stat: '70%',
           statLabel: 'booking increase',
-          headline: 'Khems Cleaning grows 70% without growing headcount',
-          description: 'Manual scheduling was losing them customers. An AI booking system filled every gap and scaled capacity automatically.',
-          cardText: 'AI scheduling filled every gap. Bookings up 70%.',
+          headline: 'Khems Cleaning scales with smart scheduling',
+          description: 'Khems Cleaning Services implemented our AI booking system, dramatically increasing their service capacity and customer satisfaction.',
           image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop',
-          ctaText: 'Learn More',
+          ctaText: 'Read the case study',
           ctaUrl: '/case-studies/khems-cleaning/'
         }
       ],
@@ -1473,10 +607,162 @@ bodyClass: "page-bg-active"
 </script>
 
 {# =====================================================
-   SOLUTIONS BY INDUSTRY — hidden for now
+   SERVICES SLIDER
    ===================================================== #}
-{% if false %}<section class="section-glow section-glow-sage pt-8 pb-16 md:pt-12 md:pb-24 bg-gray-50 !overflow-visible">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="max-w-2xl mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Our Services</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">Engineering excellence at every layer</h2>
+        <p class="text-lg text-gray-600">
+          From AI systems to data platforms, we build infrastructure-level solutions that compound value over time.
+        </p>
+      </div>
+      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all services
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    {# Services Slider #}
+    <div x-data="{ currentSlide: 0, totalSlides: Math.ceil({{ services | length }} / 2) }" class="relative">
+      {# Slider Container #}
+      <div class="overflow-hidden">
+        <div
+          class="flex transition-transform duration-500 ease-out"
+          :style="'transform: translateX(-' + (currentSlide * 100) + '%)'"
+        >
+          {% for service in services %}
+          <div class="w-full md:w-1/2 flex-shrink-0 px-2">
+            {# Service Card #}
+            <div class="bg-white border border-gray-200 overflow-hidden">
+              {# Card Top - Icon + Content #}
+              <div class="p-8 flex flex-col md:flex-row gap-6">
+                {# Icon #}
+                <div class="flex-shrink-0">
+                  <div class="w-20 h-20 flex items-center justify-center">
+                    {# SVG Gradient for service icons #}
+                    <svg width="0" height="0" class="absolute">
+                      <defs>
+                        <linearGradient id="service-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style="stop-color:#ff6b5c"/>
+                          <stop offset="100%" style="stop-color:#eb1600"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    {% if service.icon == "ai" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    {% elif service.icon == "chat" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    {% elif service.icon == "data" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                    </svg>
+                    {% elif service.icon == "code" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    {% elif service.icon == "cloud" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                    </svg>
+                    {% elif service.icon == "globe" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                    {% elif service.icon == "mobile" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    {% elif service.icon == "search" %}
+                    <svg class="w-16 h-16" fill="none" stroke="url(#service-icon-gradient)" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    {% endif %}
+                  </div>
+                </div>
+
+                {# Divider #}
+                <div class="hidden md:block w-px bg-gray-200"></div>
+
+                {# Content #}
+                <div class="flex-1">
+                  <h3 class="text-2xl font-normal text-gray-900 mb-3">{{ service.title }}</h3>
+                  <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
+                  <a href="{{ service.url }}" class="inline-flex items-center justify-center px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+                    {{ service.cta }}
+                  </a>
+                </div>
+              </div>
+
+              {# Card Bottom - Client Logos #}
+              <div class="border-t border-gray-200 px-8 py-6">
+                <div class="flex items-center justify-end gap-6 md:gap-8">
+                  {% for client in service.clients %}
+                  <img
+                    src="{{ client.logo }}"
+                    alt="{{ client.name }}"
+                    class="h-5 w-auto object-contain"
+                  />
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {# Navigation #}
+      <div class="flex items-center justify-center gap-6 mt-8">
+        {# Prev Button #}
+        <button
+          @click="currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1"
+          class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        {# Dots #}
+        <div class="flex items-center gap-2">
+          <template x-for="i in totalSlides" :key="i">
+            <button
+              @click="currentSlide = i - 1"
+              class="w-2.5 h-2.5 rounded-full transition-colors"
+              :class="currentSlide === (i - 1) ? 'bg-zunkiree-600' : 'bg-gray-300 hover:bg-gray-400'"
+            ></button>
+          </template>
+        </div>
+
+        {# Next Button #}
+        <button
+          @click="currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0"
+          class="w-12 h-12 flex items-center justify-center border border-gray-300 text-gray-600 hover:border-gray-900 hover:text-gray-900 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   SOLUTIONS BY INDUSTRY
+   ===================================================== #}
+<section class="py-16 md:py-24">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
     <div class="max-w-2xl mb-12">
       <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Solutions</p>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">AI-native systems for every industry</h2>
@@ -1486,216 +772,422 @@ bodyClass: "page-bg-active"
     <svg width="0" height="0" class="absolute">
       <defs>
         <linearGradient id="solutions-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#a3c072"/>
-          <stop offset="100%" style="stop-color:#6f9b34"/>
+          <stop offset="0%" style="stop-color:#ff6b5c"/>
+          <stop offset="100%" style="stop-color:#eb1600"/>
         </linearGradient>
       </defs>
     </svg>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {# Healthcare #}
-      <a href="/solutions/healthcare/" class="group solution-industry-card">
-        <span class="industry-num">01</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Healthcare</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Healthcare</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
         </svg>
-      </a>
+      
 
       {# Manufacturing #}
-      <a href="/solutions/manufacturing/" class="group solution-industry-card">
-        <span class="industry-num">02</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Manufacturing</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Manufacturing</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
         </svg>
-      </a>
+      
 
       {# Legal #}
-      <a href="/solutions/legal/" class="group solution-industry-card">
-        <span class="industry-num">03</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Legal</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Legal</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
         </svg>
-      </a>
+      
 
       {# Professional Services #}
-      <a href="/solutions/services/" class="group solution-industry-card">
-        <span class="industry-num">04</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Professional Services</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Professional Services</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
         </svg>
-      </a>
+      
 
       {# Education #}
-      <a href="/solutions/education/" class="group solution-industry-card">
-        <span class="industry-num">05</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Education</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Education</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
         </svg>
-      </a>
+      
 
       {# Human Resources #}
-      <a href="/solutions/human-resources/" class="group solution-industry-card">
-        <span class="industry-num">06</span>
-        <svg class="w-10 h-10" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
+      
+        <svg class="w-16 h-16 flex-shrink-0" fill="none" stroke="url(#solutions-icon-gradient)" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
         </svg>
-        <h3 class="text-lg font-normal text-gray-900 flex-1">Human Resources</h3>
-        <svg class="w-5 h-5 text-gray-400 group-hover:text-zunkiree-600 transition-colors mt-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 class="flex-1 text-lg font-normal text-gray-900">Human Resources</h3>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7V17"></path>
+        </svg>
+      
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   IN THE SPOTLIGHT
+   ===================================================== #}
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    {# Section Header #}
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Resources</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">In the spotlight</h2>
+      </div>
+      <a href="/resources/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        View all resources
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>
     </div>
-  </div>
-</section>{% endif %}
 
-{# =====================================================
-   IN THE SPOTLIGHT — hidden for now
-   ===================================================== #}
-<section id="spotlight-section" class="pt-8 pb-16 md:pt-12 md:pb-24">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {# Section Header #}
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10">
-      <div class="mb-6 lg:mb-0">
-        <p class="text-xs uppercase tracking-widest text-zunkiree-400 font-medium mb-4">Resources</p>
-        <h2 class="text-3xl md:text-[2.25rem] font-bold leading-[1.08] tracking-tight text-white">What the industry <span style="color:#76b900;">is reading.</span></h2>
-      </div>
-      <a href="/resources/" class="hero-btn-glow inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-zunkiree-500 text-white font-medium hover:bg-zunkiree-500/10 transition-all duration-200">
-        View all resources
-      </a>
-    </div>
-
-    {# ServiceNow bento: left large card + right 3 stacked horizontal cards #}
-    <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-4 items-stretch">
-
-      {# Left — large featured card: image top, text bottom #}
-      <a href="{{ spotlight[0].url }}"
-        class="group flex flex-col overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-[1.005]"
-        style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
-        {# Image area — fills top portion #}
-        <div class="overflow-hidden" style="height:560px; background-color:#0a1f2b; background-image:radial-gradient(85% 110% at -4% 108%, rgba(144,169,89,.80) 0%, rgba(95,125,70,.28) 40%, transparent 65%), radial-gradient(75% 100% at 104% -2%, rgba(61,143,212,.80) 0%, rgba(30,85,150,.30) 42%, transparent 65%);">
-          {# Company name header #}
-          <div class="flex items-center justify-center gap-3 pt-8 pb-0">
-            <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style="background:#76b900;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3C12 3 12.8 6.5 14.5 8.5C16.2 10.5 20 11 20 11C20 11 16.2 11.5 14.5 13.5C12.8 15.5 12 19 12 19C12 19 11.2 15.5 9.5 13.5C7.8 11.5 4 11 4 11C4 11 7.8 10.5 9.5 8.5C11.2 6.5 12 3 12 3Z" fill="white"/>
-                <path d="M19 3C19 3 19.4 4.8 20.2 5.8C21 6.8 23 7 23 7C23 7 21 7.2 20.2 8.2C19.4 9.2 19 11 19 11C19 11 18.6 9.2 17.8 8.2C17 7.2 15 7 15 7C15 7 17 6.8 17.8 5.8C18.6 4.8 19 3 19 3Z" fill="white"/>
-              </svg>
-            </div>
-            <span class="text-white font-semibold text-lg tracking-tight">Zunkiree Search</span>
-          </div>
+    {# Spotlight Cards Grid #}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {% for item in spotlight %}
+      <a href="{{ item.url }}" class="group block bg-white overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+        {# Card Image #}
+        <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
           <img
-            src="{{ spotlight[0].image }}"
-            alt="{{ spotlight[0].title }}"
-            class="w-[85%] h-auto block mx-auto mt-8"
+            src="{{ item.image }}"
+            alt="{{ item.title }}"
+            class="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
-        {# Text area below image — dark section #}
-        <div class="px-7 py-6 border-t border-white/08" style="border-top:1px solid rgba(255,255,255,0.07);">
-          <p class="text-[10px] uppercase tracking-widest font-medium mb-3 text-white">{{ spotlight[0].type }}</p>
-          <h3 class="text-[1.5rem] font-bold text-white leading-snug mb-3">{{ spotlight[0].title }}</h3>
-          <p class="text-sm text-white/60 leading-relaxed mb-5">{{ spotlight[0].description }}</p>
-          <span class="inline-flex items-center gap-1.5 text-sm font-medium group-hover:gap-2.5 transition-all text-white">
-            {{ spotlight[0].cta }}
+
+        {# Card Content #}
+        <div class="p-4">
+          {# Type Badge #}
+          <p class="text-[11px] uppercase tracking-wider text-gray-500 font-medium mb-1">{{ item.type }}</p>
+
+          {# Title #}
+          <h3 class="text-base font-normal text-gray-900 leading-snug line-clamp-2">
+            {{ item.title }}
+          </h3>
+
+          {# CTA Link #}
+          <span class="inline-flex items-center gap-1 text-sm text-blue-600 font-medium group-hover:gap-2 transition-all mt-8">
+            {{ item.cta }}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </span>
         </div>
       </a>
-
-      {# Right column — 3 horizontal thumbnail + text cards #}
-      <div class="flex flex-col gap-4">
-        {% for item in spotlight %}
-        {% if loop.index > 1 %}
-        <a href="{{ item.url }}"
-          class="group flex flex-col sm:flex-row overflow-hidden rounded-2xl flex-1 min-h-[160px] transition-transform duration-300 hover:scale-[1.01]"
-          style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);">
-
-          {# Left: small square thumbnail #}
-          <div class="w-full h-40 sm:h-auto sm:w-52 flex-shrink-0 relative overflow-hidden"
-            style="background-color:#0a1f2b; background-image:radial-gradient(85% 110% at -4% 108%, rgba(144,169,89,.80) 0%, rgba(95,125,70,.28) 40%, transparent 65%), radial-gradient(75% 100% at 104% -2%, rgba(61,143,212,.80) 0%, rgba(30,85,150,.30) 42%, transparent 65%);">
-            <img
-              src="{{ item.image }}?v=4"
-              alt="{{ item.title }}"
-              class="absolute inset-0 w-full h-full object-contain p-3"
-              loading="lazy"
-            />
-          </div>
-
-          {# Right: badge + title + CTA #}
-          <div class="flex-1 flex flex-col justify-start px-5 py-4">
-            <p class="text-[10px] uppercase tracking-widest font-medium mb-1.5 text-white">{{ item.type }}</p>
-            <h3 class="text-[1.5rem] font-bold text-white leading-snug line-clamp-2 mb-3">{{ item.title }}</h3>
-            <span class="inline-flex items-center gap-1 text-xs font-medium group-hover:gap-2 transition-all mt-auto text-white">
-              {{ item.cta }}
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </span>
-          </div>
-
-        </a>
-        {% endif %}
-        {% endfor %}
-      </div>
-
+      {% endfor %}
     </div>
 
   </div>
 </section>
 
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">References</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p><a href="https://www.startupsnepal.tech/startup/zunkiree-labs">Zunkiree Labs | Startups Nepal</a>
 
-<a href="https://zunkireelabs.com">Zunkiree Labs: AI Infrastructure for Modern Businesses</a></p></div>
-  </section>
-</div>
-<!-- SEOAI:FOCUS:content-refresh --><div class="container-custom py-12 md:py-20">
-  <section class="gap-2">
-    <h2 class="text-[24px] md:text-[28px] font-normal text-gray-900">Why Choose Zunkiree Labs for Your AI Infrastructure Needs?</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs is committed to delivering not just AI systems, but comprehensive infrastructure solutions tailored to the evolving demands of modern businesses. Our AI-native architecture ensures that, unlike generic solutions, our offerings are specifically designed to address distinct business challenges across industries. With a suite of over 5 products spanning 6 industries and 8 specialized services, we stand out as a trusted partner for forward-thinking organizations. In today's competitive landscape, our focus on deploying modern cloud architectures, building robust data pipelines, and creating high-performance applications means your business can harness the power of AI, drive efficiency, and stay ahead. Moreover, our experience with successful integrations in the Nepal market, particularly with platforms like eSewa and Khalti, demonstrates our ability to localize solutions effectively, thereby maximizing relevance and performance. We leverage innovative technologies and methodologies to ensure our clients not only keep pace but thrive in the age of AI.</p></div>
-  </section>
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
 
-{# =====================================================
-   CTA BAND — Standalone "Let's put your data to work"
-   ===================================================== #}
-{% include "partials/cta-band.njk" %}
 
-{# =====================================================
-   CTA + FAQ SECTION — hidden for now
-   ===================================================== #}
-{# {% include "partials/cta-faq.njk" %} #}
-<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers several products including Zunkiree Search, Dental AI for practice management, and Gaamma, a business analytics platform. They also provide business tools such as Stella (AI Commerce Agent), Zenly (AI Booking Engine), and AI CRM.","@type":"Answer"}},{"name":"What is Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search is an AI-native search product that understands natural language and delivers direct answers instead of links. It is designed to transform customer experience.","@type":"Answer"}},{"name":"How can Zunkiree Labs help with AI development?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers custom AI systems, RAG pipelines, LLM integration, and intelligent chatbots as part of their AI development services.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs serves multiple industries including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial offered on their website.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services, which is one of the offerings from Zunkiree Labs.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-<!-- SEOAI:INTERNALLINKS:START --><ul class="container-custom space-y-3 py-12 md:py-20">
-  <li class="gap-2"><a href="https://zunkireelabs.com/services/" class="text-zunkiree-600 hover:underline">AI Development</a></li>
-  <li class="gap-2"><a href="https://zunkireelabs.com/products/" class="text-zunkiree-600 hover:underline">Cloud Solutions</a></li>
-  <li class="gap-2"><a href="https://zunkireelabs.com/resources/state-of-ai-nepal-2026/" class="text-zunkiree-600 hover:underline">Data Engineering</a></li>
-  <li class="gap-2"><a href="https://zunkireelabs.com/about/" class="text-zunkiree-600 hover:underline">Technical Consulting</a></li>
-  <li class="gap-2"><a href="https://zunkireelabs.com/products/ai-booking-engine/" class="text-zunkiree-600 hover:underline">Custom Software</a></li>
-</ul><!-- SEOAI:INTERNALLINKS:END -->
+
+<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-gray-900 font-medium mb-6">Why Zunkiree Labs</p>
+        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Why Choose Zunkiree Labs for Your AI Infrastructure Needs?</h2>
+      </div>
+      <div class="lg:pt-2">
+        <div class="text-lg text-gray-600 leading-relaxed"><p class="text-lg text-gray-600 leading-relaxed">Zunkiree Labs is committed to delivering not just AI systems, but comprehensive infrastructure solutions tailored to the evolving demands of modern businesses. Our AI-native architecture ensures that, unlike generic solutions, our offerings are specifically designed to address distinct business challenges across industries. With a suite of over 5 products spanning 6 industries and 8 specialized services, we stand out as a trusted partner for forward-thinking organizations. In today's competitive landscape, our focus on deploying modern cloud architectures, building robust data pipelines, and creating high-performance applications means your business can harness the power of AI, drive efficiency, and stay ahead. Moreover, our experience with successful integrations in the Nepal market, particularly with platforms like eSewa and Khalti, demonstrates our ability to localize solutions effectively, thereby maximizing relevance and performance. We leverage innovative technologies and methodologies to ensure our clients not only keep pace but thrive in the age of AI.</p></div>
+      </div>
+    </div>
+  </div>
+</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+
+<!-- SEOAI:FAQ:START --><section class="py-12 md:py-20 bg-gray-50">
+  <div class="container-custom">
+    <div x-data="{ activeIndex: null, expandAll: false }">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-2xl md:text-3xl font-medium text-gray-900">Frequently asked questions</h3>
+        <button
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null"
+          class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-gray-200">
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 1 && !expandAll) ? null : 1"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What types of products does Zunkiree Labs offer?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 1 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 1 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 2 && !expandAll) ? null : 2"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              How does Zunkiree Labs approach AI development?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 2 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 2 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 3 && !expandAll) ? null : 3"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What industries does Zunkiree Labs serve?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 3 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 3 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 4 && !expandAll) ? null : 4"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What advantages do Zunkiree's AI-powered customer experience solutions offer?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 4 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 4 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 5 && !expandAll) ? null : 5"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              Can Zunkiree Labs help with SaaS development?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 5 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 5 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.
+            </p>
+          </div>
+        </div>
+        <div class="py-5">
+          <button
+            @click="activeIndex = (activeIndex === 6 && !expandAll) ? null : 6"
+            class="w-full flex items-center justify-between text-left group"
+          >
+            <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
+              What expertise does Zunkiree Labs provide in data engineering?
+            </span>
+            <span class="flex-shrink-0 text-gray-400">
+              <svg
+                class="w-5 h-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === 6 || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === 6 || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-gray-600 leading-relaxed">
+              Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What types of products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers a variety of products including AI development solutions, web and mobile development, UI/UX design, data engineering, cloud solutions, system integration, and technical consulting.","@type":"Answer"}},{"name":"How does Zunkiree Labs approach AI development?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs focuses on custom AI systems that utilize RAG pipelines, LLM integration, and intelligent automation to solve specific business problems rather than creating generic chatbots.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides solutions across several industries, including Healthcare, Manufacturing, Legal, Professional Services, Education, and Human Resources.","@type":"Answer"}},{"name":"What advantages do Zunkiree's AI-powered customer experience solutions offer?","@type":"Question","acceptedAnswer":{"text":"Their AI-powered customer experience solutions can reduce support tickets by 40% while improving the accuracy of responses, thereby enhancing overall customer satisfaction.","@type":"Answer"}},{"name":"Can Zunkiree Labs help with SaaS development?","@type":"Question","acceptedAnswer":{"text":"Yes, Zunkiree Labs specializes in SaaS development, offering multi-tenant platforms with subscription billing and user management, enabling businesses to launch their SaaS products within months.","@type":"Answer"}},{"name":"What expertise does Zunkiree Labs provide in data engineering?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs builds robust data pipelines and infrastructure specifically designed for AI workloads, allowing organizations to prepare their data for machine learning without extensive cleanup.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+
+<!-- SEOAI:INTERNALLINKS:START --><section class="py-12 md:py-20">
+  <div class="container-custom">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">Related Resources</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+      <a href="https://zunkireelabs.com/services/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">AI Development</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      <a href="https://zunkireelabs.com/products/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Cloud Solutions</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      <a href="https://zunkireelabs.com/resources/state-of-ai-nepal-2026/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Data Engineering</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      <a href="https://zunkireelabs.com/about/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Technical Consulting</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      <a href="https://zunkireelabs.com/products/ai-booking-engine/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Custom Software</span>
+        <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section><!-- SEOAI:INTERNALLINKS:END -->
