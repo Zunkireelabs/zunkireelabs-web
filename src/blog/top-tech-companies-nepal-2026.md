@@ -944,7 +944,7 @@ The companies profiled here represent the leading edge of what's possible from K
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
       </a>
-      <a href="https://zunkireelabs.com/products/ai-booking-engine/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
+      <a href="https://zunkireelabs.com/resources/zenly-case-study/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
         <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">enterprise AI infrastructure</span>
         <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

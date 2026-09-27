@@ -39,7 +39,7 @@ The realm of dental assistance and AI is progressing rapidly, making continuous 
 
 ## Suggested internal links
 
-- [Zunkiree Labs products](https://zunkireelabs.com/products/dental-ai/)
+- [Zunkiree Labs products](https://zunkireelabs.com/resources/dental-ai-case-study/)
 - [State of AI in Nepal](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/)
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">

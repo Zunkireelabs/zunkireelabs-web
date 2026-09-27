@@ -588,7 +588,7 @@
       "headline": "Ready to automate your ecommerce?",
       "description": "See how AI agents can increase conversions and provide 24/7 sales support. We'll audit your store and show you the automation opportunities.",
       "primaryButton": { "text": "Get Ecommerce Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "View AI Commerce Agent", "url": "/products/ai-commerce-agent/" }
+      "secondaryButton": { "text": "View AI Commerce Agent", "url": "/resources/stella-case-study/" }
     },
 
     "clients": []
