@@ -141,6 +141,13 @@
                 "icon": "ai",
                 "description": "Autonomous AI agents deployed as managed services",
                 "badge": "New"
+              },
+              {
+                "label": "Global Delivery",
+                "url": "/global-delivery/",
+                "icon": "globe",
+                "description": "AI and software delivery for clients worldwide",
+                "badge": "New"
               }
             ],
             "seeAll": { "label": "See all services", "url": "/services/" }

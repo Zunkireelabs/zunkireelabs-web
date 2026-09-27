@@ -63,7 +63,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       },
       {
         question: "What industries do you serve from Kathmandu?",
-        answer: "From Kathmandu and our headquarters in nearby Sanepa, Lalitpur, we serve clients across healthcare, financial services, manufacturing, education, legal, and professional services sectors—both in Nepal and internationally."
+        answer: "From Kathmandu and our headquarters in nearby Sanepa, Lalitpur, we serve clients across healthcare, financial services, manufacturing, education, legal, real estate, and professional services sectors—both in Nepal and internationally—and we're open to new industries beyond that list."
       }
     ],
 

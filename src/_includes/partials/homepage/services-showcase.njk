@@ -1,0 +1,67 @@
+{#
+  Homepage 8-card services showcase grid (IBM-style bordered hover grid).
+  Shared structure across all locales.
+
+  Expects: showcaseEyebrow, showcaseHeading, showcaseViewAllText, iconGradientId,
+  showcaseCards — array of exactly 8 {title, description}, in this fixed order:
+  AI Development, Web Development, Mobile Development, UI/UX Design,
+  Data Engineering, Cloud Solutions, System Integration, Technical Consulting.
+#}
+<section class="py-16 md:py-24">
+  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+      <div class="max-w-2xl mb-6 lg:mb-0">
+        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">{{ showcaseEyebrow }}</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">{{ showcaseHeading }}</h2>
+      </div>
+      <a href="/services/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all">
+        {{ showcaseViewAllText }}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    {# SVG Gradient Definition #}
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="{{ iconGradientId }}" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff6b5c;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#eb1600;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    {% set showcaseAnchors = [
+      {"href": "/services/#ai", "icon": "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", "border": "border-b md:border-r"},
+      {"href": "/services/#web", "icon": "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4", "border": "border-b lg:border-r"},
+      {"href": "/services/#mobile", "icon": "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z", "border": "border-b md:border-r"},
+      {"href": "/services/#design", "icon": "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01", "border": "border-b"},
+      {"href": "/services/#data", "icon": "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4", "border": "md:border-r"},
+      {"href": "/services/#cloud", "icon": "M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z", "border": "border-t md:border-t-0 lg:border-r"},
+      {"href": "/services/#integration", "icon": "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z", "border": "border-t md:border-t-0 md:border-r"},
+      {"href": "/services/#consulting", "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z", "border": "border-t md:border-t-0"}
+    ] %}
+
+    {# IBM-style bordered grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-gray-200">
+      {% for card in showcaseCards %}
+      {% set a = showcaseAnchors[loop.index0] %}
+      <a href="{{ a.href }}" class="group relative flex flex-col justify-between p-6 {{ a.border }} border-gray-200 transition-all duration-300 min-h-[220px] bg-white hover:bg-gradient-to-br hover:from-zunkiree-500 hover:to-zunkiree-700">
+        <div>
+          <h3 class="text-base font-medium text-gray-900 group-hover:opacity-0 transition-opacity duration-300">{{ card.title }}</h3>
+          <p class="text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-6 left-6 right-6">{{ card.description }}</p>
+        </div>
+        <div class="flex items-end justify-between mt-auto">
+          <svg class="w-10 h-10 transition-all duration-300 group-hover:stroke-white" fill="none" viewBox="0 0 24 24">
+            <path stroke="url(#{{ iconGradientId }})" class="group-hover:stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" d="{{ a.icon }}"></path>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

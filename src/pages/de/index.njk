@@ -1,0 +1,139 @@
+---
+layout: base.njk
+lang: de
+ogLocale: de_DE
+title: "Zunkiree Labs: KI-Infrastruktur für moderne Unternehmen" # SEOAI:TITLE
+description: "Zunkiree Labs entwickelt produktionsreife KI-Systeme, individuelle Software und AEO/SEO-Lösungen für Kunden weltweit, unter anderem in der Schweiz und in Deutschland. Kostenloses Beratungsgespräch."
+permalink: /de/
+hreflangAlternates:
+  - lang: en
+    url: /
+  - lang: de
+    url: /de/
+  - lang: nl
+    url: /nl/
+  - lang: x-default
+    url: /
+---
+
+{% set heroEyebrow = "KI-First Technologieunternehmen" %}
+{% set heroTitleLine1 = "KI-Infrastruktur." %}
+{% set heroTitleLine2 = "Richtig gebaut." %}
+{% set heroDescription = "Wir bauen KI-Systeme auf Infrastrukturebene, keine Wrapper. Von intelligenter Suche bis zu Unternehmensplattformen – unsere KI-native Architektur treibt moderne Unternehmen an." %}
+{% set heroCta1Url = "/products/" %}
+{% set heroCta1Text = "Unsere Produkte entdecken" %}
+{% set heroCta2Url = "/contact/" %}
+{% set heroCta2Text = "Sprechen Sie mit uns" %}
+{% set heroImageAlt = "Orca Plattform Dashboard - KI-Infrastruktur-Management" %}
+{% include "partials/homepage/hero.njk" %}
+
+{% set trustText = "Vertraut von zukunftsorientierten Unternehmen" %}
+{% set statProductsLabel = "Produkte" %}
+{% set statIndustriesLabel = "Branchen" %}
+{% set statServicesLabel = "Leistungen" %}
+{% include "partials/homepage/social-proof.njk" %}
+
+{% set showcaseEyebrow = "Unsere Leistungen" %}
+{% set showcaseHeading = "Expertenlösungen, die Ihre KI-Reise beschleunigen" %}
+{% set showcaseViewAllText = "Alle Leistungen ansehen" %}
+{% set iconGradientId = "icon-gradient-de" %}
+{% set showcaseCards = [
+  {"title": "KI-Entwicklung", "description": "Automatisieren Sie Arbeit und treffen Sie klügere Entscheidungen mit intelligenten Agenten und Anwendungen"},
+  {"title": "Webentwicklung", "description": "Skalierbare, leistungsstarke Webanwendungen mit modernen Frameworks"},
+  {"title": "App-Entwicklung", "description": "Native und plattformübergreifende mobile Erlebnisse, die Nutzer lieben"},
+  {"title": "UI/UX-Design", "description": "Intuitive Interfaces, die Nutzer begeistern und die Nutzung fördern"},
+  {"title": "Data Engineering", "description": "Robuste Datenpipelines und Infrastruktur für verwertbare Erkenntnisse"},
+  {"title": "Cloud-Lösungen", "description": "Bereitstellung und Skalierung Ihrer Anwendungen mit moderner Cloud-Architektur"},
+  {"title": "Systemintegration", "description": "Verbinden Sie Ihre Systeme und automatisieren Sie Workflows plattformübergreifend"},
+  {"title": "Technische Beratung", "description": "Strategische Beratung, um Ihre Technologie-Initiativen zu beschleunigen"}
+] %}
+{% include "partials/homepage/services-showcase.njk" %}
+
+{% set carouselEyebrow = "Fallstudien" %}
+{% set carouselHeading = "Wie Innovatoren Zunkiree einsetzen" %}
+{% set playLabel = "Karussell abspielen" %}
+{% set pauseLabel = "Karussell pausieren" %}
+{% set carouselFnName = "caseStudyCarouselDe" %}
+{% set caseStudyAltSuffix = "Fallstudie" %}
+{% set studies = [
+  {"id": "admizz", "name": "Admizz Education", "logo": "/images/clients/admizz.webp", "stat": "45%", "statLabel": "schnellere Antworten", "headline": "Admizz transformiert die Bearbeitung von Studienanfragen", "description": "Admizz Education revolutionierte seinen Anfrageprozess mit Zunkiree Search, verkürzte die Antwortzeit erheblich und verbesserte die Zufriedenheit der Studierenden im gesamten Beratungsnetzwerk deutlich.", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/admizz-case-study/"},
+  {"id": "corecloud365", "name": "Corecloud365", "logo": "/images/clients/corecloud365.svg", "stat": "60%", "statLabel": "Kostensenkung", "headline": "Corecloud365 optimiert den Cloud-Betrieb", "description": "Corecloud365 erzielte erhebliche Kosteneinsparungen durch die Integration unserer KI-gestützten Such- und Automatisierungstools in seine Cloud-Management-Plattform.", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/corecloud365-case-study/"},
+  {"id": "rapid-investment", "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg", "stat": "10x", "statLabel": "schnellere Analyse", "headline": "Rapid Investment revolutioniert die Due Diligence", "description": "Rapid Investment Group nutzt unsere KI-Systeme, um Investitionsmöglichkeiten 10-mal schneller zu analysieren – ein entscheidender Wettbewerbsvorteil an den Finanzmärkten.", "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/rapid-investment-case-study/"},
+  {"id": "cms-group", "name": "CMS Group", "logo": "/images/clients/cms-group.webp", "stat": "85%", "statLabel": "Automatisierungsgrad", "headline": "CMS Group automatisiert Unternehmens-Workflows", "description": "CMS Group erreichte eine 85-prozentige Automatisierung der Dokumentenverarbeitung und schuf so Freiraum für strategische Arbeit mit hohem Wertbeitrag.", "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/cms-group-case-study/"},
+  {"id": "mach24orbital", "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp", "stat": "50%", "statLabel": "schnellere Starts", "headline": "Mach24 Orbital optimiert den Raumfahrtbetrieb", "description": "Mach24 Orbital integrierte unsere KI-Systeme zur Optimierung der Satellitenbereitstellung und halbierte damit die Vorbereitungszeit für Starts.", "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/mach24orbital-case-study/"},
+  {"id": "khushbu-nirman", "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp", "stat": "40%", "statLabel": "Effizienzgewinn", "headline": "Khushbu Nirman digitalisiert das Baumanagement", "description": "Khushbu Nirman Sewa transformierte sein Baustellenmanagement mit unseren KI-gestützten Tracking- und Ressourcenoptimierungs-Tools.", "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/khushbu-nirman-case-study/"},
+  {"id": "prime-tiles", "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp", "stat": "2x", "statLabel": "Umsatzwachstum", "headline": "Prime Tiles revolutioniert die Produktsuche für Kunden", "description": "Prime Tiles setzte Zunkiree Search ein, damit Kunden sofort die passenden Fliesen finden – und verdoppelte so die Online-Conversion-Rate.", "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/prime-tiles-case-study/"},
+  {"id": "khems-cleaning", "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp", "stat": "70%", "statLabel": "mehr Buchungen", "headline": "Khems Cleaning skaliert mit smarter Terminplanung", "description": "Khems Cleaning Services führte unser KI-Buchungssystem ein und steigerte damit Servicekapazität und Kundenzufriedenheit deutlich.", "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/khems-cleaning-case-study/"},
+  {"id": "chayce-properties", "name": "Chayce Properties", "logo": "/images/clients/chayce-properties.webp", "stat": "End-to-End", "statLabel": "digitaler Betrieb, vollständig verwaltet", "headline": "Chayce Properties betreibt seinen gesamten digitalen Betrieb auf Zunkiree-Infrastruktur", "description": "Für Chayce Properties, ein britisches Immobilienunternehmen, ist Zunkiree Labs kein Anbieter für eine einzelne Aufgabe – wir verantworten den gesamten Stack: Website, KI-Systeme und laufende technische Weiterentwicklung, durchgängig.", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop", "ctaText": "Fallstudie lesen", "ctaUrl": "/resources/chayce-properties-case-study/"}
+] %}
+{% include "partials/homepage/case-study-carousel.njk" %}
+
+{% set sliderEyebrow = "Unsere Leistungen" %}
+{% set sliderHeading = "Engineering-Exzellenz auf jeder Ebene" %}
+{% set sliderSubtext = "Von KI-Systemen bis zu Datenplattformen – wir bauen Lösungen auf Infrastrukturebene, deren Wert sich über die Zeit vervielfacht." %}
+{% set sliderViewAllText = "Alle Leistungen ansehen" %}
+{% set sliderIconGradientId = "service-icon-gradient-de" %}
+{% set servicesList = [
+  {"title": "KI-Entwicklung", "description": "Individuelle KI-Systeme mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung. Wir bauen KI, die konkrete Geschäftsprobleme löst – keine generischen Chatbots.", "cta": "Ansehen", "url": "/services/ai-development/", "icon": "ai", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Admizz", "logo": "/images/clients/admizz.webp"}]},
+  {"title": "KI-Kundenerfahrung", "description": "KI-gestützte Support-Systeme, die Kundenanfragen sofort beantworten. Reduzieren Sie Support-Tickets um 40 % und verbessern Sie gleichzeitig die Antwortgenauigkeit.", "cta": "Ansehen", "url": "/services/ai-customer-experience/", "icon": "chat", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
+  {"title": "KI-E-Commerce-Lösungen", "description": "Agentic-Commerce-Systeme mit KI-Einkaufsagenten, konversationellem Commerce und smarten Empfehlungen. Spezialisiert auf den nepalesischen Markt mit eSewa- und Khalti-Integration.", "cta": "Ansehen", "url": "/services/ai-ecommerce/", "icon": "cart", "clients": []},
+  {"title": "Datensysteme", "description": "Datenpipelines, Data Warehouses und Analyseinfrastruktur für KI-Workloads. Machen Sie Ihre Daten bereit für maschinelles Lernen – ohne monatelange Bereinigung.", "cta": "Ansehen", "url": "/services/data-systems/", "icon": "data", "clients": [{"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]},
+  {"title": "Individuelle Software", "description": "Unternehmensanwendungen, zugeschnitten auf Ihre Arbeitsabläufe. Wir bauen interne Tools und Geschäftssysteme, die Teams wirklich gerne nutzen.", "cta": "Ansehen", "url": "/services/custom-software/", "icon": "code", "clients": [{"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}]},
+  {"title": "SaaS-Entwicklung", "description": "Mandantenfähige Plattformen mit Abrechnung, Nutzerverwaltung und skalierbarer Architektur. Bringen Sie Ihr SaaS-Produkt in Monaten statt Jahren auf den Markt.", "cta": "Ansehen", "url": "/services/saas-development/", "icon": "cloud", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}]},
+  {"title": "Webentwicklung", "description": "Leistungsstarke Websites und Webanwendungen, optimiert für Geschwindigkeit und Conversion. Moderne Frameworks, responsives Design, von Anfang an für SEO gebaut.", "cta": "Ansehen", "url": "/services/web-development/", "icon": "globe", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
+  {"title": "App-Entwicklung", "description": "Native und plattformübergreifende mobile Apps für iOS und Android. Von Consumer-Apps bis zu Enterprise-Mobility, mit nahtloser Backend-Integration.", "cta": "Ansehen", "url": "/services/app-development/", "icon": "mobile", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}]},
+  {"title": "AEO & SEO", "description": "Werden Sie bei Google und KI-Assistenten wie ChatGPT und Perplexity gefunden. Wir optimieren Inhalte für klassische Suche und KI-Zitation.", "cta": "Ansehen", "url": "/services/aeo-seo/", "icon": "search", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]}
+] %}
+{% include "partials/homepage/services-slider.njk" %}
+
+{% set solutionsEyebrow = "Lösungen" %}
+{% set solutionsHeading = "KI-native Systeme für jede Branche" %}
+{% set industriesGradientId = "solutions-icon-gradient-de" %}
+{% set industries = [
+  {"name": "Gesundheitswesen"},
+  {"name": "Fertigung"},
+  {"name": "Recht"},
+  {"name": "Dienstleistungen"},
+  {"name": "Bildung"},
+  {"name": "Personalwesen"}
+] %}
+{% include "partials/homepage/industries-grid.njk" %}
+
+{% set spotlightEyebrow = "Ressourcen" %}
+{% set spotlightHeading = "Im Rampenlicht" %}
+{% set spotlightViewAllText = "Alle Ressourcen ansehen" %}
+{% set spotlightList = [
+  {"type": "BERICHT", "title": "State of AI Search 2026: Bericht zur Unternehmensakzeptanz", "cta": "Jetzt lesen", "url": "/resources/ai-search-report-2026/", "image": "/assets/images/spotlight/report-ai-search-2026.svg"},
+  {"type": "ON-DEMAND", "title": "Von Keywords zu Konversationen: Implementierung von KI-Suche", "cta": "Jetzt ansehen", "url": "/resources/webinar-ai-search-implementation/", "image": "/assets/images/spotlight/ondemand-ai-implementation.svg"},
+  {"type": "FEATURED REPORT", "title": "State of AI in Nepal 2026: Branchenbericht", "cta": "Jetzt herunterladen", "url": "/resources/state-of-ai-nepal-2026/", "image": "/assets/images/spotlight/report-ai-nepal-2026.svg"},
+  {"type": "E-BOOK", "title": "Das KI-Suche-Playbook für Produktteams", "cta": "Jetzt lesen", "url": "/resources/ai-search-playbook/", "image": "/assets/images/spotlight/ebook-ai-playbook.svg"}
+] %}
+{% include "partials/homepage/spotlight.njk" %}
+
+{% set whyUsEyebrow = "Warum Zunkiree Labs" %}
+{% set whyUsHeading = "Warum Zunkiree Labs für Ihre KI-Infrastruktur wählen?" %}
+{% set whyUsBody = "Zunkiree Labs liefert nicht nur KI-Systeme, sondern umfassende Infrastrukturlösungen, zugeschnitten auf die wachsenden Anforderungen moderner Unternehmen. Unsere KI-native Architektur sorgt dafür, dass unsere Lösungen – anders als generische Angebote – gezielt auf konkrete Geschäftsherausforderungen branchenübergreifend zugeschnitten sind. Mit einer Produktpalette von über 5 Produkten in 7 Branchen und 8 spezialisierten Leistungen sind wir ein verlässlicher Partner für zukunftsorientierte Unternehmen. In einem wettbewerbsintensiven Umfeld ermöglicht unser Fokus auf moderne Cloud-Architekturen, robuste Datenpipelines und leistungsstarke Anwendungen, dass Ihr Unternehmen die Kraft der KI nutzt, Effizienz steigert und wettbewerbsfähig bleibt. Unsere Erfahrung mit erfolgreichen Integrationen im nepalesischen Markt, insbesondere mit Plattformen wie eSewa und Khalti, zeigt zudem unsere Fähigkeit, Lösungen effektiv zu lokalisieren und so Relevanz und Leistung zu maximieren. Wir setzen auf innovative Technologien und Methoden, damit unsere Kunden im KI-Zeitalter nicht nur mithalten, sondern erfolgreich sind." %}
+{% include "partials/homepage/why-us.njk" %}
+
+{% set faqHeading = "Häufig gestellte Fragen" %}
+{% set expandAllText = "Alle ausklappen" %}
+{% set collapseAllText = "Alle einklappen" %}
+{% set faqItems = [
+  {"question": "Welche Produkte bietet Zunkiree Labs an?", "answer": "Zunkiree Labs bietet eine Vielzahl von Produkten, darunter KI-Entwicklungslösungen, Web- und App-Entwicklung, UI/UX-Design, Data Engineering, Cloud-Lösungen, Systemintegration und technische Beratung."},
+  {"question": "Wie geht Zunkiree Labs bei der KI-Entwicklung vor?", "answer": "Zunkiree Labs konzentriert sich auf individuelle KI-Systeme mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung, um konkrete Geschäftsprobleme zu lösen – statt generischer Chatbots."},
+  {"question": "In welchen Branchen ist Zunkiree Labs tätig?", "answer": "Zunkiree Labs bietet Lösungen in den Bereichen Gesundheitswesen, Fertigung, Recht, Dienstleistungen, Bildung, Personalwesen und Immobilien – und übernimmt auch neue Branchen, wenn unsere KI- und Softwarekompetenz dort passt."},
+  {"question": "Welche Vorteile bieten Zunkirees KI-gestützte Kundenerfahrungslösungen?", "answer": "Ihre KI-gestützten Kundenerfahrungslösungen können Support-Tickets um 40 % reduzieren und gleichzeitig die Genauigkeit der Antworten verbessern, was die Kundenzufriedenheit insgesamt steigert."},
+  {"question": "Kann Zunkiree Labs bei der SaaS-Entwicklung helfen?", "answer": "Ja, Zunkiree Labs ist auf SaaS-Entwicklung spezialisiert und bietet mandantenfähige Plattformen mit Abrechnung und Nutzerverwaltung, sodass Unternehmen ihr SaaS-Produkt in Monaten statt Jahren starten können."},
+  {"question": "Welche Expertise bietet Zunkiree Labs im Bereich Data Engineering?", "answer": "Zunkiree Labs baut robuste Datenpipelines und Infrastruktur speziell für KI-Workloads, damit Unternehmen ihre Daten für maschinelles Lernen vorbereiten können – ohne aufwendige Datenbereinigung."}
+] %}
+{% include "partials/homepage/faq.njk" %}
+
+{% set relatedHeading = "Verwandte Ressourcen" %}
+{% set relatedLinks = [
+  {"label": "KI-Entwicklung", "url": "https://zunkireelabs.com/services/"},
+  {"label": "Cloud-Lösungen", "url": "https://zunkireelabs.com/products/"},
+  {"label": "Data Engineering", "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/"},
+  {"label": "Technische Beratung", "url": "https://zunkireelabs.com/about/"},
+  {"label": "Individuelle Software", "url": "https://zunkireelabs.com/products/ai-booking-engine/"}
+] %}
+{% include "partials/homepage/related-resources.njk" %}

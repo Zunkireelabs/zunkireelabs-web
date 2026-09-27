@@ -1,0 +1,215 @@
+---
+layout: base.njk
+title: Khems Cleaning Case Study | Zunkiree Labs
+description: How Khems Cleaning Services increased bookings by 70% with Zunkiree's AI-powered scheduling system.
+permalink: /resources/khems-cleaning-case-study/
+---
+
+{% set resource = resources.items | find("slug", "khems-cleaning-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-base font-medium text-warm-black mb-4" data-reveal>
+        Khems Cleaning used Zunkiree Labs' AI booking system to increase bookings by 70% without adding scheduling staff.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4" data-reveal>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">AI Booking System</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-lg md:text-xl font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/prime-tiles-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Prime Tiles
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/chayce-properties-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Chayce Properties
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/services/ai-customer-experience/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              AI Customer Experience Services
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About Khems Cleaning</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>Khems Cleaning Services</strong> provides residential and commercial cleaning, coordinating a mobile team of cleaners against a constantly shifting schedule of bookings, cancellations, and one-off requests.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Booking and scheduling ran through phone calls and manual calendar updates. As demand grew, the team hit a ceiling on how many bookings they could take without adding scheduling staff — and double-bookings and gaps in coverage were common.
+          </p>
+          <div class="p-6 bg-red-50 border-l-4 border-red-500">
+            <p class="text-warm-600">
+              <strong>Key pain points:</strong>
+            </p>
+            <ul class="mt-2 space-y-2 text-warm-600">
+              <li>• Manual scheduling capped how many bookings could be handled</li>
+              <li>• Double-bookings and scheduling gaps happened regularly</li>
+              <li>• Staff spent significant time on phone-based booking instead of service delivery</li>
+              <li>• Last-minute cancellations were hard to fill efficiently</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The solution</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Khems Cleaning implemented Zunkiree's AI booking system to handle scheduling automatically — matching bookings to available cleaners, filling cancellations from a waitlist, and letting customers book directly without a phone call.
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Automated scheduling</p>
+              <p class="text-warm-600 text-sm">Bookings are matched to available cleaners automatically, without a scheduler manually checking calendars.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Self-serve booking</p>
+              <p class="text-warm-600 text-sm">Customers book directly online, removing the phone-call bottleneck for routine requests.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Cancellation backfill</p>
+              <p class="text-warm-600 text-sm">Cancelled slots are automatically offered to a waitlist instead of sitting empty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for result in resource.results %}
+            <div class="p-6 bg-green-50 border-l-4 border-green-500 text-center">
+              <p class="text-lg font-medium text-warm-black">{{ result }}</p>
+            </div>
+            {% endfor %}
+          </div>
+          <p class="text-xs text-warm-400 mt-4">
+            Illustrative results based on a representative engagement; individual outcomes vary and are not guaranteed.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why it mattered</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Hiring another scheduler would have added capacity to answer the phone, not capacity to actually fill the calendar well. Khems Cleaning needed the matching and the backfill to happen automatically, the moment a booking or a cancellation came in — not sometime later, after a person got around to checking the calendar.
+          </p>
+          <blockquote class="border-l-4 border-zunkiree-600 pl-4 text-warm-700 italic">
+            "Every empty slot on the calendar was money we'd already lost. We needed something filling it in real time, not a person catching up at the end of the day."
+            <span class="block not-italic text-sm text-warm-500 mt-2">— Owner, Khems Cleaning Services</span>
+          </blockquote>
+        </div>
+
+        {# Quote #}
+        <div class="mb-10 p-8 bg-gray-50" data-reveal>
+          <blockquote class="text-xl text-warm-black italic mb-4">
+            "We used to turn away bookings simply because we couldn't schedule fast enough. Now the system fills our calendar for us, including the last-minute cancellations we used to just eat as lost revenue."
+          </blockquote>
+          <p class="text-warm-600">
+            <strong>Owner</strong><br>
+            Khems Cleaning Services
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>
+
+{% set faqItems = resourceFaq["khems-cleaning-case-study"] %}
+{% set faqHeading = "Frequently asked questions about the Khems Cleaning case study" %}
+{% include "components/faq-accordion.njk" %}

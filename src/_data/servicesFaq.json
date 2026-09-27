@@ -9,7 +9,7 @@
   },
   {
     "question": "What industries does Zunkiree Labs serve?",
-    "answer": "We serve technology companies, e-commerce, healthcare, education, manufacturing, and professional services. Any business with customer-facing content, internal knowledge bases, or operational data can benefit from our AI and software development services."
+    "answer": "We serve technology companies, e-commerce, healthcare, education, manufacturing, real estate, legal, and professional services. Any business with customer-facing content, internal knowledge bases, or operational data can benefit from our AI and software development services, and we're open to new industries beyond this list."
   },
   {
     "question": "How long does a typical software development project take?",
@@ -18,5 +18,13 @@
   {
     "question": "Does Zunkiree Labs offer ongoing support after project delivery?",
     "answer": "Yes. All projects include 30 days of post-launch support. We also offer ongoing maintenance packages covering updates, performance monitoring, security patches, and feature enhancements. Many clients transition to retainer agreements for continuous improvement."
+  },
+  {
+    "question": "Does Zunkiree Labs work with clients globally, not just in Nepal?",
+    "answer": "Yes. Roughly 60% of our clients are international, spanning the US, UK, India, Australia, Canada, Switzerland, and the Netherlands. Zunkiree Labs delivers AI development, custom software, and AEO/SEO work globally — our delivery isn't tied to any single location, and we run structured remote collaboration with time-zone overlap wherever your team is based."
+  },
+  {
+    "question": "Does Zunkiree Labs build AI voice agents?",
+    "answer": "Yes. As part of our AI Customer Experience service, we build Voice AI systems that replace traditional IVR phone trees with conversational AI—handling speech recognition, intent detection, automatic call routing, and voice authentication, so callers get instant answers instead of navigating a menu."
   }
 ]

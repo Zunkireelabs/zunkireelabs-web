@@ -1,0 +1,139 @@
+---
+layout: base.njk
+lang: nl
+ogLocale: nl_NL
+title: "Zunkiree Labs: AI-infrastructuur voor moderne bedrijven" # SEOAI:TITLE
+description: "Zunkiree Labs bouwt productieklare AI-systemen, maatwerksoftware en AEO/SEO-oplossingen voor klanten wereldwijd, waaronder in Nederland. Plan een gratis adviesgesprek."
+permalink: /nl/
+hreflangAlternates:
+  - lang: en
+    url: /
+  - lang: de
+    url: /de/
+  - lang: nl
+    url: /nl/
+  - lang: x-default
+    url: /
+---
+
+{% set heroEyebrow = "AI-first technologiebedrijf" %}
+{% set heroTitleLine1 = "AI-infrastructuur." %}
+{% set heroTitleLine2 = "Op de juiste manier gebouwd." %}
+{% set heroDescription = "We bouwen AI-systemen op infrastructuurniveau, geen wrappers. Van intelligente zoekfunctionaliteit tot ondernemingsplatforms — onze AI-native architectuur vormt de basis voor moderne bedrijven." %}
+{% set heroCta1Url = "/products/" %}
+{% set heroCta1Text = "Ontdek onze producten" %}
+{% set heroCta2Url = "/contact/" %}
+{% set heroCta2Text = "Neem contact op" %}
+{% set heroImageAlt = "Orca Platform Dashboard - AI-infrastructuurbeheer" %}
+{% include "partials/homepage/hero.njk" %}
+
+{% set trustText = "Vertrouwd door vooruitstrevende organisaties" %}
+{% set statProductsLabel = "Producten" %}
+{% set statIndustriesLabel = "Sectoren" %}
+{% set statServicesLabel = "Diensten" %}
+{% include "partials/homepage/social-proof.njk" %}
+
+{% set showcaseEyebrow = "Onze diensten" %}
+{% set showcaseHeading = "Deskundige oplossingen om uw AI-traject te versnellen" %}
+{% set showcaseViewAllText = "Bekijk alle diensten" %}
+{% set iconGradientId = "icon-gradient-nl" %}
+{% set showcaseCards = [
+  {"title": "AI-ontwikkeling", "description": "Automatiseer werk en neem slimmere beslissingen met intelligente agents en applicaties"},
+  {"title": "Webontwikkeling", "description": "Bouw schaalbare, high-performance webapplicaties met moderne frameworks"},
+  {"title": "Mobiele ontwikkeling", "description": "Creëer native en cross-platform mobiele ervaringen waar gebruikers dol op zijn"},
+  {"title": "UI/UX-ontwerp", "description": "Ontwerp intuïtieve interfaces die gebruikers blij maken en betrokkenheid vergroten"},
+  {"title": "Data-engineering", "description": "Bouw robuuste datapijplijnen en infrastructuur voor bruikbare inzichten"},
+  {"title": "Cloudoplossingen", "description": "Implementeer en schaal uw applicaties met moderne cloudarchitectuur"},
+  {"title": "Systeemintegratie", "description": "Verbind uw systemen en automatiseer workflows tussen platforms"},
+  {"title": "Technisch consult", "description": "Strategisch advies om uw technologie-initiatieven te versnellen"}
+] %}
+{% include "partials/homepage/services-showcase.njk" %}
+
+{% set carouselEyebrow = "Case studies" %}
+{% set carouselHeading = "Hoe innovators Zunkiree gebruiken" %}
+{% set playLabel = "Carousel afspelen" %}
+{% set pauseLabel = "Carousel pauzeren" %}
+{% set carouselFnName = "caseStudyCarouselNl" %}
+{% set caseStudyAltSuffix = "case study" %}
+{% set studies = [
+  {"id": "admizz", "name": "Admizz Education", "logo": "/images/clients/admizz.webp", "stat": "45%", "statLabel": "snellere reactietijd", "headline": "Admizz transformeert het beheer van studentenvragen", "description": "Admizz Education revolutioneerde het proces voor studentenvragen met Zunkiree Search, waardoor de reactietijd daalde en de studenttevredenheid binnen hun adviesnetwerk sterk verbeterde.", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/admizz-case-study/"},
+  {"id": "corecloud365", "name": "Corecloud365", "logo": "/images/clients/corecloud365.svg", "stat": "60%", "statLabel": "kostenreductie", "headline": "Corecloud365 optimaliseert cloudactiviteiten", "description": "Corecloud365 realiseerde aanzienlijke kostenbesparingen door onze AI-gestuurde zoek- en automatiseringstools te integreren in hun cloudbeheerplatform.", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/corecloud365-case-study/"},
+  {"id": "rapid-investment", "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg", "stat": "10x", "statLabel": "snellere analyse", "headline": "Rapid Investment transformeert due diligence", "description": "Rapid Investment Group gebruikt onze AI-systemen om investeringskansen 10x sneller te analyseren, wat hen een concurrentievoordeel geeft op de financiële markten.", "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/rapid-investment-case-study/"},
+  {"id": "cms-group", "name": "CMS Group", "logo": "/images/clients/cms-group.webp", "stat": "85%", "statLabel": "automatiseringsgraad", "headline": "CMS Group automatiseert bedrijfsworkflows", "description": "CMS Group behaalde 85% automatisering van hun documentverwerkingsworkflows, waardoor hun team zich kon richten op strategisch werk met hoge toegevoegde waarde.", "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/cms-group-case-study/"},
+  {"id": "mach24orbital", "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp", "stat": "50%", "statLabel": "snellere lanceringen", "headline": "Mach24 Orbital stroomlijnt ruimtevaartactiviteiten", "description": "Mach24 Orbital integreerde onze AI-systemen om hun workflows voor satellietinzet te optimaliseren, waardoor de voorbereidingstijd voor lanceringen werd gehalveerd.", "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/mach24orbital-case-study/"},
+  {"id": "khushbu-nirman", "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp", "stat": "40%", "statLabel": "efficiëntiewinst", "headline": "Khushbu Nirman digitaliseert bouwmanagement", "description": "Khushbu Nirman Sewa transformeerde hun bouwprojectmanagement met onze AI-gestuurde tracking- en resource-optimalisatietools.", "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/khushbu-nirman-case-study/"},
+  {"id": "prime-tiles", "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp", "stat": "2x", "statLabel": "omzetgroei", "headline": "Prime Tiles revolutioneert productontdekking voor klanten", "description": "Prime Tiles implementeerde Zunkiree Search zodat klanten direct de perfecte tegels vinden, waardoor hun online conversieratio verdubbelde.", "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/prime-tiles-case-study/"},
+  {"id": "khems-cleaning", "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp", "stat": "70%", "statLabel": "meer boekingen", "headline": "Khems Cleaning schaalt met slimme planning", "description": "Khems Cleaning Services implementeerde ons AI-boekingssysteem, waardoor hun servicecapaciteit en klanttevredenheid sterk toenamen.", "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/khems-cleaning-case-study/"},
+  {"id": "chayce-properties", "name": "Chayce Properties", "logo": "/images/clients/chayce-properties.webp", "stat": "End-to-end", "statLabel": "digitale activiteiten, volledig in eigen beheer", "headline": "Chayce Properties draait haar volledige digitale operatie op Zunkiree-infrastructuur", "description": "Voor Chayce Properties, een Brits vastgoedbedrijf, is Zunkiree Labs geen leverancier voor één taak — wij beheren de volledige stack: website, AI-systemen en doorlopende technische dienstverlening, van begin tot eind.", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/chayce-properties-case-study/"}
+] %}
+{% include "partials/homepage/case-study-carousel.njk" %}
+
+{% set sliderEyebrow = "Onze diensten" %}
+{% set sliderHeading = "Technische topkwaliteit op elk niveau" %}
+{% set sliderSubtext = "Van AI-systemen tot dataplatforms — wij bouwen oplossingen op infrastructuurniveau die in waarde blijven groeien." %}
+{% set sliderViewAllText = "Bekijk alle diensten" %}
+{% set sliderIconGradientId = "service-icon-gradient-nl" %}
+{% set servicesList = [
+  {"title": "AI-ontwikkeling", "description": "Maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering. Wij bouwen AI die specifieke bedrijfsproblemen oplost, geen generieke chatbots.", "cta": "Bekijk", "url": "/services/ai-development/", "icon": "ai", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Admizz", "logo": "/images/clients/admizz.webp"}]},
+  {"title": "AI-klantervaring", "description": "AI-gestuurde supportsystemen die klantvragen direct beantwoorden. Verminder supporttickets met 40% en verbeter tegelijk de nauwkeurigheid van antwoorden.", "cta": "Bekijk", "url": "/services/ai-customer-experience/", "icon": "chat", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
+  {"title": "AI-ecommerceoplossingen", "description": "Bouw agentic-commercesystemen met AI-winkelagents, conversational commerce en slimme aanbevelingen. Gespecialiseerd voor de Nepalese markt met eSewa- en Khalti-integratie.", "cta": "Bekijk", "url": "/services/ai-ecommerce/", "icon": "cart", "clients": []},
+  {"title": "Datasystemen", "description": "Datapijplijnen, warehouses en analyse-infrastructuur gebouwd voor AI-workloads. Maak uw data gereed voor machine learning zonder maandenlange opschoning.", "cta": "Bekijk", "url": "/services/data-systems/", "icon": "data", "clients": [{"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]},
+  {"title": "Maatwerksoftware", "description": "Bedrijfsapplicaties op maat van uw workflows. Wij bouwen interne tools en bedrijfssystemen die teams daadwerkelijk graag gebruiken.", "cta": "Bekijk", "url": "/services/custom-software/", "icon": "code", "clients": [{"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}]},
+  {"title": "SaaS-ontwikkeling", "description": "Multi-tenant platforms met abonnementsfacturatie, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in maanden, niet jaren.", "cta": "Bekijk", "url": "/services/saas-development/", "icon": "cloud", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}]},
+  {"title": "Webontwikkeling", "description": "High-performance websites en webapps geoptimaliseerd voor snelheid en conversie. Moderne frameworks, responsive design, vanaf dag één gebouwd voor SEO.", "cta": "Bekijk", "url": "/services/web-development/", "icon": "globe", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
+  {"title": "App-ontwikkeling", "description": "Native en cross-platform mobiele apps voor iOS en Android. Van consumentenapps tot enterprise mobility, met naadloze backend-integratie.", "cta": "Bekijk", "url": "/services/app-development/", "icon": "mobile", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}]},
+  {"title": "AEO & SEO", "description": "Word gevonden door Google en AI-assistenten zoals ChatGPT en Perplexity. Wij optimaliseren content voor traditionele zoekmachines en AI-citaties.", "cta": "Bekijk", "url": "/services/aeo-seo/", "icon": "search", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]}
+] %}
+{% include "partials/homepage/services-slider.njk" %}
+
+{% set solutionsEyebrow = "Oplossingen" %}
+{% set solutionsHeading = "AI-native systemen voor elke sector" %}
+{% set industriesGradientId = "solutions-icon-gradient-nl" %}
+{% set industries = [
+  {"name": "Gezondheidszorg"},
+  {"name": "Productie"},
+  {"name": "Juridisch"},
+  {"name": "Zakelijke dienstverlening"},
+  {"name": "Onderwijs"},
+  {"name": "Human resources"}
+] %}
+{% include "partials/homepage/industries-grid.njk" %}
+
+{% set spotlightEyebrow = "Bronnen" %}
+{% set spotlightHeading = "In de schijnwerpers" %}
+{% set spotlightViewAllText = "Bekijk alle bronnen" %}
+{% set spotlightList = [
+  {"type": "RAPPORT", "title": "State of AI Search 2026: Enterprise-adoptierapport", "url": "/resources/ai-search-report-2026/", "image": "/assets/images/spotlight/report-ai-search-2026.svg", "cta": "Nu lezen"},
+  {"type": "ON DEMAND", "title": "Van zoekwoorden naar gesprekken: AI-zoekimplementatie", "url": "/resources/webinar-ai-search-implementation/", "image": "/assets/images/spotlight/ondemand-ai-implementation.svg", "cta": "Nu bekijken"},
+  {"type": "UITGELICHT RAPPORT", "title": "State of AI in Nepal 2026: Sectorrapport", "url": "/resources/state-of-ai-nepal-2026/", "image": "/assets/images/spotlight/report-ai-nepal-2026.svg", "cta": "Nu downloaden"},
+  {"type": "E-BOOK", "title": "Het AI Search Playbook voor productteams", "url": "/resources/ai-search-playbook/", "image": "/assets/images/spotlight/ebook-ai-playbook.svg", "cta": "Nu lezen"}
+] %}
+{% include "partials/homepage/spotlight.njk" %}
+
+{% set whyUsEyebrow = "Waarom Zunkiree Labs" %}
+{% set whyUsHeading = "Waarom kiezen voor Zunkiree Labs voor uw AI-infrastructuur?" %}
+{% set whyUsBody = "Zunkiree Labs levert niet alleen AI-systemen, maar complete infrastructuuroplossingen die zijn afgestemd op de veranderende behoeften van moderne bedrijven. Onze AI-native architectuur zorgt ervoor dat onze oplossingen, anders dan generieke systemen, specifiek zijn ontworpen voor de uitdagingen van elke sector. Met meer dan 5 producten in 7 sectoren en 8 gespecialiseerde diensten zijn wij een betrouwbare partner voor vooruitstrevende organisaties. In het huidige competitieve landschap zorgt onze focus op moderne cloudarchitectuur, robuuste datapijplijnen en high-performance applicaties ervoor dat uw bedrijf de kracht van AI kan benutten, efficiënter kan werken en voorop kan blijven lopen. Onze ervaring met succesvolle integraties in de Nepalese markt, met name met platforms als eSewa en Khalti, toont bovendien aan dat we oplossingen effectief kunnen lokaliseren voor maximale relevantie en prestaties. Wij zetten innovatieve technologieën en methodes in zodat onze klanten niet alleen gelijke tred houden, maar ook floreren in het AI-tijdperk." %}
+{% include "partials/homepage/why-us.njk" %}
+
+{% set faqHeading = "Veelgestelde vragen" %}
+{% set expandAllText = "Alles uitklappen" %}
+{% set collapseAllText = "Alles inklappen" %}
+{% set faqItems = [
+  {"question": "Welke soorten producten biedt Zunkiree Labs?", "answer": "Zunkiree Labs biedt uiteenlopende producten, waaronder AI-ontwikkelingsoplossingen, web- en mobiele ontwikkeling, UI/UX-ontwerp, data-engineering, cloudoplossingen, systeemintegratie en technisch consult."},
+  {"question": "Hoe pakt Zunkiree Labs AI-ontwikkeling aan?", "answer": "Zunkiree Labs richt zich op maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering om specifieke bedrijfsproblemen op te lossen, in plaats van generieke chatbots te bouwen."},
+  {"question": "In welke sectoren is Zunkiree Labs actief?", "answer": "Zunkiree Labs levert oplossingen in de sectoren gezondheidszorg, productie, juridisch, zakelijke dienstverlening, onderwijs, human resources en vastgoed — en we nemen ook nieuwe sectoren aan waar onze AI- en softwarekennis van toepassing is."},
+  {"question": "Welke voordelen bieden Zunkiree's AI-gestuurde klantervaringsoplossingen?", "answer": "Onze AI-gestuurde klantervaringsoplossingen kunnen supporttickets met 40% verminderen en tegelijk de nauwkeurigheid van antwoorden verbeteren, wat de algehele klanttevredenheid verhoogt."},
+  {"question": "Kan Zunkiree Labs helpen met SaaS-ontwikkeling?", "answer": "Ja, Zunkiree Labs is gespecialiseerd in SaaS-ontwikkeling en biedt multi-tenant platforms met abonnementsfacturatie en gebruikersbeheer, waardoor bedrijven hun SaaS-product binnen enkele maanden kunnen lanceren."},
+  {"question": "Welke expertise biedt Zunkiree Labs op het gebied van data-engineering?", "answer": "Zunkiree Labs bouwt robuuste datapijplijnen en infrastructuur die specifiek zijn ontworpen voor AI-workloads, zodat organisaties hun data kunnen voorbereiden op machine learning zonder uitgebreide opschoning."}
+] %}
+{% include "partials/homepage/faq.njk" %}
+
+{% set relatedHeading = "Gerelateerde bronnen" %}
+{% set relatedLinks = [
+  {"label": "AI-ontwikkeling", "url": "https://zunkireelabs.com/services/"},
+  {"label": "Cloudoplossingen", "url": "https://zunkireelabs.com/products/"},
+  {"label": "Data-engineering", "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/"},
+  {"label": "Technisch consult", "url": "https://zunkireelabs.com/about/"},
+  {"label": "Maatwerksoftware", "url": "https://zunkireelabs.com/products/ai-booking-engine/"}
+] %}
+{% include "partials/homepage/related-resources.njk" %}
