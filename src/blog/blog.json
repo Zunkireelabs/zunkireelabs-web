@@ -1,5 +1,6 @@
 {
   "layout": "blog-post.njk",
+  "hideChrome": true,
   "tags": ["blog"],
   "permalink": "/blog/{{ page.fileSlug }}/",
   "schemaType": "article"

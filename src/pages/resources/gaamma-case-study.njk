@@ -1,0 +1,96 @@
+---
+layout: resource-content.njk
+title: How We Built Gaamma, an AI-Powered Manufacturing ERP | Zunkiree Labs
+description: Turning disconnected floor systems into one predictive view of the factory — how Zunkiree Labs engineered Gaamma, an AI-powered manufacturing ERP.
+permalink: /resources/gaamma-case-study/
+slug: gaamma-case-study
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why we built Gaamma</h2>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Most factory floors run on a patchwork: one system for work orders, another for inventory, a third for quality, and equipment data that never reaches any of them. Nobody gets a full picture until something has already gone wrong. We built Gaamma to unify that data and, more importantly, to predict from it instead of just reporting on it after the fact.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The problem</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Work orders, machines, and operators lived in separate systems, so no one could see exactly where a job stood. Equipment failures showed up as unplanned stops instead of scheduled maintenance, and manual reordering kept inventory turns flat.
+  </p>
+  <div class="rounded-2xl border border-red-200 bg-red-50 p-6">
+    <p class="mb-2 font-medium text-[#111827]">What disconnected systems cost manufacturers:</p>
+    <ul class="space-y-2 text-[14px] leading-relaxed text-[#6B7280]">
+      <li>&bull; No single view of where a work order actually stands across the floor</li>
+      <li>&bull; Equipment failures show up as unplanned stops instead of scheduled maintenance</li>
+      <li>&bull; Manual reordering keeps inventory turns flat instead of optimized</li>
+      <li>&bull; Integrating with existing PLCs and SCADA systems is treated as a rip-and-replace project</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How we built it</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    We built Gaamma as a single production layer that both ingests floor data and predicts from it. Equipment monitoring feeds a machine-learning model that flags failures before they happen, while the same platform standardizes work order, inventory, and quality data on one source of truth&mdash;connecting to PLCs, SCADA systems, and IoT sensors already on the floor instead of asking manufacturers to replace them.
+  </p>
+  <div class="space-y-3">
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">One source of truth across the floor</p>
+      <p class="text-[13.5px] text-[#6B7280]">Work orders, machines, and operators are tracked in real time in a single system, instead of three systems that each know part of the story.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Predictive maintenance from live equipment data</p>
+      <p class="text-[13.5px] text-[#6B7280]">A machine-learning model trained on equipment monitoring signals flags likely failures early enough to schedule maintenance instead of reacting to a stopped line.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">No rip-and-replace integration</p>
+      <p class="text-[13.5px] text-[#6B7280]">Gaamma connects to PLCs, SCADA systems, IoT sensors, and accounting software already on the floor through standard protocols, so existing infrastructure stays in place.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Built for how different factories actually run</p>
+      <p class="text-[13.5px] text-[#6B7280]">Discrete manufacturing, process/batch production, job shop, and warehouse operations each get the workflows they actually need, on the same platform.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What shipped</h2>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    {% for result in resource.results %}
+    <div class="rounded-2xl border border-[#76B900]/20 bg-[#76B900]/[0.06] p-5">
+      <p class="text-[15px] font-medium text-[#111827]">{{ result }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Key engineering decisions</h2>
+  <div class="space-y-4">
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">01</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Unify the data before automating anything:</strong> Predictive maintenance is only as good as the data feeding it&mdash;consolidating work order, inventory, and equipment data came first.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">02</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Predict, don't just report:</strong> A dashboard that shows what already broke is less useful than a model that flags what's about to.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">03</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Integrate with what's already running:</strong> Standard protocol support for PLCs and SCADA systems meant manufacturers didn't have to replace hardware to adopt Gaamma.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "about": { "@type": "SoftwareApplication", "name": "Gaamma", "applicationCategory": "BusinessApplication" }
+}
+</script>

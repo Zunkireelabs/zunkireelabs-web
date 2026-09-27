@@ -109,6 +109,66 @@
       "source": "/blog/top-ai-companies-to-watch-in-nepal/",
       "destination": "/blog/top-ai-companies-nepal-2026/",
       "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-top-ai-companies-nepal-a-comprehensive-list",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-top-ai-companies-nepal-a-comprehensive-list/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/customers",
+      "destination": "/customer-stories/",
+      "permanent": true
+    },
+    {
+      "source": "/customers/",
+      "destination": "/customer-stories/",
+      "permanent": true
+    },
+    {
+      "source": "/products/gaamma",
+      "destination": "/resources/gaamma-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/gaamma/",
+      "destination": "/resources/gaamma-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/dental-ai",
+      "destination": "/resources/dental-ai-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/dental-ai/",
+      "destination": "/resources/dental-ai-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/ai-commerce-agent",
+      "destination": "/resources/stella-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/ai-commerce-agent/",
+      "destination": "/resources/stella-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/ai-booking-engine",
+      "destination": "/resources/zenly-case-study/",
+      "permanent": true
+    },
+    {
+      "source": "/products/ai-booking-engine/",
+      "destination": "/resources/zenly-case-study/",
+      "permanent": true
     }
   ]
 }

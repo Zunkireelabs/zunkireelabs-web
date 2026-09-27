@@ -17,6 +17,10 @@
   <title>{{ title or site.meta.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
 
+  <!-- Stylesheet loaded as a blocking <link> (not a JS-import side-effect) so it paints
+       before the JS module graph resolves — avoids a flash of unstyled content on cold reload -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
   <!-- Robots: noindex for non-production environments -->
   {% if env.ELEVENTY_ENV != 'production' %}
   <meta name="robots" content="noindex, nofollow">
@@ -52,8 +56,8 @@
   {% endif %}
 
   <!-- Preload Critical Resources for LCP -->
-  {% if page.url == "/" %}
-  <link rel="preload" href="/assets/images/hero-orca-dashboard.webp" as="image" fetchpriority="high">
+  {% if page.url == "/home-legacy/" %}
+  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high" media="(min-width:1024px)">
   {% elif heroImage %}
   <link rel="preload" href="{{ heroImage }}" as="image" fetchpriority="high">
   {% endif %}
@@ -268,6 +272,19 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>
 
+  {% if bodyClass == "v2-inter" %}
+  <!-- Fonts - Inter (Homepage V2 preview only, cloned from kore.ai's actual typeface — MASTER_DESIGN_SPEC.md §5) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+  <!-- Fonts - Instrument Serif italic (Orca dark hero only, 2026-09-25) — the
+       "Meet { X }" tagline / subhead accent, matching the Kore.ai Artemis hero's
+       editorial-italic treatment. Loaded alongside Inter since only v2-inter
+       pages use font-editorial. -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"></noscript>
+  {% endif %}
+
   <!-- SEOAI:HEAD:START -->
 <!-- SEOAI:ANALYTICSSCRIPTGA4:START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
 <script>
@@ -286,18 +303,22 @@
   fbq('track', 'PageView');
 </script><!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:END --><!-- SEOAI:HEAD:END -->
 </head>
-<body class="font-sans antialiased overflow-x-hidden">
+<body class="font-sans antialiased overflow-x-clip {% if hideChrome %}bg-white{% endif %} {{ bodyClass }}">
 
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  {% if not hideChrome %}
   {% include "partials/header.njk" %}
+  {% endif %}
 
   <main id="main-content">
     {{ content | safe }}
   </main>
 
+  {% if not hideChrome %}
   {% include "partials/footer.njk" %}
+  {% endif %}
 
   <!-- Main JS + CSS (bundled via Vite) -->
   <script type="module" src="/assets/js/main.js"></script>

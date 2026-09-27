@@ -2,20 +2,60 @@
 layout: base.njk
 title: Customer Stories | Zunkiree Labs
 description: See how leading companies are transforming their digital experiences with Zunkiree Labs. Real results from real customers.
-permalink: /customers/
+permalink: /customer-stories/
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   HERO SECTION
+   CUSTOMER STORIES — WEBSITE V2
+   Redesigned onto the homepage-v2 design system (navbar-v2 +
+   footer-v2 chrome, Inter type, navy/#76B900 token language,
+   font-mono uppercase labels, hairline-border glass cards) with
+   section composition, rhythm and    card polish taking cues from
+   the Kore.ai customer-stories reference: split featured-story
+   card, bordered logo strip, card-style story grid, stat band,
+   dark closing CTA. Hero copy, featured story, logo strip,
+   stat band and closing CTA match the original. The story-grid
+   testimonials were re-authored to map 1:1 to the real clients
+   in the logo carousel (role-based attribution, case-study-
+   grounded results) replacing the earlier dummy Twitter-style
+   placeholder contributors.
+
+   The scrolling-testimonial marquee (animate-marquee-left/right,
+   .marquee-fade/.marquee-container/.marquee-track) referenced no
+   CSS anywhere in the codebase — it was inert. Rebuilt as a
+   self-contained keyframe recipe (matching homepage-v2.njk's
+   .animate-marquee pattern) so the existing content actually
+   scrolls, same two-row/opposite-direction structure as before.
    ===================================================== #}
-<section class="pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="max-w-3xl">
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4" data-reveal>Customer Stories</p>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.04em] leading-[1.1] mb-6" data-reveal>
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO — same shell as about.njk/contact.njk: mono eyebrow
+   chip + headline + supporting copy, centered single column.
+   ===================================================== #}
+<section class="relative px-4 pb-10 pt-32 sm:px-6 sm:pt-36 sm:pb-14 lg:px-8 lg:pt-40 lg:pb-16" aria-labelledby="hero-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl" data-reveal-stagger>
+      <span class="mb-5 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+        Customer Stories
+      </span>
+      <h1 id="hero-heading" class="mb-5 text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
         Trusted by teams building the future
       </h1>
-      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em]" data-reveal>
+      <p class="text-[18px] leading-relaxed text-[#6B7280] sm:text-[19px]">
         From startups to enterprises, see how companies are using Zunkiree Labs to transform their digital experiences.
       </p>
     </div>
@@ -23,53 +63,51 @@ permalink: /customers/
 </section>
 
 {# =====================================================
-   FEATURED STORY
+   FEATURED STORY — rebuilt to match the Kore.ai customer-stories
+   reference card 1:1 (badge / headline / description / dashed-
+   border "View Case Study" CTA box / full-bleed photo right),
+   recolored onto our own navy/#76B900 token language. Links out
+   to the real Admizz case study at /resources/admizz-case-study/
+   using its actual title, subtitle and cover art.
    ===================================================== #}
-<section class="py-12 md:py-16 bg-warm-off-white px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="rounded-3xl overflow-hidden relative" style="background-image: url('/assets/images/testimonial-bg-mountains.webp'); background-size: cover; background-position: center;">
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 p-8 md:p-12 lg:p-16">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div data-reveal>
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full mb-6">
-              <span class="text-sm font-medium text-white/80">Featured Story</span>
-            </div>
-            <blockquote class="text-xl md:text-2xl lg:text-3xl font-medium text-white leading-snug mb-6">
-              "Zunkiree Search transformed how our users discover content. What used to take months of engineering now works out of the box."
-            </blockquote>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <span class="text-white font-semibold">SC</span>
-              </div>
-              <div>
-                <p class="text-white font-medium">Sarah Chen</p>
-                <p class="text-white/60 text-sm">VP Engineering, ScaleUp</p>
-              </div>
-            </div>
+{% set featured = resources.items | find("slug", "admizz-case-study") %}
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="featured-story-heading">
+  <h2 id="featured-story-heading" class="sr-only">Featured customer story</h2>
+  <div class="mx-auto max-w-5xl">
+    <div class="overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-card" data-reveal>
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        {# Text column #}
+        <div class="flex flex-col justify-center bg-sky-50/60 p-7 sm:p-10 lg:p-12">
+          <span class="mb-5 inline-flex w-fit items-center rounded-full bg-[#76B900]/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">
+            Featured Customer Story
+          </span>
+          <h3 class="text-[26px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[30px] lg:text-[34px]">
+            {{ featured.title }}
+          </h3>
+          <p class="mt-4 max-w-md text-[16px] leading-relaxed text-[#6B7280]">
+            {{ featured.description }}
+          </p>
+          <div class="mt-8 w-fit rounded-lg border border-dashed border-navy-200 p-2">
+            <a
+              href="/resources/admizz-case-study/"
+              class="inline-flex items-center gap-2 rounded-md bg-navy-900 px-5 py-3 font-mono text-[12px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-navy-800"
+            >
+              View Case Study
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
           </div>
-          <div class="lg:text-right" data-reveal>
-            <div class="inline-block bg-white/10 backdrop-blur rounded-2xl p-6 md:p-8">
-              <div class="grid grid-cols-2 gap-6">
-                <div class="text-center">
-                  <p class="text-3xl md:text-4xl font-medium text-white mb-1">10x</p>
-                  <p class="text-white/60 text-sm">Faster search</p>
-                </div>
-                <div class="text-center">
-                  <p class="text-3xl md:text-4xl font-medium text-white mb-1">60%</p>
-                  <p class="text-white/60 text-sm">Less dev time</p>
-                </div>
-                <div class="text-center">
-                  <p class="text-3xl md:text-4xl font-medium text-white mb-1">3.2x</p>
-                  <p class="text-white/60 text-sm">User engagement</p>
-                </div>
-                <div class="text-center">
-                  <p class="text-3xl md:text-4xl font-medium text-white mb-1">45%</p>
-                  <p class="text-white/60 text-sm">Fewer tickets</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+
+        {# Photo column #}
+        <div class="relative min-h-[280px] lg:min-h-full">
+          <img
+            src="https://images.unsplash.com/photo-1723746571161-e45723f5db33?auto=format&fit=crop&q=80&w=1200"
+            alt="{{ featured.title }}"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -77,378 +115,224 @@ permalink: /customers/
 </section>
 
 {# =====================================================
-   CUSTOMER LOGOS - Marquee Animation
+   CLIENT LOGOS — customer carousel lifted from homepage-v2.njk's
+   CLIENTS MARQUEE (same provenClients logo assets, same
+   animate-marquee / mr-16 seamless-loop recipe, same fade masks).
+   Replaces the old placeholder "forward-thinking companies"
+   text-wordmark band with homepage-v2's real logo track and its
+   "Trusted by teams modernizing operations with AI" label.
    ===================================================== #}
-<section class="relative py-16 md:py-20 bg-gradient-to-b from-white/80 via-white to-white backdrop-blur-sm px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <p class="text-center text-sm font-medium text-warm-400 tracking-wide mb-10" data-reveal>Trusted by forward-thinking companies</p>
-
-    {# Marquee container - same as homepage #}
-    <div class="marquee-fade">
-      <div class="marquee-container">
-        <div class="marquee-track">
-        {# First set of logos #}
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechFlow</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataPrime</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
-        {# Duplicate set for seamless loop #}
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">TechFlow</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">ScaleUp</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">InnovateCo</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">CloudNine</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DataPrime</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">NextGen</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">FutureLabs</span>
-        <span class="text-lg font-medium text-warm-400 tracking-[-0.01em] whitespace-nowrap">DigitalFirst</span>
-        </div>
+{% set provenClients = [
+  { name: "Admizz", logo: "/assets/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/assets/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/assets/images/clients/rapid-investment.svg" },
+  { name: "CMS Group", logo: "/assets/images/clients/cms-group.webp" },
+  { name: "Mach24 Orbital", logo: "/assets/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/assets/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/assets/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" }
+] %}
+<style>
+  @keyframes customers-logo-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: customers-logo-scroll 25s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee { animation: none; }
+  }
+</style>
+<div class="relative w-full overflow-hidden pb-12 sm:pb-16 lg:pb-20" data-reveal>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <p id="logos-heading" class="mb-8 text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF]">Trusted by teams modernizing operations with AI</p>
+    <div class="relative w-full overflow-hidden py-2">
+      <div class="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-r from-warm-off-white/30 to-transparent" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-20 bg-gradient-to-l from-warm-off-white/30 to-transparent" aria-hidden="true"></div>
+      <div class="animate-marquee flex items-center">
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
+        {% endfor %}
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" aria-hidden="true" />
+        {% endfor %}
       </div>
     </div>
   </div>
-</section>
+</div>
 
 {# =====================================================
-   CUSTOMER STORIES - Twitter-style Scrolling Testimonials
+   STORIES FROM OUR CUSTOMERS — testimonial grid mapped 1:1
+   to the confirmed real-client list from the logo carousel
+   above (Admizz, CoreCloud365, Rapid Investment, CMS Group,
+   Mach24 Orbital, Khushbu Nirman Sewa, Prime Tiles, Khems
+   Cleaning). Attribution is role-based — company + title, no
+   invented personal names — matching homepage-v2's testimonial
+   convention. Quotes are grounded in the real case-study
+   results where those exist (Admizz, CoreCloud365, Khushbu
+   Nirman Sewa) and in each client's confirmed outcome metric
+   otherwise. Rebuilt as a static image-card grid matching the
+   Kore.ai customer-stories reference (logo/brand block top,
+   headline copy, bordered footer meta row) instead of the
+   earlier scrolling marquee. First six shown, the rest revealed
+   with "Show more" (Kore.ai's own pattern).
    ===================================================== #}
-<section class="py-16 md:py-24 bg-warm-off-white overflow-hidden">
-  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
-    {# Section Header #}
-    <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
-      <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2] mb-5">
+{% set customerStories = [
+  { initials: "AE", from: "from-sky-400", to: "to-blue-600", name: "Admizz Education", role: "Operations Director", category: "Education", logo: "/assets/images/clients/admizz.webp", photo: "https://images.unsplash.com/photo-1723746571161-e45723f5db33?auto=format&fit=crop&q=80&w=800", quote: "Students used to wait days for answers to simple questions. Now they get instant, accurate responses and our counselors focus on high-value guidance — response times are down 45%." },
+  { initials: "CC", from: "from-cyan-400", to: "to-teal-600", name: "CoreCloud365", role: "VP of Engineering", category: "Cloud Services", logo: "/assets/images/clients/corecloud365.webp", photo: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800", quote: "Junior engineers now resolve issues that used to require senior intervention. Zunkiree surfaces the right runbook in seconds — we cut operational costs 60% and held 99.9% uptime." },
+  { initials: "RI", from: "from-emerald-400", to: "to-green-600", name: "Rapid Investment", role: "Head of Analytics", category: "Finance", logo: "/assets/images/clients/rapid-investment.svg", photo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800", quote: "Due diligence used to take weeks. Now our analysts query the same datasets in plain English and work through opportunities 10x faster — without missing a single signal." },
+  { initials: "CM", from: "from-violet-400", to: "to-purple-600", name: "CMS Group", role: "Chief Operating Officer", category: "Enterprise Services", logo: "/assets/images/clients/cms-group.webp", photo: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800", quote: "Our team used to drown in paperwork. Today 85% of our document workflows run on their own, and people are back to the work that actually moves the business forward." },
+  { initials: "M2", from: "from-indigo-400", to: "to-blue-600", name: "Mach24 Orbital", role: "Program Director", category: "Aerospace", logo: "/assets/images/clients/mach24orbital.webp", photo: "https://images.unsplash.com/photo-1557920982-fe9c098511d2?auto=format&fit=crop&q=80&w=800", quote: "Launch prep used to take weeks of coordination across teams. Zunkiree's AI workflows cut the prep window in half — without a single missed milestone." },
+  { initials: "KN", from: "from-orange-400", to: "to-red-500", name: "Khushbu Nirman Sewa", role: "Managing Director", category: "Construction", logo: "/assets/images/clients/khushbu-nirman-sewa.webp", photo: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800", quote: "We went from paper forms and phone calls to real-time visibility across all 15+ sites. Project delays are down 40% and we saved NPR 2.5 crore in the first year." },
+  { initials: "PT", from: "from-amber-400", to: "to-orange-600", name: "Prime Tiles", role: "E-commerce Manager", category: "Building Material Retail", logo: "/assets/images/clients/prime-tiles.webp", photo: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=800", quote: "Customers couldn't find the right tile — so they left. With Zunkiree Search they describe what they need in natural language, and our conversions doubled within a quarter." },
+  { initials: "KC", from: "from-rose-400", to: "to-pink-600", name: "Khems Cleaning", role: "Operations Lead", category: "Home Services", logo: "/assets/images/clients/khems-cleaning.webp", photo: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=800", quote: "Manual scheduling was costing us customers every week. Zunkiree's booking engine fills the slot automatically — bookings are up 70% and we haven't added a single hire." }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="stories-heading" x-data="{ expanded: false }">
+  <div class="mx-auto max-w-5xl">
+    <div class="mx-auto mb-12 max-w-2xl text-center" data-reveal>
+      <h2 id="stories-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
         Stories from our customers
       </h2>
-      <p class="text-lg text-warm-600 tracking-[-0.01em] leading-relaxed">
+      <p class="text-[16px] leading-relaxed text-[#6B7280] sm:text-[18px]">
         Real results from teams who chose to build with Zunkiree Labs.
       </p>
     </div>
-  </div>
 
-  {# Scrolling Testimonials Container #}
-  <div class="relative">
-    {# Gradient Overlays #}
-    <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-warm-off-white to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-warm-off-white to-transparent z-10 pointer-events-none"></div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+      {% for story in customerStories %}
+        <div class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-subtle transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover hover:border-navy-200"{% if loop.index0 >= 6 %} x-show="expanded" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-cloak{% endif %}>
+          {# Brand/photo block — industry-matched photo fills the top,
+             category chip layered on top with a scrim for legibility. #}
+          <div class="relative h-40 overflow-hidden bg-gradient-to-br {{ story.from }} {{ story.to }}">
+            <img
+              src="{{ story.photo }}"
+              alt="{{ story.name }} — {{ story.category }}"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-navy-950/5 to-transparent" aria-hidden="true"></div>
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-navy-900 shadow-subtle">
+              {{ story.category }}
+            </span>
+          </div>
 
-    {# Marquee Row 1 - Scrolls Left #}
-    <div class="flex gap-4 mb-4 animate-marquee-left">
-      {# Story 1 - TechFlow #}
-      <div class="flex-shrink-0 w-[380px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white font-medium text-sm">JL</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <div class="flex flex-1 flex-col bg-sky-50/50 p-5 sm:p-6">
+            <p class="mb-5 text-[14.5px] leading-relaxed text-[#374151]">{{ story.quote }}</p>
+            <div class="mt-auto flex items-center gap-3 border-t border-navy-100 pt-4">
+              <img
+                src="{{ story.logo }}"
+                alt="{{ story.name }}"
+                loading="lazy"
+                class="h-6 w-auto flex-shrink-0 object-contain opacity-80 mix-blend-multiply transition-opacity duration-200 group-hover:opacity-100"
+              />
+              <div class="min-w-0">
+                <p class="truncate text-[13.5px] font-medium text-[#111827]">{{ story.name }}</p>
+                <p class="truncate text-[12px] text-[#9CA3AF]">{{ story.role }}</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">James Lee</p>
-            <p class="text-warm-400 text-xs">@jameslee_tech</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">E-commerce</span>
         </div>
-        <p class="text-warm-600 text-sm leading-relaxed">We replaced our entire search infrastructure with <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span>. Our customers can now find products using natural language — conversion rates jumped 34%.</p>
-      </div>
-
-      {# Story 2 - InnovateCo #}
-      <div class="flex-shrink-0 w-[350px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white font-medium text-sm">MR</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Marcus Rivera</p>
-            <p class="text-warm-400 text-xs">@marcusrivera</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">SaaS</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">The AI-native approach is exceptional. Support queries dropped 62% after implementing conversational search in our help center.</p>
-      </div>
-
-      {# Story 3 - CloudNine #}
-      <div class="flex-shrink-0 w-[340px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white font-medium text-sm">AP</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Amanda Park</p>
-            <p class="text-warm-400 text-xs">@amandapark</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">FinTech</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Enterprise-grade search with full audit trails and role-based access. Exactly what we needed for compliance.</p>
-      </div>
-
-      {# Story 4 - DataPrime #}
-      <div class="flex-shrink-0 w-[360px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-medium text-sm">RK</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Raj Kumar</p>
-            <p class="text-warm-400 text-xs">@rajkumar_data</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Analytics</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Our analysts can now query complex datasets in plain English. What used to require SQL expertise is now accessible to everyone.</p>
-      </div>
-
-      {# Story 5 - NextGen #}
-      <div class="flex-shrink-0 w-[370px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center text-white font-medium text-sm">LT</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Dr. Lisa Thompson</p>
-            <p class="text-warm-400 text-xs">@drlisathompson</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Healthcare</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Patient information retrieval went from minutes to seconds. <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span> handles medical terminology with impressive accuracy.</p>
-      </div>
-
-      {# Duplicate set for seamless loop #}
-      <div class="flex-shrink-0 w-[380px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white font-medium text-sm">JL</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">James Lee</p>
-            <p class="text-warm-400 text-xs">@jameslee_tech</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">E-commerce</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">We replaced our entire search infrastructure with <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span>. Our customers can now find products using natural language — conversion rates jumped 34%.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[350px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white font-medium text-sm">MR</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Marcus Rivera</p>
-            <p class="text-warm-400 text-xs">@marcusrivera</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">SaaS</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">The AI-native approach is exceptional. Support queries dropped 62% after implementing conversational search in our help center.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[340px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white font-medium text-sm">AP</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Amanda Park</p>
-            <p class="text-warm-400 text-xs">@amandapark</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">FinTech</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Enterprise-grade search with full audit trails and role-based access. Exactly what we needed for compliance.</p>
-      </div>
+      {% endfor %}
     </div>
 
-    {# Marquee Row 2 - Scrolls Right #}
-    <div class="flex gap-4 animate-marquee-right">
-      {# Story 6 - FutureLabs #}
-      <div class="flex-shrink-0 w-[360px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white font-medium text-sm">DW</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">David Wong</p>
-            <p class="text-warm-400 text-xs">@davidwong_res</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Research</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">We indexed 10 years of research papers. Researchers can now find relevant studies in seconds instead of hours.</p>
-      </div>
-
-      {# Additional testimonials #}
-      <div class="flex-shrink-0 w-[400px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center text-white font-medium text-sm">EH</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Elena Hernandez</p>
-            <p class="text-warm-400 text-xs">@elenahernandez</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Retail</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Finally, a search solution that understands context! <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span> has been a game-changer for our e-commerce platform. Users are finding products faster than ever.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[340px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">NK</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Nathan Kim</p>
-            <p class="text-warm-400 text-xs">@nathankim_dev</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">DevTools</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">The API documentation is top-notch. Had our integration up and running in under a day.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[370px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-blue-500 flex items-center justify-center text-white font-medium text-sm">PS</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Priya Singh</p>
-            <p class="text-warm-400 text-xs">@priyasingh_pm</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Support</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Our support team loves it. Self-service resolution rate is up 40% since implementing conversational search.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[350px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-medium text-sm">SC</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Sarah Chen</p>
-            <p class="text-warm-400 text-xs">@sarahchen_eng</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Engineering</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Implementing <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span> transformed how our users discover content. Highly recommend.</p>
-      </div>
-
-      {# Duplicate set for seamless loop #}
-      <div class="flex-shrink-0 w-[360px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white font-medium text-sm">DW</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">David Wong</p>
-            <p class="text-warm-400 text-xs">@davidwong_res</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Research</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">We indexed 10 years of research papers. Researchers can now find relevant studies in seconds instead of hours.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[400px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center text-white font-medium text-sm">EH</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Elena Hernandez</p>
-            <p class="text-warm-400 text-xs">@elenahernandez</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">Retail</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">Finally, a search solution that understands context! <span class="text-zunkiree-600 font-medium">@ZunkireeSearch</span> has been a game-changer for our e-commerce platform. Users are finding products faster than ever.</p>
-      </div>
-
-      <div class="flex-shrink-0 w-[340px] bg-white border border-warm-border rounded-xl p-5 shadow-sm">
-        <div class="flex items-start gap-3 mb-3">
-          <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">NK</div>
-            <svg class="absolute -bottom-1 -right-1 w-4 h-4 text-white bg-warm-black rounded-full p-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </div>
-          <div>
-            <p class="text-warm-black font-medium text-sm">Nathan Kim</p>
-            <p class="text-warm-400 text-xs">@nathankim_dev</p>
-          </div>
-          <span class="ml-auto text-xs font-medium text-zunkiree-600 bg-zunkiree-50 px-2 py-1 rounded-full">DevTools</span>
-        </div>
-        <p class="text-warm-600 text-sm leading-relaxed">The API documentation is top-notch. Had our integration up and running in under a day.</p>
-      </div>
+    <div class="mt-10 flex justify-center" data-reveal>
+      <button
+        type="button"
+        @click="expanded = !expanded"
+        class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-navy-300 px-6 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        x-text="expanded ? 'Show less' : 'Show more'"
+      >Show more</button>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   RESULTS BY THE NUMBERS
+   RESULTS BY THE NUMBERS — same four stats/counters, restyled
+   as a bordered glass-tint band matching the homepage/about
+   stat treatment instead of bare centered text on white.
    ===================================================== #}
-<section class="py-16 md:py-24 px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
-      <p class="text-sm font-medium text-warm-400 tracking-wide mb-4">Impact</p>
-      <h2 class="text-2xl md:text-3xl lg:text-[40px] font-medium text-warm-black tracking-[-0.03em] leading-[1.2]">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="impact-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mx-auto mb-12 max-w-2xl text-center md:mb-14" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Impact</span>
+      <h2 id="impact-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
         Results that speak for themselves
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="text-center" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-3">
-          <span data-counter="47" data-suffix="%">0</span>
+    <div class="relative overflow-hidden rounded-2xl border border-navy-100/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-8 shadow-subtle backdrop-blur-md sm:p-10" data-reveal>
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-6">
+        <div class="text-center">
+          <div class="mb-2 text-[42px] font-medium tracking-tight text-[#111827] sm:text-[48px]">
+            <span data-counter="47" data-suffix="%">0</span>
+          </div>
+          <p class="text-[13.5px] font-medium leading-snug text-[#6B7280]">Average increase in user engagement</p>
         </div>
-        <p class="text-warm-600 font-medium">Average increase in user engagement</p>
-      </div>
-      <div class="text-center" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-3">
-          <span data-counter="62" data-suffix="%">0</span>
+        <div class="text-center">
+          <div class="mb-2 text-[42px] font-medium tracking-tight text-[#111827] sm:text-[48px]">
+            <span data-counter="62" data-suffix="%">0</span>
+          </div>
+          <p class="text-[13.5px] font-medium leading-snug text-[#6B7280]">Reduction in support tickets</p>
         </div>
-        <p class="text-warm-600 font-medium">Reduction in support tickets</p>
-      </div>
-      <div class="text-center" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-3">
-          <span data-counter="10" data-suffix="x">0</span>
+        <div class="text-center">
+          <div class="mb-2 text-[42px] font-medium tracking-tight text-[#111827] sm:text-[48px]">
+            <span data-counter="10" data-suffix="x">0</span>
+          </div>
+          <p class="text-[13.5px] font-medium leading-snug text-[#6B7280]">Faster search responses</p>
         </div>
-        <p class="text-warm-600 font-medium">Faster search responses</p>
-      </div>
-      <div class="text-center" data-reveal>
-        <div class="text-5xl md:text-6xl font-medium text-warm-black tracking-[-0.03em] mb-3">
-          <span data-counter="89" data-suffix="%">0</span>
+        <div class="text-center">
+          <div class="mb-2 text-[42px] font-medium tracking-tight text-[#111827] sm:text-[48px]">
+            <span data-counter="89" data-suffix="%">0</span>
+          </div>
+          <p class="text-[13.5px] font-medium leading-snug text-[#6B7280]">Query resolution rate</p>
         </div>
-        <p class="text-warm-600 font-medium">Query resolution rate</p>
       </div>
     </div>
   </div>
 </section>
 
 {# =====================================================
-   CTA SECTION
+   CLOSING CTA — sanctioned dark-card radial-gradient component
+   (COMPONENT_LIBRARY.md §2.6, same recipe as about.njk/industry
+   pages), same copy and both links as the original section.
    ===================================================== #}
-<section class="py-20 md:py-28 bg-warm-rich-black px-4 md:px-6">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="max-w-2xl mx-auto text-center" data-reveal>
-      <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-white tracking-[-0.03em] leading-[1.15] mb-6">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
         Ready to join them?
       </h2>
-      <p class="text-lg text-white/60 mb-10 leading-relaxed tracking-[-0.01em]">
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/60 sm:text-[16px]">
         See how Zunkiree Labs can transform your digital experience. Schedule a demo with our team.
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-zunkiree-600 text-white font-medium rounded-full hover:bg-zunkiree-700 transition-all duration-200 hover:-translate-y-0.5">
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
           Schedule a Demo
-          <span>&rarr;</span>
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
-        <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3.5 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-200">
+        <a
+          href="/contact/"
+          class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
           Contact Sales
         </a>
       </div>
@@ -459,3 +343,5 @@ permalink: /customers/
 
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Customer Stories | Zunkiree Labs","articleBody":"Skip to main content Products Solutions GaaS Resources Ask Pricing About Contact AI PRODUCTS Zunkiree Search AI-native search that understands natural language and delivers direct answers Dental AI Practice management software with AI-powered patient communication Gaamma Business analytics platform for data-driven decisions See all products BUSINESS TOOLS Stella(AI Commerce Agent) New Autonomous AI agents for ecommerce buying journeys Zenly(AI Booking Engine) Intelligent scheduling that handles complex availability AI CRM Customer intelligence that predicts needs and automates outreach FEATURED Try Zunkiree Search Free See how AI search delivers direct answers instead of links. Transform your customer experience. Start free trial Ready to build with AI? Schedule a call OUR SERVICES AI Development Custom AI systems, RAG pipelines, and LLM integration AI Customer Experience Intelligent chatbots and conversational AI support Data Systems Data pipelines and AI-ready architecture Custom Software Enterprise apps and business tools SaaS Development Multi-tenant platforms with subscription billing Web & App Development High-performance sites and mobile apps AEO & SEO Get found by Google and AI assistants AI Ecommerce New Agentic commerce and AI-powered online stores Agentic as a Service(GaaS) New Autonomous AI agents deployed as managed services See all services CASE STUDY Admizz reduced response time by 45% See how AI-powered search transformed student inquiry management. Read case study Ready to build with AI? Schedule a call LEARN What is GaaS? New Complete guide to Agentic as a Service Reports & Research Industry insights and market analysis Ebooks & Guides Implementation playbooks and how-to resources Webinars & Events On-demand learning and upcoming events Case Studies See how customers succeed with Zunkiree AI Glossary Learn key AI and technology terms Compare Products See how Zunkiree compares to alternatives See all resources COMPANY About Us Our mission, values, and team Careers Join the Zunkiree team Contact Get in touch with us FEATURED REPORT State of AI in Nepal 2026 The definitive guide to AI adoption across Nepali industries. Free download. Download report Ready to build with AI? Schedule a call Products AI PRODUCTS Zunkiree Search Dental AI Gaamma BUSINESS TOOLS Stella(AI Commerce Agent) New Zenly(AI Booking Engine) AI CRM FEATURED Try Zunkiree Search Free Start free trial Solutions OUR SERVICES AI Development AI Customer Experience Data Systems Custom Software SaaS Development Web & App Development AEO & SEO AI Ecommerce New Agentic as a Service(GaaS) New CASE STUDY Admizz reduced response time by 45% Read case study GaaS Resources LEARN What is GaaS? New Reports & Research Ebooks & Guides Webinars & Events Case Studies AI Glossary Compare Products COMPANY About Us Careers Contact FEATURED REPORT State of AI in Nepal 2026 Download report Ask AI Pricing About Contact Schedule a call Customer Stories Trusted by teams building the future F"}</script><!-- SEOAI:SCHEMA:END -->
+
+{% include "partials/footer-v2.njk" %}

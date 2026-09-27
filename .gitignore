@@ -24,7 +24,26 @@ npm-debug.log*
 
 # Temp files
 temp_ss/
+src/temp-ss/
 .vercel
+*.bak
+
+# Scratch/debug artifacts
+.impeccable/
+_local-backup/
+_tmp-alpine-test.mjs
+build-out.txt
+
+# Local 3D ribbon preview (standalone, not part of the site build)
+/preview-3d.html
+
+# Local ServiceNow content reference docs
+docs/servicenow-content-reference.md
+docs/servicenow-content-inner-pages.md
+docs/servicenow-headers-typography.md
+
+# Local redesign planning docs
+docs/pages-redesign-phases.md
 
 # Claude Code local settings
 .mcp.json

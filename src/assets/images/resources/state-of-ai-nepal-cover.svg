@@ -5,8 +5,8 @@
       <stop offset="100%" stop-color="#0f1f33"/>
     </linearGradient>
     <linearGradient id="nepal-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#EB1600"/>
-      <stop offset="100%" stop-color="#ff4d4d"/>
+      <stop offset="0%" stop-color="#76B900"/>
+      <stop offset="100%" stop-color="#a8e063"/>
     </linearGradient>
   </defs>
 
@@ -47,25 +47,25 @@
   </g>
 
   <!-- Connecting lines -->
-  <polyline points="550,150 590,180 620,140 660,170 700,130" fill="none" stroke="#EB1600" stroke-width="2" opacity="0.6"/>
+  <polyline points="550,150 590,180 620,140 660,170 700,130" fill="none" stroke="#76B900" stroke-width="2" opacity="0.6"/>
 
   <!-- Nepal text element -->
-  <text x="550" y="280" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#fff" opacity="0.1">NEPAL</text>
+  <text x="550" y="280" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="700" fill="#fff" opacity="0.1">NEPAL</text>
 
   <!-- Stats indicators -->
   <g transform="translate(520, 320)">
     <rect width="100" height="50" fill="#fff" opacity="0.1" rx="4"/>
-    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">150th</text>
-    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Readiness</text>
+    <text x="50" y="25" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">150th</text>
+    <text x="50" y="42" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Readiness</text>
   </g>
 
   <g transform="translate(640, 320)">
     <rect width="100" height="50" fill="#fff" opacity="0.1" rx="4"/>
-    <text x="50" y="25" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">39</text>
-    <text x="50" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Companies</text>
+    <text x="50" y="25" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle">39</text>
+    <text x="50" y="42" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" fill="#fff" opacity="0.7" text-anchor="middle">AI Companies</text>
   </g>
 
   <!-- Year badge -->
   <rect x="50" y="50" width="80" height="30" fill="url(#nepal-accent)" rx="4"/>
-  <text x="90" y="70" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">2026</text>
+  <text x="90" y="70" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">2026</text>
 </svg>

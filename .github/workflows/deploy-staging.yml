@@ -39,7 +39,12 @@ jobs:
           script: |
             cd /home/zunkireelabs/devprojects/zunkiree-web-staging
             git pull origin stage
-            docker compose -f docker-compose.dev.yml up -d --build
+            # Full down/up so the container re-attaches to the external `hosting`
+            # network and Traefik re-registers the router. A bare `up -d --build`
+            # on an existing container can leave a stale network attachment,
+            # which makes Traefik 404 the host even while the container is healthy.
+            docker compose -f docker-compose.dev.yml down --remove-orphans
+            docker compose -f docker-compose.dev.yml up -d --build --force-recreate
             echo "Waiting for container to be healthy..."
             sleep 10
             for i in $(seq 1 12); do

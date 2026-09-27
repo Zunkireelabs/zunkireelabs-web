@@ -55,17 +55,31 @@ export default function (eleventyConfig) {
     },
   });
 
+  // Allow access from local network (phones, tablets on same WiFi)
+  eleventyConfig.setServerOptions({ host: "0.0.0.0" });
+
+  // Debounce rebuilds: a single save can fire multiple near-simultaneous
+  // file-change events (editor atomic writes, overlapping watch targets),
+  // and with no throttle each one starts its own rebuild. Overlapping
+  // rebuilds racing to copy public/ into dist/public/ at the same time is
+  // what causes the intermittent "ENOENT: mkdir dist/public/..." passthrough
+  // copy failures that corrupt dist/ and require a manual server restart.
+  eleventyConfig.setWatchThrottleWaitTime(300);
+
   // Copy static assets with proper path mapping
   // Vite will process CSS through PostCSS/Tailwind during build
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/icons": "assets/icons" });
   eleventyConfig.addPassthroughCopy({ "src/assets/videos": "assets/videos" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/lottie": "assets/lottie" });
 
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
+  eleventyConfig.addWatchTarget("src/assets/images/");
 
   // Shortcode for current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
@@ -79,6 +93,7 @@ export default function (eleventyConfig) {
   // Date filter with multiple format support
   eleventyConfig.addFilter("date", function(date, format) {
     const d = new Date(date);
+    if (isNaN(d.getTime())) return "";
     if (format === "%Y-%m-%d") {
       return d.toISOString().split('T')[0];
     }
@@ -89,6 +104,18 @@ export default function (eleventyConfig) {
       return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
     }
     return d.toISOString();
+  });
+
+  // Checks a src-relative asset path (e.g. "/assets/images/blog/foo.jpg") actually
+  // exists on disk — several blog posts have a featuredImage frontmatter value
+  // pointing at a file that was never added, which otherwise renders a broken image.
+  eleventyConfig.addFilter("fileExists", function(relPath) {
+    if (!relPath) return false;
+    try {
+      return fs.existsSync(path.join(process.cwd(), "src", relPath.replace(/^\//, "")));
+    } catch (e) {
+      return false;
+    }
   });
 
   // Head filter - limit array to first N items
@@ -126,6 +153,23 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("titleCase", function(str) {
     if (!str) return '';
     return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  });
+
+  // Short 2-word topic label derived from a post title (fallback when no
+  // explicit `shortLabel` frontmatter is set) — strips filler words so the
+  // overlay reads as a topic ("Cloud Solutions") rather than a title fragment.
+  const SHORT_LABEL_STOPWORDS = new Set([
+    'a', 'an', 'the', 'why', 'what', 'how', 'is', 'are', 'to', 'of', 'for',
+    'with', 'your', 'you', 'as', 'in', 'on', 'and', 'or', 'from', 'this',
+    'that', 'exploring', 'understanding', 'unlocking', 'discovering'
+  ]);
+  eleventyConfig.addFilter("shortLabel", function(title) {
+    if (!title) return '';
+    const words = title
+      .replace(/[:?!,]/g, '')
+      .split(' ')
+      .filter(w => w && !SHORT_LABEL_STOPWORDS.has(w.toLowerCase()));
+    return words.slice(0, 2).join(' ');
   });
 
   return {

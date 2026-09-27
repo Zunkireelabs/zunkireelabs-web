@@ -1,10 +1,21 @@
 ---
 layout: base.njk
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   LOCATION × SERVICE PAGE LAYOUT
-   Programmatic SEO pages for local service queries
+   LOCATION × SERVICE PAGE LAYOUT — WEBSITE V2
+   Programmatic SEO pages for local service queries.
+
+   Visual language matches homepage-v2.njk / product-v2.njk
+   (same tokens, same component recipes): navbar-v2 + footer-v2
+   chrome, centered hero with eyebrow pill + dual mono CTAs,
+   white-card sections with the v2 icon-square treatment,
+   navy closing CTA banner, GSAP data-reveal motion.
+
+   Content, links, schema, and data schema are unchanged —
+   this is a UI-only reskin of the existing template.
    ===================================================== #}
 
 {% set location = null %}
@@ -51,6 +62,20 @@ layout: base.njk
 }
 </script>
 
+<script>
+  // Add synchronous class to html element to prevent FOUC (flash of unstyled content) before GSAP runs
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  /* Premium reveal fade-ins: hide items initially if JS is active so GSAP can animate them cleanly */
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{% include "partials/navbar-v2.njk" %}
+
 {# =====================================================
    REVIEW / AGGREGATE RATING SCHEMA (AI-managed — written by the Action Center)
    Only rendered when serviceContent.reviewSchema is present; never fabricated
@@ -63,26 +88,86 @@ layout: base.njk
 {% endif %}
 
 {# =====================================================
+   HERO — centered single-column, product-v2/homepage-v2 pattern.
+   The navbar is `fixed` (72px tall, z-50), so pt-32/36/44 clears
+   it before the breadcrumb, matching product-v2.njk's hero.
+   ===================================================== #}
+<section
+  class="relative flex flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-44"
+  aria-labelledby="hero-heading"
+>
+  <div
+    class="relative z-10 mx-auto flex w-full max-w-[56rem] flex-col items-center text-center"
+    data-reveal-stagger
+  >
+    {# Breadcrumb — restyled as the v2 mono track, same links/order as before #}
+    <nav class="mb-8 flex flex-wrap items-center justify-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" aria-label="Breadcrumb">
+      <a href="/" class="transition-colors duration-200 hover:text-[#4d7a00]">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/locations/" class="transition-colors duration-200 hover:text-[#4d7a00]">Locations</a>
+      <span aria-hidden="true">/</span>
+      <a href="/locations/{{ location.id }}/" class="transition-colors duration-200 hover:text-[#4d7a00]">{{ location.name }}</a>
+      <span aria-hidden="true">/</span>
+      <span class="font-medium text-navy-900">{{ service.title }}</span>
+    </nav>
+
+    {# Eyebrow — v2 pill treatment #}
+    <span class="mb-4 inline-flex items-center rounded-full border border-sky-200/60 bg-gradient-to-br from-sky-50 to-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+      {{ service.category }} in {{ location.name }}
+    </span>
+
+    <h1
+      id="hero-heading"
+      class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]"
+    >
+      {{ serviceContent.title | default(service.title + ' in ' + location.name) }}
+    </h1>
+
+    <p class="mt-4 max-w-[560px] px-4 text-center text-[18px] font-medium leading-relaxed tracking-tight text-[#6B7280] sm:max-w-none sm:text-[20px]">
+      {{ serviceContent.intro | default(service.description) }}
+    </p>
+
+    {# Dual CTAs — brand-green primary + outline secondary (same recipe as homepage-v2 hero) #}
+    <div class="mt-8 flex w-full max-w-[320px] flex-col items-stretch justify-center gap-2 sm:max-w-none sm:flex-row sm:items-center sm:gap-3">
+      <a
+        href="/contact/"
+        class="inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none"
+      >
+        Get Started
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+      </a>
+      <a
+        href="/services/{{ service.id }}/"
+        class="inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none"
+      >
+        Learn More About {{ service.title }}
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
    SERVICES GRID
    ===================================================== #}
-<section class="py-12 md:py-16 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="services-grid-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="services-grid-heading" class="mb-8 text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">
       Services in {{ serviceContent.name }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger>
       {% for service in services %}
-      <a href="/locations/{{ location.id }}/{{ service.id }}/" class="group block p-6 bg-gray-50 rounded-lg hover:bg-zunkiree-600 transition-colors">
-        <h3 class="font-medium text-gray-900 group-hover:text-white mb-2">
+      <a href="/locations/{{ location.id }}/{{ service.id }}/" class="group block rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-md">
+        <h3 class="mb-2 font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
           {{ service.title }}
         </h3>
-        <p class="text-sm text-gray-600 group-hover:text-white/80 line-clamp-2">
+        <p class="line-clamp-2 text-[14px] text-navy-500">
           {{ service.description }}
         </p>
-        <div class="mt-4 flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:text-white">
+        <div class="mt-4 flex items-center gap-2 font-mono text-[12px] uppercase tracking-wide text-[#5a9100]">
           Learn more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </div>
@@ -96,22 +181,22 @@ layout: base.njk
    FAQs
    ===================================================== #}
 {% if serviceContent.faqs and serviceContent.faqs.length > 0 %}
-<section class="py-12 md:py-16 bg-gray-50">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="service-faq-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="service-faq-heading" class="mb-8 text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">
       Frequently Asked Questions
     </h2>
 
     <div class="max-w-3xl" x-data="{ activeIndex: null }">
       {% for faq in serviceContent.faqs %}
-      <div class="border-b border-gray-200">
+      <div class="border-b border-navy-100">
         <button
           @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
-          class="w-full py-5 flex items-center justify-between text-left"
+          class="flex w-full items-center justify-between py-5 text-left"
         >
-          <span class="font-medium text-gray-900 pr-4">{{ faq.question }}</span>
+          <span class="pr-4 font-medium text-[#111827]">{{ faq.question }}</span>
           <svg
-            class="w-5 h-5 text-gray-400 transition-transform"
+            class="h-5 w-5 flex-shrink-0 text-navy-400 transition-transform"
             :class="{ 'rotate-180': activeIndex === {{ loop.index }} }"
             fill="none"
             stroke="currentColor"
@@ -123,7 +208,7 @@ layout: base.njk
         <div
           x-show="activeIndex === {{ loop.index }}"
           x-transition
-          class="pb-5 text-gray-600"
+          class="pb-5 text-[14px] leading-relaxed text-navy-600"
         >
           {{ faq.answer }}
         </div>
@@ -158,16 +243,16 @@ layout: base.njk
    NEARBY LOCATIONS
    ===================================================== #}
 {% if serviceContent.nearbyCities and serviceContent.nearbyCities.length > 0 %}
-<section class="py-12 md:py-16 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-xl font-normal text-gray-900 mb-6">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="nearby-locations-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="nearby-locations-heading" class="mb-6 text-[18px] font-medium text-[#111827]">
       Also Serving
     </h2>
     <div class="flex flex-wrap gap-3">
       {% for cityId in serviceContent.nearbyCities %}
         {% for loc in locations %}
           {% if loc.id == cityId %}
-          <a href="/locations/{{ loc.id }}/" class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-zunkiree-100 hover:text-zunkiree-700 transition-colors">
+          <a href="/locations/{{ loc.id }}/" class="inline-flex items-center rounded-full bg-navy-50 px-4 py-2 text-[14px] text-navy-600 transition-colors hover:bg-[#76B900]/10 hover:text-[#5a9100]">
             {{ loc.name }}
           </a>
           {% endif %}
@@ -189,65 +274,31 @@ layout: base.njk
 {{ serviceContent.expandedContent | safe }}
 {% endif %}
 
-
 {# =====================================================
-   HERO SECTION
-   ===================================================== #}
-<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    {# Breadcrumb #}
-    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
-      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
-      <span class="text-warm-400">/</span>
-      <a href="/locations/" class="text-zunkiree-600 hover:underline">Locations</a>
-      <span class="text-warm-400">/</span>
-      <a href="/locations/{{ location.id }}/" class="text-zunkiree-600 hover:underline">{{ location.name }}</a>
-      <span class="text-warm-400">/</span>
-      <span class="text-warm-600">{{ service.title }}</span>
-    </nav>
-
-    <div class="max-w-3xl">
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">
-        {{ service.category }} in {{ location.name }}
-      </p>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
-        {{ serviceContent.title | default(service.title + ' in ' + location.name) }}
-      </h1>
-      <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
-        {{ serviceContent.intro | default(service.description) }}
-      </p>
-
-      {# CTAs #}
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="/contact/" class="inline-flex items-center justify-center px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-          Get Started
-        </a>
-        <a href="/services/{{ service.id }}/" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
-          Learn More About {{ service.title }}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   HIGHLIGHTS
+   HIGHLIGHTS — "Why Choose Us" checklist in white cards,
+   v2 icon-square treatment (product-v2 use-case feature rows).
    ===================================================== #}
 {% if serviceContent.highlights %}
-<section class="py-12 md:py-16 bg-gray-50">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
-      Why Choose Us for {{ service.title }} in {{ location.name }}
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="highlights-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Why {{ location.name }}
+      </span>
+      <h2 id="highlights-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Why Choose Us for {{ service.title }} in {{ location.name }}
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" data-reveal-stagger>
       {% for highlight in serviceContent.highlights %}
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-8 h-8 bg-zunkiree-100 rounded-full flex items-center justify-center">
-          <svg class="w-4 h-4 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="flex items-start gap-4 rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-md">
+        <span class="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#F0F5E8] text-[#5a9100]" aria-hidden="true">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
-        </div>
-        <p class="text-gray-700">{{ highlight }}</p>
+        </span>
+        <p class="text-[15px] leading-relaxed text-[#374151]">{{ highlight }}</p>
       </div>
       {% endfor %}
     </div>
@@ -258,18 +309,28 @@ layout: base.njk
 {# =====================================================
    RELATED SERVICES IN THIS LOCATION
    ===================================================== #}
-<section class="py-12 md:py-16 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">
-      Other Services in {{ location.name }}
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="related-services-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        More services
+      </span>
+      <h2 id="related-services-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Other Services in {{ location.name }}
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger>
       {% for svc in services %}
       {% if svc.id != service.id %}
-      <a href="/locations/{{ location.id }}/{{ svc.id }}/" class="group block p-4 bg-gray-50 rounded-lg hover:bg-zunkiree-50 transition-colors">
-        <h3 class="font-medium text-gray-900 group-hover:text-zunkiree-600 text-sm">
+      <a
+        href="/locations/{{ location.id }}/{{ svc.id }}/"
+        class="group flex items-center justify-between gap-3 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        <span class="min-w-0 text-[15px] font-medium leading-snug text-[#111827] transition-colors duration-200 group-hover:text-[#4d7a00]">
           {{ svc.title }}
-        </h3>
+        </span>
+        <span class="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-navy-200 transition-colors duration-200 group-hover:bg-[#76B900]" aria-hidden="true"></span>
       </a>
       {% endif %}
       {% endfor %}
@@ -280,15 +341,24 @@ layout: base.njk
 {# =====================================================
    OTHER LOCATIONS
    ===================================================== #}
-<section class="py-12 md:py-16 bg-gray-50">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-xl font-normal text-gray-900 mb-6">
-      {{ service.title }} in Other Locations
-    </h2>
-    <div class="flex flex-wrap gap-3">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="other-locations-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-8 md:mb-10" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Other locations
+      </span>
+      <h2 id="other-locations-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        {{ service.title }} in Other Locations
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap gap-2.5" data-reveal-stagger>
       {% for loc in locations %}
       {% if loc.id != location.id %}
-      <a href="/locations/{{ loc.id }}/{{ service.id }}/" class="inline-flex items-center px-4 py-2 bg-white text-gray-700 rounded-full border border-gray-200 hover:border-zunkiree-300 hover:text-zunkiree-700 transition-colors">
+      <a
+        href="/locations/{{ loc.id }}/{{ service.id }}/"
+        class="inline-flex items-center gap-2 rounded-full border border-navy-100/60 bg-white px-4 py-2 font-mono text-[12px] text-navy-600 shadow-subtle transition-colors duration-200 hover:border-[#76B900]/40 hover:text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
         {{ loc.name }}
       </a>
       {% endif %}
@@ -298,18 +368,39 @@ layout: base.njk
 </section>
 
 {# =====================================================
-   CTA
+   CLOSING CTA — navy-950 rounded banner, same shell and
+   green/navy gradient bloom as homepage-v2/product-v2.
    ===================================================== #}
-<section class="py-16 md:py-24 bg-gradient-to-br from-zunkiree-600 to-zunkiree-800 text-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-normal mb-4">
-      Ready for {{ service.title }} in {{ location.name }}?
-    </h2>
-    <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-      Let's discuss your project requirements.
-    </p>
-    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-zunkiree-700 font-medium hover:bg-gray-100 transition-colors">
-      Contact Us
-    </a>
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Ready for {{ service.title }} in {{ location.name }}?
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        Let's discuss your project requirements.
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Contact Us
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
+
+{% include "partials/footer-v2.njk" %}

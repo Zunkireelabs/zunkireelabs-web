@@ -18,13 +18,13 @@
               },
               {
                 "label": "Dental AI",
-                "url": "/products/dental-ai/",
+                "url": "/resources/dental-ai-case-study/",
                 "icon": "dental",
                 "description": "Practice management software with AI-powered patient communication"
               },
               {
                 "label": "Gaamma",
-                "url": "/products/gaamma/",
+                "url": "/resources/gaamma-case-study/",
                 "icon": "chart",
                 "description": "Business analytics platform for data-driven decisions"
               }
@@ -39,7 +39,7 @@
                 "label": "Stella",
                 "subLabel": "(AI Commerce Agent)",
                 "aiPowered": true,
-                "url": "/products/ai-commerce-agent/",
+                "url": "/resources/stella-case-study/",
                 "icon": "cart",
                 "description": "Autonomous AI agents for ecommerce buying journeys",
                 "badge": "New"
@@ -48,7 +48,7 @@
                 "label": "Zenly",
                 "subLabel": "(AI Booking Engine)",
                 "aiPowered": true,
-                "url": "/products/ai-booking-engine/",
+                "url": "/resources/zenly-case-study/",
                 "icon": "calendar",
                 "description": "Intelligent scheduling that handles complex availability"
               },
@@ -151,6 +151,36 @@
               }
             ],
             "seeAll": { "label": "See all services", "url": "/services/" }
+          },
+          {
+            "header": "USE CASES",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "Customer Support",
+                "url": "/solutions/customer-support/",
+                "icon": "headset",
+                "description": "Reduce support tickets 45% with AI"
+              },
+              {
+                "label": "Internal Search",
+                "url": "/solutions/internal-search/",
+                "icon": "search-doc",
+                "description": "Find answers in seconds, not hours"
+              },
+              {
+                "label": "Knowledge Management",
+                "url": "/solutions/knowledge-management/",
+                "icon": "book",
+                "description": "Organize & surface institutional knowledge"
+              },
+              {
+                "label": "Digital Transformation",
+                "url": "/solutions/digital-transformation/",
+                "icon": "transform",
+                "description": "Modernize legacy systems with AI"
+              }
+            ]
           }
         ],
         "featured": {
@@ -163,6 +193,49 @@
         "cta": {
           "prompt": "Ready to build with AI?",
           "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "label": "Industries",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Healthcare", "url": "/solutions/healthcare/", "description": "AI patient communication and clinical workflow automation" },
+              { "label": "Manufacturing", "url": "/solutions/manufacturing/", "description": "Predictive operations and intelligent process automation" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Legal", "url": "/solutions/legal/", "description": "Document intelligence and contract review automation" },
+              { "label": "Professional Services", "url": "/solutions/services/", "description": "Automate client delivery and knowledge work" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "Education", "url": "/solutions/education/", "description": "AI tutoring, admissions, and student support" },
+              { "label": "Human Resources", "url": "/solutions/human-resources/", "description": "Smarter hiring, onboarding, and people operations" }
+            ],
+            "seeAll": { "label": "See all industries", "url": "/solutions/" }
+          }
+        ],
+        "featured": {
+          "label": "INDUSTRY SPOTLIGHT",
+          "title": "AI across every industry",
+          "description": "From healthcare to manufacturing — see how teams deploy Zunkiree in their sector.",
+          "cta": { "label": "Explore solutions", "url": "/solutions/" },
+          "image": "/assets/images/nav/case-study-preview.svg"
+        },
+        "cta": {
+          "prompt": "Not sure where to start?",
+          "button": "Talk to our team",
           "url": "/contact/"
         }
       }
@@ -271,11 +344,11 @@
   "footer": {
     "products": [
       { "label": "Zunkiree Search", "url": "/products/search/" },
-      { "label": "Dental AI", "url": "/products/dental-ai/" },
-      { "label": "Gaamma", "url": "/products/gaamma/" },
-      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/products/ai-booking-engine/" },
+      { "label": "Dental AI", "url": "/resources/dental-ai-case-study/" },
+      { "label": "Gaamma", "url": "/resources/gaamma-case-study/" },
+      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/resources/zenly-case-study/" },
       { "label": "AI CRM", "url": "/products/ai-crm/" },
-      { "label": "Stella", "url": "/products/ai-commerce-agent/" },
+      { "label": "Stella", "url": "/resources/stella-case-study/" },
       { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [
@@ -301,7 +374,7 @@
     "company": [
       { "label": "About Us", "url": "/about/" },
       { "label": "Team", "url": "/team/" },
-      { "label": "Customers", "url": "/customers/" },
+      { "label": "Customers", "url": "/customer-stories/" },
       { "label": "Projects", "url": "/projects/" },
       { "label": "Careers", "url": "/careers/" },
       { "label": "Contact", "url": "/contact/" },

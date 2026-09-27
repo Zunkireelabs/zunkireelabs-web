@@ -1,0 +1,55 @@
+{# =====================================================
+   PAGE RIBBON BACKGROUND — Clean mathematical rebuild
+   
+   Replaces the jagged, pixel-sampled SVG paths with perfectly
+   smooth Bezier curves and ellipses. Keeps the exact colors
+   (Sky Blue #CFE9F0 and Green Tea #EEF6E3) but fixes the pattern
+   glitches, removes the mechanical stair-stepping, and increases
+   the blur from 26px to 120px to create a premium, seamless,
+   organic ambient gradient transition.
+   ===================================================== #}
+<div class="hero-ribbon-bg" aria-hidden="true">
+  <svg
+    class="hero-ribbon-bg__svg"
+    viewBox="0 0 1920 1080"
+    preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <filter
+        id="heroRibbonFeather"
+        x="-30%" y="-30%" width="160%" height="160%"
+        color-interpolation-filters="sRGB"
+      >
+        <feGaussianBlur stdDeviation="120" />
+      </filter>
+    </defs>
+
+    <!-- Sky Blue background base -->
+    <rect x="0" y="0" width="1920" height="1080" fill="#CFE9F0" />
+
+    <!-- Smooth Green Tea Cream accent shapes -->
+    <g filter="url(#heroRibbonFeather)" class="hero-ribbon-bg__cream" opacity="0.75">
+      <!-- Main smooth diagonal sweep ribbon (extends beyond bounds to prevent edge clipping) -->
+      <path
+        fill="#EEF6E3"
+        d="M 1300,-150 
+           C 1450,150 1750,350 1600,600 
+           C 1450,850 1050,750 850,900 
+           C 650,1050 450,1050 300,1230 
+           L 2070,1230 
+           L 2070,-150 
+           Z"
+      />
+      <!-- Secondary bottom-left ambient lobe -->
+      <ellipse
+        cx="550"
+        cy="880"
+        rx="400"
+        ry="150"
+        transform="rotate(-15, 550, 880)"
+        fill="#EEF6E3"
+      />
+    </g>
+  </svg>
+</div>

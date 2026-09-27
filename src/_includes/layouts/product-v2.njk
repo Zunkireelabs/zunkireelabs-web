@@ -1,0 +1,2011 @@
+---
+layout: base.njk
+---
+
+
+{# =====================================================
+   PLATFORM INFRASTRUCTURE PRODUCT PAGE LAYOUT — shared by
+   /products/search/, /products/ai-crm/, /products/orca/.
+   One file, data-driven via src/_data/platformProducts.js.
+   Do not fork per-product — differences are data, not markup
+   (same discipline as layouts/industry.njk). Visual language
+   matches homepage-v2.njk/industry.njk (same tokens, same
+   component recipes). Section rhythm loosely inspired by the
+   Kore.ai "AI for Service" reference page (challenge blocks →
+   alternating feature sections → capability grid → proof →
+   related-solutions grid → CTA), adapted to our own product
+   and brand — not a copy of their content or visuals.
+
+   Sections render conditionally when a product has no content
+   for them (trust strip, testimonial, FAQ) — this is what lets
+   Orca reuse the same template honestly without invented proof.
+   ===================================================== #}
+
+{% set product = null %}
+{% for p in platformProducts %}
+  {% if p.id == productId %}
+    {% set product = p %}
+  {% endif %}
+{% endfor %}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO ICON MACRO — small stroke-icon set for the floating
+   corner badges below. Our own capability glyphs (search,
+   database, chat, mail, users, chart, workflow) — not
+   third-party tool logos, so no integration is implied that
+   isn't real.
+   ===================================================== #}
+{# =====================================================
+   PAIN POINT VISUAL MACRO — tiny animated sky-blue mockups, one
+   per pain-point block (by position: 1 = lead, 2/3 = secondary).
+   Pure CSS/SVG loops, no JS. Reused verbatim from industry.njk.
+   ===================================================== #}
+{% macro painPointVisual(index) %}
+  {% if index == 1 %}
+    <div class="pp-visual pp-visual--lead pp-visual-card rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-5" aria-hidden="true">
+      <span class="pp-chat-bubble">
+        <span class="pp-chat-dot"></span>
+        <span class="pp-chat-dot"></span>
+        <span class="pp-chat-dot"></span>
+      </span>
+      <span class="pp-chat-ring"></span>
+    </div>
+  {% elif index == 2 %}
+    {# Two segments with a real gap between them, not one continuous dashed
+       line — the point is a broken/manual handoff, so the nodes shouldn't
+       read as connected. #}
+    <div class="pp-visual pp-visual--sm pp-visual-card rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4" aria-hidden="true">
+      <span class="pp-node pp-node--a"></span>
+      <svg class="pp-node-line" viewBox="0 0 60 8" preserveAspectRatio="none">
+        <line x1="2" y1="4" x2="21" y2="4" stroke-width="2" stroke-dasharray="3 3"/>
+        <line x1="39" y1="4" x2="58" y2="4" stroke-width="2" stroke-dasharray="3 3"/>
+      </svg>
+      <span class="pp-node pp-node--b"></span>
+    </div>
+  {% elif index == 3 %}
+    <div class="pp-visual pp-visual--sm pp-visual--rows pp-visual-card rounded-lg border border-sky-100/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4" aria-hidden="true">
+      <span class="pp-row" style="animation-delay: 0s"></span>
+      <span class="pp-row" style="animation-delay: 0.2s"></span>
+      <span class="pp-row" style="animation-delay: 0.4s"></span>
+    </div>
+  {% else %}
+    {# 4th variant (Orca's 2x2 challenge grid only, 2026-09-27): two
+       overlapping cards drifting apart, reads as "the same thing
+       logged twice." #}
+    <div class="pp-visual pp-visual--sm pp-visual-card pp-visual--dupe" aria-hidden="true">
+      <span class="pp-dupe-card pp-dupe-card--back"></span>
+      <span class="pp-dupe-card pp-dupe-card--front"></span>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro heroBadgeIcon(name) %}
+  {% if name == "search" %}
+    <circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path>
+  {% elif name == "database" %}
+    <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path>
+  {% elif name == "chat" %}
+    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+  {% elif name == "mail" %}
+    <rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path>
+  {% elif name == "users" %}
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+  {% elif name == "chart" %}
+    <path d="M3 3v18h18"></path><rect x="7" y="12" width="3" height="6"></rect><rect x="12" y="8" width="3" height="10"></rect><rect x="17" y="4" width="3" height="14"></rect>
+  {% elif name == "workflow" %}
+    <polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line>
+  {% endif %}
+{% endmacro %}
+
+{# =====================================================
+   USE CASE ICON MACRO — small rotating glyph set for the
+   Use Cases tab panel (feature-row chips + visual-panel badge).
+   Generic capability marks, not per-feature icons (the data
+   only carries feature labels, no icon field) — cycles by
+   index so every product's useCases items get a consistent,
+   deliberate mark rather than a repeated placeholder.
+   ===================================================== #}
+{% macro useCaseIcon(index, sizeClass="h-4 w-4") %}
+  {% set glyph = index % 4 %}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="{{ sizeClass }}">
+    {% if glyph == 0 %}
+      <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"></path><path d="M3 12.5l9 4.5 9-4.5"></path>
+    {% elif glyph == 1 %}
+      <circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle>
+    {% elif glyph == 2 %}
+      <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path>
+    {% else %}
+      <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+    {% endif %}
+  </svg>
+{% endmacro %}
+
+{# =====================================================
+   BENEFIT VISUAL MACRO — content-specific animated visual
+   for each Feature Block, in place of a generic placeholder
+   card. Each `type` (set per-benefit in platformProducts.js)
+   maps to a small, self-contained, looping CSS/SVG animation
+   that illustrates that specific benefit — a typed-answer chat
+   bubble for "natural language", pulsing rings for "sub-100ms",
+   a connecting node graph for "connect any data source", etc.
+   Pure CSS/SVG loops (no JS) so they run for free and pause
+   naturally off-screen with no extra cost.
+   ===================================================== #}
+{% macro benefitVisual(type) %}
+  {% if type == "typing" %}
+    <div class="w-full max-w-[220px] space-y-2.5">
+      <div class="flex justify-end">
+        <span class="rounded-lg rounded-tr-sm bg-navy-50 px-3 py-1.5 text-[11px] leading-snug text-navy-600">What's our refund policy?</span>
+      </div>
+      <div class="flex justify-start">
+        <span class="relative inline-flex min-h-[26px] items-center rounded-lg rounded-tl-sm bg-[#76B900]/10 px-3 py-1.5 text-[11px] leading-snug text-navy-800">
+          <span class="benefit-answer-dots absolute inline-flex items-center gap-0.5">
+            <span class="h-1 w-1 rounded-full bg-navy-400"></span>
+            <span class="h-1 w-1 rounded-full bg-navy-400"></span>
+            <span class="h-1 w-1 rounded-full bg-navy-400"></span>
+          </span>
+          <span class="benefit-answer-text">Refunds process within 3–5 days.</span>
+        </span>
+      </div>
+    </div>
+  {% elif type == "pulse" %}
+    <div class="relative flex h-[100px] w-[100px] items-center justify-center">
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border border-[#76B900]/40"></span>
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border border-[#76B900]/40" style="animation-delay: 0.6s"></span>
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border border-[#76B900]/40" style="animation-delay: 1.2s"></span>
+      <span class="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-navy-950 text-white shadow-md">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M13 2L4.5 14h6l-1 8L19 10h-6l1-8z"></path>
+        </svg>
+      </span>
+    </div>
+  {% elif type == "connect" %}
+    <div class="relative flex h-[120px] w-[160px] items-center justify-center">
+      <svg viewBox="0 0 160 120" class="absolute inset-0 h-full w-full" fill="none" aria-hidden="true">
+        <path class="benefit-connect-line" d="M80 60 L30 25" stroke="#76B900" stroke-width="1.5"></path>
+        <path class="benefit-connect-line" d="M80 60 L130 25" stroke="#76B900" stroke-width="1.5" style="animation-delay: 0.3s"></path>
+        <path class="benefit-connect-line" d="M80 60 L30 95" stroke="#76B900" stroke-width="1.5" style="animation-delay: 0.6s"></path>
+        <path class="benefit-connect-line" d="M80 60 L130 95" stroke="#76B900" stroke-width="1.5" style="animation-delay: 0.9s"></path>
+      </svg>
+      <span class="benefit-node absolute left-[19px] top-[14px] h-3 w-3 rounded-full border-2 border-[#76B900] bg-white shadow" style="animation-delay: 0.4s"></span>
+      <span class="benefit-node absolute right-[19px] top-[14px] h-3 w-3 rounded-full border-2 border-[#76B900] bg-white shadow" style="animation-delay: 0.7s"></span>
+      <span class="benefit-node absolute bottom-[14px] left-[19px] h-3 w-3 rounded-full border-2 border-[#76B900] bg-white shadow" style="animation-delay: 1s"></span>
+      <span class="benefit-node absolute bottom-[14px] right-[19px] h-3 w-3 rounded-full border-2 border-[#76B900] bg-white shadow" style="animation-delay: 1.3s"></span>
+      <span class="relative z-10 flex h-9 w-9 items-center justify-center rounded-full bg-navy-950 text-white shadow-md">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path>
+        </svg>
+      </span>
+    </div>
+  {% elif type == "gauge" %}
+    <div class="flex items-center gap-4">
+      <svg viewBox="0 0 80 80" class="h-20 w-20 -rotate-90" aria-hidden="true">
+        <circle cx="40" cy="40" r="34" fill="none" stroke="#E5E9EB" stroke-width="8"></circle>
+        <circle cx="40" cy="40" r="34" fill="none" stroke="#76B900" stroke-width="8" stroke-linecap="round" class="benefit-gauge-ring"></circle>
+      </svg>
+      <div>
+        <span class="block font-mono text-[22px] font-semibold text-navy-950">92<span class="text-[13px]">%</span></span>
+        <span class="block text-[11px] text-navy-500">buying intent</span>
+      </div>
+    </div>
+  {% elif type == "list" %}
+    <div class="w-full max-w-[220px] space-y-2">
+      <div class="benefit-list-row flex items-center gap-2 rounded-md bg-navy-50/70 px-3 py-2">
+        <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
+        <span class="text-[11px] text-navy-600">Call logged — Acme Co.</span>
+      </div>
+      <div class="benefit-list-row flex items-center gap-2 rounded-md bg-navy-50/70 px-3 py-2" style="animation-delay: 0.5s">
+        <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
+        <span class="text-[11px] text-navy-600">Email captured</span>
+      </div>
+      <div class="benefit-list-row flex items-center gap-2 rounded-md bg-navy-50/70 px-3 py-2" style="animation-delay: 1s">
+        <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
+        <span class="text-[11px] text-navy-600">Meeting note synced</span>
+      </div>
+    </div>
+  {% elif type == "path" %}
+    <div class="relative w-full max-w-[220px] px-1">
+      <div class="relative h-[3px] w-full rounded-full bg-navy-100">
+        <span class="benefit-path-progress absolute left-0 top-0 h-full rounded-full bg-[#76B900]"></span>
+      </div>
+      <div class="-mt-[8px] flex items-center justify-between">
+        <span class="benefit-path-dot h-4 w-4 rounded-full border-2 border-white shadow"></span>
+        <span class="benefit-path-dot h-4 w-4 rounded-full border-2 border-white shadow" style="animation-delay: 1s"></span>
+        <span class="benefit-path-dot h-4 w-4 rounded-full border-2 border-white shadow" style="animation-delay: 2s"></span>
+      </div>
+      <div class="mt-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-wide text-navy-500">
+        <span>Contact</span><span>Follow up</span><span>Close</span>
+      </div>
+    </div>
+  {% elif type == "stack" %}
+    <div class="relative flex h-[110px] w-[140px] items-center justify-center">
+      <span class="absolute h-16 w-32 translate-y-6 rounded-lg bg-navy-100/60"></span>
+      <span class="benefit-stack-layer absolute h-16 w-32 translate-y-3 rounded-lg bg-navy-100/90" style="animation-delay: 0.3s"></span>
+      <span class="benefit-stack-layer relative flex h-16 w-32 items-center justify-center rounded-lg border border-white/70 bg-white shadow-md">
+        <span class="h-2 w-2 rounded-full bg-[#76B900]"></span>
+      </span>
+    </div>
+  {% elif type == "sync" %}
+    <div class="relative flex h-[100px] w-[150px] items-center justify-center gap-6">
+      <span class="benefit-sync-node relative flex h-9 w-9 items-center justify-center rounded-full border border-navy-100 bg-white shadow">
+        <span class="h-2 w-2 rounded-full bg-[#76B900]"></span>
+      </span>
+      <svg class="h-6 w-10 flex-shrink-0 text-navy-300" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 40 24" aria-hidden="true">
+        <path d="M2 8h30M26 3l6 5-6 5"></path>
+        <path d="M38 16H8M14 21l-6-5 6-5"></path>
+      </svg>
+      <span class="benefit-sync-node relative flex h-9 w-9 items-center justify-center rounded-full border border-navy-100 bg-white shadow" style="animation-delay: 1s">
+        <span class="h-2 w-2 rounded-full bg-[#76B900]"></span>
+      </span>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{# =====================================================
+   ORCA BENEFIT MOCKUP — realistic dashboard content for the
+   browser-window card in the Benefits section (2026-09-27,
+   Orca only, keyed by benefit index — replaces the sparse
+   icon-only benefitVisual in that slot with stacked activity
+   rows carrying real Orca copy: status pill, description, and
+   a monospace trace line, matching the density of an actual
+   product screen instead of a single centered glyph). Search
+   and AI CRM keep using benefitVisual(benefit.visual) as-is.
+   ===================================================== #}
+{% macro orcaBenefitRow(title, note, trace, status) %}
+  <div class="rounded-lg border border-navy-100/70 bg-white p-3 shadow-sm">
+    <div class="flex items-start justify-between gap-2">
+      <span class="text-[11.5px] font-medium leading-snug text-[#111827]">{{ title }}</span>
+      <span class="inline-flex flex-shrink-0 items-center gap-1 rounded-full px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider {{ 'bg-[#F0F5E8] text-[#5a9100]' if status == 'ok' else 'bg-amber-50 text-amber-700' }}">
+        <span class="h-1.5 w-1.5 rounded-full {{ 'bg-[#76B900]' if status == 'ok' else 'bg-amber-400' }}"></span>
+        {{ 'Synced' if status == 'ok' else 'Pending' }}
+      </span>
+    </div>
+    <p class="mt-1 text-[10.5px] leading-snug text-[#6B7280]">{{ note }}</p>
+    <p class="mt-1.5 font-mono text-[9px] text-navy-300">{{ trace }}</p>
+  </div>
+{% endmacro %}
+
+{% macro orcaBenefitMockup(index) %}
+  {% if index == 1 %}
+    {# Stack/architecture concept, deliberately not another activity list
+       (2026-09-27) — this benefit is about shared infrastructure, not
+       live cross-system events, so it reads as a small tenancy diagram:
+       three product chips sitting on one common runtime base. #}
+    <div class="w-full">
+      <div class="mb-4 flex items-center justify-between">
+        <span class="font-mono text-[9.5px] uppercase tracking-wider text-navy-400">Shared Platform</span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-navy-100/70 bg-white px-1.5 py-0.5 font-mono text-[9px] text-navy-500 shadow-sm">1 runtime</span>
+      </div>
+      <div class="flex items-end justify-center gap-3">
+        <div class="flex flex-col items-center gap-1.5 rounded-lg border border-navy-100/70 bg-white px-3 py-2.5 shadow-sm">
+          <svg class="h-3.5 w-3.5 text-[#5a9100]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+          <span class="font-mono text-[9px] leading-none text-navy-600">Search</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5 rounded-lg border border-[#76B900]/40 bg-[#F0F5E8] px-3 py-2.5 shadow-sm">
+          <svg class="h-3.5 w-3.5 text-[#5a9100]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path></svg>
+          <span class="font-mono text-[9px] leading-none text-[#5a9100]">Orca</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5 rounded-lg border border-navy-100/70 bg-white px-3 py-2.5 shadow-sm">
+          <svg class="h-3.5 w-3.5 text-[#5a9100]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span class="font-mono text-[9px] leading-none text-navy-600">AI CRM</span>
+        </div>
+      </div>
+      <div class="mx-auto flex w-full max-w-[220px] justify-between px-4">
+        <span class="h-3 w-px bg-navy-200"></span>
+        <span class="h-3 w-px bg-[#76B900]/50"></span>
+        <span class="h-3 w-px bg-navy-200"></span>
+      </div>
+      <div class="rounded-lg border border-navy-100/70 bg-gradient-to-r from-[#F0F5E8] via-white to-[#F0F5E8] px-3 py-2.5 text-center">
+        <span class="font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Multi-tenant runtime</span>
+        <p class="mt-1 font-mono text-[9px] text-navy-400">platform.tenant · shared across every deployment</p>
+      </div>
+    </div>
+  {% else %}
+    <div class="w-full space-y-2">
+      <div class="mb-1 flex items-center justify-between">
+        <span class="font-mono text-[9.5px] uppercase tracking-wider text-navy-400">
+          {% if index == 0 %}Connected Tools{% else %}Cross-System Sync{% endif %}
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-navy-100/70 bg-white px-1.5 py-0.5 font-mono text-[9px] text-navy-500 shadow-sm">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#76B900] animate-pulse"></span>
+          Live
+        </span>
+      </div>
+      {% if index == 0 %}
+        {{ orcaBenefitRow("CRM — Connected", "Reads and writes without migration.", "orca.link/crm · v2", "ok") }}
+        {{ orcaBenefitRow("Email — Connected", "Native connector, agent-addressable.", "orca.link/email · v2", "ok") }}
+        {{ orcaBenefitRow("Marketing — Connected", "Extends without rebuilding logic.", "orca.link/marketing · v2", "ok") }}
+      {% else %}
+        {{ orcaBenefitRow("Lead moved to Opportunity", "CRM → Email sequence triggered.", "handoff.trace/lead_4821", "ok") }}
+        {{ orcaBenefitRow("Campaign engagement logged", "Marketing → CRM record enriched.", "handoff.trace/camp_1187", "ok") }}
+        {{ orcaBenefitRow("Follow-up reminder queued", "Email → CRM update in progress.", "handoff.trace/fw_0093", "pending") }}
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{# =====================================================
+   HERO — centered single-column on a plain white ground,
+   with floating capability badges top-left/top-right
+   (Kore.ai reference, 2026-07-28) and a per-product
+   interactive element: an animated typing search bar for
+   Zunkiree Search only (the one product that's actually
+   search), or a static quick-action pill row for AI CRM and
+   Orca (no fabricated live-search feature on products that
+   don't have one).
+   ===================================================== #}
+{# =====================================================
+   Dark hero variant — opt-in per product via hero.theme == "dark"
+   (Orca only, 2026-09-25). Kore.ai's Artemis hero is a near-black,
+   left-aligned layout with a large aurora-style color wash behind
+   a bold headline. We match that structure — left alignment, an
+   oversized headline, an aurora wash — using our own brand palette
+   (brand-green/slate/sky) and an original CSS gradient recipe, not
+   Kore's actual background image or copy. Search and AI CRM don't
+   set this flag, so their hero (centered, light) is untouched.
+   ===================================================== #}
+{% set heroDark = product.hero.theme == "dark" %}
+{% set heroGlow = "from-[#76B900]/25 via-[#577782]/20 to-transparent" if heroDark else "from-sky-200/50 via-sky-100/25 to-transparent" %}
+{% set heroEyebrowClass = "border-white/15 bg-white/5 text-white/70" if heroDark else "border-sky-200/60 bg-gradient-to-br from-sky-50 to-white text-navy-500" %}
+{% set heroHeadlineClass = "text-white" if heroDark else "text-[#111827]" %}
+{% set heroSubheadClass = "text-white/60" if heroDark else "text-[#6B7280]" %}
+{% set heroPillClass = "border-white/15 bg-white/5 text-white/80" if heroDark else "border-navy-100/60 bg-white text-navy-600 shadow-subtle" %}
+{% set heroBadgeTileClass = "border border-white/15 bg-white/10 backdrop-blur-md text-white" if heroDark else "bg-navy-950 text-white" %}
+
+{% if heroDark %}
+{# =====================================================
+   CONTINUOUS DARK GROUND (heroDark only, 2026-09-25) — bloom + grain
+   render ONCE here as a single field spanning from the very top of the
+   hero all the way to the closing CTA (closed at the bottom of the
+   file, just before the footer include). Kore.ai's hero pattern reads
+   as one uninterrupted canvas, not a hero layer stitched to a second
+   "page ground" layer below it — two separately-bounded gradients can
+   never line up pixel-for-pixel at their shared edge, which is what
+   produced the hard seam this replaces. Swirl stays hero-only (see
+   .hero-dark-swirl below) since it's a hero accent, not part of the
+   base ground, and it fades out on its own before the hero ends.
+
+   `fixed` (not `absolute`), 2026-09-25: bloom/grain sit inside a
+   wrapper that now spans the whole page (hero through closing CTA),
+   so `absolute inset-0` stretched their box to full page height —
+   the gradient's percentage-based stops (tuned for one hero-height
+   box) then resolved almost entirely off-screen, reading as a
+   flat, colorless page with only stray per-card glows visible.
+   `fixed inset-0` pins the gradient to the viewport instead, so the
+   tuned recipe renders correctly and stays visible while scrolling.
+   ===================================================== #}
+<div class="relative overflow-hidden bg-navy-950">
+  <div class="hero-dark-bloom pointer-events-none fixed inset-0 z-0" aria-hidden="true"></div>
+  <div class="hero-dark-grain pointer-events-none fixed inset-0 z-0" style="opacity: 0.08;" aria-hidden="true"></div>
+{% endif %}
+
+<section class="relative flex flex-col overflow-hidden pb-8 pt-32 sm:pt-36 lg:pt-44{{ ' items-start' if heroDark else ' items-center justify-center px-4 sm:px-6 lg:px-8' }}" aria-labelledby="hero-heading">
+
+  {% if heroDark %}
+    <div class="hero-dark-swirl pointer-events-none absolute inset-0 z-0" aria-hidden="true"></div>
+  {% endif %}
+
+  {% if product.hero.badges and product.hero.badges.length %}
+    <div class="pointer-events-none absolute inset-0 z-0 hidden md:block" aria-hidden="true">
+      <!-- Ambient glow behind each tight badge cluster, anchored to the headline's horizontal center.
+           top-[124px] clears the fixed navbar (72px tall, z-50) — the hero section starts at the
+           very top of the document since the nav is `fixed`/out of flow, so anything above ~72px
+           renders underneath it. -->
+      <div class="absolute left-[calc(50%-400px)] top-[124px] h-56 w-56 -translate-x-1/2 rounded-full bg-gradient-to-br {{ heroGlow }} blur-3xl"></div>
+      <div class="absolute right-[calc(50%-400px)] top-[124px] h-56 w-56 translate-x-1/2 rounded-full bg-gradient-to-bl {{ heroGlow }} blur-3xl"></div>
+
+      {# Anchored to the hero's horizontal center via calc(), so the cluster
+         hugs the headline's edge regardless of container width — not the
+         hero section's outer edge. Vertically placed just above the eyebrow
+         pill/headline band (hero has pt-32/36/44 before that content). #}
+      {% for badge in product.hero.badges %}
+        {% if badge.side == "left" and badge.offset == "outer" %}
+          {% set posClass = "left-[calc(50%-390px)] top-[132px] -rotate-6" %}
+        {% elif badge.side == "left" %}
+          {% set posClass = "left-[calc(50%-350px)] top-[180px] rotate-6" %}
+        {% elif badge.side == "right" and badge.offset == "inner" %}
+          {% set posClass = "right-[calc(50%-350px)] top-[180px] -rotate-6" %}
+        {% else %}
+          {% set posClass = "right-[calc(50%-390px)] top-[132px] rotate-6" %}
+        {% endif %}
+        <div
+          class="tile-float absolute flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl {{ heroBadgeTileClass }} shadow-md {{ posClass }}"
+          style="animation-delay: {{ loop.index0 * 0.6 }}s; box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.5);"
+        >
+          <div
+            class="pointer-events-none absolute inset-0"
+            style="background: radial-gradient(ellipse 100% 100% at 20% 100%, rgba(118,185,0,0.45) 0%, transparent 70%);"
+          ></div>
+          <svg class="relative z-10 h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            {{ heroBadgeIcon(badge.icon) }}
+          </svg>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if heroDark %}
+    {# Left edge matches navbar-v2.njk's own container exactly (max-w-[1280px]
+       mx-auto px-4 sm:px-6 lg:px-8) instead of a fixed px-* on the section, so
+       the hero text lines up flush with the logo above it at every viewport
+       width — a fixed px-* would drift from the navbar's centered container
+       past 1280px. Only wraps the text content, not the swirl/badge layers
+       above, which stay full-bleed across the whole section. #}
+    <div class="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:pl-20 lg:pr-8 xl:pl-28 xl:pr-8">
+  {% endif %}
+
+  <div class="relative z-10 flex max-w-[56rem] flex-col {{ 'items-start text-left' if heroDark else 'mx-auto items-center text-center' }}" data-reveal-stagger>
+
+    {% if product.hero.statusBadge %}
+      <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3.5 py-1.5">
+        <span class="h-2 w-2 flex-shrink-0 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="font-mono text-[11px] uppercase tracking-wider text-amber-700">{{ product.hero.statusBadge }}</span>
+      </span>
+    {% endif %}
+
+    {% if heroDark %}
+      {# Kore.ai Artemis hero text treatment (2026-09-25): plain (unpilled) mono
+         green eyebrow, then an italic "Meet { X }" tagline in Instrument Serif
+         mixing a light-italic "Meet" with a bold-italic "{ X }" — same recipe
+         as the reference screenshot, built from product.eyebrow so it's
+         data-driven rather than a hardcoded string. #}
+      <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-[#9ee62f]">
+        {{ product.eyebrow }}
+      </span>
+      <p class="font-editorial mb-2 text-[30px] italic leading-none text-white sm:text-[36px]">
+        <span class="font-normal">Meet</span> <span class="font-bold">{ {{ product.eyebrow }} }</span>
+      </p>
+    {% else %}
+      <span class="mb-4 inline-flex items-center rounded-full border {{ heroEyebrowClass }} px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider shadow-subtle">
+        {{ product.eyebrow }}
+      </span>
+    {% endif %}
+
+    <h1 id="hero-heading" class="text-balance tracking-tight {{ heroHeadlineClass }} {{ 'text-left font-bold text-[40px] leading-[1.08] sm:text-[52px] sm:leading-[1.06] lg:text-[64px] lg:leading-[1.04] max-w-[18ch]' if heroDark else 'text-center font-medium text-[34px] leading-[1.15] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]' }}">
+      {{ product.hero.headline }}
+    </h1>
+
+    {% if product.hero.subhead %}
+      <p class="mt-4 max-w-[560px] {{ heroSubheadClass }} {{ 'font-editorial text-left text-[22px] italic leading-snug sm:text-[26px]' if heroDark else 'text-[18px] font-medium leading-relaxed tracking-tight px-4 text-center sm:max-w-none sm:text-[20px]' }}">
+        {{ product.hero.subhead | safe }}
+      </p>
+    {% endif %}
+
+    {% if product.hero.interaction.type == "typingSearch" %}
+      <div class="mt-8 w-full max-w-xl" data-reveal>
+        <div class="flex items-center gap-3 rounded-full border border-sky-200/70 bg-gradient-to-br from-sky-50 via-white to-sky-50 px-5 py-3.5 shadow-md">
+          <svg class="h-5 w-5 flex-shrink-0 text-sky-500" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path>
+          </svg>
+          <span class="flex-1 min-w-[160px] truncate text-left text-[15px] text-[#111827]">
+            <span id="hero-typing-text"></span><span class="hero-typing-cursor inline-block h-[16px] w-[2px] translate-y-[2px] bg-sky-400" aria-hidden="true"></span>
+          </span>
+          <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-navy-900 text-white" aria-hidden="true">
+            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+        </div>
+        <ul id="hero-typing-queries" hidden>
+          {% for query in product.hero.interaction.queries %}
+            <li>{{ query }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if product.hero.interaction.suggestionPills and product.hero.interaction.suggestionPills.length %}
+          <div class="mt-5 flex max-w-xl flex-wrap items-center justify-center gap-2" data-reveal-stagger>
+            {% for item in product.hero.interaction.suggestionPills %}
+              <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-navy-100/60 bg-white px-3 py-1.5 font-mono text-[11px] text-navy-600 shadow-subtle">
+                <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path></svg>
+                {{ item.label }}
+              </span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <style>
+        @keyframes hero-typing-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .hero-typing-cursor { animation: hero-typing-blink 0.9s step-end infinite; }
+      </style>
+      <script>
+        (function () {
+          var textEl = document.getElementById('hero-typing-text');
+          var listEl = document.getElementById('hero-typing-queries');
+          if (!textEl || !listEl) return;
+          var queries = Array.prototype.map.call(listEl.querySelectorAll('li'), function (li) { return li.textContent; });
+          if (!queries.length) return;
+          var qi = 0, ci = 0, deleting = false;
+          function tick() {
+            var current = queries[qi];
+            if (!deleting) {
+              ci++;
+              textEl.textContent = current.slice(0, ci);
+              if (ci >= current.length) { deleting = true; setTimeout(tick, 1500); return; }
+            } else {
+              ci--;
+              textEl.textContent = current.slice(0, ci);
+              if (ci <= 0) { deleting = false; qi = (qi + 1) % queries.length; setTimeout(tick, 300); return; }
+            }
+            setTimeout(tick, deleting ? 28 : 55);
+          }
+          tick();
+        })();
+      </script>
+    {% elif product.hero.interaction.type == "pills" %}
+      <div class="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-2.5" data-reveal-stagger>
+        {% for item in product.hero.interaction.items %}
+          <span class="inline-flex items-center gap-1.5 rounded-full border {{ heroPillClass }} px-3.5 py-2 font-mono text-[12px]">
+            <svg class="h-3.5 w-3.5 text-[#76B900]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path></svg>
+            {{ item.label }}
+          </span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if not heroDark %}
+    <div class="mt-8 flex items-center justify-center">
+      <a
+        href="{{ product.hero.ctaPrimary.href }}"
+        class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        {{ product.hero.ctaPrimary.label }}
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+      </a>
+    </div>
+    {% endif %}
+
+    {% if product.hero.anchorPills and product.hero.anchorPills.length %}
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-2" data-reveal-stagger>
+        {% for pill in product.hero.anchorPills %}
+          <a href="{{ pill.href }}" class="inline-flex items-center gap-1.5 rounded-full border {{ 'border-white/15 bg-white/5 text-white/70 hover:bg-white/10' if heroDark else 'border-navy-100/60 bg-white text-navy-500 hover:bg-navy-50' }} px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wide transition-colors duration-200">
+            {{ '{' }} {{ pill.label }} {{ '}' }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  {% if heroDark %}
+    </div>
+  {% endif %}
+</section>
+
+<style>
+  /* Dark hero background layers (heroDark only) — same recipe as the
+     homepage's Orca CTA card (.orca-card-bloom/-swirl/-grain), enlarged and
+     strengthened so the wash fully blankets the much wider hero section
+     instead of sitting as two separate corner blobs — matches how densely
+     the blend reads on the smaller card. */
+  .hero-dark-bloom {
+    background:
+      radial-gradient(ellipse 110% 90% at 12% 105%, rgba(118, 185, 0, 0.32) 0%, transparent 68%),
+      radial-gradient(ellipse 95% 85% at 100% -5%, rgba(87, 119, 130, 0.38) 0%, transparent 68%),
+      radial-gradient(ellipse 100% 90% at 50% 50%, rgba(87, 119, 130, 0.16) 0%, transparent 72%);
+    animation: hero-dark-bloom-drift 14s ease-in-out infinite;
+  }
+  @keyframes hero-dark-bloom-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
+  }
+
+  .hero-dark-swirl {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='s' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.014' numOctaves='4' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='matrix' values='0 0 0 0 0.29  0 0 0 0 0.55  0 0 0 0 0.13  0 0 0 0.85 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+    background-size: 180% 180%;
+    background-position: 30% 85%;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+    animation: hero-dark-swirl-drift 22s ease-in-out infinite;
+    /* Swirl is a hero-only accent layered on top of the continuous bloom/
+       grain ground — it fades to 0 over the hero's own last 40% so the
+       accent dissolves on its own instead of cutting off hard when the
+       hero <section> ends. The ground underneath keeps going unbroken. */
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  }
+  @keyframes hero-dark-swirl-drift {
+    0%, 100% { background-position: 30% 85%; transform: scale(1); }
+    50% { background-position: 42% 95%; transform: scale(1.08); }
+  }
+
+  .hero-dark-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: screen;
+    opacity: 0.12;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-dark-bloom, .hero-dark-swirl { animation: none; }
+  }
+
+  /* Pillar tab auto-advance timer bar — fills left to right over the tab's
+     dwell time, so the active tab visibly counts down to the next one. */
+  .tab-progress {
+    animation-name: tab-progress-fill;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes tab-progress-fill {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tab-progress { animation: none; transform: scaleX(1); }
+  }
+</style>
+
+{# =====================================================
+   Everything from here through the closing CTA stacks above the single
+   continuous bloom/grain ground opened before the hero <section> — the
+   wrapper div itself is already open (heroDark only); this just starts
+   the z-10 content layer on top of it. Closed just before the footer
+   include. Search/AI CRM don't set heroDark, so their page stays the
+   existing white ground, untouched.
+   ===================================================== #}
+{% if heroDark %}
+  <div class="relative z-10">
+{% endif %}
+
+{# =====================================================
+   PILLAR DEEP-DIVES — interactive tabbed showcase (agent-platform
+   product-demo pattern): a { BRACKET }-style tab strip above a
+   floating light "window" card (macOS chrome dots + a left
+   description/workflow-steps panel + a right visual panel), set
+   against the page's dark ground with a soft color wash behind it.
+   Sits directly under the hero (replaces the old flat 3-up Outcome
+   Cards, 2026-09-25). Sized to what Orca actually has: 3 real
+   capabilities (Connect/Coordinate/Observe), each with a short
+   bullet list — no invented sub-product names or diagrams. Renders
+   only when a product supplies `pillars` (Orca only, so heroDark is
+   always true here).
+   ===================================================== #}
+{% if product.pillars and product.pillars.length %}
+<section
+  class="relative px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+  aria-labelledby="pillars-heading"
+  x-data="{
+    active: 0,
+    duration: 5000,
+    timer: null,
+    go(i) { this.active = i; this.restart() },
+    restart() {
+      clearInterval(this.timer)
+      this.timer = setInterval(() => { this.active = (this.active + 1) % {{ product.pillars.length }} }, this.duration)
+    }
+  }"
+  x-init="restart()"
+>
+  <div class="mx-auto max-w-6xl">
+    <h2 id="pillars-heading" class="sr-only">How {{ product.eyebrow }} works</h2>
+
+    {# Tab bar sits opaque on the plain dark ground, above the pattern stage
+       (agent-platform reference: the { BUILD } bar is a solid strip separate
+       from the colorful area below it, not blended into the pattern). Each
+       tab auto-advances on a 5s timer, with a filling progress line on the
+       active tab (Kore.ai/Linear-style timed tab rotation) — reset via
+       `restart()` whenever a tab is chosen manually, so a click doesn't get
+       overridden a moment later by the pending auto-advance. #}
+    <div role="tablist" aria-label="How {{ product.eyebrow }} works" class="relative z-10 mx-auto grid max-w-4xl grid-cols-3 gap-px overflow-hidden rounded-t-xl border border-b-0 border-white/10 bg-white/10" data-reveal>
+      {% for pillar in product.pillars %}
+        <button
+          type="button"
+          role="tab"
+          id="pillar-tab-{{ loop.index0 }}"
+          aria-controls="pillar-panel-{{ loop.index0 }}"
+          :aria-selected="active === {{ loop.index0 }} ? 'true' : 'false'"
+          :tabindex="active === {{ loop.index0 }} ? 0 : -1"
+          @click="go({{ loop.index0 }})"
+          @keydown.right.prevent="go((active + 1) % {{ product.pillars.length }}); $nextTick(() => $refs['pillarTab' + active].focus())"
+          @keydown.left.prevent="go((active - 1 + {{ product.pillars.length }}) % {{ product.pillars.length }}); $nextTick(() => $refs['pillarTab' + active].focus())"
+          x-ref="pillarTab{{ loop.index0 }}"
+          class="relative flex flex-col items-center gap-1 bg-navy-950 px-2 py-3 text-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-inset sm:items-start sm:px-5 sm:py-4 sm:text-left"
+          :class="active === {{ loop.index0 }} ? 'bg-navy-950' : 'bg-navy-900 hover:bg-navy-900/80'"
+        >
+          <span class="absolute inset-x-0 top-0 h-[2px] bg-white/10" aria-hidden="true"></span>
+          <template x-if="active === {{ loop.index0 }}">
+            <span class="tab-progress absolute inset-x-0 top-0 h-[2px] origin-left bg-[#9ee62f]" :style="'animation-duration: ' + duration + 'ms'" aria-hidden="true"></span>
+          </template>
+          <span class="font-mono text-[10px] uppercase tracking-wider sm:text-[11px]" :class="active === {{ loop.index0 }} ? 'text-[#9ee62f]' : 'text-white/40'">{ {{ pillar.eyebrow | upper }} }</span>
+          <span class="hidden text-[13px] font-medium text-white/80 sm:block">{{ pillar.heading }}</span>
+        </button>
+      {% endfor %}
+    </div>
+
+    {# Stage — a large color-wash panel (grain/gradient texture, agent-platform
+       reference) that frames the window with generous padding so the pattern
+       stays visible as background on every side, instead of the white window
+       filling the whole section edge-to-edge. #}
+    <div class="relative overflow-hidden rounded-3xl p-6 sm:p-12 lg:p-16" style="background-image: url('/assets/images/products/orca-pillars-gradient.jpg'); background-size: cover; background-position: center;">
+      <div class="mx-auto max-w-4xl">
+
+        <div class="relative overflow-hidden rounded-2xl border border-navy-100/60 bg-white" style="box-shadow: 0 50px 80px -30px rgba(15, 23, 42, 0.55);" data-reveal>
+          <div class="flex items-center gap-2 border-b border-navy-100/70 bg-[#F5F6F7] px-4 py-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></span>
+            <span class="ml-3 truncate font-mono text-[11px] text-navy-400">orca.zunkireelabs.com</span>
+          </div>
+
+          {% for pillar in product.pillars %}
+            <div
+              id="pillar-panel-{{ loop.index0 }}"
+              role="tabpanel"
+              aria-labelledby="pillar-tab-{{ loop.index0 }}"
+              x-show="active === {{ loop.index0 }}"
+              {% if not loop.first %}x-cloak{% endif %}
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              class="grid grid-cols-1 lg:grid-cols-2"
+            >
+              <div class="border-b border-navy-100/70 p-8 sm:p-10 lg:border-b-0 lg:border-r">
+                <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-navy-500">{{ pillar.eyebrow }}</span>
+                <h3 class="text-[22px] font-semibold leading-[1.2] text-[#111827] sm:text-[24px]">{{ pillar.heading }}</h3>
+                <p class="mt-3 text-[14px] leading-relaxed text-[#6B7280]">{{ pillar.description }}</p>
+
+                {% if pillar.bullets and pillar.bullets.length %}
+                  <div class="mt-6 rounded-xl border border-navy-100/70 bg-[#FAFBFC] p-4">
+                    <span class="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#F0F5E8] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">AI Workflow</span>
+                    <ul class="space-y-3">
+                      {% for bullet in pillar.bullets %}
+                        <li class="flex items-center gap-3">
+                          <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg border border-navy-100/70 bg-white text-[#5a9100] shadow-sm" aria-hidden="true">
+                            {{ useCaseIcon(loop.index0, "h-3.5 w-3.5") }}
+                          </span>
+                          <span class="text-[13px] font-medium text-[#111827]">{{ bullet }}</span>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="relative hidden min-h-[280px] items-center justify-center bg-gradient-to-br from-sky-50/60 via-white to-white p-8 lg:flex" aria-hidden="true">
+                {{ benefitVisual(pillar.visual) }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   NARRATIVE BLOCK — single dark statement panel, same navy-950 +
+   brand-green/slate treatment as the dark hero. Renders only when
+   a product supplies `narrative` (Orca only).
+   ===================================================== #}
+{% if product.narrative %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="narrative-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-2xl border {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }} p-8 text-center sm:p-14" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <span class="relative z-10 mb-3 block font-mono text-[11px] uppercase tracking-wider text-white/50">{{ product.narrative.eyebrow }}</span>
+      <h2 id="narrative-heading" class="relative z-10 mx-auto max-w-2xl text-[26px] font-medium leading-[1.25] text-white sm:text-[32px]">{{ product.narrative.heading }}</h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">{{ product.narrative.body }}</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   VALUE BULLETS — corner-bracket "viewfinder" cards with mono
+   index numerals and bold display type, plus a scoped blur-to-
+   focus scroll reveal. Visual language borrowed from the
+   Glyph Portal 21st.dev component (bold ink type, thin corner
+   annotation marks, a camera-focus feel) — NOT its scroll-jack
+   mechanism, which doesn't fit a 3-item value-prop grid and has
+   no React runtime to run in here. Reveal reuses the site's
+   existing gsap/ScrollTrigger (window.gsap, main.js) but is
+   scoped to [data-vb-card] only, so it never touches the shared
+   data-reveal-stagger-x behavior used elsewhere on the site.
+   ===================================================== #}
+{% if product.valueBullets %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="value-bullets-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="value-bullets-heading" class="mb-8 text-center text-[24px] font-medium leading-[1.2] sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ product.valueBullets.heading }}</h2>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3" data-vb-group>
+      {% for item in product.valueBullets.items %}
+        <div class="vb-card {{ 'vb-card--dark' if heroDark else 'vb-card--light' }} relative rounded-lg p-6" data-vb-card>
+          <span class="vb-tick vb-tick--tl" aria-hidden="true"></span>
+          <span class="vb-tick vb-tick--br" aria-hidden="true"></span>
+          <span class="mb-4 block font-mono text-[11px] uppercase tracking-[0.08em] {{ 'text-[#9ee62f]' if heroDark else 'text-[#5a9100]' }}">{{ '0' + (loop.index) | string }}</span>
+          <p class="text-[19px] font-bold leading-[1.25] tracking-tight sm:text-[21px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ item.title }}</p>
+          <p class="mt-2.5 text-[14px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<style>
+  .vb-tick {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+  }
+  .vb-tick--tl { top: 0; left: 0; border-top: 2.5px solid; border-left: 2.5px solid; }
+  .vb-tick--br { bottom: 0; right: 0; border-bottom: 2.5px solid; border-right: 2.5px solid; }
+  .vb-card--dark .vb-tick { border-color: #9ee62f; opacity: 1; }
+  .vb-card--light .vb-tick { border-color: #76B900; opacity: 1; }
+</style>
+<script>
+  (function () {
+    function run() {
+      var cards = document.querySelectorAll('[data-vb-card]');
+      var group = document.querySelector('[data-vb-group]');
+      if (!cards.length || !group) return;
+
+      if (!window.gsap || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        cards.forEach(function (el) {
+          el.style.opacity = '1';
+          el.style.filter = 'none';
+          el.style.transform = 'none';
+        });
+        return;
+      }
+
+      gsap.fromTo(cards,
+        { opacity: 0, x: 60, filter: 'blur(6px)' },
+        {
+          opacity: 1,
+          x: 0,
+          filter: 'blur(0px)',
+          duration: 0.7,
+          ease: 'power3.out',
+          stagger: 0.25,
+          scrollTrigger: {
+            trigger: group,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+{% endif %}
+
+{# =====================================================
+   CHALLENGE STRIP — short framing strip, 3 compact blocks.
+   Reuses industry.njk's Pain Point section pattern verbatim
+   (asymmetric lead + 2 secondary blocks, animated visuals)
+   instead of the flat 3-up icon grid.
+   ===================================================== #}
+{% if product.challenges %}
+<section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="challenges-heading">
+  <div class="mx-auto max-w-5xl">
+    {% if heroDark %}
+      {# =====================================================
+         Kore.ai "Business Challenge" pattern, borderless editorial
+         version (2026-09-27): small mono eyebrow + big left-aligned
+         bold headline, then the asymmetric split as plain type on
+         the dark ground — no bordered/filled card (that would echo
+         the value-bullets grid directly above). The split is also a
+         pinned, scroll-scrubbed sequence: block 1 opens centered and
+         oversized, shrinks into its final left-column slot as the
+         user scrolls, then block 2 appears centered/oversized and
+         shrinks into its slot, then block 3 does the same — ending
+         in the exact asymmetric layout, reversible on scroll-up.
+         Desktop/tablet only (data-challenge-stage script below bails
+         out under 640px, reduced-motion, or no gsap — those render
+         the plain static asymmetric grid with no JS involved). #}
+      <div class="relative" data-challenge-stage>
+        {# Eyebrow + heading live inside the pinned stage (not above it) so they
+           stay fixed on screen for the whole sequence instead of scrolling away
+           once the section pins. #}
+        <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-white/50">What's not working</span>
+        <h2 id="challenges-heading" class="mb-8 max-w-2xl text-left text-[30px] font-medium leading-[1.1] text-white sm:text-[38px]">
+          {{ product.challenges.heading }}
+        </h2>
+        {# Even 2x2 grid (2026-09-27): all four items get equal weight, in
+           place of the old big-left/two-stacked-right split. Per-cell
+           borders (not Tailwind's divide-x/y, which only look at DOM
+           order and can't produce a real 2-column crosshair) draw the
+           vertical line between columns and horizontal line between
+           rows; on mobile everything collapses to one stacked column
+           with a simple top border between each. #}
+        <div class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2" data-challenge-grid>
+          {% for block in product.challenges.blocks %}
+            {% set idx = loop.index0 %}
+            {% if idx == 0 %}
+              {% set cellClass = "" %}
+            {% elif idx == 1 %}
+              {% set cellClass = "border-t border-white/10 pt-6 sm:border-t-0 sm:border-l sm:pl-8 sm:pt-0" %}
+            {% elif idx == 2 %}
+              {% set cellClass = "border-t border-white/10 pt-6 sm:pt-8" %}
+            {% else %}
+              {# Top and left borders meet at this cell's corner (row2/col2)
+                 — a solid joined corner reads as "connected," which fights
+                 the section's theme, so this cell draws its own top/left
+                 lines with a gap at the corner instead of Tailwind's
+                 border-t/border-l (see .challenge-corner-gap below). #}
+              {% set cellClass = "border-t border-white/10 pt-6 sm:border-t-0 sm:pl-8 sm:pt-8 challenge-corner-gap" %}
+            {% endif %}
+            <div class="flex flex-col justify-center {{ cellClass }}" data-challenge-item="{{ idx }}">
+              <p class="text-[19px] font-semibold leading-snug text-white sm:text-[20px]">{{ block.title }}</p>
+              <p class="mt-2 max-w-[36ch] text-[14px] leading-relaxed text-white/60">{{ block.description }}</p>
+              {{ painPointVisual(loop.index) }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <script>
+        (function () {
+          function run() {
+            var stage = document.querySelector('[data-challenge-stage]');
+            var grid = document.querySelector('[data-challenge-grid]');
+            var items = Array.prototype.slice.call(document.querySelectorAll('[data-challenge-item]'));
+            if (!stage || !grid || items.length < 2) return;
+
+            var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var narrow = window.matchMedia('(max-width: 639px)').matches;
+            if (!window.gsap || reduced || narrow) return;
+
+            var tl;
+
+            function teardown() {
+              if (tl) { if (tl.scrollTrigger) tl.scrollTrigger.kill(); tl.kill(); tl = null; }
+              gsap.set(items, { clearProps: 'all' });
+              items.forEach(function (el) {
+                el.style.position = '';
+                el.style.left = '';
+                el.style.top = '';
+                el.style.width = '';
+              });
+              stage.style.minHeight = '';
+            }
+
+            function build() {
+              teardown();
+
+              var stageRect = stage.getBoundingClientRect();
+              var rects = items.map(function (el) { return el.getBoundingClientRect(); });
+              stage.style.minHeight = stageRect.height + 'px';
+              // `grid` itself stays position:static (in-flow) — only its item
+              // children go absolute. That keeps `stage` (position:relative) as
+              // the sole positioned ancestor items resolve left/top against;
+              // making `grid` position:absolute too previously made IT the
+              // positioning context instead, which silently offset every
+              // stage-relative coordinate below and was the real cause of the
+              // off-center drift.
+
+              // Anchor each item's FINAL resting spot with plain left/top (px) +
+              // xPercent/yPercent:0. The CENTERED stage state re-anchors left/top
+              // to the stage's exact midpoint with xPercent/yPercent:-50, which
+              // centers the item on itself regardless of its own width/height —
+              // no manual "target center minus item center" delta math (which
+              // drifted off-true whenever scale/measurement order shifted it).
+              var stageMidX = stageRect.width / 2;
+              var stageMidY = stageRect.height / 2;
+              // Each item after the first reveals progressively lower than
+              // dead-center: by the time item i appears, items 0..i-1 have
+              // already settled into the upper portion of the stage, so
+              // centering every item at the same stageMidY would overlap
+              // whatever already settled there. A flat offset was enough for
+              // 3 items but undershoots once there are 4 (items 2 & 3 still
+              // landed on top of 0 & 1) — so the push grows with index instead.
+              var REVEAL_OFFSETS = [0, 0.22, 0.34, 0.46];
+              var SCALE = 1.28;
+
+              items.forEach(function (el, i) {
+                var r = rects[i];
+                var finalLeft = r.left - stageRect.left;
+                var finalTop = r.top - stageRect.top;
+                el.style.position = 'absolute';
+                el.style.width = r.width + 'px';
+                el._finalLeft = finalLeft;
+                el._finalTop = finalTop;
+
+                var offsetFrac = REVEAL_OFFSETS[i] !== undefined ? REVEAL_OFFSETS[i] : 0.46;
+                gsap.set(el, {
+                  left: stageMidX,
+                  top: stageMidY + stageRect.height * offsetFrac,
+                  xPercent: -50,
+                  yPercent: -50,
+                  scale: SCALE,
+                  opacity: 0,
+                  transformOrigin: 'center center',
+                });
+              });
+
+              tl = gsap.timeline({
+                scrollTrigger: {
+                  trigger: stage,
+                  start: 'top top+=80',
+                  end: '+=' + Math.round(window.innerHeight * items.length * 0.8),
+                  scrub: 0.6,
+                  pin: true,
+                  anticipatePin: 1,
+                },
+              });
+
+              items.forEach(function (el, i) {
+                // Every item, including the first, fades in from its centered/
+                // oversized state only as the user scrolls — none of them are
+                // just instantly visible the moment the section pins.
+                tl.to(el, { opacity: 1, duration: 0.6 }, i === 0 ? 0 : '-=0.2');
+                tl.to(el, {
+                  left: el._finalLeft,
+                  top: el._finalTop,
+                  xPercent: 0,
+                  yPercent: 0,
+                  scale: 1,
+                  duration: 2.8,
+                  ease: 'power2.inOut',
+                });
+              });
+              tl.to({}, { duration: 0.6 });
+            }
+
+            build();
+
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+              clearTimeout(resizeTimer);
+              resizeTimer = setTimeout(function () {
+                if (window.matchMedia('(max-width: 639px)').matches) { teardown(); return; }
+                build();
+              }, 200);
+            });
+          }
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', run);
+          } else {
+            run();
+          }
+        })();
+      </script>
+    {% else %}
+      <h2 id="challenges-heading" class="mb-8 text-center text-[26px] font-medium leading-[1.2] sm:text-[28px] text-[#111827]">
+        {{ product.challenges.heading }}
+      </h2>
+      <div class="overflow-hidden rounded-xl border shadow-card transition-shadow duration-300 hover:shadow-card-hover border-navy-100/60 bg-gradient-to-br from-sky-50/60 via-white to-white" data-reveal-stagger>
+        <div class="flex flex-col sm:flex-row divide-y divide-navy-200 sm:divide-y-0">
+          {% for block in product.challenges.blocks %}
+            {% if loop.index == 1 %}
+              <div class="flex min-h-[360px] flex-col justify-center p-8 sm:w-3/5 lg:p-12 sm:border-r sm:border-navy-200">
+                <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-sky-600">Primary</p>
+                <p class="text-[26px] font-semibold leading-snug sm:text-[28px] text-[#111827]">{{ block.title }}</p>
+                <p class="mt-2 max-w-[38ch] text-[15px] leading-relaxed text-[#6B7280]">{{ block.description }}</p>
+                {{ painPointVisual(1) }}
+              </div>
+            {% endif %}
+          {% endfor %}
+          <div class="flex flex-col sm:w-2/5">
+            {% for block in product.challenges.blocks %}
+              {% if loop.index != 1 %}
+                <div class="flex min-h-[180px] flex-1 flex-col justify-center p-7 lg:p-9{% if loop.index == 2 %} border-b border-navy-200{% endif %}">
+                  <p class="text-[19px] font-semibold leading-snug text-[#111827]">{{ block.title }}</p>
+                  <p class="mt-1.5 text-[13px] leading-relaxed text-[#6B7280]">{{ block.description }}</p>
+                  {{ painPointVisual(loop.index) }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+<style>
+  .pp-visual {
+    margin-top: 20px;
+    width: fit-content;
+    align-self: flex-start;
+  }
+
+  /* Lead visual: a stalled chat bubble — typing dots that never
+     resolve into a reply, plus a slow "waiting" ring around it. */
+  .pp-visual--lead {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .pp-chat-bubble {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 14px;
+    border-radius: 999px 999px 999px 4px;
+    background: #eff7ff;
+    border: 1px solid #bfe1fc;
+  }
+  .pp-chat-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2673b8;
+    animation: pp-chat-dot-bounce 1.2s ease-in-out infinite;
+  }
+  .pp-chat-dot:nth-child(2) { animation-delay: 0.15s; }
+  .pp-chat-dot:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes pp-chat-dot-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30% { transform: translateY(-3px); opacity: 1; }
+  }
+  .pp-chat-ring {
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 999px;
+    border: 1px solid #93ccfa;
+    opacity: 0;
+    animation: pp-chat-ring-pulse 2.4s ease-out infinite;
+  }
+  @keyframes pp-chat-ring-pulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.25); opacity: 0; }
+  }
+
+  /* Secondary visual 1: two nodes with a dashed line whose gap
+     pulses — reads as "connected but not really talking." */
+  .pp-visual--sm {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+  }
+  .pp-node {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #dbeffe;
+    border: 1.5px solid #2673b8;
+  }
+  .pp-node-line {
+    width: 44px;
+    height: 8px;
+    overflow: visible;
+  }
+  .pp-node-line line {
+    stroke: #93ccfa;
+    animation: pp-node-line-pulse 2s ease-in-out infinite;
+  }
+  @keyframes pp-node-line-pulse {
+    0%, 100% { stroke-dashoffset: 0; opacity: 0.5; }
+    50% { stroke-dashoffset: 8; opacity: 1; }
+  }
+
+  /* Secondary visual 2: stacked rows cycling in place — reads as
+     repetitive manual sorting/triage. */
+  .pp-visual--rows {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .pp-row {
+    display: block;
+    height: 5px;
+    width: 46px;
+    border-radius: 2px;
+    background: #bfe1fc;
+    animation: pp-row-cycle 1.8s ease-in-out infinite;
+  }
+  @keyframes pp-row-cycle {
+    0%, 100% { transform: translateX(0); opacity: 0.6; }
+    50% { transform: translateX(5px); opacity: 1; background: #60aef5; }
+  }
+
+  /* 4th visual: two stacked cards that drift apart and back — reads
+     as "the same thing, logged twice." */
+  .pp-visual--dupe {
+    position: relative;
+    width: 60px;
+    height: 44px;
+  }
+  .pp-dupe-card {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border-radius: 6px;
+    background: #dbeffe;
+    border: 1.5px solid #2673b8;
+  }
+  .pp-dupe-card--back {
+    top: 10px;
+    left: 14px;
+    opacity: 0.6;
+    animation: pp-dupe-back 2.2s ease-in-out infinite;
+  }
+  .pp-dupe-card--front {
+    top: 4px;
+    left: 6px;
+    background: #eff7ff;
+    animation: pp-dupe-front 2.2s ease-in-out infinite;
+  }
+  @keyframes pp-dupe-back {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(4px, 3px); }
+  }
+  @keyframes pp-dupe-front {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-4px, -3px); }
+  }
+
+  /* 2x2 challenge grid, last cell (2026-09-27): draw its own top/left
+     divider lines with a gap at the corner, instead of Tailwind's
+     border-t + border-l meeting in a solid joined corner. */
+  .challenge-corner-gap {
+    position: relative;
+  }
+  @media (min-width: 640px) {
+    .challenge-corner-gap::before,
+    .challenge-corner-gap::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .challenge-corner-gap::before {
+      top: 0;
+      left: 24px;
+      right: 0;
+      height: 1px;
+    }
+    .challenge-corner-gap::after {
+      left: 0;
+      top: 24px;
+      bottom: 0;
+      width: 1px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pp-chat-dot,
+    .pp-chat-ring,
+    .pp-node-line line,
+    .pp-row,
+    .pp-dupe-card--back,
+    .pp-dupe-card--front {
+      animation: none;
+    }
+  }
+</style>
+{% endif %}
+
+{# =====================================================
+   FEATURE BLOCKS — stacked bordered panels, each holding a
+   visual mock (left) and heading/description (right) inside
+   one shared card, fed by the product's benefits array.
+   Layout reference: Kore.ai's ai-agent-platform "pillars"
+   panel (bordered card, soft color-wash behind the screenshot,
+   corner "Expand" affordance) — restyled with our own tile
+   visuals/colors, not their screenshots or copy.
+   ===================================================== #}
+<section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="benefits-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative mb-10 sm:mb-14">
+      <span class="mb-4 inline-block rounded-full border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider {{ 'border-white/15 bg-white/5 text-white/50' if heroDark else 'border-navy-100/70 bg-white text-navy-500' }}">{ Benefits }</span>
+      <h2 id="benefits-heading" class="max-w-2xl text-[28px] font-semibold leading-[1.2] sm:text-[36px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
+        What Orca delivers across every connected system
+      </h2>
+      <div class="mt-8 h-px w-full {{ 'bg-white/10' if heroDark else 'bg-navy-100/70' }}"></div>
+    </div>
+    <div class="flex flex-col gap-8 sm:gap-10">
+      {% for benefit in product.benefits %}
+        <div class="relative" data-reveal-stagger>
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-3xl p-6 sm:min-h-[480px] sm:p-10" style="background-image: url('/assets/images/products/orca-benefit-glow.jpg'); background-size: cover; background-position: center;">
+              <div class="tile-float relative z-10 flex w-full max-w-[340px] flex-col overflow-hidden rounded-xl border border-navy-100/60 bg-white shadow-md">
+                <div class="flex items-center gap-1.5 border-b border-navy-100/70 bg-[#F5F6F7] px-3 py-2.5">
+                  <span class="h-2 w-2 rounded-full bg-[#FF5F57]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#FEBC2E]"></span>
+                  <span class="h-2 w-2 rounded-full bg-[#28C840]"></span>
+                  <span class="ml-2 truncate font-mono text-[10px] text-navy-400">{{ product.eyebrow | lower }}.zunkireelabs.com</span>
+                </div>
+                <div class="flex flex-1 items-center justify-center p-5">
+                  {% if product.id == "orca" %}
+                    {{ orcaBenefitMockup(loop.index0) }}
+                  {% else %}
+                    {{ benefitVisual(benefit.visual) }}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex flex-col justify-end p-8 sm:p-12">
+              <h3 class="text-[24px] font-medium leading-[1.2] sm:text-[28px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
+                {{ benefit.title }}
+              </h3>
+              <p class="mt-4 max-w-lg text-[15px] leading-relaxed {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">
+                {{ benefit.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes tile-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .tile-float {
+    animation: tile-float 4s ease-in-out infinite;
+  }
+
+  /* Benefit visuals — content-specific looping animations, see benefitVisual() macro. */
+  @keyframes benefit-dot-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-3px); opacity: 1; }
+  }
+  @keyframes benefit-swap-dots {
+    0%, 35% { opacity: 1; }
+    40%, 100% { opacity: 0; }
+  }
+  @keyframes benefit-swap-text {
+    0%, 35% { opacity: 0; }
+    45%, 100% { opacity: 1; }
+  }
+  .benefit-answer-dots {
+    animation: benefit-swap-dots 4s ease-in-out infinite;
+  }
+  .benefit-answer-dots span {
+    animation: benefit-dot-bounce 1s ease-in-out infinite;
+  }
+  .benefit-answer-dots span:nth-child(2) { animation-delay: 0.15s; }
+  .benefit-answer-dots span:nth-child(3) { animation-delay: 0.3s; }
+  .benefit-answer-text {
+    opacity: 0;
+    animation: benefit-swap-text 4s ease-in-out infinite;
+  }
+
+  @keyframes benefit-pulse-ring {
+    0% { transform: scale(0.6); opacity: 0.7; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+  .benefit-pulse-ring {
+    animation: benefit-pulse-ring 1.8s ease-out infinite;
+  }
+
+  @keyframes benefit-line-draw {
+    0% { stroke-dashoffset: 60; opacity: 0.3; }
+    35% { stroke-dashoffset: 0; opacity: 1; }
+    80% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 60; opacity: 0.3; }
+  }
+  .benefit-connect-line {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: benefit-line-draw 2.4s ease-in-out infinite;
+  }
+  @keyframes benefit-node-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    20% { opacity: 1; transform: scale(1); }
+    80% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+  .benefit-node {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: benefit-node-in 2.4s ease-in-out infinite;
+  }
+
+  @keyframes benefit-gauge-fill {
+    0% { stroke-dashoffset: 213.6; }
+    60% { stroke-dashoffset: 17.1; }
+    100% { stroke-dashoffset: 17.1; }
+  }
+  .benefit-gauge-ring {
+    stroke-dasharray: 213.6;
+    stroke-dashoffset: 213.6;
+    animation: benefit-gauge-fill 2.6s ease-out infinite;
+  }
+
+  @keyframes benefit-list-in {
+    0% { opacity: 0; transform: translateX(-10px); }
+    15% { opacity: 1; transform: translateX(0); }
+    85% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(-10px); }
+  }
+  .benefit-list-row {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: benefit-list-in 3s ease-in-out infinite;
+  }
+
+  @keyframes benefit-path-fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+  .benefit-path-progress {
+    width: 0%;
+    animation: benefit-path-fill 3s ease-in-out infinite;
+  }
+  @keyframes benefit-path-light {
+    0%, 32% { background-color: #D9DEE2; }
+    40%, 100% { background-color: #76B900; }
+  }
+  .benefit-path-dot {
+    background-color: #D9DEE2;
+    animation: benefit-path-light 3s ease-in-out infinite;
+  }
+
+  .benefit-stack-layer {
+    animation: tile-float 4s ease-in-out infinite;
+  }
+
+  @keyframes benefit-node-ping {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(118, 185, 0, 0); }
+    50% { box-shadow: 0 0 0 6px rgba(118, 185, 0, 0.15); }
+  }
+  .benefit-sync-node {
+    animation: benefit-node-ping 2s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .benefit-answer-dots,
+    .benefit-answer-dots span,
+    .benefit-answer-text,
+    .benefit-pulse-ring,
+    .benefit-connect-line,
+    .benefit-node,
+    .benefit-gauge-ring,
+    .benefit-list-row,
+    .benefit-path-progress,
+    .benefit-path-dot,
+    .benefit-stack-layer,
+    .benefit-sync-node,
+    .tile-float {
+      animation: none !important;
+    }
+  }
+</style>
+
+{# =====================================================
+   USE CASE FLOW-DIAGRAM MACROS (orca only) — when a useCases
+   item defines `systems` (and optionally `trigger`), the panel
+   renders a per-tab coordination-flow diagram instead of the
+   generic split layout: trigger → hub → systems → outcomes.
+   search/ai-crm items have no `systems` field, so they fall
+   through to the original split layout untouched.
+   ===================================================== #}
+{% macro flowBlock(nodes, heroDark) %}
+  <div class="flex flex-col justify-center gap-2 rounded-xl border p-2.5 {{ 'border-white/10 bg-white/5' if heroDark else 'border-navy-100/70 bg-navy-50/50' }}">
+    {% for node in nodes %}
+      <div class="flex h-11 items-center gap-2 rounded-lg px-3 py-2 {{ 'bg-white/10' if heroDark else 'bg-white' }}">
+        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md {{ 'bg-white/10 text-[#9ee62f]' if heroDark else 'bg-[#F0F5E8] text-[#5a9100]' }}" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">{{ heroBadgeIcon(node.icon) }}</svg>
+        </span>
+        <span class="text-[13px] font-medium leading-snug {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ node.label }}</span>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{% macro flowCenter(heroDark) %}
+  <div class="relative flex flex-col items-center gap-3">
+    <span class="flex items-center gap-2 rounded-full px-3 py-1.5 {{ 'bg-white/10' if heroDark else 'bg-navy-50' }}">
+      <span class="usecase-engine-ping h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
+      <span class="font-mono text-[10px] uppercase tracking-wider {{ 'text-white/60' if heroDark else 'text-navy-500' }}">Orca</span>
+    </span>
+    <div class="relative flex h-[90px] w-[90px] items-center justify-center">
+      <span class="orca-hub-glow absolute -inset-5 rounded-full" aria-hidden="true"></span>
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border-2 border-[#76B900]/50"></span>
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border-2 border-[#76B900]/50" style="animation-delay: 0.6s"></span>
+      <span class="benefit-pulse-ring absolute inset-0 rounded-full border-2 border-[#76B900]/50" style="animation-delay: 1.2s"></span>
+      <span class="orca-hub-pulse relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-950 text-white">
+        <svg class="h-6 w-6 text-[#9ee62f]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          {{ heroBadgeIcon("workflow") }}
+        </svg>
+      </span>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro flowLineSvg(heroDark, uid, delay, vertical) %}
+  {% if vertical %}
+    <svg class="h-full w-full" viewBox="0 0 6 100" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="{{ uid }}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
+          <stop offset="0%" stop-color="#76B900" stop-opacity="0"></stop>
+          <stop offset="50%" stop-color="#76B900" stop-opacity="1"></stop>
+          <stop offset="100%" stop-color="#76B900" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <line x1="3" y1="2" x2="3" y2="98" stroke-width="1.5" class="{{ 'stroke-white/10' if heroDark else 'stroke-navy-200' }}"></line>
+      <line x1="3" y1="2" x2="3" y2="98" stroke="url(#{{ uid }})" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="30 80" class="flow-line-dash" style="animation-delay: {{ delay }}s"></line>
+    </svg>
+  {% else %}
+    <svg class="h-full w-full" viewBox="0 0 100 6" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="{{ uid }}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0">
+          <stop offset="0%" stop-color="#76B900" stop-opacity="0"></stop>
+          <stop offset="50%" stop-color="#76B900" stop-opacity="1"></stop>
+          <stop offset="100%" stop-color="#76B900" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <line x1="2" y1="3" x2="98" y2="3" stroke-width="1.5" class="{{ 'stroke-white/10' if heroDark else 'stroke-navy-200' }}"></line>
+      <line x1="2" y1="3" x2="98" y2="3" stroke="url(#{{ uid }})" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="30 80" class="flow-line-dash" style="animation-delay: {{ delay }}s"></line>
+    </svg>
+  {% endif %}
+{% endmacro %}
+
+{# Elbow-routed fan lines: one path PER node, bending from a shared trunk
+   stub at the hub side out to each node's own row on the block side — so
+   a 3-node group reads as 3 individual right-angle connections converging
+   on the hub, not parallel lines or one shared line into a box.
+   flip=false: single/trunk side is LEFT (hub), fan side is RIGHT (block) — used for systems/outcomes.
+   flip=true:  single/trunk side is LEFT (block), fan side is RIGHT... inverted below for trigger, where
+               the block sits left of the connector and the hub sits right of it.
+   Desktop only — mobile stacks blocks vertically via a single connector instead. #}
+{% macro flowFanLines(nodes, heroDark, uidPrefix, flip) %}
+  {# Mobile: blocks stack vertically, so a vertical connector between them reads correctly. #}
+  <div class="flex h-8 w-full items-center justify-center py-1 sm:hidden" aria-hidden="true">
+    <div class="h-full w-1.5">{{ flowLineSvg(heroDark, uidPrefix + "-m", 0, true) }}</div>
+  </div>
+  {# Desktop: elbow paths, one per node, sized to match the block's row layout (h-11 rows + gap-2 + p-2.5). #}
+  {% set rowH = 44 %}
+  {% set gap = 8 %}
+  {% set n = nodes.length %}
+  {% set rowsH = n * rowH + (n - 1) * gap %}
+  {% set totalH = rowsH + 20 %}
+  {% set centerY = 10 + (rowsH / 2) %}
+  {% set trunkX = 20 %}
+  <div class="hidden flex-shrink-0 sm:block sm:w-10" style="height: {{ totalH }}px;" aria-hidden="true">
+    <svg viewBox="0 0 40 {{ totalH }}" preserveAspectRatio="none" class="h-full w-full">
+      <defs>
+        <linearGradient id="{{ uidPrefix }}-grad" gradientUnits="userSpaceOnUse" x1="{{ '40' if flip else '0' }}" y1="0" x2="{{ '0' if flip else '40' }}" y2="0">
+          <stop offset="0%" stop-color="#76B900" stop-opacity="0"></stop>
+          <stop offset="55%" stop-color="#76B900" stop-opacity="1"></stop>
+          <stop offset="100%" stop-color="#76B900" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      {% for node in nodes %}
+        {% set yi = 10 + (loop.index0 * (rowH + gap)) + (rowH / 2) %}
+        {% if flip %}
+          {% set d = "M0 " ~ yi ~ " H " ~ trunkX ~ " V " ~ centerY ~ " H 40" %}
+        {% else %}
+          {% set d = "M0 " ~ centerY ~ " H " ~ trunkX ~ " V " ~ yi ~ " H 40" %}
+        {% endif %}
+        <path d="{{ d }}" fill="none" stroke-width="1.5" class="{{ 'stroke-white/10' if heroDark else 'stroke-navy-200' }}"></path>
+        <path d="{{ d }}" fill="none" stroke="url(#{{ uidPrefix }}-grad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="30 80" class="flow-line-dash" style="animation-delay: {{ loop.index0 * 0.3 }}s"></path>
+      {% endfor %}
+    </svg>
+  </div>
+{% endmacro %}
+
+{% macro flowOutcomes(features, heroDark) %}
+  <div class="flex flex-col justify-center gap-2 rounded-xl border p-2.5 {{ 'border-white/10 bg-white/5' if heroDark else 'border-navy-100/70 bg-navy-50/50' }}">
+    <span class="px-1 font-mono text-[10px] uppercase tracking-wider {{ 'text-white/40' if heroDark else 'text-navy-400' }}">Outcomes</span>
+    {% for feature in features %}
+      <div class="flex h-11 items-center gap-2 rounded-lg px-3 py-2 {{ 'bg-white/10' if heroDark else 'bg-white' }}">
+        <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
+        <span class="text-[13px] font-medium leading-snug {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ feature }}</span>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{# =====================================================
+   USE CASES — segmented tab bar over a split content/visual
+   card (Kore.ai's "Built for how your users actually search"
+   tabbed pattern), restyled with our navy/mono/#76B900 accent
+   system. Panel content is generic off product.useCases.items
+   (title/description/features) so it works unmodified for
+   search and ai-crm — those keep the tab bar + one-panel-at-a-time
+   split layout. Orca items additionally define `systems` (and
+   optionally `trigger`); when present (isFlowLayout), the tab bar
+   is skipped entirely and all flow diagrams render stacked in one
+   view (2026-09-27, per request — no tab switching for Orca).
+   ===================================================== #}
+{% set isFlowLayout = product.useCases.items[0].systems is defined %}
+<section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="usecases-heading" x-data="{ active: 0 }">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="usecases-heading" class="mb-8 text-center text-[26px] font-medium leading-[1.2] sm:text-[30px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
+      {{ product.useCases.heading }}
+    </h2>
+
+    {% if not isFlowLayout and product.useCases.items and product.useCases.items.length > 1 %}
+      <div role="tablist" aria-label="{{ product.useCases.heading }}" class="mb-6 flex flex-wrap items-center justify-center gap-2" data-reveal>
+        {% for item in product.useCases.items %}
+          <button
+            type="button"
+            role="tab"
+            id="usecase-tab-{{ loop.index0 }}"
+            aria-controls="usecase-panel-{{ loop.index0 }}"
+            :aria-selected="active === {{ loop.index0 }} ? 'true' : 'false'"
+            :tabindex="active === {{ loop.index0 }} ? 0 : -1"
+            @click="active = {{ loop.index0 }}"
+            @keydown.right.prevent="active = (active + 1) % {{ product.useCases.items.length }}; $nextTick(() => $refs['usecaseTab' + active].focus())"
+            @keydown.left.prevent="active = (active - 1 + {{ product.useCases.items.length }}) % {{ product.useCases.items.length }}; $nextTick(() => $refs['usecaseTab' + active].focus())"
+            x-ref="usecaseTab{{ loop.index0 }}"
+            class="rounded-full px-4 py-2 font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+            :class="active === {{ loop.index0 }} ? '{{ 'bg-white text-navy-950' if heroDark else 'bg-navy-900 text-white' }}' : '{{ 'bg-white/5 text-white/60 hover:bg-white/10' if heroDark else 'bg-navy-50/70 text-navy-500 hover:bg-navy-100' }}'"
+          >
+            {{ item.title }}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="{{ 'overflow-hidden rounded-2xl border shadow-subtle divide-y ' + ('border-white/10 bg-white/5 divide-white/10' if heroDark else 'border-navy-100/60 bg-white divide-navy-100/70') if isFlowLayout }}">
+    {% for item in product.useCases.items %}
+      <div
+        id="usecase-panel-{{ loop.index0 }}"
+        {% if not isFlowLayout %}
+        role="tabpanel"
+        aria-labelledby="usecase-tab-{{ loop.index0 }}"
+        x-show="active === {{ loop.index0 }}"
+        {% if not loop.first %}x-cloak{% endif %}
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        {% endif %}
+        class="{{ '' if isFlowLayout else 'overflow-hidden rounded-2xl border shadow-subtle ' + ('border-white/10 bg-white/5' if heroDark else 'border-navy-100/60 bg-white') + ' ' + ('' if item.systems and item.systems.length else 'grid grid-cols-1 lg:grid-cols-2') }}"
+        data-reveal
+      >
+        {% if item.systems and item.systems.length %}
+          {# ---- Coordination flow diagram (orca): trigger → hub → systems → outcomes.
+               No per-item heading/description/CTA here (2026-09-27) — the section's
+               single h2 + one shared CTA (rendered once, after the loop) cover the
+               whole merged card; each row keeps only a small label for context. #}
+          <div class="p-6 sm:p-8">
+            <div class="mb-5 flex justify-center">
+              <span class="rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-wide {{ 'bg-white/10 text-white/70' if heroDark else 'bg-navy-50 text-navy-500' }}">{{ item.title }}</span>
+            </div>
+
+            <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-2">
+              {% if item.trigger and item.trigger.length %}
+                <div class="sm:min-w-[140px]">{{ flowBlock(item.trigger, heroDark) }}</div>
+                {{ flowFanLines(item.trigger, heroDark, "uc-flow-" + loop.index0 + "-a", true) }}
+              {% endif %}
+
+              {{ flowCenter(heroDark) }}
+
+              {{ flowFanLines(item.systems, heroDark, "uc-flow-" + loop.index0 + "-b", false) }}
+              <div class="sm:min-w-[160px]">{{ flowBlock(item.systems, heroDark) }}</div>
+
+              {% if item.features and item.features.length %}
+                {{ flowFanLines(item.features, heroDark, "uc-flow-" + loop.index0 + "-c", false) }}
+                <div class="sm:min-w-[170px]">{{ flowOutcomes(item.features, heroDark) }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% else %}
+          {# ---- Legacy split layout (search, ai-crm) — unchanged ---- #}
+          <div class="flex flex-col justify-center p-8 sm:p-10">
+            <p class="text-[20px] font-semibold leading-snug sm:text-[22px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ item.title }}</p>
+            <p class="mt-2 text-[14px] leading-relaxed sm:text-[15px] {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.description }}</p>
+
+            {% if item.features and item.features.length %}
+              <ul class="mt-6 border-t {{ 'border-white/10' if heroDark else 'border-navy-100/70' }}">
+                {% for feature in item.features %}
+                  <li class="flex items-center gap-3 border-b py-3.5 {{ 'border-white/10' if heroDark else 'border-navy-100/70' }}">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg {{ 'bg-white/10 text-[#9ee62f]' if heroDark else 'bg-[#F0F5E8] text-[#5a9100]' }}" aria-hidden="true">
+                      {{ useCaseIcon(loop.index0) }}
+                    </span>
+                    <span class="text-[14px] font-medium {{ 'text-white' if heroDark else 'text-[#111827]' }}">{{ feature }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            <a
+              href="{{ product.hero.ctaPrimary.href }}"
+              class="mt-7 inline-flex w-fit items-center gap-2 rounded-md border px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 {{ 'border-white/20 text-white hover:border-white/40 hover:bg-white/10' if heroDark else 'border-navy-200 text-navy-700 hover:border-navy-400 hover:bg-navy-50' }}"
+            >
+              {{ product.hero.ctaPrimary.label }}
+              <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div class="relative flex items-center justify-center p-8 sm:p-10 {{ 'bg-white/5' if heroDark else 'bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40' }}" aria-hidden="true">
+            <div class="flex w-full max-w-[260px] flex-col items-center gap-5 rounded-xl border p-6 shadow-md {{ 'border-white/10 bg-navy-900/70' if heroDark else 'border-white/70 bg-white' }}">
+              <span class="flex items-center gap-2 self-start rounded-full px-3 py-1.5 {{ 'bg-white/10' if heroDark else 'bg-navy-50' }}">
+                <span class="usecase-engine-ping h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]"></span>
+                <span class="font-mono text-[10px] uppercase tracking-wider {{ 'text-white/60' if heroDark else 'text-navy-500' }}">{{ item.title }}</span>
+              </span>
+
+              <div class="relative flex h-[68px] w-full items-center justify-center">
+                <span class="benefit-pulse-ring absolute h-12 w-12 rounded-full border border-[#76B900]/40"></span>
+                <span class="benefit-pulse-ring absolute h-12 w-12 rounded-full border border-[#76B900]/40" style="animation-delay: 0.6s"></span>
+                <span class="benefit-pulse-ring absolute h-12 w-12 rounded-full border border-[#76B900]/40" style="animation-delay: 1.2s"></span>
+                <span class="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-navy-950 text-white shadow-md">
+                  {{ useCaseIcon(loop.index0, "h-5 w-5") }}
+                </span>
+              </div>
+
+              {% if item.features and item.features.length %}
+                <div class="w-full space-y-2">
+                  {% for feature in item.features %}
+                    <div class="benefit-list-row flex items-center gap-2 rounded-md px-3 py-2 {{ 'bg-white/10' if heroDark else 'bg-navy-50/70' }}" style="animation-delay: {{ loop.index0 * 0.5 }}s">
+                      <svg class="h-3.5 w-3.5 flex-shrink-0 text-[#76B900]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"></path></svg>
+                      <span class="truncate text-[11px] {{ 'text-white/70' if heroDark else 'text-navy-600' }}">{{ feature }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    {% if isFlowLayout %}
+      <div class="flex justify-center border-t p-6 sm:p-8 {{ 'border-white/10' if heroDark else 'border-navy-100/70' }}">
+        <a
+          href="{{ product.hero.ctaPrimary.href }}"
+          class="inline-flex w-fit items-center gap-2 rounded-md border px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 {{ 'border-white/20 text-white hover:border-white/40 hover:bg-white/10' if heroDark else 'border-navy-200 text-navy-700 hover:border-navy-400 hover:bg-navy-50' }}"
+        >
+          {{ product.hero.ctaPrimary.label }}
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        </a>
+      </div>
+    {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes usecase-engine-ping {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(118, 185, 0, 0.4); }
+    50% { box-shadow: 0 0 0 4px rgba(118, 185, 0, 0); }
+  }
+  .usecase-engine-ping {
+    animation: usecase-engine-ping 1.6s ease-in-out infinite;
+  }
+
+  @keyframes orca-hub-glow {
+    0%, 100% { opacity: 0.55; transform: scale(0.92); }
+    50% { opacity: 1; transform: scale(1.08); }
+  }
+  .orca-hub-glow {
+    background: radial-gradient(circle, rgba(118, 185, 0, 0.55) 0%, rgba(118, 185, 0, 0.15) 45%, transparent 72%);
+    filter: blur(6px);
+    animation: orca-hub-glow 2.4s ease-in-out infinite;
+  }
+
+  @keyframes orca-hub-pulse {
+    0%, 100% { box-shadow: 0 0 16px 2px rgba(118, 185, 0, 0.35), inset 0 0 0 1px rgba(118, 185, 0, 0.3); }
+    50% { box-shadow: 0 0 32px 8px rgba(118, 185, 0, 0.6), inset 0 0 0 1px rgba(118, 185, 0, 0.5); }
+  }
+  .orca-hub-pulse {
+    animation: orca-hub-pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes flow-line-dash {
+    0% { stroke-dashoffset: 220; }
+    100% { stroke-dashoffset: -220; }
+  }
+  .flow-line-dash {
+    animation: flow-line-dash 2.6s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .usecase-engine-ping,
+    .orca-hub-glow,
+    .orca-hub-pulse,
+    .flow-line-dash {
+      animation: none !important;
+    }
+  }
+</style>
+
+{# =====================================================
+   PLATFORM TIE-IN — dark navy card, cross-linking the other
+   two platform pillars by name. Reuses industry.njk's Platform
+   Tie-In card pattern. Removed for Orca only (2026-09-27) — the
+   Benefits section above already carries this same "shared
+   platform" message (see orcaBenefitMockup index 1), so this
+   card was redundant on Orca's page specifically. Search and
+   AI CRM keep it.
+   ===================================================== #}
+{% if product.id != "orca" %}
+<section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="platform-tie-in-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-2xl border p-8 sm:p-10 lg:p-12 {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }}"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
+      ></div>
+      {# Same background-pattern treatment as the "AI & Machine Learning" capability card on
+         about.njk — a different asset (card-info-01, not card-info-02) so this card doesn't
+         repeat that card's exact texture. Applied to the whole card, not just the pillars. #}
+      <div
+        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center opacity-[0.1]"
+        style="background-image: url('/assets/images/card-info-01.avif');"
+        aria-hidden="true"
+      ></div>
+
+      <div class="relative z-10">
+        <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider text-white/50">Platform</span>
+        <h2 id="platform-tie-in-heading" class="max-w-xl text-[24px] font-medium leading-[1.2] text-white sm:text-[28px]">
+          {{ product.platformTieIn.heading }}
+        </h2>
+        <p class="mt-3 max-w-xl text-[14px] leading-relaxed text-white/60">
+          {{ product.platformTieIn.body }}
+        </p>
+
+        {% if product.platformTieIn.pillars and product.platformTieIn.pillars.length %}
+          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {% for pillar in product.platformTieIn.pillars %}
+              <a href="{{ pillar.href }}" class="group rounded-xl border border-white/15 bg-white/5 p-4 transition-colors duration-200 hover:border-white/30 hover:bg-white/10">
+                <span class="flex items-center gap-2 font-mono text-[12px] uppercase tracking-wide text-white">
+                  {{ pillar.name }}
+                  <span class="h-1 w-1 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+                </span>
+                <span class="mt-1.5 block text-[13px] leading-relaxed text-white/60">{{ pillar.description }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <a
+          href="{{ product.platformTieIn.cta.href }}"
+          class="mt-7 inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          {{ product.platformTieIn.cta.label }}
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   PROOF / TESTIMONIAL — single quote card, reused from
+   homepage-v2's Proof/Testimonials pattern. Renders only when
+   a real client quote exists for this product.
+   ===================================================== #}
+{% if product.testimonial %}
+<section class="px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16 lg:px-8" aria-labelledby="testimonial-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="testimonial-heading" class="sr-only">What our clients say</h2>
+    <div class="relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-8 shadow-md sm:p-10" data-reveal>
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, rgba(118, 185, 0, 0.05) 0%, transparent 60%);"></div>
+      <blockquote class="relative z-10 max-w-lg text-[22px] font-medium leading-snug text-[#111827] sm:text-[26px]">
+        "{{ product.testimonial.quote }}"
+      </blockquote>
+      <footer class="relative z-10 mt-8 flex items-center gap-3">
+        <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 font-mono text-[12px] font-semibold uppercase text-[#6B7280]">
+          {{ product.testimonial.company[0] }}
+        </span>
+        <cite class="text-[13px] font-normal not-italic leading-tight text-[#6B7280]">{{ product.testimonial.role }}</cite>
+      </footer>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   FAQ — accordion, reused from homepage-v2's FAQ pattern.
+   Renders only when the product has real FAQ content.
+   ===================================================== #}
+{% if product.faq and product.faq.length %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider {{ 'text-white/50' if heroDark else 'text-[#9CA3AF]' }}">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-medium leading-[1.2] tracking-tight sm:text-[32px] lg:text-[36px] {{ 'text-white' if heroDark else 'text-[#111827]' }}">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="{{ 'divide-y divide-white/10' if heroDark else 'divide-y divide-navy-100' }}" data-reveal-stagger>
+        {% for item in product.faq %}
+          <div class="py-5">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="flex w-full items-center justify-between gap-4 text-left group"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="faq-answer-{{ loop.index }}"
+            >
+              <span class="text-[16px] font-medium leading-snug transition-colors sm:text-[17px] {{ 'text-white group-hover:text-white/80' if heroDark else 'text-[#111827] group-hover:text-navy-600' }}">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border transition-transform duration-200 {{ 'border-white/20 text-white/70' if heroDark else 'border-navy-200 text-navy-500' }}" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              id="faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed sm:text-[15px] {{ 'text-white/60' if heroDark else 'text-[#6B7280]' }}">{{ item.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   CLOSING DUAL CTA — same shell/copy pattern as homepage-v2's
+   and industry.njk's closing CTA banner.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] border px-6 py-14 text-center sm:px-12 sm:py-16 {{ 'border-white/10 bg-navy-900/60 backdrop-blur-md' if heroDark else 'border-transparent bg-navy-950' }}"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+        {{ product.closingCta.eyebrow }}
+      </span>
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-medium leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        {{ product.closingCta.headline }}
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        {{ product.closingCta.body }}
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="{{ product.closingCta.ctaPrimary.href }}"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          {{ product.closingCta.ctaPrimary.label }}
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="{{ product.closingCta.ctaSecondary.href }}"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          {{ product.closingCta.ctaSecondary.label }}
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if heroDark %}
+  </div>
+</div>
+{% endif %}
+
+{% include "partials/footer-v2.njk" %}

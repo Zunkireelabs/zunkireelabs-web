@@ -1,0 +1,1020 @@
+---
+layout: base.njk
+title: "AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs"
+description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
+permalink: /homepage-v2-canvas/
+hideChrome: true
+bodyClass: "v2-inter"
+---
+
+{# =====================================================
+   HOMEPAGE V2 — WEBGL CANVAS PREVIEW
+   Preview only at /homepage-v2-canvas/ — the static SVG
+   homepage-v2.njk and the live homepage index.njk are untouched.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<!-- Page-wide background — WebGL canvas rendering (partials/hero-canvas-bg.njk).
+     Fixed to the viewport and included once here so it reads as one continuous
+     animated backdrop behind the entire page. -->
+{% include "partials/hero-canvas-bg.njk" %}
+
+{# =====================================================
+   HOMEPAGE HERO — Website V2 (rebuilt 2026-07-21 as a direct
+   structural/visual copy of the Kore.ai homepage hero, per the
+   reference screenshot the user shared — literal copy for now,
+   brand-color pass ("tweak the designs") comes later. Matches:
+   swirling pale radial-gradient backdrop behind the whole hero,
+   headline + subhead, a dual CTA pair directly under the subhead
+   (mono-labelled, black primary / outline secondary), then the
+   "Platform teaser" dark card butting up against the hero below
+   with no gap — same as the reference.
+
+   No bg color on this section itself — the page-wide fixed ribbon
+   (included above, once, at the top of the page) shows through
+   directly instead of being covered by a solid hero-only fill.
+   ===================================================== #}
+<section
+  class="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 pt-0 pb-4 sm:px-6 sm:pt-0 lg:px-8 lg:pt-0"
+  aria-labelledby="hero-v2-heading"
+>
+
+  <div
+    class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center"
+  >
+
+    <!-- Headline — Display style, §5: 57px/500/1.1, normal tracking. Copy
+         carries CONTENT_SUMMARY.md §5's value-prop meaning ("we already run
+         this, live, for your industry") with commas instead of the doc's
+         em dashes. Manual <br> (not `text-wrap: balance`, which left line 2
+         wider than line 1 — the opposite of the reference's taper):
+         breaking after "live," gives line 1 a little more width than
+         line 2 while both stay centered on the same axis. -->
+    <h1
+      id="hero-v2-heading"
+      class="text-center text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-navy-900 sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
+      data-reveal
+    >
+      We already run this, live,<br />for your industry.
+    </h1>
+
+    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size).
+         Line 1 needed to be narrower ("Not a prototype. Not a pilot. Already"
+         measured ~545px — too wide), so "Already" moves back to line 2. -->
+    <p
+      class="mt-4 max-w-[500px] px-4 text-center text-balance text-[26px] font-medium leading-relaxed text-navy-500"
+      data-reveal
+    >
+      Not a prototype. Not a pilot.<br />Already running in production today.
+    </p>
+
+    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs) -->
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" data-reveal>
+      <a
+        href="/contact/"
+        class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        Get a demo
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+      </a>
+      <a
+        href="/services/"
+        class="inline-flex items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+      >
+        Explore the platform
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Scroll cue — decorative only, non-conversion-critical (direct Kore.ai reference) -->
+  <div
+    class="pointer-events-none absolute bottom-8 right-6 z-10 hidden items-center gap-3 lg:right-10 lg:flex"
+    aria-hidden="true"
+  >
+    <span
+      class="text-[11px] font-medium uppercase tracking-wider text-navy-400"
+      style="writing-mode: vertical-rl;"
+    >
+      Scroll to explore
+    </span>
+    <svg class="h-4 w-4 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>
+
+{# =====================================================
+   PLATFORM TEASER — Website V2
+   Follows Kore.ai's "Meet {Artemis}" pattern instead of their
+   generic platform strip — names one flagship, already-shipped
+   product (Zunkiree Search) directly in the headline instead of
+   an abstract "platform" claim. Same dark rounded card shell as
+   before: mono eyebrow → headline w/ bracket-styled product name
+   + "Live" badge → one-line support copy (reused verbatim from
+   productsDetails.json.search.description, the same copy powering
+   /products/search/) → circular arrow CTA on the right, on a dark
+   navy-950 surface with the existing green/navy gradient bloom.
+   No new image asset for now — text-only card, per explicit
+   direction.
+
+   Links to /products/search/ — Search already has a real, fully
+   built product page, so the CTA now goes straight there instead
+   of the old /services/ placeholder.
+   ===================================================== #}
+<section class="-mt-8 px-4 pb-8 sm:-mt-10 sm:px-6 sm:pb-10 lg:-mt-12 lg:px-8 lg:pb-12" data-reveal>
+  <div class="mx-auto max-w-5xl">
+    <a
+      href="/products/search/"
+      class="group relative flex flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl bg-navy-950 p-8 transition-colors duration-200 hover:bg-navy-900 sm:p-10 md:flex-row md:items-center lg:p-12"
+    >
+      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10) -->
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.25) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.3) 0%, transparent 60%);"
+      ></div>
+
+      <div class="relative z-10 min-w-0 max-w-xl">
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+          A Zunkiree Labs Product
+        </span>
+        <h2 class="mb-3 text-[26px] font-medium leading-[1.2] text-white sm:text-[30px]">
+          Introducing <span class="text-[#76B900]">{</span> <span class="italic">Zunkiree Search</span> <span class="text-[#76B900]">}</span>
+          <span class="ml-2 inline-flex translate-y-[-0.15em] items-center rounded-full bg-[#76B900] px-2.5 py-1 align-middle text-[10px] font-semibold uppercase tracking-wider text-white">
+            Live
+          </span>
+        </h2>
+        <p class="text-[14px] leading-relaxed text-white/60">
+          Transform how users discover information with natural language search.
+          Deliver direct answers instead of link lists, reducing support queries by 45%.
+        </p>
+      </div>
+
+      <span
+        class="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-white text-navy-950 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+        aria-hidden="true"
+      >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 17L17 7M17 7H8m9 0v9" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+{# =====================================================
+   PLATFORM PILLARS — Website V2
+   Structural home is the OLD homepage's "AI infrastructure, built to
+   scale." 4-card pillar section (real, already-live site copy — a
+   confirmed reuse candidate, CONTENT_SUMMARY.md §7) — but reskinned
+   with glass-effect cards instead of the retired solid-blue/`sky`
+   treatment (MASTER_DESIGN_SPEC.md §93/§114 retires that accent), and
+   each card's copy reworked to also carry the Kore.ai 3-tier concept
+   (Pre-built → Accelerators → Tailored/Platform) from the "Pre-built
+   Applications" row the user referenced, folded in as one blended set
+   instead of two separate sections:
+     1. Pre-built  (Kore's "Pre-built Applications")
+     2. Accelerators + deploy discipline (Kore's "Application Accelerators")
+     3. Scale to any use case (Kore's "Tailored Applications")
+     4. Own it completely (old homepage's differentiator, kept — no
+        Kore equivalent, but a real, doc-confirmed differentiator,
+        CONTENT_SUMMARY.md §11)
+
+   Deliberately generic/architecture-level language, no per-vertical
+   "live" claims — avoids the overclaim conflict the previous
+   Kore-copy draft had with the Industry Showcase section above
+   (Healthcare/Real Estate are capability-led there, not "live").
+   ===================================================== #}
+{% set pillars = [
+  {
+    title: "Pre-built AI applications",
+    description: "Real applications, already running in production — not concepts, not pilots.",
+    mockupImage: ""
+  },
+  {
+    title: "Deploy AI to production",
+    description: "Tested, monitored systems shipped on schedule with reusable accelerators.",
+    mockupImage: ""
+  },
+  {
+    title: "Scale it. Own it completely.",
+    description: "Grows with demand, extends to any use case on your code, your infrastructure. No lock-in.",
+    mockupImage: ""
+  }
+] %}
+
+<style>
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 25s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mockups base cursor */
+  .simulated-cursor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 40;
+    width: 1px;
+    height: 1px;
+  }
+
+  /* Card 1 Animations */
+  .mockup-cursor-1 { animation: cursor-move-1 10s infinite ease-in-out; }
+  .mockup-click-ripple-1 { animation: ripple-anim-1 10s infinite ease-out; }
+  .mockup-search-text::after { content: ""; animation: typing-search 10s infinite; }
+  .mockup-chip-edu { animation: chip-edu-highlight 10s infinite; }
+  .mockup-row-edu { animation: row-edu-active 10s infinite; }
+
+  @keyframes cursor-move-1 {
+    0% { top: 160px; left: 80%; }
+    15% { top: 36px; left: 30%; }
+    18% { top: 36px; left: 30%; transform: scale(0.85); }
+    21% { top: 36px; left: 30%; transform: scale(1); }
+    40% { top: 75px; left: 16%; }
+    43% { top: 75px; left: 16%; transform: scale(0.85); }
+    46% { top: 75px; left: 16%; transform: scale(1); }
+    88% { top: 75px; left: 16%; }
+    94%, 100% { top: 160px; left: 80%; }
+  }
+  @keyframes ripple-anim-1 {
+    0%, 17.9% { transform: scale(0.2); opacity: 0; }
+    18% { transform: scale(0.2); opacity: 1; }
+    20% { transform: scale(2.2); opacity: 0; }
+    20.1%, 42.9% { transform: scale(0.2); opacity: 0; }
+    43% { transform: scale(0.2); opacity: 1; }
+    45% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes typing-search {
+    0%, 18% { content: ""; }
+    20% { content: "E"; }
+    22% { content: "Ed"; }
+    24% { content: "Edu"; }
+    26% { content: "Educ"; }
+    28% { content: "Educa"; }
+    30% { content: "Educat"; }
+    32% { content: "Educati"; }
+    34% { content: "Educatio"; }
+    36%, 88% { content: "Education CRM"; }
+    90%, 100% { content: ""; }
+  }
+  @keyframes chip-edu-highlight {
+    0%, 43% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
+    45%, 88% { background-color: #0f172a; border-color: #0f172a; color: #fff; }
+    89%, 100% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
+  }
+  @keyframes row-edu-active {
+    0%, 43% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+    45%, 88% { background-color: rgba(255,255,255,0.35); border-color: rgba(118, 185, 0, 0.4); box-shadow: 0 0 10px rgba(118, 185, 0, 0.15); }
+    89%, 100% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+  }
+
+  /* Card 2 Animations */
+  .mockup-cursor-2 { animation: cursor-move-2 10s infinite ease-in-out; }
+  .mockup-click-ripple-2 { animation: ripple-anim-2 10s infinite ease-out; }
+  .mockup-run-btn-anim { animation: button-click-effect 10s infinite; }
+  .mockup-progress-bar { animation: progress-fill 10s infinite ease-out; }
+  .mockup-status-badge::after { content: "Idle"; animation: status-badge-anim 10s infinite; }
+  .mockup-latency-val::after { content: "--"; animation: latency-text-anim 10s infinite; }
+  .mockup-status-val::after { content: "Idle"; animation: status-val-text-anim 10s infinite; }
+  .mockup-dot-1 { animation: node-1-active 10s infinite; }
+  .mockup-dot-2 { animation: node-2-active 10s infinite; }
+  .mockup-dot-3 { animation: node-3-active 10s infinite; }
+
+  @keyframes cursor-move-2 {
+    0% { top: 190px; left: 80%; }
+    20% { top: 183px; left: 50%; }
+    23% { top: 183px; left: 50%; transform: scale(0.85); }
+    26% { top: 183px; left: 50%; transform: scale(1); }
+    90%, 100% { top: 190px; left: 80%; }
+  }
+  @keyframes ripple-anim-2 {
+    0%, 22.9% { transform: scale(0.2); opacity: 0; }
+    23% { transform: scale(0.2); opacity: 1; }
+    25% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes button-click-effect {
+    0%, 22.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
+    23%, 25% { background-color: #76B900; border-color: #76B900; color: #fff; transform: scale(0.95); }
+    26.1%, 90% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
+  }
+  @keyframes progress-fill {
+    0%, 24.9% { width: 0%; }
+    60%, 90% { width: 100%; }
+    92%, 100% { width: 0%; }
+  }
+  @keyframes status-badge-anim {
+    0%, 23.9% { content: "Idle"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
+    24%, 39% { content: "Building"; background-color: #fef3c7; color: #d97706; }
+    40%, 59% { content: "Testing"; background-color: #dbeafe; color: #2563eb; }
+    60%, 90% { content: "Deployed"; background-color: rgba(118, 185, 0, 0.15); color: #76B900; }
+    91%, 100% { content: "Idle"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
+  }
+  @keyframes node-1-active {
+    0%, 27.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    28%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes node-2-active {
+    0%, 39.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    40%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes node-3-active {
+    0%, 59.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    60%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes latency-text-anim {
+    0%, 59.9% { content: "--"; }
+    60%, 90% { content: "43ms"; }
+    91%, 100% { content: "--"; }
+  }
+  @keyframes status-val-text-anim {
+    0%, 23.9% { content: "Idle"; color: rgba(15,23,42,0.5); }
+    24%, 59% { content: "Running"; color: #d97706; }
+    60%, 90% { content: "Active & Healthy"; color: #76B900; }
+    91%, 100% { content: "Idle"; color: rgba(15,23,42,0.5); }
+  }
+
+  /* Card 3 Animations */
+  .mockup-cursor-3 { animation: cursor-move-3 10s infinite ease-in-out; }
+  .mockup-click-ripple-3 { animation: ripple-anim-3 10s infinite ease-out; }
+  .mockup-scale-btn-anim { animation: button-click-scale 10s infinite; }
+  .mockup-replicas-text::after { content: "3"; animation: replica-text-anim 10s infinite; }
+  .mockup-terminal { animation: terminal-slide-up 10s infinite ease-out; }
+  .mockup-server-node-1, .mockup-server-node-2, .mockup-server-node-3 { animation: node-1-3-active 10s infinite; }
+  .mockup-server-node-4, .mockup-server-node-5, .mockup-server-node-6 { animation: node-4-6-active 10s infinite; }
+
+  @keyframes cursor-move-3 {
+    0% { top: 170px; left: 80%; }
+    25% { top: 32px; left: 84%; }
+    28% { top: 32px; left: 84%; transform: scale(0.85); }
+    31% { top: 32px; left: 84%; transform: scale(1); }
+    90%, 100% { top: 170px; left: 80%; }
+  }
+  @keyframes ripple-anim-3 {
+    0%, 27.9% { transform: scale(0.2); opacity: 0; }
+    28% { transform: scale(0.2); opacity: 1; }
+    30% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes button-click-scale {
+    0%, 27.9% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
+    28%, 35% { background-color: #76B900; border-color: #76B900; color: #fff; }
+    35.1%, 90% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
+  }
+  @keyframes replica-text-anim {
+    0%, 29.9% { content: "3"; color: inherit; font-weight: normal; }
+    30%, 90% { content: "6"; color: #76B900; font-weight: bold; }
+    91%, 100% { content: "3"; color: inherit; font-weight: normal; }
+  }
+  @keyframes terminal-slide-up {
+    0%, 29.9% { transform: translateY(100%); opacity: 0; }
+    33%, 88% { transform: translateY(0); opacity: 1; }
+    90%, 100% { transform: translateY(100%); opacity: 0; }
+  }
+  @keyframes node-1-3-active {
+    0%, 29.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+    30%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
+    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+  }
+  @keyframes node-4-6-active {
+    0%, 34.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+    35%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
+    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+  }
+</style>
+
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-16" aria-labelledby="platform-pillars-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="platform-pillars-heading" class="sr-only">AI infrastructure, built to scale</h2>
+
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3" data-reveal>
+      {% for pillar in pillars %}
+        <div class="relative flex min-h-[420px] flex-col rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle backdrop-blur-md">
+          <!-- Corner crosshair marks — decorative "technical precision" edge detail, glass bg untouched -->
+          <span class="pointer-events-none absolute left-2 top-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute right-2 top-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute bottom-2 left-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute bottom-2 right-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+
+          <div class="relative mb-3">
+            <h3 class="whitespace-nowrap text-center text-[20px] font-medium leading-[1.3] text-navy-900">
+              {{ pillar.title }}
+            </h3>
+          </div>
+          <p class="mb-6 text-[13.5px] leading-relaxed text-navy-500 [text-align:justify]">
+            {{ pillar.description }}
+          </p>
+
+          <!-- Mockup slot — real, lightweight glass interactive mockup -->
+          <div class="mt-auto flex flex-1 w-full items-center justify-center overflow-hidden rounded-lg border border-white/50 bg-white/10 relative min-h-[250px]">
+            {% if loop.index0 == 0 %}
+              {# Pre-built AI applications mockup — clean glass rows with real client logos and search spotlight #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Simulated Search Spotlight Input -->
+                <div class="relative z-10 flex items-center w-full rounded-lg border border-navy-100/30 bg-white/70 px-3 py-2 backdrop-blur-sm shadow-sm">
+                  <svg class="h-3.5 w-3.5 text-navy-900/60 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <div class="text-[12px] font-medium text-navy-900/80 flex-1 h-4 flex items-center mockup-search-text"></div>
+                  <div class="mockup-search-cursor h-3.5 w-[2px] bg-navy-900/60 ml-0.5 animate-pulse flex-shrink-0"></div>
+                </div>
+
+                <!-- Industry chips -->
+                <div class="relative z-10 flex gap-1.5 mt-2 flex-wrap">
+                  <span class="mockup-chip-edu px-2 py-0.5 rounded-full border border-white/40 text-[9px] font-mono uppercase tracking-wide transition-all duration-300">Edu</span>
+                  <span class="px-2 py-0.5 rounded-full border border-sky-200 bg-sky-50 text-[9px] font-mono uppercase tracking-wide text-navy-900 font-semibold">Health</span>
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/10 text-[9px] font-mono uppercase tracking-wide text-navy-900/40">Real Estate</span>
+                </div>
+
+                <!-- List of live apps -->
+                <div class="relative z-10 flex flex-col gap-2 mt-3 w-full">
+                  <div class="mockup-row-edu flex items-center justify-between gap-3 rounded-lg border border-navy-100/20 bg-white/15 px-3 py-2 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <div class="flex items-center gap-2 min-w-0">
+                      <div class="min-w-0">
+                        <p class="truncate text-[12px] font-medium leading-tight text-navy-900">Education CRM</p>
+                        <p class="truncate text-[9.5px] leading-tight text-navy-900/50">Admizz · Routing</p>
+                      </div>
+                    </div>
+                    <span class="flex flex-shrink-0 items-center gap-1 bg-[#76B900]/10 px-2 py-0.5 rounded-full border border-[#76B900]/25">
+                      <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#76B900]/30"></span>
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#76B900]"></span>
+                      </span>
+                      <span class="font-mono text-[8px] font-bold uppercase tracking-wider text-[#76B900]">Live</span>
+                    </span>
+                  </div>
+
+                  <div class="flex items-center justify-between gap-3 rounded-lg border border-navy-100/20 bg-white/60 px-3 py-2 backdrop-blur-sm shadow-sm">
+                    <div class="flex items-center gap-2 min-w-0">
+                      <div class="min-w-0">
+                        <p class="truncate text-[12px] font-medium leading-tight text-navy-900">Shift Planner</p>
+                        <p class="truncate text-[9.5px] leading-tight text-navy-900/50">Healthcare · Shifts</p>
+                      </div>
+                    </div>
+                    <span class="flex flex-shrink-0 items-center gap-1 bg-sky-100/80 px-2 py-0.5 rounded-full border border-sky-300/30">
+                      <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400/30"></span>
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+                      </span>
+                      <span class="font-mono text-[8px] font-bold uppercase tracking-wider text-sky-600">Active</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-1 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-1 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% elif loop.index0 == 1 %}
+              {# Deploy AI to production mockup — clean node graphic and latency dashboard #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Pipeline Connection Flow Nodes -->
+                <div class="relative z-10 flex items-center justify-between w-full mt-2 px-1">
+                  <div class="absolute left-[15%] right-[15%] top-1/2 -translate-y-1/2 h-[1px] bg-navy-200/40 pointer-events-none"></div>
+
+                  <!-- Node 1 -->
+                  <div class="mockup-dot-1 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80">Model</span>
+                  </div>
+
+                  <!-- Node 2 -->
+                  <div class="mockup-dot-2 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80 font-semibold">RAG</span>
+                  </div>
+
+                  <!-- Node 3 -->
+                  <div class="mockup-dot-3 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80">Prod</span>
+                  </div>
+                </div>
+
+                <!-- Telemetry Progress Dashboard -->
+                <div class="relative z-10 w-full flex flex-col gap-2 rounded-lg border border-navy-100/25 bg-white/70 p-3 mt-4 shadow-sm backdrop-blur-sm">
+                  <div class="flex items-center justify-between text-[11px] font-medium text-navy-900">
+                    <span>Deployment Status</span>
+                    <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 rounded mockup-status-badge font-bold"></span>
+                  </div>
+                  <!-- Progress bar -->
+                  <div class="h-1.5 w-full bg-navy-100/50 rounded-full overflow-hidden">
+                    <div class="h-full bg-[#76B900] rounded-full mockup-progress-bar"></div>
+                  </div>
+                  <!-- Mini Readouts -->
+                  <div class="flex justify-between mt-1 text-[10px] font-mono text-navy-900/60">
+                    <span>Latency: <span class="text-navy-900 font-bold mockup-latency-val"></span></span>
+                    <span>Status: <span class="text-navy-900 font-bold mockup-status-val"></span></span>
+                  </div>
+                </div>
+
+                <!-- Ship Accelerator Button -->
+                <div class="relative z-10 w-full mt-3 flex justify-center">
+                  <button class="mockup-run-btn px-4 py-1.5 rounded-lg border border-white/60 bg-white/30 text-[10px] font-mono uppercase tracking-wider text-navy-900/80 shadow-sm backdrop-blur-sm mockup-run-btn-anim font-bold">
+                    Ship Accelerator
+                  </button>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-2 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-2 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% else %}
+              {# Scale & Own completely mockup — clean code IDE editor and node cluster grid #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Browser/IDE mockup -->
+                <div class="relative z-10 w-full flex-1 rounded-lg border border-navy-100/30 bg-white/70 backdrop-blur-sm flex flex-col overflow-hidden shadow-sm min-h-[145px]">
+                  <!-- IDE Titlebar -->
+                  <div class="flex items-center justify-between px-3 py-1.5 border-b border-navy-100/20 bg-white/40 flex-shrink-0">
+                    <div class="flex gap-1 flex-shrink-0">
+                      <span class="w-1.5 h-1.5 rounded-full bg-red-400/80"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-yellow-400/80"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-green-400/80"></span>
+                    </div>
+                    <span class="text-[9px] font-mono text-navy-900/50">infra_scale.py</span>
+                    <button class="px-2 py-0.5 rounded border border-navy-900/20 bg-navy-900/5 text-[8px] font-mono uppercase tracking-wide flex-shrink-0 mockup-scale-btn-anim font-bold">
+                      Scale Up
+                    </button>
+                  </div>
+                  <!-- Code area -->
+                  <pre class="p-3 text-[10px] font-mono text-navy-900/80 overflow-hidden leading-relaxed text-left flex-1 select-none"><code><span class="text-navy-900 font-semibold">import</span> cluster
+
+app = cluster.init(
+  host=<span class="text-navy-900/50">"self_hosted"</span>,
+  replicas=<span class="text-[#76B900] font-bold mockup-replicas-text"></span>
+)</code></pre>
+                  <!-- Terminal Log Console overlay (slides up) -->
+                  <div class="mockup-terminal absolute bottom-0 left-0 right-0 border-t border-navy-100/20 bg-slate-900 p-3 font-mono text-[9px] text-slate-300 leading-normal translate-y-full transition-all duration-500 z-20">
+                    <p class="text-white/60 leading-none mb-1">> python infra_scale.py</p>
+                    <p class="leading-none mb-1 text-slate-400">> Auto-scaling to 6 nodes...</p>
+                    <p class="leading-none text-white font-bold">> Active pods: 6/6 (100% owned)</p>
+                  </div>
+                </div>
+
+                <!-- Server Grid Visual (6 active nodes) -->
+                <div class="relative z-10 w-full grid grid-cols-6 gap-2 mt-4 px-1 flex-shrink-0">
+                  <div class="mockup-server-node-1 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                  <div class="mockup-server-node-2 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                  <div class="mockup-server-node-3 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                  <div class="mockup-server-node-4 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                  <div class="mockup-server-node-5 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                  <div class="mockup-server-node-6 h-2.5 rounded bg-white/30 border border-white/30 transition-all duration-300"></div>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-3 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-3 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CLIENTS MARQUEE — Website V2
+   Continuous scrolling client track placed immediately below mockups.
+   ===================================================== #}
+{% set provenClients = [
+  { name: "Admizz", logo: "/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/images/clients/rapid-investment.webp" },
+  { name: "CMS Group", logo: "/images/clients/cms-group.webp" },
+  { name: "Mach24 Orbital", logo: "/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/images/clients/khems-cleaning.webp" }
+] %}
+<div class="w-full pb-20 sm:pb-24 lg:pb-28 overflow-hidden relative">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-navy-900/40 mb-8">Proven with clients running in production</p>
+    <div class="w-full overflow-hidden relative py-2">
+      <!-- Gradient Fade Edge Masks -->
+      <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-warm-off-white/30 to-transparent z-10"></div>
+      <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-warm-off-white/30 to-transparent z-10"></div>
+      
+      <div class="animate-marquee flex items-center gap-16">
+        <!-- Original List -->
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="h-6 w-auto object-contain brightness-0 opacity-40 select-none pointer-events-none" loading="lazy" />
+        {% endfor %}
+        <!-- Duplicated List for seamless loop -->
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="h-6 w-auto object-contain brightness-0 opacity-40 select-none pointer-events-none" loading="lazy" />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# =====================================================
+   INDUSTRY SELF-IDENTIFICATION — Website V2
+   PAGE_BLUEPRINTS.md §1, section 2 (immediately after hero).
+   COMPONENT_LIBRARY.md §3.5 Industry Showcase: Section Header +
+   Tabs (§1.5, pill-tabs) + Industry/Vertical Card (§4.2) per panel,
+   one full-width card per active tab (not a static 4-up grid).
+
+   Content sourced from CONTENT_SUMMARY.md §2/§4/§7 and
+   PAGE_BLUEPRINTS.md §1's confirmed-client list only — no
+   fabricated logos/quotes. Healthcare has no public client name
+   yet (capability framing only); Real Estate uses the sanctioned
+   capability-led variant (no CRE client exists).
+
+   CTAs route to /contact/ for now — the four vertical pages
+   (/ai-for-education/ etc., per CONTENT_SUMMARY.md §7) don't
+   exist yet and are built one section/page at a time per the
+   homepage-v2 working formula; update these once each vertical
+   page ships.
+
+   Design-token compliance (MASTER_DESIGN_SPEC.md):
+   - §4 Color: `#76B900` is the ONE accent hue everywhere — the old
+     `zunkiree-*` Tailwind scale (sage green) is a retired token and
+     must not appear in Website V2 markup. Tints are `#76B900` at low
+     opacity (derived from the same hue), never the sage scale.
+   - §10 Backgrounds (revised 2026-07-21): one consistent flat
+     `bg-warm-off-white` reused identically across every section on
+     this page (no ripple/ring/gradient effect) — instead of the
+     alternating white/pale-neutral scheme §10 otherwise specifies,
+     per explicit direction to keep one single flat look across all
+     of homepage-v2 rather than a different background per section.
+   - §8 Radius: `radius-lg` (rounded-2xl) for the card, `radius-md`
+     (rounded-lg) for nested sub-elements, `radius-pill` for tabs/pills.
+   - §5 Type scale: H2 28–32px/600, H3 20–22px/500, normal tracking
+   - §5 Mono: reserved for the stat numeral only, not for labels/tabs.
+   - §7 Spacing: card internal padding stays in the space-3–space-4
+     micro range (24–32px), not the section's own macro padding.
+   - §9 Elevation: `elevation-1` (subtle shadow + hairline border) is
+     the card's resting state — not `elevation-2`, since it's not
+     sitting on a busy/gradient background here.
+   ===================================================== #}
+{% set industries = [
+  {
+    label: "Education",
+    image: "/assets/images/industries/education.jpg",
+    headline: "Live for education consultancies and study-abroad recruiters.",
+    iconPath: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.083 12.083 0 01.665-6.479L12 14zm-4 6.16v-5.5l4-2.222",
+    proofType: "stat",
+    statValue: "45%",
+    statLabel: "faster response times, running live today for Admizz's education CRM deployment."
+  },
+  {
+    label: "Agencies",
+    image: "/assets/images/industries/agencies.jpg",
+    headline: "Running our own agency operations on this exact platform.",
+    iconPath: "M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM10 5h4v2h-4V5zm10 13H4V9h16v9z",
+    proofType: "line",
+    proofLine: "ZunkireeLabs runs its own deal pipeline, proposals, delivery, and time tracking on this same platform — Mobilise runs the same infrastructure externally."
+  },
+  {
+    label: "Healthcare",
+    image: "/assets/images/industries/healthcare.jpg",
+    headline: "Built for Australian healthcare providers — hospitals, aged care, community care.",
+    iconPath: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    proofType: "line",
+    proofLine: "Replacing manual shift rostering, credential tracking, and workforce-to-recruitment handoff with one connected system."
+  },
+  {
+    label: "Real Estate",
+    image: "/assets/images/industries/real-estate.jpg",
+    headline: "Built for CRE sponsor firms raising capital from investors.",
+    iconPath: "M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 9h1m3 0h1m-5 4h1m3 0h1m-5 4h1m3 0h1",
+    proofType: "line",
+    proofLine: "Secure investor data rooms, offerings, and commitments tracking — built for capital-raise workflows, not a generic CRM."
+  }
+] %}
+
+<style>
+  .showcase-track-container {
+    --card-width: 72%;
+    --card-gap: 1rem;
+    --card-offset: 14%;
+  }
+  @media (min-width: 1024px) {
+    .showcase-track-container {
+      --card-width: 48%;
+      --card-gap: 1.5rem;
+      --card-offset: 26%;
+    }
+  }
+  @media (min-width: 1088px) {
+    .showcase-title-area {
+      margin-left: calc((100% - 1024px) / 2 - 2rem);
+    }
+  }
+</style>
+
+<section
+  class="relative flex flex-col justify-center overflow-hidden bg-sky-50 py-[20px]"
+  x-data="{ activeTab: 1 }"
+  aria-labelledby="industry-showcase-heading"
+>
+  <!-- Header Wrapper (Centered, padded) -->
+  <div class="mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8">
+    <!-- Section Header Top Row — Header left, Actions right -->
+    <div class="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" data-reveal>
+      <div class="max-w-2xl showcase-title-area">
+        <h2 id="industry-showcase-heading" class="mb-4 text-[28px] font-semibold leading-[1.2] tracking-tight text-navy-900 sm:text-[32px] lg:text-[36px]">
+          Find the industry that looks like yours
+        </h2>
+        <p class="text-body-lg text-navy-500">
+          Four verticals, one shared platform, already running in production.
+        </p>
+      </div>
+
+      <!-- Actions/CTAs -->
+      <div class="flex flex-row items-center gap-3">
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Request a demo
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-2.5 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Let's talk
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Carousel Track with Duplicated Boundary Cards for Infinite Looping (Full Bleed, No Gaps) -->
+  {% set carouselItems = [
+    industries[3],
+    industries[0],
+    industries[1],
+    industries[2],
+    industries[3],
+    industries[0]
+  ] %}
+
+  <div class="showcase-track-container relative w-full overflow-hidden" data-reveal>
+    <div
+      class="flex transition-transform duration-500 ease-out"
+      :style="'transform: translateX(calc(var(--card-offset) - (' + activeTab + ' * (var(--card-width) + var(--card-gap))))); gap: var(--card-gap);'"
+    >
+      {% for item in carouselItems %}
+        {% set originalIndex = loop.index0 %}
+        {# Map index for click behavior: Card 0 wraps to activeTab=4 (Real Estate), Card 5 wraps to activeTab=1 (Education) #}
+        {% set targetTab = 4 if originalIndex == 0 else (1 if originalIndex == 5 else originalIndex) %}
+
+        <div
+          role="tabpanel"
+          id="industry-panel-{{ originalIndex }}"
+          aria-labelledby="industry-tab-{{ targetTab }}"
+          :aria-hidden="activeTab !== {{ targetTab }} ? 'true' : 'false'"
+          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] transition-all duration-500 opacity-100"
+          :class="activeTab === {{ targetTab }} ? 'scale-100 z-10' : 'scale-95 z-0 cursor-pointer'"
+          style="width: var(--card-width);"
+          @click="activeTab = {{ targetTab }}"
+          :tabindex="activeTab === {{ targetTab }} ? 0 : -1"
+        >
+          <!-- Card Background photo -->
+          <img
+            src="{{ item.image }}"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+
+          <!-- Sky Tint overlay for image styling -->
+          <div class="pointer-events-none absolute inset-0 bg-sky-900/20 mix-blend-color" aria-hidden="true"></div>
+
+          <!-- Legibility scrims — linear gradient darken top/bottom, transparent center -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" aria-hidden="true"></div>
+
+          <!-- Headline overlaid top-left on the image -->
+          <div class="absolute left-6 top-6 max-w-[70%] sm:left-8 sm:top-8 sm:max-w-md z-20 text-left">
+            <h3 class="text-[20px] font-semibold leading-[1.3] text-white sm:text-[24px] drop-shadow-md">
+              {{ item.headline }}
+            </h3>
+          </div>
+
+          <!-- Category badge overlaid top-right on the image -->
+          <div class="absolute right-5 top-5 z-20 sm:right-6 sm:top-6">
+            <div class="inline-flex items-center gap-2 rounded-full bg-black/35 px-3.5 py-1.5 backdrop-blur-md border border-white/10">
+              <svg class="h-4 w-4 text-[#76B900]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ item.iconPath }}"></path>
+              </svg>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-white">
+                {{ item.label }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Floating stat or proof box on the bottom-right corner with glass effect -->
+          <div class="absolute right-5 bottom-5 max-w-[280px] sm:right-6 sm:bottom-6 z-20">
+            {% if item.proofType == "stat" %}
+              <div class="rounded-lg bg-black/45 p-4 border border-white/10 backdrop-blur-md shadow-lg">
+                <span class="block font-mono text-3xl font-semibold leading-none text-white sm:text-4xl">{{ item.statValue }}</span>
+                <span class="mt-2 block text-[12.5px] font-medium leading-relaxed text-white/80">{{ item.statLabel }}</span>
+              </div>
+            {% else %}
+              <div class="rounded-lg bg-black/45 p-4 border border-white/10 backdrop-blur-md shadow-lg">
+                <span class="mb-1.5 block text-[10px] font-mono uppercase tracking-wider text-white">Flagship Proof</span>
+                <span class="block text-[12.5px] leading-relaxed text-white/90">{{ item.proofLine }}</span>
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Tabs Wrapper (Centered, padded) -->
+  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 mt-12">
+    <!-- Center-aligned Bottom Tabs -->
+    <div class="flex justify-center" data-reveal>
+      <div
+        role="tablist"
+        aria-label="Industries"
+        class="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:gap-6 border-t border-navy-200/20 pt-6 w-full max-w-xl justify-center"
+      >
+        {% for industry in industries %}
+          {% set tabIndex = loop.index %}
+          <button
+            type="button"
+            role="tab"
+            id="industry-tab-{{ loop.index0 }}"
+            :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
+            aria-controls="industry-panel-{{ tabIndex }}"
+            :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
+            @click="activeTab = {{ tabIndex }}"
+            class="group text-left focus:outline-none flex-1 max-w-[120px]"
+          >
+            <!-- Indicator Line -->
+            <div
+              class="h-[3px] w-full transition-all duration-300 rounded-full"
+              :class="activeTab === {{ tabIndex }} ? 'bg-[#76B900]' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
+            ></div>
+            <!-- Tab Label -->
+            <span
+              class="mt-3 block font-mono text-[11px] uppercase tracking-wider text-center transition-colors duration-200"
+              :class="activeTab === {{ tabIndex }} ? 'text-navy-900 font-semibold' : 'text-navy-400 group-hover:text-navy-600'"
+            >
+              {{ industry.label }}
+            </span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   PROOF — Website V2
+   Kore.ai's homepage runs a "We've built our business by serving
+   global enterprises" strip with a trusted-by logo row under each
+   industry card. We don't have logo image assets for our confirmed
+   clients yet, so this is the text-badge equivalent — same
+   structural slot, same "trusted by" framing, no image fabrication.
+
+   Client list is the CONTENT_SUMMARY.md §4/§63 confirmed-real list
+   only (Admizz, CoreCloud365, Rapid Investment, CMS Group, Mach24
+   Orbital, Khushbu Nirman Sewa, Prime Tiles, Khems Cleaning) — no
+   fabricated names, consistent with the anti-fabrication guardrail
+   that already governs the Industry Showcase section above.
+
+
+{# =====================================================
+   AI INSIGHTS — Website V2
+   Direct copy of Kore.ai's "AI Insights" blog teaser: heading +
+   "View all" button, one large featured post left, a short list
+   of smaller posts right. Pulled from the real `collections.blog`
+   posts already published under src/blog/ — no placeholder content.
+   ===================================================== #}
+{% set sortedPosts = collections.blog | reverse %}
+<section class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28" aria-labelledby="insights-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 flex flex-wrap items-end justify-between gap-4 md:mb-12" data-reveal>
+      <h2 id="insights-heading" class="text-[28px] font-semibold leading-[1.2] text-navy-900 sm:text-[30px] lg:text-[32px]">
+        AI Insights
+      </h2>
+      <a
+        href="/blog/"
+        class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50"
+      >
+        View all
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    {% if sortedPosts.length %}
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3" data-reveal>
+
+        <!-- Featured post -->
+        {% set featured = sortedPosts[0] %}
+        <a href="{{ featured.url }}" class="group relative flex min-h-[22rem] flex-col justify-end overflow-hidden rounded-2xl bg-navy-100 p-6 lg:col-span-2 sm:p-8">
+          {% if featured.data.featuredImage %}
+            <img src="{{ featured.data.featuredImage }}" alt="{{ featured.data.featuredImageAlt or '' }}" class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="960" height="540" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" aria-hidden="true"></div>
+          {% endif %}
+          <div class="relative z-10">
+            <span class="mb-3 inline-block font-mono text-[12px] uppercase tracking-wider text-white/70">
+              {{ featured.data.date | date("MMMM D, YYYY") }}
+            </span>
+            <h3 class="max-w-xl text-[22px] font-medium leading-[1.3] text-white sm:text-[26px]">
+              {{ featured.data.title }}
+            </h3>
+          </div>
+        </a>
+
+        <!-- Secondary posts -->
+        <div class="flex flex-col gap-6">
+          {% for post in sortedPosts.slice(1, 3) %}
+            <a href="{{ post.url }}" class="group flex items-start gap-4 rounded-xl border border-navy-100 bg-white p-4 transition-colors hover:border-navy-300">
+              {% if post.data.featuredImage %}
+                <img src="{{ post.data.featuredImage }}" alt="{{ post.data.featuredImageAlt or '' }}" class="h-20 w-20 flex-shrink-0 rounded-lg object-cover" loading="lazy" width="80" height="80" />
+              {% endif %}
+              <div class="min-w-0">
+                <h3 class="mb-1.5 text-[16px] font-medium leading-snug text-navy-900 transition-colors group-hover:text-navy-600">
+                  {{ post.data.title }}
+                </h3>
+                <span class="font-mono text-[11px] uppercase tracking-wider text-navy-400">
+                  {{ post.data.date | date("MMMM D, YYYY") }}{% if post.data.readTime %} &middot; {{ post.data.readTime }} min{% endif %}
+                </span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}
+
+<script>
+  (function() {
+    const debugDiv = document.createElement('div');
+    debugDiv.style.position = 'fixed';
+    debugDiv.style.bottom = '20px';
+    debugDiv.style.left = '20px';
+    debugDiv.style.background = 'rgba(0,0,0,0.85)';
+    debugDiv.style.color = '#ff4444';
+    debugDiv.style.padding = '15px';
+    debugDiv.style.zIndex = '999999';
+    debugDiv.style.fontFamily = 'monospace';
+    debugDiv.style.fontSize = '12px';
+    debugDiv.style.maxHeight = '250px';
+    debugDiv.style.maxWidth = '80%';
+    debugDiv.style.borderRadius = '8px';
+    debugDiv.style.border = '1px solid #ff4444';
+    debugDiv.style.overflowY = 'auto';
+    debugDiv.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+    debugDiv.innerHTML = '<div style="color: #44ff44; font-weight: bold; margin-bottom: 5px;">Canvas Debug Logger:</div>';
+    document.body.appendChild(debugDiv);
+
+    window.addEventListener('error', function(e) {
+      debugDiv.innerHTML += `<div style="margin-top: 5px;">Error: ${e.message} at ${e.filename}:${e.lineno}</div>`;
+    });
+    
+    const origError = console.error;
+    console.error = function(...args) {
+      origError.apply(console, args);
+      debugDiv.innerHTML += `<div style="margin-top: 5px; color: #ff8888;">Console Error: ${args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' ')}</div>`;
+    };
+    
+    const origWarn = console.warn;
+    console.warn = function(...args) {
+      origWarn.apply(console, args);
+      debugDiv.innerHTML += `<div style="margin-top: 5px; color: #ffcc44;">Console Warn: ${args.join(' ')}</div>`;
+    };
+  })();
+</script>

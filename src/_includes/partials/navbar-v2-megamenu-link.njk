@@ -1,0 +1,33 @@
+{# Shared link row for the Mega Menu (§1.2) — used by both the merged (headerless) and
+   per-column stacked card layouts in navbar-v2.njk. Expects `column` and `link` in scope. #}
+<a
+  href="{{ link.url }}"
+  class="group flex items-start gap-3 p-2 -mx-2 rounded-md transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900]"
+  role="menuitem"
+  @click="closeDropdown()"
+>
+  {% if column.type == 'descriptive' and link.icon %}
+    <span class="mt-0.5 text-zunkiree-600">
+      {% set iconName = link.icon %}
+      {% include "components/nav-icon.njk" %}
+    </span>
+  {% endif %}
+
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center gap-2">
+      <span class="text-[15px] font-medium text-navy-900 transition-colors group-hover:text-zunkiree-600">
+        {{ link.label }}{% if link.subLabel %}<span class="text-[11px] font-normal text-navy-400 ml-1">{{ link.subLabel }}</span>{% endif %}
+      </span>
+      {% if link.badge %}
+        <span class="px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide bg-zunkiree-100 text-zunkiree-700 rounded">
+          {{ link.badge }}
+        </span>
+      {% endif %}
+    </div>
+    {% if column.type == 'descriptive' and link.description %}
+      <p class="mt-0.5 text-[13px] leading-snug text-navy-500">
+        {{ link.description }}
+      </p>
+    {% endif %}
+  </div>
+</a>

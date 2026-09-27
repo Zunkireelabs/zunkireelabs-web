@@ -1,0 +1,528 @@
+<title>Zunkiree Labs — Color System</title>
+<style>
+  :root{
+    --page-bg:#f9fafb;
+    --page-surface:#ffffff;
+    --page-border:#e4ecf1;
+    --page-text:#111827;
+    --page-text-secondary:#374151;
+    --page-text-muted:#5a6f77;
+    --shadow-card:0 1px 2px rgba(27,49,57,.04), 0 8px 24px rgba(27,49,57,.06);
+
+    /* brand tokens — constant across themes, these ARE the subject */
+    --primary:#76b900;
+    --primary-hover:#5e9400;
+    --navy:#1b3139;
+    --bg-alt:#f5f3f0;
+    --border:#e4ecf1;
+    --text-primary:#111827;
+    --text-secondary:#374151;
+    --text-muted:#5a6f77;
+    --success:#10b981;
+    --warning:#f59e0b;
+    --error:#ef4444;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --page-bg:#0e1417;
+      --page-surface:#16232a;
+      --page-border:#263640;
+      --page-text:#f2f5f4;
+      --page-text-secondary:#c7d5da;
+      --page-text-muted:#8fa3ab;
+      --shadow-card:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.4);
+      --primary-hover:#8fd400;
+    }
+  }
+  :root[data-theme="dark"]{
+    --page-bg:#0e1417;
+    --page-surface:#16232a;
+    --page-border:#263640;
+    --page-text:#f2f5f4;
+    --page-text-secondary:#c7d5da;
+    --page-text-muted:#8fa3ab;
+    --shadow-card:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.4);
+    --primary-hover:#8fd400;
+  }
+  :root[data-theme="light"]{
+    --page-bg:#f9fafb;
+    --page-surface:#ffffff;
+    --page-border:#e4ecf1;
+    --page-text:#111827;
+    --page-text-secondary:#374151;
+    --page-text-muted:#5a6f77;
+    --shadow-card:0 1px 2px rgba(27,49,57,.04), 0 8px 24px rgba(27,49,57,.06);
+    --primary-hover:#5e9400;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--page-bg);
+    color:var(--page-text);
+    font-family: ui-sans-serif, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    transition: background .2s ease, color .2s ease;
+  }
+  .mono{
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .wrap{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.page-head{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:56px;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:12px;
+    font-weight:600;
+    color:var(--primary-hover);
+  }
+  h1{
+    font-size:clamp(28px,4vw,38px);
+    font-weight:600;
+    letter-spacing:-.01em;
+    margin:0;
+    text-wrap:balance;
+    color:var(--page-text);
+  }
+  .lede{
+    max-width:640px;
+    font-size:16px;
+    color:var(--page-text-secondary);
+    margin:0;
+  }
+  .lede code{
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    background:var(--page-border);
+    padding:1px 6px;
+    border-radius:4px;
+    font-size:.9em;
+  }
+
+  section.group{
+    margin-bottom:48px;
+  }
+  .group-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:16px;
+    border-bottom:1px solid var(--page-border);
+    padding-bottom:10px;
+  }
+  .group-head h2{
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin:0;
+    color:var(--page-text);
+  }
+  .group-head p{
+    margin:0;
+    font-size:13px;
+    color:var(--page-text-muted);
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+    gap:16px;
+  }
+
+  button.swatch{
+    all:unset;
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    border-radius:12px;
+    overflow:hidden;
+    background:var(--page-surface);
+    box-shadow:var(--shadow-card);
+    border:1px solid var(--page-border);
+    position:relative;
+  }
+  button.swatch:focus-visible{
+    outline:2px solid var(--primary);
+    outline-offset:2px;
+  }
+  .chip{
+    height:96px;
+    display:flex;
+    align-items:flex-end;
+    padding:10px 12px;
+  }
+  .chip .hex{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+  .card-body{
+    padding:12px 14px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .role{
+    font-size:13px;
+    font-weight:600;
+    color:var(--page-text);
+  }
+  .usage{
+    font-size:12px;
+    color:var(--page-text-muted);
+    line-height:1.4;
+  }
+  .copied-flag{
+    position:absolute;
+    top:8px;
+    right:8px;
+    font-size:11px;
+    font-weight:600;
+    background:var(--page-surface);
+    color:var(--primary-hover);
+    padding:3px 8px;
+    border-radius:999px;
+    opacity:0;
+    transform:translateY(-4px);
+    transition:opacity .15s ease, transform .15s ease;
+    pointer-events:none;
+  }
+  button.swatch.copied .copied-flag{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  .note{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    background:var(--page-surface);
+    border:1px solid var(--page-border);
+    border-left:3px solid var(--warning);
+    border-radius:0 10px 10px 0;
+    padding:14px 16px;
+    font-size:13px;
+    color:var(--page-text-secondary);
+    margin-top:16px;
+  }
+  .note strong{ color:var(--page-text); }
+  .note .mark{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--warning);
+    flex-shrink:0;
+    padding-top:2px;
+  }
+
+  .contrast-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:16px;
+  }
+  .contrast-pill{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--page-surface);
+    border:1px solid var(--page-border);
+    border-radius:999px;
+    padding:6px 12px 6px 6px;
+    font-size:12px;
+  }
+  .contrast-pill .swatchdot{
+    width:20px;height:20px;border-radius:50%;
+    border:1px solid rgba(0,0,0,.08);
+    flex-shrink:0;
+  }
+  .contrast-pill .ratio{
+    font-weight:700;
+  }
+  .pass{ color:#0d8a5f; }
+  .fail{ color:#c13515; }
+
+  /* In use */
+  .use-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+  }
+  @media (max-width: 640px){
+    .use-grid{ grid-template-columns: 1fr; }
+  }
+
+  .demo-card{
+    border-radius:16px;
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .demo-card.light{
+    background:var(--page-surface);
+    border:1px solid var(--page-border);
+    box-shadow:var(--shadow-card);
+  }
+  .demo-card h3{
+    margin:0;
+    font-size:19px;
+    font-weight:600;
+    color:var(--page-text);
+  }
+  .demo-card.light p{
+    margin:0;
+    font-size:14px;
+    color:var(--page-text-secondary);
+    max-width:34ch;
+  }
+  .btn-row{ display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; }
+  .btn{
+    border-radius:999px;
+    padding:10px 20px;
+    font-size:14px;
+    font-weight:600;
+    border:1px solid transparent;
+    cursor:default;
+  }
+  .btn-primary{
+    background:var(--primary);
+    color:#0e1608; /* dark text — see accessibility note */
+  }
+  .btn-secondary.on-light{
+    background:transparent;
+    border-color:var(--navy);
+    color:var(--navy);
+  }
+  .btn-secondary.on-dark{
+    background:transparent;
+    border-color:rgba(255,255,255,.35);
+    color:#fff;
+  }
+
+  .demo-card.dark{
+    position:relative;
+    background:var(--navy);
+    color:#fff;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .demo-card.dark::before{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    background: radial-gradient(circle at 30% 20%, rgba(118,185,0,.55), transparent 55%),
+                radial-gradient(circle at 80% 80%, rgba(61,143,212,.35), transparent 55%);
+    filter: blur(40px);
+    z-index:-1;
+    animation: drift 16s ease-in-out infinite alternate;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .demo-card.dark::before{ animation:none; }
+  }
+  @keyframes drift{
+    from{ transform: translate(0,0) scale(1); }
+    to{ transform: translate(3%, -4%) scale(1.08); }
+  }
+  .demo-card.dark p{
+    margin:0;
+    font-size:14px;
+    color:#c7d5da;
+    max-width:34ch;
+  }
+  .demo-card.dark .eyebrow-pill{
+    align-self:flex-start;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#b6cf96;
+    background:rgba(118,185,0,.15);
+    border:1px solid rgba(118,185,0,.3);
+    padding:4px 10px;
+    border-radius:999px;
+  }
+
+  footer.meta{
+    margin-top:64px;
+    padding-top:20px;
+    border-top:1px solid var(--page-border);
+    font-size:12px;
+    color:var(--page-text-muted);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="page-head">
+    <span class="eyebrow">Master Design Spec &sect;4 &mdash; Reference</span>
+    <h1>Zunkiree Labs Color System</h1>
+    <p class="lede">One accent, one dark neutral, everything else quiet. Click any swatch to copy its hex. Values match <code>MASTER_DESIGN_SPEC.md</code> exactly.</p>
+  </header>
+
+  <section class="group">
+    <div class="group-head">
+      <h2>Accent &amp; Dark Neutral</h2>
+      <p>The only two colors that carry weight</p>
+    </div>
+    <div class="grid" id="grid-core"></div>
+    <div class="note">
+      <span class="mark">Finding</span>
+      <span><strong>White text on Primary fails contrast</strong> (2.4:1 — needs 4.5:1). Near-black text on Primary passes at 7.4:1. The spec's button treatment has been corrected below: primary buttons use dark text (<code class="mono">#0e1608</code>) on the green fill, not white.</span>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <h2>Backgrounds &amp; Surfaces</h2>
+      <p>Where sections differentiate without borders</p>
+    </div>
+    <div class="grid" id="grid-surface"></div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <h2>Text</h2>
+      <p>Against the default background, <span class="mono">#f9fafb</span></p>
+    </div>
+    <div class="grid" id="grid-text"></div>
+    <div class="contrast-row" id="contrast-text"></div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <h2>Semantic</h2>
+      <p>Form/status states only — never decorative</p>
+    </div>
+    <div class="grid" id="grid-semantic"></div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <h2>In Use</h2>
+      <p>Light section vs. dark platform-strip motif</p>
+    </div>
+    <div class="use-grid">
+      <div class="demo-card light">
+        <h3>AI for Education</h3>
+        <p>Admizz cut response time 45% using the same pipeline running here today.</p>
+        <div class="btn-row">
+          <span class="btn btn-primary">Talk to our team</span>
+          <span class="btn btn-secondary on-light">See it running</span>
+        </div>
+      </div>
+      <div class="demo-card dark">
+        <span class="eyebrow-pill">Platform</span>
+        <h3>Meet the platform underneath</h3>
+        <p>Multi-tenant CRM, Zunkiree Search, and Orca — the infrastructure every vertical runs on.</p>
+        <div class="btn-row">
+          <span class="btn btn-primary">Explore the platform</span>
+          <span class="btn btn-secondary on-dark">Talk to sales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="meta">
+    <span>13 tokens &middot; 1 accent hue</span>
+    <span>zunkireelabs-web / docs/MASTER_DESIGN_SPEC.md</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var CORE = [
+    {hex:"#76b900", role:"Primary", usage:"CTAs, links, active states, focus rings", light:false},
+    {hex:"#5e9400", role:"Primary Hover", usage:"Hover / pressed state on primary only", light:true},
+    {hex:"#1b3139", role:"Secondary / Navy", usage:"Dark sections, headings, platform strip", light:true},
+  ];
+  var SURFACE = [
+    {hex:"#f9fafb", role:"Background", usage:"Default page background", light:false},
+    {hex:"#f5f3f0", role:"Section Alt", usage:"Alternating section tint", light:false},
+    {hex:"#ffffff", role:"Surface", usage:"Cards, inputs, dropdowns", light:false},
+    {hex:"#e4ecf1", role:"Border / Divider", usage:"Hairlines, card edges", light:false},
+  ];
+  var TEXT = [
+    {hex:"#111827", role:"Text Primary", usage:"Headlines, primary body copy", light:true, ratio:"16.9:1"},
+    {hex:"#374151", role:"Text Secondary", usage:"Subheads, card descriptions", light:true, ratio:"9.8:1"},
+    {hex:"#5a6f77", role:"Text Muted", usage:"Captions, metadata, timestamps", light:true, ratio:"5.0:1"},
+  ];
+  var SEMANTIC = [
+    {hex:"#10b981", role:"Success", usage:"Form confirmation only", light:true},
+    {hex:"#f59e0b", role:"Warning", usage:"Validation warnings only", light:true},
+    {hex:"#ef4444", role:"Error", usage:"Validation errors only", light:true},
+  ];
+
+  function swatch(t){
+    var b = document.createElement("button");
+    b.className = "swatch";
+    b.type = "button";
+    b.setAttribute("aria-label", "Copy " + t.role + " hex " + t.hex);
+    b.innerHTML =
+      '<div class="chip" style="background:' + t.hex + '">' +
+        '<span class="hex mono" style="color:' + (t.light ? '#fff' : '#0e1608') + '">' + t.hex + '</span>' +
+      '</div>' +
+      '<div class="card-body">' +
+        '<span class="role">' + t.role + '</span>' +
+        '<span class="usage">' + t.usage + (t.ratio ? ' &middot; ' + t.ratio + ' on bg' : '') + '</span>' +
+      '</div>' +
+      '<span class="copied-flag">Copied</span>';
+    b.addEventListener("click", function(){
+      var done = function(){
+        b.classList.add("copied");
+        clearTimeout(b._t);
+        b._t = setTimeout(function(){ b.classList.remove("copied"); }, 1200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(t.hex).then(done).catch(done);
+      } else {
+        done();
+      }
+    });
+    return b;
+  }
+
+  function fill(id, list){
+    var el = document.getElementById(id);
+    list.forEach(function(t){ el.appendChild(swatch(t)); });
+  }
+
+  fill("grid-core", CORE);
+  fill("grid-surface", SURFACE);
+  fill("grid-text", TEXT);
+  fill("grid-semantic", SEMANTIC);
+
+  var contrastEl = document.getElementById("contrast-text");
+  TEXT.forEach(function(t){
+    var pass = parseFloat(t.ratio) >= 4.5;
+    var pill = document.createElement("span");
+    pill.className = "contrast-pill";
+    pill.innerHTML =
+      '<span class="swatchdot" style="background:' + t.hex + '"></span>' +
+      t.role + ' &nbsp;<span class="ratio ' + (pass ? "pass" : "fail") + '">' + t.ratio + '</span>' +
+      (pass ? ' AA pass' : ' AA fail');
+    contrastEl.appendChild(pill);
+  });
+})();
+</script>

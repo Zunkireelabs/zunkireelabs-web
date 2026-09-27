@@ -6,6 +6,8 @@ pagination:
   addAllPagesToCollections: true
 layout: location.njk
 permalink: /locations/{{ location.id }}/
+hideChrome: true
+bodyClass: "v2-inter"
 eleventyComputed:
   title: "{{ location.title | safe }}"
   description: "{{ location.description | safe }}"

@@ -32,6 +32,12 @@
       "slug": "state-of-ai-nepal-2026",
       "type": "REPORT",
       "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "ai-vs-traditional-software-kathmandu", "title": "AI vs Traditional Software: What Kathmandu Enterprises Need to Know" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa's AI Transformation" }
+      ],
       "title": "State of AI in Nepal 2026: Industry Report",
       "subtitle": "The definitive guide to AI adoption across Nepali industries",
       "description": "Nepal ranks 150th globally in AI readiness, yet adoption is accelerating. This report analyzes AI implementation across 50+ Nepali organizations, identifies key barriers, and provides a roadmap for businesses in Kathmandu and beyond.",
@@ -68,6 +74,12 @@
       "slug": "ai-search-report-2026",
       "type": "REPORT",
       "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search: A Technical Comparison" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: From Keywords to Conversations Webinar" }
+      ],
       "title": "State of AI Search 2026: Enterprise Adoption Report",
       "subtitle": "Key findings on how businesses are replacing keyword search with AI-native solutions",
       "description": "Based on research from 500+ enterprise technology leaders globally, this report reveals how organizations are transitioning from traditional keyword search to AI-native natural language understanding. Includes benchmarks, ROI data, and implementation timelines.",
@@ -102,6 +114,12 @@
       "slug": "ai-search-playbook",
       "type": "EBOOK",
       "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: AI Search Implementation Webinar" },
+        { "slug": "natural-language-processing-fundamentals", "title": "Natural Language Processing Fundamentals" }
+      ],
       "title": "The AI Search Playbook for Product Teams",
       "subtitle": "Practical guide with implementation patterns, code examples, and real results",
       "description": "A hands-on playbook for product managers and engineers implementing AI-native search. Covers everything from initial scoping to production deployment, with code snippets, architecture diagrams, and lessons learned from 20+ implementations.",
@@ -132,6 +150,12 @@
       "slug": "webinar-ai-search-implementation",
       "type": "ON DEMAND",
       "category": "webinars",
+      "badgeLabel": "On Demand",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
+        { "href": "/products/search/", "title": "Explore Zunkiree Search Product" }
+      ],
       "title": "From Keywords to Conversations: AI Search Implementation",
       "subtitle": "Learn how to integrate natural language search in under 2 hours",
       "description": "In this 45-minute on-demand webinar, our engineering team walks through a complete AI search implementation. Watch as we transform a basic keyword search into a conversational AI experience, with live coding and Q&A.",
@@ -160,6 +184,12 @@
       "slug": "ai-implementation-guide-nepal",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026: Industry Report" },
+        { "slug": "ai-vs-traditional-software-kathmandu", "title": "AI vs Traditional Software for Kathmandu Enterprises" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" }
+      ],
       "title": "AI Implementation Guide for Nepal SMEs",
       "subtitle": "From zero to production: A practical roadmap for Nepali businesses",
       "description": "56% of Nepali industries cite lack of skilled manpower as the primary barrier to AI adoption. This guide bridges that gap with practical, budget-conscious implementation strategies tailored for Nepal's market conditions.",
@@ -190,6 +220,12 @@
       "slug": "ai-native-search-nepal",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        { "slug": "nepali-language-ai-guide", "title": "Nepali Language AI: Building Chatbots & Search in Nepali" },
+        { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search" },
+        { "href": "/products/search/", "title": "Explore Zunkiree Search" }
+      ],
       "title": "AI-Native Search for Nepal: Beyond Keyword Search",
       "subtitle": "How Nepali businesses can leapfrog legacy search technology",
       "description": "Traditional keyword search fails when users don't know the exact terms. AI-native search understands intent, handles Nepali-English mixed queries, and delivers direct answers. This guide shows Nepal businesses how to implement it.",
@@ -219,6 +255,12 @@
       "slug": "khushbu-nirman-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" }
+      ],
       "title": "How Khushbu Nirman Sewa Digitized Construction Management",
       "subtitle": "AI-powered project tracking and resource optimization in Nepal's construction sector",
       "description": "Khushbu Nirman Sewa, a leading Kathmandu construction company, transformed their project management with Zunkiree's AI-powered tracking system. This case study details their journey from paper-based processes to real-time AI insights.",
@@ -358,6 +400,12 @@
       "slug": "nepali-language-ai-guide",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Technical Guide",
+      "relatedResources": [
+        { "slug": "ai-native-search-nepal", "title": "AI-Native Search for Nepal" },
+        { "slug": "natural-language-processing-fundamentals", "title": "NLP Fundamentals" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
       "title": "Nepali Language AI: Building Chatbots & Search in Nepali",
       "subtitle": "Technical guide to NLP for the Nepali language",
       "description": "Building AI systems that understand Nepali presents unique challenges: limited training data, complex morphology, and code-switching with English. This technical guide covers practical solutions for Nepali NLP in production.",
@@ -388,6 +436,12 @@
       "slug": "ai-vs-traditional-software-kathmandu",
       "type": "WHITEPAPER",
       "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
+        { "slug": "ai-implementation-guide-nepal", "title": "AI Implementation Guide for Nepal SMEs" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" }
+      ],
       "title": "AI vs Traditional Software: What Kathmandu Enterprises Need to Know",
       "subtitle": "A decision framework for Nepal's growing tech sector",
       "description": "79% of Nepali industries are not yet ready for AI adoption. This whitepaper helps Kathmandu enterprises understand when AI adds value versus when traditional software is the right choice, with practical decision frameworks.",
@@ -417,6 +471,12 @@
       "slug": "ai-search-stack-guide",
       "type": "EBOOK",
       "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        { "slug": "ai-search-playbook", "title": "The AI Search Playbook for Product Teams" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026: Enterprise Adoption Report" },
+        { "slug": "webinar-ai-search-implementation", "title": "Watch: From Keywords to Conversations Webinar" }
+      ],
       "title": "The AI Search Stack for the Modern Enterprise",
       "subtitle": "A comprehensive guide to building AI-native search experiences",
       "description": "Learn how leading enterprises are replacing traditional keyword search with AI-powered natural language understanding. This guide covers architecture patterns, implementation strategies, and real-world case studies.",
@@ -453,6 +513,12 @@
       "slug": "admizz-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" },
+        { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026 Report" }
+      ],
       "title": "How Admizz Reduced Response Time by 45%",
       "subtitle": "Transforming student inquiry management with AI search",
       "description": "Learn how Admizz Education revolutionized their student inquiry process with Zunkiree Search, dramatically improving response times and student satisfaction.",
@@ -473,6 +539,12 @@
       "slug": "corecloud365-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" },
+        { "slug": "khushbu-nirman-case-study", "title": "Case Study: Khushbu Nirman Sewa" },
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack Guide" }
+      ],
       "title": "Corecloud365 Achieves 60% Cost Reduction",
       "subtitle": "Optimizing cloud operations with AI-powered automation",
       "description": "Discover how Corecloud365 integrated AI-powered search and automation tools to achieve significant cost savings in their cloud management platform.",
@@ -571,6 +643,122 @@
       ],
       "formTitle": "Download the Guide",
       "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "stella-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026 Report" }
+      ],
+      "title": "How We Built Stella, an Autonomous AI Commerce Agent",
+      "subtitle": "Why scripted chatbots stall at checkout, and how we engineered an agent that sells for you",
+      "description": "Stella is Zunkiree Labs' AI commerce agent, built to carry shoppers from discovery through checkout without a human or a script in the loop. This case study covers why we built it, the engineering decisions behind it, and what shipped.",
+      "coverImage": "/assets/images/resources/stella-case-study-cover.svg",
+      "publishDate": "2026-09-10",
+      "readTime": "9 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Agentic Commerce",
+      "results": [
+        "Autonomous checkout, not just chat",
+        "Native eSewa, Khalti & Fonepay integration",
+        "Deploys on Daraz, Shopify & WooCommerce",
+        "Multi-turn conversations in Nepali and English"
+      ],
+      "challenge": "Scripted chatbots break the moment a shopper asks something unscripted, and support can't cover every hour a store is open. Every dead-ended conversation is a sale that quietly walks away, and there was no agent on the market built for how Nepali shoppers actually pay.",
+      "solution": "We built Stella as an autonomous agent rather than a decision-tree bot: a large language model grounded in the merchant's product catalog and business rules, so it can answer unscripted questions, recommend products, handle objections, and complete the transaction itself. Nepal payment rails (eSewa, Khalti, Fonepay) were built in from day one alongside Stripe, and the agent ships as a drop-in layer on Daraz, Shopify, WooCommerce, and custom storefronts.",
+      "formTitle": "Talk to Us About Stella",
+      "ctaText": "Schedule a Demo"
+    },
+    {
+      "slug": "zenly-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "dental-ai-case-study", "title": "Case Study: Building Dental AI Assistant" },
+        { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" }
+      ],
+      "title": "How We Built Zenly, an AI Booking Engine for Complex Availability",
+      "subtitle": "Why one calendar isn't enough, and how AI resolves scheduling conflicts automatically",
+      "description": "Zenly is Zunkiree Labs' AI-powered scheduling engine, built to handle multi-provider, multi-resource availability that a plain calendar can't represent. This case study covers the engineering behind automatic conflict resolution and no-show reduction.",
+      "coverImage": "/assets/images/resources/zenly-case-study-cover.svg",
+      "publishDate": "2026-09-05",
+      "readTime": "8 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Scheduling & Operations",
+      "results": [
+        "Automatic conflict resolution with waitlist rebooking",
+        "Multi-provider, multi-resource availability modeling",
+        "AI-timed reminders built to cut no-shows",
+        "Syncs with Google, Outlook & Apple Calendar"
+      ],
+      "challenge": "Real-world availability is never just one calendar — providers, rooms, and equipment each carry their own constraints, and double-bookings were being resolved by hand, back and forth, one message at a time. Without a timely nudge, booked slots quietly went empty.",
+      "solution": "We modeled availability as a constraint problem instead of a single calendar: providers, locations, equipment, and custom rules all feed into one engine that computes real openings and resolves conflicts by proposing alternatives or rebooking automatically with approval. On top of that we layered AI-timed, channel-aware reminders tuned to when a given customer is actually likely to respond.",
+      "formTitle": "Talk to Us About Zenly",
+      "ctaText": "Schedule a Demo"
+    },
+    {
+      "slug": "gaamma-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
+      "title": "How We Built Gaamma, an AI-Powered Manufacturing ERP",
+      "subtitle": "Turning disconnected floor systems into one predictive view of the factory",
+      "description": "Gaamma is Zunkiree Labs' manufacturing ERP, built to unify production planning, inventory, and quality control with AI-driven predictive maintenance. This case study covers why we built it and how it plugs into equipment already on the floor.",
+      "coverImage": "/assets/images/resources/gaamma-case-study-cover.svg",
+      "publishDate": "2026-08-28",
+      "readTime": "9 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Manufacturing",
+      "results": [
+        "Real-time work order, machine & operator visibility",
+        "Predictive maintenance model flags failures before they happen",
+        "Connects to PLCs, SCADA & IoT sensors without rip-and-replace",
+        "Serves discrete, process, job-shop & warehouse operations"
+      ],
+      "challenge": "Work orders, machines, and operators lived in separate systems, so no one could see exactly where a job stood. Equipment failures showed up as unplanned stops instead of scheduled maintenance, and manual reordering kept inventory turns flat.",
+      "solution": "We built Gaamma as a single production layer that both ingests floor data and predicts from it. Equipment monitoring feeds a machine-learning model that flags failures before they happen, while the same platform standardizes work order, inventory, and quality data on one source of truth — connecting to PLCs, SCADA systems, and IoT sensors already on the floor instead of asking manufacturers to replace them.",
+      "formTitle": "Talk to Us About Gaamma",
+      "ctaText": "Request a Demo"
+    },
+    {
+      "slug": "dental-ai-case-study",
+      "type": "CASE STUDY",
+      "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
+      ],
+      "title": "How We're Building Dental AI Assistant, a 24/7 Patient Communication Partner",
+      "subtitle": "Inside our private beta: automating the calls and reminders that eat every open hour",
+      "description": "Dental AI Assistant is Zunkiree Labs' in-progress product for dental practices, currently running in private beta. This case study covers why we're building it, the AI approach behind it, and what's shipped so far ahead of general availability.",
+      "coverImage": "/assets/images/resources/dental-ai-case-study-cover.svg",
+      "publishDate": "2026-08-20",
+      "readTime": "7 min read",
+      "client": "Zunkiree Labs",
+      "industry": "Healthcare",
+      "results": [
+        "Currently in private beta with select practices",
+        "24/7 patient Q&A on procedures, pricing & insurance",
+        "AI-scheduled appointments matched to treatment time & provider",
+        "HIPAA-compliant, integrates with Dentrix, Eaglesoft & Open Dental"
+      ],
+      "challenge": "Scheduling, pricing, and insurance questions were competing with in-chair patient care for staff attention, appointments were going unreminded, and satisfied patients rarely left a review unless someone followed up right after their visit.",
+      "solution": "We're building Dental AI Assistant as an always-on layer over the practice's existing systems: it answers routine patient questions instantly, books appointments against real provider and chair availability, and sends personalized, multi-channel follow-ups — all logged and auditable to stay HIPAA-compliant. It's running in private beta with select practices ahead of general availability.",
+      "formTitle": "Join the Dental AI Waitlist",
+      "ctaText": "Join Waitlist"
     }
   ]
 }

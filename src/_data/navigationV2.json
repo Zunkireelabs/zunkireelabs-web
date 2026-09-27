@@ -1,0 +1,179 @@
+{
+  "main": [
+    {
+      "label": "Industries",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "title": "Industries",
+        "description": "Purpose-built AI systems for the industries we serve.",
+        "columns": [
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "AI for Education", "url": "/industries/education/", "description": "Admissions pipeline and campaign management" },
+              { "label": "AI for Agencies", "url": "/industries/agencies/", "description": "Deal pipeline and delivery management" }
+            ]
+          },
+          {
+            "type": "descriptive",
+            "items": [
+              { "label": "AI for Healthcare", "url": "/industries/healthcare/", "description": "Credential tracking and scheduling" },
+              { "label": "AI for Real Estate", "url": "/industries/real-estate/", "description": "Capital raising for CRE sponsors" }
+            ]
+          }
+        ],
+        "resources": {
+          "label": "TOP RESOURCES",
+          "items": [
+            {
+              "title": "Essential Steps for Successful AI Implementation",
+              "url": "/blog/essential-steps-for-successful-ai-implementation/",
+              "image": "/assets/images/blog/ai-implementation-steps.webp"
+            },
+            {
+              "title": "Exploring the Rise of AI Startups in Nepal",
+              "url": "/blog/exploring-the-rise-of-ai-startups-in-nepal/",
+              "image": "/assets/images/blog/ai-startups-nepal.webp"
+            },
+            {
+              "title": "AI Trends and Predictions for 2026: What Lies Ahead",
+              "url": "/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/",
+              "image": "/assets/images/blog/ai-trends-2026.webp"
+            }
+          ]
+        },
+        "cta": {
+          "prompt": "Not sure where to start?",
+          "button": "Talk to our team",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "label": "Platform",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "PLATFORM INFRASTRUCTURE",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "Zunkiree Search",
+                "url": "/products/search/",
+                "icon": "search",
+                "description": "AI-native search that understands natural language and delivers direct answers"
+              },
+              {
+                "label": "AI CRM",
+                "url": "/products/ai-crm/",
+                "icon": "users",
+                "description": "Multi-tenant AI CRM with a per-industry module architecture — each new industry gets a tailored feature set on shared infrastructure"
+              },
+              {
+                "label": "Orca",
+                "url": "/products/orca/",
+                "icon": "transform",
+                "description": "AI orchestration layer coordinating agent workflows across CRMs, email, and marketing tools"
+              }
+            ],
+            "seeAll": { "label": "See all products", "url": "/products/" }
+          }
+        ],
+        "featured": {
+          "label": "FEATURED",
+          "title": "Try Zunkiree Search Free",
+          "description": "See how AI search delivers direct answers instead of links. Transform your customer experience.",
+          "cta": { "label": "Start free trial", "url": "/products/search/" }
+        },
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
+    },
+    {
+      "label": "GaaS",
+      "hasDropdown": false,
+      "url": "/agentic-as-a-service/"
+    },
+    {
+      "label": "Resources",
+      "hasDropdown": true,
+      "dropdownType": "megamenu",
+      "megamenu": {
+        "columns": [
+          {
+            "header": "LEARN",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "What is GaaS?",
+                "url": "/resources/what-is-gaas/",
+                "icon": "ai",
+                "description": "Complete guide to Agentic as a Service"
+              },
+              {
+                "label": "Customer Stories",
+                "url": "/customer-stories/",
+                "icon": "users",
+                "description": "See how customers succeed with Zunkiree"
+              },
+              {
+                "label": "AI Glossary",
+                "url": "/glossary/",
+                "icon": "book",
+                "description": "Learn key AI and technology terms"
+              },
+              {
+                "label": "Compare Products",
+                "url": "/compare/",
+                "icon": "compare",
+                "description": "See how Zunkiree compares to alternatives"
+              }
+            ],
+            "seeAll": { "label": "See all resources", "url": "/resources/" }
+          },
+          {
+            "header": "COMPANY",
+            "type": "descriptive",
+            "items": [
+              {
+                "label": "About Us",
+                "url": "/about/",
+                "icon": "building",
+                "description": "Our mission, values, and team"
+              },
+              {
+                "label": "Careers",
+                "url": "/careers/",
+                "icon": "briefcase",
+                "description": "Join the Zunkiree team"
+              },
+              {
+                "label": "Contact",
+                "url": "/contact/",
+                "icon": "mail",
+                "description": "Get in touch with us"
+              }
+            ]
+          }
+        ],
+        "featured": {
+          "label": "FEATURED REPORT",
+          "title": "State of AI in Nepal 2026",
+          "description": "The definitive guide to AI adoption across Nepali industries. Free download.",
+          "cta": { "label": "Download report", "url": "/resources/state-of-ai-nepal-2026/" }
+        },
+        "cta": {
+          "prompt": "Ready to build with AI?",
+          "button": "Schedule a call",
+          "url": "/contact/"
+        }
+      }
+    }
+  ]
+}

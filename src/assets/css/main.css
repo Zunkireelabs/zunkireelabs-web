@@ -3,8 +3,50 @@
 @tailwind utilities;
 
 /* =====================================================
+   Homepage V2 preview only — clone kore.ai's actual typeface
+   (Inter, confirmed via Firecrawl scrape). Scoped to the
+   `v2-inter` body class (homepage-v2.njk only) so the live
+   site keeps DM Sans untouched. Higher specificity than the
+   .font-sans utility so it wins regardless of source order.
+   ===================================================== */
+.v2-inter.font-sans {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+/* Headings get their font-family set directly (main.css @layer base
+   `h1, h2, h3...` rule), which pre-empts inheriting Inter from body —
+   so headings need their own explicit override here too. */
+.v2-inter h1,
+.v2-inter h2,
+.v2-inter h3,
+.v2-inter h4,
+.v2-inter h5,
+.v2-inter h6 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* =====================================================
+   Lenis Smooth Scroll (required base styles)
+   ===================================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* =====================================================
    ZUNKIREE LABS - Revamp Design System
-   Primary: Navy #1b3139 | Accent: Red #eb1600
+   Primary: Navy #1b3139 | Accent: Sage #6f9b34
    Style: Pure Minimal (IBM structure + Databricks colors)
    ===================================================== */
 
@@ -30,10 +72,10 @@
   --border: #e2e8f0;
   --border-muted: #f1f5f9;
 
-  /* Primary (Zunkiree Red) */
-  --primary: #eb1600;
-  --primary-hover: #cc1300;
-  --primary-muted: #fef2f2;
+  /* Primary (Zunkiree Sage — Palette B · Horizon) */
+  --primary: #6f9b34;
+  --primary-hover: #5a8029;
+  --primary-muted: #f4faea;
 
   /* Secondary (Navy) */
   --secondary: #1b3139;
@@ -46,6 +88,340 @@
 
   /* Footer stays dark in both modes */
   --footer-bg: #1b3139;
+
+  /* Blue section accent */
+  --accent-blue: #3d8fd4;
+  --section-blue: #235782;
+}
+
+
+/* =====================================================
+   FULL-PAGE ANIMATED BACKGROUND (Homepage)
+   ===================================================== */
+.page-bg-active {
+  background: transparent !important;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  /* Palette B · Horizon — sage glow (↙) + sky blue glow (↗) on deep navy */
+  background-color: #0a1f2b;
+  background-image:
+    radial-gradient(70% 85% at -6% 112%, rgba(144,169,89,.34) 0%, rgba(95,125,70,.12) 38%, transparent 60%),
+    radial-gradient(75% 100% at 104% -2%, rgba(61,143,212,.80) 0%, rgba(30,85,150,.30) 42%, transparent 65%);
+}
+
+.page-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+#page-blob-1 {
+  width: 900px;
+  height: 800px;
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(ellipse, rgba(61,143,212,0.12) 0%, rgba(30,85,150,0.05) 45%, transparent 70%);
+  filter: blur(90px);
+}
+
+#page-blob-2 {
+  width: 900px;
+  height: 900px;
+  top: 10%;
+  right: -10%;
+  background: radial-gradient(ellipse, rgba(61,143,212,0.10) 0%, transparent 65%);
+  filter: blur(110px);
+}
+
+#page-blob-3 {
+  width: 1100px;
+  height: 800px;
+  bottom: -10%;
+  left: 20%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.14) 0%, transparent 70%);
+  filter: blur(130px);
+}
+
+/* =====================================================
+   SECTION CORNER LIGHTS + BLUE SECTION BG
+   ===================================================== */
+.section-glow {
+  position: relative;
+  overflow: hidden;
+}
+.section-glow > * {
+  position: relative;
+  z-index: 1;
+}
+.section-glow::before,
+.section-glow::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+/* Sage corner light — bottom-left */
+.section-glow-sage::before {
+  width: 55%;
+  height: 70%;
+  bottom: -15%;
+  left: -10%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.28) 0%, transparent 70%);
+}
+
+/* Sage corner light — top-right */
+.section-glow-sage-tr::before {
+  width: 50%;
+  height: 65%;
+  top: -15%;
+  right: -10%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.24) 0%, transparent 70%);
+}
+
+/* Blue section — transparent, color comes from #page-color-overlay (GSAP-driven) */
+.section-blue {
+  background-color: transparent;
+}
+
+/* Fixed full-page color overlay — GSAP scrubs transparent → blue as section enters */
+#page-color-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: transparent;
+  pointer-events: none;
+  will-change: background-color;
+}
+
+/* Subtle sage corner glow on blue sections */
+.section-blue.section-glow::before {
+  width: 50%;
+  height: 65%;
+  bottom: -12%;
+  left: -8%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.16) 0%, transparent 70%);
+}
+/* Blue inner glow on blue sections — top-right */
+.section-blue.section-glow::after {
+  width: 45%;
+  height: 60%;
+  top: -12%;
+  right: -8%;
+  background: radial-gradient(ellipse, rgba(61, 143, 212, 0.20) 0%, transparent 70%);
+}
+
+/* Footer gradient background */
+.footer-gradient {
+  background-color: #0c1518;
+  background-image:
+    radial-gradient(65% 70% at 10% 0%, rgba(111, 155, 52, 0.12) 0%, transparent 65%),
+    radial-gradient(55% 60% at 90% 0%, rgba(61, 143, 212, 0.07) 0%, transparent 60%);
+}
+
+/* =====================================================
+   HERO CAROUSEL - Dark Crimson Theme
+   ===================================================== */
+.hero-dark {
+  background: transparent;
+  position: relative;
+}
+
+/* Animated glow blobs — positions set here, motion driven by GSAP */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 0;
+}
+
+#hero-blob-1 {
+  width: 700px;
+  height: 700px;
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.20) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+#hero-blob-2 {
+  width: 500px;
+  height: 500px;
+  top: 20%;
+  right: 5%;
+  background: radial-gradient(ellipse, rgba(120, 138, 146, 0.16) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+#hero-blob-3 {
+  width: 900px;
+  height: 600px;
+  bottom: -20%;
+  left: 25%;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.12) 0%, transparent 65%);
+  filter: blur(80px);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(144, 169, 89, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Homepage: match the clean two-corner-glow mock (P2 Stone). Quiet the
+   drifting GSAP blobs so only the static .page-bg corner glow shows.
+   Scoped to the homepage via the page-bg-active body class. */
+.page-bg-active .page-blob,
+.page-bg-active .hero-blob,
+.page-bg-active .hero-glow {
+  display: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.carousel-dot-active {
+  width: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-slide {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-slide-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.hero-slide-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-product-card {
+  background: #111827;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+
+/* Carousel indicators — dot expands into a pill with a progress fill */
+.hero-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1), background-color 0.3s ease;
+}
+
+.hero-dot.is-active {
+  width: 32px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hero-dot-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.92);
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* Pause / play toggle */
+.hero-pause-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hero-pause-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-pause-btn .hero-icon-play {
+  display: none;
+}
+
+.hero-pause-btn.is-paused .hero-icon-pause {
+  display: none;
+}
+
+.hero-pause-btn.is-paused .hero-icon-play {
+  display: inline;
+}
+
+.hero-headline {
+  color: #ffffff;
+}
+
+/* Dark navy navbar + dropdowns + mobile menu — CSS vars cascade to children */
+.over-dark {
+  --foreground: rgba(255, 255, 255, 1);
+  --foreground-muted: rgba(255, 255, 255, 0.75);
+  --foreground-subtle: rgba(255, 255, 255, 0.5);
+  --border: rgba(255, 255, 255, 0.12);
+  --card: #13303E;                          /* dropdown panel — elevated navy */
+  --background: #0F2734;                    /* featured / inner cards */
+  --background-alt: rgba(255, 255, 255, 0.07);  /* hover surfaces */
+  --background-muted: rgba(255, 255, 255, 0.05);
 }
 
 
@@ -416,10 +792,16 @@
   /* =====================================================
      Logo Marquee (Social Proof Bar)
      ===================================================== */
-  .marquee-fade-light {
-    position: relative;
+  /* JS-driven marquee: drag to slide, auto-scroll, pause on hover */
+  #logo-marquee {
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;   /* let vertical page scroll through; we handle horizontal drag */
   }
 
+  #logo-marquee.is-grabbing {
+    cursor: grabbing;
   .marquee-fade-light::before,
   .marquee-fade-light::after {
     content: '';
@@ -442,21 +824,7 @@
   }
 
   .animate-marquee-scroll {
-    animation: marquee-scroll 25s linear infinite;
-  }
-
-  @keyframes marquee-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  /* Pause on hover */
-  .marquee-fade-light:hover .animate-marquee-scroll {
-    animation-play-state: paused;
+    will-change: transform;
   }
 
   /* =====================================================
@@ -553,6 +921,227 @@
       left: 100%;
     }
   }
+
+  /* =====================================================
+     REDESIGN — Numbered Pillar Cards (S4)
+     ===================================================== */
+  .numbered-pillar-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 100%;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 2.08vw;
+    background: #1b3d5c;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 2.92vw;
+    padding-left: 2.92vw;
+    padding-right: 2.92vw;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  /* AVIF arc overlay — CSS background-image respects alpha channel correctly */
+  .numbered-pillar-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: var(--card-bg-img);
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.45;
+    filter: grayscale(1);
+    transition: opacity 0.4s ease, filter 0.4s ease;
+    pointer-events: none;
+  }
+  .numbered-pillar-card:hover::before {
+    opacity: 1;
+    filter: grayscale(0) brightness(1.1);
+  }
+  .numbered-pillar-card:hover {
+    border-color: rgba(144,169,89,0.30);
+    box-shadow: 0 0 32px rgba(144,169,89,0.08);
+  }
+  /* SVG and old classes kept but hidden */
+  .pillar-lines { display: none; }
+
+  /* Text block — bottom of card */
+  .pillar-text {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+  }
+  .pillar-text h3 {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #a3c072;
+    margin-bottom: 0.75rem;
+  }
+  .pillar-text p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.60);
+    line-height: 1.65;
+  }
+
+  /* =====================================================
+     REDESIGN — Service Icon Wrap (S5)
+     ===================================================== */
+  .service-icon-wrap {
+    background: rgba(111,155,52,0.08);
+    border: 1px solid rgba(111,155,52,0.15);
+    border-radius: 12px;
+    padding: 0.75rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* =====================================================
+     REDESIGN — Case Study Stat Strip Cards (S7)
+     ===================================================== */
+  .case-stat-card {
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* =====================================================
+     REDESIGN — Solutions Industry Cards (S8)
+     ===================================================== */
+  .solution-industry-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    min-height: 180px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .solution-industry-card:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .industry-num {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6f9b34;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+  }
+
+  /* =====================================================
+     REDESIGN — Spotlight Bento Cards
+     ===================================================== */
+  .spotlight-glass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: rgba(10, 31, 43, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* =====================================================
+     REDESIGN — Dark CTA Panel (CTA+FAQ)
+     ===================================================== */
+  .cta-dark-panel {
+    position: relative;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+  }
+  .cta-dark-panel::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(111,155,52,0.25) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    border-radius: 50%;
+  }
+
+  /* =====================================================
+     REDESIGN — Standalone CTA Band Section
+     ===================================================== */
+  .cta-band-section {
+    background-color: transparent;
+  }
+  .cta-band-panel {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .cta-band-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.5rem;
+    text-decoration: none;
+    transition: background 180ms ease;
+  }
+  .cta-band-row:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .cta-band-icon {
+    flex-shrink: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(144, 169, 89, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b6cf96;
+  }
+  .cta-band-arrow {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1.5px solid rgba(144, 169, 89, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #90a959;
+    transition: background 180ms ease, border-color 180ms ease;
+  }
+  .cta-band-row:hover .cta-band-arrow {
+    background: rgba(111, 155, 52, 0.18);
+    border-color: rgba(111, 155, 52, 0.75);
+    color: #b6cf96;
+  }
+}
+
+/* Hero word-split spans */
+.hero-word {
+  display: inline-block;
+  will-change: transform;
+}
 }
 
 /* Utilities */
@@ -587,6 +1176,7 @@
    ===================================================== */
 html {
   scroll-padding-top: 60px;
+  overflow-x: clip;
 }
 
 /* =====================================================
@@ -604,4 +1194,80 @@ html {
   a {
     text-decoration: underline;
   }
+}
+
+/* =====================================================
+   HOMEPAGE V2 — page-wide diagonal ribbon background
+   Two-color (Sky Blue + Cream, no Mint) traced recreation of the
+   approved 21st.dev reference: the Cream region's real boundary was
+   sampled from the reference image and reproduced as smoothed SVG
+   paths, then softened with a single feGaussianBlur. No turbulence,
+   no grain. Markup: partials/hero-ribbon-bg.njk, included once near
+   the top of <body> (not inside the hero <section>) so it reads as
+   one continuous backdrop for the whole page, not just the hero.
+   `position: fixed` — it stays put behind every section as the page
+   scrolls, rather than scrolling away with the hero.
+   ===================================================== */
+.hero-ribbon-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  /* Must be negative, not 0/auto: sections below the hero (Platform
+     Teaser, Platform Pillars, etc.) have plain, non-positioned section
+     wrappers. A non-positioned element always paints above a sibling
+     that only has z-index:0/auto (positioning order beats DOM order
+     for that comparison) — with z-index:0 this fixed layer would have
+     painted OVER those sections' static content instead of behind it.
+     Negative z-index moves it behind all normal in-flow content while
+     staying above <body>'s own background, which is what we want. */
+  z-index: -1;
+  transform: translateZ(0); /* own compositor layer — static, painted once */
+}
+
+.hero-ribbon-bg__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gentle continuous sway — not a one-direction scroll. The traced
+   shape (hero-ribbon-bg.njk) was never built to repeat, and every
+   attempt to tile/loop it as a conveyor belt (mirroring copies,
+   rebuilding it as a periodic wave) either reversed its direction
+   or changed its silhouette. This animates the single, unmodified
+   shape back and forth within a small range instead — there's only
+   ever one copy on screen, so there's no seam between copies to get
+   wrong. `alternate` + `ease-in-out` keeps it reading as ambient
+   drift, not a mechanical bounce. */
+.hero-ribbon-bg__cream {
+  animation: heroRibbonSway 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroRibbonSway {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-42px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ribbon-bg__cream {
+    animation: none;
+  }
+}
+
+/* =====================================================
+   INFINITY LOOP — ambient glow bed breathing pulse
+   ===================================================== */
+.infinity-glow-bed {
+  transform: translate(-50%, -50%) scale(1);
+  animation: infinityGlowPulse 6s ease-in-out infinite;
+}
+@keyframes infinityGlowPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.85; }
+  50%      { transform: translate(-50%, -50%) scale(1.07); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .infinity-glow-bed { animation: none; transform: translate(-50%, -50%); }
 }

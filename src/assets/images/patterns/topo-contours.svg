@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <path id="ring" fill="none" d="
+      M 94.5 -24.25
+      Q 105 0 92.35 23
+      Q 79.7 46 67.85 71.5
+      Q 56 97 28 92.5
+      Q 0 88 -27 90.75
+      Q -54 93.5 -68.15 70.5
+      Q -82.3 47.5 -98.65 23.75
+      Q -115 0 -96.45 -22.5
+      Q -77.9 -45 -64.45 -66.65
+      Q -51 -88.3 -25.5 -86.65
+      Q 0 -85 27.5 -90.15
+      Q 55 -95.3 69.5 -71.9
+      Q 84 -48.5 94.5 -24.25
+      Z" />
+  </defs>
+
+  <!-- Peak A -->
+  <g transform="translate(300,260) scale(1.6)" stroke="#90A959">
+    <use href="#ring" transform="scale(0.25)" stroke-width="1.6" stroke-opacity="0.16" />
+    <use href="#ring" transform="scale(0.45)" stroke-width="1.4" stroke-opacity="0.13" />
+    <use href="#ring" transform="scale(0.65) rotate(8)" stroke-width="1.2" stroke-opacity="0.11" />
+    <use href="#ring" transform="scale(0.85) rotate(-6)" stroke-width="1.1" stroke-opacity="0.09" />
+    <use href="#ring" transform="scale(1.05) rotate(4)" stroke-width="1" stroke-opacity="0.07" />
+  </g>
+
+  <!-- Peak B -->
+  <g transform="translate(1250,180) scale(1.3)" stroke="#90A959">
+    <use href="#ring" transform="scale(0.3)" stroke-width="1.6" stroke-opacity="0.15" />
+    <use href="#ring" transform="scale(0.55) rotate(-10)" stroke-width="1.3" stroke-opacity="0.12" />
+    <use href="#ring" transform="scale(0.8) rotate(6)" stroke-width="1.1" stroke-opacity="0.09" />
+    <use href="#ring" transform="scale(1.05) rotate(-4)" stroke-width="1" stroke-opacity="0.07" />
+  </g>
+
+  <!-- Peak C -->
+  <g transform="translate(850,700) scale(1.9)" stroke="#90A959">
+    <use href="#ring" transform="scale(0.2)" stroke-width="1.6" stroke-opacity="0.15" />
+    <use href="#ring" transform="scale(0.4) rotate(12)" stroke-width="1.3" stroke-opacity="0.12" />
+    <use href="#ring" transform="scale(0.6) rotate(-8)" stroke-width="1.15" stroke-opacity="0.1" />
+    <use href="#ring" transform="scale(0.8) rotate(5)" stroke-width="1.05" stroke-opacity="0.08" />
+    <use href="#ring" transform="scale(1.0) rotate(-3)" stroke-width="1" stroke-opacity="0.06" />
+  </g>
+</svg>

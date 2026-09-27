@@ -1,0 +1,175 @@
+---
+layout: base.njk
+bodyClass: "v2-inter"
+hideChrome: true
+---
+
+{# =====================================================
+   RESOURCE CONTENT LAYOUT — WEBSITE V2
+   Shared shell for every /resources/* content page (reports,
+   guides, ebooks, whitepapers, webinars, case studies).
+   Structure pulled from the original state-of-ai-nepal-2026 build:
+   breadcrumb + badge + H1 + subhead + meta row, then a stats/results
+   bar, then cover image + related-resources split, then a two-column
+   body (page content) + sticky lead-capture form, then footer.
+   Pages set `slug` in frontmatter and provide only their own body
+   markup (findings, FAQ, schema) as the layout's `content`.
+   ===================================================== #}
+
+{% set resource = resources.items | find("slug", slug) %}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+<section class="bg-white px-4 pb-10 pt-32 sm:px-6 sm:pb-14 sm:pt-36 lg:px-8 lg:pb-16 lg:pt-40">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-4xl">
+
+      {# Breadcrumb #}
+      <nav class="mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+          <li><a href="/resources/" class="transition-colors hover:text-[#5a9100]">Resources</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="text-navy-900">{{ resource.badgeLabel }}</li>
+        </ol>
+      </nav>
+
+      {# Badge #}
+      <span
+        class="mb-5 inline-flex items-center gap-2 rounded-full border border-[#76B900]/25 bg-[#76B900]/10 px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]"
+        data-reveal
+      >
+        <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        {% if resource.slug == resources.featured %}Featured {{ resource.badgeLabel }}{% else %}{{ resource.badgeLabel }}{% endif %}
+      </span>
+
+      {# H1 #}
+      <h1
+        class="mb-6 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]"
+        data-reveal
+      >
+        {{ resource.title }}
+      </h1>
+
+      {# Subtitle #}
+      <p class="mb-6 max-w-2xl text-[18px] leading-relaxed text-[#6B7280] sm:text-[19px]" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+
+      {# Meta — case studies show client/industry/location, everything else shows date + read time #}
+      {% if resource.client %}
+      <div class="flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-navy-400" data-reveal>
+        <span><span class="text-navy-300">Client</span> &nbsp;{{ resource.client }}</span>
+        {% if resource.industry %}<span aria-hidden="true">&bull;</span><span><span class="text-navy-300">Industry</span> &nbsp;{{ resource.industry }}</span>{% endif %}
+        {% if resource.location %}<span aria-hidden="true">&bull;</span><span><span class="text-navy-300">Location</span> &nbsp;{{ resource.location }}</span>{% endif %}
+      </div>
+      {% else %}
+      <div class="flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-navy-400" data-reveal>
+        <span>{{ resource.publishDate }}</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>{{ resource.readTime }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    {# Stats bar (reports) #}
+    {% if resource.stats %}
+    <div class="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 border-y border-navy-100 py-8 md:grid-cols-4 md:py-10" data-reveal>
+      {% for stat in resource.stats %}
+      <div class="text-center md:text-left">
+        <p class="font-mono text-[26px] font-semibold leading-none text-[#111827] sm:text-[30px]">{{ stat.value }}</p>
+        <p class="mt-2 text-[12.5px] leading-relaxed text-[#6B7280]">{{ stat.label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {# Results bar (case studies) #}
+    {% if resource.results %}
+    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-6 border-y border-navy-100 py-8 sm:grid-cols-2 {% if resource.results.length >= 4 %}md:grid-cols-4{% else %}md:grid-cols-3{% endif %} md:py-10" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-[17px] font-medium leading-snug text-[#111827] sm:text-[18px]">{{ result | replace('NPR ', '₨') }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {# Cover + Related Resources #}
+    <div class="mt-10 grid grid-cols-1 items-start gap-10 lg:mt-12 lg:grid-cols-12 lg:gap-16">
+
+      {# Cover image #}
+      <div class="lg:col-span-7" data-reveal>
+        <div class="overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-subtle">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="aspect-[16/9] w-full object-cover" />
+          {% else %}
+            <div class="flex aspect-[16/9] w-full items-center justify-center bg-gradient-to-br from-navy-900 to-navy-950">
+              <span class="font-mono text-4xl font-bold text-white/30">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {# Related Resources #}
+      <div class="lg:col-span-5" data-reveal>
+        <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm">
+          <h3 class="mb-3 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">Related Resources</h3>
+          <div class="divide-y divide-navy-100/40">
+            {% for related in resource.relatedResources %}
+            <a href="{{ related.href if related.href else '/resources/' + related.slug + '/' }}" class="group flex items-center justify-between gap-4 py-4">
+              <p class="text-[15px] font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">
+                {{ related.title }}
+              </p>
+              <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100] transition-colors duration-200 group-hover:bg-[#76B900] group-hover:text-white" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CONTENT — left column (page body, provided as `content` by
+   the page below its frontmatter) with the lead capture form
+   sticky on the right.
+   ===================================================== #}
+<section class="bg-white px-4 pb-16 pt-4 sm:px-6 sm:pb-20 md:pt-8 lg:px-8 lg:pb-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+
+      {# Left Column: Content #}
+      <div class="lg:col-span-7">
+        {{ content | safe }}
+      </div>
+
+      {# Right Column: Lead Capture Form #}
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form-v2.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}

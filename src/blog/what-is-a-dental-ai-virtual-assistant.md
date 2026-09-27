@@ -25,7 +25,7 @@ It's a narrower, more specialized tool than a general chatbot. Where a generic a
 
 ## The Technology Behind It
 
-The core of a dental AI virtual assistant is natural language understanding paired with practice-specific data: it interprets a patient's question the way they'd naturally ask it (not a rigid menu of options), then answers using the practice's own procedure list, pricing, accepted insurance, and real-time schedule — rather than generic web knowledge about dentistry. That's what separates a purpose-built assistant like Zunkiree Labs' [Dental AI Assistant](/products/dental-ai/) from a generic chatbot: it's answering with your practice's actual information, and it knows when a question is outside what it can safely answer and should go to a person instead.
+The core of a dental AI virtual assistant is natural language understanding paired with practice-specific data: it interprets a patient's question the way they'd naturally ask it (not a rigid menu of options), then answers using the practice's own procedure list, pricing, accepted insurance, and real-time schedule — rather than generic web knowledge about dentistry. That's what separates a purpose-built assistant like Zunkiree Labs' [Dental AI Assistant](/resources/dental-ai-case-study/) from a generic chatbot: it's answering with your practice's actual information, and it knows when a question is outside what it can safely answer and should go to a person instead.
 
 ## What It's Not Meant to Replace
 
@@ -33,7 +33,7 @@ A virtual assistant is built to absorb the routine, repetitive share of patient 
 
 ## Should Your Practice Use One?
 
-If your front desk spends real time on the phone answering the same handful of questions — pricing, insurance, availability — a virtual assistant handles that volume without adding headcount, and it does it outside office hours too, which is when a lot of that demand actually shows up. [See how Dental AI Assistant works](/products/dental-ai/) or [reach out to our team](/contact/) if you want to talk through what it would look like for your practice specifically.
+If your front desk spends real time on the phone answering the same handful of questions — pricing, insurance, availability — a virtual assistant handles that volume without adding headcount, and it does it outside office hours too, which is when a lot of that demand actually shows up. [See how Dental AI Assistant works](/resources/dental-ai-case-study/) or [reach out to our team](/contact/) if you want to talk through what it would look like for your practice specifically.
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">

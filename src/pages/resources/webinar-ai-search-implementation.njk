@@ -1,188 +1,100 @@
 ---
-layout: base.njk
+layout: resource-content.njk
 title: AI Search Implementation Webinar | Zunkiree Labs
 description: Watch our engineering team walk through a complete AI search implementation in 45 minutes. Live coding, API walkthrough, and Q&A.
 permalink: /resources/webinar-ai-search-implementation/
+slug: webinar-ai-search-implementation
 ---
 
-{% set resource = resources.items | find("slug", "webinar-ai-search-implementation") %}
+{# What you'll learn #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you'll learn</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    In this 45-minute session, our engineering team demonstrates a complete AI search implementation from scratch. Watch as we transform a basic keyword search into a conversational AI experience that understands natural language queries.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This is not a product demo. It's a technical walkthrough with live coding, real API calls, and practical tips from engineers who have built AI search systems for production environments.
+  </p>
+</div>
 
-{# HERO SECTION #}
-<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="mb-8">
-      <span class="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium tracking-wide mb-4">
-        On Demand
+{# Webinar agenda #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Webinar agenda</h2>
+  <div class="space-y-3">
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">0:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">Introduction & Setup</p>
+        <p class="text-[14px] text-[#6B7280]">Environment setup and project overview</p>
+      </div>
+    </div>
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">5:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">API Walkthrough</p>
+        <p class="text-[14px] text-[#6B7280]">Understanding the Zunkiree Search API structure</p>
+      </div>
+    </div>
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">15:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">Live Coding: Basic Integration</p>
+        <p class="text-[14px] text-[#6B7280]">Building your first AI search query</p>
+      </div>
+    </div>
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">25:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">Advanced Patterns</p>
+        <p class="text-[14px] text-[#6B7280]">Context handling, follow-up queries, and error handling</p>
+      </div>
+    </div>
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">35:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">Production Tips</p>
+        <p class="text-[14px] text-[#6B7280]">Caching, monitoring, and performance optimization</p>
+      </div>
+    </div>
+    <div class="flex gap-4 rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <span class="font-mono text-[13px] font-semibold text-[#5a9100]">40:00</span>
+      <div>
+        <p class="font-medium text-[#111827]">Q&A Session</p>
+        <p class="text-[14px] text-[#6B7280]">Answers to common implementation questions</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# What You Get #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
       </span>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
-        {{ resource.title }}
-      </h1>
-      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
-        {{ resource.subtitle }}
-      </p>
-      <p class="text-sm text-warm-500" data-reveal>
-        {{ resource.publishDate }} &bull; {{ resource.readTime }}
-      </p>
-    </div>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-7" data-reveal>
-        <div class="aspect-video overflow-hidden bg-gray-100">
-          {% if resource.coverImage %}
-            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
-          {% else %}
-            <div class="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
-              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
-            </div>
-          {% endif %}
-        </div>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
-        <div class="space-y-6">
-          <a href="/resources/ai-search-playbook/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              The AI Search Playbook for Product Teams
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-          <hr class="border-warm-200">
-          <a href="/resources/ai-search-stack-guide/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              The AI Search Stack for the Modern Enterprise
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-          <hr class="border-warm-200">
-          <a href="/products/search/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              Explore Zunkiree Search Product
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
+{# About the presenter #}
+<div data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">About the presenter</h2>
+  <div class="flex items-start gap-4 rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle">
+    <div class="h-16 w-16 flex-shrink-0 rounded-full bg-navy-50"></div>
+    <div>
+      <p class="font-medium text-[#111827]">Dr. Emily Rodriguez</p>
+      <p class="mb-2 text-[13px] text-navy-400">AI Research Lead, Zunkiree Labs</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Emily leads AI research at Zunkiree Labs, focusing on natural language understanding and semantic search. She has implemented AI search systems for Fortune 500 companies and startups alike.</p>
     </div>
   </div>
-</section>
-
-{# CONTENT SECTION #}
-<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-
-      <div class="lg:col-span-7">
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-4">What you'll learn</h2>
-          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
-            In this 45-minute session, our engineering team demonstrates a complete AI search implementation from scratch. Watch as we transform a basic keyword search into a conversational AI experience that understands natural language queries.
-          </p>
-          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
-            This is not a product demo. It's a technical walkthrough with live coding, real API calls, and practical tips from engineers who have built AI search systems for production environments.
-          </p>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-4">Webinar agenda</h2>
-          <div class="space-y-4">
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">0:00</span>
-              <div>
-                <p class="font-medium text-warm-black">Introduction & Setup</p>
-                <p class="text-warm-600 text-sm">Environment setup and project overview</p>
-              </div>
-            </div>
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">5:00</span>
-              <div>
-                <p class="font-medium text-warm-black">API Walkthrough</p>
-                <p class="text-warm-600 text-sm">Understanding the Zunkiree Search API structure</p>
-              </div>
-            </div>
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">15:00</span>
-              <div>
-                <p class="font-medium text-warm-black">Live Coding: Basic Integration</p>
-                <p class="text-warm-600 text-sm">Building your first AI search query</p>
-              </div>
-            </div>
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">25:00</span>
-              <div>
-                <p class="font-medium text-warm-black">Advanced Patterns</p>
-                <p class="text-warm-600 text-sm">Context handling, follow-up queries, and error handling</p>
-              </div>
-            </div>
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">35:00</span>
-              <div>
-                <p class="font-medium text-warm-black">Production Tips</p>
-                <p class="text-warm-600 text-sm">Caching, monitoring, and performance optimization</p>
-              </div>
-            </div>
-            <div class="flex gap-4 p-4 bg-gray-50">
-              <span class="text-zunkiree-600 font-medium">40:00</span>
-              <div>
-                <p class="font-medium text-warm-black">Q&A Session</p>
-                <p class="text-warm-600 text-sm">Answers to common implementation questions</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
-          <ul class="space-y-3">
-            {% for item in resource.whatYouGet %}
-            <li class="flex items-start gap-3">
-              <span class="text-zunkiree-600 mt-1">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </span>
-              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-4">About the presenter</h2>
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0"></div>
-            <div>
-              <p class="font-medium text-warm-black">Dr. Emily Rodriguez</p>
-              <p class="text-warm-600 text-sm mb-2">AI Research Lead, Zunkiree Labs</p>
-              <p class="text-warm-600 text-sm">Emily leads AI research at Zunkiree Labs, focusing on natural language understanding and semantic search. She has implemented AI search systems for Fortune 500 companies and startups alike.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <div class="lg:sticky lg:top-24">
-          {% set formTitle = resource.formTitle %}
-          {% set ctaText = resource.ctaText %}
-          {% include "components/lead-capture-form.njk" %}
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+</div>
 
 <script type="application/ld+json">
 {
@@ -198,16 +110,3 @@ permalink: /resources/webinar-ai-search-implementation/
   }
 }
 </script>
-<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers a variety of AI products and services including custom AI agents, AI-native search, practice management software, business analytics, and solutions for e-commerce and customer interaction.","@type":"Answer"}},{"name":"What products does Zunkiree Labs provide?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides products such as Zunkiree Search, Dental AI, Gaamma for business analytics, Stella as an AI commerce agent, Zenly as an AI booking engine, and AI CRM for customer intelligence and outreach.","@type":"Answer"}},{"name":"How does Zunkiree Search improve customer experience?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search enhances customer experience by utilizing AI to deliver direct answers to queries instead of presenting a list of links, allowing for quicker and more accurate information retrieval.","@type":"Answer"}},{"name":"What services does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers services such as AI development, AI customer experience solutions, data systems, custom software development, SaaS development, web and app development, and AEO & SEO services.","@type":"Answer"}},{"name":"In which industries does Zunkiree Labs operate?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs operates across various industries including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is Agentic as a Service (GaaS)?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) refers to the deployment of autonomous AI agents as managed services, designed to enhance business processes and operations.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">What products does Zunkiree Labs offer?</h2>
-      </div>
-      <div>
-        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">Zunkiree Labs offers a range of products including Zunkiree Search, Dental AI for practice management, Gaamma for business analytics, and various AI commerce agents.</p></div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->

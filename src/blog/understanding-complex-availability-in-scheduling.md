@@ -28,7 +28,7 @@ Handled manually, these factors combine multiplicatively — a scheduler has to 
 
 Rule-based calendar tools handle simple cases fine but tend to fall over on complex availability because their logic is written for single-resource, fixed-duration bookings. Systems built specifically for this problem take a different approach: they treat every booking request as a constraint-satisfaction problem, checking provider availability, resource availability, buffer requirements, and preferences together, then automatically resolving conflicts instead of surfacing them for a human to untangle.
 
-Zunkiree Labs' [Zenly AI Booking Engine](/products/ai-booking-engine/) is built around exactly this kind of complex availability handling. Zenly manages multi-resource bookings and automatic conflict resolution, understands scheduling requests through natural language rather than rigid forms, and sends AI-powered reminders that reduce no-shows by 35%. Instead of a scheduler manually cross-checking calendars, Zenly resolves the combination of provider, resource, and timing constraints automatically and proposes the best available slot.
+Zunkiree Labs' [Zenly AI Booking Engine](/resources/zenly-case-study/) is built around exactly this kind of complex availability handling. Zenly manages multi-resource bookings and automatic conflict resolution, understands scheduling requests through natural language rather than rigid forms, and sends AI-powered reminders that reduce no-shows by 35%. Instead of a scheduler manually cross-checking calendars, Zenly resolves the combination of provider, resource, and timing constraints automatically and proposes the best available slot.
 
 ## Where This Matters Most
 
@@ -36,7 +36,7 @@ Complex availability scheduling shows up wherever more than one resource has to 
 
 ## The Bottom Line
 
-Complex availability isn't a scheduling edge case — it's the default reality for any business that books more than one resource per appointment. Tools designed for single-calendar booking will always struggle with it because the underlying problem is a matching problem, not a lookup problem. Purpose-built AI scheduling, like [Zenly](/products/ai-booking-engine/), treats it as the matching problem it actually is and resolves it automatically, which is what turns a scheduling headache into a booking flow nobody has to think about. If you're evaluating options, our team can walk you through what a complex-availability setup would look like for your business — [get in touch](/contact/) to talk it through.
+Complex availability isn't a scheduling edge case — it's the default reality for any business that books more than one resource per appointment. Tools designed for single-calendar booking will always struggle with it because the underlying problem is a matching problem, not a lookup problem. Purpose-built AI scheduling, like [Zenly](/resources/zenly-case-study/), treats it as the matching problem it actually is and resolves it automatically, which is what turns a scheduling headache into a booking flow nobody has to think about. If you're evaluating options, our team can walk you through what a complex-availability setup would look like for your business — [get in touch](/contact/) to talk it through.
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">

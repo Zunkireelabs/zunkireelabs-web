@@ -1,0 +1,96 @@
+---
+layout: resource-content.njk
+title: How We're Building Dental AI Assistant | Zunkiree Labs
+description: Inside our private beta — how Zunkiree Labs is building Dental AI Assistant, a 24/7 patient communication and scheduling partner for dental practices.
+permalink: /resources/dental-ai-case-study/
+slug: dental-ai-case-study
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why we're building Dental AI Assistant</h2>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Front desk staff at a dental practice spend a surprising share of the day answering the same handful of questions&mdash;pricing, insurance, availability&mdash;while chairside care waits. We're building Dental AI Assistant to take that routine communication off a practice's plate entirely, so staff time shifts back toward patients instead of the phone.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The problem</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Scheduling, pricing, and insurance questions were competing with in-chair patient care for staff attention, appointments were going unreminded, and satisfied patients rarely left a review unless someone followed up right after their visit.
+  </p>
+  <div class="rounded-2xl border border-red-200 bg-red-50 p-6">
+    <p class="mb-2 font-medium text-[#111827]">Where practice time actually goes:</p>
+    <ul class="space-y-2 text-[14px] leading-relaxed text-[#6B7280]">
+      <li>&bull; Calls stack up during office hours, competing with in-chair patient care</li>
+      <li>&bull; No-shows go unmanaged without timely, personalized reminders</li>
+      <li>&bull; Satisfied patients rarely leave a review unless someone follows up right after their visit</li>
+      <li>&bull; Any solution has to fit inside HIPAA and existing practice management software, not around it</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How we're building it</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    We're building Dental AI Assistant as an always-on layer over the practice's existing systems: it answers routine patient questions instantly, books appointments against real provider and chair availability, and sends personalized, multi-channel follow-ups&mdash;all logged and auditable to stay HIPAA-compliant. It's running in private beta with select practices ahead of general availability.
+  </p>
+  <div class="space-y-3">
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">24/7 patient communication</p>
+      <p class="text-[13.5px] text-[#6B7280]">Patients get instant, accurate answers about procedures, pricing, and availability at any hour&mdash;no calls stacking up in a voicemail box.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Scheduling that considers the whole practice</p>
+      <p class="text-[13.5px] text-[#6B7280]">Appointments are booked against treatment duration, provider availability, and patient preference together, not a single open slot.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Compliance built in, not bolted on</p>
+      <p class="text-[13.5px] text-[#6B7280]">Every patient communication is logged and auditable, with end-to-end encryption and BAA agreements, so it fits inside HIPAA requirements from the start.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+      <p class="mb-1 font-medium text-[#111827]">Runs alongside existing practice software</p>
+      <p class="text-[13.5px] text-[#6B7280]">Integration is being built for Dentrix, Eaglesoft, and Open Dental, so practices don't have to change their system of record to use it.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Where it stands today</h2>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+    {% for result in resource.results %}
+    <div class="rounded-2xl border border-sky-200 bg-sky-50 p-5">
+      <p class="text-[15px] font-medium text-[#111827]">{{ result }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-4 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Key engineering decisions</h2>
+  <div class="space-y-4">
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">01</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Design for HIPAA from the first line of code:</strong> Retrofitting compliance into a healthcare product is harder than building it in from the start.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">02</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Beta with real practices before general availability:</strong> Patient communication is high-stakes enough that we're validating it with select practices first.</p>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="mt-0.5 font-mono text-[13px] font-semibold text-[#5a9100]">03</span>
+      <p class="text-[15px] leading-relaxed text-[#6B7280]"><strong class="font-semibold text-[#111827]">Fit into the practice management software already in use:</strong> A tool that requires switching systems of record is a much harder sell than one that plugs into what's already there.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "about": { "@type": "SoftwareApplication", "name": "Dental AI Assistant", "applicationCategory": "BusinessApplication" }
+}
+</script>

@@ -1,0 +1,18 @@
+---
+pagination:
+  data: industries
+  size: 1
+  alias: industry
+  addAllPagesToCollections: true
+layout: industry.njk
+permalink: /industries/{{ industry.id }}/
+eleventyComputed:
+  title: "{{ industry.title }}"
+  description: "{{ industry.description }}"
+  industryId: "{{ industry.id }}"
+hideChrome: true
+bodyClass: "v2-inter"
+---
+
+{# Individual industry vertical pages are generated from industries data #}
+{# Content is rendered by the industry.njk layout — one shared template for all four #}

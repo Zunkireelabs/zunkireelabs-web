@@ -1,168 +1,111 @@
 ---
-layout: base.njk
+layout: resource-content.njk
 title: Nepali Language AI Guide | Zunkiree Labs
 description: Technical guide to building AI systems that understand Nepali. Covers NLP challenges, Devanagari script handling, code-switching, and practical implementation.
 permalink: /resources/nepali-language-ai-guide/
+slug: nepali-language-ai-guide
 ---
 
-{% set resource = resources.items | find("slug", "nepali-language-ai-guide") %}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The challenge of Nepali NLP</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Building AI systems that understand Nepali presents unique challenges. Nepali is a <strong class="font-semibold text-[#111827]">low-resource language</strong> with limited training data compared to English or Chinese. The Devanagari script has complex character combinations. And users naturally mix Nepali and English in queries (code-switching).
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This guide covers practical solutions for these challenges, drawing on our experience building AI systems for the Nepal market. Whether you're creating chatbots, search systems, or document processing pipelines, this technical guide will help you navigate the complexities of Nepali NLP.
+  </p>
+</div>
 
-{# HERO SECTION #}
-<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="mb-8">
-      <span class="inline-block px-3 py-1 bg-purple-600 text-white text-xs font-medium tracking-wide mb-4">
-        Technical Guide
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Key challenges we address</h2>
+  <div class="space-y-4">
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <div class="mb-1.5 flex items-start gap-2.5">
+        <span class="mt-[0.55em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        <p class="text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Devanagari script handling</p>
+      </div>
+      <p class="pl-4 text-[14px] leading-relaxed text-[#6B7280]">Unicode normalization, character combinations (संयुक्ताक्षर), and text preprocessing for ML pipelines.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <div class="mb-1.5 flex items-start gap-2.5">
+        <span class="mt-[0.55em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        <p class="text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Code-switching detection</p>
+      </div>
+      <p class="pl-4 text-[14px] leading-relaxed text-[#6B7280]">Handling queries like "yo product ko price kati ho?" that mix Nepali and English in the same sentence.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <div class="mb-1.5 flex items-start gap-2.5">
+        <span class="mt-[0.55em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        <p class="text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Low-resource language strategies</p>
+      </div>
+      <p class="pl-4 text-[14px] leading-relaxed text-[#6B7280]">Transfer learning from Hindi, multilingual models, and data augmentation techniques.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <div class="mb-1.5 flex items-start gap-2.5">
+        <span class="mt-[0.55em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+        <p class="text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Tokenization and embeddings</p>
+      </div>
+      <p class="pl-4 text-[14px] leading-relaxed text-[#6B7280]">Word segmentation, subword tokenization, and creating embeddings for Nepali text.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
       </span>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
-        {{ resource.title }}
-      </h1>
-      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
-        {{ resource.subtitle }}
-      </p>
-      <p class="text-sm text-warm-500" data-reveal>
-        {{ resource.publishDate }} &bull; {{ resource.readTime }}
-      </p>
-    </div>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-7" data-reveal>
-        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
-          {% if resource.coverImage %}
-            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
-          {% else %}
-            <div class="w-full h-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
-              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
-            </div>
-          {% endif %}
+<div data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div x-data="{ activeIndex: null }">
+    <div class="divide-y divide-navy-100">
+      <div class="py-5">
+        <button @click="activeIndex = (activeIndex === 1) ? null : 1" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 1 ? 'true' : 'false'" aria-controls="faq-answer-1">
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">Can I use GPT-4 or Claude for Nepali?</span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 1 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </button>
+        <div id="faq-answer-1" x-show="activeIndex === 1" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Yes, modern LLMs have some Nepali capability, but performance varies. We cover prompt engineering techniques specific to Nepali, when to use LLMs vs. specialized models, and how to evaluate Nepali language performance.</p>
         </div>
       </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
-        <div class="space-y-6">
-          <a href="/resources/ai-native-search-nepal/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              AI-Native Search for Nepal
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-          <hr class="border-warm-200">
-          <a href="/resources/natural-language-processing-fundamentals/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              NLP Fundamentals
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
-          <hr class="border-warm-200">
-          <a href="/resources/state-of-ai-nepal-2026/" class="block group">
-            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
-              State of AI in Nepal 2026
-            </p>
-            <span class="inline-flex items-center text-warm-black">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </span>
-          </a>
+      <div class="py-5">
+        <button @click="activeIndex = (activeIndex === 2) ? null : 2" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 2 ? 'true' : 'false'" aria-controls="faq-answer-2">
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">What about training data for Nepali?</span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 2 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </button>
+        <div id="faq-answer-2" x-show="activeIndex === 2" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">The guide covers available Nepali datasets (newspapers, Wikipedia, social media), data augmentation strategies, and how to create your own training data efficiently.</p>
+        </div>
+      </div>
+      <div class="py-5">
+        <button @click="activeIndex = (activeIndex === 3) ? null : 3" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 3 ? 'true' : 'false'" aria-controls="faq-answer-3">
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">Is this guide for researchers or practitioners?</span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 3 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+          </span>
+        </button>
+        <div id="faq-answer-3" x-show="activeIndex === 3" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Primarily practitioners. We focus on production-ready solutions rather than academic exploration. That said, we reference relevant research and provide pointers for those who want to go deeper.</p>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-{# CONTENT SECTION #}
-<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
-  <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-
-      <div class="lg:col-span-7">
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge of Nepali NLP</h2>
-          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
-            Building AI systems that understand Nepali presents unique challenges. Nepali is a <strong>low-resource language</strong> with limited training data compared to English or Chinese. The Devanagari script has complex character combinations. And users naturally mix Nepali and English in queries (code-switching).
-          </p>
-          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
-            This guide covers practical solutions for these challenges, drawing on our experience building AI systems for the Nepal market. Whether you're creating chatbots, search systems, or document processing pipelines, this technical guide will help you navigate the complexities of Nepali NLP.
-          </p>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-4">Key challenges we address</h2>
-          <div class="space-y-4">
-            <div class="p-4 bg-gray-50 border-l-4 border-purple-600">
-              <p class="text-lg font-medium text-warm-black mb-1">Devanagari script handling</p>
-              <p class="text-warm-600">Unicode normalization, character combinations (संयुक्ताक्षर), and text preprocessing for ML pipelines.</p>
-            </div>
-            <div class="p-4 bg-gray-50 border-l-4 border-purple-600">
-              <p class="text-lg font-medium text-warm-black mb-1">Code-switching detection</p>
-              <p class="text-warm-600">Handling queries like "yo product ko price kati ho?" that mix Nepali and English in the same sentence.</p>
-            </div>
-            <div class="p-4 bg-gray-50 border-l-4 border-purple-600">
-              <p class="text-lg font-medium text-warm-black mb-1">Low-resource language strategies</p>
-              <p class="text-warm-600">Transfer learning from Hindi, multilingual models, and data augmentation techniques.</p>
-            </div>
-            <div class="p-4 bg-gray-50 border-l-4 border-purple-600">
-              <p class="text-lg font-medium text-warm-black mb-1">Tokenization and embeddings</p>
-              <p class="text-warm-600">Word segmentation, subword tokenization, and creating embeddings for Nepali text.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-lg font-medium text-warm-black mb-4">What you get:</h2>
-          <ul class="space-y-3">
-            {% for item in resource.whatYouGet %}
-            <li class="flex items-start gap-3">
-              <span class="text-zunkiree-600 mt-1">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </span>
-              <span class="text-warm-600 leading-relaxed">{{ item }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="mb-10" data-reveal>
-          <h2 class="text-2xl font-medium text-warm-black mb-6">Frequently asked questions</h2>
-          <div class="space-y-6">
-            <div>
-              <h3 class="text-lg font-medium text-warm-black mb-2">Can I use GPT-4 or Claude for Nepali?</h3>
-              <p class="text-warm-600">Yes, modern LLMs have some Nepali capability, but performance varies. We cover prompt engineering techniques specific to Nepali, when to use LLMs vs. specialized models, and how to evaluate Nepali language performance.</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-medium text-warm-black mb-2">What about training data for Nepali?</h3>
-              <p class="text-warm-600">The guide covers available Nepali datasets (newspapers, Wikipedia, social media), data augmentation strategies, and how to create your own training data efficiently.</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-medium text-warm-black mb-2">Is this guide for researchers or practitioners?</h3>
-              <p class="text-warm-600">Primarily practitioners. We focus on production-ready solutions rather than academic exploration. That said, we reference relevant research and provide pointers for those who want to go deeper.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lg:col-span-5" data-reveal>
-        <div class="lg:sticky lg:top-24">
-          {% set formTitle = resource.formTitle %}
-          {% set ctaText = resource.ctaText %}
-          {% include "components/lead-capture-form.njk" %}
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+</div>
 
 <script type="application/ld+json">
 {
@@ -171,32 +114,8 @@ permalink: /resources/nepali-language-ai-guide/
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",
-  "author": {
-    "@type": "Organization",
-    "name": "Zunkiree Labs"
-  },
-  "about": {
-    "@type": "Thing",
-    "name": "Nepali Natural Language Processing"
-  },
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "about": { "@type": "Thing", "name": "Nepali Natural Language Processing" },
   "inLanguage": ["en", "ne"]
 }
 </script>
-
-<!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-normal text-gray-900">Comparing Nepali Language NLP Approaches</h2>
-      </div>
-      <div>
-        <div class="text-lg md:text-xl text-gray-600 leading-relaxed"><p class="text-gray-600 leading-relaxed">When considering how to implement NLP systems for the Nepali language, it's essential to weigh different strategies and tools. Below is a comparison between various approaches tailored for Nepali NLP and their respective characteristics.</p></div>
-      </div>
-    </div>
-  </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
-
-<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What services does Zunkiree provide?","@type":"Question","acceptedAnswer":{"text":"Zunkiree offers a range of services including AI Development, AI Customer Experience, Data Systems, Custom Software, SaaS Development, Web & App Development, AEO & SEO, and AI Ecommerce.","@type":"Answer"}},{"name":"What is GaaS?","@type":"Question","acceptedAnswer":{"text":"GaaS stands for Agentic as a Service, which provides autonomous AI agents deployed as managed services.","@type":"Answer"}},{"name":"Can I try Zunkiree Search for free?","@type":"Question","acceptedAnswer":{"text":"Yes, you can try Zunkiree Search for free and see how it delivers direct answers instead of links.","@type":"Answer"}},{"name":"What is the focus of the 'State of AI in Nepal 2026' report?","@type":"Question","acceptedAnswer":{"text":"The 'State of AI in Nepal 2026' report serves as the definitive guide to AI adoption across Nepali industries.","@type":"Answer"}},{"name":"How does Zunkiree improve customer experience?","@type":"Question","acceptedAnswer":{"text":"Zunkiree enhances customer experience through AI-powered solutions such as intelligent chatbots, conversational AI support, and AI-native search capabilities.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Review","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","reviewBody":"Technical guide to NLP for the Nepali language. The challenge of Nepali NLP Building AI systems that understand Nepali presents unique challenges. Nepali is a low-resource language with limited training data compared to English or Chinese. The Devanagari script has complex character combinations. And users naturally mix Nepali and English in queries (code-switching). This guide covers practical solutions for these challenges, drawing on our experience building AI systems for the Nepal market. Whether you're creating chatbots, search systems, or document processing pipelines, this technical guide will help you navigate the complexities of Nepali NLP. Key challenges we address Devanagari script handling Unicode normalization, character combinations (संयुक्ताक्षर), and text preprocessing for ML pipelines. Code-switching detection Handling queries like 'yo product ko price kati ho?' that mix Nepali and English in the same sentence. Low-resource language strategies Transfer learning from Hindi, multilingual models, and data augmentation techniques. Tokenization and embeddings Word segmentation, subword tokenization, and creating embeddings for Nepali text. What you get: Overview of Nepali NLP landscape and available tools Handling Devanagari script in ML pipelines Code-switching: When users mix Nepali and English Training data strategies for low-resource language Integration with existing Nepali language models Building Nepali chatbots: Practical walkthrough Evaluation metrics for Nepali NLP systems Frequently asked questions Can I use GPT-4 or Claude for Nepali? Yes, modern LLMs have some Nepali capability, but performance varies. We cover prompt engineering techniques specific to Nepali, when to use LLMs vs. specialized models, and how to evaluate Nepali language performance. What about training data for Nepali? The guide covers available Nepali datasets (newspapers, Wikipedia, social media), data augmentation strategies, and how to create your own training data efficiently. Is this guide for researchers or practitioners? Primarily practitioners. We focus on production-ready solutions rather than academic exploration. That said, we reference relevant research and provide pointers for those who want to go deeper.","itemReviewed":{"name":"Nepali Language AI Guide","@type":"Product","description":"Technical guide to NLP for the Nepali language"},"datePublished":"2026-02-10"}</script><!-- SEOAI:SCHEMA:END -->

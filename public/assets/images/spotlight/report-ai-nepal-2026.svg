@@ -1,41 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280">
   <defs>
-    <linearGradient id="spot-nepal-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#0f1f33"/>
-    </linearGradient>
-    <linearGradient id="spot-nepal-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#EB1600"/>
-      <stop offset="100%" stop-color="#ff4d4d"/>
+    <linearGradient id="np-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6f9b34"/>
+      <stop offset="100%" stop-color="#90a959"/>
     </linearGradient>
   </defs>
 
-  <rect width="400" height="250" fill="url(#spot-nepal-bg)"/>
+  <!-- Globe circle -->
+  <circle cx="200" cy="148" r="90" fill="none" stroke="rgba(125,211,252,0.18)" stroke-width="1"/>
+  <!-- Latitude lines -->
+  <ellipse cx="200" cy="148" rx="90" ry="28" fill="none" stroke="rgba(125,211,252,0.12)" stroke-width="1"/>
+  <ellipse cx="200" cy="148" rx="90" ry="60" fill="none" stroke="rgba(125,211,252,0.08)" stroke-width="1"/>
+  <!-- Longitude -->
+  <line x1="200" y1="58" x2="200" y2="238" stroke="rgba(125,211,252,0.12)" stroke-width="1"/>
+  <line x1="110" y1="148" x2="290" y2="148" stroke="rgba(125,211,252,0.12)" stroke-width="1"/>
 
-  <!-- Mountain silhouette -->
-  <path d="M0 200 L50 140 L100 170 L150 100 L200 130 L250 80 L300 110 L350 70 L400 100 L400 250 L0 250 Z" fill="#fff" opacity="0.05"/>
+  <!-- Nepal shape -->
+  <path d="M148 138 L160 132 L175 134 L188 130 L200 132 L215 128 L228 131 L240 136 L245 142 L240 148 L228 145 L215 148 L200 146 L188 149 L175 146 L160 150 L148 146 Z"
+    fill="url(#np-accent)" opacity="0.85"/>
 
-  <!-- Data bars -->
-  <g transform="translate(40, 130)">
-    <rect x="0" y="50" width="30" height="40" fill="url(#spot-nepal-accent)" opacity="0.7" rx="2"/>
-    <rect x="45" y="30" width="30" height="60" fill="url(#spot-nepal-accent)" opacity="0.8" rx="2"/>
-    <rect x="90" y="10" width="30" height="80" fill="url(#spot-nepal-accent)" opacity="0.9" rx="2"/>
-    <rect x="135" y="25" width="30" height="65" fill="url(#spot-nepal-accent)" opacity="0.8" rx="2"/>
-    <rect x="180" y="0" width="30" height="90" fill="url(#spot-nepal-accent)" rx="2"/>
+  <!-- Kathmandu dot + pulse -->
+  <circle cx="200" cy="139" r="5" fill="white" opacity="0.95"/>
+  <circle cx="200" cy="139" r="12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1">
+    <animate attributeName="r" values="8;16;8" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0;0.25" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 4-point star top-right -->
+  <g transform="translate(338, 52) rotate(-10)">
+    <path d="M0,-20 C3,-7 7,-3 20,0 C7,3 3,7 0,20 C-3,7 -7,3 -20,0 C-7,-3 -3,-7 0,-20Z" fill="#7dd3fc" opacity="0.90"/>
+    <path d="M0,-11 C2,-4 4,-2 11,0 C4,2 2,4 0,11 C-2,4 -4,2 -11,0 C-4,-2 -2,-4 0,-11Z" fill="white" opacity="0.45"/>
   </g>
 
-  <!-- Stats box -->
-  <g transform="translate(260, 100)">
-    <rect width="110" height="70" fill="#fff" opacity="0.1" rx="6"/>
-    <text x="55" y="30" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">150th</text>
-    <text x="55" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6" text-anchor="middle">AI Readiness</text>
-    <text x="55" y="62" font-family="system-ui, sans-serif" font-size="8" fill="#fff" opacity="0.4" text-anchor="middle">of 193 countries</text>
-  </g>
+  <!-- Stat chip -->
+  <rect x="258" y="172" width="112" height="52" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(125,211,252,0.25)" stroke-width="1"/>
+  <text x="314" y="196" font-family="system-ui,sans-serif" font-size="21" font-weight="800" fill="#7dd3fc" text-anchor="middle">150th</text>
+  <text x="314" y="213" font-family="system-ui,sans-serif" font-size="8.5" fill="rgba(255,255,255,0.55)" text-anchor="middle">AI Readiness · 193 nations</text>
 
-  <!-- Featured badge -->
-  <rect x="30" y="30" width="80" height="22" fill="url(#spot-nepal-accent)" rx="3"/>
-  <text x="70" y="45" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#fff" text-anchor="middle">FEATURED</text>
+  <!-- Badge -->
+  <rect x="20" y="22" width="108" height="20" fill="url(#np-accent)" rx="10"/>
+  <text x="74" y="36" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">FEATURED REPORT</text>
 
-  <!-- Nepal text -->
-  <text x="300" y="50" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#fff" opacity="0.1">NEPAL</text>
+  <!-- BG watermark -->
+  <text x="42" y="258" font-family="system-ui,sans-serif" font-size="32" font-weight="800" fill="rgba(255,255,255,0.04)" letter-spacing="2">NEPAL</text>
 </svg>

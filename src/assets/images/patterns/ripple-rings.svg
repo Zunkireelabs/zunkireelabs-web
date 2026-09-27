@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- Primary ripple — concentric rings, cycling the three brand hues, fading outward -->
+  <g fill="none" stroke-width="2.5" transform="translate(760,300)">
+    <circle r="50"  stroke="rgba(144,169,89,0.40)" />
+    <circle r="105" stroke="rgba(205,227,235,0.36)" />
+    <circle r="165" stroke="rgba(234,240,216,0.32)" />
+    <circle r="230" stroke="rgba(144,169,89,0.28)" />
+    <circle r="300" stroke="rgba(205,227,235,0.24)" />
+    <circle r="375" stroke="rgba(234,240,216,0.20)" />
+    <circle r="455" stroke="rgba(144,169,89,0.16)" />
+    <circle r="540" stroke="rgba(205,227,235,0.13)" />
+    <circle r="630" stroke="rgba(234,240,216,0.10)" />
+    <circle r="725" stroke="rgba(144,169,89,0.07)" />
+    <circle r="825" stroke="rgba(205,227,235,0.05)" />
+  </g>
+
+  <!-- Secondary ripple — smaller, lower-right, adds depth like the Kore.ai multi-source swirl -->
+  <g fill="none" stroke-width="2" transform="translate(1280,700)">
+    <circle r="40"  stroke="rgba(234,240,216,0.30)" />
+    <circle r="90"  stroke="rgba(144,169,89,0.24)" />
+    <circle r="150" stroke="rgba(205,227,235,0.20)" />
+    <circle r="220" stroke="rgba(234,240,216,0.15)" />
+    <circle r="300" stroke="rgba(144,169,89,0.11)" />
+    <circle r="390" stroke="rgba(205,227,235,0.07)" />
+    <circle r="490" stroke="rgba(234,240,216,0.04)" />
+  </g>
+</svg>

@@ -1,14 +1,23 @@
 ---
 layout: base.njk
 schemaType: article
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   BLOG POST LAYOUT
-   Single article view with author, date, TOC
+   BLOG POST LAYOUT — WEBSITE V2
+   Design-only reskin onto the Homepage V2 system (navbar-v2,
+   footer-v2, Inter type, navy/green tokens, glass card shells).
+   Layout rhythm (hero → featured media → two-col body/sidebar →
+   related grid) follows the Kore.ai blog article reference the
+   user supplied — section order, content, copy, links, metadata,
+   and schema are all unchanged from the prior layout.
    ===================================================== #}
 
 {% set author = authors[authorId] if authorId else authors["zunkiree-team"] %}
+
+{% include "partials/navbar-v2.njk" %}
 
 {# =====================================================
    ARTICLE SCHEMA
@@ -51,177 +60,219 @@ schemaType: article
 </script>
 
 {# =====================================================
-   HERO SECTION
+   PAGE GRID — a single persistent left sidebar (TOC, CTA, Topics,
+   Author bio) runs the full height of the page, from the hero
+   down through the article body, per user direction. Sidebar
+   col-span-4 / content col-span-8 keeps the featured image and
+   prose narrower than the old full-bleed treatment.
    ===================================================== #}
-<section class="pt-16 pb-8 md:pt-20 md:pb-12 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    {# Breadcrumb #}
-    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
-      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
-      <span class="text-warm-400">/</span>
-      <a href="/blog/" class="text-zunkiree-600 hover:underline">Blog</a>
-      <span class="text-warm-400">/</span>
-      <span class="text-warm-600">{{ title | truncate(40) }}</span>
-    </nav>
+<article class="bg-warm-off-white pb-16 pt-32 sm:pt-36 lg:pb-24 lg:pt-44">
+  <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
 
-    {# Category + Read time #}
-    <div class="flex items-center gap-4 mb-6">
-      {% if category %}
-      <span class="inline-flex items-center px-3 py-1 text-xs font-medium bg-zunkiree-100 text-zunkiree-700 rounded-full">
-        {{ category }}
-      </span>
-      {% endif %}
-      {% if readTime %}
-      <span class="text-sm text-gray-500">{{ readTime }} min read</span>
-      {% endif %}
-    </div>
-
-    {# Title #}
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal text-gray-900 tracking-tight leading-tight mb-6 max-w-4xl">
-      {{ title }}
-    </h1>
-
-    {# Description #}
-    {% if description %}
-    <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl">
-      {{ description }}
-    </p>
-    {% endif %}
-
-    {# Author + Date #}
-    <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
-      {% if author.avatar %}
-      {% if author.avatarFit == 'contain' %}
-      <img
-        src="{{ author.avatar }}"
-        alt="{{ author.name }}"
-        class="h-12 w-auto max-w-[160px] object-contain"
-        loading="lazy"
-      />
-      {% else %}
-      <img
-        src="{{ author.avatar }}"
-        alt="{{ author.name }}"
-        class="w-12 h-12 rounded-full object-cover"
-        loading="lazy"
-      />
-      {% endif %}
-      {% endif %}
-      <div>
-        <p class="font-medium text-gray-900">{{ author.name }}</p>
-        <p class="text-sm text-gray-500">
-          <time datetime="{{ date | date('%Y-%m-%d') }}">{{ date | date('%B %d, %Y') }}</time>
-          {% if lastUpdated %}
-          <span class="mx-2">·</span>
-          Updated <time datetime="{{ lastUpdated | date('%Y-%m-%d') }}">{{ lastUpdated | date('%B %d, %Y') }}</time>
-          {% endif %}
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   FEATURED IMAGE
-   ===================================================== #}
-{% if featuredImage %}
-<section class="pb-8 md:pb-12 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <img
-      src="{{ featuredImage }}"
-      alt="{{ featuredImageAlt | default(title) }}"
-      class="w-full aspect-[2/1] object-cover rounded-lg"
-    />
-  </div>
-</section>
-{% endif %}
-
-{# =====================================================
-   ARTICLE CONTENT
-   ===================================================== #}
-<article class="pb-16 md:pb-24 bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
-      {# Main Content #}
-      <div class="lg:col-span-8">
-        <div class="prose prose-lg prose-gray max-w-none
-          prose-headings:font-normal prose-headings:tracking-tight
-          prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-12 prose-h2:mb-6
-          prose-h3:text-xl prose-h3:md:text-2xl prose-h3:mt-8 prose-h3:mb-4
-          prose-p:leading-relaxed prose-p:text-gray-600
-          prose-a:text-zunkiree-600 prose-a:no-underline hover:prose-a:underline
-          prose-strong:font-medium prose-strong:text-gray-900
-          prose-ul:my-6 prose-li:my-2
-          prose-img:rounded-lg
-          prose-blockquote:border-l-zunkiree-500 prose-blockquote:bg-gray-50 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:not-italic
-        ">
-          {{ content | safe }}
-        </div>
-
-        {# Tags #}
-        {% if tags and tags.length > 1 %}
-        <div class="mt-12 pt-8 border-t border-gray-200">
-          <p class="text-sm text-gray-500 mb-3">Topics:</p>
-          <div class="flex flex-wrap gap-2">
-            {% for tag in tags %}
-            {% if tag != "blog" %}
-            <span class="inline-flex items-center px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full">
-              {{ tag }}
-            </span>
-            {% endif %}
-            {% endfor %}
+      {# Sidebar - Table of Contents, CTA, Topics, Author bio #}
+      <aside class="order-2 lg:order-2 lg:col-span-4">
+        <div class="lg:sticky lg:top-24 space-y-4">
+          <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+            <p class="mb-4 font-mono text-[11px] uppercase tracking-wider text-navy-400">On this page</p>
+            <nav class="space-y-2.5 text-[14px] leading-snug text-navy-600" id="toc">
+              {# TOC will be generated by JS if needed #}
+            </nav>
           </div>
-        </div>
-        {% endif %}
 
-        {# Author Bio #}
-        <div class="mt-12 p-6 bg-gray-50 rounded-lg">
-          <div class="flex items-start gap-4">
-            {% if author.avatar %}
-            {% if author.avatarFit == 'contain' %}
-            <img
-              src="{{ author.avatar }}"
-              alt="{{ author.name }}"
-              class="h-16 w-auto max-w-[200px] flex-shrink-0 object-contain"
-              loading="lazy"
-            />
-            {% else %}
-            <img
-              src="{{ author.avatar }}"
-              alt="{{ author.name }}"
-              class="w-16 h-16 rounded-full flex-shrink-0 object-cover"
-              loading="lazy"
-            />
-            {% endif %}
-            {% endif %}
-            <div>
-              <p class="font-medium text-gray-900 mb-1">{{ author.name }}</p>
-              <p class="text-sm text-gray-500 mb-3">{{ author.role }}</p>
-              <p class="text-gray-600">{{ author.bio }}</p>
+          {# CTA — dark navy card, matches homepage-v2's platform-teaser surface #}
+          <div class="relative overflow-hidden rounded-2xl bg-navy-950 p-6 text-white" style="box-shadow: 0 30px 50px -25px rgba(15, 23, 42, 0.45);">
+            <div class="relative z-10">
+              <p class="mb-2 font-medium">Need AI solutions?</p>
+              <p class="mb-5 text-[14px] leading-relaxed text-white/60">Let's discuss how AI can transform your business.</p>
+              <a href="/contact/" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-4 py-2.5 font-mono text-[12px] uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]">
+                Schedule a Call
+              </a>
             </div>
           </div>
-        </div>
-      </div>
 
-      {# Sidebar - Table of Contents placeholder #}
-      <aside class="lg:col-span-4 hidden lg:block">
-        <div class="sticky top-24">
-          <p class="text-sm font-medium text-gray-900 mb-4">On this page</p>
-          <nav class="text-sm text-gray-600" id="toc">
-            {# TOC will be generated by JS if needed #}
-          </nav>
+          {# Tags #}
+          {% if tags and tags.length > 1 %}
+          <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+            <p class="mb-3 font-mono text-[11px] uppercase tracking-wider text-navy-400">Topics</p>
+            <div class="flex flex-wrap gap-2">
+              {% for tag in tags %}
+              {% if tag != "blog" %}
+              <span class="inline-flex items-center rounded-full border border-navy-100 bg-white px-3 py-1 text-[13px] text-navy-600">
+                {{ tag }}
+              </span>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
 
-          {# CTA #}
-          <div class="mt-8 p-6 bg-gradient-to-br from-zunkiree-500 to-zunkiree-700 rounded-lg text-white">
-            <p class="font-medium mb-2">Need AI solutions?</p>
-            <p class="text-sm text-white/80 mb-4">Let's discuss how AI can transform your business.</p>
-            <a href="/contact/" class="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-zunkiree-700 font-medium text-sm rounded hover:bg-gray-100 transition-colors">
-              Schedule a Call
-            </a>
+          {# Author Bio — a wordmark avatar (avatarFit: contain, e.g. the
+             Zunkiree Labs Team logo) is far wider than it is tall, so it
+             gets its own row above the text instead of sitting side-by-side
+             with it (side-by-side squeezed the bio text into a sliver of
+             the sidebar column). Headshot avatars keep the row layout. #}
+          <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+            {% if author.avatar and author.avatarFit == 'contain' %}
+            <img
+              src="{{ author.avatar }}"
+              alt="{{ author.name }}"
+              class="mb-4 h-8 w-auto max-w-[160px] object-contain"
+              loading="lazy"
+            />
+            <div>
+              <p class="mb-1 font-medium text-[#111827]">{{ author.name }}</p>
+              <p class="mb-3 text-[13px] text-navy-400">{{ author.role }}</p>
+              <p class="text-[14px] leading-relaxed text-navy-600">{{ author.bio }}</p>
+            </div>
+            {% else %}
+            <div class="flex items-start gap-4">
+              {% if author.avatar %}
+              <img
+                src="{{ author.avatar }}"
+                alt="{{ author.name }}"
+                class="h-16 w-16 flex-shrink-0 rounded-full object-cover"
+                loading="lazy"
+              />
+              {% endif %}
+              <div>
+                <p class="mb-1 font-medium text-[#111827]">{{ author.name }}</p>
+                <p class="mb-3 text-[13px] text-navy-400">{{ author.role }}</p>
+                <p class="text-[14px] leading-relaxed text-navy-600">{{ author.bio }}</p>
+              </div>
+            </div>
+            {% endif %}
           </div>
         </div>
       </aside>
+
+      {# Main Content #}
+      <div class="order-1 lg:col-span-8">
+        {# Breadcrumb #}
+        <nav class="mb-6 flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-[#76B900]">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/blog/" class="transition-colors hover:text-[#76B900]">Blog</a>
+          <span aria-hidden="true">/</span>
+          <span class="truncate text-navy-500">{{ title | truncate(40) }}</span>
+        </nav>
+
+        {# Featured Image + Title overlay — headline sits directly on
+           the gradient cover image (Kore.ai cover-image treatment)
+           instead of as plain text above it. Falls back to a plain
+           title block when there's no featuredImage. #}
+        {% if featuredImage %}
+        <div class="relative mb-8 aspect-[2/1] w-full overflow-hidden rounded-2xl border border-navy-100 shadow-card">
+          <img
+            src="{{ featuredImage }}"
+            alt="{{ featuredImageAlt | default(title) }}"
+            class="h-full w-full object-cover"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/25 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
+            {% if category %}
+            <span class="mb-4 inline-flex items-center rounded-full bg-[#76B900]/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#c3f562] backdrop-blur-sm">
+              {{ category }}
+            </span>
+            {% endif %}
+            <h1 class="max-w-3xl text-[26px] font-semibold leading-[1.15] tracking-tight text-white sm:text-[34px] lg:text-[40px]">
+              {{ title }}
+            </h1>
+            {% if readTime %}
+            <span class="mt-3 block text-[13px] text-white/70">{{ readTime }} min read</span>
+            {% endif %}
+          </div>
+        </div>
+        {% else %}
+        {# Category + Read time #}
+        <div class="mb-6 flex items-center gap-4">
+          {% if category %}
+          <span class="inline-flex items-center rounded-full bg-[#76B900]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#5a9100]">
+            {{ category }}
+          </span>
+          {% endif %}
+          {% if readTime %}
+          <span class="text-[13px] text-navy-400">{{ readTime }} min read</span>
+          {% endif %}
+        </div>
+
+        {# Title #}
+        <h1 class="mb-6 text-[28px] font-semibold leading-[1.15] tracking-tight text-[#111827] sm:text-[34px] lg:text-[40px]">
+          {{ title }}
+        </h1>
+        {% endif %}
+
+        {# Description #}
+        {% if description %}
+        <p class="mb-8 text-[16px] leading-relaxed text-navy-500 sm:text-[18px]">
+          {{ description }}
+        </p>
+        {% endif %}
+
+        {# Author + Date #}
+        <div class="mb-10 flex items-center gap-4 border-t border-navy-100 pt-6">
+          {% if author.avatar %}
+          {% if author.avatarFit == 'contain' %}
+          <img
+            src="{{ author.avatar }}"
+            alt="{{ author.name }}"
+            class="h-12 w-auto max-w-[120px] flex-shrink-0 object-contain"
+            loading="lazy"
+          />
+          {% else %}
+          <img
+            src="{{ author.avatar }}"
+            alt="{{ author.name }}"
+            class="h-12 w-12 rounded-full object-cover"
+            loading="lazy"
+          />
+          {% endif %}
+          {% endif %}
+          <div>
+            <p class="font-medium text-[#111827]">{{ author.name }}</p>
+            <p class="text-[13px] text-navy-400">
+              <time datetime="{{ date | date('%Y-%m-%d') }}">{{ date | date('%B %d, %Y') }}</time>
+              {% if lastUpdated %}
+              <span class="mx-2">&middot;</span>
+              Updated <time datetime="{{ lastUpdated | date('%Y-%m-%d') }}">{{ lastUpdated | date('%B %d, %Y') }}</time>
+              {% endif %}
+            </p>
+          </div>
+        </div>
+
+        <div class="prose prose-lg max-w-none
+          prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-[#111827]
+          prose-h2:text-[24px] prose-h2:md:text-[28px] prose-h2:mt-14 prose-h2:mb-6 prose-h2:scroll-mt-28
+          prose-h3:text-[19px] prose-h3:md:text-[22px] prose-h3:mt-10 prose-h3:mb-4 prose-h3:scroll-mt-28
+          prose-h4:text-[16px] prose-h4:md:text-[18px] prose-h4:mt-8 prose-h4:mb-3
+          prose-p:leading-relaxed prose-p:text-navy-600
+          prose-a:text-[#5a9100] prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-strong:font-semibold prose-strong:text-[#111827]
+          prose-ul:my-6 prose-li:my-2 prose-li:text-navy-600 prose-li:marker:text-[#76B900]
+          prose-ol:my-6 prose-ol:marker:text-navy-400 prose-ol:marker:font-medium
+          prose-img:rounded-2xl prose-img:border prose-img:border-navy-100 prose-img:shadow-card
+          prose-hr:border-navy-100 prose-hr:my-12
+          prose-blockquote:rounded-xl prose-blockquote:border-l-4 prose-blockquote:border-l-[#76B900] prose-blockquote:bg-sky-50/60 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:text-navy-700
+          prose-table:overflow-hidden
+          prose-thead:bg-navy-50/60
+          prose-th:font-mono prose-th:text-[11px] prose-th:uppercase prose-th:tracking-wider prose-th:text-navy-500 prose-th:font-semibold
+          prose-td:text-navy-600 prose-td:align-top
+          prose-code:rounded prose-code:bg-navy-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-mono prose-code:text-[0.9em] prose-code:text-navy-700 prose-code:before:content-none prose-code:after:content-none
+        ">
+          <style>
+            /* Table shell to match the card system — prose-table utilities can't
+               reach border/radius on the <table> element itself. */
+            .prose table { border: 1px solid #e3eaec; border-radius: 1rem; border-spacing: 0; }
+            .prose thead th:first-child { border-top-left-radius: 1rem; }
+            .prose thead th:last-child { border-top-right-radius: 1rem; }
+            .prose th, .prose td { padding: 0.85rem 1.25rem; border-bottom: 1px solid #e3eaec; }
+            .prose tr:last-child td { border-bottom: none; }
+          </style>
+          {{ content | safe }}
+        </div>
+      </div>
 
     </div>
   </div>
@@ -232,25 +283,25 @@ schemaType: article
    ===================================================== #}
 {% set relatedPosts = collections.blog | rejectattr("url", "equalto", page.url) | head(3) %}
 {% if relatedPosts.length > 0 %}
-<section class="py-16 md:py-24 bg-gray-50">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-8">More from the blog</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<section class="border-t border-navy-100 bg-warm-off-white py-16 md:py-24">
+  <div class="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8">
+    <h2 class="mb-8 text-[24px] font-semibold tracking-tight text-[#111827] md:text-[28px]">More from the blog</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
       {% for post in relatedPosts %}
-      <a href="{{ post.url }}" class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+      <a href="{{ post.url }}" class="group block overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-subtle transition-shadow duration-300 hover:shadow-card-hover">
         {% if post.data.featuredImage %}
         <div class="aspect-[16/9] overflow-hidden">
           <img
             src="{{ post.data.featuredImage }}"
             alt="{{ post.data.title }}"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
         </div>
         {% endif %}
         <div class="p-6">
-          <p class="text-sm text-gray-500 mb-2">{{ post.date | date('%B %d, %Y') }}</p>
-          <h3 class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors">
+          <p class="mb-2 text-[13px] text-navy-400">{{ post.date | date('%B %d, %Y') }}</p>
+          <h3 class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-[#5a9100]">
             {{ post.data.title }}
           </h3>
         </div>
@@ -260,3 +311,5 @@ schemaType: article
   </div>
 </section>
 {% endif %}
+
+{% include "partials/footer-v2.njk" %}
