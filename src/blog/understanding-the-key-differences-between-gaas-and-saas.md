@@ -2,7 +2,7 @@
 title: "Understanding the Key Differences Between GaaS and SaaS"
 description: "Explore the main differences between GaaS (Agentic as a Service) and SaaS (Software as a Service) to make informed decisions for your business needs."
 date: "2026-07-20"
-featuredImage: "/assets/images/blog/agentic-commerce-hero.jpg"
+featuredImage: "/assets/images/blog/agentic-commerce-hero.webp"
 featuredImageAlt: "Side-by-side comparison graphic contrasting GaaS and SaaS service models"
 ---
 

@@ -3,68 +3,121 @@ layout: "base.njk"
 permalink: "/privacy/"
 title: "Privacy Policy | Zunkiree Labs"
 description: "Learn how Zunkiree Labs handles information and protects your privacy."
-templateEngineOverride: "njk, md"
+bodyClass: "v2-inter"
+hideChrome: true
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-3xl">
+{#
+  DIRECTION CONTRACT
+  THESIS: A legal document reads like part of the same platform, not a
+  bolted-on static page — homepage-v2's navy/green/glass system applied
+  to Read-mode long-form text instead of a marketing narrative.
+  OWN-WORLD: white ground, #76B900 the one accent (draft-notice icon,
+  active link states), mono uppercase eyebrow/meta, Inter at
+  homepage-v2 weights, hairline navy-100 dividers between sections
+  (no card treatment needed — this is plain reading content).
+  FORM: extends the established homepage-v2 / resources/what-is-gaas.njk
+  Read-mode world onto this page. Content/copy unchanged from the prior
+  version — visual system only.
+#}
 
-<h1 class="text-4xl sm:text-5xl md:text-[60px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-4">Privacy Policy</h1>
+{% include "partials/navbar-v2.njk" %}
 
-<p class="text-sm text-gray-500 mb-8">Last updated: August 2026</p>
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
 
-<div class="bg-gray-50 border border-gray-200 rounded-lg px-5 py-4 mb-10 text-sm text-gray-600 leading-relaxed">
-  <span class="font-medium text-gray-900">Draft notice:</span> This template should be reviewed by a qualified legal professional before publishing.
-</div>
+{# =====================================================
+   HERO — breadcrumb + eyebrow + H1 + meta row, left-aligned
+   inside a contained column (Read mode, not Persuade).
+   ===================================================== #}
+<section class="bg-white px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40">
+  <div class="mx-auto max-w-3xl">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+        <li><a href="/" class="transition-colors hover:text-[#5a9100]">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-navy-900">Privacy Policy</li>
+      </ol>
+    </nav>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Introduction</h2>
+    <span class="mb-5 inline-flex items-center rounded-full border border-sky-100/60 bg-sky-50/60 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-sky-600 shadow-subtle" data-reveal>
+      Legal
+    </span>
 
-<p class="text-lg text-gray-600 leading-relaxed">This Privacy Policy explains how Zunkiree Labs collects, uses, and protects information when you visit our website.</p>
+    <h1 class="mb-4 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1]" data-reveal>
+      Privacy Policy
+    </h1>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Information We Collect</h2>
+    <p class="font-mono text-[11px] uppercase tracking-wider text-navy-400" data-reveal>
+      Last updated: August 2026
+    </p>
+  </div>
+</section>
 
-<p class="text-lg text-gray-600 leading-relaxed">Depending on your interaction with our website, we may collect information that you voluntarily provide as well as basic technical information required to operate the website.</p>
+{# =====================================================
+   BODY — plain reading column, hairline dividers between
+   sections instead of card treatment (Read mode).
+   ===================================================== #}
+<section class="bg-white px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-3xl">
+    <article data-reveal-stagger>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">How We Use Information</h2>
+      <div class="border-t border-navy-100 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Introduction</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">This Privacy Policy explains how Zunkiree Labs collects, uses, and protects information when you visit our website.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">We use information to operate and improve our website, respond to inquiries, maintain security, and comply with applicable legal obligations.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Information We Collect</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Depending on your interaction with our website, we may collect information that you voluntarily provide as well as basic technical information required to operate the website.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Cookies</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">How We Use Information</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">We use information to operate and improve our website, respond to inquiries, maintain security, and comply with applicable legal obligations.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Our website may use cookies and similar technologies to improve user experience and understand website performance.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Cookies</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Our website may use cookies and similar technologies to improve user experience and understand website performance.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Third-Party Services</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Third-Party Services</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">We may use trusted third-party providers to help operate our website. These providers process information according to their own privacy policies.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">We may use trusted third-party providers to help operate our website. These providers process information according to their own privacy policies.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Your Rights</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Depending on your location, you may have rights regarding your personal information, including access, correction, deletion, or objection to processing.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Your Rights</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Data Retention</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Information is retained only as long as necessary for the purposes described in this policy or as required by law.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Depending on your location, you may have rights regarding your personal information, including access, correction, deletion, or objection to processing.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Changes to This Policy</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">We may update this Privacy Policy from time to time. The latest version will always be published on this page.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Data Retention</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Contact</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">For privacy-related questions, please contact us through our <a href="/contact/" class="font-medium text-sky-600 underline decoration-sky-200 underline-offset-2 transition-colors hover:text-[#5a9100]">Contact page</a>.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Information is retained only as long as necessary for the purposes described in this policy or as required by law.</p>
+    </article>
+  </div>
+</section>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Changes to This Policy</h2>
-
-<p class="text-lg text-gray-600 leading-relaxed">We may update this Privacy Policy from time to time. The latest version will always be published on this page.</p>
-
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Contact</h2>
-
-<p class="text-lg text-gray-600 leading-relaxed">For privacy-related questions, please contact us through our Contact page.</p>
-
-</div>
+{% include "partials/footer-v2.njk" %}
 
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Privacy Policy | Zunkiree Labs","articleBody":"Privacy Policy Draft Notice: This template should be reviewed by a qualified legal professional before publishing. Last updated: August 2026 Introduction This Privacy Policy explains how Zunkiree Labs collects, uses, and protects information when you visit our website. Information We Collect Depending on your interaction with our website, we may collect information that you voluntarily provide as well as basic technical information required to operate the website. How We Use Information We use information to operate and improve our website, respond to inquiries, maintain security, and comply with applicable legal obligations. Cookies Our website may use cookies and similar technologies to improve user experience and understand website performance. Third-Party Services We may use trusted third-party providers to help operate our website. These providers process information according to their own privacy policies. Your Rights Depending on your location, you may have rights regarding your personal information, including access, correction, deletion, or objection to processing. Data Retention Information is retained only as long as necessary for the purposes described in this policy or as required by law. Changes to This Policy We may update this Privacy Policy from time to time. The latest version will always be published on this page. Contact For privacy-related questions, please contact us through our Contact page."}</script><!-- SEOAI:SCHEMA:END -->
-
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg">
-
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
-
-<!-- SEOAI:QACONTENT:START --><div class="container-custom">
-<div class="mt-10 p-6 bg-gray-50 rounded-lg">
-<h3 class="mt-10 text-2xl font-normal text-gray-900">Frequently asked questions</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><button @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : null" class="text-sm text-blue-600 hover:text-blue-800 transition-colors">
-          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
-        </button></p>
-</div>
-</div><!-- SEOAI:QACONTENT:END -->

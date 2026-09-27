@@ -2,7 +2,7 @@
 title: "AI Trends and Predictions for 2026: What Lies Ahead"
 description: "Explore the trends and predictions shaping the future of AI by 2026. Discover emerging technologies, evolving applications, and their potential impact across industries."
 date: "2026-07-19"
-featuredImage: /assets/images/blog/ai-trends-2026.jpg
+featuredImage: /assets/images/blog/ai-trends-2026.webp
 featuredImageAlt: Abstract upward trend line across layered geometric planes representing AI forecasting
 ---
 

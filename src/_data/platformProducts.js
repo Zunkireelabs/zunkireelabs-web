@@ -244,7 +244,8 @@ export default [
       blocks: [
         { title: "Systems that don't talk", description: "CRM, email, and marketing tools each hold part of the picture, none of the whole.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M9 15 6 18a3 3 0 0 1-4-4l3-3"/><path d="M15 9l3-3a3 3 0 0 0-4-4l-3 3"/><line x1="3" y1="21" x2="6" y2="18"/><line x1="18" y1="6" x2="21" y2="3"/></svg>' },
         { title: "Manual handoffs", description: "Work that moves between tools relies on someone remembering to update the next one.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M8 7 4 11l4 4"/><path d="M4 11h9a4 4 0 0 0 4-4"/><path d="M16 17l4-4-4-4"/><path d="M20 13h-9a4 4 0 0 0-4 4"/></svg>' },
-        { title: "Stale information", description: "Data goes out of date the moment it's not being actively looked at.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M6 3h12"/><path d="M6 21h12"/><path d="M6 3c0 5 6 6 6 9s-6 4-6 9"/><path d="M18 3c0 5-6 6-6 9s6 4 6 9"/></svg>' }
+        { title: "Stale information", description: "Data goes out of date the moment it's not being actively looked at.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M6 3h12"/><path d="M6 21h12"/><path d="M6 3c0 5 6 6 6 9s-6 4-6 9"/><path d="M18 3c0 5-6 6-6 9s6 4 6 9"/></svg>' },
+        { title: "Duplicate work everywhere", description: "The same update gets logged separately in two or three tools, because nothing shares what already happened.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' }
       ]
     },
     benefits: [
@@ -255,9 +256,27 @@ export default [
     useCases: {
       heading: "How Orca coordinates work across systems",
       items: [
-        { title: "Lead-to-Customer Handoff", description: "When a lead moves through your CRM, Orca coordinates the matching updates across email sequences and marketing campaigns.", features: ["Cross-system status sync", "Automated handoff triggers"] },
-        { title: "Campaign-to-Pipeline Coordination", description: "Marketing engagement signals feed directly into CRM records, so sales teams see pipeline context enriched by real activity.", features: ["Engagement signal sync", "No manual exports"] },
-        { title: "Cross-System Status Sync", description: "Every connected tool reflects the same up-to-date relationship status, without someone manually updating each one.", features: ["Continuous coordination", "No stale records"] }
+        {
+          title: "Lead-to-Customer Handoff",
+          description: "When a lead moves through your CRM, Orca coordinates the matching updates across email sequences and marketing campaigns.",
+          features: ["Cross-system status sync", "Automated handoff triggers"],
+          trigger: [{ label: "CRM", icon: "database" }],
+          systems: [{ label: "Email sequences", icon: "mail" }, { label: "Marketing campaigns", icon: "chart" }]
+        },
+        {
+          title: "Campaign-to-Pipeline Coordination",
+          description: "Marketing engagement signals feed directly into CRM records, so sales teams see pipeline context enriched by real activity.",
+          features: ["Engagement signal sync", "No manual exports"],
+          trigger: [{ label: "Marketing", icon: "chart" }],
+          systems: [{ label: "CRM", icon: "database" }]
+        },
+        {
+          title: "Cross-System Status Sync",
+          description: "Every connected tool reflects the same up-to-date relationship status, without someone manually updating each one.",
+          features: ["Continuous coordination", "No stale records"],
+          trigger: [],
+          systems: [{ label: "CRM", icon: "database" }, { label: "Email", icon: "mail" }, { label: "Marketing", icon: "chart" }]
+        }
       ]
     },
     platformTieIn: {
