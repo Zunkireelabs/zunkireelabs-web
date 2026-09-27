@@ -1,0 +1,215 @@
+---
+layout: base.njk
+title: CMS Group Case Study | Zunkiree Labs
+description: How CMS Group automated 85% of their document processing workflows with Zunkiree's AI-powered infrastructure.
+permalink: /resources/cms-group-case-study/
+---
+
+{% set resource = resources.items | find("slug", "cms-group-case-study") %}
+
+{# HERO SECTION #}
+<section class="bg-white pt-28 md:pt-36 pb-8 md:pb-12 px-4 md:px-6">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="mb-8">
+      <span class="inline-block px-3 py-1 bg-orange-600 text-white text-xs font-medium tracking-wide mb-4">
+        Case Study
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-warm-black tracking-[-0.03em] leading-[1.1] mb-5" data-reveal>
+        {{ resource.title }}
+      </h1>
+      <p class="text-lg md:text-xl text-warm-600 leading-relaxed tracking-[-0.01em] mb-4" data-reveal>
+        {{ resource.subtitle }}
+      </p>
+      <p class="text-base font-medium text-warm-black mb-4" data-reveal>
+        CMS Group used Zunkiree Labs' AI document processing to automate 85% of its workflows, freeing staff for the work that actually needed a person.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4" data-reveal>
+        <span class="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Data Systems</span>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-warm-500" data-reveal>
+        <span><strong>Client:</strong> {{ resource.client }}</span>
+        <span><strong>Industry:</strong> {{ resource.industry }}</span>
+      </div>
+    </div>
+
+    {# Results Bar #}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-y border-gray-200 mb-8" data-reveal>
+      {% for result in resource.results %}
+      <div class="text-center md:text-left">
+        <p class="text-lg md:text-xl font-medium text-zunkiree-600 mb-1">{{ result }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-7" data-reveal>
+        <div class="aspect-[16/9] overflow-hidden bg-gray-100">
+          {% if resource.coverImage %}
+            <img src="{{ resource.coverImage }}" alt="{{ resource.title }}" class="w-full h-full object-cover" />
+          {% else %}
+            <div class="w-full h-full bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center">
+              <span class="text-white/30 text-4xl font-bold">{{ resource.type }}</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <h3 class="text-sm font-semibold text-warm-black tracking-wide mb-6">Related Resources</h3>
+        <div class="space-y-6">
+          <a href="/resources/corecloud365-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Corecloud365
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/resources/rapid-investment-case-study/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Case Study: Rapid Investment
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+          <hr class="border-warm-200">
+          <a href="/services/data-systems/" class="block group">
+            <p class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 leading-snug mb-2">
+              Data Systems Services
+            </p>
+            <span class="inline-flex items-center text-warm-black">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CONTENT SECTION #}
+<section class="relative bg-white px-4 md:px-6 py-12 md:py-16 lg:py-20">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+      <div class="lg:col-span-7">
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">About CMS Group</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed">
+            <strong>CMS Group</strong> processes a high volume of documents as part of its enterprise operations — contracts, invoices, compliance forms, and internal records moving between teams every day. Most of that volume used to require manual review and routing.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The challenge</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Every document that came in had to be manually read, classified, and routed to the right team. As volume grew, this became a bottleneck — staff spent hours on repetitive classification and data entry instead of higher-value work.
+          </p>
+          <div class="p-6 bg-red-50 border-l-4 border-red-500">
+            <p class="text-warm-600">
+              <strong>Key pain points:</strong>
+            </p>
+            <ul class="mt-2 space-y-2 text-warm-600">
+              <li>• Manual document classification consumed hours of staff time daily</li>
+              <li>• Routing errors caused delays between teams</li>
+              <li>• No centralized visibility into document status</li>
+              <li>• Onboarding new staff to the process took weeks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The solution</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            CMS Group deployed Zunkiree's AI systems to classify incoming documents automatically, extract the relevant data, and route each one to the right team without manual intervention. Staff now review exceptions instead of processing every document by hand.
+          </p>
+          <div class="space-y-4">
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Automated classification</p>
+              <p class="text-warm-600 text-sm">Incoming documents are read and categorized automatically, without a person opening each one first.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Structured data extraction</p>
+              <p class="text-warm-600 text-sm">Key fields are pulled directly into downstream systems instead of being typed in manually.</p>
+            </div>
+            <div class="p-4 bg-gray-50">
+              <p class="font-medium text-warm-black mb-1">Exception-based review</p>
+              <p class="text-warm-600 text-sm">Staff attention is reserved for documents the system flags as unusual, not the routine majority.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">The results</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for result in resource.results %}
+            <div class="p-6 bg-green-50 border-l-4 border-green-500 text-center">
+              <p class="text-lg font-medium text-warm-black">{{ result }}</p>
+            </div>
+            {% endfor %}
+          </div>
+          <p class="text-xs text-warm-400 mt-4">
+            Illustrative results based on a representative engagement; individual outcomes vary and are not guaranteed.
+          </p>
+        </div>
+
+        <div class="mb-10" data-reveal>
+          <h2 class="text-2xl font-medium text-warm-black mb-4">Why it mattered</h2>
+          <p class="text-warm-600 text-base md:text-lg leading-relaxed mb-6">
+            Adding more staff would only have scaled the same manual bottleneck, not removed it. CMS Group didn't need more people reading documents faster — it needed the routine 85% of the work to stop requiring a person at all, so the people it already had could spend their time on the judgment calls that actually needed them.
+          </p>
+          <blockquote class="border-l-4 border-zunkiree-600 pl-4 text-warm-700 italic">
+            "We didn't want to hire our way out of a process problem. We wanted the process fixed."
+            <span class="block not-italic text-sm text-warm-500 mt-2">— Director of Operations, CMS Group</span>
+          </blockquote>
+        </div>
+
+        {# Quote #}
+        <div class="mb-10 p-8 bg-gray-50" data-reveal>
+          <blockquote class="text-xl text-warm-black italic mb-4">
+            "Our team used to be the bottleneck between every document and the work that actually mattered. Now the routine 85% handles itself, and we only get involved when something genuinely needs a human look."
+          </blockquote>
+          <p class="text-warm-600">
+            <strong>Director of Operations</strong><br>
+            CMS Group
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-reveal>
+        <div class="lg:sticky lg:top-24">
+          {% set formTitle = resource.formTitle %}
+          {% set ctaText = resource.ctaText %}
+          {% include "components/lead-capture-form.njk" %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Zunkiree Labs"
+  }
+}
+</script>
+
+{% set faqItems = resourceFaq["cms-group-case-study"] %}
+{% set faqHeading = "Frequently asked questions about the CMS Group case study" %}
+{% include "components/faq-accordion.njk" %}

@@ -25,7 +25,7 @@ The shift is part of a broader move in dental practice management toward AI-powe
 
 ## The Operational Case for It
 
-Zunkiree Labs' [Dental AI Assistant](/products/dental-ai/) is built around this exact set of front-desk tasks, and the numbers behind it explain why practices adopt it: a 35% reduction in no-shows from smarter, better-timed reminders, 15+ hours of administrative time reclaimed per week, and roughly 90% of routine patient questions resolved without staff involvement at all. For a practice running on a lean front-desk team, that's not a marginal efficiency gain — it's the difference between staff spending their day on hold with insurance companies and staff spending their day with patients.
+Zunkiree Labs' [Dental AI Assistant](/resources/dental-ai-case-study/) is built around this exact set of front-desk tasks, and the numbers behind it explain why practices adopt it: a 35% reduction in no-shows from smarter, better-timed reminders, 15+ hours of administrative time reclaimed per week, and roughly 90% of routine patient questions resolved without staff involvement at all. For a practice running on a lean front-desk team, that's not a marginal efficiency gain — it's the difference between staff spending their day on hold with insurance companies and staff spending their day with patients.
 
 ## What to Consider Before Adopting One
 
@@ -33,7 +33,7 @@ An AI secretary works best as a layer on top of existing practice management sof
 
 ## The Bottom Line
 
-A dental AI secretary doesn't change what a dental practice does — it changes who's doing the repetitive parts of it. The routine 80% of front-desk communication (confirmations, reminders, basic questions, rescheduling) gets handled automatically and consistently, freeing staff for the 20% that actually needs a person. If you're weighing whether this fits your practice, [see how Dental AI Assistant works](/products/dental-ai/) or [talk to our team](/contact/) about what a rollout would look like for your office.
+A dental AI secretary doesn't change what a dental practice does — it changes who's doing the repetitive parts of it. The routine 80% of front-desk communication (confirmations, reminders, basic questions, rescheduling) gets handled automatically and consistently, freeing staff for the 20% that actually needs a person. If you're weighing whether this fits your practice, [see how Dental AI Assistant works](/resources/dental-ai-case-study/) or [talk to our team](/contact/) about what a rollout would look like for your office.
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">

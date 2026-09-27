@@ -2,7 +2,7 @@
 title: "Exploring AEO Experts in Nepal: Unlocking AI Opportunities"
 description: "Discover the expertise of AEO professionals in Nepal, their impact on AI innovation, and how they can elevate technology solutions in various industries."
 date: "2026-07-20"
-featuredImage: "/assets/images/blog/nepal-tech-companies.jpg"
+featuredImage: "/assets/images/blog/nepal-tech-companies.webp"
 featuredImageAlt: "AEO and AI experts collaborating on technology solutions in Nepal"
 ---
 

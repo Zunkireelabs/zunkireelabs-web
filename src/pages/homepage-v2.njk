@@ -3,6 +3,15 @@ layout: base.njk
 title: "AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs"
 description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
 permalink: /
+hreflangAlternates:
+  - lang: en
+    url: /
+  - lang: de
+    url: /de/
+  - lang: nl
+    url: /nl/
+  - lang: x-default
+    url: /
 hideChrome: true
 bodyClass: "v2-inter"
 ---
@@ -627,8 +636,8 @@ bodyClass: "v2-inter"
               </div>
             {% else %}
               {# Platform layer mockup — names the actual shared infrastructure (edgeXcrm tenant
-                 architecture, Zunkiree Search, Orca) per company-industry-context.md §4, rather
-                 than a generic cluster/pod scaling visual. #}
+                 architecture, Orca orchestration) rather than a generic cluster/pod scaling
+                 visual. Zunkiree Search dropped 2026-09-27 (no longer a live product). #}
               <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
                 <!-- Browser/IDE mockup -->
                 <div class="relative z-10 w-full flex-1 rounded-lg border border-navy-100/30 bg-white/70 backdrop-blur-sm flex flex-col overflow-hidden shadow-sm min-h-[145px]">
@@ -649,7 +658,7 @@ bodyClass: "v2-inter"
 
 app = platform.init(
   tenant=<span class="text-navy-900/50">"edgeXcrm"</span>,
-  search=<span class="text-navy-900/50">"zunkiree_search"</span>,
+  orchestration=<span class="text-navy-900/50">"orca"</span>,
   replicas=<span class="text-[#76B900] font-bold mockup-replicas-text"></span>
 )</code></pre>
                   <!-- Terminal Log Console overlay (slides up) -->
@@ -663,7 +672,6 @@ app = platform.init(
                 <!-- Platform component tags -->
                 <div class="relative z-10 flex gap-1.5 mt-3 flex-wrap justify-center flex-shrink-0">
                   <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">edgeXcrm</span>
-                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Zunkiree Search</span>
                   <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Orca</span>
                 </div>
 
@@ -830,6 +838,13 @@ app = platform.init(
     --card-gap: 1rem;
     --card-offset: 14%;
   }
+  /* Same pattern as #logo-marquee (main.css): let vertical page scroll
+     pass through natively, we handle horizontal drag/swipe ourselves
+     via pointer events. Without this, touch browsers can hijack the
+     gesture as a page scroll before our pointermove handler ever fires. */
+  .industry-track-container {
+    touch-action: pan-y;
+  }
   @media (min-width: 1024px) {
     .showcase-track-container {
       --card-width: 48%;
@@ -843,19 +858,27 @@ app = platform.init(
     }
   }
 
-  /* Auto-advancing tab indicator: fills left-to-right over the autoplay duration */
-  @keyframes industry-tab-timer {
-    from { width: 0%; }
-    to { width: 100%; }
-  }
+  /* Auto-advancing tab indicator: the `.industry-tab-fill` class (which
+     carries the animation-name) is added/removed per tab via :class as
+     `activeTab` changes, rather than staying permanently applied and
+     being hidden/shown via x-show or x-if. Adding an animation-name to
+     an element that didn't have one a moment ago always starts that
+     animation fresh from its `from` keyframe — the one restart mechanism
+     that's actually reliable, unlike toggling `display` (an animation
+     that already finished doesn't reliably restart just because display
+     comes back) or remounting via `<template x-if>` (real mount cost,
+     noticeable next to this page's GSAP/Lenis/ScrollTrigger load). */
   .industry-tab-fill {
     animation-name: industry-tab-timer;
-    animation-duration: var(--tab-timer-duration, 6000ms);
     animation-timing-function: linear;
     animation-fill-mode: forwards;
   }
-  .industry-tab-fill.is-paused {
-    animation-play-state: paused;
+  @keyframes industry-tab-timer {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .industry-tab-fill { animation: none; transform: scaleX(1); }
   }
 </style>
 
@@ -863,17 +886,15 @@ app = platform.init(
   class="relative flex flex-col justify-center overflow-hidden py-12 sm:py-16 lg:py-20"
   x-data="{
     pos: 2,
-    activeTab: 1,
-    cycle: 0,
-    autoplayMs: 6000,
+    autoplayMs: 4000,
     autoplayTimer: null,
-    isPaused: false,
     noTransition: false,
     tabsOf: [2, 4, 1, 2, 3, 4, 1, 2],
+    get activeTab() {
+      return this.tabsOf[this.pos];
+    },
     startAutoplay() {
       clearTimeout(this.autoplayTimer);
-      this.cycle++;
-      if (this.isPaused) return;
       this.autoplayTimer = setTimeout(() => {
         this.next();
       }, this.autoplayMs);
@@ -887,7 +908,6 @@ app = platform.init(
       else this.pos--;
     },
     selectTab(tab) {
-      this.activeTab = tab;
       this.pos = tab + 1;
     },
     snapToPos(newPos) {
@@ -899,10 +919,7 @@ app = platform.init(
       });
     }
   }"
-  x-init="startAutoplay(); $watch('pos', () => { activeTab = tabsOf[pos]; startAutoplay(); })"
-  :style="'--tab-timer-duration: ' + autoplayMs + 'ms;'"
-  @mouseenter="isPaused = true; clearTimeout(autoplayTimer)"
-  @mouseleave="isPaused = false; startAutoplay()"
+  x-init="startAutoplay(); $watch('pos', () => { startAutoplay(); })"
   aria-labelledby="industry-showcase-heading"
 >
   <!-- Header Wrapper (Centered, padded) -->
@@ -937,7 +954,7 @@ app = platform.init(
               :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
               aria-controls="industry-panel-{{ tabIndex }}"
               :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
-              @click="selectTab({{ tabIndex }}); $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });"
+              @click="selectTab({{ tabIndex }}); requestAnimationFrame(() => $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }));"
               class="group flex-none text-left focus:outline-none sm:flex-1 lg:flex-none lg:w-auto"
             >
               <!-- Indicator Line: track + auto-advancing timer fill -->
@@ -946,17 +963,10 @@ app = platform.init(
                 :class="activeTab === {{ tabIndex }} ? 'bg-navy-200/30' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
               >
                 <div
-                  class="industry-tab-fill absolute inset-y-0 left-0 h-full rounded-full bg-[#76B900]"
-                  x-show="activeTab === {{ tabIndex }}"
-                  :class="isPaused ? 'is-paused' : ''"
-                  x-effect="
-                    cycle;
-                    if (activeTab === {{ tabIndex }}) {
-                      $el.style.animation = 'none';
-                      void $el.offsetWidth;
-                      $el.style.animation = '';
-                    }
-                  "
+                  class="absolute inset-y-0 left-0 h-full w-full origin-left rounded-full bg-[#76B900]"
+                  :class="activeTab === {{ tabIndex }} ? 'industry-tab-fill' : 'opacity-0'"
+                  :style="'animation-duration: ' + autoplayMs + 'ms'"
+                  aria-hidden="true"
                 ></div>
               </div>
               <!-- Tab Label -->
@@ -987,13 +997,13 @@ app = platform.init(
   {% set cardTabs = [2, 4, 1, 2, 3, 4, 1, 2] %}
 
   <div
-    class="showcase-track-container relative w-full overflow-hidden cursor-grab select-none"
+    class="industry-track-container showcase-track-container relative w-full overflow-hidden cursor-grab select-none"
     :class="isDragging ? 'cursor-grabbing' : ''"
     data-reveal
     x-data="{ isDragging: false, startX: 0, didDrag: false }"
-    @mousedown="isDragging = true; startX = $event.clientX"
-    @mousemove.window="if (isDragging) { $event.preventDefault() }"
-    @mouseup.window="
+    @pointerdown="isDragging = true; startX = $event.clientX; $el.setPointerCapture($event.pointerId)"
+    @pointermove="if (isDragging) { $event.preventDefault() }"
+    @pointerup="
       if (isDragging) {
         const delta = $event.clientX - startX;
         if (Math.abs(delta) >= 60) {
@@ -1004,6 +1014,7 @@ app = platform.init(
       }
       isDragging = false;
     "
+    @pointercancel="isDragging = false"
   >
     <div
       x-ref="industryTrack"
@@ -1249,23 +1260,22 @@ app = platform.init(
     tags: ["Monitoring", "Testing", "Support"]
   }
 } %}
-{# Tab 3 panel — "Scale to any use case." The real shared-platform story
-   (CONTENT_SUMMARY.md §1/§4): multi-tenant CRM + Zunkiree Search + Orca
-   orchestration is the actual "why this scales" answer — new industries
-   get a tailored feature set on the same shared infrastructure, not a
-   rebuild. Informational only, no CTA (per 2026-07-28 decision) — no
-   invented uptime/pod-count numbers. #}
+{# Tab 3 panel — "Scale to any use case." The real shared-platform story:
+   multi-tenant CRM + Orca orchestration is the actual "why this scales"
+   answer — new industries get a tailored feature set on the same shared
+   infrastructure, not a rebuild. Zunkiree Search dropped 2026-09-27 (no
+   longer a live product — per explicit direction). Informational only,
+   no CTA (per 2026-07-28 decision) — no invented uptime/pod-count numbers. #}
 {% set scalePanel = {
   badge: "Platform",
   headline: "The shared platform underneath every deployment",
   body: "Scaling to a new use case means configuring the shared platform, not rebuilding from scratch — every vertical deployment runs on the same underlying infrastructure.",
   components: [
     { name: "Multi-tenant CRM", description: "The shared tenant architecture every vertical deployment runs on." },
-    { name: "Zunkiree Search", description: "The shared search and retrieval layer across every deployment." },
     { name: "Orca", description: "The orchestration layer coordinating workflows across tenants." }
   ],
   floatingTile: {
-    label: "Zunkiree Search",
+    label: "Orca",
     badge: "Platform",
     tags: ["Multi-tenant", "Shared infrastructure"]
   }
@@ -1770,22 +1780,11 @@ app = platform.init(
     </div>
 
     {% if sortedPosts.length %}
-      {# Bento: 3-up row + 2-up row, mirrors the widget-grid layout reference #}
-      <div class="flex flex-col gap-4 sm:gap-5" data-reveal-stagger>
-
-        <!-- Top row: 3 equal cards, on a 6-col grid so each card = 2 cols -->
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5">
-          {{ bentoCard(sortedPosts[0], coverVariants[0], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
-          {{ bentoCard(sortedPosts[1], coverVariants[1], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
-          {{ bentoCard(sortedPosts[2], coverVariants[2], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
-        </div>
-
-        <!-- Bottom row: same card width as the top row, centered under it (1 empty col on each side) -->
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5">
-          {{ bentoCard(sortedPosts[3], coverVariants[1], "sm:col-start-2 sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
-          {{ bentoCard(sortedPosts[4], coverVariants[2], "sm:col-start-4 sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
-        </div>
-
+      {# Bento: single 3-up row only (bottom 2-up row removed per approval) #}
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5" data-reveal-stagger>
+        {{ bentoCard(sortedPosts[0], coverVariants[0], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+        {{ bentoCard(sortedPosts[1], coverVariants[1], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+        {{ bentoCard(sortedPosts[2], coverVariants[2], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
       </div>
     {% endif %}
   </div>
@@ -1830,7 +1829,7 @@ app = platform.init(
   },
   {
     question: "What's shared across industries vs. built custom per client?",
-    answer: "The platform layer — multi-tenant architecture, Zunkiree Search, and orchestration — is shared. What sits on top of it is a pre-built application per vertical plus accelerators to launch fast, so a new customer isn't starting from zero."
+    answer: "The platform layer — multi-tenant architecture and Orca orchestration — is shared. What sits on top of it is a pre-built application per vertical plus accelerators to launch fast, so a new customer isn't starting from zero."
   },
   {
     question: "Do we need to replace our existing systems to use this?",

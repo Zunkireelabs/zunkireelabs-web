@@ -256,6 +256,144 @@ layout: base.njk
 </section>
 
 {# =====================================================
+   NEARBY LOCATIONS — individually bordered badges, not one
+   shared pill-bar wrapper (matches the fix already applied
+   elsewhere on the site for this component family). Placed
+   above FAQs per explicit page-order request.
+   ===================================================== #}
+{% if location.nearbyCities and location.nearbyCities.length > 0 %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" data-reveal>
+  <div class="mx-auto max-w-5xl">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Nearby
+      </span>
+      <h2 class="text-[20px] font-semibold leading-[1.2] tracking-tight text-[#111827] mb-6">
+        Also Serving
+      </h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3" data-reveal-stagger>
+      {% for cityId in location.nearbyCities %}
+        {% for loc in locations %}
+          {% if loc.id == cityId %}
+          <a
+            href="/locations/{{ loc.id }}/"
+            class="inline-flex items-center gap-2 rounded-xl border border-navy-100/60 bg-white px-4 py-2.5 text-[14px] font-medium text-navy-700 shadow-subtle transition-colors hover:border-[#76B900]/30 hover:text-[#4d7a00]"
+          >
+            <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+            {{ loc.name }}
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   AI-MANAGED CONTENT (expandedContent / qaContentHtml /
+   internalLinksHtml — written by the Action Center generators).
+   Content and markup structure are never edited here — only
+   wrapped in `.action-center-content`, a scoped restyle so the
+   generators' legacy gray-900/gray-50 markup renders in the v2
+   navy/sky/#76B900 system instead of clashing with it. See the
+   style block below for the override rules. Placed above FAQs
+   per explicit page-order request.
+   ===================================================== #}
+{% if location.expandedContent or location.qaContentHtml or location.internalLinksHtml %}
+<div class="action-center-content">
+  {% if location.expandedContent %}
+  {{ location.expandedContent | safe }}
+  {% endif %}
+
+  {% if location.qaContentHtml %}
+  {{ location.qaContentHtml | safe }}
+  {% endif %}
+
+  {% if location.internalLinksHtml %}
+  {{ location.internalLinksHtml | safe }}
+  {% endif %}
+</div>
+<style>
+  /* Restyle legacy AI-generated markup to match the v2 system
+     (navy/#111827 headings, #6B7280 body, navy-100/60 borders,
+     sky-tinted table header) without touching its structure.
+     Section matches the rest of the page's centered convention
+     (Nearby/FAQ heading blocks) — heading, intro copy, and the
+     table itself are centered on the page; table cell text stays
+     left-aligned so rows remain scannable. */
+  .action-center-content section {
+    margin-bottom: 2.75rem;
+    text-align: center;
+  }
+  .action-center-content section:last-child {
+    margin-bottom: 0;
+  }
+  .action-center-content section > div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .action-center-content h2 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: #111827;
+    margin-bottom: 0.75rem;
+  }
+  .action-center-content section + section h2 {
+    margin-top: 0;
+  }
+  .action-center-content p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #6B7280;
+  }
+  .action-center-content :is(div):has(> table) {
+    border-radius: 0.75rem;
+    border-color: rgba(199, 213, 218, 0.6); /* navy-100/60 */
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  }
+  .action-center-content th,
+  .action-center-content td {
+    text-align: left;
+  }
+  .action-center-content table {
+    font-size: 14px;
+  }
+  .action-center-content thead tr {
+    background-color: #eff7ff; /* sky-50 */
+  }
+  .action-center-content th {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4a636e; /* navy-600 */
+  }
+  .action-center-content tbody tr {
+    border-color: rgba(199, 213, 218, 0.5);
+  }
+  .action-center-content td:first-child {
+    font-weight: 500;
+    color: #111827;
+  }
+  .action-center-content td:not(:first-child) {
+    color: #6B7280;
+  }
+  .action-center-content a {
+    color: #3d8fd4; /* sky-500 */
+    text-decoration: none;
+  }
+  .action-center-content a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endif %}
+
+{# =====================================================
    FAQs
    ===================================================== #}
 {% if location.faqs and location.faqs.length > 0 %}
@@ -324,70 +462,6 @@ layout: base.njk
   ]
 }
 </script>
-{% endif %}
-
-{# =====================================================
-   NEARBY LOCATIONS — individually bordered badges, not one
-   shared pill-bar wrapper (matches the fix already applied
-   elsewhere on the site for this component family).
-   ===================================================== #}
-{% if location.nearbyCities and location.nearbyCities.length > 0 %}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" data-reveal>
-  <div class="mx-auto max-w-5xl">
-    <div class="mx-auto max-w-2xl text-center">
-      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-        Nearby
-      </span>
-      <h2 class="text-[20px] font-semibold leading-[1.2] tracking-tight text-[#111827] mb-6">
-        Also Serving
-      </h2>
-    </div>
-    <div class="flex flex-wrap justify-center gap-3" data-reveal-stagger>
-      {% for cityId in location.nearbyCities %}
-        {% for loc in locations %}
-          {% if loc.id == cityId %}
-          <a
-            href="/locations/{{ loc.id }}/"
-            class="inline-flex items-center gap-2 rounded-xl border border-navy-100/60 bg-white px-4 py-2.5 text-[14px] font-medium text-navy-700 shadow-subtle transition-colors hover:border-[#76B900]/30 hover:text-[#4d7a00]"
-          >
-            <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
-            {{ loc.name }}
-          </a>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{# =====================================================
-   EXPANDED CONTENT (AI-managed — written by the Action Center)
-   Only rendered when location.expandedContent is present; never
-   fabricated here or by the generator that writes it — see
-   server/generators/expand-content.js. Already a fully rendered HTML
-   block (wrapper + rows), not raw text.
-   ===================================================== #}
-{% if location.expandedContent %}
-{{ location.expandedContent | safe }}
-{% endif %}
-
-{# =====================================================
-   Q&A CONTENT (AI-managed — written by the Action Center)
-   Only rendered when location.qaContentHtml is present — see
-   server/generators/qa-content.js.
-   ===================================================== #}
-{% if location.qaContentHtml %}
-{{ location.qaContentHtml | safe }}
-{% endif %}
-
-{# =====================================================
-   RELATED / INTERNAL LINKS (AI-managed — written by the Action Center)
-   Only rendered when location.internalLinksHtml is present — see
-   server/generators/internal-links.js.
-   ===================================================== #}
-{% if location.internalLinksHtml %}
-{{ location.internalLinksHtml | safe }}
 {% endif %}
 
 {# =====================================================

@@ -9,46 +9,35 @@ featuredImageCredit: "Photo by cottonbro studio on Pexels"
 
 ## Introduction to AI and Chatbot Opportunities in Kathmandu
 
-Overview of the AI landscape in Kathmandu, emphasizing the rise of chatbots in various industries.
+Kathmandu's tech sector has moved well past outsourced web development and QA work. A growing number of local companies now build AI systems directly — chatbots, retrieval-augmented generation pipelines, and autonomous agents — for both Nepali businesses and clients abroad. That shift has opened a category of roles that barely existed in Nepal five years ago: people who can design, train, and maintain production AI systems rather than just integrate a third-party API.
 
 ## Current Market Trends
 
-Discuss the current demand for AI and chatbots in Kathmandu. Include statistics and trends that highlight job growth in this sector.
+Two things are driving demand at once. First, more Nepali businesses — banks, ecommerce platforms, service companies — are replacing static FAQ pages and manual support queues with AI-driven chat and search, which means someone locally needs to build and maintain those systems. Second, Kathmandu has become a base for remote AI engineering work serving international clients, since infrastructure-level AI development (RAG pipelines, agent orchestration, data engineering) doesn't require being in the same city, or even the same country, as the client. Together, this has pushed demand for AI and chatbot skills beyond the handful of specialist firms that existed a few years ago into a broader, more competitive hiring market.
 
 ## Key Employers in the AI Space
 
-List and brief description of major tech companies and startups in Kathmandu involved in AI and chatbot development. Suggest linking to the internal page on top tech companies: https://zunkireelabs.com/blog/top-tech-companies-nepal-2026/
+Zunkiree Labs is one of the companies building AI-first infrastructure from Kathmandu — production AI systems, RAG pipelines, and AI agents rather than thin wrappers around a model API. Alongside it, a mix of established software houses and newer AI-focused startups now hire specifically for AI and chatbot roles, not just general software development. For a broader look at who's active in this space, see [Top Tech Companies in Nepal](https://zunkireelabs.com/blog/top-tech-companies-nepal-2026/).
 
 ## Types of Job Roles Available
 
-Explore various job roles in the AI and chatbot sectors, including developers, data scientists, AI trainers, and customer service bots specialists.
+AI and chatbot work in Kathmandu now spans several distinct roles: AI/ML engineers who build and fine-tune models, backend developers who wire AI systems into existing products, data engineers who build the pipelines that feed those systems reliable data, prompt and conversation designers who shape how a chatbot actually behaves with users, and QA/evaluation specialists who test AI output for accuracy before it reaches production. Larger engagements also need someone who understands the business workflow being automated, not just the model — that's often the difference between an AI pilot and a system that survives in production.
 
 ## Skills Required for AI and Chatbot Jobs
 
-Outline the essential skills for job seekers in this field, such as programming languages, machine learning knowledge, and natural language processing capabilities.
+The baseline technical skills are Python, familiarity with at least one LLM framework, and a working understanding of how retrieval and embeddings work, since most production chatbots today are RAG-based rather than pure prompt-and-response. Beyond that, employers increasingly care about practical judgment: knowing when a model needs fine-tuning versus better retrieval, how to evaluate whether an AI system is actually reliable, and how to design around a model's failure modes instead of assuming it will always respond correctly. For roles serving Nepali users specifically, experience handling mixed Nepali-English input is a real advantage.
 
 ## Getting Started: Education and Resources
 
-Discuss educational paths, online courses, and resources available for aspiring AI professionals. Suggest linking to resources on AI-specific knowledge: https://zunkireelabs.com/resources/what-is-gaas/
+Formal AI degrees are still rare in Nepal, so most people entering this field build skills through project work, online courses, and increasingly through direct exposure at companies already doing this work. Reading how production AI services are actually architected — not just how to call a model API — is one of the fastest ways to close that gap; see [What Is GaaS?](https://zunkireelabs.com/resources/what-is-gaas/) for a concrete look at how one category of AI-as-a-service system is built and delivered.
 
 ## Challenges and Future Outlook
 
-Analyze potential challenges job seekers may face and the future outlook for AI jobs in Kathmandu, making references to broader trends. Suggest linking to the blog on the state of AI: https://zunkireelabs.com/blog/state-of-ai-nepal-2026/
+The main challenge for job seekers isn't a lack of interest — it's that many roles labeled "AI" in Kathmandu are still closer to general software development with a chatbot bolted on, rather than genuine AI-native engineering work. Distinguishing between the two matters for career growth: the deeper skill set is in systems that actually reason over a business's own data, not ones that just relay a generic model's output. As adoption across Nepali businesses continues, demand for people who can build that kind of system — not just deploy one — is likely to keep growing; for a wider view of where the country's AI adoption stands, see [State of AI in Nepal 2026](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/).
 
 ## Conclusion
 
-Summarize the opportunities and encourage readers to consider a career in AI and chatbots. Include a call to action.
-
-## FAQ topics to cover
-
-- What are the top companies hiring for AI roles in Kathmandu?
-- What skills do I need to work in AI or chatbot development?
-
-## Suggested internal links
-
-- [Top Tech Companies in Nepal](https://zunkireelabs.com/blog/top-tech-companies-nepal-2026/)
-- [State of AI in Nepal](https://zunkireelabs.com/blog/state-of-ai-nepal-2026/)
-- [AI Resources](https://zunkireelabs.com/resources/)
+AI and chatbot roles in Kathmandu have grown from a niche into a real career path, but the strongest opportunities go to people who understand how these systems are actually built and evaluated, not just how to use them. Whether you're starting out or switching into the field, focus on the infrastructure behind the chatbot — retrieval, data pipelines, evaluation — since that's where the real, durable skill sits.
 <!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">

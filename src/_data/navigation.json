@@ -18,13 +18,13 @@
               },
               {
                 "label": "Dental AI",
-                "url": "/products/dental-ai/",
+                "url": "/resources/dental-ai-case-study/",
                 "icon": "dental",
                 "description": "Practice management software with AI-powered patient communication"
               },
               {
                 "label": "Gaamma",
-                "url": "/products/gaamma/",
+                "url": "/resources/gaamma-case-study/",
                 "icon": "chart",
                 "description": "Business analytics platform for data-driven decisions"
               }
@@ -39,7 +39,7 @@
                 "label": "Stella",
                 "subLabel": "(AI Commerce Agent)",
                 "aiPowered": true,
-                "url": "/products/ai-commerce-agent/",
+                "url": "/resources/stella-case-study/",
                 "icon": "cart",
                 "description": "Autonomous AI agents for ecommerce buying journeys",
                 "badge": "New"
@@ -48,7 +48,7 @@
                 "label": "Zenly",
                 "subLabel": "(AI Booking Engine)",
                 "aiPowered": true,
-                "url": "/products/ai-booking-engine/",
+                "url": "/resources/zenly-case-study/",
                 "icon": "calendar",
                 "description": "Intelligent scheduling that handles complex availability"
               },
@@ -140,6 +140,13 @@
                 "url": "/agentic-as-a-service/",
                 "icon": "ai",
                 "description": "Autonomous AI agents deployed as managed services",
+                "badge": "New"
+              },
+              {
+                "label": "Global Delivery",
+                "url": "/global-delivery/",
+                "icon": "globe",
+                "description": "AI and software delivery for clients worldwide",
                 "badge": "New"
               }
             ],
@@ -337,11 +344,11 @@
   "footer": {
     "products": [
       { "label": "Zunkiree Search", "url": "/products/search/" },
-      { "label": "Dental AI", "url": "/products/dental-ai/" },
-      { "label": "Gaamma", "url": "/products/gaamma/" },
-      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/products/ai-booking-engine/" },
+      { "label": "Dental AI", "url": "/resources/dental-ai-case-study/" },
+      { "label": "Gaamma", "url": "/resources/gaamma-case-study/" },
+      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/resources/zenly-case-study/" },
       { "label": "AI CRM", "url": "/products/ai-crm/" },
-      { "label": "Stella", "url": "/products/ai-commerce-agent/" },
+      { "label": "Stella", "url": "/resources/stella-case-study/" },
       { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [

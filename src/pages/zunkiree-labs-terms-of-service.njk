@@ -3,64 +3,173 @@ layout: "base.njk"
 permalink: "/terms/"
 title: "Terms of Service | Zunkiree Labs"
 description: "Read the Terms of Service for Zunkiree Labs, including the terms governing the use of our website and services."
-templateEngineOverride: "njk, md"
+bodyClass: "v2-inter"
+hideChrome: true
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-3xl">
+{#
+  DIRECTION CONTRACT
+  THESIS: A legal document reads like part of the same platform, not a
+  bolted-on static page — homepage-v2's navy/green/glass system applied
+  to Read-mode long-form text instead of a marketing narrative.
+  OWN-WORLD: white ground, #76B900 the one accent (draft-notice icon,
+  active link states), mono uppercase eyebrow/meta, Inter at
+  homepage-v2 weights, hairline navy-100 dividers between sections
+  (no card treatment needed — this is plain reading content).
+  FORM: extends the established homepage-v2 / privacy-policy-zunkiree-labs.njk
+  Read-mode world onto this page. Content/copy unchanged from the prior
+  version — visual system only.
+#}
 
-<h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-4">Terms of Service</h1>
+{% include "partials/navbar-v2.njk" %}
 
-<p class="text-sm text-gray-500 mb-8">Last updated: August 2026</p>
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
 
-<div class="bg-gray-50 border border-gray-200 rounded-lg px-5 py-4 mb-10 text-sm text-gray-600 leading-relaxed">
-  <span class="font-medium text-gray-900">Draft notice:</span> This page is a template and should be reviewed by a qualified legal professional before publishing.
-</div>
+{# =====================================================
+   HERO — breadcrumb + eyebrow + H1 + meta row, left-aligned
+   inside a contained column (Read mode, not Persuade).
+   ===================================================== #}
+<section class="bg-white px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40">
+  <div class="mx-auto max-w-3xl">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+        <li><a href="/" class="transition-colors hover:text-[#5a9100]">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-navy-900">Terms of Service</li>
+      </ol>
+    </nav>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Acceptance of Terms</h2>
+    <span class="mb-5 inline-flex items-center rounded-full border border-sky-100/60 bg-sky-50/60 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-sky-600 shadow-subtle" data-reveal>
+      Legal
+    </span>
 
-<p class="text-lg text-gray-600 leading-relaxed">By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, please discontinue use of the website.</p>
+    <h1 class="mb-4 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1]" data-reveal>
+      Terms of Service
+    </h1>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Use of the Website</h2>
+    <p class="font-mono text-[11px] uppercase tracking-wider text-navy-400" data-reveal>
+      Last updated: August 2026
+    </p>
+  </div>
+</section>
 
-<p class="text-lg text-gray-600 leading-relaxed">You may use this website only for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services.</p>
+{# =====================================================
+   BODY — plain reading column, hairline dividers between
+   sections instead of card treatment (Read mode).
+   ===================================================== #}
+<section class="bg-white px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-3xl">
+    <article data-reveal-stagger>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Intellectual Property</h2>
+      <div class="rounded-lg border border-navy-100 bg-navy-50/40 px-5 py-4 text-[15px] leading-relaxed text-[#6B7280]">
+        <span class="font-semibold text-[#111827]">Draft notice:</span> This page is a template and should be reviewed by a qualified legal professional before publishing.
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Unless otherwise stated, all content on this website—including text, graphics, logos, software, and other materials—is owned by Zunkiree Labs or its licensors and is protected by applicable intellectual property laws.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Acceptance of Terms</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, please discontinue use of the website.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Third-Party Links</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Use of the Website</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">You may use this website only for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Our website may contain links to third-party websites. We are not responsible for the content, policies, or practices of those external websites.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Intellectual Property</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Unless otherwise stated, all content on this website—including text, graphics, logos, software, and other materials—is owned by Zunkiree Labs or its licensors and is protected by applicable intellectual property laws.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Disclaimer</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Third-Party Links</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Our website may contain links to third-party websites. We are not responsible for the content, policies, or practices of those external websites.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">The website and its content are provided "as is" without warranties of any kind, either express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Disclaimer</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">The website and its content are provided "as is" without warranties of any kind, either express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Limitation of Liability</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Limitation of Liability</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">To the fullest extent permitted by law, Zunkiree Labs shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from your use of this website.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">To the fullest extent permitted by law, Zunkiree Labs shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from your use of this website.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Changes to These Terms</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">We may update these Terms of Service from time to time. Continued use of the website after changes become effective constitutes acceptance of the revised Terms.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Changes to These Terms</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Contact</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">If you have questions regarding these Terms of Service, please contact us using the information provided on our <a href="/contact/" class="font-medium text-sky-600 underline decoration-sky-200 underline-offset-2 transition-colors hover:text-[#5a9100]">Contact page</a>.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">We may update these Terms of Service from time to time. Continued use of the website after changes become effective constitutes acceptance of the revised Terms.</p>
+      {# SECTION: FAQ — same glass-accordion pattern as resources/what-is-gaas.njk #}
+      <section id="faq" class="border-t border-navy-100 mt-10 pt-10" data-reveal>
+        <h2 class="mb-6 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">
+          Frequently Asked Questions
+        </h2>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Contact</h2>
+        <div class="space-y-3" x-data="{ activeIndex: null }">
+          {% set termsFaqs = [
+            { question: "What should I understand about the acceptance of terms when using the Zunkiree Labs website?", answer: "By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, you should discontinue your use of the website." },
+            { question: "Can I use the Zunkiree Labs website for any purpose?", answer: "No, you may only use the website for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services." },
+            { question: "What happens if I use third-party links found on the Zunkiree Labs website?", answer: "While the website may contain links to third-party websites, Zunkiree Labs is not responsible for the content, policies, or practices of those external sites." },
+            { question: "What does the disclaimer section indicate about the website's content?", answer: "The website and its content are provided 'as is' without any warranties, express or implied, including any warranties of merchantability, fitness for a particular purpose, or non-infringement." },
+            { question: "How will I know if the Terms of Service change?", answer: "Zunkiree Labs may update the Terms of Service over time, and your continued use of the website after changes become effective constitutes your acceptance of the revised Terms." }
+          ] %}
+          {% for item in termsFaqs %}
+          <div class="overflow-hidden rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 backdrop-blur-sm">
+            <button
+              @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
+              class="group flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+              :aria-expanded="activeIndex === {{ loop.index }}"
+            >
+              <span class="text-[15.5px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-navy-50 text-navy-400">
+                <svg
+                  class="h-4 w-4 transition-transform duration-200"
+                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="overflow-hidden"
+            >
+              <p class="px-5 pb-5 leading-relaxed text-navy-400">
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
 
-<p class="text-lg text-gray-600 leading-relaxed">If you have questions regarding these Terms of Service, please contact us using the information provided on our Contact page.</p>
+    </article>
+  </div>
+</section>
 
-</div>
+{% include "partials/footer-v2.njk" %}
 
-<!-- SEOAI:QACONTENT:START --><div class="container-custom">
-<div class="mt-10 p-6 bg-gray-50 rounded-lg">
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What should I understand about the acceptance of terms when using the Zunkiree Labs website?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, you should discontinue your use of the website.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">Can I use the Zunkiree Labs website for any purpose?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">No, you may only use the website for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What happens if I use third-party links found on the Zunkiree Labs website?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">While the website may contain links to third-party websites, Zunkiree Labs is not responsible for the content, policies, or practices of those external sites.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What does the disclaimer section indicate about the website's content?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The website and its content are provided 'as is' without any warranties, express or implied, including any warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How will I know if the Terms of Service change?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs may update the Terms of Service over time, and your continued use of the website after changes become effective constitutes your acceptance of the revised Terms.</p>
-</div>
-</div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What should I understand about the acceptance of terms when using the Zunkiree Labs website?","@type":"Question","acceptedAnswer":{"text":"By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, you should discontinue your use of the website.","@type":"Answer"}},{"name":"Can I use the Zunkiree Labs website for any purpose?","@type":"Question","acceptedAnswer":{"text":"No, you may only use the website for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services.","@type":"Answer"}},{"name":"What happens if I use third-party links found on the Zunkiree Labs website?","@type":"Question","acceptedAnswer":{"text":"While the website may contain links to third-party websites, Zunkiree Labs is not responsible for the content, policies, or practices of those external sites.","@type":"Answer"}},{"name":"What does the disclaimer section indicate about the website's content?","@type":"Question","acceptedAnswer":{"text":"The website and its content are provided 'as is' without any warranties, express or implied, including any warranties of merchantability, fitness for a particular purpose, or non-infringement.","@type":"Answer"}},{"name":"How will I know if the Terms of Service change?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs may update the Terms of Service over time, and your continued use of the website after changes become effective constitutes your acceptance of the revised Terms.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What should I understand about the acceptance of terms when using the Zunkiree Labs website?","@type":"Question","acceptedAnswer":{"text":"By accessing or using the Zunkiree Labs website, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with these terms, you should discontinue your use of the website.","@type":"Answer"}},{"name":"Can I use the Zunkiree Labs website for any purpose?","@type":"Question","acceptedAnswer":{"text":"No, you may only use the website for lawful purposes. You agree not to misuse, interfere with, or attempt to gain unauthorized access to any part of the website or its services.","@type":"Answer"}},{"name":"What happens if I use third-party links found on the Zunkiree Labs website?","@type":"Question","acceptedAnswer":{"text":"While the website may contain links to third-party websites, Zunkiree Labs is not responsible for the content, policies, or practices of those external sites.","@type":"Answer"}},{"name":"What does the disclaimer section indicate about the website's content?","@type":"Question","acceptedAnswer":{"text":"The website and its content are provided 'as is' without any warranties, express or implied, including any warranties of merchantability, fitness for a particular purpose, or non-infringement.","@type":"Answer"}},{"name":"How will I know if the Terms of Service change?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs may update the Terms of Service over time, and your continued use of the website after changes become effective constitutes your acceptance of the revised Terms.","@type":"Answer"}}]}</script><!-- SEOAI:QACONTENT:END -->

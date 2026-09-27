@@ -2,7 +2,7 @@
 title: "Exploring the Rise of AI Startups in Nepal"
 description: "Discover the burgeoning AI startup ecosystem in Nepal, highlighting key companies, challenges, and future prospects in the industry."
 date: "2026-07-20"
-featuredImage: /assets/images/blog/ai-startups-nepal.jpg
+featuredImage: /assets/images/blog/ai-startups-nepal.webp
 featuredImageAlt: Abstract glowing seed-like orbs with upward light trails growing into larger nodes representing rising AI startups
 ---
 
