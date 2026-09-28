@@ -47,7 +47,61 @@ export default [
       zunkiree: "Businesses wanting AI-powered customer support, knowledge bases, and conversational search experiences.",
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
-    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries."
+    verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
+    reviewSchema: {
+      "@type": "FAQPage",
+      "@context": "https://schema.org",
+      "mainEntity": [
+        {
+          "name": "What is the feature comparison between Zunkiree Search and Algolia?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Zunkiree Search offers semantic + AI search with direct answers and conversational context, while Algolia provides keyword + typo tolerance search.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "What are the strengths of Zunkiree Search?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Zunkiree Search provides AI-native search that gives direct answers, has semantic understanding, RAG-powered knowledge retrieval, and predictable pricing.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "What are the strengths of Algolia?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Algolia offers fast keyword search, extensive documentation, a large ecosystem of integrations, and typo tolerance.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "When should you choose Zunkiree Search?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Choose Zunkiree Search for AI-powered customer support, knowledge bases, and conversational search experiences.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "When should you choose Algolia?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Choose Algolia when you need fast, traditional keyword search for e-commerce and media sites.",
+            "@type": "Answer"
+          }
+        },
+        {
+          "name": "What is the verdict on Zunkiree Search vs Algolia?",
+          "@type": "Question",
+          "acceptedAnswer": {
+            "text": "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries.",
+            "@type": "Answer"
+          }
+        }
+      ]
+    }
   },
   {
     id: "zunkiree-vs-elasticsearch",
