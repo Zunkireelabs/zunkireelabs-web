@@ -128,7 +128,7 @@
               src="/assets/images/zunkireelabs-logo-light.png"
               alt="Zunkiree Labs"
               class="w-44 h-auto"
-              width="176" height="53"
+              width="176" height="21"
             />
           </a>
 
@@ -169,6 +169,20 @@
 
           <!-- Right: Primary CTA -->
           <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <div class="group relative flex-shrink-0">
+              <a
+                href="/contact/"
+                class="flex h-11 w-11 items-center justify-center rounded-lg border border-navy-100/60 text-navy-700 transition-colors duration-200 hover:border-[#76B900] hover:text-[#76B900] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+                aria-label="Contact us"
+              >
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </a>
+              <span class="pointer-events-none absolute left-1/2 top-full z-20 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-navy-900 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-white opacity-0 shadow-subtle transition-opacity duration-150 group-hover:opacity-100">
+                Contact
+              </span>
+            </div>
             <a
               href="/get-a-quote/"
               class="inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
@@ -405,7 +419,7 @@
   >
     <div class="flex items-center justify-between h-[72px] px-4 sm:px-6 border-b border-gray-100">
       <a href="/" class="flex items-center" @click="closeMobileMenu()" aria-label="Zunkiree Labs home">
-        <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="w-44 h-auto" width="176" height="53" />
+        <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="w-44 h-auto" width="176" height="21" />
       </a>
       <button
         type="button"
@@ -477,10 +491,20 @@
           {% endif %}
         {% endfor %}
 
-        <div class="mt-6">
+        <div class="mt-6 flex items-center gap-3">
+          <a
+            href="/contact/"
+            class="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center rounded-md border border-navy-100/60 text-navy-700 transition-colors hover:border-[#76B900] hover:text-[#76B900]"
+            aria-label="Contact us"
+            @click="closeMobileMenu()"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </a>
           <a
             href="/get-a-quote/"
-            class="flex items-center justify-center gap-2 w-full py-3.5 rounded-md bg-[#76B900] text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
+            class="flex flex-1 items-center justify-center gap-2 py-3.5 rounded-md bg-[#76B900] text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
             @click="closeMobileMenu()"
           >
             Get a Quote

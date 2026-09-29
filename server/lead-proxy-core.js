@@ -10,7 +10,8 @@ const CRM_BASE = 'https://edgex.zunkireelabs.com/api/public/submit/zunkireelabs-
 const FORM_SLUGS = {
   contact: 'contact-us',
   apply: 'careers-application', // <- confirm/update this once the form exists in EdgeX
-  resource: 'resource-download' // <- confirm/update this once the form exists in EdgeX
+  resource: 'resource-download', // <- confirm/update this once the form exists in EdgeX
+  newsletter: 'newsletter-signup' // <- confirm/update this once the form exists in EdgeX
 };
 
 export function resolveFormKey(formQueryValue) {

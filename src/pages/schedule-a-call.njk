@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: "Schedule a Call | Zunkiree Labs"
+description: "Book a free intro call with Zunkiree Labs to discuss your AI, software, or SaaS project."
+permalink: /schedule-a-call/
+hideChrome: true
+bodyClass: "v2-inter"
+---
+
+{# =====================================================
+   SCHEDULE A CALL — WEBSITE V2
+   Same visual system as contact.njk: navbar-v2 + footer-v2 chrome,
+   centered hero shell, Inter type, navy/#76B900 tokens.
+
+   site.calendlyUrl (src/_data/site.json) is now the real event link
+   (https://calendly.com/yukta-zunkireelabs/30min, confirmed 2026-09-29).
+   Still not linked from any nav/CTA yet — the existing "Schedule a call"
+   buttons (services.njk, pricing.njk, customers.njk, projects.njk,
+   header.njk, navigationV2.json) still point at /contact/; point them
+   here as a separate follow-up once this page has been reviewed live.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed) {
+    opacity: 0;
+  }
+</style>
+
+<section class="relative flex flex-col items-center justify-center px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal>
+
+    <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+      Schedule a Call
+    </span>
+
+    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+      Let's talk about your project
+    </h1>
+
+    <p class="mt-4 max-w-[560px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+      Pick a time that works for you — no forms, no back-and-forth.
+    </p>
+  </div>
+</section>
+
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24" aria-labelledby="calendar-heading">
+  <div class="mx-auto max-w-3xl">
+    <h2 id="calendar-heading" class="sr-only">Booking calendar</h2>
+    <div class="overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-subtle" data-reveal>
+      <div class="calendly-inline-widget" data-url="{{ site.calendlyUrl }}" style="min-width:320px;height:700px;"></div>
+    </div>
+
+    <p class="mt-6 text-center text-[14px] text-[#6B7280]">
+      Prefer email? <a href="mailto:{{ site.email }}" class="font-medium text-[#5a9100] hover:underline">{{ site.email }}</a>
+    </p>
+  </div>
+</section>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+{% include "partials/footer-v2.njk" %}

@@ -71,7 +71,7 @@
         "cta": {
           "prompt": "Ready to build with AI?",
           "button": "Schedule a call",
-          "url": "/contact/"
+          "url": "/schedule-a-call/"
         }
       }
     },
@@ -193,7 +193,7 @@
         "cta": {
           "prompt": "Ready to build with AI?",
           "button": "Schedule a call",
-          "url": "/contact/"
+          "url": "/schedule-a-call/"
         }
       }
     },
@@ -336,7 +336,7 @@
         "cta": {
           "prompt": "Ready to build with AI?",
           "button": "Schedule a call",
-          "url": "/contact/"
+          "url": "/schedule-a-call/"
         }
       }
     }

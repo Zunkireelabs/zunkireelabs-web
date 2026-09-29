@@ -196,13 +196,67 @@ hideChrome: true
             Clear all
           </button>
 
-          {# Subscribe CTA #}
-          <a
-            href="/contact/?source=newsletter"
-            class="block w-full rounded-md bg-[#76B900] px-6 py-3.5 text-center font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100]"
+          {# Subscribe CTA — was linking out to the full multi-field /contact/
+             form (name, phone, city, country, message) for what should be a
+             one-field newsletter signup. Now a real inline email-only form,
+             same /api/submit-lead proxy every other form on the site uses.
+             NOTE: "newsletter" is not yet a confirmed EdgeX form slug (see
+             server/lead-proxy-core.js's FORM_SLUGS — same unconfirmed-
+             placeholder pattern as `apply`/`resource`) — confirm/update the
+             slug once a real newsletter-signup form exists in EdgeX. #}
+          <div
+            x-data="{
+              email: '',
+              submitting: false,
+              submitted: false,
+              error: false,
+              async subscribe() {
+                if (!this.email.trim()) return;
+                this.submitting = true;
+                this.error = false;
+                try {
+                  const res = await fetch('/api/submit-lead?form=newsletter', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: this.email.trim() })
+                  });
+                  if (!res.ok) throw new Error('Subscribe failed: ' + res.status);
+                  this.submitted = true;
+                } catch (err) {
+                  console.error('[newsletter subscribe] error', err);
+                  this.error = true;
+                } finally {
+                  this.submitting = false;
+                }
+              }
+            }"
           >
-            Subscribe to Newsletter
-          </a>
+            <template x-if="!submitted">
+              <form @submit.prevent="subscribe()" class="space-y-2">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  x-model="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"
+                >
+                <button
+                  type="submit"
+                  :disabled="submitting"
+                  class="block w-full rounded-md bg-[#76B900] px-6 py-3.5 text-center font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] disabled:opacity-60"
+                >
+                  <span x-show="!submitting">Subscribe to Newsletter</span>
+                  <span x-show="submitting">Subscribing…</span>
+                </button>
+                <p x-show="error" x-cloak class="text-[12px] text-red-600">Something went wrong. Please try again.</p>
+              </form>
+            </template>
+            <p x-show="submitted" x-cloak class="rounded-md bg-[#F0F5E8] px-4 py-3.5 text-center text-[13px] font-medium text-[#5a9100]">
+              You're subscribed — thanks!
+            </p>
+          </div>
         </div>
       </div>
 

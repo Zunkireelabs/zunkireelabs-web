@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "What is AI? Understanding Artificial Intelligence in the Modern World"
+title: "Modern Artificial Intelligence: Concepts, Applications, and Trends"
 description: "Discover what artificial intelligence (AI) is, its applications, and how it shapes industries globally. Learn how AI influences technology, business, and more."
 date: "2026-09-21"
 shortLabel: "What Is AI"
