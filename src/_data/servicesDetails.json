@@ -308,12 +308,13 @@
         "id": "voice-ai",
         "title": "Voice AI",
         "headline": "Voice AI Systems",
-        "description": "Replace IVR trees with conversational AI that understands natural speech. Route calls intelligently, handle simple requests automatically, and reduce call center load.",
+        "description": "Replace IVR trees with conversational AI that understands natural speech. Route calls intelligently, handle simple requests automatically, book and manage appointments over the phone, and reduce call center load.",
         "features": [
           "Speech recognition",
           "Intent detection",
           "Call routing",
-          "Voice authentication"
+          "Voice authentication",
+          "Voice-driven appointment booking"
         ],
         "image": "https://images.unsplash.com/photo-1590935217281-8f102120d683?w=800&h=600&fit=crop"
       }

@@ -285,9 +285,16 @@
       "slug": "rapid-investment-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" },
+        { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
+        { "href": "/services/ai-development/", "title": "AI Development Services" }
+      ],
       "title": "Rapid Investment Analyzes Deals 10x Faster",
       "subtitle": "AI-powered due diligence for faster, more confident investment decisions",
       "description": "How Rapid Investment Group uses Zunkiree's AI systems to analyze investment opportunities 10x faster, giving them a competitive edge in the financial markets.",
+      "coverImage": "/assets/images/resources/rapid-investment-case-study-cover.svg",
       "publishDate": "2026-03-05",
       "readTime": "9 min read",
       "client": "Rapid Investment",
@@ -304,9 +311,16 @@
       "slug": "cms-group-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
+        { "slug": "rapid-investment-case-study", "title": "Case Study: Rapid Investment" },
+        { "href": "/services/data-systems/", "title": "Data Systems Services" }
+      ],
       "title": "CMS Group Automates 85% of Enterprise Workflows",
       "subtitle": "AI-powered document processing frees teams for higher-value work",
       "description": "How CMS Group achieved 85% automation of their document processing workflows with Zunkiree's AI systems, freeing their team to focus on high-value strategic work.",
+      "coverImage": "/assets/images/resources/cms-group-case-study-cover.svg",
       "publishDate": "2026-03-10",
       "readTime": "9 min read",
       "client": "CMS Group",
@@ -323,9 +337,16 @@
       "slug": "mach24orbital-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "cms-group-case-study", "title": "Case Study: CMS Group" },
+        { "slug": "prime-tiles-case-study", "title": "Case Study: Prime Tiles" },
+        { "href": "/services/ai-development/", "title": "AI Development Services" }
+      ],
       "title": "Mach24 Orbital Cuts Launch Prep Time in Half",
       "subtitle": "AI-optimized satellite deployment workflows",
       "description": "How Mach24 Orbital integrated Zunkiree's AI systems to optimize satellite deployment workflows, cutting launch preparation time in half.",
+      "coverImage": "/assets/images/resources/mach24orbital-case-study-cover.svg",
       "publishDate": "2026-03-12",
       "readTime": "9 min read",
       "client": "Mach24 Orbital",
@@ -342,9 +363,16 @@
       "slug": "prime-tiles-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "mach24orbital-case-study", "title": "Case Study: Mach24 Orbital" },
+        { "slug": "khems-cleaning-case-study", "title": "Case Study: Khems Cleaning" },
+        { "href": "/services/ai-ecommerce/", "title": "AI Ecommerce Services" }
+      ],
       "title": "Prime Tiles Doubles Online Conversion Rates",
       "subtitle": "AI-native search helps customers find the right product instantly",
       "description": "How Prime Tiles deployed Zunkiree Search to help customers find the perfect tiles instantly, doubling their online conversion rates.",
+      "coverImage": "/assets/images/resources/prime-tiles-case-study-cover.svg",
       "publishDate": "2026-03-14",
       "readTime": "8 min read",
       "client": "Prime Tiles",
@@ -361,9 +389,16 @@
       "slug": "khems-cleaning-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "slug": "prime-tiles-case-study", "title": "Case Study: Prime Tiles" },
+        { "slug": "chayce-properties-case-study", "title": "Case Study: Chayce Properties" },
+        { "href": "/services/ai-customer-experience/", "title": "AI Customer Experience Services" }
+      ],
       "title": "Khems Cleaning Increases Bookings by 70%",
       "subtitle": "AI-powered scheduling scales service capacity",
       "description": "How Khems Cleaning Services implemented Zunkiree's AI booking system, dramatically increasing their service capacity and customer satisfaction.",
+      "coverImage": "/assets/images/resources/khems-cleaning-case-study-cover.svg",
       "publishDate": "2026-03-16",
       "readTime": "8 min read",
       "client": "Khems Cleaning",
@@ -380,9 +415,16 @@
       "slug": "chayce-properties-case-study",
       "type": "CASE STUDY",
       "category": "case-studies",
+      "badgeLabel": "Case Study",
+      "relatedResources": [
+        { "href": "/global-delivery/", "title": "Global AI & Software Delivery" },
+        { "slug": "khems-cleaning-case-study", "title": "Case Study: Khems Cleaning" },
+        { "href": "/services/web-development/", "title": "Web Development Services" }
+      ],
       "title": "Chayce Properties Runs Its Entire Digital Operation on Zunkiree Infrastructure",
       "subtitle": "A UK real estate company's website, AI systems, and ongoing technical delivery, managed end to end",
       "description": "For Chayce Properties, a UK real estate company, Zunkiree Labs is not a vendor for one task. We own the whole stack: website, AI systems, and ongoing technical delivery, end to end.",
+      "coverImage": "/assets/images/resources/chayce-properties-case-study-cover.svg",
       "publishDate": "2026-09-24",
       "readTime": "7 min read",
       "client": "Chayce Properties",
@@ -565,6 +607,12 @@
       "slug": "semantic-search-vs-keyword-search",
       "type": "WHITEPAPER",
       "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        { "slug": "natural-language-processing-fundamentals", "title": "NLP Fundamentals" },
+        { "slug": "ai-vs-traditional-software-kathmandu", "title": "AI vs Traditional Software" },
+        { "href": "/products/search/", "title": "Zunkiree Search" }
+      ],
       "title": "Semantic Search vs Keyword Search: A Technical Comparison",
       "subtitle": "Understanding the differences and when to use each",
       "description": "A deep technical comparison of semantic and keyword search approaches, with benchmarks, use cases, and implementation recommendations.",
@@ -592,6 +640,12 @@
       "slug": "enterprise-ai-adoption-report",
       "type": "REPORT",
       "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
+        { "slug": "ai-search-report-2026", "title": "State of AI Search 2026" },
+        { "href": "/services/ai-development/", "title": "AI Development Services" }
+      ],
       "title": "State of Enterprise AI Adoption 2026",
       "subtitle": "Insights from 500+ enterprise technology leaders",
       "description": "Our annual report on how enterprises are adopting AI technologies, common challenges, and best practices from industry leaders.",
@@ -621,6 +675,12 @@
       "slug": "natural-language-processing-fundamentals",
       "type": "GUIDE",
       "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search" },
+        { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
+        { "href": "/services/ai-development/", "title": "AI Development Services" }
+      ],
       "title": "Natural Language Processing Fundamentals",
       "subtitle": "From theory to production-ready NLP systems",
       "description": "A practical guide to understanding and implementing NLP in enterprise applications. Covers embeddings, transformers, and fine-tuning strategies.",
@@ -679,6 +739,7 @@
       "category": "case-studies",
       "badgeLabel": "Case Study",
       "relatedResources": [
+        { "href": "https://zennly.io/", "title": "Visit Zenly — Try the Live Product" },
         { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
         { "slug": "dental-ai-case-study", "title": "Case Study: Building Dental AI Assistant" },
         { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" }

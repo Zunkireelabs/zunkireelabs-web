@@ -3,6 +3,7 @@ layout: base.njk
 title: "AI & Technology Blog | Insights from Zunkiree Labs"
 description: "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company."
 eleventyExcludeFromCollections: true
+hideChrome: true
 pagination:
   data: collections.blog
   size: 10
@@ -13,12 +14,21 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
 
 {# =====================================================
    BLOG LISTING PAGE
+   hideChrome: true + navbar-v2/footer-v2 included directly,
+   same convention as blog-post.njk (individual posts) and
+   every other V2 page — base.njk's own header.njk/footer.njk
+   are a different, older design (warm-charcoal/zunkiree-600)
+   and previously rendered here on a page that otherwise never
+   used them, mismatching every post this page links to.
    ===================================================== #}
+{% include "partials/navbar-v2.njk" %}
 
 {# =====================================================
    HERO SECTION
+   pt-32/36/44 clears navbar-v2's fixed 72px bar, same values
+   blog-post.njk itself already uses.
    ===================================================== #}
-<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+<section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Breadcrumb #}
     <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
@@ -179,3 +189,5 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
+
+{% include "partials/footer-v2.njk" %}

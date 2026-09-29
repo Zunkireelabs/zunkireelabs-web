@@ -1,55 +1,116 @@
 ---
 layout: "base.njk"
-permalink: "/cookies/"
+permalink: "/cookie-policy/"
 title: "Cookie Policy | Zunkiree Labs"
-description: "Learn how Zunkiree Labs uses cookies and similar technologies."
-templateEngineOverride: "njk, md"
+description: "Learn how Zunkiree Labs uses cookies and similar technologies, including which trackers are on this site and how to control them."
+bodyClass: "v2-inter"
+hideChrome: true
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-3xl">
+{#
+  Was still on the pre-V2 legacy shell (container-custom, gray-900/
+  gray-600 tokens, no navbar-v2/footer-v2 include, no hideChrome) while
+  every other legal page (privacy-policy-zunkiree-labs.njk,
+  zunkiree-labs-terms-of-service.njk) had already moved to the V2
+  Read-mode pattern. Content/copy unchanged — visual system only,
+  matching privacy-policy-zunkiree-labs.njk exactly.
+#}
 
-<h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-4">Cookie Policy</h1>
+{% include "partials/navbar-v2.njk" %}
 
-<p class="text-sm text-gray-500 mb-8">Last updated: August 2026</p>
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
 
-<div class="bg-gray-50 border border-gray-200 rounded-lg px-5 py-4 mb-10 text-sm text-gray-600 leading-relaxed">
-  <span class="font-medium text-gray-900">Draft notice:</span> This template should be reviewed before publication.
-</div>
+{# =====================================================
+   HERO — breadcrumb + eyebrow + H1 + meta row, left-aligned
+   inside a contained column (Read mode, not Persuade).
+   ===================================================== #}
+<section class="bg-white px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40">
+  <div class="mx-auto max-w-3xl">
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+        <li><a href="/" class="transition-colors hover:text-[#5a9100]">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-navy-900">Cookie Policy</li>
+      </ol>
+    </nav>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">What Are Cookies?</h2>
+    <span class="mb-5 inline-flex items-center rounded-full border border-sky-100/60 bg-sky-50/60 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-sky-600 shadow-subtle" data-reveal>
+      Legal
+    </span>
 
-<p class="text-lg text-gray-600 leading-relaxed">Cookies are small text files stored on your device that help websites function properly and improve user experience.</p>
+    <h1 class="mb-4 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1]" data-reveal>
+      Cookie Policy
+    </h1>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">How We Use Cookies</h2>
+    <p class="font-mono text-[11px] uppercase tracking-wider text-navy-400" data-reveal>
+      Last updated: September 2026
+    </p>
+  </div>
+</section>
 
-<p class="text-lg text-gray-600 leading-relaxed mb-4">Cookies may be used to:</p>
+{# =====================================================
+   BODY — plain reading column, hairline dividers between
+   sections instead of card treatment (Read mode).
+   ===================================================== #}
+<section class="bg-white px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-3xl">
+    <article data-reveal-stagger>
 
-<ul class="list-disc list-outside pl-5 space-y-2 text-lg text-gray-600 leading-relaxed">
-  <li>Maintain website functionality</li>
-  <li>Remember user preferences</li>
-  <li>Improve website performance</li>
-  <li>Analyze website traffic</li>
-</ul>
+      <div class="border-t border-navy-100 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">What Are Cookies?</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Cookies are small text files stored on your device that help websites function properly and improve user experience.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Third-Party Cookies</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">How We Use Cookies</h2>
+        <p class="mb-4 text-[16px] leading-relaxed text-[#6B7280]">Cookies may be used to:</p>
+        <ul class="list-disc list-outside space-y-2 pl-5 text-[16px] leading-relaxed text-[#6B7280] marker:text-[#76B900]">
+          <li>Maintain website functionality</li>
+          <li>Remember user preferences</li>
+          <li>Improve website performance</li>
+          <li>Analyze website traffic</li>
+        </ul>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Some third-party services embedded within the website may also set cookies according to their own policies.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Cookies and Trackers We Use</h2>
+        <p class="mb-4 text-[16px] leading-relaxed text-[#6B7280]">We currently use the following third-party trackers on this site:</p>
+        <ul class="list-disc list-outside space-y-2 pl-5 text-[16px] leading-relaxed text-[#6B7280] marker:text-[#76B900]">
+          <li><span class="font-medium text-[#111827]">Google Analytics (GA4)</span> &mdash; helps us understand how visitors use the site.</li>
+          <li><span class="font-medium text-[#111827]">Meta/Facebook Pixel</span> &mdash; used for ad conversions and retargeting for our Facebook/Instagram campaigns.</li>
+        </ul>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Managing Cookies</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Managing Cookies</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">Most browsers allow you to control, block, or delete cookies through browser settings. Disabling cookies may affect certain website functionality. You can also turn Analytics and Marketing cookies for this site on or off directly on our <a href="/cookie-preferences/" class="font-medium text-sky-600 underline decoration-sky-200 underline-offset-2 transition-colors hover:text-[#5a9100]">Cookie Preferences</a> page.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">Most browsers allow you to control, block, or delete cookies through browser settings. Disabling cookies may affect certain website functionality.</p>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Changes to This Policy</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">This Cookie Policy may be updated periodically. Any updates will be posted on this page.</p>
+      </div>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Changes to This Policy</h2>
+      <div class="border-t border-navy-100 mt-10 pt-10">
+        <h2 class="mb-3 text-[22px] font-semibold leading-[1.25] tracking-tight text-[#111827] sm:text-[24px]">Contact</h2>
+        <p class="text-[16px] leading-relaxed text-[#6B7280]">If you have questions regarding our Cookie Policy, please contact us through our <a href="/contact/" class="font-medium text-sky-600 underline decoration-sky-200 underline-offset-2 transition-colors hover:text-[#5a9100]">Contact page</a>.</p>
+      </div>
 
-<p class="text-lg text-gray-600 leading-relaxed">This Cookie Policy may be updated periodically. Any updates will be posted on this page.</p>
+    </article>
+  </div>
+</section>
 
-<h2 class="text-2xl md:text-3xl font-normal text-gray-900 mt-12 mb-3">Contact</h2>
+{% include "partials/footer-v2.njk" %}
 
-<p class="text-lg text-gray-600 leading-relaxed">If you have questions regarding our Cookie Policy, please contact us through our Contact page.</p>
-
-</div>
-
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Cookie Policy | Zunkiree Labs","articleBody":"Cookie Policy Draft notice: This template should be reviewed before publication. Last updated: August 2026 What Are Cookies? Cookies are small text files stored on your device that help websites function properly and improve user experience. How We Use Cookies Cookies may be used to: Maintain website functionality Remember user preferences Improve website performance Analyze website traffic Third-Party Cookies Some third-party services embedded within the website may also set cookies according to their own policies. Managing Cookies Most browsers allow you to control, block, or delete cookies through browser settings. Disabling cookies may affect certain website functionality. Changes to This Policy This Cookie Policy may be updated periodically. Any updates will be posted on this page. Contact If you have questions regarding our Cookie Policy, please contact us through our Contact page."}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","@context":"https://schema.org","headline":"Cookie Policy | Zunkiree Labs","articleBody":"Cookie Policy Last updated: September 2026 What Are Cookies? Cookies are small text files stored on your device that help websites function properly and improve user experience. How We Use Cookies Cookies may be used to: Maintain website functionality Remember user preferences Improve website performance Analyze website traffic Cookies and Trackers We Use We currently use the following third-party trackers on this site: Google Analytics (GA4) — helps us understand how visitors use the site. Meta/Facebook Pixel — used for ad conversions and retargeting for our Facebook/Instagram campaigns. Managing Cookies Most browsers allow you to control, block, or delete cookies through browser settings. Disabling cookies may affect certain website functionality. You can also turn Analytics and Marketing cookies for this site on or off directly on our Cookie Preferences page. Changes to This Policy This Cookie Policy may be updated periodically. Any updates will be posted on this page. Contact If you have questions regarding our Cookie Policy, please contact us through our Contact page."}</script><!-- SEOAI:SCHEMA:END -->
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg">
 

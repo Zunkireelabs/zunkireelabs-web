@@ -1,8 +1,26 @@
 {# =====================================================
    LEAD CAPTURE FORM — WEBSITE V2
    Page-scoped V2 token set (navy/green) shared by every
-   /resources/* content page. Set `formTitle` and `ctaText`
-   via {% set %} before including this partial.
+   /resources/* content page. Set `formTitle`, `ctaText`,
+   `resourceSlug` and `resourceTitle` via {% set %} before
+   including this partial.
+
+   Used to be entirely fake — @submit.prevent just ran a
+   setTimeout and flipped submitted=true, no network call, no
+   lead ever saved anywhere. Now it submits for real through
+   this site's /api/submit-lead proxy (same one contact.njk /
+   get-a-quote.njk / apply.njk use — see api/submit-lead.js),
+   to a `resource` EdgeX form.
+
+   There's no actual PDF file for any of these reports — the
+   full write-up is already the page's own on-page content
+   (resource-content.njk renders it unlocked in the left
+   column, id="resource-article-content"). So "download" here
+   means: on a successful submit, turn that already-visible
+   content into a real PDF client-side (html2pdf.js, dynamically
+   imported so it's not in the main bundle) and hand the visitor
+   an actual file, rather than promising a "download link" over
+   email that doesn't exist.
    ===================================================== #}
 <div class="rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle sm:p-8">
   <h3 class="mb-6 text-[20px] font-semibold leading-[1.3] tracking-tight text-[#111827]">{{ formTitle }}</h3>
@@ -15,12 +33,72 @@
       email: '',
       company: '',
       jobTitle: '',
+      countryCodes: {{ countryCodes | dump }},
+      phoneCode: '+977',
+      phoneCountryName: 'Nepal',
+      phoneFlag: '🇳🇵',
       phone: '',
       country: '',
       submitting: false,
-      submitted: false
+      submitted: false,
+      error: false,
+      generatingPdf: false,
+      async submitResourceForm() {
+        this.submitting = true;
+        this.error = false;
+        try {
+          const res = await fetch('/api/submit-lead?form=resource', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              first_name: this.firstName.trim(),
+              last_name: this.lastName.trim(),
+              work_email: this.email.trim(),
+              company_name: this.company.trim(),
+              job_title: this.jobTitle.trim(),
+              phone: this.phone.trim() ? (this.phoneCode + ' ' + this.phone.trim()) : null,
+              country: this.country || null,
+              resource_slug: '{{ resourceSlug }}',
+              resource_title: {{ resourceTitle | dump }},
+              lead_source: 'resource-download'
+            })
+          });
+          if (!res.ok) throw new Error('Submit failed: ' + res.status);
+          this.submitted = true;
+          this.downloadResourcePdf();
+        } catch (err) {
+          console.error('[resource form] submit error', err);
+          this.error = true;
+        } finally {
+          this.submitting = false;
+        }
+      },
+      async downloadResourcePdf() {
+        this.generatingPdf = true;
+        try {
+          const html2pdf = await window.loadHtml2Pdf();
+          const source = document.getElementById('resource-article-content');
+          if (!source) return;
+          const clone = source.cloneNode(true);
+          clone.querySelectorAll('[data-reveal], [data-reveal-stagger]').forEach((el) => el.classList.add('revealed'));
+          await html2pdf()
+            .set({
+              margin: 12,
+              filename: '{{ resourceSlug }}.pdf',
+              image: { type: 'jpeg', quality: 0.95 },
+              html2canvas: { scale: 2, useCORS: true },
+              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            })
+            .from(clone)
+            .save();
+        } catch (err) {
+          console.error('[resource form] pdf generation error', err);
+        } finally {
+          this.generatingPdf = false;
+        }
+      }
     }"
-    @submit.prevent="submitting = true; setTimeout(() => { submitting = false; submitted = true; }, 1500)"
+    @submit.prevent="submitResourceForm()"
   >
     {# Success Message #}
     <div x-show="submitted" x-cloak class="py-10 text-center">
@@ -30,8 +108,13 @@
         </svg>
       </div>
       <h4 class="mb-2 text-[18px] font-medium text-[#111827]">Thank you!</h4>
-      <p class="text-[14px] text-[#6B7280]">Check your email for the download link.</p>
+      <p class="text-[14px] text-[#6B7280]" x-show="generatingPdf">Preparing your download…</p>
+      <p class="text-[14px] text-[#6B7280]" x-show="!generatingPdf">Your download should have started. Didn't get it? <button type="button" @click="downloadResourcePdf()" class="font-medium text-[#5a9100] hover:underline">Try again</button>.</p>
     </div>
+
+    <p x-show="error" x-cloak class="mb-4 text-[13px] font-medium text-red-600">
+      Something went wrong submitting the form. Please try again.
+    </p>
 
     {# Form Fields #}
     <div x-show="!submitted">
@@ -103,13 +186,48 @@
       {# Phone Number #}
       <div>
         <label for="phone" class="mb-1.5 block text-[13px] font-medium text-[#111827]">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          x-model="phone"
-          class="w-full rounded-lg border border-navy-200 bg-white px-3.5 py-2.5 text-[14px] text-navy-900 placeholder:text-navy-400 outline-none transition-all focus:border-[#76B900] focus:ring-2 focus:ring-[#76B900]/20"
-          placeholder="+1 (555) 123-4567"
-        >
+        <div class="flex gap-2">
+          <div class="relative" x-data="{ codeOpen: false, codeSearch: '' }" @click.outside="codeOpen = false">
+            <button type="button" @click="codeOpen = !codeOpen"
+              class="flex w-[92px] flex-shrink-0 items-center justify-between gap-1 rounded-lg border border-navy-200 bg-white px-2.5 py-2.5 text-[14px] text-navy-900 outline-none transition-all focus:border-[#76B900] focus:ring-2 focus:ring-[#76B900]/20">
+              <span class="flex items-center gap-1">
+                <span x-text="phoneFlag"></span>
+                <span x-text="phoneCode"></span>
+              </span>
+              <svg class="h-3 w-3 flex-shrink-0 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
+            <div x-show="codeOpen" x-cloak x-transition
+              class="absolute z-20 mt-1 w-72 overflow-hidden rounded-md border border-navy-100 bg-white shadow-lg">
+              <div class="border-b border-navy-100 p-2">
+                <input type="text" x-model="codeSearch" placeholder="Search country…"
+                  class="w-full rounded border border-navy-100/60 px-2 py-1.5 text-[13px] outline-none focus:border-[#76B900]">
+              </div>
+              <div class="country-scroll max-h-64 overflow-y-auto overscroll-contain py-1" data-lenis-prevent>
+                <button type="button" x-show="!codeSearch" @click="codeOpen = false"
+                  class="flex w-full items-center gap-2 bg-[#F0F5E8] px-3 py-2.5 text-left text-[13px] font-medium text-[#111827]">
+                  <span x-text="phoneFlag"></span>
+                  <span x-text="phoneCountryName + ' (' + phoneCode + ')'"></span>
+                </button>
+                <template x-for="c in countryCodes.filter(c => c.name !== phoneCountryName && (c.name.toLowerCase().includes(codeSearch.toLowerCase()) || c.code.includes(codeSearch)))" :key="c.name">
+                  <button type="button" @click="phoneCode = c.code; phoneCountryName = c.name; phoneFlag = c.flag; codeOpen = false; codeSearch = ''"
+                    class="flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] text-[#111827] transition-colors hover:bg-navy-50">
+                    <span x-text="c.flag"></span>
+                    <span x-text="c.name + ' (' + c.code + ')'"></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+          </div>
+          <input
+            type="tel"
+            id="phone"
+            x-model="phone"
+            class="w-full rounded-lg border border-navy-200 bg-white px-3.5 py-2.5 text-[14px] text-navy-900 placeholder:text-navy-400 outline-none transition-all focus:border-[#76B900] focus:ring-2 focus:ring-[#76B900]/20"
+            placeholder="98XXXXXXXX"
+          >
+        </div>
       </div>
 
       {# Country #}

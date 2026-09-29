@@ -1902,6 +1902,75 @@ layout: base.njk
 {% endif %}
 
 {# =====================================================
+   AI-MANAGED CONTENT (expandedContent / qaContentHtml —
+   written by the Action Center generators into this page's own
+   body, below the frontmatter). Same fix and same
+   `.action-center-content` restyle as service.njk / location.njk
+   — see service.njk's own comment for the full rationale
+   (product-v2.njk had the identical "page body never rendered"
+   gap). Placed above FAQ, same page-order convention.
+   ===================================================== #}
+{% if content and content.trim() %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+  <div class="mx-auto max-w-content action-center-content">
+    {{ content | safe }}
+  </div>
+</section>
+<style>
+  .action-center-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #111827;
+  }
+  .action-center-content p {
+    color: #6B7280;
+  }
+  .action-center-content :is(div):has(> table) {
+    border-radius: 0.75rem;
+    border-color: rgba(199, 213, 218, 0.6);
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  }
+  .action-center-content th,
+  .action-center-content td {
+    text-align: left;
+  }
+  .action-center-content table {
+    font-size: 14px;
+  }
+  .action-center-content thead tr {
+    background-color: #eff7ff;
+  }
+  .action-center-content th {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4a636e;
+  }
+  .action-center-content tbody tr {
+    border-color: rgba(199, 213, 218, 0.5);
+  }
+  .action-center-content td:first-child {
+    font-weight: 500;
+    color: #111827;
+  }
+  .action-center-content td:not(:first-child) {
+    color: #6B7280;
+  }
+  .action-center-content a {
+    color: #3d8fd4;
+    text-decoration: none;
+  }
+  .action-center-content a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endif %}
+
+{# =====================================================
    FAQ — accordion, reused from homepage-v2's FAQ pattern.
    Renders only when the product has real FAQ content.
    ===================================================== #}

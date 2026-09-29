@@ -6,12 +6,50 @@ permalink: /resources/ai-search-stack-guide/
 slug: ai-search-stack-guide
 ---
 
-{# Introduction #}
+{# Who is this for #}
 <div class="mb-12" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">About this guide</h2>
-  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Who is this guide for?</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
     {{ resource.description }}
   </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This guide is written for <strong class="font-semibold text-[#111827]">engineering leaders and architects</strong> evaluating or building AI-native search for their organization &mdash; whether you're replacing an aging keyword search system or scoping AI search for the first time.
+  </p>
+</div>
+
+{# What's inside #}
+<div class="mb-12" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What's inside</h2>
+  <div class="space-y-4">
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 1: Architecture Blueprint</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">A complete architecture blueprint for AI search systems, from data ingestion to query-time retrieval.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 2: Implementation Guide</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Step-by-step implementation guidance with code examples for connecting real data sources.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 3: Performance Benchmarks</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Performance benchmarks comparing AI-native search against traditional keyword search.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 4: Enterprise Integration Patterns</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Integration patterns for connecting AI search to enterprise data sources at scale.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 5: Cost & ROI</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">A cost analysis and ROI framework for building the business case for AI search investment.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 6: Security & Compliance</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Security and compliance considerations for deploying AI search in regulated environments.</p>
+    </div>
+    <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+      <p class="mb-1.5 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">Chapter 7: Migrating from Legacy Search</p>
+      <p class="text-[14px] leading-relaxed text-[#6B7280]">Migration strategies for moving off legacy keyword search systems without disrupting production.</p>
+    </div>
+  </div>
 </div>
 
 {# What You Get #}
@@ -29,6 +67,76 @@ slug: ai-search-stack-guide
     </li>
     {% endfor %}
   </ul>
+</div>
+
+{# FAQ Section #}
+<div data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+
+  <div x-data="{ activeIndex: null }">
+    <div class="divide-y divide-navy-100">
+      <div class="py-5">
+        <button
+          @click="activeIndex = (activeIndex === 1) ? null : 1"
+          class="group flex w-full items-center justify-between gap-4 text-left"
+          :aria-expanded="activeIndex === 1 ? 'true' : 'false'"
+          aria-controls="stack-faq-answer-1"
+        >
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+            Is this guide specific to Zunkiree Search, or vendor-neutral?
+          </span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 1 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div id="stack-faq-answer-1" x-show="activeIndex === 1" x-transition class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">The architecture patterns, integration approaches, and migration strategies covered in this guide apply to AI search generally, not just Zunkiree Search &mdash; the framework is meant to help you evaluate the space, regardless of vendor.</p>
+        </div>
+      </div>
+      <div class="py-5">
+        <button
+          @click="activeIndex = (activeIndex === 2) ? null : 2"
+          class="group flex w-full items-center justify-between gap-4 text-left"
+          :aria-expanded="activeIndex === 2 ? 'true' : 'false'"
+          aria-controls="stack-faq-answer-2"
+        >
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+            Does this guide cover the cost of migrating from an existing search system?
+          </span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 2 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div id="stack-faq-answer-2" x-show="activeIndex === 2" x-transition class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Yes &mdash; the guide includes a dedicated cost analysis and ROI framework, plus a chapter on migration strategies for moving off legacy keyword search without disrupting production.</p>
+        </div>
+      </div>
+      <div class="py-5">
+        <button
+          @click="activeIndex = (activeIndex === 3) ? null : 3"
+          class="group flex w-full items-center justify-between gap-4 text-left"
+          :aria-expanded="activeIndex === 3 ? 'true' : 'false'"
+          aria-controls="stack-faq-answer-3"
+        >
+          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+            Is security and compliance covered for regulated industries?
+          </span>
+          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 3 ? 'rotate-45' : ''">
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div id="stack-faq-answer-3" x-show="activeIndex === 3" x-transition class="overflow-hidden">
+          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Yes &mdash; a dedicated chapter walks through security and compliance considerations for deploying AI search in regulated environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="application/ld+json">

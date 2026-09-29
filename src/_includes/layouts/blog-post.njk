@@ -269,6 +269,35 @@ bodyClass: "v2-inter"
             .prose thead th:last-child { border-top-right-radius: 1rem; }
             .prose th, .prose td { padding: 0.85rem 1.25rem; border-bottom: 1px solid #e3eaec; }
             .prose tr:last-child td { border-bottom: none; }
+
+            /* Action Center's expand-content generator wraps its section in
+               its own py-12/md:py-20 padding, authored for a plain page body
+               — not for landing inside .prose, which already gives every h2
+               inside it a generous 3.5rem top margin (prose-h2:mt-14 above).
+               The two stack, producing the large empty gap reported around
+               these generated sections. Neutralized here, once, for every
+               post that carries this marker, rather than hand-edited in each
+               post's own markdown. */
+            .prose section.py-12 {
+              padding: 1.5rem !important;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+              background: #f9fafb;
+              border: 1px solid #e5e7eb;
+              border-radius: 0.75rem;
+              box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+            }
+            .prose section.py-12 table { background: #fff; }
+
+            /* Action Center's Q&A/FAQ generators wrap their output in
+               bg-gray-50 rounded-lg with no border, which reads as
+               indistinguishable from the page background at this bg-gray-50
+               shade. Adds a visible border/shadow so it reads as a real card,
+               without touching the generators' own markup. */
+            .prose .bg-gray-50.rounded-lg {
+              border: 1px solid #e5e7eb;
+              box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+            }
           </style>
           {{ content | safe }}
         </div>
