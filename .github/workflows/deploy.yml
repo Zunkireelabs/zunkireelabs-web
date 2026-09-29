@@ -39,20 +39,26 @@ jobs:
           script: |
             cd /home/zunkireelabs/devprojects/zunkiree-web-prod
             git pull origin main
+            # Written fresh each deploy, never committed — read by docker
+            # compose for the `api` sidecar's EDGEX_CRM_TOKEN substitution
+            # (docker-compose.yml). See server/submit-lead-server.js.
+            echo "EDGEX_CRM_TOKEN=${{ secrets.EDGEX_CRM_TOKEN }}" > .env
             docker compose up -d --build
-            echo "Waiting for container to be healthy..."
+            echo "Waiting for containers to be healthy..."
             sleep 10
             for i in $(seq 1 12); do
-              STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-production 2>/dev/null || echo "unknown")
-              if [ "$STATUS" = "healthy" ]; then
-                echo "Container is healthy!"
+              APP_STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-production 2>/dev/null || echo "unknown")
+              API_STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-production-api 2>/dev/null || echo "unknown")
+              if [ "$APP_STATUS" = "healthy" ] && [ "$API_STATUS" = "healthy" ]; then
+                echo "Containers are healthy!"
                 exit 0
               fi
-              echo "Attempt $i/12: Status is $STATUS, waiting..."
+              echo "Attempt $i/12: app=$APP_STATUS api=$API_STATUS, waiting..."
               sleep 10
             done
-            echo "Container did not become healthy within 2 minutes"
+            echo "Containers did not become healthy within 2 minutes"
             docker logs zunkiree-production --tail 50
+            docker logs zunkiree-production-api --tail 50
             exit 1
 
       - name: Verify Health
@@ -63,4 +69,18 @@ jobs:
           else
             echo "Health check failed (HTTP $HTTP_CODE)"
             exit 1
+          fi
+
+          # Confirms the lead-form proxy is actually reachable through nginx
+          # (not a 404, which is exactly how this class of failure shipped
+          # silently before — see server/submit-lead-server.js). A malformed
+          # empty body is expected to reach the CRM and get a 4xx from IT,
+          # not from nginx/this proxy — anything other than a 404 here means
+          # the route exists, which is all this check needs to confirm.
+          API_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://zunkireelabs.com/api/submit-lead -H "Content-Type: application/json" -d '{}')
+          if [ "$API_CODE" = "404" ]; then
+            echo "Lead-form proxy check failed: /api/submit-lead returned 404 (route not reachable)"
+            exit 1
+          else
+            echo "Lead-form proxy check passed (HTTP $API_CODE, route reachable)"
           fi
