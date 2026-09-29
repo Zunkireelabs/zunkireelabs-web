@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Choosing an AI Development Partner: A Global Buyer's Guide"
-description: "What to actually look for when evaluating an AI development company, wherever you're based — architecture, real integration experience, and how to tell infrastructure-level work from a thin wrapper."
+description: "Discover the key differences between a true AI infrastructure partner and those merely rebranding existing products, emphasizing real integration and architecture."
 date: "2026-09-24"
 shortLabel: "AI Partner"
 featuredImage: "/assets/images/blog/ai-development-partner-guide.webp"
