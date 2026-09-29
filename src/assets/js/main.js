@@ -26,6 +26,14 @@ import { StripeGradient } from './stripe-gradient.js';
 // Expose GSAP globally so Alpine x-data can reference it
 window.gsap = gsap;
 
+// Resource-download form (lead-capture-form-v2.njk) generates a PDF from
+// on-page content client-side. It lives in an x-data attribute string,
+// which Vite never import-analyzes, so a bare `import('html2pdf.js')`
+// there would try to resolve as a literal browser module specifier and
+// fail. Routing the dynamic import through this real module lets Vite
+// code-split it into its own chunk instead, loaded only when called.
+window.loadHtml2Pdf = () => import('html2pdf.js').then((m) => m.default);
+
 // Register plugins before starting
 Alpine.plugin(collapse);
 

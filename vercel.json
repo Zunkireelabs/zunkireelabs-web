@@ -21,6 +21,16 @@
   ],
   "redirects": [
     {
+      "source": "/cookies",
+      "destination": "/cookie-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/cookies/",
+      "destination": "/cookie-policy/",
+      "permanent": true
+    },
+    {
       "source": "/gaas",
       "destination": "/agentic-as-a-service/",
       "permanent": true

@@ -21,22 +21,29 @@ Nepal's AI industry has grown significantly over the past five years. What start
 
 In 2026, Nepali AI companies are building everything from natural language processing systems to computer vision applications, competing effectively with global players while offering cost advantages and specialized expertise.
 
+The numbers back this up: AI startup funding in Nepal jumped from roughly NPR 180 million to about NPR 1.2 billion in two years, IT/AI exports crossed $1 billion for the first time, and the sector is now regulated under the [National Artificial Intelligence Policy, 2025](https://giwmscdnone.gov.np/media/pdf_upload/National%20AI%20Policy-Final_uxc94vg.pdf), which established a National AI Centre and an AI Regulation Council ([Nepal Economic Forum, NEFsearch: Artificial Intelligence in Nepal](https://issuu.com/nepaleconomicforum/docs/nefsearch_artificial_intelligence_ai_in_nepal); [Tracxn, AI Startups in Nepal](https://tracxn.com/d/explore/artificial-intelligence-startups-in-nepal)).
+
 > **Looking for a broader view?** See our comprehensive guide: [Top 50 Tech, Software & AI Companies in Nepal 2026](/blog/top-tech-companies-nepal-2026/) covering AI firms, software development companies, and rising startups.
 
 ## Leading AI Companies in Nepal
 
 ### Zunkiree Labs
 
-**Focus**: AI infrastructure, RAG pipelines, enterprise search
+**Location**: Kathmandu, Nepal (serving clients globally, including the UK and US)
 
-Zunkiree Labs builds AI-native search and interaction systems for businesses. Their flagship product, Zunkiree Search, delivers natural language search capabilities that organizations integrate into websites and internal tools.
+**Founded**: 2018
+
+**Focus**: AI infrastructure, RAG pipelines, enterprise search, and AI booking/commerce agents, built and owned as products rather than delivered as one-off projects
+
+Zunkiree Labs builds AI-native search and interaction systems for businesses. Their flagship product, Zunkiree Search, delivers natural language search capabilities that organizations integrate into websites and internal tools, alongside Stella (an AI commerce agent), Zenly (an AI booking engine), and Gaamma (a manufacturing ERP with predictive maintenance).
 
 **Notable work**:
-- AI-powered search reducing support tickets by 45%
-- RAG pipelines for document processing
-- Custom AI agents for enterprise workflows
+- Zunkiree Search cut issue-resolution time by 80% and reduced operational costs 60% for Corecloud365, and doubled online conversion for Prime Tiles
+- RAG-based document processing that automated 85% of CMS Group's document workflows
+- AI booking and scheduling that increased bookings 70% for Khems Cleaning
+- Ongoing digital-stack and AI delivery for UK real-estate company Chayce Properties
 
-**Best for**: Organizations needing production-grade AI systems with ongoing support.
+**Best for**: Organizations needing production-grade AI systems with ongoing support, in Nepal or internationally.
 
 ### Other Players in Nepal's AI Sector
 
@@ -130,17 +137,4 @@ The key is matching your specific needs—technical requirements, communication 
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
-<!-- SEOAI:QACONTENT:START --><div class="container-custom">
-<div class="mt-10 p-6 bg-gray-50 rounded-lg">
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What types of AI solutions are companies in Nepal focusing on?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">Which companies are recognized as leaders in AI innovation in Nepal?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs is a leading AI company in Nepal, known for building production-grade AI infrastructure — enterprise search, RAG pipelines, and custom AI agents — as owned products rather than one-off service work. Nepal's broader AI sector also includes education, outsourcing, and vertical-specific providers offering specialized solutions across various sectors.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How has the AI industry in Nepal evolved over recent years?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What notable achievements have these AI companies made?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45% for enterprise clients, alongside RAG pipelines for document processing and custom AI agents for enterprise workflows.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How is Zunkiree Labs different from other AI companies in Nepal?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs builds AI-native infrastructure as a product — customers integrate Zunkiree Search and related tools directly rather than commissioning a custom project. That product-first model, backed by measurable results like a 45% reduction in support tickets, sets it apart from providers offering AI as a consulting or staffing service.</p>
-</div>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"@type":"Question","name":"What types of AI solutions are companies in Nepal focusing on?","acceptedAnswer":{"@type":"Answer","text":"Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients."}},{"@type":"Question","name":"Which companies are recognized as leaders in AI innovation in Nepal?","acceptedAnswer":{"@type":"Answer","text":"Zunkiree Labs is a leading AI company in Nepal, known for building production-grade AI infrastructure — enterprise search, RAG pipelines, and custom AI agents — as owned products rather than one-off service work. Nepal's broader AI sector also includes education, outsourcing, and vertical-specific providers offering specialized solutions across various sectors."}},{"@type":"Question","name":"How has the AI industry in Nepal evolved over recent years?","acceptedAnswer":{"@type":"Answer","text":"The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale."}},{"@type":"Question","name":"What notable achievements have these AI companies made?","acceptedAnswer":{"@type":"Answer","text":"Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45% for enterprise clients, alongside RAG pipelines for document processing and custom AI agents for enterprise workflows."}},{"@type":"Question","name":"How is Zunkiree Labs different from other AI companies in Nepal?","acceptedAnswer":{"@type":"Answer","text":"Zunkiree Labs builds AI-native infrastructure as a product — customers integrate Zunkiree Search and related tools directly rather than commissioning a custom project. That product-first model, backed by measurable results like a 45% reduction in support tickets, sets it apart from providers offering AI as a consulting or staffing service."}}]}</script><!-- SEOAI:QACONTENT:END -->

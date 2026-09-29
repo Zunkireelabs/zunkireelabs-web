@@ -28,7 +28,7 @@
     <div class="mb-12 border-t border-dashed border-navy-200"></div>
 
     <!-- Link columns + CTA card -->
-    <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 lg:grid-cols-[repeat(3,1fr)_22rem]">
+    <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 lg:grid-cols-[repeat(4,1fr)_22rem]">
 
       <div>
         <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Industries</span>
@@ -50,12 +50,22 @@
         </ul>
       </div>
 
-      <div class="col-span-2 lg:col-span-1">
+      <div>
         <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Resources</span>
         <ul class="space-y-1 sm:space-y-3">
           <li><a href="/services/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Services</a></li>
-          <li><a href="/services/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Solutions</a></li>
+          <li><a href="/team/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Team</a></li>
           <li><a href="/pricing/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Locations</span>
+        <ul class="space-y-1 sm:space-y-3">
+          <li><a href="/locations/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">All Locations</a></li>
+          {% for location in locations %}
+          <li><a href="/locations/{{ location.id }}/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ location.name }}</a></li>
+          {% endfor %}
         </ul>
       </div>
 

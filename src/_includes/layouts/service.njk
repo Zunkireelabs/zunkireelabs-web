@@ -570,6 +570,80 @@ bodyClass: "v2-inter"
 </section>
 
 {# =====================================================
+   AI-MANAGED CONTENT (expandedContent / qaContentHtml —
+   written by the Action Center generators into this page's own
+   body, below the frontmatter). Content and markup structure are
+   never edited here — only wrapped in `.action-center-content`,
+   the same scoped restyle location.njk uses so the generators'
+   legacy gray-900/gray-50 markup renders in the v2 navy/sky/
+   #76B900 system instead of clashing with it. The AI-managed
+   markup already brings its own grid/section wrapper (matching
+   Section 3's two-column heading+body convention), so — unlike
+   location.njk's centered-page override — only color tokens are
+   restyled here, not alignment. Placed above FAQs, same
+   page-order convention as location.njk.
+   ===================================================== #}
+{% if content and content.trim() %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+  <div class="mx-auto max-w-5xl action-center-content">
+    {{ content | safe }}
+  </div>
+</section>
+<style>
+  .action-center-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: #111827;
+  }
+  .action-center-content p {
+    color: #6B7280;
+  }
+  .action-center-content :is(div):has(> table) {
+    border-radius: 0.75rem;
+    border-color: rgba(199, 213, 218, 0.6); /* navy-100/60 */
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  }
+  .action-center-content th,
+  .action-center-content td {
+    text-align: left;
+  }
+  .action-center-content table {
+    font-size: 14px;
+  }
+  .action-center-content thead tr {
+    background-color: #eff7ff; /* sky-50 */
+  }
+  .action-center-content th {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4a636e; /* navy-600 */
+  }
+  .action-center-content tbody tr {
+    border-color: rgba(199, 213, 218, 0.5);
+  }
+  .action-center-content td:first-child {
+    font-weight: 500;
+    color: #111827;
+  }
+  .action-center-content td:not(:first-child) {
+    color: #6B7280;
+  }
+  .action-center-content a {
+    color: #3d8fd4; /* sky-500 */
+    text-decoration: none;
+  }
+  .action-center-content a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endif %}
+
+{# =====================================================
    SECTION 10 — CLOSING CTA + FAQ
    CTA banner reuses homepage-v2's navy-950 rounded-[28px]
    gradient-bloom recipe; FAQ is an accordion (Expand/Collapse

@@ -16,7 +16,7 @@ readTime: 18
 featuredImageCredit: "Photo by Caio on Pexels"
 ---
 
-Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions.
+Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions. IT/AI exports crossed $1 billion for the first time, and the sector now operates under the government's [National Artificial Intelligence Policy, 2025](https://giwmscdnone.gov.np/media/pdf_upload/National%20AI%20Policy-Final_uxc94vg.pdf) ([Nepal Economic Forum, NEFsearch: Artificial Intelligence in Nepal](https://issuu.com/nepaleconomicforum/docs/nefsearch_artificial_intelligence_ai_in_nepal)).
 
 This guide profiles 50 of the most significant tech companies operating in Nepal—from established enterprises to fast-growing startups. Whether you're looking for an AI development partner, evaluating software vendors, or researching the market, this is your starting point.
 

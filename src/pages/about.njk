@@ -86,7 +86,7 @@ bodyClass: "v2-inter"
     <div class="mb-3 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" data-reveal-stagger>
       <div>
         <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
-          About
+          About Us
         </span>
         <h1 id="hero-heading" class="text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
           The AI infrastructure company
@@ -596,8 +596,13 @@ bodyClass: "v2-inter"
 {# =====================================================
    FAQ — same aboutFaq.json data, restyled to the sitewide
    accordion recipe used on contact.njk/homepage-v2.njk.
+   Bottom padding trimmed (pb, not py) since the next section
+   (Infrastructure-Level AI) brings its own top padding — the
+   two stacking at full py-20+py-20 left an oversized gap at
+   just this one boundary, without affecting the section's own
+   top spacing or any other section-to-section transition.
    ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+<section class="px-4 pt-12 pb-6 sm:px-6 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-20 lg:pb-10" aria-labelledby="faq-heading">
   <div class="mx-auto max-w-content">
     <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
@@ -651,11 +656,15 @@ bodyClass: "v2-inter"
    INFRASTRUCTURE-LEVEL AI COMPARISON
    Recovered from commit 8d68e55 (SEOAI expanded-content
    block, since removed) and re-homed into the v2 layout.
+   Aligned to the FAQ section's own mx-auto max-w-3xl reading
+   column directly above it — it previously sat in the wider
+   max-w-content container with no inner centering, so its left
+   edge started well before the FAQ column's left edge.
    ===================================================== #}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
-  <div class="mx-auto max-w-content">
+  <div class="mx-auto max-w-3xl">
     <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">Infrastructure-Level AI, Not Wrappers</h2>
-    <div class="mt-4 max-w-2xl text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
+    <div class="mt-4 text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
       <p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p>
       <div class="mt-8 mb-2 overflow-hidden rounded-lg border border-gray-200">
         <table class="w-full text-sm">
