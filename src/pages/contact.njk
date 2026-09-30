@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Contact Zunkiree Labs | AI Development Company Nepal | Free Consultation"
+title: "Contact Zunkiree Labs | AI Development in Nepal"
 description: "Contact Zunkiree Labs in Kathmandu for AI development, custom software, and web solutions. Schedule a free discovery call with Nepal's leading AI company."
 permalink: /contact/
 hideChrome: true
@@ -170,7 +170,7 @@ bodyClass: "v2-inter"
       {# Right: Contact Form (3/5 width) — now a fully native form (Alpine.js)
          posting directly to the CRM's public submit API, so it no longer needs
          the outer glass-gradient shell that used to frame the uncontrollable
-         CRM iframe. Field ids/payload keys (first_name, last_name, work_email,
+         CRM iframe. Field ids/payload keys (first_name, last_name, email,
          phone, country, how_would_you_like_to_connect_with_us,
          what_can_we_help_you_with, opt_in_for_marketing_communication) match
          the CRM-hosted contact-us form's own field schema 1:1. #}
@@ -206,7 +206,7 @@ bodyClass: "v2-inter"
                     body: JSON.stringify({
                       first_name: this.firstName.trim(),
                       last_name: this.lastName.trim(),
-                      work_email: this.workEmail.trim(),
+                      email: this.workEmail.trim(),
                       phone: this.phone.trim() ? (this.phoneCode + ' ' + this.phone.trim()) : null,
                       city: this.city.trim() || null,
                       country: this.country.trim() || null,

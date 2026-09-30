@@ -1,0 +1,86 @@
+{
+  "asOf": "2026-09",
+  "note": "Manually curated, dated market snapshot. Each entry was independently verified against its primary source before publication. This is not a live feed — review and refresh quarterly.",
+  "items": [
+    {
+      "id": "stanford-ai-index-2026",
+      "claim": "Overall organizational AI adoption reached 88%, and generative AI specifically is used in at least one business function at 70% of organizations.",
+      "source": "Stanford HAI, AI Index Report 2026",
+      "date": "2026",
+      "scope": "global",
+      "sourceType": "independent-research",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy",
+      "tags": { "industries": [], "painPoints": ["not-sure"], "stages": ["none", "exploring"], "generalFallback": true }
+    },
+    {
+      "id": "mckinsey-state-of-ai-2025",
+      "claim": "71% of organizations report regularly using generative AI in at least one business function, up from 65% a year earlier.",
+      "source": "McKinsey & Company, \"The State of AI\" Global Survey",
+      "date": "March 2025",
+      "scope": "global",
+      "sourceType": "independent-research",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value",
+      "tags": { "industries": [], "painPoints": ["manual-ops"], "stages": ["piloting", "scaled"], "generalFallback": true }
+    },
+    {
+      "id": "oecd-sme-gap-2025",
+      "claim": "Across OECD countries, only 11.9% of firms with 10-49 employees use AI, compared to 40% of firms with 250+ employees — small businesses adopt AI far more slowly than large ones.",
+      "source": "OECD, \"AI adoption by small and medium-sized enterprises\" (G7 discussion paper)",
+      "date": "December 2025",
+      "scope": "global",
+      "sourceType": "independent-research",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "tags": { "industries": [], "painPoints": ["not-sure"], "stages": ["none"], "generalFallback": true }
+    },
+    {
+      "id": "salesforce-retail-2025",
+      "claim": "75% of retail decision-makers (three out of four) say AI agents will be essential to stay competitive within a year, per a survey of 1,700 retail leaders across 21 countries.",
+      "source": "Salesforce, Connected Shoppers Report",
+      "date": "March 2025",
+      "scope": "global",
+      "sourceType": "vendor-survey",
+      "url": "https://www.salesforce.com/news/stories/ai-agent-retail-trends-2025/",
+      "tags": { "industries": ["retail"], "painPoints": ["search-discovery"], "stages": [], "generalFallback": false }
+    },
+    {
+      "id": "algolia-search-2025",
+      "claim": "61% of global B2C retail decision-makers plan to implement agentic AI within the next 12 months, and 42% plan to increase search spend in 2026, per Algolia's eCommerce search report.",
+      "source": "Algolia, 6th Annual eCommerce Search Report (industry/vendor survey)",
+      "date": "November 2025",
+      "scope": "global",
+      "sourceType": "vendor-survey",
+      "url": "https://www.algolia.com/about/news/algolia-search-report-ai-investment-remains-resilient-search-reigns-as-retail-top-digital-priority",
+      "tags": { "industries": ["retail"], "painPoints": ["search-discovery"], "stages": [], "generalFallback": false }
+    },
+    {
+      "id": "nar-realestate-2026",
+      "claim": "Real estate agents are adopting AI fast — roughly 79% now use it daily, weekly, or occasionally (per NAR's category breakdown), most commonly for listing descriptions (75%), social media posts (56%), and follow-up emails (52%).",
+      "source": "National Association of REALTORS®, 2026 Technology Report",
+      "date": "September 22, 2026",
+      "scope": "global",
+      "sourceType": "independent-research",
+      "url": "https://www.nar.realtor/newsroom/realtors-adopt-technology-to-save-time-and-improve-the-client-experience-nar-report-finds",
+      "tags": { "industries": ["real-estate"], "painPoints": [], "stages": [], "generalFallback": false }
+    },
+    {
+      "id": "thomson-reuters-profservices-2026",
+      "claim": "Organization-wide AI usage in professional services nearly doubled to 40% in 2026 (from 22% in 2025) — though only 18% of firms track AI ROI in any way.",
+      "source": "Thomson Reuters, 2026 AI in Professional Services Report",
+      "date": "February 9, 2026",
+      "scope": "global",
+      "sourceType": "independent-research",
+      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
+      "tags": { "industries": ["services"], "painPoints": ["manual-ops"], "stages": [], "generalFallback": false }
+    },
+    {
+      "id": "zunkiree-nepal-2026",
+      "claim": "Nepal ranks 150th of 193 countries on AI readiness, and only 31.8% of Nepali businesses report having an AI budget.",
+      "source": "Zunkiree Labs' own analysis, \"State of AI in Nepal 2026\"",
+      "date": "2026",
+      "scope": "zunkiree-analysis",
+      "sourceType": "first-party",
+      "url": "/resources/state-of-ai-nepal-2026/",
+      "tags": { "industries": [], "painPoints": [], "stages": [], "generalFallback": false }
+    }
+  ]
+}

@@ -174,7 +174,7 @@ bodyClass: "v2-inter"
                 this.submitting = true;
                 this.error = false;
                 try {
-                  const res = await fetch('/api/submit-lead', {
+                  const res = await fetch('/api/submit-lead?form=quote', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json'
@@ -182,7 +182,7 @@ bodyClass: "v2-inter"
                     body: JSON.stringify({
                       first_name: this.firstName.trim(),
                       last_name: this.lastName.trim(),
-                      work_email: this.workEmail.trim(),
+                      email: this.workEmail.trim(),
                       phone: this.phone.trim() ? (this.phoneCode + ' ' + this.phone.trim()) : null,
                       country: this.country.trim() || null,
                       how_would_you_like_to_connect_with_us: 'Get a Quote',
