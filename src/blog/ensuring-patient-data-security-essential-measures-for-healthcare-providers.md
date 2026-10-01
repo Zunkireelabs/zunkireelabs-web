@@ -53,4 +53,10 @@ Securing patient data is a multifaceted challenge that requires a comprehensive 
       </div>
       </div>
   </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+</section>
+<!-- SEOAI:FOCUS:external-citations --><div >
+  <section class="gap-2">
+    <h2 class="font-normal text-gray-900 text-2xl">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://www.aha.org/center/cybersecurity-and-risk-advisory-services/importance-cybersecurity-protecting-patient-safety" class="text-zunkiree-600 hover:underline">The importance of cybersecurity in protecting patient safety | Cybersecurity | Center | AHA</a> — aha.org</li><li><a href="https://www.rubrik.com/insights/what-is-healthcare-data-security" class="text-zunkiree-600 hover:underline">What is Healthcare Data Security? | Rubrik</a> — rubrik.com</li><li><a href="https://www.snowflake.com/en/data-governance/data-security/healthcare" class="text-zunkiree-600 hover:underline">What Is Healthcare Data Security? Guide to Patient Security</a> — snowflake.com</li></ul></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

@@ -710,7 +710,7 @@
       "category": "case-studies",
       "badgeLabel": "Case Study",
       "relatedResources": [
-        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zennly" },
         { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" },
         { "slug": "ai-search-report-2026", "title": "State of AI Search 2026 Report" }
       ],
@@ -739,14 +739,14 @@
       "category": "case-studies",
       "badgeLabel": "Case Study",
       "relatedResources": [
-        { "href": "https://zennly.io/", "title": "Visit Zenly — Try the Live Product" },
+        { "href": "https://zennly.io/", "title": "Visit Zennly — Try the Live Product" },
         { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
         { "slug": "dental-ai-case-study", "title": "Case Study: Building Dental AI Assistant" },
         { "slug": "gaamma-case-study", "title": "Case Study: Building Gaamma" }
       ],
-      "title": "How We Built Zenly, an AI Booking Engine for Complex Availability",
+      "title": "How We Built Zennly, an AI Booking Engine for Complex Availability",
       "subtitle": "Why one calendar isn't enough, and how AI resolves scheduling conflicts automatically",
-      "description": "Zenly is Zunkiree Labs' AI-powered scheduling engine, built to handle multi-provider, multi-resource availability that a plain calendar can't represent. This case study covers the engineering behind automatic conflict resolution and no-show reduction.",
+      "description": "Zennly is Zunkiree Labs' AI-powered scheduling engine, built to handle multi-provider, multi-resource availability that a plain calendar can't represent. This case study covers the engineering behind automatic conflict resolution and no-show reduction.",
       "coverImage": "/assets/images/resources/zenly-case-study-cover.svg",
       "publishDate": "2026-09-05",
       "readTime": "8 min read",
@@ -760,7 +760,7 @@
       ],
       "challenge": "Real-world availability is never just one calendar — providers, rooms, and equipment each carry their own constraints, and double-bookings were being resolved by hand, back and forth, one message at a time. Without a timely nudge, booked slots quietly went empty.",
       "solution": "We modeled availability as a constraint problem instead of a single calendar: providers, locations, equipment, and custom rules all feed into one engine that computes real openings and resolves conflicts by proposing alternatives or rebooking automatically with approval. On top of that we layered AI-timed, channel-aware reminders tuned to when a given customer is actually likely to respond.",
-      "formTitle": "Talk to Us About Zenly",
+      "formTitle": "Talk to Us About Zennly",
       "ctaText": "Schedule a Demo"
     },
     {
@@ -770,7 +770,7 @@
       "badgeLabel": "Case Study",
       "relatedResources": [
         { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
-        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zennly" },
         { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
       ],
       "title": "How We Built Gaamma, an AI-Powered Manufacturing ERP",
@@ -798,7 +798,7 @@
       "category": "case-studies",
       "badgeLabel": "Case Study",
       "relatedResources": [
-        { "slug": "zenly-case-study", "title": "Case Study: Building Zenly" },
+        { "slug": "zenly-case-study", "title": "Case Study: Building Zennly" },
         { "slug": "stella-case-study", "title": "Case Study: Building Stella" },
         { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" }
       ],

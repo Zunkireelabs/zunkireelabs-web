@@ -45,7 +45,7 @@
                 "badge": "New"
               },
               {
-                "label": "Zenly",
+                "label": "Zennly",
                 "subLabel": "(AI Booking Engine)",
                 "aiPowered": true,
                 "url": "/resources/zenly-case-study/",
@@ -346,7 +346,7 @@
       { "label": "Zunkiree Search", "url": "/products/search/" },
       { "label": "Dental AI", "url": "/resources/dental-ai-case-study/" },
       { "label": "Gaamma", "url": "/resources/gaamma-case-study/" },
-      { "label": "Zenly", "subLabel": "(AI Booking Engine)", "url": "/resources/zenly-case-study/" },
+      { "label": "Zennly", "subLabel": "(AI Booking Engine)", "url": "/resources/zenly-case-study/" },
       { "label": "AI CRM", "url": "/products/ai-crm/" },
       { "label": "Stella", "url": "/resources/stella-case-study/" },
       { "label": "Pricing", "url": "/pricing/" }

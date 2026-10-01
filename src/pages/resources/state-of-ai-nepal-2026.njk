@@ -203,3 +203,23 @@ slug: state-of-ai-nepal-2026
   }
 }
 </script>
+
+{# Dataset schema — built from the same resource.stats the page displays, so the machine-readable figures can never drift from the visible ones #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": {{ resource.title | dump | safe }},
+  "description": "Headline indicators on AI readiness and adoption in Nepal, from Zunkiree Labs' State of AI in Nepal 2026 research.",
+  "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/",
+  "datePublished": "{{ resource.publishDate }}",
+  "creator": { "@type": "Organization", "name": "Zunkiree Labs", "url": "https://zunkireelabs.com" },
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "spatialCoverage": { "@type": "Place", "name": "Nepal" },
+  "variableMeasured": [
+    {%- for stat in resource.stats %}
+    { "@type": "PropertyValue", "name": {{ stat.label | dump | safe }}, "value": {{ stat.value | dump | safe }} }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>

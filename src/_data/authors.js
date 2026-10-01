@@ -24,7 +24,7 @@ export default {
     avatarFit: "contain",
     social: {
       twitter: "https://twitter.com/zunkiree",
-      linkedin: "https://linkedin.com/company/zunkiree"
+      linkedin: "https://www.linkedin.com/company/zunkireelabs"
     }
   }
 };

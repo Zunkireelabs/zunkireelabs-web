@@ -1,15 +1,15 @@
 [
   {
     "question": "What products does Zunkiree Labs offer?",
-    "answer": "Zunkiree Labs builds six AI products: Zunkiree Search (AI-native search that delivers direct answers), Dental AI (AI-powered dental practice management), Gaamma (a manufacturing ERP platform), Stella (an autonomous AI Commerce Agent for ecommerce), Zenly (an AI Booking Engine for scheduling), and AI CRM (AI-powered customer intelligence)."
+    "answer": "Zunkiree Labs builds six AI products: Zunkiree Search (AI-native search that delivers direct answers), Dental AI (AI-powered dental practice management), Gaamma (a manufacturing ERP platform), Stella (an autonomous AI Commerce Agent for ecommerce), Zennly (an AI Booking Engine for scheduling), and AI CRM (AI-powered customer intelligence)."
   },
   {
     "question": "What is Zunkiree Search and how does it work?",
     "answer": "Zunkiree Search is an AI-native search and interaction platform that connects your business data to customer-facing experiences. Unlike keyword-based search, it understands context and intent, delivering direct answers instead of link lists. Integration takes as little as 2 hours using our JavaScript widget."
   },
   {
-    "question": "What is Zenly, Zunkiree's AI Booking Engine?",
-    "answer": "Zenly is Zunkiree Labs' AI-powered scheduling platform. It handles complex availability, multi-resource bookings, and automatic conflict resolution, and reduces no-shows by an average of 35% with AI-powered reminders."
+    "question": "What is Zennly, Zunkiree's AI Booking Engine?",
+    "answer": "Zennly is Zunkiree Labs' AI-powered scheduling platform. It handles complex availability, multi-resource bookings, and automatic conflict resolution, and reduces no-shows by an average of 35% with AI-powered reminders."
   },
   {
     "question": "What is Stella, Zunkiree's AI Commerce Agent?",
