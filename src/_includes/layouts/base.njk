@@ -21,8 +21,8 @@
        before the JS module graph resolves — avoids a flash of unstyled content on cold reload -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <!-- Robots: noindex for non-production environments -->
-  {% if env.ELEVENTY_ENV != 'production' %}
+  <!-- Robots: noindex for non-production environments, and for utility pages that set `noindex: true` in front matter -->
+  {% if env.ELEVENTY_ENV != 'production' or noindex %}
   <meta name="robots" content="noindex, nofollow">
   {% endif %}
 
@@ -93,7 +93,6 @@
       "addressCountry": "NP"
     },
     "sameAs": [
-      "{{ site.social.twitter }}",
       "{{ site.social.linkedin }}",
       "{{ site.social.github }}"
     ],

@@ -5,6 +5,8 @@ description: "Thanks for subscribing — take our 60-second AI check and see wha
 permalink: /resources/welcome/
 bodyClass: "v2-inter"
 hideChrome: true
+noindex: true
+excludeFromSitemap: true
 ---
 
 {% include "partials/navbar-v2.njk" %}
@@ -18,8 +20,6 @@ hideChrome: true
     opacity: 0;
   }
 </style>
-
-{% set nepalReport = resources.items | find("slug", "state-of-ai-nepal-2026") %}
 
 {# =====================================================
    HERO — same shell as resources/index.njk / contact.njk.
@@ -41,72 +41,15 @@ hideChrome: true
 </section>
 
 {# =====================================================
-   MARKET SNAPSHOT — featured-banner split-card shell reused
-   from resources/index.njk, left panel repurposed as a stat
-   strip mixing Zunkiree's own (labeled) analysis with one
-   independently-sourced global stat.
-   ===================================================== #}
-<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="market-snapshot-heading">
-  <div class="mx-auto max-w-5xl">
-    <div class="overflow-hidden rounded-2xl border border-navy-100/60 bg-white shadow-card" data-reveal>
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        {# Text column: stat strip #}
-        <div class="flex flex-col justify-center bg-sky-50/60 p-7 sm:p-10 lg:p-12">
-          <span class="mb-5 inline-flex w-fit items-center rounded-full bg-[#76B900]/10 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">
-            Market Snapshot — as of {{ marketTrends.asOf }}
-          </span>
-          <h2 id="market-snapshot-heading" class="text-[26px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[30px]">
-            Where the market stands right now
-          </h2>
-
-          <dl class="mt-6 grid grid-cols-2 gap-5">
-            {% for stat in nepalReport.stats %}
-              <div>
-                <dt class="sr-only">{{ stat.label }}</dt>
-                <dd class="text-[28px] font-semibold tracking-tight text-[#111827]">{{ stat.value }}</dd>
-                <p class="mt-1 text-[13px] leading-snug text-[#6B7280]">{{ stat.label }}</p>
-              </div>
-            {% endfor %}
-          </dl>
-          <p class="mt-3 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">
-            Source: Zunkiree Labs' own analysis, "State of AI in Nepal 2026" — our research, not independent third-party data
-          </p>
-
-          {% set globalStat = marketTrends.items | find("id", "stanford-ai-index-2026") %}
-          <div class="mt-8 border-t border-navy-200/60 pt-6">
-            <p class="text-[15px] leading-relaxed text-[#111827]">{{ globalStat.claim }}</p>
-            <p class="mt-2 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">
-              <span class="mr-2 inline-flex items-center rounded-full border border-sky-300/40 bg-sky-100/60 px-2 py-0.5 text-sky-700">Global</span>
-              {{ globalStat.source }} · {{ globalStat.date }} ·
-              <a href="{{ globalStat.url }}" target="_blank" rel="noopener noreferrer" class="text-sky-700 underline hover:text-sky-900">Source</a>
-            </p>
-          </div>
-        </div>
-
-        {# Cover column #}
-        <div class="relative min-h-[280px] lg:min-h-full">
-          <img
-            src="{{ nepalReport.coverImage }}"
-            alt="{{ nepalReport.title }}"
-            class="absolute inset-0 h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   QUIZ + RESULTS — single Alpine-driven card, glass-card
-   recipe from resources/index.njk's resource cards.
+   QUIZ ONLY — this page is the quiz. Finishing it saves the
+   answers to localStorage (no PII, just enum answers — see
+   comment on `finish()` below) and navigates to a separate
+   results page (/resources/welcome/results/), rather than
+   revealing a results section on this same page.
    ===================================================== #}
 <section class="bg-white px-4 py-16 md:px-6 md:py-24" x-data="welcomeQuiz()">
   <div class="mx-auto max-w-2xl">
-
-    {# ---- Quiz in progress ---- #}
     <div
-      x-show="!finished"
       class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-7 shadow-subtle backdrop-blur-sm sm:p-10"
     >
       <div class="mb-6">
@@ -141,140 +84,12 @@ hideChrome: true
         <span></span>
       </div>
     </div>
-
-    {# ---- Results: trends → implications → takeaway → resources → CTA ---- #}
-    <div x-show="finished" x-cloak data-reveal>
-
-      {# Trivia feedback (delight only — never drives recommendations) #}
-      <p class="mb-8 text-center font-mono text-[12px] uppercase tracking-wider text-navy-500" x-text="'Trivia: ' + triviaScore + ' / 2 correct'"></p>
-
-      {# Trends #}
-      <div class="mb-10">
-        <span class="mb-3 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
-          AI Trends — as of {{ marketTrends.asOf }}
-        </span>
-        <h2 class="mb-6 text-[26px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[30px]">Relevant to your business</h2>
-        <div class="space-y-4">
-          <template x-for="trend in recommendedTrends" :key="trend.id">
-            <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-5 shadow-subtle backdrop-blur-sm">
-              <p class="mb-2">
-                <span
-                  class="inline-flex items-center rounded-full border border-sky-300/40 bg-sky-100/60 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-sky-700"
-                  x-text="trend.scope === 'zunkiree-analysis' ? 'Zunkiree Analysis' : (trend.scope === 'global' ? 'Global' : 'Regional')"
-                ></span>
-              </p>
-              <p class="text-[15px] leading-relaxed text-[#111827]" x-text="trend.claim"></p>
-              <p class="mt-3 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">
-                <span x-text="trend.source"></span> · <span x-text="trend.date"></span> ·
-                <a :href="trend.url" target="_blank" rel="noopener noreferrer" class="text-sky-700 underline hover:text-sky-900">Source</a>
-              </p>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      {# Business implications #}
-      <div class="mb-10">
-        <h2 class="mb-4 text-[22px] font-medium leading-[1.2] tracking-tight text-[#111827]">What this means for you</h2>
-        <div class="space-y-3 text-[15px] leading-relaxed text-[#6B7280]">
-          <p x-text="industryImplication"></p>
-          <p x-text="painPointOpportunity"></p>
-          <p x-text="stageNextStep"></p>
-        </div>
-      </div>
-
-      {# Personalized takeaway #}
-      <div class="mb-10 rounded-2xl border border-dashed border-navy-200 bg-sky-50/60 p-6">
-        <p class="mb-1 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Your Takeaway</p>
-        <p class="text-[16px] leading-relaxed text-[#111827]" x-text="takeaway"></p>
-      </div>
-
-      {# Optional supporting resources — demoted, quieter #}
-      <div class="mb-10">
-        <p class="mb-3 font-mono text-[11px] uppercase tracking-wider text-navy-400">Worth reading</p>
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <template x-for="slug in recommendedResourceSlugs" :key="slug">
-            <a
-              :href="'/resources/' + slug + '/'"
-              class="group block overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 shadow-subtle backdrop-blur-sm transition-shadow duration-300 hover:shadow-card-hover"
-            >
-              <div class="relative aspect-[16/10] overflow-hidden bg-navy-50">
-                <template x-if="RESOURCE_LOOKUP[slug] && RESOURCE_LOOKUP[slug].coverImage">
-                  <img :src="RESOURCE_LOOKUP[slug].coverImage" :alt="RESOURCE_LOOKUP[slug].title" class="h-full w-full object-cover" loading="lazy" />
-                </template>
-              </div>
-              <div class="p-5">
-                <p class="mb-3">
-                  <span class="inline-flex items-center rounded-full border border-sky-300/40 bg-sky-100/60 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-sky-700" x-text="RESOURCE_LOOKUP[slug] && RESOURCE_LOOKUP[slug].type"></span>
-                </p>
-                <h3 class="mb-6 text-[15.5px] font-medium leading-snug text-[#111827] line-clamp-2" x-text="RESOURCE_LOOKUP[slug] && RESOURCE_LOOKUP[slug].title"></h3>
-                <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-sky-700 transition-all group-hover:gap-2.5">
-                  Read now
-                  <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </span>
-              </div>
-            </a>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   CLOSING CTA — copied verbatim from resources/index.njk's
-   band, with an explicit primary/secondary hierarchy.
-   ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="welcome-cta-heading">
-  <div class="mx-auto max-w-5xl">
-    <div
-      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
-      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
-      data-reveal
-    >
-      <div
-        class="pointer-events-none absolute inset-0 z-0"
-        aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
-      ></div>
-
-      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
-        Next Step
-      </span>
-      <h2 id="welcome-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
-        Ready to explore what this means for you?
-      </h2>
-      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
-        These rules-based recommendations are a starting point, not a strategy. Talk to our team about your specific opportunities.
-      </p>
-      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a
-          href="/contact/"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-        >
-          Discuss Your AI Opportunities
-          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
-        </a>
-        <a
-          href="/resources/"
-          class="font-mono text-[12px] uppercase tracking-wide text-white/60 underline transition-colors duration-200 hover:text-white"
-        >
-          Explore all resources
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
 {% include "partials/footer-v2.njk" %}
 
 <script>
-  const RESOURCE_LOOKUP = {{ resources.items | dump | safe }}
-    .reduce((acc, r) => { acc[r.slug] = { title: r.title, type: r.type, coverImage: r.coverImage }; return acc; }, {});
-  const MARKET_TRENDS = {{ marketTrends.items | dump | safe }};
-
   function welcomeQuiz() {
     return {
       step: 0,
@@ -327,115 +142,25 @@ hideChrome: true
       ],
       get currentStep() { return this.steps[this.step]; },
       get progressPct() { return Math.round((this.step / this.steps.length) * 100); },
-      get finished() { return this.step >= this.steps.length; },
       select(value) {
         this.answers[this.currentStep.key] = value;
         this.step++;
+        if (this.step >= this.steps.length) this.finish();
       },
       back() { if (this.step > 0) this.step--; },
-      get triviaScore() {
-        let n = 0;
-        if (this.answers.trivia1 === 'correct') n++;
-        if (this.answers.trivia2 === 'correct') n++;
-        return n;
-      },
-      get recommendedTrends() {
-        return selectTrends(this.answers);
-      },
-      get recommendedResourceSlugs() {
-        return recommendResources(this.answers);
-      },
-      get industryImplication() {
-        return INDUSTRY_IMPLICATIONS[this.answers.industry] || INDUSTRY_IMPLICATIONS.other;
-      },
-      get painPointOpportunity() {
-        return PAINPOINT_OPPORTUNITIES[this.answers.painPoint] || PAINPOINT_OPPORTUNITIES['not-sure'];
-      },
-      get stageNextStep() {
-        return STAGE_NEXT_STEPS[this.answers.aiUsage] || STAGE_NEXT_STEPS.none;
-      },
-      get takeaway() {
-        return TAKEAWAYS[this.answers.painPoint] || TAKEAWAYS['not-sure'];
+      finish() {
+        // Answers are plain enum values (industry/aiUsage/trivia/painPoint
+        // choices) — no name, email, or other PII — so localStorage is a
+        // safe, simple way to hand them to the results page without a
+        // query string. If the results page loads with nothing stored
+        // (direct nav, cleared storage), it redirects back here.
+        try {
+          localStorage.setItem('zunkireeWelcomeQuizAnswers', JSON.stringify(this.answers));
+        } catch (err) {
+          console.error('[welcome quiz] could not save answers', err);
+        }
+        window.location.href = '/resources/welcome/results/';
       }
     };
-  }
-
-  const INDUSTRY_IMPLICATIONS = {
-    healthcare: "In healthcare and dental practices, AI is showing up most in scheduling, patient intake, and reducing repetitive front-desk questions — not in clinical decisions. That makes it a lower-risk starting point than it might feel.",
-    'real-estate': "Real estate has moved fast on AI this year, mostly for listing descriptions, social content, and follow-up emails. If you're not using it yet, you're increasingly the exception rather than the norm.",
-    retail: "Retail is shifting toward AI-assisted search and agentic shopping experiences. The competitive risk isn't moving too early — it's customers finding a competitor's site easier to search than yours.",
-    services: "Professional services firms have nearly doubled AI usage in a year, but most still aren't measuring ROI on it. That's actually an opportunity: a disciplined, measured approach can outperform ad-hoc adoption.",
-    other: "AI adoption is accelerating broadly across industries, but the businesses seeing real value tend to start with one narrow, visible use case rather than a broad initiative."
-  };
-
-  const PAINPOINT_OPPORTUNITIES = {
-    'repetitive-support': "Repetitive customer questions and scheduling are usually the fastest, most measurable place to apply AI — the volume is high and the task is well-defined, which makes results easy to see quickly.",
-    'search-discovery': "Sites that adopt AI-native search see meaningfully higher engagement. This is usually the fastest, most measurable AI investment a business can make when discovery is the bottleneck.",
-    'manual-ops': "Manual internal processes are a strong AI target specifically because the time savings are easy to quantify — you can measure hours saved directly, rather than relying on softer engagement metrics.",
-    'not-sure': "If you're not sure where to start, the businesses that get the most value tend to pick one narrow, customer-facing use case first — like search or support — rather than trying to tackle everything at once."
-  };
-
-  const STAGE_NEXT_STEPS = {
-    none: "Most businesses at this stage get the most value starting with one narrow, visible use case — like search or customer-facing content — rather than a broad AI initiative.",
-    exploring: "Moving from casual exploration to a real pilot usually just takes picking one measurable use case and giving it a defined timeframe to prove out.",
-    piloting: "With 1-2 pilots running, the next step is usually deciding which one to scale based on measured results, not on which felt easiest to build.",
-    scaled: "At this stage, the opportunity shifts from adoption to measurement — most organizations using AI broadly still aren't tracking ROI on it, which is where the next real gain tends to be."
-  };
-
-  const TAKEAWAYS = {
-    'repetitive-support': "Given what you've told us, the highest-leverage next step is likely automating your most repetitive customer questions first — it's the fastest way to see a measurable result.",
-    'search-discovery': "Given what you've told us, the highest-leverage next step is likely improving on-site search and discovery — it's one of the most directly measurable AI investments available right now.",
-    'manual-ops': "Given what you've told us, the highest-leverage next step is likely targeting your most time-consuming manual process — the savings are easy to quantify and easy to justify.",
-    'not-sure': "Given what you've told us, the highest-leverage next step is likely picking one narrow, customer-facing use case to test first, rather than trying to plan a broad AI strategy upfront."
-  };
-
-  const INDUSTRY_TREND_MAP = {
-    retail: ['salesforce-retail-2025', 'algolia-search-2025'],
-    'real-estate': ['nar-realestate-2026'],
-    services: ['thomson-reuters-profservices-2026']
-  };
-  const PAINPOINT_TREND_MAP = {
-    'search-discovery': ['salesforce-retail-2025', 'algolia-search-2025'],
-    'manual-ops': ['mckinsey-state-of-ai-2025']
-  };
-  const GENERAL_FALLBACK_TRENDS = ['stanford-ai-index-2026', 'mckinsey-state-of-ai-2025', 'oecd-sme-gap-2025'];
-
-  function selectTrends(answers) {
-    const byId = MARKET_TRENDS.reduce((acc, t) => { acc[t.id] = t; return acc; }, {});
-    const picks = [];
-    const addAll = (ids) => (ids || []).forEach(id => { if (byId[id] && !picks.includes(id)) picks.push(id); });
-    addAll(INDUSTRY_TREND_MAP[answers.industry]);
-    addAll(PAINPOINT_TREND_MAP[answers.painPoint]);
-    addAll(GENERAL_FALLBACK_TRENDS);
-    return picks.slice(0, 3).map(id => byId[id]);
-  }
-
-  const INDUSTRY_RESOURCE_MAP = {
-    healthcare: ['dental-ai-case-study'],
-    'real-estate': ['chayce-properties-case-study'],
-    retail: ['prime-tiles-case-study'],
-    services: ['khems-cleaning-case-study']
-  };
-  const PAINPOINT_RESOURCE_MAP = {
-    'repetitive-support': ['dental-ai-case-study'],
-    'search-discovery': ['ai-search-report-2026', 'semantic-search-vs-keyword-search'],
-    'manual-ops': ['ai-implementation-guide-nepal'],
-    'not-sure': ['state-of-ai-nepal-2026']
-  };
-  const STAGE_RESOURCE_MAP = {
-    none: ['ai-implementation-guide-nepal'],
-    exploring: ['ai-native-search-nepal'],
-    piloting: ['ai-search-playbook'],
-    scaled: ['enterprise-ai-adoption-report']
-  };
-
-  function recommendResources(answers) {
-    const picks = [];
-    const addAll = (arr) => (arr || []).forEach(s => { if (RESOURCE_LOOKUP[s] && !picks.includes(s)) picks.push(s); });
-    addAll(INDUSTRY_RESOURCE_MAP[answers.industry]);
-    addAll(PAINPOINT_RESOURCE_MAP[answers.painPoint]);
-    addAll(STAGE_RESOURCE_MAP[answers.aiUsage]);
-    if (picks.length === 0) picks.push('state-of-ai-nepal-2026');
-    return picks.slice(0, 3);
   }
 </script>
