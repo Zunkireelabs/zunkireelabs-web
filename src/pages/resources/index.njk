@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Resources | Zunkiree Labs
+title: Resources & Guides | Zunkiree Labs AI Insights
 description: Explore AI search guides, industry reports, case studies, and technical whitepapers from Zunkiree Labs. Learn how to build AI-native search experiences.
 permalink: /resources/
 bodyClass: "v2-inter"
@@ -200,10 +200,9 @@ hideChrome: true
              form (name, phone, city, country, message) for what should be a
              one-field newsletter signup. Now a real inline email-only form,
              same /api/submit-lead proxy every other form on the site uses.
-             NOTE: "newsletter" is not yet a confirmed EdgeX form slug (see
-             server/lead-proxy-core.js's FORM_SLUGS — same unconfirmed-
-             placeholder pattern as `apply`/`resource`) — confirm/update the
-             slug once a real newsletter-signup form exists in EdgeX. #}
+             On success, redirects to /resources/welcome/ (only on a genuine
+             2xx response — a failed submission falls into the catch block
+             below and never redirects). #}
           <div
             x-data="{
               email: '',
@@ -222,6 +221,7 @@ hideChrome: true
                   });
                   if (!res.ok) throw new Error('Subscribe failed: ' + res.status);
                   this.submitted = true;
+                  window.location.href = '/resources/welcome/';
                 } catch (err) {
                   console.error('[newsletter subscribe] error', err);
                   this.error = true;

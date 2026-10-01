@@ -1,6 +1,6 @@
 // Platform Infrastructure + Products pages — one entry per /products/{id}/ page
 // rendered by src/_includes/layouts/product-v2.njk.
-// Search, AI CRM, Gaamma, Dental AI, Stella, and Zenly content is reshaped
+// Search, AI CRM, Gaamma, Dental AI, Stella, and Zennly content is reshaped
 // from src/_data/productsDetails.json (that file is untouched — nothing
 // still reads it via layouts/product.njk after this migration, but it's
 // left in place as the source-of-truth copy these entries were derived

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Finding AI Training for Dental Assistants: A Comprehensive Guide"
-description: "Explore various resources and platforms for discovering AI training tailored for dental assistants. Enhance your skills with the latest technology and improve your dental practice."
+title: "AI Training for Dental Assistants: A Guide"
+description: "Explore resources and platforms for AI training tailored to dental assistants, and improve your skills and practice."
 date: "2026-08-10"
 featuredImage: "https://images.pexels.com/photos/30902113/pexels-photo-30902113.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Dental students practicing procedures on training models in a classroom setting."

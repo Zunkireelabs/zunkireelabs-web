@@ -310,7 +310,7 @@ bodyClass: "v2-inter"
 {# =====================================================
    RELATED POSTS (if available)
    ===================================================== #}
-{% set relatedPosts = collections.blog | rejectattr("url", "equalto", page.url) | head(3) %}
+{% set relatedPosts = collections.blog | relatedByTopic(page, 3) %}
 {% if relatedPosts.length > 0 %}
 <section class="border-t border-navy-100 bg-warm-off-white py-16 md:py-24">
   <div class="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8">

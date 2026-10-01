@@ -1,0 +1,166 @@
+---
+layout: base.njk
+title: "Welcome | Zunkiree Labs"
+description: "Thanks for subscribing — take our 60-second AI check and see what current market trends mean for your business."
+permalink: /resources/welcome/
+bodyClass: "v2-inter"
+hideChrome: true
+noindex: true
+excludeFromSitemap: true
+---
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+{# =====================================================
+   HERO — same shell as resources/index.njk / contact.njk.
+   ===================================================== #}
+<section class="relative px-4 pb-10 pt-32 sm:px-6 sm:pt-36 sm:pb-14 lg:px-8 lg:pt-40 lg:pb-16" aria-labelledby="hero-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl" data-reveal-stagger>
+      <span class="mb-5 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+        Subscribed
+      </span>
+      <h1 id="hero-heading" class="mb-5 text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+        You're in — let's find your opportunities
+      </h1>
+      <p class="text-[18px] leading-relaxed text-[#6B7280] sm:text-[19px]">
+        Answer 5 quick questions and we'll show you what's actually happening in AI right now — and what it means for your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   QUIZ ONLY — this page is the quiz. Finishing it saves the
+   answers to localStorage (no PII, just enum answers — see
+   comment on `finish()` below) and navigates to a separate
+   results page (/resources/welcome/results/), rather than
+   revealing a results section on this same page.
+   ===================================================== #}
+<section class="bg-white px-4 py-16 md:px-6 md:py-24" x-data="welcomeQuiz()">
+  <div class="mx-auto max-w-2xl">
+    <div
+      class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-7 shadow-subtle backdrop-blur-sm sm:p-10"
+    >
+      <div class="mb-6">
+        <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-navy-500" x-text="'Step ' + (step + 1) + ' of ' + steps.length"></p>
+        <div class="h-1.5 w-full overflow-hidden rounded-full bg-navy-100">
+          <div class="h-full rounded-full bg-[#76B900] transition-all duration-300" :style="'width: ' + progressPct + '%'"></div>
+        </div>
+      </div>
+
+      <template x-for="(s, i) in steps" :key="s.key">
+        <div x-show="step === i">
+          <span class="mb-4 inline-flex items-center rounded-full border border-sky-300/40 bg-sky-100/60 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-sky-700" x-text="s.kind === 'trivia' ? 'Quick Trivia' : 'Question ' + (i + 1)"></span>
+          <h3 class="mb-6 text-[20px] font-medium leading-snug text-[#111827]" x-text="s.question"></h3>
+          <div class="space-y-3">
+            <template x-for="opt in s.options" :key="opt.value">
+              <button
+                type="button"
+                @click="select(opt.value)"
+                class="block w-full rounded-lg border border-navy-100/60 px-4 py-3 text-left text-[14px] text-[#111827] transition-colors duration-150 hover:border-[#76B900]/40 hover:bg-sky-50/40"
+                :class="answers[s.key] === opt.value ? 'border-[#76B900] bg-[#76B900]/10 text-[#5a9100]' : ''"
+                x-text="opt.label"
+              ></button>
+            </template>
+          </div>
+        </div>
+      </template>
+
+      <div class="mt-8 flex items-center justify-between">
+        <button type="button" @click="back()" x-show="step > 0" class="font-mono text-[12px] uppercase tracking-wide text-navy-400 hover:text-navy-600">
+          Back
+        </button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}
+
+<script>
+  function welcomeQuiz() {
+    return {
+      step: 0,
+      answers: {},
+      steps: [
+        {
+          key: 'industry', kind: 'business', question: 'What industry is your business in?',
+          options: [
+            { value: 'healthcare', label: 'Healthcare / Dental' },
+            { value: 'real-estate', label: 'Real Estate' },
+            { value: 'retail', label: 'Retail / E-commerce' },
+            { value: 'services', label: 'Professional Services' },
+            { value: 'other', label: 'Something else' }
+          ]
+        },
+        {
+          key: 'aiUsage', kind: 'business', question: 'How is your team using AI today?',
+          options: [
+            { value: 'none', label: "We haven't started" },
+            { value: 'exploring', label: 'Exploring tools casually' },
+            { value: 'piloting', label: 'Piloting 1-2 use cases' },
+            { value: 'scaled', label: 'AI is core to how we operate' }
+          ]
+        },
+        {
+          key: 'trivia1', kind: 'trivia', question: 'Quick one: what does "LLM" stand for?',
+          options: [
+            { value: 'correct', label: 'Large Language Model' },
+            { value: 'wrong1', label: 'Linked Logic Machine' },
+            { value: 'wrong2', label: 'Local Language Mapping' }
+          ]
+        },
+        {
+          key: 'trivia2', kind: 'trivia', question: "What's a common way businesses cut down on repetitive site-search support questions?",
+          options: [
+            { value: 'correct', label: 'AI-native semantic search / chat assistants' },
+            { value: 'wrong1', label: 'Bigger FAQ pages only' },
+            { value: 'wrong2', label: 'More phone lines' }
+          ]
+        },
+        {
+          key: 'painPoint', kind: 'business', question: "What's slowing you down most right now?",
+          options: [
+            { value: 'repetitive-support', label: 'Repetitive customer questions/scheduling' },
+            { value: 'search-discovery', label: "Customers can't find what they need on our site" },
+            { value: 'manual-ops', label: 'Manual, time-consuming internal processes' },
+            { value: 'not-sure', label: 'Not sure yet / just exploring' }
+          ]
+        }
+      ],
+      get currentStep() { return this.steps[this.step]; },
+      get progressPct() { return Math.round((this.step / this.steps.length) * 100); },
+      select(value) {
+        this.answers[this.currentStep.key] = value;
+        this.step++;
+        if (this.step >= this.steps.length) this.finish();
+      },
+      back() { if (this.step > 0) this.step--; },
+      finish() {
+        // Answers are plain enum values (industry/aiUsage/trivia/painPoint
+        // choices) — no name, email, or other PII — so localStorage is a
+        // safe, simple way to hand them to the results page without a
+        // query string. If the results page loads with nothing stored
+        // (direct nav, cleared storage), it redirects back here.
+        try {
+          localStorage.setItem('zunkireeWelcomeQuizAnswers', JSON.stringify(this.answers));
+        } catch (err) {
+          console.error('[welcome quiz] could not save answers', err);
+        }
+        window.location.href = '/resources/welcome/results/';
+      }
+    };
+  }
+</script>

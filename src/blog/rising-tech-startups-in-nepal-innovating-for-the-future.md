@@ -44,4 +44,10 @@ As we witness the ascent of the tech startup landscape in Nepal, it becomes evid
         <div class="text-lg text-gray-600 leading-relaxed"><p class="text-lg text-gray-600 leading-relaxed">In Nepal's burgeoning tech landscape, several startups are making significant advancements, particularly in the deployment of artificial intelligence solutions. While many companies are leveraging AI for various sectors, their methodologies and focus areas vary, impacting their effectiveness and market reach. Below, we compare the AI strategies and market positions of notable players in the Nepali tech ecosystem.</p></div>
       </div>
   </div>
-</section><!-- SEOAI:EXPANDEDCONTENT:END -->
+</section>
+<!-- SEOAI:FOCUS:external-citations --><div >
+  <section class="gap-2">
+    <h2 class="font-normal text-gray-900 text-2xl">References</h2>
+    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://www.startupblink.com/top-startups/nepal" class="text-zunkiree-600 hover:underline">Top Startups in Nepal | StartupBlink</a> — startupblink.com</li><li><a href="https://www.goodfirms.co/it-services/nepal" class="text-zunkiree-600 hover:underline">Top IT Services Companies in Nepal - 2026 Reviews | Goodfirms</a> — goodfirms.co</li></ul></div>
+  </section>
+</div><!-- SEOAI:EXPANDEDCONTENT:END -->

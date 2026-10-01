@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "About Zunkiree Labs | Top AI & Software Company in Nepal | Founded 2018"
-description: "Zunkiree Labs is a leading AI company in Kathmandu, Nepal founded in 2018. We build custom AI systems, RAG pipelines, and enterprise software for global clients."
+title: "About Zunkiree Labs | AI Company in Nepal"
+description: "Zunkiree Labs is a leading AI company in Kathmandu, Nepal, founded in 2018, building custom AI systems and enterprise software."
 permalink: /about/
 hideChrome: true
 bodyClass: "v2-inter"
@@ -257,6 +257,44 @@ bodyClass: "v2-inter"
           {% endfor %}
         {% endfor %}
       </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CASE STUDIES — real outcomes, linked to the full write-ups
+   already published under /resources/*-case-study/. Stats below
+   are copied verbatim from resources.json (the same source the
+   case-study pages themselves render from) — no new numbers
+   introduced here, same §24 anti-fabrication guardrail as the
+   client-logo marquee above.
+   ===================================================== #}
+{% set aboutCaseStudies = [
+  { client: "Admizz", result: "45% faster response times", href: "/resources/admizz-case-study/" },
+  { client: "CMS Group", result: "85% of document workflows automated", href: "/resources/cms-group-case-study/" },
+  { client: "Rapid Investment", result: "10x faster deal analysis", href: "/resources/rapid-investment-case-study/" }
+] %}
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="case-studies-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Proof in production</span>
+      <h2 id="case-studies-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Client success stories
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3" data-reveal-stagger>
+      {% for item in aboutCaseStudies %}
+        <a href="{{ item.href }}" class="group flex flex-col gap-2 rounded-xl border border-navy-100 bg-white p-5 transition-colors hover:border-[#76B900]/40 hover:bg-[#F8FAFC]">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">{{ item.client }}</span>
+          <span class="text-[17px] font-semibold leading-snug text-[#111827]">{{ item.result }}</span>
+          <span class="mt-1 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#5a9100] group-hover:gap-2.5 transition-all">
+            Read the case study
+            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>

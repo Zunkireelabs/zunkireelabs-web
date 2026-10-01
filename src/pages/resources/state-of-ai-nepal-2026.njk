@@ -162,6 +162,16 @@ slug: state-of-ai-nepal-2026
   </div>
 </div>
 
+{# How to cite — gives AI engines and researchers an unambiguous, attributable reference for the report's statistics #}
+<div class="mt-12 mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How to cite this report</h2>
+  <div class="rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle sm:p-6">
+    <p class="text-[15px] leading-relaxed text-[#6B7280]">
+      Zunkiree Labs. <em>{{ resource.title }}</em>. {{ resource.publishDate | date('%B %d, %Y') }}. Kathmandu, Nepal. <a href="https://zunkireelabs.com/resources/state-of-ai-nepal-2026/" class="text-[#111827] underline hover:text-[#5a9100]">https://zunkireelabs.com/resources/state-of-ai-nepal-2026/</a>
+    </p>
+  </div>
+</div>
+
 {# Schema Markup #}
 <script type="application/ld+json">
 {
@@ -179,6 +189,10 @@ slug: state-of-ai-nepal-2026
     "@type": "Organization",
     "name": "Zunkiree Labs"
   },
+  "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/",
+  "mainEntityOfPage": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
   "about": {
     "@type": "Thing",
     "name": "Artificial Intelligence in Nepal"
@@ -187,5 +201,25 @@ slug: state-of-ai-nepal-2026
     "@type": "Place",
     "name": "Nepal"
   }
+}
+</script>
+
+{# Dataset schema — built from the same resource.stats the page displays, so the machine-readable figures can never drift from the visible ones #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": {{ resource.title | dump | safe }},
+  "description": "Headline indicators on AI readiness and adoption in Nepal, from Zunkiree Labs' State of AI in Nepal 2026 research.",
+  "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/",
+  "datePublished": "{{ resource.publishDate }}",
+  "creator": { "@type": "Organization", "name": "Zunkiree Labs", "url": "https://zunkireelabs.com" },
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs" },
+  "spatialCoverage": { "@type": "Place", "name": "Nepal" },
+  "variableMeasured": [
+    {%- for stat in resource.stats %}
+    { "@type": "PropertyValue", "name": {{ stat.label | dump | safe }}, "value": {{ stat.value | dump | safe }} }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
 }
 </script>

@@ -149,7 +149,7 @@ bodyClass: "v2-inter"
                   const fd = new FormData();
                   fd.append('first_name', this.firstName.trim());
                   fd.append('last_name', this.lastName.trim());
-                  fd.append('work_email', this.workEmail.trim());
+                  fd.append('email', this.workEmail.trim());
                   if (this.phone.trim()) fd.append('phone', this.phoneCode + ' ' + this.phone.trim());
                   fd.append('position', this.position);
                   if (this.portfolioUrl.trim()) fd.append('portfolio_url', this.portfolioUrl.trim());
