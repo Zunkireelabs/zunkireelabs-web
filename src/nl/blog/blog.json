@@ -1,0 +1,11 @@
+{
+  "layout": "blog-post.njk",
+  "hideChrome": true,
+  "tags": [
+    "blog-nl"
+  ],
+  "permalink": "/nl/blog/{{ page.fileSlug }}/",
+  "schemaType": "article",
+  "lang": "nl",
+  "ogLocale": "nl_NL"
+}

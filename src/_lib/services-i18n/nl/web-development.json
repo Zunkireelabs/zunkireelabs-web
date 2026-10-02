@@ -1,0 +1,305 @@
+{
+  "id": "web-development",
+  "relatedCaseStudies": [
+    {
+      "slug": "chayce-properties-case-study",
+      "title": "Chayce Properties",
+      "stat": "Volledig digitaal eigenaarschap (full-stack)"
+    }
+  ],
+  "title": "Webontwikkeling",
+  "category": "Ontwikkeling",
+  "tagline": "Webontwikkeling gebouwd voor snelheid, vindbaarheid en conversies die zich opstapelen.",
+  "description": "High-performance websites en webapplicaties, gebouwd voor snelheid, SEO en conversie. Moderne frameworks, responsive design en een architectuur die verkeer aankan zonder uit te vallen.",
+  "heroImage": "/assets/images/web-development-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Core Web Vitals optimaliseren",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Statische pagina's genereren",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Naar de edge deployen",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "API-respons cachen",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Afbeeldingen comprimeren",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Navigatie vooraf laden",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Gebruikersflow analyseren",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Snel. SEO-ready. Zet bezoekers om in klanten. Dat is onze basis voor webontwikkeling.",
+    "content": "Wij bouwen websites die snel laden, hoog scoren en bezoekers omzetten in klanten. Elke site wordt opgeleverd met geoptimaliseerde Core Web Vitals, mobile-first responsive design en SEO-best practices die er vanaf het begin in zitten, niet achteraf zijn toegevoegd. Het resultaat: organisch verkeer dat daadwerkelijk converteert, laadtijden die de concurrentie verslaan en een infrastructuur die meegroeit."
+  },
+  "stats": [
+    {
+      "value": "<1s",
+      "label": "Laadtijd",
+      "description": "LCP-doel gehaald"
+    },
+    {
+      "value": "95+",
+      "label": "PageSpeed-score",
+      "description": "mobiele prestaties"
+    },
+    {
+      "value": "40%",
+      "label": "Conversiestijging",
+      "description": "gem. na herbouw"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime",
+      "description": "edge-deployment"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Snel laden op elk apparaat, bij elke verbinding",
+      "description": "Laadtijden onder een seconde dankzij statische generatie, edge-caching en geoptimaliseerde assets. Mobiele bezoekers wachten niet, ze converteren. Wij optimaliseren voor Core Web Vitals, omdat Google snelle sites hoger rangschikt."
+    },
+    {
+      "icon": "workflow",
+      "title": "Hoger scoren met ingebouwde technische SEO",
+      "description": "Correcte semantische HTML, gestructureerde data, metatags en crawlbaarheid vanaf dag één. Wij bouwen niet eerst en repareren SEO later: zoekmachineoptimalisatie is onderdeel van de architectuur."
+    },
+    {
+      "icon": "integrate",
+      "title": "Opschalen naar miljoenen bezoekers zonder te herplatformen",
+      "description": "Een JAMstack-architectuur met CDN-distributie vangt verkeerspieken soepel op. Geen planning van servercapaciteit, geen noodschaling, alleen snelle pagina's, direct vanaf de edge geleverd."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "marketing-sites",
+      "title": "Marketingsites",
+      "headline": "Marketingwebsites",
+      "description": "Bedrijfswebsites, productmarketing en landingspagina's, geoptimaliseerd voor conversie. Snel ladend, SEO-ready en geïntegreerd met uw marketingstack.",
+      "features": [
+        "Conversie-optimalisatie",
+        "A/B-testklaar",
+        "Analytics-integratie",
+        "CMS-integratie"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "e-commerce",
+      "title": "E-commerce",
+      "headline": "E-commercewebsites",
+      "description": "Webshops gebouwd voor prestaties en conversie. Snelle productpagina's, een geoptimaliseerde checkout en koppeling met voorraad- en fulfilmentsystemen.",
+      "features": [
+        "Snelle productpagina's",
+        "Winkelwagenoptimalisatie",
+        "Betalingsintegratie",
+        "Voorraadsynchronisatie"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "web-apps",
+      "title": "Webapps",
+      "headline": "Webapplicaties",
+      "description": "Interactieve webapplicaties met complexe interfaces en realtimefuncties. Single-page apps, dashboards en tools die in de browser aanvoelen als native applicaties.",
+      "features": [
+        "Rijke interactiviteit",
+        "Realtime updates",
+        "Offline-ondersteuning",
+        "Progressive Web App"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "content-platforms",
+      "title": "Contentplatforms",
+      "headline": "Contentplatforms",
+      "description": "Blogs, documentatiesites en contenthubs, geoptimaliseerd voor SEO. Statische generatie voor snelheid, CMS-integratie voor eenvoudig bewerken.",
+      "features": [
+        "SEO-optimalisatie",
+        "Snelle laadtijden",
+        "CMS-integratie",
+        "Contentworkflows"
+      ],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "portal-development",
+      "title": "Portalen",
+      "headline": "Klantportalen",
+      "description": "Beveiligde portalen voor klanten, partners of medewerkers. Self-service accountbeheer, toegang tot documenten en gepersonaliseerde dashboards.",
+      "features": [
+        "Veilige authenticatie",
+        "Self-servicefuncties",
+        "Documentbeheer",
+        "Rolgebaseerde toegang"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Ontdekken",
+      "description": "Uw doelen, doelgroep en contentbehoeften begrijpen. De prestaties, SEO en conversiefunnels van de bestaande site analyseren.",
+      "duration": "1 week",
+      "deliverables": [
+        "Site-audit",
+        "Contentinventaris",
+        "Technische vereisten"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerpen",
+      "description": "Responsive lay-outs, componentsystemen en gebruikersflows ontwerpen. Prestatiegericht ontwerp dat er geweldig uitziet zonder in te leveren op snelheid.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "Designsysteem",
+        "Paginalay-outs",
+        "Interactief prototype"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouwen",
+      "description": "Ontwikkelen met moderne frameworks, optimaliseren voor Core Web Vitals en het CMS en diensten van derden integreren.",
+      "duration": "4-8 weken",
+      "deliverables": [
+        "Productiewebsite",
+        "CMS-setup",
+        "SEO-implementatie"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Lancering",
+      "description": "Uitrollen op het edge-netwerk, monitoring opzetten en optimaliseren op basis van echte gebruikersdata. Doorlopende prestatieoptimalisatie en contentondersteuning.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Live site",
+        "Analytics-setup",
+        "Prestatiemonitoring"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "React-framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Tailwind",
+      "category": "Styling",
+      "description": "CSS-framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+    },
+    {
+      "name": "Vercel",
+      "category": "Platform",
+      "description": "Edge-hosting",
+      "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+    },
+    {
+      "name": "Sanity",
+      "category": "CMS",
+      "description": "Headless CMS",
+      "logo": "https://cdn.worldvectorlogo.com/logos/sanity.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Taal",
+      "description": "Typeveiligheid",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "Cloudflare",
+      "category": "CDN",
+      "description": "Edge-netwerk",
+      "logo": "https://cdn.worldvectorlogo.com/logos/cloudflare.svg"
+    },
+    {
+      "name": "Framer Motion",
+      "category": "Animatie",
+      "description": "Motion design",
+      "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+    },
+    {
+      "name": "Algolia",
+      "category": "Zoeken",
+      "description": "Zoeken op de site",
+      "logo": "https://cdn.worldvectorlogo.com/logos/algolia.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Waarom is paginasnelheid belangrijk voor zakelijke resultaten?",
+      "answer": "Snelheid heeft direct invloed op conversie: een seconde vertraging verlaagt de conversie met 7%. Google rangschikt snellere sites hoger, wat het organische verkeer verbetert. En snelle sites verlagen het bouncepercentage: gebruikers blijven, bladeren rond en converteren. Prestaties zijn geen technisch extraatje, maar een bedrijfsmetriek."
+    },
+    {
+      "question": "Welk CMS adviseert u voor marketingsites?",
+      "answer": "Voor marketingteams die flexibiliteit nodig hebben, adviseren wij doorgaans headless CMS'en zoals Sanity, Contentful of Storyblok. Voor eenvoudigere wensen werken we ook met WordPress (headless) of static site generators. De juiste keuze hangt af van uw contentworkflow en technische ervaring."
+    },
+    {
+      "question": "Hoe pakt u mobile-first design aan?",
+      "answer": "Wij ontwerpen eerst voor mobiel en breiden daarna uit voor grotere schermen. Zo is de mobiele ervaring snel en bruikbaar, geen verkleinde desktopsite. Nu meer dan 60% van het verkeer van mobiele apparaten komt, is mobile-first geen optie."
+    },
+    {
+      "question": "Kunt u onze bestaande site migreren zonder SEO te verliezen?",
+      "answer": "Ja. Wij plannen migraties zorgvuldig: alle URL's in kaart brengen, correcte redirects instellen, metadata behouden en de rankings na de lancering monitoren. De meeste goed geplande migraties zien op korte termijn stabiliteit en op lange termijn winst, doordat betere prestaties de SEO ten goede komen."
+    },
+    {
+      "question": "Wat is het verschil tussen een website en een webapp?",
+      "answer": "Websites zijn vooral gericht op content (marketingsites, blogs, e-commerce). Webapps zijn gericht op functionaliteit (dashboards, tools, interactieve functies). De technologie overlapt vaak, maar de ontwerpprioriteiten verschillen. Veel projecten combineren beide: een marketingsite met een beveiligd app-gedeelte."
+    }
+  ],
+  "relatedServices": [
+    "custom-software",
+    "aeo-seo",
+    "app-development"
+  ],
+  "cta": {
+    "headline": "Klaar voor een snellere site met hogere conversie?",
+    "description": "Laten we de prestaties van uw huidige site doorlichten en verbeteringen in kaart brengen. Wij laten u precies zien waar u bezoekers verliest en hoe u dat oplost.",
+    "primaryButton": {
+      "text": "Site-audit aanvragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk ons werk",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "prime-tiles",
+    "khushbu-nirman-sewa",
+    "khems-cleaning"
+  ],
+  "metaTitle": "Webontwikkeling: High-performance websites & apps | Zunkiree Labs",
+  "metaDescription": "High-performance websites voor snelheid, SEO en conversie. Laadtijden onder een seconde, PageSpeed-scores van 95+ en een architectuur die meegroeit."
+}

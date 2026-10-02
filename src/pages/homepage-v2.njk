@@ -8,6 +8,8 @@ hreflangAlternates:
     url: /
   - lang: de
     url: /de/
+  - lang: de-CH
+    url: /de-ch/
   - lang: nl
     url: /nl/
   - lang: x-default
@@ -1715,7 +1717,7 @@ app = platform.init(
    of smaller posts right. Pulled from the real `collections.blog`
    posts already published under src/blog/ — no placeholder content.
    ===================================================== #}
-{% set sortedPosts = collections.blog | reverse %}
+{% set sortedPosts = collections.articles | reverse %}
 {# Flat two-tone cover art for posts without a real featuredImage — MASTER_DESIGN_SPEC.md
    §25 explicitly allows "flat gradient art (matching §10's accent gradient palette) instead
    of a photo when no real photo exists" for article thumbnails. No blur/ambient bloom (both
@@ -1887,6 +1889,7 @@ app = platform.init(
     </div>
   </div>
 </section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in homepageFaq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>
 
 {# =====================================================
    CLOSING CTA BANNER — Website V2

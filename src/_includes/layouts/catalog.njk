@@ -14,7 +14,9 @@ layout: base.njk
    is a visual/structural reskin only.
    ===================================================== #}
 
-{% set items = products if catalogType == "products" else services %}
+{% set uiLocale = lang or "en" %}{% set ui = i18n[uiLocale] or i18n["en"] %}
+{% set svLoc = servicesLocales[uiLocale] if (uiLocale != "en" and servicesLocales[uiLocale]) else null %}
+{% set items = products if catalogType == "products" else (svLoc.services if svLoc else services) %}
 {% set categories = catalogCategories | default([]) %}
 
 {% include "partials/navbar-v2.njk" %}
@@ -47,9 +49,9 @@ layout: base.njk
   <section class="relative z-10 flex flex-col items-center justify-center px-4 pb-12 pt-40 sm:px-6 sm:pt-44 lg:px-8 lg:pt-48" aria-labelledby="hero-heading">
     <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
 
-      <nav aria-label="Breadcrumb" class="mb-5">
+      <nav aria-label="{{ ui.breadcrumb | safe }}" class="mb-5">
         <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
-          <li><a href="/" class="transition-colors hover:text-navy-700">Home</a></li>
+          <li><a href="{{ ui.homeUrl }}" class="transition-colors hover:text-navy-700">{{ ui.home | safe }}</a></li>
           <li aria-hidden="true">/</li>
           <li class="text-navy-600">{{ heroLabel | default(heroTitle) }}</li>
         </ol>
@@ -78,7 +80,7 @@ layout: base.njk
 <section class="px-4 pt-12 pb-4 sm:px-6 sm:pt-16 lg:px-8" data-reveal>
   <div class="mx-auto max-w-3xl text-center">
     <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-      Overview
+      {{ ui.cgOverview | safe }}
     </span>
     <h2 class="mx-auto text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
       {{ introHeadline }}
@@ -126,7 +128,7 @@ layout: base.njk
 
     {% if categories.length > 0 %}
     <div class="sticky top-[88px] z-20 mb-10 flex justify-center py-4">
-      <div role="tablist" aria-label="Filter by category" class="relative flex flex-wrap items-center justify-center gap-2 rounded-3xl border border-navy-100/50 bg-white p-2 shadow-subtle">
+      <div role="tablist" aria-label="{{ ui.cgFilter | safe }}" class="relative flex flex-wrap items-center justify-center gap-2 rounded-3xl border border-navy-100/50 bg-white p-2 shadow-subtle">
         <span
           class="absolute rounded-full border border-sky-200/60 bg-sky-100/80 transition-all duration-300 ease-out"
           :style="`top: ${pillTop}px; left: ${pillLeft}px; width: ${pillWidth}px; height: ${pillHeight}px;`"
@@ -143,7 +145,7 @@ layout: base.njk
           :class="activeTab === 'all' ? 'text-navy-900' : ''"
         >
           <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full transition-colors duration-200" :class="activeTab === 'all' ? 'bg-[#76B900]' : 'bg-sky-300'" aria-hidden="true"></span>
-          All {{ catalogType | capitalize }}
+          {% if catalogType == "services" and uiLocale != "en" %}{{ ui.cgAllServices | safe }}{% else %}All {{ catalogType | capitalize }}{% endif %}
         </button>
 
         {% for category in categories %}
@@ -251,7 +253,7 @@ layout: base.njk
       ></div>
 
       <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
-        Custom Engagements
+        {{ ui.cgCustom | safe }}
       </span>
       <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
         {{ ctaHeadline | default('Ready to get started?') }}
@@ -261,17 +263,17 @@ layout: base.njk
       </p>
       <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <a
-          href="{{ ctaButtonUrl | default('/contact/') }}"
+          href="{{ ctaButtonUrl | default(ui.contactUrl) }}"
           class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
         >
           {{ ctaButtonText | default('Schedule a Call') }}
           <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
         <a
-          href="/services/"
+          href="{{ ui.servicesUrl }}"
           class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
         >
-          See all services
+          {{ ui.cgSeeAll | safe }}
           <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
       </div>
@@ -285,7 +287,7 @@ layout: base.njk
    (a structured-data/visible-content mismatch Google flags).
    Same accordion recipe as homepage-v2's FAQ section; no new copy.
    ===================================================== #}
-{% set pageFaqData = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
+{% set pageFaqData = (svLoc.faq if svLoc else servicesFaq) if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% set faq = pageFaqData if pageFaqData else faq %}
 {% if faq and faq.length > 0 %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
@@ -295,7 +297,7 @@ layout: base.njk
         Support
       </span>
       <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
-        Frequently asked questions
+        {{ ui.cgFaq | safe }}
       </h2>
     </div>
 
@@ -374,7 +376,7 @@ layout: base.njk
 </script>
 {% endif %}
 
-{% set schemaFaq = servicesFaq if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
+{% set schemaFaq = (svLoc.faq if svLoc else servicesFaq) if catalogType == "services" else (productsFaq if catalogType == "products" else faq) %}
 {% if schemaFaq and schemaFaq.length > 0 %}
 <script type="application/ld+json">
 {

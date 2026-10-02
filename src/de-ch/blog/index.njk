@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: "Blog | KI- und Technologie-Einblicke von Zunkiree Labs (Schweiz)"
+description: "Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur für die Schweiz. Beiträge vom Team von Zunkiree Labs."
+lang: de-CH
+ogLocale: de_CH
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.blog-de-ch
+  size: 15
+  reverse: true
+  alias: posts
+permalink: "{{ '/de-ch/blog/' if pagination.pageNumber == 0 else '/de-ch/blog/page/' + (pagination.pageNumber + 1) + '/' }}"
+---
+{# Listing for the de-CH blog. Only generated once this locale has at least one
+   post (Eleventy emits no pages for an empty collection), so an empty
+   locale never publishes an empty index. Markup lives in the shared partial. #}
+{% include "partials/blog-index-locale.njk" %}

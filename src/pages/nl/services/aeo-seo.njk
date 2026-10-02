@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: nl
+ogLocale: nl_NL
+title: "AEO & SEO: AI-zoekoptimalisatie & traditionele SEO | Zunkiree Labs"
+description: "Word gevonden door Google en AI-systemen als ChatGPT, Perplexity en AI Overviews. Zoekoptimalisatie voor het AI-tijdperk. 3x hogere AI-citatiegraad met AEO."
+permalink: /nl/services/aeo-seo/
+serviceId: aeo-seo
+hreflangAlternates:
+  - lang: en
+    url: /services/aeo-seo/
+  - lang: de
+    url: /de/services/aeo-seo/
+  - lang: de-CH
+    url: /de-ch/services/aeo-seo/
+  - lang: nl
+    url: /nl/services/aeo-seo/
+  - lang: x-default
+    url: /services/aeo-seo/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["nl"].details["aeo-seo"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

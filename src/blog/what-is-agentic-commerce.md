@@ -2,7 +2,7 @@
 title: "What is Agentic Commerce? The Future of AI-Powered Ecommerce in Nepal"
 description: "Agentic commerce uses autonomous AI agents to handle the entire buying journey. Learn how Nepal businesses can leverage agentic ecommerce with eSewa, Khalti, and local market integration."
 date: 2026-04-03
-lastUpdated: 2026-04-03
+lastUpdated: 2026-10-02
 authorId: sadin-shrestha
 category: AI Technology
 tags:
@@ -81,6 +81,8 @@ Unlike simple chatbots that follow scripts, agentic systems can:
 - Apply available coupons and discounts automatically
 - Schedule purchases for optimal pricing
 
+Anthropic's engineering team describes the underlying distinction as [workflows versus agents](https://www.anthropic.com/engineering/building-effective-agents): workflows are "systems where LLMs and tools are orchestrated through predefined code paths," while agents are "systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks."
+
 ### 4. Transaction Execution
 
 The agent doesn't just recommend—it completes the purchase:
@@ -89,6 +91,8 @@ The agent doesn't just recommend—it completes the purchase:
 - Address verification and delivery scheduling
 - Order confirmation and tracking setup
 - Automated follow-up for reviews and reorders
+
+Open standards for this step are already emerging. The Agentic Commerce Protocol, codeveloped by Stripe and OpenAI, is described by [Stripe](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce) as "a new open standard ... that enables programmatic commerce flows between buyers, AI agents, and businesses."
 
 ## Agentic Commerce for Nepal Businesses
 
@@ -186,3 +190,8 @@ Zunkiree Labs builds custom agentic commerce solutions for Nepal businesses. Our
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg">
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
+
+## Sources
+
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), Anthropic
+- [Developing an open standard for agentic commerce](https://stripe.com/blog/developing-an-open-standard-for-agentic-commerce), Stripe

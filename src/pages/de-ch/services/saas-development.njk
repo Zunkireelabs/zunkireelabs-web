@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: de-CH
+ogLocale: de_CH
+title: "Mandantenfähige SaaS-Entwicklung in Calgary | Zunkiree Labs"
+description: "Mandantenfähige SaaS-Plattformen mit Abo-Abrechnung, Benutzerverwaltung und skalierbarer Architektur. Ihr SaaS-Produkt live in 3-6 Monaten, nicht in Jahren."
+permalink: /de-ch/services/saas-development/
+serviceId: saas-development
+hreflangAlternates:
+  - lang: en
+    url: /services/saas-development/
+  - lang: de
+    url: /de/services/saas-development/
+  - lang: de-CH
+    url: /de-ch/services/saas-development/
+  - lang: nl
+    url: /nl/services/saas-development/
+  - lang: x-default
+    url: /services/saas-development/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["de-CH"].details["saas-development"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

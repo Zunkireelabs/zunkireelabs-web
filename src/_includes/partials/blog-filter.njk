@@ -1,0 +1,14 @@
+{# All / Insights switcher for the blog listing. Rendered only once at least one
+   post carries `category: Insights`, so the listing is unchanged until then.
+   Button styling is the pagination buttons' own (square, border-gray-200,
+   zunkiree-600 for the active one), at a smaller size. #}
+{% if collections.insights.length > 0 %}
+<nav class="mt-8 flex flex-wrap items-center gap-3" aria-label="Blog filter">
+  <a href="/blog/"
+     class="inline-flex items-center px-5 py-2 text-sm font-medium transition-colors {% if blogFilter == 'all' %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}"
+     {% if blogFilter == 'all' %}aria-current="page"{% endif %}>Blog</a>
+  <a href="/blog/insights/"
+     class="inline-flex items-center px-5 py-2 text-sm font-medium transition-colors {% if blogFilter == 'insights' %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}"
+     {% if blogFilter == 'insights' %}aria-current="page"{% endif %}>Insights</a>
+</nav>
+{% endif %}

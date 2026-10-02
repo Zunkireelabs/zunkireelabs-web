@@ -1,0 +1,321 @@
+{
+  "services": [
+    {
+      "id": "ai-development",
+      "title": "KI-Entwicklung",
+      "tagline": "KI, die Probleme löst, statt nur Fragen zu beantworten.",
+      "category": "KI & Daten",
+      "description": "Individuelle KI-Systeme mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung. Wir entwickeln KI, die konkrete Geschäftsprobleme löst, keine generischen Chatbots.",
+      "cta": "KI-Entwicklung entdecken",
+      "url": "/services/ai-development/",
+      "icon": "ai",
+      "mockup": "/assets/images/ai-development-hero.webp",
+      "clients": [
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        },
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        }
+      ]
+    },
+    {
+      "id": "ai-customer-experience",
+      "title": "KI-Kundenerlebnis",
+      "tagline": "40 % weniger Tickets. Schnellere Antworten. Zufriedenere Kunden.",
+      "category": "KI & Daten",
+      "description": "KI-gestützte Support-Systeme, die Kundenfragen sofort beantworten. Reduzieren Sie Support-Tickets um 40 % und verbessern Sie gleichzeitig die Genauigkeit der Antworten.",
+      "cta": "KI-CX entdecken",
+      "url": "/services/ai-customer-experience/",
+      "icon": "chat",
+      "mockup": "/assets/images/ai-customer-experience-hero.webp",
+      "clients": [
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        },
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Khems Cleaning",
+          "logo": "/images/clients/khems-cleaning.webp"
+        }
+      ]
+    },
+    {
+      "id": "ai-ecommerce",
+      "title": "KI-Ecommerce-Lösungen",
+      "tagline": "Agentic Commerce, entwickelt für den nepalesischen Markt.",
+      "category": "KI & Daten",
+      "description": "Entwickeln Sie Agentic-Commerce-Systeme mit KI-Shopping-Agenten, Conversational Commerce und intelligenten Empfehlungen. Spezialisiert auf den nepalesischen Markt mit eSewa- und Khalti-Integration.",
+      "cta": "KI-Commerce entdecken",
+      "url": "/services/ai-ecommerce/",
+      "icon": "cart",
+      "mockup": "/assets/images/service-ai.webp",
+      "clients": []
+    },
+    {
+      "id": "data-systems",
+      "title": "Datensysteme",
+      "tagline": "Ihre Daten, bereit für KI – ohne monatelange Aufbereitung.",
+      "category": "KI & Daten",
+      "description": "Datenpipelines, Data Warehouses und Analytics-Infrastruktur für KI-Workloads. Machen Sie Ihre Daten für maschinelles Lernen bereit, ohne monatelange Bereinigung.",
+      "cta": "Datensysteme entdecken",
+      "url": "/services/data-systems/",
+      "icon": "data",
+      "mockup": "/assets/images/data-systems-hero.webp",
+      "clients": [
+        {
+          "name": "Rapid Investment",
+          "logo": "/images/clients/rapid-investment.svg"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        },
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        }
+      ]
+    },
+    {
+      "id": "custom-software",
+      "title": "Individuelle Softwareentwicklung",
+      "tagline": "Interne Tools, die Ihr Team wirklich nutzt.",
+      "category": "Entwicklung",
+      "description": "Unternehmensanwendungen, maßgeschneidert auf Ihre Arbeitsabläufe. Wir entwickeln interne Tools und Geschäftssysteme, die Teams wirklich gerne nutzen.",
+      "cta": "Individualentwicklung entdecken",
+      "url": "/services/custom-software/",
+      "icon": "code",
+      "mockup": "/assets/images/custom-software-hero.webp",
+      "clients": [
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        },
+        {
+          "name": "Khushbu Nirman Sewa",
+          "logo": "/images/clients/khushbu-nirman-sewa.webp"
+        },
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        }
+      ]
+    },
+    {
+      "id": "saas-development",
+      "title": "SaaS-Entwicklung",
+      "tagline": "Von null zur Multi-Tenant-Plattform in Monaten, nicht Jahren.",
+      "category": "Entwicklung",
+      "description": "Multi-Tenant-Plattformen mit Abonnement-Abrechnung, Benutzerverwaltung und skalierbarer Architektur. Bringen Sie Ihr SaaS-Produkt in Monaten statt Jahren an den Markt.",
+      "cta": "SaaS-Entwicklung entdecken",
+      "url": "/services/saas-development/",
+      "icon": "cloud",
+      "mockup": "/assets/images/saas-development-hero.webp",
+      "clients": [
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        }
+      ]
+    },
+    {
+      "id": "web-development",
+      "title": "Webentwicklung",
+      "tagline": "Schnell, SEO-ready, auf Conversion ausgelegt.",
+      "category": "Entwicklung",
+      "description": "Hochperformante Websites und Web-Apps, optimiert auf Geschwindigkeit und Conversion. Moderne Frameworks, Responsive Design, von Anfang an für SEO gebaut.",
+      "cta": "Webentwicklung entdecken",
+      "url": "/services/web-development/",
+      "icon": "globe",
+      "mockup": "/assets/images/web-development-hero.webp",
+      "clients": [
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Khushbu Nirman Sewa",
+          "logo": "/images/clients/khushbu-nirman-sewa.webp"
+        },
+        {
+          "name": "Khems Cleaning",
+          "logo": "/images/clients/khems-cleaning.webp"
+        }
+      ]
+    },
+    {
+      "id": "app-development",
+      "title": "App-Entwicklung",
+      "tagline": "iOS und Android, geliefert von einem Team.",
+      "category": "Entwicklung",
+      "description": "Native und plattformübergreifende Mobile Apps für iOS und Android. Von Consumer-Apps bis zu Enterprise Mobility, mit nahtloser Backend-Integration.",
+      "cta": "App-Entwicklung entdecken",
+      "url": "/services/app-development/",
+      "icon": "mobile",
+      "mockup": "/assets/images/service-mobile.webp",
+      "clients": [
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        },
+        {
+          "name": "Rapid Investment",
+          "logo": "/images/clients/rapid-investment.svg"
+        }
+      ]
+    },
+    {
+      "id": "aeo-seo",
+      "title": "AEO & SEO",
+      "tagline": "Von Google gefunden und von KI zitiert.",
+      "category": "Marketing",
+      "description": "Werden Sie von Google und KI-Assistenten wie ChatGPT und Perplexity gefunden. Wir optimieren Inhalte für die klassische Suche und für KI-Zitate.",
+      "cta": "AEO & SEO entdecken",
+      "url": "/services/aeo-seo/",
+      "icon": "search",
+      "mockup": "/assets/images/aeo-seo-hero.webp",
+      "clients": [
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        },
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welche digitalen Services bietet Zunkiree Labs an?",
+      "answer": "Zunkiree Labs bietet KI-Entwicklung (RAG-Pipelines, LLM-Integration, intelligente Automatisierung), individuelle Softwareentwicklung, die Entwicklung von SaaS-Plattformen, Web- und Mobile-App-Entwicklung, Datensystem-Architektur sowie AEO-/SEO-Marketing. Wir betreuen Unternehmen aus den Bereichen Gesundheitswesen, Fertigung, Bildung und Technologie."
+    },
+    {
+      "question": "Wie geht Zunkiree Labs bei KI-Entwicklungsprojekten vor?",
+      "answer": "Wir beginnen mit Ihrem konkreten Geschäftsproblem, nicht mit generischen KI-Lösungen. Unser Entwicklungsprozess umfasst Discovery (Verständnis Ihrer Daten und Arbeitsabläufe), Architekturdesign (Auswahl geeigneter Modelle und Infrastruktur), iterative Entwicklung (Aufbau und Test mit realen Daten) sowie Deployment mit Monitoring. Die meisten Projekte gehen innerhalb von 8–12 Wochen live."
+    },
+    {
+      "question": "Welche Branchen betreut Zunkiree Labs?",
+      "answer": "Wir betreuen Technologieunternehmen, E-Commerce, Gesundheitswesen, Bildung, Fertigung, Immobilien, Recht und professionelle Dienstleistungen. Jedes Unternehmen mit kundenorientierten Inhalten, internen Wissensdatenbanken oder operativen Daten kann von unseren KI- und Softwareentwicklungs-Services profitieren, und wir sind offen für neue Branchen über diese Liste hinaus."
+    },
+    {
+      "question": "Wie lange dauert ein typisches Softwareentwicklungsprojekt?",
+      "answer": "Die Projektdauer hängt vom Umfang ab: KI-Integrationen dauern in der Regel 4–8 Wochen, individuelle Webanwendungen 8–16 Wochen, vollständige SaaS-Plattformen 3–6 Monate und Mobile Apps 8–12 Wochen. Nach der Discovery-Phase erstellen wir einen detaillierten Zeitplan mit meilensteinbasierter Lieferung."
+    },
+    {
+      "question": "Bietet Zunkiree Labs nach der Projektübergabe laufenden Support an?",
+      "answer": "Ja. Alle Projekte beinhalten 30 Tage Support nach dem Launch. Zusätzlich bieten wir laufende Wartungspakete an, die Updates, Performance-Monitoring, Sicherheitspatches und Funktionserweiterungen abdecken. Viele Kunden wechseln zu Retainer-Vereinbarungen für kontinuierliche Verbesserung."
+    },
+    {
+      "question": "Arbeitet Zunkiree Labs weltweit mit Kunden zusammen, nicht nur in Nepal?",
+      "answer": "Ja. Rund 60 % unserer Kunden sitzen im Ausland, unter anderem in den USA, Großbritannien, Indien, Australien, Kanada, der Schweiz und den Niederlanden. Zunkiree Labs liefert KI-Entwicklung, individuelle Software und AEO-/SEO-Leistungen weltweit – unsere Leistungserbringung ist an keinen Standort gebunden, und wir arbeiten strukturiert remote, mit Zeitzonenüberschneidung, wo immer Ihr Team sitzt."
+    },
+    {
+      "question": "Entwickelt Zunkiree Labs KI-Sprachagenten?",
+      "answer": "Ja. Im Rahmen unseres Services KI-Kundenerlebnis entwickeln wir Voice-AI-Systeme, die klassische IVR-Telefonmenüs durch dialogfähige KI ersetzen – mit Spracherkennung, Intent-Erkennung, automatischer Anrufweiterleitung und Sprachauthentifizierung, damit Anrufer sofort Antworten erhalten, statt sich durch ein Menü zu navigieren."
+    },
+    {
+      "question": "Kann Ihre Voice AI Terminbuchungen am Telefon abwickeln?",
+      "answer": "Ja. Unsere Voice-AI-Systeme können Terminbuchungen direkt im Telefonat entgegennehmen und verwalten, zusätzlich zu Spracherkennung, Intent-Erkennung und Anrufweiterleitung – so können Anrufer Termine vereinbaren, ohne sich durch ein Menü zu navigieren oder auf einen menschlichen Mitarbeiter zu warten."
+    }
+  ],
+  "stories": [
+    {
+      "id": "admizz",
+      "name": "Admizz Education",
+      "logo": "/images/clients/admizz.webp",
+      "stat": "45%",
+      "statLabel": "schnellere Antworten",
+      "headline": "Admizz verändert das Management von Studierendenanfragen",
+      "description": "Nach der Einführung des KI-gestützten Chatbots von Zunkiree konnte Admizz die Antwortzeiten verkürzen und die Interaktion mit den Studierenden auf der gesamten Bildungsplattform verbessern.",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
+      "ctaText": "Fallstudie lesen",
+      "ctaUrl": "/resources/admizz-case-study/"
+    },
+    {
+      "id": "corecloud365",
+      "name": "CoreCloud365",
+      "logo": "/images/clients/corecloud365.webp",
+      "stat": "60%",
+      "statLabel": "Effizienzgewinn",
+      "headline": "CoreCloud365 integriert KI-Automatisierung",
+      "description": "Wir haben CoreCloud365 dabei unterstützt, KI-Funktionen in die bestehende Infrastruktur zu integrieren und so intelligente Automatisierung im gesamten Betrieb zu ermöglichen.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "ctaText": "Fallstudie lesen",
+      "ctaUrl": "/resources/corecloud365-case-study/"
+    },
+    {
+      "id": "rapid-investment",
+      "name": "Rapid Investment",
+      "logo": "/images/clients/rapid-investment.webp",
+      "stat": "10x",
+      "statLabel": "schnellere Analyse",
+      "headline": "Rapid Investment verändert die Datenverarbeitung",
+      "description": "Rapid Investment benötigte Echtzeit-Datenanalysen als Grundlage für Investitionsentscheidungen. Wir haben ein Datensystem aufgebaut, das Millionen von Datenpunkten verarbeitet.",
+      "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "cms-group",
+      "name": "CMS Group",
+      "logo": "/images/clients/cms-group.webp",
+      "stat": "85%",
+      "statLabel": "Prozessautomatisierung",
+      "headline": "CMS Group automatisiert Unternehmensabläufe",
+      "description": "CMS Group hat ihren Betrieb mit einer individuellen Unternehmenssoftware transformiert, die manuelle Arbeitsabläufe automatisiert und die Zusammenarbeit im Team verbessert.",
+      "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "chayce-properties",
+      "name": "Chayce Properties",
+      "logo": "/images/clients/chayce-properties.webp",
+      "stat": "Durchgängig",
+      "statLabel": "Digitaler Betrieb vollständig betreut",
+      "headline": "Chayce Properties läuft auf der Infrastruktur von Zunkiree",
+      "description": "Für Chayce Properties, ein britisches Immobilienunternehmen, kümmert sich Zunkiree Labs nicht nur um SEO – wir betreuen den gesamten digitalen Betrieb: Website, KI-Systeme und die laufende technische Umsetzung.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+    }
+  ],
+  "page": {
+    "metaTitle": "KI-, Web- & SaaS-Entwicklung in Nepal | Zunkiree Labs",
+    "metaDescription": "Führende KI-Entwicklung in Nepal: individuelle KI-Agenten, RAG-Pipelines, Webentwicklung, Mobile Apps und SaaS-Plattformen. Softwareunternehmen in Kathmandu.",
+    "heroTitle": "Digitale Services",
+    "heroLabel": "Services",
+    "heroTagline": "Durchgängige Lösungen, die Ideen in Wachstum verwandeln",
+    "introHeadline": "Entdecken Sie unsere Services – für echte Wirkung gebaut",
+    "introDescription": "Von KI-Systemen bis zu Webanwendungen: Wir helfen Unternehmen, schneller zu liefern und intelligenter zu arbeiten. Unsere Services verbinden technische Tiefe mit praxisnaher Umsetzung – damit Sie Lösungen erhalten, die funktionieren, nicht nur Prototypen.",
+    "ctaHeadline": "Sie brauchen eine Lösung, die wir nicht aufgeführt haben?",
+    "ctaDescription": "Wir haben individuelle Systeme für das Gesundheitswesen, die Fertigung, den Rechtsbereich und Dutzende weitere Branchen gebaut. Lassen Sie uns darüber sprechen, was Sie lösen möchten – wir sagen Ihnen, ob wir helfen können.",
+    "ctaButtonText": "Gespräch vereinbaren",
+    "ctaButtonUrl": "/schedule-a-call/",
+    "catalogCategories": [
+      {
+        "id": "ai",
+        "label": "KI & Daten"
+      },
+      {
+        "id": "dev",
+        "label": "Entwicklung"
+      },
+      {
+        "id": "marketing",
+        "label": "Marketing"
+      }
+    ]
+  }
+}

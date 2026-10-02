@@ -1,0 +1,309 @@
+{
+  "id": "ai-development",
+  "relatedCaseStudies": [
+    {
+      "slug": "rapid-investment-case-study",
+      "title": "Rapid Investment",
+      "stat": "10x schnellere Deal-Analyse"
+    },
+    {
+      "slug": "mach24orbital-case-study",
+      "title": "Mach24 Orbital",
+      "stat": "50 % schnellere Startvorbereitung"
+    }
+  ],
+  "title": "KI-Entwicklung",
+  "category": "KI & Daten",
+  "tagline": "Die meiste KI liefert Ratschläge. Wir bauen intelligente Systeme, die handeln.",
+  "description": "Individuelle KI-Systeme mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung. Wir entwickeln KI, die konkrete Geschäftsprobleme löst – keine generischen Chatbots.",
+  "heroImage": "/assets/images/ai-development-hero.webp",
+  "lastUpdated": "2026-03-23",
+  "heroCommands": [
+    {
+      "text": "Rechnungsdaten extrahieren",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Kundenstimmung analysieren",
+      "type": "Inhalt",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Dokumentenstapel verarbeiten",
+      "type": "Aktionen",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Wissensantwort generieren",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Eigenes Modell trainieren",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "In Produktion überführen",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Modellgenauigkeit überwachen",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "KI, die in Ihrem Unternehmen handelt. Nicht nur Fragen dazu beantwortet.",
+    "content": "Generische KI beantwortet Fragen. Zunkiree baut KI, die die Arbeit erledigt – RAG-Pipelines, LLM-Orchestrierung und intelligente Automatisierung, integriert in Ihre Infrastruktur. In Gesundheitswesen, Finanzwesen und Fertigung im Einsatz, senken unsere Systeme die Betriebskosten um 40 % und erreichen die Produktion in weniger als 3 Monaten."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Schnellere Entwicklung",
+      "description": "gegenüber herkömmlichen Methoden"
+    },
+    {
+      "value": "<3 Mon.",
+      "label": "Zeit bis zur Produktion",
+      "description": "bei den meisten Projekten"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeits-SLA",
+      "description": "Produktivsysteme"
+    },
+    {
+      "value": "24/7",
+      "label": "Monitoring",
+      "description": "inklusive"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Komplexe Daten-Workflows vereinfachen",
+      "description": "Unsere KI-Pipelines verarbeiten unstrukturierte Dokumente, extrahieren Erkenntnisse und automatisieren Entscheidungen – und senken den manuellen Prüfaufwand im Gesundheitswesen, in der Rechtsberatung und im Finanzbereich um bis zu 80 %."
+    },
+    {
+      "icon": "speed",
+      "title": "In Wochen statt Monaten in Produktion",
+      "description": "Zweckgebaute Architektur mit vorkonfigurierter Infrastruktur. Die meisten Kunden haben ihr erstes KI-System innerhalb von 6–8 Wochen live – mit Enterprise-Sicherheit und Monitoring ab dem ersten Tag."
+    },
+    {
+      "icon": "integrate",
+      "title": "In Ihren bestehenden Stack integrieren",
+      "description": "Native Konnektoren für Salesforce, SAP, Microsoft 365 und individuelle APIs. Unsere Systeme arbeiten neben Ihren bestehenden Tools – ohne Austausch der Altsysteme."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "document-ai",
+      "title": "Dokumenten-KI",
+      "headline": "Dokumentenverarbeitung mit KI",
+      "description": "Dokumente in großem Umfang mit individuellen KI-Modellen extrahieren, klassifizieren und verarbeiten. Aus unstrukturierten Dokumenten werden strukturierte, verwertbare Daten.",
+      "features": [
+        "Verarbeitung von Rechnungen und Belegen",
+        "Vertragsanalyse und -extraktion",
+        "Extraktion von Formulardaten",
+        "Dokumentenklassifizierung"
+      ],
+      "image": "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "knowledge-base",
+      "title": "Wissensdatenbank",
+      "headline": "Intelligente Wissensdatenbank",
+      "description": "KI-gestützte Wissenssysteme, die den Kontext verstehen und präzise Antworten aus Ihrer Dokumentation, Ihren Handbüchern und internen Ressourcen liefern.",
+      "features": [
+        "Fragen und Antworten in natürlicher Sprache",
+        "Kontextbezogene Antworten",
+        "Integration mehrerer Quellen",
+        "Kontinuierliches Lernen"
+      ],
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "predictive",
+      "title": "Prädiktiv",
+      "headline": "Prädiktive Analytik",
+      "description": "Machine Learning nutzen, um Trends vorherzusagen, Muster zu erkennen und datenbasierte Entscheidungen zu treffen, bevor Probleme entstehen.",
+      "features": [
+        "Bedarfsprognose",
+        "Anomalieerkennung",
+        "Risikobewertung",
+        "Abwanderungsprognose"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "automation",
+      "title": "Automatisierung",
+      "headline": "Intelligente Automatisierung",
+      "description": "Komplexe Workflows automatisieren, die Urteilsvermögen und Entscheidungen erfordern. KI-Agenten, die Ausnahmen behandeln und angemessen eskalieren.",
+      "features": [
+        "Workflow-Automatisierung",
+        "Entscheidungsrouting",
+        "Ausnahmebehandlung",
+        "Prozessoptimierung"
+      ],
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "custom",
+      "title": "Individuell",
+      "headline": "Individuelle KI-Lösungen",
+      "description": "Einzigartige geschäftliche Herausforderungen erfordern einzigartige Lösungen. Wir entwickeln spezialisierte KI-Systeme für Probleme, die in keine Standardkategorie passen.",
+      "features": [
+        "Spezialisierte Modelle",
+        "Domänenspezifisches Training",
+        "Individuelle Integrationen",
+        "Hybride Ansätze"
+      ],
+      "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Ihre Daten, Workflows und Ziele verstehen. Erfolgskennzahlen definieren und den passenden KI-Ansatz bestimmen.",
+      "duration": "2 Wochen",
+      "deliverables": [
+        "Anforderungsdokument",
+        "Datenbewertung",
+        "Architekturvorschlag"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Auswahl von Architektur und Tech-Stack. Datenaufbereitung und Pipeline-Design. Prototyp der Kernfunktionen.",
+      "duration": "2–3 Wochen",
+      "deliverables": [
+        "Technische Architektur",
+        "Design der Datenpipeline",
+        "Funktionierender Prototyp"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Entwicklung",
+      "description": "Iterative Entwicklung mit wöchentlichen Demos. Kontinuierliches Testen mit echten Daten. Verfeinerung auf Basis von Feedback.",
+      "duration": "6–12 Wochen",
+      "deliverables": [
+        "Produktionscode",
+        "Testsuite",
+        "Dokumentation"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Deployment",
+      "description": "Produktiver Betrieb mit Monitoring. Wissenstransfer und Schulung Ihres Teams. Laufender Support und Optimierung.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Live-System",
+        "Monitoring-Dashboard",
+        "Supportvertrag"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4, Embeddings",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "Anthropic",
+      "category": "LLM",
+      "description": "Claude, Safety",
+      "logo": "https://cdn.simpleicons.org/anthropic/191919"
+    },
+    {
+      "name": "LangChain",
+      "category": "Framework",
+      "description": "RAG-Pipelines",
+      "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+    },
+    {
+      "name": "Pinecone",
+      "category": "Vektordatenbank",
+      "description": "Speicherung von Embeddings",
+      "logo": "https://cdn.simpleicons.org/pinecone/000000"
+    },
+    {
+      "name": "Python",
+      "category": "Programmiersprache",
+      "description": "ML & Backend",
+      "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    },
+    {
+      "name": "FastAPI",
+      "category": "Framework",
+      "description": "API-Entwicklung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastruktur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Datenbank",
+      "description": "Datenspeicherung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welche Geschäftsprobleme löst KI-Entwicklung?",
+      "answer": "KI-Entwicklung automatisiert repetitive Aufgaben, gewinnt Erkenntnisse aus unstrukturierten Daten und ermöglicht schnellere Entscheidungen. Unternehmen erzielen typischerweise eine Reduzierung des manuellen Bearbeitungsaufwands um 40–60 %, 3x schnellere Reaktionszeiten gegenüber Kunden und erhebliche Kosteneinsparungen durch die Automatisierung von Workflows, die zuvor eine manuelle Prüfung erforderten."
+    },
+    {
+      "question": "Wie schnell kann KI einen ROI liefern?",
+      "answer": "Die meisten Unternehmen sehen innerhalb von 8–12 Wochen messbare Effekte. Einfache Automatisierungen wie Dokumentenverarbeitung oder FAQ-Chatbots lassen sich in 4–6 Wochen starten. Komplexere Systeme wie prädiktive Analytik benötigen 3–6 Monate, liefern aber oft das Zehnfache an Ertrag durch betriebliche Effizienz und Umsatzoptimierung."
+    },
+    {
+      "question": "Welche Arten von KI eignen sich am besten für Unternehmensanwendungen?",
+      "answer": "Unternehmens-KI überzeugt bei der Dokumentenverarbeitung (Rechnungen, Verträge, Anträge), im Wissensmanagement (interne Suche, Support-Automatisierung) und in der prädiktiven Analytik (Bedarfsprognose, Abwanderungsprognose). Entscheidend ist, die KI-Fähigkeiten auf konkrete Workflows abzustimmen, in denen Genauigkeit und Geschwindigkeit das Geschäftsergebnis unmittelbar beeinflussen."
+    },
+    {
+      "question": "Wie schneidet individuelle KI im Vergleich zu Standardwerkzeugen ab?",
+      "answer": "Standard-KI-Tools eignen sich für generische Aufgaben, erreichen bei domänenspezifischen Problemen aber oft nur eine Genauigkeit von 60–70 %. Individuelle KI, die auf Ihren Daten und Workflows trainiert wurde, erreicht in der Regel 90–95 % Genauigkeit, lässt sich direkt in Ihre Systeme integrieren und verbessert sich mit der Zeit, indem sie aus Ihren konkreten Anwendungsfällen lernt."
+    },
+    {
+      "question": "Ist Unternehmens-KI sicher genug für sensible Daten?",
+      "answer": "Ja. Moderne KI-Systeme unterstützen den Betrieb vor Ort (On-Premise), Datenverschlüsselung, rollenbasierte Zugriffe und die Einhaltung von SOC 2, HIPAA und DSGVO. Unternehmen können sensible Dokumente, Kundendaten und proprietäre Informationen verarbeiten, ohne dass Daten ihre Umgebung verlassen oder zum Training externer Modelle verwendet werden."
+    }
+  ],
+  "relatedServices": [
+    "ai-customer-experience",
+    "data-systems",
+    "custom-software"
+  ],
+  "cta": {
+    "headline": "Bereit, intelligente Systeme zu bauen?",
+    "description": "Besprechen Sie Ihr KI-Projekt mit unserem Engineering-Team. Wir helfen Ihnen, den richtigen Ansatz zu finden und einen klaren Weg in die Produktion zu definieren.",
+    "primaryButton": {
+      "text": "Beratung vereinbaren",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Unsere Arbeit ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "corecloud365",
+    "admizz"
+  ],
+  "metaTitle": "KI-Entwicklung: Individuelle KI-Lösungen | Zunkiree Labs",
+  "metaDescription": "Individuelle KI-Entwicklung: RAG-Pipelines, LLM-Integration, Dokumenten-KI und intelligente Automatisierung. Produktionsreif in 3 Monaten."
+}

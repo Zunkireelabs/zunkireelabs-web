@@ -10,6 +10,7 @@
    Sky/Cream/Mint ribbon, not a dark image) → background pops in
    on hover, or once a dropdown/mobile menu is open.
    ===================================================== #}
+{% set navLang = lang or "en" %}{% set navUi = i18n[navLang] or i18n["en"] %}{% set navData = navigationV2Locales[navLang] if (navLang != "en" and navigationV2Locales[navLang]) else navigationV2 %}
 <div
   x-data="{
     headerHidden: false,
@@ -123,7 +124,7 @@
           <div class="flex items-center justify-between h-[72px]">
 
           <!-- Logo — always the dark-text mark; the v2 hero is light, never a dark image -->
-          <a href="/" class="flex-shrink-0 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 rounded-sm" aria-label="Zunkiree Labs home">
+          <a href="{{ navUi.homeUrl }}" class="flex-shrink-0 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 rounded-sm" aria-label="{{ navUi.nHome | safe }}">
             <img
               src="/assets/images/zunkireelabs-logo-light.png"
               alt="Zunkiree Labs"
@@ -133,8 +134,8 @@
           </a>
 
           <!-- Desktop Nav -->
-          <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
-            {% for item in navigationV2.main %}
+          <nav class="hidden lg:flex items-center gap-1" aria-label="{{ navUi.nPrimary | safe }}">
+            {% for item in navData.main %}
               {% if item.hasDropdown %}
                 <button
                   type="button"
@@ -171,23 +172,23 @@
           <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
             <div class="group relative flex-shrink-0">
               <a
-                href="/contact/"
+                href="{{ navUi.contactUrl }}"
                 class="flex h-11 w-11 items-center justify-center rounded-lg border border-navy-100/60 text-navy-700 transition-colors duration-200 hover:border-[#76B900] hover:text-[#76B900] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
-                aria-label="Contact us"
+                aria-label="{{ navUi.nContactUs | safe }}"
               >
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
               </a>
-              <span class="pointer-events-none absolute left-1/2 top-full z-20 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-navy-900 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-white opacity-0 shadow-subtle transition-opacity duration-150 group-hover:opacity-100">
-                Contact
+              <span :style="activeDropdown !== null ? 'left:auto; right:100%; top:50%; margin:0 0.5rem 0 0; transform:translateY(-50%);' : ''" class="pointer-events-none absolute left-1/2 top-full z-20 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-navy-900 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wide text-white opacity-0 shadow-subtle transition-opacity duration-150 group-hover:opacity-100">
+                {{ navUi.nContact | safe }}
               </span>
             </div>
             <a
-              href="/get-a-quote/"
+              href="{{ navUi.quoteUrl }}"
               class="inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
             >
-              Get a Quote
+              {{ navUi.nGetQuote | safe }}
             </a>
           </div>
 
@@ -197,7 +198,7 @@
             class="lg:hidden p-2 -mr-2 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
             style="color: var(--foreground);"
             @click="openMobileMenu()"
-            aria-label="Open menu"
+            aria-label="{{ navUi.nOpenMenu | safe }}"
             aria-controls="navbar-v2-mobile"
             :aria-expanded="mobileMenuOpen"
           >
@@ -212,7 +213,7 @@
     </div>
 
     <!-- Mega Menu panels — always a light card surface (MASTER_DESIGN_SPEC §13/§15), independent of navbar transparency -->
-    {% for item in navigationV2.main %}
+    {% for item in navData.main %}
       {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
         <div
           class="hidden lg:block fixed top-[72px] left-0 right-0 z-40 overflow-y-auto"
@@ -230,7 +231,7 @@
           x-transition:leave-end="opacity-0"
           x-cloak
           role="menu"
-          :aria-label="'{{ item.label }}' + ' menu'"
+          :aria-label="'{{ item.label }}' + '{{ navUi.nMenuSuffix | safe }}'"
         >
           <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8" @click.self="closeDropdown()">
             <div class="bg-white border rounded-2xl px-4 sm:px-6 lg:px-8 py-8" style="border-color: #e2e8f0;">
@@ -274,19 +275,40 @@
                       </div>
                     </div>
 
-                    {% if item.megamenu.cta %}
-                      <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6 flex items-center justify-between gap-6">
-                        <p class="text-sm font-medium text-navy-900">{{ item.megamenu.cta.prompt }}</p>
-                        <a
-                          href="{{ item.megamenu.cta.url }}"
-                          class="inline-flex flex-shrink-0 items-center gap-2 rounded-md bg-zunkiree-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zunkiree-700"
-                          @click="closeDropdown()"
-                        >
-                          {{ item.megamenu.cta.button }}
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                          </svg>
-                        </a>
+                    {% if item.megamenu.services %}
+                      <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
+                        <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                          <div class="sm:w-44 flex-shrink-0 sm:border-r sm:border-gray-100 sm:pr-6">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">{{ item.megamenu.services.title }}</h4>
+                            <p class="text-sm leading-relaxed text-navy-500">{{ item.megamenu.services.description }}</p>
+                          </div>
+                          <div class="flex-1 grid gap-y-1 items-start" style="grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 1.5rem; grid-template-rows: auto 1fr;">
+                            {% for link in item.megamenu.services.items %}
+                              <a
+                                href="{{ link.url }}"
+                                class="group flex items-start justify-between gap-2 px-3 py-2.5 -mx-3 rounded-md transition-colors hover:bg-zunkiree-50"
+                                role="menuitem"
+                                @click="closeDropdown()"
+                              >
+                                <span class="min-w-0">
+                                  <span class="block whitespace-nowrap text-[15px] font-medium text-navy-900 transition-colors group-hover:text-zunkiree-600">{{ link.label }}</span>
+                                  <span class="block mt-0.5 text-[13px] leading-snug text-navy-500">{{ link.description }}</span>
+                                </span>
+                                <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zunkiree-500 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true"></span>
+                              </a>
+                            {% endfor %}
+                            <a
+                              href="{{ item.megamenu.services.seeAll.url }}"
+                              class="inline-flex items-center gap-1.5 text-sm font-medium text-zunkiree-600 hover:gap-2.5 transition-all" style="grid-column: 1 / -1; justify-self: end; align-self: end; white-space: nowrap;"
+                              @click="closeDropdown()"
+                            >
+                              {{ item.megamenu.services.seeAll.label }}
+                              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     {% endif %}
                   {% else %}
@@ -375,12 +397,12 @@
                     </div>
                   {% endif %}
 
-                  {% if item.megamenu.cta and not mergeColumns %}
-                    <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6">
-                      <p class="text-sm font-medium text-navy-900 mb-3">{{ item.megamenu.cta.prompt }}</p>
+                  {% if item.megamenu.cta %}
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-card p-6{% if mergeColumns %} flex items-center justify-between gap-4{% endif %}">
+                      <p class="text-sm font-medium text-navy-900{% if not mergeColumns %} mb-3{% endif %}">{{ item.megamenu.cta.prompt }}</p>
                       <a
                         href="{{ item.megamenu.cta.url }}"
-                        class="inline-flex items-center gap-2 rounded-md bg-zunkiree-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zunkiree-700"
+                        class="inline-flex flex-shrink-0 items-center gap-2 rounded-md bg-zunkiree-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zunkiree-700"
                         @click="closeDropdown()"
                       >
                         {{ item.megamenu.cta.button }}
@@ -415,17 +437,17 @@
     x-cloak
     role="dialog"
     aria-modal="true"
-    aria-label="Mobile navigation"
+    aria-label="{{ navUi.nMobile | safe }}"
   >
     <div class="flex items-center justify-between h-[72px] px-4 sm:px-6 border-b border-gray-100">
-      <a href="/" class="flex items-center" @click="closeMobileMenu()" aria-label="Zunkiree Labs home">
+      <a href="{{ navUi.homeUrl }}" class="flex items-center" @click="closeMobileMenu()" aria-label="{{ navUi.nHome | safe }}">
         <img src="/assets/images/zunkireelabs-logo-light.png" alt="Zunkiree Labs" class="w-44 h-auto" width="176" height="21" />
       </a>
       <button
         type="button"
         class="p-2 -mr-2 rounded-md text-navy-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
         @click="closeMobileMenu()"
-        aria-label="Close menu"
+        aria-label="{{ navUi.nCloseMenu | safe }}"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -435,7 +457,7 @@
 
     <div class="px-4 sm:px-6 py-4">
       <div class="flex flex-col">
-        {% for item in navigationV2.main %}
+        {% for item in navData.main %}
           {% if item.hasDropdown and item.dropdownType == 'megamenu' %}
             <div x-data="{ open: false }" class="border-b border-gray-100">
               <button
@@ -493,9 +515,9 @@
 
         <div class="mt-6 flex items-center gap-3">
           <a
-            href="/contact/"
+            href="{{ navUi.contactUrl }}"
             class="flex h-[52px] w-[52px] flex-shrink-0 items-center justify-center rounded-md border border-navy-100/60 text-navy-700 transition-colors hover:border-[#76B900] hover:text-[#76B900]"
-            aria-label="Contact us"
+            aria-label="{{ navUi.nContactUs | safe }}"
             @click="closeMobileMenu()"
           >
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -503,11 +525,11 @@
             </svg>
           </a>
           <a
-            href="/get-a-quote/"
+            href="{{ navUi.quoteUrl }}"
             class="flex flex-1 items-center justify-center gap-2 py-3.5 rounded-md bg-[#76B900] text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
             @click="closeMobileMenu()"
           >
-            Get a Quote
+            {{ navUi.nGetQuote | safe }}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>

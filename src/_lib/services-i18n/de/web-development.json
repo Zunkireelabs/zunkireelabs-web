@@ -1,0 +1,305 @@
+{
+  "id": "web-development",
+  "relatedCaseStudies": [
+    {
+      "slug": "chayce-properties-case-study",
+      "title": "Chayce Properties",
+      "stat": "Digitales Eigentum aus einer Hand (Full-Stack)"
+    }
+  ],
+  "title": "Webentwicklung",
+  "category": "Entwicklung",
+  "tagline": "Webentwicklung für Geschwindigkeit, Suchmaschinen und Conversions, die sich summieren.",
+  "description": "Hochperformante Websites und Webanwendungen, gebaut für Geschwindigkeit, SEO und Conversion. Moderne Frameworks, Responsive Design und eine Architektur, die Traffic ohne Ausfälle bewältigt.",
+  "heroImage": "/assets/images/web-development-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Core Web Vitals optimieren",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Statische Seiten generieren",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Auf Edge deployen",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "API-Antwort cachen",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Bilder komprimieren",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Navigation vorab laden",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Nutzerfluss analysieren",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Schnell. SEO-ready. Wandelt Besucher in Kunden. Das ist unsere Webentwicklungs-Basis.",
+    "content": "Wir bauen Websites, die schnell laden, hoch ranken und Besucher zu Kunden machen. Jede Website wird mit optimierten Core Web Vitals, Mobile-First-Responsive-Design und SEO-Best-Practices ausgeliefert, die von Anfang an integriert sind und nicht nachträglich aufgesetzt werden. Das Ergebnis: organischer Traffic, der tatsächlich konvertiert, Ladezeiten, die die Konkurrenz schlagen, und eine Infrastruktur, die mitwächst."
+  },
+  "stats": [
+    {
+      "value": "<1s",
+      "label": "Ladezeit",
+      "description": "LCP-Ziel erreicht"
+    },
+    {
+      "value": "95+",
+      "label": "PageSpeed-Score",
+      "description": "mobile Performance"
+    },
+    {
+      "value": "40%",
+      "label": "Conversion-Steigerung",
+      "description": "Ø nach Relaunch"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeit",
+      "description": "Edge-Deployment"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Schnell laden auf jedem Gerät, bei jeder Verbindung",
+      "description": "Ladezeiten unter einer Sekunde durch statische Generierung, Edge-Caching und optimierte Assets. Mobile Besucher warten nicht – sie konvertieren. Wir optimieren auf Core Web Vitals, weil Google schnelle Websites besser rankt."
+    },
+    {
+      "icon": "workflow",
+      "title": "Besser ranken mit integriertem technischem SEO",
+      "description": "Sauberes semantisches HTML, strukturierte Daten, Meta-Tags und Crawlbarkeit von Anfang an. Wir bauen nicht erst und beheben SEO später – die Suchmaschinenoptimierung ist Teil der Architektur."
+    },
+    {
+      "icon": "integrate",
+      "title": "Auf Millionen von Besuchern skalieren, ohne die Plattform zu wechseln",
+      "description": "Eine JAMstack-Architektur mit CDN-Verteilung bewältigt Traffic-Spitzen problemlos. Keine Planung von Serverkapazitäten, keine Notfall-Skalierung – nur schnelle Seiten, direkt vom Edge ausgeliefert."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "marketing-sites",
+      "title": "Marketing-Websites",
+      "headline": "Marketing-Websites",
+      "description": "Unternehmenswebsites, Produktmarketing und Landingpages, optimiert auf Conversion. Schnell ladend, SEO-ready und in Ihren Marketing-Stack integriert.",
+      "features": [
+        "Conversion-Optimierung",
+        "A/B-Test-fähig",
+        "Analytics-Integration",
+        "CMS-Integration"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "e-commerce",
+      "title": "E-Commerce",
+      "headline": "E-Commerce-Websites",
+      "description": "Onlineshops, gebaut für Performance und Conversion. Schnelle Produktseiten, optimierter Checkout und Anbindung an Lager- und Versandsysteme.",
+      "features": [
+        "Schnelle Produktseiten",
+        "Warenkorb-Optimierung",
+        "Zahlungsanbindung",
+        "Bestandsabgleich"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "web-apps",
+      "title": "Web-Apps",
+      "headline": "Webanwendungen",
+      "description": "Interaktive Webanwendungen mit komplexen Oberflächen und Echtzeit-Funktionen. Single-Page-Apps, Dashboards und Tools, die sich im Browser wie native Anwendungen anfühlen.",
+      "features": [
+        "Umfassende Interaktivität",
+        "Echtzeit-Updates",
+        "Offline-Unterstützung",
+        "Progressive Web App"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "content-platforms",
+      "title": "Content-Plattformen",
+      "headline": "Content-Plattformen",
+      "description": "Blogs, Dokumentationsseiten und Content-Hubs, optimiert für SEO. Statische Generierung für Geschwindigkeit, CMS-Integration für einfaches Bearbeiten.",
+      "features": [
+        "SEO-Optimierung",
+        "Schnelle Ladezeiten",
+        "CMS-Integration",
+        "Content-Workflows"
+      ],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "portal-development",
+      "title": "Portale",
+      "headline": "Kundenportale",
+      "description": "Portale mit Anmeldung für Kunden, Partner oder Mitarbeitende. Self-Service-Kontoverwaltung, Dokumentenzugriff und personalisierte Dashboards.",
+      "features": [
+        "Sichere Authentifizierung",
+        "Self-Service-Funktionen",
+        "Dokumentenverwaltung",
+        "Rollenbasierter Zugriff"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Analyse",
+      "description": "Ziele, Zielgruppe und Content-Bedarf verstehen. Performance, SEO und Conversion-Funnels der bestehenden Website prüfen.",
+      "duration": "1 Woche",
+      "deliverables": [
+        "Website-Audit",
+        "Content-Inventar",
+        "Technische Anforderungen"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Responsive Layouts, Komponentensysteme und Nutzerflüsse gestalten. Performance-orientiertes Design, das großartig aussieht, ohne Geschwindigkeit zu opfern.",
+      "duration": "2-3 Wochen",
+      "deliverables": [
+        "Designsystem",
+        "Seitenlayouts",
+        "Interaktiver Prototyp"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Umsetzung",
+      "description": "Entwicklung mit modernen Frameworks, Optimierung auf Core Web Vitals sowie Integration von CMS und Drittanbieter-Diensten.",
+      "duration": "4-8 Wochen",
+      "deliverables": [
+        "Produktiv-Website",
+        "CMS-Einrichtung",
+        "SEO-Umsetzung"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Launch",
+      "description": "Deployment im Edge-Netzwerk, Monitoring einrichten und anhand echter Nutzerdaten optimieren. Laufende Performance-Optimierung und Content-Support.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Live-Website",
+        "Analytics-Einrichtung",
+        "Performance-Monitoring"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "React-Framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Tailwind",
+      "category": "Styling",
+      "description": "CSS-Framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+    },
+    {
+      "name": "Vercel",
+      "category": "Plattform",
+      "description": "Edge-Hosting",
+      "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+    },
+    {
+      "name": "Sanity",
+      "category": "CMS",
+      "description": "Headless CMS",
+      "logo": "https://cdn.worldvectorlogo.com/logos/sanity.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Sprache",
+      "description": "Typsicherheit",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "Cloudflare",
+      "category": "CDN",
+      "description": "Edge-Netzwerk",
+      "logo": "https://cdn.worldvectorlogo.com/logos/cloudflare.svg"
+    },
+    {
+      "name": "Framer Motion",
+      "category": "Animation",
+      "description": "Motion Design",
+      "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+    },
+    {
+      "name": "Algolia",
+      "category": "Suche",
+      "description": "Website-Suche",
+      "logo": "https://cdn.worldvectorlogo.com/logos/algolia.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Warum ist die Seitengeschwindigkeit für den Geschäftserfolg wichtig?",
+      "answer": "Geschwindigkeit wirkt sich direkt auf die Conversion aus: Eine Sekunde Verzögerung senkt die Conversions um 7 %. Google rankt schnellere Websites höher, was den organischen Traffic verbessert. Und schnelle Websites senken die Absprungrate – Nutzer bleiben, stöbern und konvertieren. Performance ist keine technische Spielerei, sondern eine Geschäftskennzahl."
+    },
+    {
+      "question": "Welches CMS empfehlen Sie für Marketing-Websites?",
+      "answer": "Für Marketing-Teams, die Flexibilität brauchen, empfehlen wir in der Regel Headless-CMS wie Sanity, Contentful oder Storyblok. Bei einfacheren Anforderungen arbeiten wir auch mit WordPress (headless) oder Static-Site-Generatoren. Die richtige Wahl hängt von Ihrem Content-Workflow und Ihrer technischen Erfahrung ab."
+    },
+    {
+      "question": "Wie gehen Sie bei Mobile-First-Design vor?",
+      "answer": "Wir gestalten zuerst für Mobilgeräte und erweitern dann für größere Bildschirme. So ist die mobile Erfahrung schnell und gut nutzbar – keine verkleinerte Desktop-Website. Da über 60 % des Traffics von mobilen Geräten kommt, ist Mobile-First keine Option, sondern Pflicht."
+    },
+    {
+      "question": "Können Sie unsere bestehende Website migrieren, ohne SEO-Einbußen?",
+      "answer": "Ja. Wir planen Migrationen sorgfältig: Alle URLs werden erfasst, korrekte Weiterleitungen eingerichtet, Metadaten erhalten und die Rankings nach dem Launch überwacht. Die meisten gut geplanten Migrationen bleiben kurzfristig stabil und legen langfristig zu, da die verbesserte Performance dem SEO zugutekommt."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen einer Website und einer Web-App?",
+      "answer": "Websites sind in erster Linie inhaltsorientiert (Marketing-Websites, Blogs, E-Commerce). Web-Apps sind funktionsorientiert (Dashboards, Tools, interaktive Funktionen). Die Technologie überschneidet sich oft, aber die Designprioritäten unterscheiden sich. Viele Projekte kombinieren beides – eine Marketing-Website mit einem Bereich für angemeldete Nutzer."
+    }
+  ],
+  "relatedServices": [
+    "custom-software",
+    "aeo-seo",
+    "app-development"
+  ],
+  "cta": {
+    "headline": "Bereit für eine schnellere Website mit höherer Conversion?",
+    "description": "Lassen Sie uns die Performance Ihrer aktuellen Website prüfen und Verbesserungen planen. Wir zeigen Ihnen genau, wo Sie Besucher verlieren und wie Sie das beheben.",
+    "primaryButton": {
+      "text": "Website-Audit anfragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Unsere Arbeiten ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "prime-tiles",
+    "khushbu-nirman-sewa",
+    "khems-cleaning"
+  ],
+  "metaTitle": "Webentwicklung: Hochperformante Websites & Apps | Zunkiree Labs",
+  "metaDescription": "Hochperformante Websites, optimiert für Geschwindigkeit, SEO und Conversion. Ladezeiten unter einer Sekunde, 95+ PageSpeed-Score und skalierbare Architektur."
+}

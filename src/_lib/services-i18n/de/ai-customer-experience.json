@@ -1,0 +1,313 @@
+{
+  "id": "ai-customer-experience",
+  "relatedCaseStudies": [
+    {
+      "slug": "admizz-case-study",
+      "title": "Admizz Education",
+      "stat": "45 % schnellere Antwortzeiten"
+    },
+    {
+      "slug": "khems-cleaning-case-study",
+      "title": "Khems Cleaning",
+      "stat": "70 % mehr Buchungen"
+    }
+  ],
+  "title": "KI im Kundenerlebnis",
+  "category": "KI & Daten",
+  "tagline": "Klassischer Support wächst mit der Mitarbeiterzahl. KI-Support nicht.",
+  "description": "KI-gestützte Customer-Experience-Systeme, die Anfragen sofort lösen, komplexe Fälle intelligent weiterleiten und aus jeder Interaktion lernen. Wir bauen eine Support-Infrastruktur, die skaliert, ohne dass die Mitarbeiterzahl mitwächst.",
+  "heroImage": "/assets/images/ai-customer-experience-hero.webp",
+  "heroBgColor": "#efefef",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Kundenanfrage lösen",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "An Spezialisten weiterleiten",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Stimmung analysieren",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Antwort generieren",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Wissensdatenbank aktualisieren",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "An Mitarbeitende eskalieren",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Lösungszeit erfassen",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "80 % der Tickets lösen – ohne eine einzige Übergabe an Menschen.",
+    "content": "Wir bauen KI-Systeme, die die 80 % der Anfragen bearbeiten, die kein menschliches Eingreifen erfordern – präzise. Unsere Plattformen integrieren sich in Ihren Support-Stack, lösen Abrechnungs- und Statusanfragen in Sekunden und leiten komplexe Fälle mit vollständigem Kontext weiter. Die CSAT-Werte steigen. Das Ticketvolumen sinkt. Ihr Team konzentriert sich auf das Wesentliche."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Weniger Tickets",
+      "description": "durch Self-Service-KI"
+    },
+    {
+      "value": "< 30s",
+      "label": "Ø Antwortzeit",
+      "description": "gegenüber über 4 Std. im Branchendurchschnitt"
+    },
+    {
+      "value": "92%",
+      "label": "Lösungsquote",
+      "description": "ohne Übergabe an Menschen"
+    },
+    {
+      "value": "4.8/5",
+      "label": "CSAT-Wert",
+      "description": "Ø nach der Implementierung"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Sofortige Lösung zu jeder Tageszeit",
+      "description": "KI bearbeitet Anfragen rund um die Uhr mit gleichbleibender Genauigkeit. Kunden erhalten sofort Antworten zu Abrechnungsfragen, Bestellstatus, Passwort-Zurücksetzungen und Produktfragen – ohne Warteschlange, ohne Wartezeit, ohne Frust."
+    },
+    {
+      "icon": "workflow",
+      "title": "Komplexe Fälle an die richtigen Expertinnen und Experten weiterleiten",
+      "description": "Kann die KI ein Anliegen nicht lösen, leitet sie es intelligent weiter – und erfasst dabei Kontext, Stimmung und Dringlichkeit, damit Mitarbeitende alles Nötige für eine schnelle Lösung haben. Kein Kunde muss sich wiederholen."
+    },
+    {
+      "icon": "integrate",
+      "title": "Aus jeder Interaktion lernen",
+      "description": "Unsere Systeme verbessern sich kontinuierlich. Jedes gelöste Ticket, jedes Feedback-Signal und jedes erfolgreiche Ergebnis trainiert das Modell, ähnliche Fälle besser zu bearbeiten. Ihre KI wird jede Woche klüger."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "support-automation",
+      "title": "Support-Automatisierung",
+      "headline": "Intelligente Support-Automatisierung",
+      "description": "Tier-1-Support mit KI automatisieren, die Ihre Produkte, Richtlinien und Abläufe versteht. Retouren, Erstattungen, Kontoänderungen und gängige Fehlerbehebung ohne menschliches Eingreifen.",
+      "features": [
+        "Verständnis natürlicher Sprache",
+        "Mehrstufige Dialoge",
+        "Richtlinienkonforme Antworten",
+        "Automatische Eskalation"
+      ],
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "omnichannel",
+      "title": "Omnichannel",
+      "headline": "Omnichannel-Erlebnis",
+      "description": "Einheitlicher KI-gestützter Support über E-Mail, Chat, SMS, Social Media und Sprache. Ein einziger Kundenkontext über alle Kanäle hinweg – keine zerstückelten Gespräche, keine wiederholten Erklärungen.",
+      "features": [
+        "Einheitliche Kundensicht",
+        "Kanalunabhängige KI",
+        "Nahtlose Übergaben",
+        "Durchgängige Gesprächsführung"
+      ],
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "proactive-support",
+      "title": "Proaktiv",
+      "headline": "Proaktiver Kundensupport",
+      "description": "Probleme vorhersagen, bevor Kunden sie melden. Nutzungsmuster überwachen, Anomalien erkennen und proaktiv Kontakt aufnehmen, um Abwanderung und Eskalationen zu verhindern.",
+      "features": [
+        "Nutzungsüberwachung",
+        "Anomalieerkennung",
+        "Proaktive Ansprache",
+        "Abwanderungsprävention"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "agent-assist",
+      "title": "Agent Assist",
+      "headline": "KI-Unterstützung für Support-Mitarbeitende",
+      "description": "Menschliche Mitarbeitende mit KI-Vorschlägen in Echtzeit, Wissensabruf und Antwortentwürfen unterstützen. Die Bearbeitungszeit sinkt, die Lösungsqualität steigt.",
+      "features": [
+        "Vorschläge in Echtzeit",
+        "Wissensabruf",
+        "Antwortentwürfe",
+        "Qualitätssicherung"
+      ],
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "voice-ai",
+      "title": "Voice AI",
+      "headline": "Voice-AI-Systeme",
+      "description": "IVR-Menübäume durch Konversations-KI ersetzen, die natürliche Sprache versteht. Anrufe intelligent weiterleiten, einfache Anliegen automatisch bearbeiten, Termine telefonisch buchen und verwalten und das Callcenter entlasten.",
+      "features": [
+        "Spracherkennung",
+        "Intent-Erkennung",
+        "Anrufweiterleitung",
+        "Sprachauthentifizierung",
+        "Sprachgesteuerte Terminbuchung"
+      ],
+      "image": "https://images.unsplash.com/photo-1590935217281-8f102120d683?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Audit",
+      "description": "Analyse Ihres aktuellen Supportbetriebs. Ticketkategorien, Antwortmuster und Lösungsabläufe werden erfasst, um Automatisierungspotenziale zu identifizieren.",
+      "duration": "1–2 Wochen",
+      "deliverables": [
+        "Support-Auditbericht",
+        "Automatisierungs-Roadmap",
+        "ROI-Prognose"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Gesprächsabläufe, Eskalationslogik und Integrationspunkte entwerfen. Wissensdatenbank aufbauen und erste Modelle mit Ihrer Dokumentation trainieren.",
+      "duration": "2–3 Wochen",
+      "deliverables": [
+        "Gesprächsdesign",
+        "Integrationsarchitektur",
+        "Trainingsdaten"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Deployment",
+      "description": "KI parallel zu den bestehenden Support-Kanälen starten. Genauigkeit überwachen, Feedback sammeln und anhand echter Kundeninteraktionen schnell iterieren.",
+      "duration": "4–6 Wochen",
+      "deliverables": [
+        "Live-KI-System",
+        "Monitoring-Dashboard",
+        "Schulung der Mitarbeitenden"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Optimierung",
+      "description": "Kontinuierliche Verbesserung auf Basis von Lösungsdaten. Abdeckung erweitern, Genauigkeit verbessern und Eskalationsraten im Zeitverlauf senken.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Wöchentliche Berichte",
+        "Modell-Updates",
+        "Erweiterung der Abdeckung"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4 Turbo",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "Intercom",
+      "category": "Plattform",
+      "description": "Kundenkommunikation",
+      "logo": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+    },
+    {
+      "name": "Zendesk",
+      "category": "Plattform",
+      "description": "Helpdesk",
+      "logo": "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg"
+    },
+    {
+      "name": "Twilio",
+      "category": "Sprache",
+      "description": "Sprache & SMS",
+      "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg"
+    },
+    {
+      "name": "Segment",
+      "category": "Daten",
+      "description": "Kundendaten",
+      "logo": "https://cdn.worldvectorlogo.com/logos/segment-1.svg"
+    },
+    {
+      "name": "Python",
+      "category": "Programmiersprache",
+      "description": "Backend-Logik",
+      "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    },
+    {
+      "name": "Redis",
+      "category": "Cache",
+      "description": "Sitzungsstatus",
+      "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastruktur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie wirkt sich KI-Kundensupport auf die Kundenzufriedenheit aus?",
+      "answer": "Richtig umgesetzt, steigert KI die Zufriedenheit, indem sie Wartezeiten eliminiert und sofortige, präzise Antworten liefert. Unsere Implementierungen erreichen im Durchschnitt einen CSAT-Wert von 4,8/5 – höher als bei reinem Support durch Menschen. Entscheidend ist, eine KI zu bauen, die ihre Grenzen kennt und bei Bedarf sauber eskaliert."
+    },
+    {
+      "question": "Welchen Anteil der Support-Tickets kann KI tatsächlich lösen?",
+      "answer": "Typischerweise sind 60–80 % der Tier-1-Tickets automatisierbar: Passwort-Zurücksetzungen, Bestellstatus, Abrechnungsfragen, Retourenanfragen und grundlegende Fehlerbehebung. Komplexe technische Probleme, emotionale Situationen und Sonderfälle erfordern weiterhin menschliche Mitarbeitende – doch auch diese kann die KI unterstützen."
+    },
+    {
+      "question": "Wie lange dauert es, die KI auf unsere Produkte und Richtlinien zu trainieren?",
+      "answer": "Das Erst-Training dauert 2–3 Wochen und nutzt Ihre vorhandene Dokumentation, Hilfeartikel und Ticket-Historie. Die KI lernt aus jeder Interaktion weiter, sodass die Genauigkeit mit der Zeit steigt. Die meisten Kunden erreichen innerhalb des ersten Monats nach dem Start eine Genauigkeit von über 85 %."
+    },
+    {
+      "question": "Ersetzt KI unser Support-Team?",
+      "answer": "KI bewältigt das Volumen, damit sich Ihr Team auf komplexe Anliegen, Beziehungspflege und hochwertige Interaktionen konzentrieren kann. Die meisten Kunden reduzieren ihren Personalbestand nicht – sie bewältigen mit demselben Team das 3- bis 5-Fache an Volumen und verbessern dabei Antwortqualität und Mitarbeiterzufriedenheit."
+    },
+    {
+      "question": "Wie gehen Sie mit sensiblen Kundendaten um?",
+      "answer": "Wir arbeiten innerhalb Ihres bestehenden Sicherheitsperimeters. Die Daten bleiben in Ihrer Umgebung, Modelle können On-Premise oder in Ihrer Cloud laufen, und wir unterstützen die Einhaltung von SOC 2, HIPAA und DSGVO. Die KI wird nie ohne ausdrückliche Einwilligung mit Kundendaten trainiert."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "custom-software",
+    "data-systems"
+  ],
+  "cta": {
+    "headline": "Bereit, Ihren Kundensupport zu transformieren?",
+    "description": "Erfahren Sie, wie KI Ihr Support-Volumen bewältigt und gleichzeitig die Zufriedenheitswerte steigert. Wir prüfen Ihren aktuellen Betrieb und zeigen Ihnen genau, was sich automatisieren lässt.",
+    "primaryButton": {
+      "text": "Support-Audit vereinbaren",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Fallstudien ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "admizz",
+    "prime-tiles",
+    "khems-cleaning"
+  ],
+  "heroAlt": "Hero-Bild zu Kundenerlebnis und KI-Technologie",
+  "metaTitle": "KI im Kundenerlebnis: Intelligente Support-Systeme | Zunkiree Labs",
+  "metaDescription": "Kundensupport mit KI, die Anfragen sofort löst. Support-Tickets um 40 % senken und die Zufriedenheit steigern. Intelligente Automatisierung rund um die Uhr."
+}

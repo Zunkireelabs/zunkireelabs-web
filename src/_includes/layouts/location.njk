@@ -112,6 +112,13 @@ layout: base.njk
           {{ location.intro }}
         </p>
 
+        {% if location.answer %}
+        <div class="mt-6 max-w-[540px] rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+          <span class="mb-2 block font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]">In short</span>
+          <p class="text-[15px] leading-relaxed text-[#374151]">{{ location.answer }}</p>
+        </div>
+        {% endif %}
+
         {# CTAs #}
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <a

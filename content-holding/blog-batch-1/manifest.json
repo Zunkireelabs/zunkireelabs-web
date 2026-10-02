@@ -1,0 +1,1163 @@
+{
+  "generatedAt": "2026-10-02",
+  "source": "Action Center blog-outline batch (job 7676)",
+  "note": "HELD - not published. Outside src/ so Eleventy ignores it. Reversible: move files back into src/blog/. The 12 \"localize\" posts were cleaned (deletion-only: competitor paragraphs, 45% claim sentences, empty headings) and COPIED to src/<locale>/blog/; the originals remain here untouched.",
+  "posts": [
+    {
+      "file": "how-to-find-ai-companies-in-kathmandu.md",
+      "class": "consolidate",
+      "into": "/blog/ai-companies-based-in-kathmandu/",
+      "why": "A tracked post already targets AI companies in Kathmandu.",
+      "flags": [],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "Generic how-to filler; no named, sourced facts the target lacks. Nothing was added to /blog/ai-companies-based-in-kathmandu/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "identifying-the-best-it-company-in-nepal-a-comprehensive-overview.md",
+      "class": "consolidate",
+      "into": "/blog/top-tech-companies-nepal-2026/",
+      "why": "Same intent as the ranking page: all best/top IT company in Nepal queries already land there (GSC 90d).",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "Self-promotional superlatives with no criteria or sources; target already a 3,875-word ranked list. Nothing was added to /blog/top-tech-companies-nepal-2026/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "key-players-in-the-tech-industry-in-nepal.md",
+      "class": "consolidate",
+      "into": "/blog/top-tech-companies-nepal-2026/",
+      "why": "Company-list intent already served by the ranking page.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "Names (F1Soft Technologies, FonePay, Infodevelopers) appear without sources or details. Nothing was added to /blog/top-tech-companies-nepal-2026/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "leading-companies-in-ai-innovation-in-nepal.md",
+      "class": "consolidate",
+      "into": "/blog/top-ai-companies-nepal-2026/",
+      "why": "AI-company-list intent served by the consolidated 2026 page.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "\"Deerhold\" is unverified and likely a misnaming; nothing else the target lacks. Nothing was added to /blog/top-ai-companies-nepal-2026/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "rising-tech-startups-in-nepal-you-should-know-about.md",
+      "class": "consolidate",
+      "into": "/blog/rising-tech-startups-in-nepal-innovating-for-the-future/",
+      "why": "A tracked post already targets Nepal tech startups.",
+      "flags": [],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "Daraz, Khalti, SastoDeal listed without sources; Daraz/Khalti are established firms, not \"rising\". Nothing was added to /blog/rising-tech-startups-in-nepal-innovating-for-the-future/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "top-it-companies-based-in-nepal-a-comprehensive-overview.md",
+      "class": "consolidate",
+      "into": "/blog/top-tech-companies-nepal-2026/",
+      "why": "Same intent as the ranking page.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "decision": "no-merge",
+      "decisionReason": "\"Techsansar\" is unverified; the rest is generic. Nothing was added to /blog/top-tech-companies-nepal-2026/. Never published, so no redirect is needed.",
+      "status": "held"
+    },
+    {
+      "file": "ai-applications-in-healthcare-transforming-the-uk-medical-landscape.md",
+      "class": "hold",
+      "market": "GB",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template; unsourced NHS claim.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/ai-in-uk-healthcare-what-to-check-before-you-buy.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "ai-infrastructure-solutions-in-canada-the-future-of-technology-integration.md",
+      "class": "hold",
+      "market": "CA",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template; no Canadian substance.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/ai-infrastructure-in-canada-the-privacy-rules-behind-the-decision.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "ai-solutions-for-education-in-the-uk-transforming-learning-environments.md",
+      "class": "hold",
+      "market": "GB",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/generative-ai-in-uk-schools-what-the-dfe-guidance-says.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "data-engineering-solutions-in-australia-driving-innovation-with-zunkiree-labs.md",
+      "class": "hold",
+      "market": "AU",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/data-engineering-in-australia-the-privacy-act-in-practice.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "enterprise-software-development-in-the-uk-innovating-business-solutions.md",
+      "class": "hold",
+      "market": "GB",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/choosing-a-software-development-partner-in-the-uk.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "enterprise-software-solutions-for-healthcare-transforming-care-delivery-with-zunkiree-labs.md",
+      "class": "hold",
+      "why": "Unsourced Australian-client, HIPAA and result claims.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "omitted",
+      "decisionReason": "Relies on unsourced Australian-client, HIPAA and outcome claims and has no market anchor; the researched UK healthcare article covers the subject with sources. Omitted."
+    },
+    {
+      "file": "enterprise-software-solutions-in-canada-driving-business-success.md",
+      "class": "hold",
+      "market": "CA",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/enterprise-software-for-canadian-businesses-questions-before-you-sign.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "enterprise-software-solutions-in-the-netherlands-elevating-business-operations-with-zunkiree-labs.md",
+      "class": "hold",
+      "market": "NL",
+      "lang": "en",
+      "why": "Valid market (configured) but country-swap template.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/enterprise-software-in-the-netherlands-gdpr-and-the-eu-ai-act.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "exploring-ai-infrastructure-providers-in-the-uk-what-you-need-to-know.md",
+      "class": "hold",
+      "market": "GB",
+      "lang": "en",
+      "why": "Lists Nepali firms (CloudFactory, F1Soft) as UK competitors.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/uk-ai-infrastructure-providers-a-data-protection-checklist.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "finding-the-right-software-development-firm-in-nepal-why-zunkiree-labs-stands-out.md",
+      "class": "hold",
+      "why": "Overlaps tracked finding-the-best-it-company-in-nepal-for-software-development; names unverified firms.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "omitted",
+      "decisionReason": "Duplicates the tracked post \"Finding the best IT company in Nepal for software development\" and names unverified firms. Omitted."
+    },
+    {
+      "file": "why-zunkiree-labs-is-the-leading-it-company-in-nepal.md",
+      "class": "hold",
+      "why": "Unsourced superlative (\"leading/best\"), reuses the Admizz 45% figure; brand-intent page needs real proof points.",
+      "flags": [
+        "reuses-admizz-45pct-claim"
+      ],
+      "date": "2026-10-02",
+      "status": "omitted",
+      "decisionReason": "A \"leading / best IT company\" claim cannot be proven, and the post reuses the Admizz figure as a general result. Omitted."
+    },
+    {
+      "file": "why-zunkiree-labs-is-the-premier-cloud-solutions-provider-in-canada.md",
+      "class": "hold",
+      "market": "CA",
+      "lang": "en",
+      "why": "Lists Nepali firms as Canadian competitors.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "replacedBy": "src/blog/cloud-solutions-in-canada-where-your-data-is-processed.md",
+      "decisionReason": "Country-swap template replaced by a researched article built only from regulator statements verified on 2 October 2026 (cited in the post). The original stays here, unpublished."
+    },
+    {
+      "file": "affordable-ai-technology-solutions-for-businesses-worldwide.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "rewritten-and-published",
+      "localizedAs": "src/blog/affordable-ai-technology-solutions-for-businesses-worldwide.md",
+      "cleanup": {
+        "wordsBefore": 1000,
+        "wordsAfter": 436,
+        "removed": 27,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 14,
+          "unverifiable product adjective": 1,
+          "unverifiable self-promotion/assurance": 2,
+          "dangling reference": 4,
+          "orca-not-established-or-repeat": 1,
+          "unsupported result/claim": 1,
+          "unsupported comparison with other providers": 1,
+          "competitor": 1,
+          "guarantee": 1,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 1
+        }
+      },
+      "decisionReason": "Rewritten from scratch on 2026-10-02 from published sources (no claims from the original draft kept); now in src/blog/."
+    },
+    {
+      "file": "ai-ethics-and-governance-the-cornerstone-of-responsible-innovation.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "localizedAs": "src/blog/ai-ethics-and-governance-the-cornerstone-of-responsible-innovation.md",
+      "cleanup": {
+        "wordsBefore": 1171,
+        "wordsAfter": 1067,
+        "removed": 6,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 3,
+          "dangling reference": 2,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      },
+      "replacedBy": "src/blog/ethical-ai-principles-risks-and-how-organizations-apply-them.md",
+      "decisionReason": "Replaced by the Ethical AI pillar article (sourced to UNESCO, OECD and NIST) so the site has one authoritative ethics page instead of two competing ones."
+    },
+    {
+      "file": "ai-solutions-for-education-in-nepal-transforming-learning-experiences.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [
+        "reuses-admizz-45pct-claim"
+      ],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/ai-solutions-for-education-in-nepal-transforming-learning-experiences.md",
+      "cleanup": {
+        "wordsBefore": 912,
+        "wordsAfter": 527,
+        "removed": 17,
+        "byReason": {
+          "unsourced Nepal-market assertion": 7,
+          "orca-not-established-or-repeat": 1,
+          "dangling reference": 2,
+          "statement about Zunkiree not established on the site": 5,
+          "unsupported result/claim": 1,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 1
+        }
+      }
+    },
+    {
+      "file": "ai-training-programs-in-nepal-empowering-the-future-of-tech.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/ai-training-programs-in-nepal-empowering-the-future-of-tech.md",
+      "cleanup": {
+        "wordsBefore": 1167,
+        "wordsAfter": 615,
+        "removed": 23,
+        "byReason": {
+          "unsourced Nepal-market assertion": 11,
+          "promotional superlative": 4,
+          "dangling reference": 4,
+          "named-institution/client/unverified-product": 1,
+          "statement about Zunkiree not established on the site": 3
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "best-programming-languages-for-the-tech-industry-in-nepal.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/best-programming-languages-for-the-tech-industry-in-nepal.md",
+      "cleanup": {
+        "wordsBefore": 933,
+        "wordsAfter": 498,
+        "removed": 18,
+        "byReason": {
+          "unsourced Nepal-market assertion": 8,
+          "dangling reference": 3,
+          "statement about Zunkiree not established on the site": 5,
+          "promotional superlative": 1,
+          "unverifiable product adjective": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "harnessing-business-intelligence-in-nepal-a-digital-transformation-journey.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/harnessing-business-intelligence-in-nepal-a-digital-transformation-journey.md",
+      "cleanup": {
+        "wordsBefore": 1037,
+        "wordsAfter": 932,
+        "removed": 7,
+        "byReason": {
+          "unsourced Nepal-market assertion": 3,
+          "statement about Zunkiree not established on the site": 1,
+          "unverifiable product adjective": 1,
+          "dangling reference": 1,
+          "unverifiable self-promotion/assurance": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "harnessing-pre-built-ai-applications-for-business-growth-in-nepal.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/harnessing-pre-built-ai-applications-for-business-growth-in-nepal.md",
+      "cleanup": {
+        "wordsBefore": 1113,
+        "wordsAfter": 532,
+        "removed": 21,
+        "byReason": {
+          "unsourced Nepal-market assertion": 5,
+          "statement about Zunkiree not established on the site": 11,
+          "named-institution/client/unverified-product": 1,
+          "dangling reference": 1,
+          "sector not established": 2,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "navigating-virtual-assistant-pricing-in-healthcare-a-comprehensive-guide.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/navigating-virtual-assistant-pricing-in-healthcare-a-comprehensive-guide.md",
+      "cleanup": {
+        "wordsBefore": 1061,
+        "wordsAfter": 922,
+        "removed": 7,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 3,
+          "unsupported result/claim": 1,
+          "dangling reference": 1,
+          "unverifiable self-promotion/assurance": 1,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "revolutionizing-dentistry-the-role-of-ai-in-dental-imaging-technology.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/revolutionizing-dentistry-the-role-of-ai-in-dental-imaging-technology.md",
+      "cleanup": {
+        "wordsBefore": 906,
+        "wordsAfter": 680,
+        "removed": 13,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 9,
+          "unverifiable product adjective": 1,
+          "dangling reference": 1,
+          "unverifiable self-promotion/assurance": 1,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "revolutionizing-orthodontics-with-ai-tools.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/revolutionizing-orthodontics-with-ai-tools.md",
+      "cleanup": {
+        "wordsBefore": 1022,
+        "wordsAfter": 938,
+        "removed": 5,
+        "byReason": {
+          "promotional superlative": 1,
+          "dangling reference": 2,
+          "statement about Zunkiree not established on the site": 2
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "the-future-of-ai-solutions-and-development-with-zunkiree-labs.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "rewritten-and-published",
+      "localizedAs": "src/blog/the-future-of-ai-solutions-and-development-with-zunkiree-labs.md",
+      "cleanup": {
+        "wordsBefore": 965,
+        "wordsAfter": 326,
+        "removed": 29,
+        "byReason": {
+          "unsupported result/claim": 3,
+          "statement about Zunkiree not established on the site": 15,
+          "named-institution/client/unverified-product": 1,
+          "dangling reference": 1,
+          "unverifiable product adjective": 1,
+          "orca-not-established-or-repeat": 4,
+          "unverifiable self-promotion/assurance": 1,
+          "competitor": 2,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 3,
+          "dropped": 4
+        }
+      },
+      "decisionReason": "Rewritten from scratch on 2026-10-02 from published sources (no claims from the original draft kept); now in src/blog/."
+    },
+    {
+      "file": "the-impact-of-technology-on-the-nepalese-economy.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "rewritten-and-published",
+      "localizedAs": "src/blog/the-impact-of-technology-on-the-nepalese-economy.md",
+      "cleanup": {
+        "wordsBefore": 998,
+        "wordsAfter": 824,
+        "removed": 9,
+        "byReason": {
+          "unsourced Nepal-market assertion": 9
+        }
+      },
+      "decisionReason": "Rewritten from scratch on 2026-10-02 from published sources (no claims from the original draft kept); now in src/blog/."
+    },
+    {
+      "file": "the-role-of-ai-in-cloud-computing-transforming-businesses-globally.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/the-role-of-ai-in-cloud-computing-transforming-businesses-globally.md",
+      "cleanup": {
+        "wordsBefore": 971,
+        "wordsAfter": 787,
+        "removed": 9,
+        "byReason": {
+          "unverifiable self-promotion/assurance": 2,
+          "dangling reference": 2,
+          "orca-not-established-or-repeat": 1,
+          "statement about Zunkiree not established on the site": 2,
+          "unsupported result/claim": 1,
+          "promotional superlative": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 1
+        }
+      }
+    },
+    {
+      "file": "unlocking-business-potential-with-orchestrated-agent-workflows.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/unlocking-business-potential-with-orchestrated-agent-workflows.md",
+      "cleanup": {
+        "wordsBefore": 882,
+        "wordsAfter": 531,
+        "removed": 19,
+        "byReason": {
+          "orca-not-established-or-repeat": 4,
+          "claim attached to an Orca sentence": 2,
+          "unverifiable self-promotion/assurance": 7,
+          "sector not established": 2,
+          "promotional superlative": 1,
+          "competitor": 1,
+          "unsupported comparison with other providers": 1,
+          "dangling reference": 1
+        },
+        "orca": {
+          "rewritten": 4,
+          "dropped": 4
+        }
+      },
+      "decisionReason": "Only 377 words remain after removing unverifiable claims (min 400)."
+    },
+    {
+      "file": "unlocking-potential-how-google-cloud-ai-is-transforming-industries.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/unlocking-potential-how-google-cloud-ai-is-transforming-industries.md",
+      "cleanup": {
+        "wordsBefore": 1023,
+        "wordsAfter": 740,
+        "removed": 12,
+        "byReason": {
+          "unsupported result/claim": 1,
+          "dangling reference": 3,
+          "promotional superlative": 3,
+          "statement about Zunkiree not established on the site": 2,
+          "orca-not-established-or-repeat": 2,
+          "unverifiable self-promotion/assurance": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 2
+        }
+      }
+    },
+    {
+      "file": "why-invest-in-robust-ai-infrastructure-solutions-for-your-business.md",
+      "class": "keep",
+      "why": "Distinct intent; needs claim review before publishing.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/why-invest-in-robust-ai-infrastructure-solutions-for-your-business.md",
+      "cleanup": {
+        "wordsBefore": 908,
+        "wordsAfter": 555,
+        "removed": 17,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 8,
+          "dangling reference": 3,
+          "unverifiable product adjective": 1,
+          "promotional superlative": 3,
+          "unverifiable self-promotion/assurance": 1,
+          "unsupported result/claim": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "ai-entwicklungsdienstleistungen-in-der-schweiz-zunkiree-labs-bietet-l-sungen-f-r-jedes-unternehmen.md",
+      "class": "localize",
+      "market": "CH",
+      "lang": "de-CH",
+      "why": "Swiss market + German language configured; copy uses de-DE spelling (ß) and needs de-CH pass.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "cleanup": {
+        "wordsBefore": 873,
+        "wordsAfter": 287,
+        "removed": 27,
+        "byReason": {
+          "promotional/unverifiable claim": 7,
+          "statement about Zunkiree not established on the site": 14,
+          "dangling reference": 4,
+          "orca-not-established-or-repeat": 1,
+          "competitor": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 1
+        }
+      },
+      "status": "replaced",
+      "decisionReason": "Rebuilt as a market article from verified Swiss/German regulator sources (cited in the post). The thin cleaned version and the original remain in the holding folder.",
+      "next": "Rebuild as a market article from verified sources (e.g. the Swiss revised data protection act and the FDPIC, or German GDPR guidance), as was done for the UK, Canada, Australia and Netherlands posts.",
+      "replacedBy": "src/de-ch/blog/ki-entwicklung-in-der-schweiz-was-das-datenschutzgesetz-fuer-ki-verlangt.md"
+    },
+    {
+      "file": "benutzerdefinierte-ki-entwicklung-ma-geschneiderte-l-sungen-f-r-ihr-unternehmen.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured; reuses Admizz 45% claim.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/de/blog/benutzerdefinierte-ki-entwicklung-massgeschneiderte-loesungen-fuer-ihr-unternehmen.md",
+      "cleanup": {
+        "wordsBefore": 881,
+        "wordsAfter": 583,
+        "removed": 16,
+        "byReason": {
+          "promotional/unverifiable claim": 1,
+          "dangling reference": 4,
+          "claim attached to an Orca sentence": 1,
+          "45% claim / client claim": 1,
+          "statement about Zunkiree not established on the site": 6,
+          "orca-not-established-or-repeat": 1,
+          "competitor": 2
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 1
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "datatechniek-oplossingen-de-kracht-van-ai-en-automatisering-in-diversen-sectoren.md",
+      "class": "localize",
+      "market": "NL",
+      "lang": "nl",
+      "why": "Dutch language/market configured.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/nl/blog/datatechniek-oplossingen-de-kracht-van-ai-en-automatisering-in-diversen-sectoren.md",
+      "cleanup": {
+        "wordsBefore": 878,
+        "wordsAfter": 560,
+        "removed": 16,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 11,
+          "claim attached to an Orca sentence": 1,
+          "dangling reference": 3,
+          "competitor": 1
+        },
+        "orca": {
+          "rewritten": 2,
+          "dropped": 0
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "de-toekomst-van-ai-ontwikkeling-innovaties-en-implicaties-voor-diverse-sectoren.md",
+      "class": "localize",
+      "market": "NL",
+      "lang": "nl",
+      "why": "Dutch language/market configured.",
+      "flags": [],
+      "date": "2026-10-02",
+      "localizedAs": "src/nl/blog/de-toekomst-van-ai-ontwikkeling-innovaties-en-implicaties-voor-diverse-sectoren.md",
+      "cleanup": {
+        "wordsBefore": 967,
+        "wordsAfter": 614,
+        "removed": 18,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 11,
+          "promotional/unverifiable claim": 2,
+          "dangling reference": 4,
+          "claim attached to an Orca sentence": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "ki-entwicklung-die-zukunft-der-k-nstlichen-intelligenz-mit-zunkiree-labs.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured; reuses Admizz 45% claim.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "cleanup": {
+        "wordsBefore": 976,
+        "wordsAfter": 327,
+        "removed": 32,
+        "byReason": {
+          "promotional/unverifiable claim": 2,
+          "statement about Zunkiree not established on the site": 19,
+          "45% claim / client claim": 1,
+          "dangling reference": 5,
+          "orca-not-established-or-repeat": 3,
+          "competitor": 1,
+          "unsupported comparison with other providers": 1
+        },
+        "orca": {
+          "rewritten": 2,
+          "dropped": 3
+        }
+      },
+      "status": "replaced",
+      "decisionReason": "Rebuilt as a market article from verified Swiss/German regulator sources (cited in the post). The thin cleaned version and the original remain in the holding folder.",
+      "next": "Rebuild as a market article from verified sources (e.g. the Swiss revised data protection act and the FDPIC, or German GDPR guidance), as was done for the UK, Canada, Australia and Netherlands posts.",
+      "replacedBy": "src/de/blog/ki-datenschutzkonform-einsetzen-was-die-datenschutzkonferenz-empfiehlt.md"
+    },
+    {
+      "file": "ki-f-r-bildungseinrichtungen-wie-ki-den-bildungssektor-revolutioniert.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured; reuses Admizz 45% claim.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/de/blog/ki-fuer-bildungseinrichtungen-wie-ki-den-bildungssektor-revolutioniert.md",
+      "cleanup": {
+        "wordsBefore": 913,
+        "wordsAfter": 589,
+        "removed": 17,
+        "byReason": {
+          "promotional/unverifiable claim": 4,
+          "statement about Zunkiree not established on the site": 11,
+          "claim attached to an Orca sentence": 1,
+          "45% claim / client claim": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "ki-f-r-das-gesundheitswesen-transforming-healthcare-with-ai-solutions.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured; title is half English.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/de/blog/ki-fuer-das-gesundheitswesen-die-gesundheitsversorgung-mit-ki-loesungen-veraendern.md",
+      "cleanup": {
+        "wordsBefore": 894,
+        "wordsAfter": 568,
+        "removed": 17,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 12,
+          "promotional/unverifiable claim": 1,
+          "dangling reference": 2,
+          "competitor": 1,
+          "claim attached to an Orca sentence": 1
+        },
+        "orca": {
+          "rewritten": 2,
+          "dropped": 0
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "ki-infrastruktur-l-sungen-zunkiree-labs-an-der-spitze-der-digitalen-transformation.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "cleanup": {
+        "wordsBefore": 888,
+        "wordsAfter": 341,
+        "removed": 27,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 18,
+          "dangling reference": 6,
+          "competitor": 1,
+          "unsupported comparison with other providers": 1,
+          "promotional/unverifiable claim": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      },
+      "status": "replaced",
+      "decisionReason": "Rebuilt as a market article from verified Swiss/German regulator sources (cited in the post). The thin cleaned version and the original remain in the holding folder.",
+      "next": "Rebuild as a market article from verified sources (e.g. the Swiss revised data protection act and the FDPIC, or German GDPR guidance), as was done for the UK, Canada, Australia and Netherlands posts.",
+      "replacedBy": "src/de/blog/ki-infrastruktur-in-deutschland-worauf-es-bei-bsi-c5-ankommt.md"
+    },
+    {
+      "file": "vorinstallierte-ki-anwendungen-wie-unternehmen-profit-ziehen-k-nnen.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured; invented competitors (Hexxone, Verisk).",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/de/blog/vorinstallierte-ki-anwendungen-wie-unternehmen-profit-ziehen-koennen.md",
+      "cleanup": {
+        "wordsBefore": 937,
+        "wordsAfter": 455,
+        "removed": 21,
+        "byReason": {
+          "promotional/unverifiable claim": 2,
+          "statement about Zunkiree not established on the site": 11,
+          "dangling reference": 4,
+          "unsupported comparison with other providers": 1,
+          "45% claim / client claim": 1,
+          "competitor": 2
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "webentwicklung-dienstleistungen-die-zukunft-von-ma-geschneiderten-digitalen-l-sungen.md",
+      "class": "localize",
+      "market": "DE",
+      "lang": "de",
+      "why": "German language/market configured.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "localizedAs": "src/de/blog/webentwicklung-dienstleistungen-die-zukunft-von-massgeschneiderten-digitalen-loesungen.md",
+      "cleanup": {
+        "wordsBefore": 1006,
+        "wordsAfter": 448,
+        "removed": 29,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 18,
+          "promotional/unverifiable claim": 3,
+          "orca-not-established-or-repeat": 1,
+          "dangling reference": 4,
+          "unsupported comparison with other providers": 1,
+          "competitor": 2
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 1
+        }
+      },
+      "status": "localized-copy-in-src"
+    },
+    {
+      "file": "webentwicklung-unternehmen-schweiz-warum-zunkiree-labs-ihre-beste-wahl-ist.md",
+      "class": "localize",
+      "market": "CH",
+      "lang": "de-CH",
+      "why": "Swiss market + German language configured; copy uses de-DE spelling (ß).",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "cleanup": {
+        "wordsBefore": 845,
+        "wordsAfter": 329,
+        "removed": 22,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 14,
+          "claim attached to an Orca sentence": 1,
+          "dangling reference": 2,
+          "competitor": 1,
+          "promotional/unverifiable claim": 3,
+          "unsupported comparison with other providers": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      },
+      "status": "replaced",
+      "decisionReason": "Rebuilt as a market article from verified Swiss/German regulator sources (cited in the post). The thin cleaned version and the original remain in the holding folder.",
+      "next": "Rebuild as a market article from verified sources (e.g. the Swiss revised data protection act and the FDPIC, or German GDPR guidance), as was done for the UK, Canada, Australia and Netherlands posts.",
+      "replacedBy": "src/de-ch/blog/webentwicklung-fuer-schweizer-unternehmen-was-eine-website-mit-personendaten-zu-tun-hat.md"
+    },
+    {
+      "file": "zunkiree-labs-ihr-partner-f-r-cloud-l-sungen-in-der-schweiz.md",
+      "class": "localize",
+      "market": "CH",
+      "lang": "de-CH",
+      "why": "Swiss market + German language configured; copy uses de-DE spelling (ß).",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors",
+        "de-DE-orthography-eszett"
+      ],
+      "date": "2026-10-02",
+      "cleanup": {
+        "wordsBefore": 910,
+        "wordsAfter": 392,
+        "removed": 24,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 17,
+          "dangling reference": 3,
+          "competitor": 2,
+          "unsupported comparison with other providers": 1,
+          "promotional/unverifiable claim": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      },
+      "status": "replaced",
+      "decisionReason": "Rebuilt as a market article from verified Swiss/German regulator sources (cited in the post). The thin cleaned version and the original remain in the holding folder.",
+      "next": "Rebuild as a market article from verified sources (e.g. the Swiss revised data protection act and the FDPIC, or German GDPR guidance), as was done for the UK, Canada, Australia and Netherlands posts.",
+      "replacedBy": "src/de-ch/blog/cloud-loesungen-in-der-schweiz-datenbekanntgabe-ins-ausland-absichern.md"
+    },
+    {
+      "file": "saas-trends-for-2024-an-insightful-look-into-the-future-of-software-as-a-service.md",
+      "class": "refresh",
+      "why": "Stale (\"As we step into 2024\"); rewrite only from researched current sources.",
+      "flags": [],
+      "date": "2026-10-02",
+      "replacedBy": "src/blog/saas-pricing-2026-two-studies.md",
+      "decisionReason": "Not renamed or re-dated. Rewritten from scratch using only facts verified at primary sources (cited in the post); the original stays here, unpublished.",
+      "status": "replaced"
+    },
+    {
+      "file": "top-tech-events-in-nepal-2023.md",
+      "class": "refresh",
+      "why": "Stale (2023); event names/dates unverifiable and look invented. Rebuild only from verified sources.",
+      "flags": [],
+      "date": "2026-10-02",
+      "replacedBy": "src/blog/tech-events-in-nepal-2026.md",
+      "decisionReason": "Not renamed or re-dated. Rewritten from scratch using only facts verified at primary sources (cited in the post); the original stays here, unpublished.",
+      "status": "replaced"
+    },
+    {
+      "file": "gaas-models-overview-transforming-business-operations-with-zunkiree-labs.md",
+      "class": "uncertain",
+      "why": "Not yet compared against tracked GaaS content.",
+      "flags": [
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "omitted",
+      "decisionReason": "Overlaps what-is-gaas and \"Exploring the Benefits of GaaS Over Traditional Models\", which already rank for \"gaas model\" queries."
+    },
+    {
+      "file": "gaas-scalability-options-unlocking-potential-for-your-business.md",
+      "class": "uncertain",
+      "why": "Not yet compared against tracked GaaS content.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/gaas-scalability-options-unlocking-potential-for-your-business.md",
+      "cleanup": {
+        "wordsBefore": 935,
+        "wordsAfter": 762,
+        "removed": 10,
+        "byReason": {
+          "statement about Zunkiree not established on the site": 5,
+          "unverifiable self-promotion/assurance": 2,
+          "claim attached to an Orca sentence": 1,
+          "promotional superlative": 2
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "harnessing-the-future-the-transformative-power-of-flow-ai-with-zunkiree-labs.md",
+      "class": "uncertain",
+      "why": "\"Flow AI\" product naming unverified; Admizz 45% claim.",
+      "flags": [
+        "reuses-admizz-45pct-claim",
+        "names-unverified-or-wrong-market-competitors"
+      ],
+      "date": "2026-10-02",
+      "status": "replaced",
+      "decisionReason": "Correction: \"Flow AI\" is a concept (AI applied to a workflow), not a product, so it was wrong to treat the post as inventing one. The original over-claimed and mislabeled Orca. Rewritten as an explainer using the owner's definition and only site-grounded statements about Zunkiree Labs.",
+      "replacedBy": "src/blog/what-is-flow-ai.md"
+    },
+    {
+      "file": "how-to-choose-a-gaas-provider-key-considerations-for-your-business.md",
+      "class": "uncertain",
+      "why": "Not yet compared against tracked GaaS content.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/how-to-choose-a-gaas-provider-key-considerations-for-your-business.md",
+      "cleanup": {
+        "wordsBefore": 864,
+        "wordsAfter": 723,
+        "removed": 8,
+        "byReason": {
+          "guarantee": 1,
+          "promotional superlative": 1,
+          "dangling reference": 3,
+          "claim attached to an Orca sentence": 1,
+          "statement about Zunkiree not established on the site": 1,
+          "unsupported result/claim": 1
+        },
+        "orca": {
+          "rewritten": 1,
+          "dropped": 0
+        }
+      }
+    },
+    {
+      "file": "understanding-agentic-as-a-service-transforming-business-with-ai.md",
+      "class": "uncertain",
+      "why": "Not yet compared against tracked GaaS content.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "omitted",
+      "decisionReason": "Duplicate intent: \"agentic as a service\" is already served by /resources/what-is-gaas/ (position 1.9, 234 impressions in 90 days) and /agentic-as-a-service/, plus an existing \"Understanding Agentic as a Service\" guide."
+    },
+    {
+      "file": "understanding-gaas-security-features-for-enhanced-data-protection.md",
+      "class": "uncertain",
+      "why": "Not yet compared against tracked GaaS content.",
+      "flags": [],
+      "date": "2026-10-02",
+      "status": "published-cleaned",
+      "localizedAs": "src/blog/understanding-gaas-security-features-for-enhanced-data-protection.md",
+      "cleanup": {
+        "wordsBefore": 908,
+        "wordsAfter": 887,
+        "removed": 2,
+        "byReason": {
+          "guarantee": 1,
+          "unverifiable product adjective": 1
+        },
+        "orca": {
+          "rewritten": 0,
+          "dropped": 0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "held": 9,
+    "replaced": 17,
+    "omitted": 5,
+    "published-cleaned": 16,
+    "localized-copy-in-src": 7
+  },
+  "verificationNotes": [
+    "NHS DTAC: the NHS Transformation Directorate page could not be opened from the research environment; the description (assessment framework used by healthcare organizations when assuring digital health technology) was taken from search results that quote NHS pages. Search results quoting NHS England pages also say DTAC is an assessment framework, not a certificate, with an updated form from 24 February 2026; confirm on the live page.",
+    "Australian Voluntary AI Safety Standard: published 5 September 2024 with ten voluntary guardrails, taken from search results that cite the industry.gov.au publication; the page itself timed out. Confirm on the live page.",
+    "EU AI Act dates come from artificialintelligenceact.eu (updated 31 August 2026), which is not the official text. Confirm on EUR-Lex.",
+    "All other quotations were read directly from the cited page on 2 October 2026.",
+    "Swiss and German articles: EDÖB statements are from the English pages of edoeb.admin.ch (translated in the post as a paraphrase); the EDÖB \"AI and data protection\" page returned an error and was not used. DSK quotes are from the 6 May 2024 press release; BSI C5 from the BSI page. A native speaker should review all German and Swiss text."
+  ]
+}

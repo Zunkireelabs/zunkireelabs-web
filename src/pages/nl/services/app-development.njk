@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: nl
+ogLocale: nl_NL
+title: "App-ontwikkeling: Mobiele apps voor iOS & Android | Zunkiree Labs"
+description: "Mobiele apps voor iOS en Android met native kwaliteit. Cross-platform, offline-ondersteuning en naadloze backend-integratie. Gem. 4,7+ in de app stores."
+permalink: /nl/services/app-development/
+serviceId: app-development
+hreflangAlternates:
+  - lang: en
+    url: /services/app-development/
+  - lang: de
+    url: /de/services/app-development/
+  - lang: de-CH
+    url: /de-ch/services/app-development/
+  - lang: nl
+    url: /nl/services/app-development/
+  - lang: x-default
+    url: /services/app-development/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["nl"].details["app-development"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

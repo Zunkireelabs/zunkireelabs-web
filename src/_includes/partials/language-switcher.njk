@@ -1,0 +1,21 @@
+{# =====================================================
+   LANGUAGE SWITCHER (footer-v2 legal row)
+   Plain text links in the same style as the Privacy / Terms / Cookie links
+   beside it (no extra box, no second badge). Each language links to THIS
+   page's counterpart when one exists (pages that share a translationKey, see
+   hreflangFor in src/_lib/i18n.js), and to that language's own home
+   otherwise, so it never sends a reader to a 404. The Swiss German tree
+   appears only once it has posts.
+   ===================================================== #}
+{% set switcherAlternates = hreflangAlternates or (translationKey | hreflangFor(collections.all)) %}
+{% set switcherLocales = (lang or "en") | languageSwitcher(switcherAlternates, { "de-CH": (collections["blog-de-ch"] | length) > 0 }, page.url) %}
+<span class="hidden h-3.5 w-px bg-navy-200 sm:block" aria-hidden="true"></span>
+<nav class="flex flex-wrap items-center gap-x-5 gap-y-1" aria-label="Language">
+  {%- for l in switcherLocales %}
+  {% if l.current -%}
+  <a href="{{ page.url }}" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}" class="font-medium text-navy-700 transition-colors hover:text-navy-900" aria-current="page">{{ l.label }}</a>
+  {%- else -%}
+  <a href="{{ l.url }}" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">{{ l.label }}</a>
+  {%- endif %}
+  {%- endfor %}
+</nav>

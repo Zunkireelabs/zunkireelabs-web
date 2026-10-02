@@ -71,7 +71,15 @@ hideChrome: true
         "@type": "Answer",
         "text": "{{ currentTerm.definition | replace('"', '\\"') }}"
       }
-    }
+    }{% for item in currentTerm.faq %},
+    {
+      "@type": "Question",
+      "name": "{{ item.q | replace('"', '\\"') }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.a | replace('"', '\\"') }}"
+      }
+    }{% endfor %}
   ]
 }
 </script>
@@ -139,6 +147,24 @@ hideChrome: true
             {{ currentTerm.definition }}
           </p>
         </div>
+
+        {# FAQ (optional, per term): visible Q&A that mirrors the FAQPage schema above #}
+        {% if currentTerm.faq %}
+        <section class="mt-10" aria-labelledby="glossary-faq-heading" data-reveal>
+          <h2 id="glossary-faq-heading" class="mb-6 text-[24px] font-medium tracking-tight text-[#111827] md:text-[28px]">Frequently asked questions</h2>
+          <div class="space-y-6">
+            {% for item in currentTerm.faq %}
+            <div>
+              <h3 class="mb-2 text-[17px] font-medium leading-snug text-navy-900">{{ item.q }}</h3>
+              <p class="leading-relaxed text-navy-400">{{ item.a }}</p>
+            </div>
+            {% endfor %}
+          </div>
+          {% if currentTerm.faqSource %}
+          <p class="mt-6 text-[13px] text-navy-400">Source: <a href="{{ currentTerm.faqSource.url }}" class="underline underline-offset-2 transition-colors hover:text-[#5a9100]" rel="noopener" target="_blank">{{ currentTerm.faqSource.label }}</a></p>
+          {% endif %}
+        </section>
+        {% endif %}
       </div>
 
       {# Sidebar Column #}
@@ -174,6 +200,21 @@ hideChrome: true
               </p>
               <p class="text-[13px] text-navy-400">{{ relatedService.description | truncate(90) }}</p>
             </a>
+          </div>
+          {% endif %}
+
+          {% if currentTerm.relatedGuides %}
+          {# Related Guides — long-form blog explainers, same card recipe as Related Service #}
+          <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm" data-reveal>
+            <h3 class="mb-4 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">Related Guides</h3>
+            <div class="space-y-4">
+              {% for g in currentTerm.relatedGuides %}
+                {% if not loop.first %}<hr class="border-navy-100/40">{% endif %}
+                <a href="{{ g.url }}" class="group block">
+                  <p class="font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">{{ g.title }}</p>
+                </a>
+              {% endfor %}
+            </div>
           </div>
           {% endif %}
 

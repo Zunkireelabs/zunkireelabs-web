@@ -29,9 +29,14 @@
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or site.meta.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
-  <meta property="og:image" content="{{ site.url }}{{ site.meta.ogImage }}">
+  <meta property="og:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  {% if ogType == 'article' %}
+  <meta property="article:published_time" content="{{ date | date('%Y-%m-%d') }}">
+  <meta property="article:modified_time" content="{{ lastUpdated | default(date) | date('%Y-%m-%d') }}">
+  {% if category %}<meta property="article:section" content="{{ category }}">{% endif %}
+  {% endif %}
   <meta property="og:locale" content="{{ ogLocale or 'en_US' }}">
   <meta property="og:site_name" content="{{ site.name }}">
 
@@ -39,7 +44,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title or site.meta.title }}">
   <meta name="twitter:description" content="{{ description or site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.meta.ogImage }}">
+  <meta name="twitter:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
 
   <!-- Canonical URL -->
   {% if canonicalUrl %}
@@ -49,8 +54,8 @@
   {% endif %}
 
   <!-- Hreflang alternates (language/region variants of this page) -->
-  {% if hreflangAlternates %}
-  {% for alt in hreflangAlternates %}
+  {% set pageAlternates = hreflangAlternates or (translationKey | hreflangFor(collections.all)) %}{% if pageAlternates | length %}
+  {% for alt in pageAlternates %}
   <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ site.url }}{{ alt.url }}">
   {% endfor %}
   {% endif %}
@@ -213,7 +218,8 @@
   {# FAQPage schema - supports explicit faqs, service page FAQs, and product page FAQs #}
   {%- set productFaqData = (platformProducts | find("id", productId)) if productId else null -%}
   {%- set pageFaqs = faqs if faqs else (servicesDetails[serviceId].faq if serviceId and servicesDetails[serviceId] else (productFaqData.faq if productFaqData else null)) -%}
-  {% if pageFaqs %}
+  {# hasServiceFaqs: location x service pages that render their own FAQ block (and FAQPage schema) in the layout #}
+  {% if pageFaqs and not hasServiceFaqs %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
