@@ -1,5 +1,6 @@
 ---
 title: "California's Robotaxi Law: What It Means for Autonomous AI"
+shortLabel: "Autonomous AI"
 translationKey: "robotaxis-first-responders-california-law-future-of-autonomous-systems"
 description: "California will fine robotaxi operators who block first responders for 30+ minutes. What SB 1246 requires and what it signals for AI automation."
 date: 2026-10-02
@@ -10,8 +11,8 @@ tags:
   - AI Regulation
   - Robotaxis
 readTime: 7
-featuredImage: "https://images.pexels.com/photos/32461216/pexels-photo-32461216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A self-driving car navigates through a bustling city street in San Francisco, capturing urban mobility in action."
+featuredImage: "/assets/images/blog/robotaxis-first-responders-california-law-future-of-autonomous-systems.svg"
+featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Abhishek  Navlakha on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/32461216/pexels-photo-32461216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -918,7 +918,7 @@ app = cluster.init(
    of smaller posts right. Pulled from the real `collections.blog`
    posts already published under src/blog/ — no placeholder content.
    ===================================================== #}
-{% set sortedPosts = collections.articles | reverse %}
+{% set sortedPosts = collections.insights | reverse %}
 <section class="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28" aria-labelledby="insights-heading">
   <div class="mx-auto max-w-content">
     <div class="mb-10 flex flex-wrap items-end justify-between gap-4 md:mb-12" data-reveal>
@@ -926,7 +926,7 @@ app = cluster.init(
         AI Insights
       </h2>
       <a
-        href="/blog/"
+        href="/blog/insights/"
         class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50"
       >
         View all

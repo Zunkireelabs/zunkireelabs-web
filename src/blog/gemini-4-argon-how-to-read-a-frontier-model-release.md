@@ -10,8 +10,8 @@ tags:
   - Gemini
   - AI Strategy
 readTime: 7
-featuredImage: "https://images.pexels.com/photos/17489151/pexels-photo-17489151.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Close-up of tower servers in a data center with blue and red lighting."
+featuredImage: "/assets/images/blog/gemini-4-argon-how-to-read-a-frontier-model-release.svg"
+featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by panumas nikhomkhai on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/17489151/pexels-photo-17489151.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

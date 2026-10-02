@@ -1717,7 +1717,7 @@ app = platform.init(
    of smaller posts right. Pulled from the real `collections.blog`
    posts already published under src/blog/ — no placeholder content.
    ===================================================== #}
-{% set sortedPosts = collections.articles | reverse %}
+{% set sortedPosts = collections.insights | reverse %}
 {# Flat two-tone cover art for posts without a real featuredImage — MASTER_DESIGN_SPEC.md
    §25 explicitly allows "flat gradient art (matching §10's accent gradient palette) instead
    of a photo when no real photo exists" for article thumbnails. No blur/ambient bloom (both
@@ -1775,7 +1775,7 @@ app = platform.init(
         </h2>
       </div>
       <a
-        href="/blog/"
+        href="/blog/insights/"
         class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-3 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50 sm:py-2.5"
       >
         View all

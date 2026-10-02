@@ -10,8 +10,8 @@ tags:
   - AI-Native Software
   - Software Development
 readTime: 7
-featuredImage: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "A close-up shot of a person coding on a laptop, focusing on the hands and screen."
+featuredImage: "/assets/images/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means.svg"
+featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Lukas Blazek on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
