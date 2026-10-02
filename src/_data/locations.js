@@ -1,4 +1,6 @@
-export default [
+import extraServiceEntries, { answerFor, hubAnswerFor } from './locationServiceEntries.js';
+
+const cities = [
   {
     id: "kathmandu",
     name: "Kathmandu",
@@ -8,7 +10,7 @@ export default [
     isHeadquarters: false,
 
     // SEO metadata
-    title: "Zunkiree Labs - Expert AI Solutions in Kathmandu",
+    title: "AI Development Company in Kathmandu | Zunkiree Labs",
     description: "Explore Zunkiree Labs in Kathmandu for AI development services, including custom AI systems, intelligent chatbots, and data solutions tailored for businesses.",
 
     // Location content
@@ -70,7 +72,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     // Service-specific content for Location × Service pages
     services: {
       "ai-development": {
-        title: "AI Development Services in Kathmandu",
+        title: "AI Development Company in Kathmandu",
         description: "Custom AI development from Kathmandu, Nepal. RAG pipelines, LLM integration, and intelligent automation built by experienced AI engineers.",
         intro: "Our Kathmandu-based AI engineering team builds production-grade AI systems including RAG pipelines, LLM integrations, document AI, and custom machine learning solutions.",
         highlights: [
@@ -81,7 +83,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         ]
   },
       "ai-customer-experience": {
-        title: "AI Customer Experience Services in Kathmandu",
+        title: "AI Customer Support Solutions in Kathmandu",
         description: "AI-powered customer support systems built in Kathmandu. Reduce support tickets by 40% with intelligent chatbots and automation.",
         intro: "From our Kathmandu office, we build AI customer experience systems that automate support, answer questions instantly, and improve customer satisfaction.",
         highlights: [
@@ -93,7 +95,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n\n</div>"
   },
       "web-development": {
-        title: "Web Development Services in Kathmandu",
+        title: "Web Development Company in Kathmandu",
         description: "High-performance website development from Kathmandu, Nepal. Modern frameworks, responsive design, and SEO optimization.",
         intro: "Our Kathmandu web development team builds fast, SEO-optimized websites using modern frameworks like Next.js, Eleventy, and Tailwind CSS.",
         highlights: [
@@ -105,7 +107,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Web Development Services Comparison</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-gray-600 leading-relaxed\">When considering web development services, it’s essential to understand the key differences and similarities between various options available in Kathmandu. Below is a comparison of our web development services against other potential web development solutions.</p></div>\n  </section>\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Our Services vs. Others</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-gray-600 leading-relaxed\">Here's a breakdown of how our web development services stack up against typical offerings in the market.</p></div>\n  </section>\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Comparison Table</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><div class=\"mb-10 overflow-hidden rounded-lg border border-gray-200\"><table class=\"w-full text-sm\"><thead class=\"bg-gray-50\"><tr class=\"bg-gray-100\"><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Features</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Our Services</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Other Services</th></tr></thead><tbody class=\"divide-y divide-gray-200\"><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Page Load Speed</td><td class=\"px-4 py-3 text-gray-600\">Sub-second</td><td class=\"px-4 py-3 text-gray-600\">Varies</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Frameworks Used</td><td class=\"px-4 py-3 text-gray-600\">Next.js, Eleventy, Tailwind CSS</td><td class=\"px-4 py-3 text-gray-600\">Typically limited options</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Mobile Design</td><td class=\"px-4 py-3 text-gray-600\">Mobile-first responsive design</td><td class=\"px-4 py-3 text-gray-600\">Responsive, may not prioritize mobile</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">SEO Optimization</td><td class=\"px-4 py-3 text-gray-600\">Built-in SEO and AEO</td><td class=\"px-4 py-3 text-gray-600\">Varies, often requires addons</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Ongoing Support</td><td class=\"px-4 py-3 text-gray-600\">Yes</td><td class=\"px-4 py-3 text-gray-600\">Limited or additional cost</td></tr></tbody></table></div></div>\n  </section>\n</div>"
   },
       "custom-software": {
-        title: "Custom Software Development in Kathmandu",
+        title: "Custom Software Development Company in Kathmandu",
         description: "Enterprise software development from Kathmandu. Internal tools, business applications, and workflow automation.",
         intro: "Our Kathmandu software engineers build custom enterprise applications, internal tools, and business systems tailored to your specific workflows.",
         highlights: [
@@ -117,7 +119,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n\n</div>"
   },
       "data-systems": {
-        title: "Data Engineering Services in Kathmandu",
+        title: "Data Engineering and Analytics Services in Kathmandu",
         description: "Data pipelines and analytics infrastructure from Kathmandu. Get your data AI-ready with our data engineering team.",
         intro: "Our Kathmandu data engineering team builds scalable data pipelines, warehouses, and analytics infrastructure that powers AI and business intelligence.",
         highlights: [
@@ -134,7 +136,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
   }
   },
       "saas-development": {
-        title: "SaaS Development Services in Kathmandu",
+        title: "SaaS Development Company in Kathmandu",
         description: "Multi-tenant SaaS platform development from Kathmandu. Launch your software product faster with our experienced team.",
         intro: "Our Kathmandu team specializes in building scalable SaaS platforms with multi-tenant architecture, subscription billing, and enterprise features.",
         highlights: [
@@ -145,7 +147,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         ]
       },
       "app-development": {
-        title: "Mobile App Development in Kathmandu",
+        title: "Mobile App Development Company in Kathmandu",
         description: "iOS and Android app development from Kathmandu. Native and cross-platform mobile applications.",
         intro: "Our Kathmandu mobile development team builds native iOS and Android apps, as well as cross-platform solutions using React Native and Flutter.",
         highlights: [
@@ -157,7 +159,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Comparing Mobile App Development Options in Kathmandu</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">When considering mobile app development in Kathmandu, several companies offer differing capabilities and expertise. It's crucial to understand their strengths to make an informed decision that best suits your project's needs. Our seasoned team specializes in native and cross-platform mobile app solutions tailored to the unique requirements of your business.</p><div class=\"overflow-x-auto\"><div class=\"mb-10 overflow-hidden rounded-lg border border-gray-200\"><table class=\"w-full text-sm\"><thead class=\"bg-gray-50\"><tr><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Feature</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">Alternative</th><th class=\"px-4 py-3 text-left font-medium text-gray-900\">This Option</th></tr></thead><tbody class=\"divide-y divide-gray-200\"><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Development Approach</td><td class=\"px-4 py-3 text-gray-600\">Focuses primarily on either native or cross-platform without providing extensive integrations.</td><td class=\"px-4 py-3 text-gray-600\">Native iOS and Android development alongside cross-platform using React Native/Flutter</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">Backend Integration</td><td class=\"px-4 py-3 text-gray-600\">Limited backend capabilities that may require additional development phases.</td><td class=\"px-4 py-3 text-gray-600\">Seamless backend API integration that enhances app functionality</td></tr><tr><td class=\"px-4 py-3 font-medium text-gray-900\">App Store Optimization</td><td class=\"px-4 py-3 text-gray-600\">Basic launch support but lacks in-depth optimization services.</td><td class=\"px-4 py-3 text-gray-600\">Comprehensive app store optimization and launch strategies</td></tr></tbody></table></div></div></div>\n  </section>\n</div>"
   },
       "aeo-seo": {
-        title: "SEO & AEO Services in Kathmandu",
+        title: "SEO and AEO Services in Kathmandu",
         description: "Search engine and AI optimization services from Kathmandu. Get found by Google and AI assistants.",
         intro: "Our Kathmandu digital marketing team optimizes your content for traditional search engines and AI systems like ChatGPT, Perplexity, and Google AI Overviews.",
         highlights: [
@@ -185,7 +187,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     countryCode: "NP",
     isHeadquarters: true,
 
-    title: "Zunkiree Labs Headquarters - AI Development in Lalitpur",
+    title: "AI Development Company in Lalitpur | Zunkiree Labs",
     description: "Zunkiree Labs is headquartered in Sanepa, Lalitpur, serving businesses across Nepal and globally with AI development, custom software, and digital solutions.",
 
     intro: "Zunkiree Labs is headquartered in Sanepa, Lalitpur (Patan), just minutes from Kathmandu. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally.",
@@ -203,6 +205,17 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     // Map embed — no API key required (text-query embed format)
     mapEmbed: "https://maps.google.com/maps?q=Sanepa%2C+Lalitpur%2C+Nepal&output=embed",
 
+    content: `Lalitpur, also called Patan, sits in the south-central Kathmandu Valley, separated from Kathmandu by the Bagmati River. It is known as the "City of Fine Arts" for its metalwork, wood carving and stone sculpture traditions, and Patan Durbar Square is a UNESCO World Heritage Site, so crafts, heritage tourism and hospitality are a visible part of the local economy.
+
+The city is also alearning centre: Pulchowk Campus, the central campus of Tribhuvan University's Institute of Engineering, was established in 1972 and offers a Bachelor of Computer Engineering, while the Patan Academy of Health Sciences and the Kathmandu University School of Management are also located here.
+
+Artisan workshops, galleries, clinics, schools and small trading businesses in Lalitpur can benefit from a modern website, online ordering and booking, and AI tools that handle repetitive customer questions and paperwork.`,
+
+    sources: [
+      { label: "Wikipedia: Lalitpur, Nepal", url: "https://en.wikipedia.org/wiki/Lalitpur,_Nepal" },
+      { label: "Wikipedia: Pulchowk Campus", url: "https://en.wikipedia.org/wiki/Pulchowk_Campus" }
+    ],
+
     nearbyCities: ["kathmandu", "bhaktapur"],
 
     faqs: [
@@ -217,11 +230,24 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       {
         question: "Can you meet at our Lalitpur office?",
         answer: "Absolutely. We're happy to meet at your Lalitpur location for project discussions, requirements gathering, and ongoing collaboration — or you're welcome to visit our Sanepa headquarters."
+      },
+      {
+        question: "Which universities and engineering institutions are in Lalitpur?",
+        answer: "According to Wikipedia's entries on the city and on Pulchowk Campus, Lalitpur is home to Pulchowk Campus, the central campus of Tribhuvan University's Institute of Engineering (established in 1972, offering a Bachelor of Computer Engineering), as well as the Patan Academy of Health Sciences and the Kathmandu University School of Management."
+      },
+      {
+        question: "What is Lalitpur known for?",
+        answer: "Lalitpur, also known as Patan, is known as the \"City of Fine Arts\" for its tradition of metalwork, wood carving and stone sculpture, and for Patan Durbar Square, a UNESCO World Heritage Site (Wikipedia, Lalitpur, Nepal)."
+      },
+      {
+        question: "Where is Lalitpur in relation to Kathmandu?",
+        answer: "Lalitpur lies in the south-central Kathmandu Valley at roughly 1,350 metres elevation and is separated from Kathmandu only by the Bagmati River (Wikipedia, Lalitpur, Nepal)."
       }
     ],
+
     services: {
       "web-development": {
-        title: "Web Development Services in Lalitpur",
+        title: "Web Development Company in Lalitpur",
         description: "High-performance website development delivered by our Sanepa, Lalitpur headquarters team. Modern frameworks, responsive design, and SEO optimization.",
         intro: "We build fast, SEO-optimized websites for Lalitpur businesses using modern frameworks like Next.js, Eleventy, and Tailwind CSS — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
@@ -232,7 +258,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         ]
   },
       "app-development": {
-        title: "Mobile App Development in Lalitpur",
+        title: "Mobile App Development Company in Lalitpur",
         description: "iOS and Android app development delivered by our Sanepa, Lalitpur headquarters team. Native and cross-platform mobile applications.",
         intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Lalitpur clients — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
@@ -243,7 +269,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         ]
   },
       "custom-software": {
-        title: "Custom Software Development in Lalitpur",
+        title: "Custom Software Development Company in Lalitpur",
         description: "Enterprise software development delivered by our Sanepa, Lalitpur headquarters team. Internal tools, business applications, and workflow automation.",
         intro: "We build custom enterprise applications and business systems tailored to Lalitpur businesses' workflows — delivered by our team right here in Sanepa, Lalitpur.",
         highlights: [
@@ -265,10 +291,22 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     countryCode: "NP",
     isHeadquarters: false,
 
-    title: "AI Development Services in Bhaktapur | Zunkiree Labs",
+    title: "AI Development Company in Bhaktapur | Zunkiree Labs",
     description: "Zunkiree Labs provides AI and software development services to Bhaktapur businesses. Headquartered in Sanepa, Lalitpur.",
 
     intro: "Zunkiree Labs serves Bhaktapur's business community from our headquarters in Sanepa, Lalitpur, within the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation.",
+
+    content: `Bhaktapur lies in the eastern part of the Kathmandu Valley, about 13 kilometres from Kathmandu, and its medieval city core was inscribed as a UNESCO World Heritage Site in 1979. Locally the city is called Khwopa in Nepal Bhasa and is known as a city of festivals, which brings steady heritage tourism.
+
+The local economy combines tourism with long-standing craft industries; Bhaktapur's potters and handicraft makers are known across Nepal, and agriculture has historically been important too. Nearby Madhyapur Thimi is also associated with pottery.
+
+On the education side, Khwopa Engineering College, an undertaking of Bhaktapur Municipality and described as Nepal's first community-based engineering college, was established in 2001 and offers computer engineering among its programs. Potters, craft sellers, guesthouses, restaurants and farm-produce traders in Bhaktapur can use online catalogues, booking, payments and AI-assisted customer replies to reach customers beyond the Valley.`,
+
+    sources: [
+      { label: "Wikipedia: Bhaktapur", url: "https://en.wikipedia.org/wiki/Bhaktapur" },
+      { label: "Khwopa Engineering College", url: "https://www.khec.edu.np/content/detail/2.html" },
+      { label: "TU thesis record: Pottery Industry in Madhyapur Thimi", url: "https://elibrary.tucl.edu.np/items/671ebacd-b1f5-4606-b804-42b6662813d4/full" }
+    ],
 
     nearbyCities: ["kathmandu", "lalitpur"],
 
@@ -276,12 +314,25 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       {
         question: "Do you work with Bhaktapur businesses?",
         answer: "Yes, we serve businesses throughout Bhaktapur district from our Kathmandu office. The proximity within the Kathmandu Valley makes collaboration easy."
+      },
+      {
+        question: "What are the main industries in Bhaktapur?",
+        answer: "According to Wikipedia's Bhaktapur entry, the local economy draws on tourism, handicrafts and pottery (Bhaktapur's potters and handicraft industries are known nationwide) and, historically, agriculture. Nearby Madhyapur Thimi is also associated with a pottery industry, as documented in a Tribhuvan University library case study."
+      },
+      {
+        question: "How far is Bhaktapur from Kathmandu?",
+        answer: "Bhaktapur is in the eastern corner of the Kathmandu Valley, approximately 13 kilometres from Kathmandu (Wikipedia, Bhaktapur)."
+      },
+      {
+        question: "Is there an engineering college in Bhaktapur?",
+        answer: "Yes. Khwopa Engineering College, described on its own website as Nepal's first community-based engineering college, was established in 2001 by Bhaktapur Municipality and is affiliated with Purbanchal University. It offers programs including Computer Engineering, Civil Engineering and Architecture."
       }
     ],
 
+
     services: {
       "custom-software": {
-        title: "Custom Software Development in Bhaktapur",
+        title: "Custom Software Development Company in Bhaktapur",
         description: "Enterprise software development for Bhaktapur businesses, delivered by our Kathmandu-based team. Internal tools, business applications, and workflow automation.",
         intro: "We build custom enterprise applications and business systems for Bhaktapur businesses — delivered by our Kathmandu team, within easy reach across the Kathmandu Valley.",
         highlights: [
@@ -292,7 +343,7 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
         ]
   },
       "app-development": {
-        title: "Mobile App Development in Bhaktapur",
+        title: "Mobile App Development Company in Bhaktapur",
         description: "iOS and Android app development for Bhaktapur businesses, delivered by our Kathmandu-based team. Native and cross-platform mobile applications.",
         intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Bhaktapur clients — delivered by our Kathmandu team.",
         highlights: [
@@ -319,10 +370,22 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     countryCode: "NP",
     isHeadquarters: false,
 
-    title: "AI Development Services in Pokhara | Zunkiree Labs",
+    title: "AI Development Company in Pokhara | Zunkiree Labs",
     description: "Zunkiree Labs serves Pokhara businesses with AI development and software solutions. Remote collaboration from our headquarters in Sanepa, Lalitpur.",
 
     intro: "Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our headquarters in Sanepa, Lalitpur. We've worked with tourism, hospitality, and local businesses in the Pokhara region.",
+
+    content: `Pokhara, the capital of Gandaki Province, lies about 200 kilometres west of Kathmandu on the shore of Phewa Lake, with views of Dhaulagiri, Annapurna I and Manaslu. It was declared Nepal's tourism capital, and tourism and hospitality are central to its economy.
+
+Tourism is not the whole picture. A Kathmandu Post report described Pokhara's growth as a trade and industrial hub, with tens of thousands of registered entrepreneurs, factories in Kaski district and hydropower generation in the surrounding region. Education is another pillar: Pokhara University, based in the city, has schools of business, engineering, health and development studies and many affiliated colleges.
+
+With Pokhara Regional International Airport opened in January 2023, hotels, tour operators, trekking agencies, traders and colleges in Pokhara can benefit from direct online booking, multilingual websites, payments and AI assistants that answer visitor questions around the clock.`,
+
+    sources: [
+      { label: "Kathmandu Post: Tourist city rises as trade, industrial hub", url: "https://kathmandupost.com/money/2014/01/23/tourist-city-rises-as-trade-industrial-hub" },
+      { label: "Wikipedia: Pokhara", url: "https://en.wikipedia.org/wiki/Pokhara" },
+      { label: "Pokhara University", url: "https://www.pu.edu.np/" }
+    ],
 
     nearbyCities: ["kathmandu"],
 
@@ -334,12 +397,25 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
       {
         question: "Do you have an office in Pokhara?",
         answer: "Our headquarters is in Sanepa, Lalitpur, but we serve Pokhara clients remotely and can arrange in-person meetings when needed for project kickoffs or important milestones."
+      },
+      {
+        question: "What are the main industries in Pokhara?",
+        answer: "Tourism is the best-known sector (Pokhara has been declared Nepal's tourism capital), but according to a Kathmandu Post report the city has also grown into a trade and industrial hub, with Kaski district hosting licensed factories, a large hospitality sector and significant hydropower generation. Wikipedia also lists agriculture and education among the local economic activities."
+      },
+      {
+        question: "Which universities and colleges are in Pokhara?",
+        answer: "Pokhara University is based in Pokhara Metropolitan City (ward 30) and, per its website, runs schools of Business, Engineering, Health and Allied Sciences, and Development and Social Engineering, alongside a network of affiliated colleges."
+      },
+      {
+        question: "How far is Pokhara from Kathmandu?",
+        answer: "Pokhara is about 200 kilometres west of Kathmandu, on the shore of Phewa Lake (Wikipedia, Pokhara). The city now has Pokhara International Airport, which opened in January 2023, alongside its older domestic airport."
       }
     ],
 
+
     services: {
       "app-development": {
-        title: "Mobile App Development in Pokhara",
+        title: "Mobile App Development Company in Pokhara",
         description: "iOS and Android app development for Pokhara businesses, delivered remotely by our Kathmandu-based team. Native and cross-platform mobile applications.",
         intro: "We build native iOS and Android apps, and cross-platform apps with React Native and Flutter, for Pokhara clients through remote collaboration from our headquarters in Sanepa, Lalitpur.",
         highlights: [
@@ -360,3 +436,12 @@ Working with a Kathmandu-based AI company offers distinct advantages: competitiv
     expandedContent: "<div class=\"container-custom py-12 md:py-20\">\n  <section class=\"gap-2\">\n    <h2 class=\"text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900\">Relevant IoT Developments</h2>\n    <div class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\"><p class=\"text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl\">For insights into the emerging IoT ecosystem in Pokhara, consider reviewing <a href=\"https://globaliotnepal.com.np\" class=\"text-zunkiree-600 hover:underline\">Global IOT Nepal- Together for Digital Nepal</a>, which highlights initiatives and innovations driven by local companies. Additionally, the <a href=\"https://www.facebook.com/officialroutineofnepalbanda/posts/informatics-college-of-pokhara-conducted-iot-internet-of-things-festival-2023-wh/7033964193302980\" class=\"text-zunkiree-600 hover:underline\">Informatics College of Pokhara conducted IoT Festival 2023</a>, showcasing student projects that are pushing the boundaries of IoT applications in the region.</p></div>\n  </section>\n</div>"
   }
 ];
+
+// Fill service entries a city does not define itself; hand-authored entries win.
+export default cities.map((c) => {
+  const merged = { ...(extraServiceEntries[c.id] || {}), ...(c.services || {}) };
+  for (const [serviceId, entry] of Object.entries(merged)) {
+    if (!entry.answer) merged[serviceId] = { ...entry, answer: answerFor(c.id, serviceId) };
+  }
+  return { ...c, answer: c.answer || hubAnswerFor(c.id), services: merged };
+});

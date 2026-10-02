@@ -47,6 +47,15 @@
           "prompt": "Not sure where to start?",
           "button": "Talk to our team",
           "url": "/contact/"
+        },
+        "services": {
+          "title": "Services",
+          "description": "Custom AI and software built end to end by our team.",
+          "items": [
+            { "label": "AI Development", "url": "/services/ai-development/", "description": "Custom AI systems and LLM integration" },
+            { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/", "description": "Chatbots and conversational AI support" }
+          ],
+          "seeAll": { "label": "See more services", "url": "/services/" }
         }
       }
     },

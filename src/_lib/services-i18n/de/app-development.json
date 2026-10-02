@@ -1,0 +1,298 @@
+{
+  "id": "app-development",
+  "title": "App-Entwicklung",
+  "category": "Entwicklung",
+  "tagline": "Mobile App-Entwicklung für iOS und Android. Ein Team, keine Kompromisse.",
+  "description": "Mobile Anwendungen für iOS und Android, die sich nativ anfühlen und reibungslos laufen. Plattformübergreifende Entwicklung, wo sie sinnvoll ist, nativ, wo nicht – der passende Ansatz für Ihr Produkt und Ihre Nutzer.",
+  "heroImage": "/assets/images/services-hero-bg.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Für iOS entwickeln",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Für Android entwickeln",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Offline-Daten synchronisieren",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Push-Benachrichtigung senden",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Auf Kamera zugreifen",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Nutzer authentifizieren",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "An den App Store übermitteln",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Apps, die in der Praxis funktionieren. Nicht nur in der Demo.",
+    "content": "Wir bauen mobile Apps, die in der Praxis funktionieren – bei schlechter Verbindung, auf unterschiedlichsten Geräten und für ungeduldige Nutzer. Unsere Apps fühlen sich nativ an, weil wir Plattformkonventionen respektieren, und laufen reibungslos, weil wir konsequent optimieren. iOS und Android, aus einer Codebasis von einem Team ausgeliefert, ohne die üblichen Kompromisse."
+  },
+  "stats": [
+    {
+      "value": "4.7+",
+      "label": "App-Store-Bewertung",
+      "description": "Durchschnitt über alle Apps"
+    },
+    {
+      "value": "60%",
+      "label": "Schnellere Entwicklung",
+      "description": "ggü. getrennten nativen Teams"
+    },
+    {
+      "value": "< 200ms",
+      "label": "UI-Reaktionszeit",
+      "description": "Ziel bei Interaktionen"
+    },
+    {
+      "value": "99%",
+      "label": "Absturzfreie Quote",
+      "description": "Standard im Produktivbetrieb"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Gleichzeitig auf iOS und Android starten",
+      "description": "Mit plattformübergreifenden Frameworks liefern wir aus einer einzigen Codebasis für beide Plattformen aus – ohne das native Gefühl zu opfern. Schnellere Time-to-Market, geringere Entwicklungskosten und einfachere Wartung."
+    },
+    {
+      "icon": "workflow",
+      "title": "Offline arbeiten, bei Verbindung synchronisieren",
+      "description": "Echte Apps müssen im Aufzug, im Flugzeug und in Gebieten mit schlechtem Empfang funktionieren. Wir entwickeln Offline-First, wenn Ihr Anwendungsfall es verlangt, mit nahtloser Synchronisierung, sobald die Verbindung zurückkehrt."
+    },
+    {
+      "icon": "integrate",
+      "title": "Anbindung an Ihr Backend und Drittanbieter-Dienste",
+      "description": "Apps, die sich mit Ihren bestehenden APIs, Authentifizierungssystemen und Geschäftsdaten verbinden. Push-Benachrichtigungen, Analytics, Zahlungsabwicklung und tiefe Integration von Plattformfunktionen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "consumer-apps",
+      "title": "Consumer-Apps",
+      "headline": "Mobile Consumer-Apps",
+      "description": "B2C-Apps für iOS und Android. Ansprechende Oberfläche, flüssige Animationen und Engagement-Funktionen wie Push-Benachrichtigungen und Social Sharing.",
+      "features": [
+        "Ausgefeilte UI/UX",
+        "Push-Benachrichtigungen",
+        "Social-Funktionen",
+        "In-App-Käufe"
+      ],
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "enterprise-mobile",
+      "title": "Enterprise",
+      "headline": "Mobile Enterprise-Apps",
+      "description": "Interne Tools und Außendienst-Apps für Unternehmensteams. Sicherer Zugriff, Offline-Fähigkeit und Integration in Unternehmenssysteme.",
+      "features": [
+        "Sichere Authentifizierung (SSO)",
+        "Offline-Unterstützung",
+        "MDM-Integration",
+        "Zugriff auf Unternehmensdaten"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "companion-apps",
+      "title": "Companion-Apps",
+      "headline": "Companion-Apps für IoT & Hardware",
+      "description": "Mobile Apps, die mit Hardwaregeräten gekoppelt werden: Bluetooth-Anbindung, Geräteverwaltung und Echtzeit-Datenvisualisierung.",
+      "features": [
+        "Bluetooth/BLE",
+        "Geräte-Kopplung",
+        "Echtzeitdaten",
+        "Firmware-Updates"
+      ],
+      "image": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "marketplace-apps",
+      "title": "Marktplatz",
+      "headline": "Mobile Marktplatz-Apps",
+      "description": "Zweiseitige Marktplatz-Apps mit Käufer- und Verkäuferperspektive. Suche, Entdeckung, Transaktionen und Messaging.",
+      "features": [
+        "Käufer-/Verkäufer-Abläufe",
+        "Suche & Filter",
+        "In-App-Zahlungen",
+        "Messaging"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "on-demand-apps",
+      "title": "On-Demand",
+      "headline": "On-Demand-Service-Apps",
+      "description": "Echtzeit-Service-Apps: Lieferdienste, Mitfahrdienste, Haushaltsdienstleistungen. Standortverfolgung, Matching-Algorithmen und sofortige Kommunikation.",
+      "features": [
+        "Echtzeit-Tracking",
+        "Matching-Algorithmen",
+        "Chat & Anrufe",
+        "Bewertungssysteme"
+      ],
+      "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Strategie",
+      "description": "Den Kernnutzen Ihrer App, die Zielplattformen und den MVP-Umfang definieren. Plattformspezifische Aspekte und technische Anforderungen klären.",
+      "duration": "1-2 Wochen",
+      "deliverables": [
+        "App-Strategiedokument",
+        "Plattformempfehlungen",
+        "MVP-Umfang"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Nutzerflüsse, Screens und Interaktionen nach Plattformkonventionen gestalten. Zentrale Abläufe vor der Entwicklung als Prototyp validieren.",
+      "duration": "2-4 Wochen",
+      "deliverables": [
+        "UI/UX-Designs",
+        "Interaktiver Prototyp",
+        "Designsystem"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Entwicklung",
+      "description": "Die App mit regelmäßigen TestFlight-/Beta-Releases bauen. Iterative Entwicklung mit kontinuierlichem Feedback aus Tests auf echten Geräten.",
+      "duration": "8-16 Wochen",
+      "deliverables": [
+        "Beta-App",
+        "API-Integration",
+        "Test-Suite"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Launch",
+      "description": "Einreichung im App Store/Play Store, Unterstützung beim Launch-Marketing und Monitoring nach dem Launch. Laufende Updates und Weiterentwicklung.",
+      "duration": "Laufend",
+      "deliverables": [
+        "App-Store-Eintrag",
+        "Launch-Unterstützung",
+        "Update-Roadmap"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "React Native",
+      "category": "Framework",
+      "description": "Plattformübergreifend",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+    },
+    {
+      "name": "Swift",
+      "category": "Sprache",
+      "description": "Native iOS-Entwicklung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg"
+    },
+    {
+      "name": "Kotlin",
+      "category": "Sprache",
+      "description": "Native Android-Entwicklung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/kotlin-2.svg"
+    },
+    {
+      "name": "Expo",
+      "category": "Plattform",
+      "description": "Tools für React Native",
+      "logo": "https://cdn.worldvectorlogo.com/logos/expo-1.svg"
+    },
+    {
+      "name": "Firebase",
+      "category": "Backend",
+      "description": "Mobiles Backend",
+      "logo": "https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
+    },
+    {
+      "name": "RevenueCat",
+      "category": "Zahlungen",
+      "description": "In-App-Käufe",
+      "logo": "https://cdn.simpleicons.org/revenuecat/F25A5A"
+    },
+    {
+      "name": "OneSignal",
+      "category": "Push",
+      "description": "Benachrichtigungen",
+      "logo": "https://cdn.simpleicons.org/onesignal/E54B4D"
+    },
+    {
+      "name": "Sentry",
+      "category": "Monitoring",
+      "description": "Absturzberichte",
+      "logo": "https://cdn.worldvectorlogo.com/logos/sentry-3.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Sollen wir nativ oder plattformübergreifend entwickeln?",
+      "answer": "Plattformübergreifend (React Native, Flutter) eignet sich für die meisten Apps und senkt Kosten und Time-to-Market deutlich. Nativ ist sinnvoll bei aufwendiger Grafik/Gaming, tiefer Betriebssystem-Integration oder maximaler Performance. Wir prüfen Ihre konkreten Anforderungen und empfehlen ehrlich."
+    },
+    {
+      "question": "Wie lange dauert die Freigabe im App Store?",
+      "answer": "Apple prüft Apps in der Regel innerhalb von 1-3 Tagen. Bei Google Play geht es schneller, oft innerhalb weniger Stunden. Ablehnungen kommen jedoch vor – meist wegen Richtlinienverstößen und nicht wegen Fehlern. Wir kennen die Richtlinien und bereiten Einreichungen so vor, dass das Ablehnungsrisiko minimal ist."
+    },
+    {
+      "question": "Wie gehen Sie mit unterschiedlichen Bildschirmgrößen und Geräten um?",
+      "answer": "Wir gestalten und testen über das gesamte Gerätespektrum: vom iPhone SE bis zum iPad Pro, von günstigen Android-Smartphones bis zu Flaggschiff-Geräten. Responsive Layouts passen sich den Bildschirmgrößen an und erhalten dabei Bedienbarkeit und Performance."
+    },
+    {
+      "question": "Wie sieht es mit Wartung und Updates der App aus?",
+      "answer": "Apps benötigen laufende Updates für Betriebssystem-Änderungen (iOS und Android erscheinen jährlich), Sicherheitspatches und Funktionsverbesserungen. Wir bieten Wartungspakete an, die diese Updates sowie Fehlerbehebungen und kleinere Erweiterungen abdecken."
+    },
+    {
+      "question": "Können Sie ein bestehendes App-Projekt übernehmen?",
+      "answer": "Ja, wir übernehmen regelmäßig Apps von anderen Teams oder internen Entwicklern. Wir beginnen mit einem Code-Audit, um die Qualität zu beurteilen und Probleme zu erkennen, und erstellen dann einen Stabilisierungs- und Verbesserungsplan. Eine ehrliche Einschätzung des bestehenden Codes hilft, realistische Erwartungen zu setzen."
+    }
+  ],
+  "relatedServices": [
+    "web-development",
+    "custom-software",
+    "saas-development"
+  ],
+  "cta": {
+    "headline": "Bereit, Ihre mobile App zu bauen?",
+    "description": "Lassen Sie uns Ihre App-Idee und den besten Ansatz für Ihre Nutzer und Ihr Budget besprechen. Wir helfen Ihnen, einen MVP zu definieren, der Mehrwert liefert, ohne überzubauen.",
+    "primaryButton": {
+      "text": "App besprechen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "App-Projekte ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "admizz",
+    "rapid-investment"
+  ],
+  "heroAlt": "Hero-Hintergrundbild für den Leistungsbereich.",
+  "metaTitle": "App-Entwicklung: Mobile Apps für iOS & Android | Zunkiree Labs",
+  "metaDescription": "Mobile Apps für iOS und Android in nativer Qualität. Plattformübergreifend, offlinefähig, nahtlos ans Backend angebunden. Ø 4,7+ in den App Stores."
+}

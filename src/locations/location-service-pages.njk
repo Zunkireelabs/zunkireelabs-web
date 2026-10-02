@@ -13,6 +13,7 @@ eleventyComputed:
   serviceId: "{{ page.serviceId }}"
   canonicalUrl: "{{ page.canonicalUrl }}"
   hasUniqueContent: "{{ page.hasUniqueContent }}"
+  hasServiceFaqs: "{{ 1 if page.hasServiceFaqs else '' }}"
 ---
 
 {# Location × Service pages are generated programmatically #}

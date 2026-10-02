@@ -1,57 +1,68 @@
+{% set lUi = i18n[lang or "en"] or i18n["en"] %}{% set lEn = (lang or "en") == "en" %}
 <footer class="bg-white text-warm-charcoal border-t border-warm-border">
   <div class="container-custom pt-16 lg:pt-20">
     <!-- Link Columns -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10">
       <!-- Company -->
       <div>
-        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">Company</h4>
+        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">{{ lUi.fCompany | safe }}</h4>
         <ul class="space-y-3">
-          <li><a href="/about/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">About Us</a></li>
-          <li><a href="/team/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Team</a></li>
-          <li><a href="/careers/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Careers</a></li>
-          <li><a href="/projects/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Projects</a></li>
-          <li><a href="/partners/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Partners</a></li>
-          <li><a href="/locations/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Locations</a></li>
-          <li><a href="/blog/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Newsroom</a></li>
-          <li><a href="/contact/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Contact</a></li>
+          <li><a href="{{ lUi.aboutUrl }}" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fAbout | safe }}</a></li>
+          {% if lEn %}          <li><a href="/team/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fTeam | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/careers/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fCareers | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/projects/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfProjects | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/partners/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfPartners | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/locations/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fLocations | safe }}</a></li>
+          {% endif %}
+          <li><a href="{{ lUi.blogUrl }}" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfNewsroom | safe }}</a></li>
+          <li><a href="{{ lUi.contactUrl }}" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fContact | safe }}</a></li>
         </ul>
       </div>
 
       <!-- Services and Support -->
       <div>
-        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">Services and Support</h4>
+        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">{{ lUi.lfSvcSupport | safe }}</h4>
         <ul class="space-y-3">
-          <li><a href="/services/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Services</a></li>
-          <li><a href="/agentic-as-a-service/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Agentic as a Service (GaaS)</a></li>
-          <li><a href="/support/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Support Portal</a></li>
-          <li><a href="/pricing/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Pricing</a></li>
+          <li><a href="{{ lUi.servicesUrl }}" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fServices | safe }}</a></li>
+          {% if lEn %}          <li><a href="/agentic-as-a-service/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfGaas | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/support/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfSupportPortal | safe }}</a></li>
+          {% endif %}
+          {% if lEn %}          <li><a href="/pricing/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.fPricing | safe }}</a></li>
+          {% endif %}
         </ul>
       </div>
 
-      <!-- Resources -->
+{% if lEn %}      <!-- Resources -->
       <div>
-        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">Resources</h4>
+        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">{{ lUi.fResources | safe }}</h4>
         <ul class="space-y-3">
-          <li><a href="/customer-stories/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Customer Stories</a></li>
-          <li><a href="/resources/?type=report" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Reports &amp; Research</a></li>
-          <li><a href="/resources/?type=ebook" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Ebooks &amp; Guides</a></li>
-          <li><a href="/resources/?type=case-study" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Case Studies</a></li>
-          <li><a href="/resources/?type=webinar" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Webinars</a></li>
-          <li><a href="/glossary/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">AI Glossary</a></li>
-          <li><a href="/compare/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Compare Products</a></li>
-          <li><a href="/resources/what-is-gaas/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">What is GaaS?</a></li>
+          <li><a href="/customer-stories/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfStories | safe }}</a></li>
+          <li><a href="/resources/?type=report" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfReports | safe }}</a></li>
+          <li><a href="/resources/?type=ebook" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfEbooks | safe }}</a></li>
+          <li><a href="/resources/?type=case-study" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfCase | safe }}</a></li>
+          <li><a href="/resources/?type=webinar" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfWebinars | safe }}</a></li>
+          <li><a href="/glossary/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfGlossary | safe }}</a></li>
+          <li><a href="/compare/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfCompare | safe }}</a></li>
+          <li><a href="/resources/what-is-gaas/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfWhatGaas | safe }}</a></li>
         </ul>
       </div>
 
-      <!-- My Account -->
+{% endif %}
+{% if lEn %}      <!-- My Account -->
       <div>
-        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">My Account</h4>
+        <h4 class="text-warm-black font-bold text-[1.375rem] tracking-[-0.02em] pb-3 mb-4 border-b border-warm-border">{{ lUi.lfAccount | safe }}</h4>
         <ul class="space-y-3">
-          <li><a href="/login/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Sign In</a></li>
-          <li><a href="/register/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Register</a></li>
-          <li><a href="/contact/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">Book a Demo</a></li>
+          <li><a href="/login/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfSignIn | safe }}</a></li>
+          <li><a href="/register/" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfRegister | safe }}</a></li>
+          <li><a href="{{ lUi.contactUrl }}" class="text-navy-500 hover:text-zunkiree-600 text-small transition-colors duration-200">{{ lUi.lfDemo | safe }}</a></li>
         </ul>
       </div>
+{% endif %}
     </div>
 
     <!-- Newsletter + Social Row -->
@@ -61,8 +72,8 @@
         <span class="w-12 h-12 border border-zunkiree-600 text-zunkiree-600 flex items-center justify-center shrink-0" aria-hidden="true">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M3 7.5a1.5 1.5 0 011.5-1.5h15A1.5 1.5 0 0121 7.5v9a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 16.5v-9z"/></svg>
         </span>
-        <span class="text-warm-black text-small font-medium">Sign Up for Zunkiree News</span>
-        <a href="/contact/" class="inline-flex items-center justify-center bg-zunkiree-600 hover:bg-zunkiree-700 text-white text-small font-medium px-6 py-2.5 transition-colors duration-200">Subscribe</a>
+        <span class="text-warm-black text-small font-medium">{{ lUi.lfNewsSignup | safe }}</span>
+        <a href="{{ lUi.contactUrl }}" class="inline-flex items-center justify-center bg-zunkiree-600 hover:bg-zunkiree-700 text-white text-small font-medium px-6 py-2.5 transition-colors duration-200">{{ lUi.lfSubscribe | safe }}</a>
       </div>
     </div>
   </div>
@@ -77,7 +88,7 @@
             <img src="/assets/images/zunkireelabs-logo-footer.png" alt="Zunkiree Labs" class="h-6 w-auto" width="200" height="24" />
           </a>
           <span class="w-px h-6 bg-warm-border" aria-hidden="true"></span>
-          <span class="text-warm-black text-small font-medium">We build the AI infrastructure.</span>
+          <span class="text-warm-black text-small font-medium">{{ lUi.lfTagline | safe }}</span>
         </div>
         <!-- Social Icons -->
         <div class="flex items-center gap-5 text-warm-charcoal">
@@ -103,20 +114,20 @@
           Nepal &middot; Global
           <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
         </button>
-        <a href="/terms/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Site Terms</a>
-        <a href="/gdpr/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">GDPR</a>
-        <a href="/privacy/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Privacy Statement</a>
-        <a href="/privacy-choices/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Your Privacy Choices</a>
-        <a href="/cookie-policy/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Cookie Policy</a>
-        <a href="/cookie-preferences/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Cookie Preferences</a>
-        <a href="/sitemap.xml" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Sitemap</a>
-        <a href="/accessibility/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Accessibility</a>
-        <a href="/contact/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">Website Feedback</a>
+        <a href="/terms/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfTerms | safe }}</a>
+        <a href="/gdpr/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfGdpr | safe }}</a>
+        <a href="/privacy/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfPrivacy | safe }}</a>
+        <a href="/privacy-choices/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfChoices | safe }}</a>
+        <a href="/cookie-policy/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.fCookie | safe }}</a>
+        <a href="/cookie-preferences/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfCookiePref | safe }}</a>
+        <a href="/sitemap.xml" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfSitemap | safe }}</a>
+        <a href="/accessibility/" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfAccess | safe }}</a>
+        <a href="{{ lUi.contactUrl }}" class="text-navy-500 hover:text-zunkiree-600 transition-colors duration-200">{{ lUi.lfFeedback | safe }}</a>
       </div>
 
       <!-- Row 3: Copyright -->
       <p class="text-warm-muted text-small mt-6">
-        &copy; {% year %} {{ site.name }}. All rights reserved.
+        &copy; {% year %} {{ site.name }}. {{ lUi.lfRights | safe }}
       </p>
     </div>
   </div>

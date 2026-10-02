@@ -1,0 +1,465 @@
+---
+layout: base.njk
+lang: de-CH
+ogLocale: de_CH
+title: "Angebot anfragen | Zunkiree Labs"
+description: "Beschreiben Sie Ihr Projekt und erhalten Sie von Zunkiree Labs eine konkrete, unverbindliche Einschätzung für KI-Entwicklung, individuelle Software und mehr."
+permalink: /de-ch/get-a-quote/
+hreflangAlternates:
+  - lang: en
+    url: /get-a-quote/
+  - lang: de
+    url: /de/get-a-quote/
+  - lang: de-CH
+    url: /de-ch/get-a-quote/
+  - lang: nl
+    url: /nl/get-a-quote/
+  - lang: x-default
+    url: /get-a-quote/
+hideChrome: true
+bodyClass: "v2-inter"
+---
+
+{# =====================================================
+   GET A QUOTE — WEBSITE V2
+   Same visual system and quick-links panel as contact.njk, but a
+   qualifying form instead of a general-inquiry one: service interest
+   and timeline are added so a submitted lead can be
+   prioritized/routed instead of landing as a blank message.
+   contact.njk itself is untouched and still exists for general
+   inquiries, support, and press — this is the high-intent "I want a
+   quote" path the navbar's primary CTA now points to. (Budget range
+   was in an earlier version of this form and was deliberately
+   dropped per explicit request — not an oversight if it looks
+   missing.)
+
+   Submits to this site's own /api/submit-lead serverless function
+   (same one contact.njk uses), which forwards to the SAME CRM
+   endpoint/table as contact.njk (zunkireelabs-crm/contact-us)
+   rather than a new one — see api/submit-lead.js for why the real
+   bearer token lives there and not in this file. A `lead_source`
+   field distinguishes a quote request from a general contact-form
+   submission in the CRM.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+  /* Country-code dropdown list already scrolls (max-h-64 overflow-y-auto) —
+     macOS/most browsers just hide the scrollbar until actively scrolling,
+     so it read as cut-off/broken. Force it visible as a thin track instead. */
+  .country-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  .country-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  .country-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .country-scroll::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 9999px;
+  }
+</style>
+
+{# =====================================================
+   HERO — same centered shell as contact.njk's hero.
+   ===================================================== #}
+<section class="relative flex flex-col items-center justify-center px-4 pb-8 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40" aria-labelledby="hero-heading">
+  <div class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center" data-reveal-stagger>
+
+    <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
+      Angebot anfragen
+    </span>
+
+    <h1 id="hero-heading" class="text-center text-balance text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
+      Erzählen Sie uns von Ihrem Projekt
+    </h1>
+
+    <p class="mt-4 max-w-[560px] px-4 text-center text-balance text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
+      Teilen Sie uns einige Details mit, und ein Mitglied des Zunkiree-Labs-Teams meldet sich mit einer konkreten Einschätzung, in der Regel innerhalb eines Werktags.
+    </p>
+  </div>
+</section>
+
+{# =====================================================
+   QUOTE FORM SECTION — same glass-surface form card (right) +
+   quick-links rail (left) as contact.njk.
+   ===================================================== #}
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24" aria-labelledby="quote-form-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="quote-form-heading" class="sr-only">Formular zur Angebotsanfrage und Schnelllinks</h2>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12" data-reveal-stagger>
+
+      {# Left: "Wie es weitergeht" (2/5 width) — genuinely quote-specific,
+         not a copy of contact.njk's quick-links panel. Numbered-step
+         treatment reuses the same font-mono step-number recipe already
+         used in admizz-case-study.njk's "Key engineering decisions"
+         section. Secondary links (general contact, pricing) are kept but
+         demoted to a small text row instead of being the panel's content. #}
+      <div class="lg:col-span-2 lg:order-1">
+        <div class="rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle sm:p-7">
+          <span class="mb-6 block font-mono text-[11px] uppercase tracking-wider text-navy-500">
+            Wie es weitergeht
+          </span>
+
+          <div class="space-y-5">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 font-mono text-[12px] font-semibold text-[#5a9100]">1</span>
+              <div>
+                <p class="text-[15px] font-medium text-[#111827]">Sie sagen uns, was Sie brauchen</p>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Leistung und Zeitrahmen – dauert etwa eine Minute.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 font-mono text-[12px] font-semibold text-[#5a9100]">2</span>
+              <div>
+                <p class="text-[15px] font-medium text-[#111827]">Wir prüfen Ihr Projekt</p>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Ein Teammitglied sieht sich die Details an, in der Regel innerhalb eines Werktags.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 font-mono text-[12px] font-semibold text-[#5a9100]">3</span>
+              <div>
+                <p class="text-[15px] font-medium text-[#111827]">Sie erhalten eine konkrete Einschätzung</p>
+                <p class="mt-0.5 text-[13px] leading-relaxed text-[#6B7280]">Kostenlos und unverbindlich – keine Verpflichtung, weiterzumachen.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-navy-100/60 pt-5 text-[13px]">
+            <a href="/de-ch/contact/" class="font-medium text-[#5a9100] transition-colors hover:text-[#4d7a00]">Stattdessen allgemeiner Kontakt →</a>
+            <a href="/pricing/" class="font-medium text-[#5a9100] transition-colors hover:text-[#4d7a00]">Preise ansehen →</a>
+          </div>
+
+          {# Social Links #}
+          <div class="mt-6 border-t border-navy-100/60 pt-6">
+            <p class="mb-4 font-mono text-[11px] uppercase tracking-wider text-navy-500">Folgen Sie uns</p>
+            <div class="flex items-center gap-5 text-navy-400">
+              <a href="{{ site.social.linkedin }}" class="transition-colors hover:text-navy-900" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20’447 20’452h-3’554v-5’569c0-1’328-.027-3’037-1’852-3’037-1’853 0-2’136 1’445-2’136 2’939v5’667H9’351V9h3’414v1’561h.046c.477-.9 1’637-1.85 3.37-1.85 3’601 0 4’267 2.37 4’267 5’455v6’286zM5’337 7’433c-1’144 0-2’063-.926-2’063-2’065 0-1’138.92-2’063 2’063-2’063 1.14 0 2’064.925 2’064 2’063 0 1’139-.925 2’065-2’064 2’065zm1’782 13’019H3’555V9h3’564v11’452zM22’225 0H1’771C.792 0 0 .774 0 1’729v20’542C0 23’227.792 24 1’771 24h20’451C23.2 24 24 23’227 24 22’271V1’729C24 .774 23.2 0 22’222 0h.003z"/></svg>
+              </a>
+              <a href="{{ site.social.github }}" class="transition-colors hover:text-navy-900" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5’373-12 12 0 5’303 3’438 9.8 8’205 11’385.6’113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3’338.724-4’042-1.61-4’042-1.61C4’422 18.07 3’633 17.7 3’633 17.7c-1’087-.744’084-.729’084-.729 1’205.084 1’838 1’236 1’838 1’236 1.07 1’835 2’809 1’305 3’495.998’108-.776’417-1’305.76-1’605-2’665-.3-5’466-1’332-5’466-5.93 0-1.31’465-2.38 1’235-3.22-.135-.303-.54-1’523.105-3’176 0 0 1’005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02’006 2.04’138 3 .405 2.28-1’552 3’285-1.23 3’285-1.23’645 1’653.24 2’873.12 3’176.765.84 1.23 1.91 1.23 3.22 0 4.61-2’805 5’625-5’475 5.92.42.36.81 1’096.81 2.22 0 1’606-.015 2’896-.015 3’286 0 .315.21.69’825.57C20’565 22’092 24 17’592 24 12’297c0-6’627-5’373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {# Right: Quote Form (3/5 width) — native Alpine.js form, same
+         payload base as contact.njk's contact-us submission plus the
+         new qualifying fields and a lead_source marker. #}
+      <div class="lg:col-span-3 lg:order-2">
+        <div class="rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle backdrop-blur-md sm:p-8"
+            x-data="{
+              firstName: '',
+              lastName: '',
+              workEmail: '',
+              countryCodes: {{ countryCodes | dump }},
+              phoneCode: '+977',
+              phoneCountryName: 'Nepal',
+              phoneFlag: '🇳🇵',
+              phone: '',
+              country: '',
+              serviceInterest: '',
+              timeline: '',
+              description: '',
+              optIn: false,
+              submitting: false,
+              submitted: false,
+              error: false,
+              async submitQuoteForm() {
+                if (!this.firstName.trim() || !this.lastName.trim() || !this.workEmail.trim() || !this.serviceInterest) return;
+                this.submitting = true;
+                this.error = false;
+                try {
+                  const res = await fetch('/api/submit-lead?form=quote', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      first_name: this.firstName.trim(),
+                      last_name: this.lastName.trim(),
+                      email: this.workEmail.trim(),
+                      phone: this.phone.trim() ? (this.phoneCode + ' ' + this.phone.trim()) : null,
+                      country: this.country.trim() || null,
+                      how_would_you_like_to_connect_with_us: 'Get a Quote',
+                      what_can_we_help_you_with: this.description.trim() || null,
+                      opt_in_for_marketing_communication: this.optIn,
+                      lead_source: 'get-a-quote',
+                      service_interest: this.serviceInterest,
+                      timeline: this.timeline || null
+                    })
+                  });
+                  if (!res.ok) throw new Error('Submit failed: ' + res.status);
+                  this.submitted = true;
+                } catch (err) {
+                  console.error('[get-a-quote form] submit error', err);
+                  this.error = true;
+                } finally {
+                  this.submitting = false;
+                }
+              }
+            }"
+          >
+            {# Success state #}
+            <div x-show="submitted" x-cloak class="py-10 text-center">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#F0F5E8] text-[#5a9100]">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 class="text-[18px] font-medium text-[#111827]">Danke für die Angaben</h3>
+              <p class="mt-1.5 text-[14px] leading-relaxed text-[#6B7280]">Ein Mitglied des Zunkiree-Labs-Teams meldet sich in Kürze mit einer konkreten Einschätzung.</p>
+            </div>
+
+            {# Form #}
+            <form x-show="!submitted" @submit.prevent="submitQuoteForm()" novalidate>
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="first_name" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Vorname <span class="text-[#76B900]">*</span></label>
+                  <input type="text" id="first_name" x-model="firstName" required
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                </div>
+                <div>
+                  <label for="last_name" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Nachname <span class="text-[#76B900]">*</span></label>
+                  <input type="text" id="last_name" x-model="lastName" required
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <label for="work_email" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Geschäftliche E-Mail <span class="text-[#76B900]">*</span></label>
+                <input type="email" id="work_email" x-model="workEmail" required
+                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+              </div>
+
+              <div class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="phone" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Telefon</label>
+                  <div class="flex gap-2">
+                    {# Searchable country-code picker — matches the same UX
+                       EdgeX's own native form uses for this field
+                       (edgex.zunkireelabs.com/form/zunkireelabs-crm/contact-us),
+                       not an invented pattern. #}
+                    <div class="relative" x-data="{ codeOpen: false, codeSearch: '' }" @click.outside="codeOpen = false">
+                      <button type="button" @click="codeOpen = !codeOpen"
+                        class="flex w-[92px] flex-shrink-0 items-center justify-between gap-1 rounded-md border border-navy-100/60 bg-white px-2.5 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                        <span class="flex items-center gap-1">
+                          <span x-text="phoneFlag"></span>
+                          <span x-text="phoneCode"></span>
+                        </span>
+                        <svg class="h-3 w-3 flex-shrink-0 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6"></path>
+                        </svg>
+                      </button>
+                      <div x-show="codeOpen" x-cloak x-transition
+                        class="absolute z-20 mt-1 w-72 overflow-hidden rounded-md border border-navy-100 bg-white shadow-lg">
+                        <div class="border-b border-navy-100 p-2">
+                          <input type="text" x-model="codeSearch" placeholder="Land suchen…"
+                            class="w-full rounded border border-navy-100/60 px-2 py-1.5 text-[13px] outline-none focus:border-[#76B900]">
+                        </div>
+                        <div class="country-scroll max-h-64 overflow-y-auto overscroll-contain py-1" data-lenis-prevent>
+                          <button type="button" x-show="!codeSearch" @click="codeOpen = false"
+                            class="flex w-full items-center gap-2 bg-[#F0F5E8] px-3 py-2.5 text-left text-[13px] font-medium text-[#111827]">
+                            <span x-text="phoneFlag"></span>
+                            <span x-text="phoneCountryName + ' (' + phoneCode + ')'"></span>
+                          </button>
+                          <template x-for="c in countryCodes.filter(c => c.name !== phoneCountryName && (c.name.toLowerCase().includes(codeSearch.toLowerCase()) || c.code.includes(codeSearch)))" :key="c.name">
+                            <button type="button" @click="phoneCode = c.code; phoneCountryName = c.name; phoneFlag = c.flag; codeOpen = false; codeSearch = ''"
+                              class="flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] text-[#111827] transition-colors hover:bg-navy-50">
+                              <span x-text="c.flag"></span>
+                              <span x-text="c.name + ' (' + c.code + ')'"></span>
+                            </button>
+                          </template>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="tel" id="phone" x-model="phone" placeholder="98XXXXXXXX"
+                      class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                  </div>
+                </div>
+                <div>
+                  <label for="country" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Land</label>
+                  <input type="text" id="country" x-model="country"
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <label for="service_interest" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Was brauchen Sie? <span class="text-[#76B900]">*</span></label>
+                <select id="service_interest" x-model="serviceInterest" required
+                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                  <option value="" disabled selected>Leistung auswählen</option>
+                  {% for svc in [
+                    { label: "KI-Entwicklung", value: "ai_development" },
+                    { label: "KI-Kundenerlebnis", value: "ai_customer_experience" },
+                    { label: "Datensysteme", value: "data_system" },
+                    { label: "Individuelle Software", value: "custom_software" },
+                    { label: "SaaS-Entwicklung", value: "saas_development" },
+                    { label: "Web- und App-Entwicklung", value: "website_app_development" },
+                    { label: "AEO & SEO", value: "aeo_seo" },
+                    { label: "KI-E-Commerce", value: "ai_ecommerce" },
+                    { label: "Agentic as a Service (GaaS)", value: "gaas" },
+                    { label: "Noch unsicher", value: "not_sure" }
+                  ] %}
+                  <option value="{{ svc.value }}">{{ svc.label }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="mt-5">
+                <label for="timeline" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Zeitrahmen</label>
+                <select id="timeline" x-model="timeline"
+                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30">
+                  <option value="" disabled selected>Zeitrahmen auswählen</option>
+                  {% for t in [
+                    { label: "So bald wie möglich", value: "asap" },
+                    { label: "1–3 Monate", value: "1_3_months" },
+                    { label: "3–6 Monate", value: "3_6_months" },
+                    { label: "Mehr als 6 Monate", value: "6_plus_months" },
+                    { label: "Noch unsicher", value: "not_sure" }
+                  ] %}
+                  <option value="{{ t.value }}">{{ t.label }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="mt-5">
+                <label for="description" class="mb-1.5 block font-mono text-[12px] font-semibold uppercase tracking-wider text-navy-800">Erzählen Sie uns von Ihrem Projekt</label>
+                <textarea id="description" x-model="description" rows="4" placeholder="Was möchten Sie entwickeln oder lösen?"
+                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"></textarea>
+              </div>
+
+              <label class="mt-5 flex items-start gap-2.5 text-[13px] leading-relaxed text-[#6B7280]">
+                <input type="checkbox" id="opt_in_for_marketing_communication" x-model="optIn" class="mt-0.5 h-4 w-4 rounded border-navy-200 text-[#76B900] focus:ring-[#76B900]/30">
+                Ich möchte Marketing-Mitteilungen von Zunkiree Labs erhalten.
+              </label>
+
+              <p x-show="error" x-cloak class="mt-4 text-[13px] font-medium text-red-600">
+                Beim Senden Ihrer Anfrage ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.
+              </p>
+
+              <button type="submit" :disabled="submitting"
+                class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-[#5a9100] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
+                <span x-show="!submitting">Mein Angebot anfordern</span>
+                <span x-show="submitting" class="flex items-center gap-2">
+                  <svg class="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5’373 0 0 5’373 0 12h4zm2 5’291A7’962 7’962 0 014 12H0c0 3’042 1’135 5’824 3 7’938l3-2’647z"></path>
+                  </svg>
+                  Wird gesendet…
+                </span>
+              </button>
+            </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   FAQ — quote-specific questions, grounded in pricing.njk's
+   own real content (same figures/policies, not invented).
+   ===================================================== #}
+{% set quoteFaq = [
+  {
+    question: "Was kostet ein typisches Projekt?",
+    answer: "Das hängt vom Umfang ab – KI-Integrationen kosten typischerweise $15’000–$40’000, RAG-/Wissenssysteme $50’000–$100’000 und vollständige SaaS-Plattformen $80’000–$200’000+. Nach dem Verständnis Ihrer konkreten Anforderungen erstellen wir eine detaillierte Einschätzung."
+  },
+  {
+    question: "Ist das Angebot kostenlos und unverbindlich?",
+    answer: "Ja. Mit dem Absenden dieses Formulars beginnt ein Gespräch, kein Vertrag – wir prüfen Ihre Angaben und melden uns mit einer konkreten Einschätzung, von der Sie jederzeit zurücktreten können."
+  },
+  {
+    question: "Bieten Sie Festpreisverträge an?",
+    answer: "Ja, für Projekte mit klar definiertem Umfang und klaren Anforderungen. Nach einer Discovery-Phase erstellen wir ein detailliertes Angebot mit Festpreis, Zeitplan und Liefergegenständen – das eignet sich am besten für MVP-Entwicklung und konkrete Funktionsumsetzungen."
+  },
+  {
+    question: "Was passiert, nachdem ich dieses Formular abgeschickt habe?",
+    answer: "Ein Mitglied des Zunkiree-Labs-Teams prüft Ihre Projektdetails und meldet sich direkt bei Ihnen, in der Regel innerhalb eines Werktags, um den Umfang zu besprechen und eine Einschätzung zu geben."
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Häufig gestellte Fragen
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in quoteFaq %}
+          <div class="py-5">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="flex w-full items-center justify-between gap-4 text-left group"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="faq-answer-{{ loop.index }}"
+            >
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              id="faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in quoteFaq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

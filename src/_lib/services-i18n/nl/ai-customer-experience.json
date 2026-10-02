@@ -1,0 +1,313 @@
+{
+  "id": "ai-customer-experience",
+  "relatedCaseStudies": [
+    {
+      "slug": "admizz-case-study",
+      "title": "Admizz Education",
+      "stat": "45% snellere reactietijden"
+    },
+    {
+      "slug": "khems-cleaning-case-study",
+      "title": "Khems Cleaning",
+      "stat": "70% meer boekingen"
+    }
+  ],
+  "title": "AI voor klantervaring",
+  "category": "AI & Data",
+  "tagline": "Traditionele support groeit mee met het aantal medewerkers. AI-support niet.",
+  "description": "AI-gestuurde klantervaringssystemen die vragen direct oplossen, complexe kwesties slim doorsturen en leren van elke interactie. Wij bouwen een supportinfrastructuur die schaalt zonder dat uw personeelsbestand mee hoeft te groeien.",
+  "heroImage": "/assets/images/ai-customer-experience-hero.webp",
+  "heroBgColor": "#efefef",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Klantvraag oplossen",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Doorsturen naar specialist",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Sentiment analyseren",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Antwoord genereren",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Kennisbank bijwerken",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Opschalen naar een medewerker",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Oplostijd bijhouden",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Los 80% van de tickets op zonder één menselijke overdracht.",
+    "content": "Wij bouwen AI-systemen die de 80% van de vragen afhandelen die geen menselijke tussenkomst nodig hebben — nauwkeurig. Onze platforms integreren met uw supportstack, lossen facturatie- en statusvragen in enkele seconden op en sturen complexe zaken door met volledige context. CSAT-scores stijgen. Het aantal tickets daalt. Uw team richt zich op wat ertoe doet."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Minder tickets",
+      "description": "dankzij self-service-AI"
+    },
+    {
+      "value": "< 30s",
+      "label": "Gem. reactietijd",
+      "description": "versus 4+ uur gemiddeld in de sector"
+    },
+    {
+      "value": "92%",
+      "label": "Oplossingspercentage",
+      "description": "zonder menselijke overdracht"
+    },
+    {
+      "value": "4.8/5",
+      "label": "CSAT-score",
+      "description": "gemiddeld na implementatie"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Directe oplossing op elk uur",
+      "description": "AI handelt vragen 24/7 af met consistente nauwkeurigheid. Klanten krijgen direct antwoord op vragen over facturatie, bestelstatus, wachtwoordresets en producten — geen wachtrij, geen wachttijd, geen frustratie."
+    },
+    {
+      "icon": "workflow",
+      "title": "Stuur complexe kwesties door naar de juiste expert",
+      "description": "Als AI een probleem niet kan oplossen, stuurt ze het slim door — met context, sentiment en urgentie, zodat medewerkers alles hebben wat ze nodig hebben om snel te kunnen helpen. Klanten hoeven zichzelf niet te herhalen."
+    },
+    {
+      "icon": "integrate",
+      "title": "Leer van elke interactie",
+      "description": "Onze systemen verbeteren continu. Elk opgelost ticket, elk feedbacksignaal en elk succesvol resultaat traint het model om vergelijkbare gevallen beter af te handelen. Uw AI wordt elke week slimmer."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "support-automation",
+      "title": "Supportautomatisering",
+      "headline": "Slimme supportautomatisering",
+      "description": "Automatiseer tier-1-support met AI die uw producten, beleid en procedures begrijpt. Handel retouren, terugbetalingen, accountwijzigingen en veelvoorkomende probleemoplossing af zonder menselijke tussenkomst.",
+      "features": [
+        "Begrip van natuurlijke taal",
+        "Gesprekken met meerdere beurten",
+        "Beleidsbewuste antwoorden",
+        "Automatische escalatie"
+      ],
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "omnichannel",
+      "title": "Omnichannel",
+      "headline": "Omnichannel-ervaring",
+      "description": "Consistente AI-gestuurde support via e-mail, chat, sms, social media en spraak. Eén klantcontext die door alle kanalen stroomt — geen versnipperde gesprekken of herhaalde uitleg.",
+      "features": [
+        "Eén klantbeeld",
+        "Kanaalonafhankelijke AI",
+        "Naadloze overdrachten",
+        "Continuïteit in gesprekken"
+      ],
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "proactive-support",
+      "title": "Proactief",
+      "headline": "Proactieve klantenondersteuning",
+      "description": "Voorspel problemen voordat klanten ze melden. Bewaak gebruikspatronen, detecteer anomalieën en neem proactief contact op om churn en escalatie te voorkomen.",
+      "features": [
+        "Gebruiksmonitoring",
+        "Anomaliedetectie",
+        "Proactieve benadering",
+        "Churnpreventie"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "agent-assist",
+      "title": "Agent Assist",
+      "headline": "AI-ondersteuning voor medewerkers",
+      "description": "Ondersteun medewerkers met realtime AI-suggesties, kennisopvraging en conceptantwoorden. Verkort de afhandeltijd en verbeter de kwaliteit van de oplossingen.",
+      "features": [
+        "Realtime suggesties",
+        "Kennisopvraging",
+        "Conceptantwoorden opstellen",
+        "Kwaliteitsborging"
+      ],
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "voice-ai",
+      "title": "Voice AI",
+      "headline": "Voice-AI-systemen",
+      "description": "Vervang IVR-keuzemenu's door conversationele AI die natuurlijke spraak begrijpt. Stuur gesprekken slim door, handel eenvoudige verzoeken automatisch af, boek en beheer afspraken telefonisch en verlaag de belasting van het callcenter.",
+      "features": [
+        "Spraakherkenning",
+        "Intentieherkenning",
+        "Gesprekken doorsturen",
+        "Spraakauthenticatie",
+        "Afspraken boeken via spraak"
+      ],
+      "image": "https://images.unsplash.com/photo-1590935217281-8f102120d683?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Audit",
+      "description": "Analyseer uw huidige supportactiviteiten. Breng ticketcategorieën, reactiepatronen en oplossingsworkflows in kaart om automatiseringskansen te vinden.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "Supportauditrapport",
+        "Automatiseringsroadmap",
+        "ROI-projectie"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerp",
+      "description": "Ontwerp gespreksflows, escalatielogica en integratiepunten. Bouw de kennisbank op en train de eerste modellen op uw documentatie.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "Gespreksontwerp",
+        "Integratiearchitectuur",
+        "Trainingsdata"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Uitrol",
+      "description": "Lanceer AI naast uw bestaande supportkanalen. Bewaak de nauwkeurigheid, verzamel feedback en itereer snel op basis van echte klantinteracties.",
+      "duration": "4-6 weken",
+      "deliverables": [
+        "Live AI-systeem",
+        "Monitoringdashboard",
+        "Training van medewerkers"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Optimalisatie",
+      "description": "Continue verbetering op basis van oplossingsdata. Breid de dekking uit, verbeter de nauwkeurigheid en verlaag na verloop van tijd het escalatiepercentage.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Wekelijkse rapporten",
+        "Modelupdates",
+        "Uitbreiding van de dekking"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4 Turbo",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "Intercom",
+      "category": "Platform",
+      "description": "Klantcommunicatie",
+      "logo": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+    },
+    {
+      "name": "Zendesk",
+      "category": "Platform",
+      "description": "Helpdesk",
+      "logo": "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg"
+    },
+    {
+      "name": "Twilio",
+      "category": "Spraak",
+      "description": "Spraak & sms",
+      "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg"
+    },
+    {
+      "name": "Segment",
+      "category": "Data",
+      "description": "Klantgegevens",
+      "logo": "https://cdn.worldvectorlogo.com/logos/segment-1.svg"
+    },
+    {
+      "name": "Python",
+      "category": "Taal",
+      "description": "Backendlogica",
+      "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    },
+    {
+      "name": "Redis",
+      "category": "Cache",
+      "description": "Sessiestatus",
+      "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastructuur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welke invloed heeft AI-klantenservice op de klanttevredenheid?",
+      "answer": "Goed uitgevoerd verhoogt AI de tevredenheid door wachttijden weg te nemen en directe, nauwkeurige antwoorden te geven. Onze implementaties scoren gemiddeld 4,8/5 CSAT — hoger dan support die uitsluitend door mensen wordt geleverd. De sleutel is AI bouwen die haar grenzen kent en soepel opschaalt wanneer dat nodig is."
+    },
+    {
+      "question": "Welk percentage van de supporttickets kan AI daadwerkelijk oplossen?",
+      "answer": "Doorgaans is 60-80% van de tier-1-tickets te automatiseren: wachtwoordresets, bestelstatus, facturatievragen, retourverzoeken en basis-probleemoplossing. Complexe technische problemen, emotionele situaties en uitzonderingen hebben nog steeds menselijke medewerkers nodig — maar ook die kan AI ondersteunen."
+    },
+    {
+      "question": "Hoe lang duurt het om AI te trainen op onze producten en ons beleid?",
+      "answer": "De initiële training duurt 2-3 weken en maakt gebruik van uw bestaande documentatie, helpartikelen en tickethistorie. De AI blijft leren van elke interactie, waardoor de nauwkeurigheid na verloop van tijd toeneemt. De meeste klanten zien binnen de eerste maand na livegang 85%+ nauwkeurigheid."
+    },
+    {
+      "question": "Vervangt AI ons supportteam?",
+      "answer": "AI vangt het volume op, zodat uw team zich kan richten op complexe vraagstukken, relatieopbouw en waardevolle interacties. De meeste klanten verminderen hun personeelsbestand niet — ze verwerken met hetzelfde team 3-5x meer volume en verbeteren tegelijk de kwaliteit van de reacties en de medewerkerstevredenheid."
+    },
+    {
+      "question": "Hoe gaat u om met gevoelige klantgegevens?",
+      "answer": "Wij werken binnen uw bestaande beveiligingsperimeter. Data blijft in uw omgeving, modellen kunnen on-premise of in uw eigen cloud draaien en we ondersteunen naleving van SOC 2, HIPAA en AVG. AI wordt nooit getraind op klantgegevens zonder uitdrukkelijke toestemming."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "custom-software",
+    "data-systems"
+  ],
+  "cta": {
+    "headline": "Klaar om uw klantenservice te transformeren?",
+    "description": "Ontdek hoe AI uw supportvolume kan afhandelen terwijl de tevredenheidsscores stijgen. Wij auditen uw huidige werkwijze en laten u precies zien wat te automatiseren valt.",
+    "primaryButton": {
+      "text": "Plan een supportaudit",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk casestudy's",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "admizz",
+    "prime-tiles",
+    "khems-cleaning"
+  ],
+  "heroAlt": "Heldenafbeelding die klantervaring en AI-technologie toont",
+  "metaTitle": "AI voor klantervaring: intelligente supportsystemen | Zunkiree Labs",
+  "metaDescription": "Transformeer uw klantenservice met AI die vragen direct oplost. Verminder supporttickets met 40% en verhoog de tevredenheid. Slimme automatisering, 24/7."
+}

@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: "Insights | Trending AI & Technology Topics | Zunkiree Labs"
+description: "Timely explainers on what is trending in AI and technology, and what it means for your business, from the team at Zunkiree Labs."
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.insights
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "{{ '/blog/insights/' if pagination.pageNumber == 0 else '/blog/insights/page/' + (pagination.pageNumber + 1) + '/' }}"
+---
+
+{# The "Insights" view of the blog: the same listing as /blog/ (src/blog/index.njk),
+   filtered to posts with `category: Insights`. Emits no page at all while there
+   are none (Eleventy generates nothing for empty pagination data), so there is
+   never an empty, indexable Insights page. #}
+{% include "partials/navbar-v2.njk" %}
+
+<section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/blog/" class="text-zunkiree-600 hover:underline">Blog</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Insights</span>
+    </nav>
+
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+      Insights
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+      What is trending in AI and technology right now, explained, and what it means for your business.
+    </p>
+
+    {% set blogFilter = "insights" %}
+    {% include "partials/blog-filter.njk" %}
+  </div>
+</section>
+
+<section class="pb-16 md:pb-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {% include "partials/blog-grid.njk" %}
+
+  </div>
+</section>
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Want to build with AI?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Let's discuss how AI can transform your business operations.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Schedule a Discovery Call
+    </a>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}

@@ -31,3 +31,62 @@ Leading AI company in Nepal building production-grade AI systems, RAG pipelines,
 - [Zennly Case Study](https://zunkireelabs.com/resources/zenly-case-study/): Zennly is Zunkiree Labs' AI-powered scheduling engine, built to handle multi-provider, multi-resource availability that a plain calendar can't represent. This case study covers the engineering behind automatic conflict resolution and no-show reduction.
 - [Zennly](https://zennly.io/): Multi-branch booking and operations software for spas, salons, gyms and clinics in Nepal, built by Zunkiree Labs.
 - [Gaamma Case Study](https://zunkireelabs.com/resources/gaamma-case-study/): Gaamma is Zunkiree Labs' manufacturing ERP, built to unify production planning, inventory, and quality control with AI-driven predictive maintenance. This case study covers why we built it and how it plugs into equipment already on the floor.
+
+## Insights
+Timely explainers on what is trending in AI and technology, with sources. Index: https://zunkireelabs.com/blog/insights/
+- [What Is Superintelligence and Why Is It Called That?](https://zunkireelabs.com/blog/what-is-superintelligence-and-why-is-it-called-that/): Superintelligence, AGI and the safety debate in plain language: where the term comes from and why it matters to businesses adopting AI.
+- [Why AI Agents Are Getting Their Own Infrastructure](https://zunkireelabs.com/blog/ai-agents-are-getting-their-own-infrastructure/): Agent swarms for security testing, agents inside messaging apps and calls for an AI-native OS: what this week's agent news means for businesses.
+- [AI Coding Agents: What Microsoft's Copilot Rethink Means](https://zunkireelabs.com/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/): Microsoft pitches Copilot as an 'OS for work' with coding and agents built in. What AI-native software means for teams that build or buy software.
+- [Google AI Overviews Antitrust Ruling: What It Means for GEO](https://zunkireelabs.com/blog/google-ai-overviews-antitrust-ruling-what-it-means-for-ai-search-and-geo/): A judge dismissed Chegg and Penske's antitrust suits over Google AI Overviews. What the ruling means and how to optimize for AI search (GEO).
+- [Gemini 4 Argon: How to Read a Frontier Model Release](https://zunkireelabs.com/blog/gemini-4-argon-how-to-read-a-frontier-model-release/): Google announced Gemini 4 Argon but most people can't use it yet. What was claimed, what's unproven and how businesses should respond.
+- [California's Robotaxi Law: What It Means for Autonomous AI](https://zunkireelabs.com/blog/robotaxis-first-responders-california-law-future-of-autonomous-systems/): California will fine robotaxi operators who block first responders for 30+ minutes. What SB 1246 requires and what it signals for AI automation.
+
+## Locations
+Zunkiree Labs serves businesses in four Nepal locations from its Sanepa, Lalitpur headquarters. Each city page links to nine service pages. Index: https://zunkireelabs.com/locations/
+- [Lalitpur: Zunkiree Labs](https://zunkireelabs.com/locations/lalitpur/): Zunkiree Labs is headquartered in Sanepa, Lalitpur (Patan), just minutes from Kathmandu. Our team of AI engineers and software developers builds production-grade AI systems for businesses across Nepal and globally.
+- [Bhaktapur: Zunkiree Labs](https://zunkireelabs.com/locations/bhaktapur/): Zunkiree Labs serves Bhaktapur's business community from our headquarters in Sanepa, Lalitpur, within the Kathmandu Valley. We work with local enterprises seeking AI and digital transformation.
+- [Pokhara: Zunkiree Labs](https://zunkireelabs.com/locations/pokhara/): Zunkiree Labs serves clients in Pokhara, Nepal's second-largest city, through remote collaboration from our headquarters in Sanepa, Lalitpur. We've worked with tourism, hospitality, and local businesses in the Pokhara region.
+
+### Kathmandu services
+- [AI Development Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/ai-development/)
+- [AI Customer Experience Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/ai-customer-experience/)
+- [AI Ecommerce Solutions in Kathmandu](https://zunkireelabs.com/locations/kathmandu/ai-ecommerce/)
+- [Data Engineering Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/data-systems/)
+- [Custom Software Development in Kathmandu](https://zunkireelabs.com/locations/kathmandu/custom-software/)
+- [SaaS Development Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/saas-development/)
+- [Web Development Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/web-development/)
+- [Mobile App Development in Kathmandu](https://zunkireelabs.com/locations/kathmandu/app-development/)
+- [SEO & AEO Services in Kathmandu](https://zunkireelabs.com/locations/kathmandu/aeo-seo/)
+
+### Lalitpur services
+- [AI Development Company in Lalitpur](https://zunkireelabs.com/locations/lalitpur/ai-development/)
+- [AI Customer Support Solutions in Lalitpur](https://zunkireelabs.com/locations/lalitpur/ai-customer-experience/)
+- [AI Ecommerce Solutions in Lalitpur](https://zunkireelabs.com/locations/lalitpur/ai-ecommerce/)
+- [Data Engineering and Analytics Services in Lalitpur](https://zunkireelabs.com/locations/lalitpur/data-systems/)
+- [Custom Software Development in Lalitpur](https://zunkireelabs.com/locations/lalitpur/custom-software/)
+- [SaaS Development Company in Lalitpur](https://zunkireelabs.com/locations/lalitpur/saas-development/)
+- [Web Development Services in Lalitpur](https://zunkireelabs.com/locations/lalitpur/web-development/)
+- [Mobile App Development in Lalitpur](https://zunkireelabs.com/locations/lalitpur/app-development/)
+- [SEO and AEO Services in Lalitpur](https://zunkireelabs.com/locations/lalitpur/aeo-seo/)
+
+### Bhaktapur services
+- [AI Development Company in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/ai-development/)
+- [AI Customer Support Solutions in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/ai-customer-experience/)
+- [AI Ecommerce Solutions in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/ai-ecommerce/)
+- [Data Engineering and Analytics Services in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/data-systems/)
+- [Custom Software Development in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/custom-software/)
+- [SaaS Development Company in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/saas-development/)
+- [Web Development Company in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/web-development/)
+- [Mobile App Development in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/app-development/)
+- [SEO and AEO Services in Bhaktapur](https://zunkireelabs.com/locations/bhaktapur/aeo-seo/)
+
+### Pokhara services
+- [AI Development Company in Pokhara](https://zunkireelabs.com/locations/pokhara/ai-development/)
+- [AI Customer Support Solutions in Pokhara](https://zunkireelabs.com/locations/pokhara/ai-customer-experience/)
+- [AI Ecommerce Solutions in Pokhara](https://zunkireelabs.com/locations/pokhara/ai-ecommerce/)
+- [Data Engineering and Analytics Services in Pokhara](https://zunkireelabs.com/locations/pokhara/data-systems/)
+- [Custom Software Development Company in Pokhara](https://zunkireelabs.com/locations/pokhara/custom-software/)
+- [SaaS Development Company in Pokhara](https://zunkireelabs.com/locations/pokhara/saas-development/)
+- [Web Development Company in Pokhara](https://zunkireelabs.com/locations/pokhara/web-development/)
+- [Mobile App Development in Pokhara](https://zunkireelabs.com/locations/pokhara/app-development/)
+- [SEO and AEO Services in Pokhara](https://zunkireelabs.com/locations/pokhara/aeo-seo/)

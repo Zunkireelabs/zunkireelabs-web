@@ -1,0 +1,298 @@
+{
+  "id": "aeo-seo",
+  "title": "AEO & SEO",
+  "category": "Marketing",
+  "tagline": "Bei Google ranken. Von KI zitiert werden. Das ist AEO & SEO.",
+  "description": "Suchoptimierung für das KI-Zeitalter. Wir optimieren Ihre Inhalte, damit sie in der klassischen Suche ranken und von KI-Assistenten wie ChatGPT, Perplexity und Google AI Overviews zitiert werden. Neue Regeln erfordern einen neuen Ansatz.",
+  "heroImage": "/assets/images/aeo-seo-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "KI-Sichtbarkeit prüfen",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Für Zitierung optimieren",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Schema-Markup hinzufügen",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "FAQ-Inhalte strukturieren",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "KI-Erwähnungen tracken",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Core Web Vitals verbessern",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Suchintention analysieren",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Sichtbar bei Google. Zitiert von ChatGPT. Das ist moderne Suche.",
+    "content": "KI-Systeme wie ChatGPT, Perplexity und Google AI Overviews beantworten heute Millionen von Anfragen, die früher Traffic auf Ihre Website gebracht haben. Sichtbar zu bleiben erfordert Optimierung für Suchmaschinen und für KI-Zitierung – strukturierte Inhalte, überzeugende Autorität und technische Präzision. Wir nennen das AEO, und es ist heute untrennbar mit wirksamem SEO verbunden."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Anteil KI-Traffic",
+      "description": "Prognose bis 2027"
+    },
+    {
+      "value": "3x",
+      "label": "Zitierrate",
+      "description": "mit AEO-Optimierung"
+    },
+    {
+      "value": "200%",
+      "label": "Organisches Wachstum",
+      "description": "Ø Verbesserung bei Kunden"
+    },
+    {
+      "value": "< 30 T",
+      "label": "Erste Ergebnisse",
+      "description": "bei Quick Wins"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Von KI-Systemen zitiert werden, nicht nur ranken",
+      "description": "Wenn ChatGPT oder Perplexity eine Frage beantworten, nennen sie Quellen. Wir strukturieren Ihre Inhalte so, dass KI-Systeme Ihre Autorität erkennen und Ihre Marke referenzieren – für Bekanntheit und Traffic, auch wenn Nutzer nicht auf Suchergebnisse klicken."
+    },
+    {
+      "icon": "speed",
+      "title": "Featured Snippets und AI Overviews besetzen",
+      "description": "Googles AI Overviews greifen auf gut strukturierte Inhalte zurück. Wir optimieren für Position Null: klare Definitionen, formatierte Listen und Schema-Markup, das Suchmaschinen genau mitteilt, was Ihre Inhalte enthalten."
+    },
+    {
+      "icon": "integrate",
+      "title": "Autorität aufbauen, die sich mit der Zeit summiert",
+      "description": "Klassisches SEO und AEO belohnen beide Autorität. Wir bauen sie auf durch inhaltliche Tiefe, Expertenpositionierung, Backlink-Aufbau und technische Exzellenz. Das Ergebnis ist Traffic, der wächst und sich summiert – keine Anzeigen, die enden, sobald Sie aufhören zu zahlen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "ai-visibility",
+      "title": "KI-Sichtbarkeit",
+      "headline": "KI-Sichtbarkeits-Optimierung",
+      "description": "Werden Sie von ChatGPT, Perplexity, Claude und Google AI Overviews zitiert. Inhalte für die KI-Extraktion strukturieren – mit Definitionsblöcken, FAQs und überzeugender Autorität.",
+      "features": [
+        "KI-Zitier-Optimierung",
+        "Erstellung von Definitionsblöcken",
+        "FAQ-Strukturierung",
+        "Autoritätssignale"
+      ],
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "technical-seo",
+      "title": "Technisches SEO",
+      "headline": "Technisches SEO",
+      "description": "Das technische Fundament in Ordnung bringen: Website-Geschwindigkeit, Crawlbarkeit, strukturierte Daten und Core Web Vitals. Technische Probleme, die Rankings und Sichtbarkeit blockieren.",
+      "features": [
+        "Optimierung der Ladegeschwindigkeit",
+        "Schema-Markup",
+        "Crawl-Optimierung",
+        "Core Web Vitals"
+      ],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "content-strategy",
+      "title": "Content-Strategie",
+      "headline": "Content-Strategie",
+      "description": "Wertvolle Themen identifizieren, Inhalte erstellen, die ranken und konvertieren, und thematische Autorität aufbauen. Inhalte, die Nutzern und Suchalgorithmen gleichermaßen dienen.",
+      "features": [
+        "Keyword-Recherche",
+        "Content-Planung",
+        "Themencluster",
+        "Wettbewerbsanalyse"
+      ],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "local-seo",
+      "title": "Lokales SEO",
+      "headline": "Lokales SEO",
+      "description": "Für die lokale Suche optimieren: Google Unternehmensprofil, lokale Einträge und Bewertungsmanagement. Von Kunden in Ihrem Einzugsgebiet gefunden werden.",
+      "features": [
+        "Optimierung des Google-Unternehmensprofils",
+        "Lokale Einträge",
+        "Bewertungsmanagement",
+        "Lokales Schema"
+      ],
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "seo-migration",
+      "title": "SEO-Migration",
+      "headline": "SEO-Migration & Recovery",
+      "description": "Rankings bei Website-Migrationen und Relaunches schützen. Von Algorithmus-Abstrafungen oder Traffic-Einbrüchen mit gezielten Maßnahmen erholen.",
+      "features": [
+        "Migrationsplanung",
+        "Redirect-Mapping",
+        "Wiederherstellung nach Abstrafung",
+        "Traffic-Wiederherstellung"
+      ],
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Audit",
+      "description": "Umfassendes Audit von technischem SEO, Content-Qualität, KI-Sichtbarkeit und Wettbewerbspositionierung. Quick Wins und langfristige Chancen identifizieren.",
+      "duration": "1-2 Wochen",
+      "deliverables": [
+        "SEO-Audit-Bericht",
+        "AEO-Bewertung",
+        "Priorisierte Roadmap"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Beheben",
+      "description": "Technische Probleme beheben und Quick Wins umsetzen. Schema-Markup, Verbesserungen der Ladegeschwindigkeit und Optimierung der Content-Struktur.",
+      "duration": "2-4 Wochen",
+      "deliverables": [
+        "Technische Korrekturen",
+        "Schema-Umsetzung",
+        "Content-Restrukturierung"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Aufbau",
+      "description": "Die Content-Strategie umsetzen: neue Inhalte erstellen, bestehende Seiten optimieren und thematische Autorität aufbauen. Laufender Linkaufbau und PR.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Content-Kalender",
+        "Linkaufbau",
+        "Ranking-Berichte"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Messen",
+      "description": "Rankings, Traffic, KI-Zitierungen und Conversions verfolgen. Monatliches Reporting mit Erkenntnissen und datenbasierten Strategieanpassungen.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Monatliche Berichte",
+        "Ranking-Tracking",
+        "Monitoring der KI-Zitierungen"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Ahrefs",
+      "category": "SEO-Tool",
+      "description": "Backlink-Analyse",
+      "logo": "https://cdn.simpleicons.org/ahrefs/FF6600"
+    },
+    {
+      "name": "Semrush",
+      "category": "SEO-Tool",
+      "description": "Keyword-Recherche",
+      "logo": "https://cdn.worldvectorlogo.com/logos/semrush.svg"
+    },
+    {
+      "name": "Screaming Frog",
+      "category": "Crawler",
+      "description": "Technisches Audit",
+      "logo": "https://cdn.simpleicons.org/screamingfrog/9DCA31"
+    },
+    {
+      "name": "Google Search Console",
+      "category": "Analytics",
+      "description": "Suchdaten",
+      "logo": "https://cdn.worldvectorlogo.com/logos/google-search-console.svg"
+    },
+    {
+      "name": "Schema.org",
+      "category": "Strukturierte Daten",
+      "description": "Markup-Standard",
+      "logo": "https://schema.org/docs/favicon.ico"
+    },
+    {
+      "name": "PageSpeed Insights",
+      "category": "Performance",
+      "description": "Core Web Vitals",
+      "logo": "https://cdn.worldvectorlogo.com/logos/google-lighthouse.svg"
+    },
+    {
+      "name": "Clearscope",
+      "category": "Content",
+      "description": "Content-Optimierung",
+      "logo": "https://cdn.simpleicons.org/c/5046E5"
+    },
+    {
+      "name": "Surfer SEO",
+      "category": "Content",
+      "description": "On-Page-SEO",
+      "logo": "https://cdn.simpleicons.org/surfshark/178BF1"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Was ist AEO und warum ist es wichtig?",
+      "answer": "AEO (AI Engine Optimization) bedeutet, Inhalte so zu optimieren, dass sie von KI-Systemen wie ChatGPT, Perplexity und Google AI Overviews zitiert werden. Da KI immer mehr Anfragen direkt beantwortet, sinken die klassischen Klickraten. AEO stellt sicher, dass Ihre Marke auch dann erwähnt und zitiert wird, wenn Nutzer keine Suchergebnisse besuchen – und erhält so die Sichtbarkeit im KI-Zeitalter."
+    },
+    {
+      "question": "Wie lange dauert es, bis SEO Ergebnisse zeigt?",
+      "answer": "Technische Korrekturen und Quick Wins zeigen oft innerhalb von 2-4 Wochen Ergebnisse. Rankings für umkämpfte Keywords dauern typischerweise 3-6 Monate. Der Aufbau von Domain-Autorität und Rankings für wertvolle Begriffe kann 6-12 Monate dauern. Wir priorisieren Quick Wins und arbeiten gleichzeitig auf langfristige Ziele hin."
+    },
+    {
+      "question": "Sollen wir uns auf SEO oder bezahlte Werbung konzentrieren?",
+      "answer": "Beides erfüllt unterschiedliche Zwecke. Bezahlte Anzeigen liefern sofort Traffic, enden aber, sobald Sie aufhören zu zahlen. SEO baut Werte auf, die sich summieren – Inhalte, die ranken, bringen jahrelang weiter Traffic. Die meisten Unternehmen profitieren von bezahlten Anzeigen für kurzfristige Bedürfnisse, während sie organischen Traffic für langfristige Effizienz aufbauen."
+    },
+    {
+      "question": "Wie tracken Sie KI-Zitierungen?",
+      "answer": "Wir überwachen KI-Systeme auf Markenerwähnungen und Zitierungen: Wir verfolgen, wann ChatGPT, Perplexity oder andere KI-Tools Ihre Inhalte referenzieren. Das ist eine neue Disziplin mit sich entwickelnden Tools, aber wir haben Monitoring-Systeme aufgebaut, die die KI-Sichtbarkeit neben klassischen Suchmetriken erfassen."
+    },
+    {
+      "question": "Was führt dazu, dass Inhalte von KI-Systemen zitiert werden?",
+      "answer": "KI-Systeme bevorzugen klare Definitionen, strukturierte Daten (Schema-Markup), überzeugende Autorität (Qualifikationen, Quellenangaben, Daten) und gut organisierte Inhalte. FAQ-Bereiche, Vergleichstabellen und in sich geschlossene Absätze werden eher extrahiert und zitiert als Textwüsten."
+    }
+  ],
+  "relatedServices": [
+    "web-development",
+    "custom-software",
+    "ai-customer-experience"
+  ],
+  "cta": {
+    "headline": "Bereit, von Google und KI gefunden zu werden?",
+    "description": "Lassen Sie uns Ihre aktuelle Sichtbarkeit prüfen und Ihnen genau zeigen, wo Sie Chancen verpassen. Kostenloses SEO-/AEO-Audit für qualifizierte Unternehmen.",
+    "primaryButton": {
+      "text": "Kostenloses Audit anfragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Ergebnisse ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "prime-tiles",
+    "mach24orbital",
+    "cms-group"
+  ],
+  "metaTitle": "AEO & SEO: KI-Suchoptimierung & klassisches SEO | Zunkiree Labs",
+  "metaDescription": "Werden Sie von Google und KI-Systemen wie ChatGPT, Perplexity und AI Overviews gefunden. Suchoptimierung für das KI-Zeitalter. 3x höhere KI-Zitierrate mit AEO."
+}

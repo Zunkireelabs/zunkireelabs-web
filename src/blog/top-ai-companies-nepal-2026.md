@@ -2,7 +2,7 @@
 title: "AI Companies in Nepal (2026): Leaders and What They Build" # SEOAI:TITLE
 description: "Looking for an AI company in Nepal? Compare Zunkiree Labs, Fusemachines, CloudFactory, Leapfrog Technology and SecurityPal, plus how to choose one."
 date: 2026-03-30
-lastUpdated: 2026-10-01
+lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: Industry
 tags:
@@ -100,6 +100,16 @@ When selecting an AI partner in Nepal, consider:
 - Are case studies available with measurable outcomes?
 - What do former clients say about working with them?
 
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Policy and Readiness: What to Weigh Before Choosing</h2>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Company profiles say little about the environment those companies work in. Three recent reports give a more cautious picture than most vendor pages.</p>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><strong>Policy is new.</strong> <a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post</a> reported that Nepal's cabinet approved the National AI Policy on 16 August 2025, providing for an AI Regulation Council chaired by the communications minister and a National AI Centre, with standards for data, algorithms, transparency and accountability to be developed and the policy reviewed every two years.</li><li><strong>Execution is still open.</strong> A <a href="https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready" class="text-zunkiree-600 hover:underline" rel="noopener">Himalayan Times opinion piece</a> argues that the policy does not set a particular budget, and that Nepal lacks well-defined structures for data quality, data security and citizen privacy. It is an opinion piece, but the data-governance point matters if you plan to share customer or patient data with a vendor.</li><li><strong>Hardware and capital are constrained.</strong> <a href="https://www.computerworld.com/article/4159786/reporters-notebook-in-nepal-and-sri-lanka-ai-boom-brings-hope.html" class="text-zunkiree-600 hover:underline" rel="noopener">Computerworld</a> reported that Nvidia GPUs are scarce and very expensive in Nepal, and that Nepal ranked 106 of 190 countries in Oxford Insights' 2025 Government AI Readiness Index. Other commentators cite different rankings, so check the index itself before quoting one.</li></ul></div>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">In practice, these points translate into questions for any AI vendor in Nepal: where will your data be stored and processed, which models or cloud services does the vendor rely on and who operates them, and what happens to your data if the engagement ends? Ask for answers in writing, and confirm the vendor's legal registration with the <a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar</a> before you share anything sensitive.</p>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Our <a href="/blog/top-tech-companies-nepal-2026/" class="text-zunkiree-600 hover:underline" rel="noopener">wider guide to Nepal's tech companies</a> adds a checklist for verifying a company's registration, named case studies and certifications.</p>
+
 ## The Future of AI in Nepal
 
 Nepal's AI industry is positioned for continued growth. Key trends to watch:
@@ -117,6 +127,11 @@ Nepal's AI industry is positioned for continued growth. Key trends to watch:
 Nepal's AI ecosystem offers compelling options for organizations seeking AI development partners. Whether you need enterprise-grade AI infrastructure, application development with ML features, or specialized domain expertise, Nepali companies provide quality work at competitive rates.
 
 The key is matching your specific needs—technical requirements, communication preferences, budget, and timeline—with the right partner's strengths.
+
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Sources</h2>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post: Nepal rolls out ambitious AI policy (16 August 2025)</a></li><li><a href="https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready" class="text-zunkiree-600 hover:underline" rel="noopener">The Himalayan Times: Nepal's AI policy exists, but is Nepal ready? (opinion)</a></li><li><a href="https://www.computerworld.com/article/4159786/reporters-notebook-in-nepal-and-sri-lanka-ai-boom-brings-hope.html" class="text-zunkiree-600 hover:underline" rel="noopener">Computerworld: Reporter's notebook in Nepal and Sri Lanka, AI boom brings hope</a></li><li><a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar, Nepal (official website)</a></li></ul></div>
+
 
 ---
 

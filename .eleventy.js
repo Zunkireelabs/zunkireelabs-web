@@ -1,4 +1,6 @@
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import { hreflangFor, languageSwitcher, localDate } from "./src/_lib/i18n.js";
+import { createLocaleLinkRewriter } from "./src/_lib/locale-links.js";
 import path from "path";
 import fs from "fs";
 
@@ -104,6 +106,22 @@ export default function (eleventyConfig) {
       return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
     }
     return d.toISOString();
+  });
+
+  // Locale support (see src/_lib/i18n.js). hreflangFor pairs pages that share a
+  // translationKey; languageSwitcher builds the footer language links; localDate
+  // formats a date for a non-English locale. English output is unchanged.
+  eleventyConfig.addFilter("hreflangFor", (translationKey, allPages) => hreflangFor(translationKey, allPages));
+  eleventyConfig.addFilter("languageSwitcher", (currentLang, alternates, available, pageUrl) => languageSwitcher(currentLang, alternates, available, pageUrl));
+  eleventyConfig.addFilter("localDate", (date, locale) => localDate(date, locale));
+
+  // Translated pages (/de/, /de-ch/, /nl/) never link into English-only pages: links with a translated
+  // equivalent are retargeted, every other link to an English page is unwrapped (see src/_lib/locale-links.js).
+  const rewriteLocaleLinks = createLocaleLinkRewriter(path.resolve(process.cwd(), "src"));
+  eleventyConfig.addTransform("localeLinks", function (content) {
+    const out = this.page && this.page.outputPath;
+    if (typeof out !== "string" || !out.endsWith(".html")) return content;
+    return rewriteLocaleLinks(content, this.page.url);
   });
 
   // Checks a src-relative asset path (e.g. "/assets/images/blog/foo.jpg") actually
@@ -252,6 +270,18 @@ export default function (eleventyConfig) {
       .filter(w => w && !SHORT_LABEL_STOPWORDS.has(w.toLowerCase()));
     return words.slice(0, 2).join(' ');
   });
+
+  // Blog posts tagged `category: Insights` (trend explainers) — drives the
+  // Insights filter on /blog/ and the /blog/insights/ listing. Empty until the
+  // first such post exists; both surfaces render nothing in that case.
+  // Regular blog posts only: Insights live in their own listing (/blog/insights/)
+  eleventyConfig.addCollection("articles", (collectionApi) =>
+    collectionApi.getFilteredByTag("blog").filter((p) => p.data.category !== "Insights")
+  );
+
+  eleventyConfig.addCollection("insights", (collectionApi) =>
+    collectionApi.getFilteredByTag("blog").filter((p) => p.data.category === "Insights")
+  );
 
   return {
     dir: {

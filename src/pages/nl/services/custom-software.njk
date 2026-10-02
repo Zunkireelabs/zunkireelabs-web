@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: nl
+ogLocale: nl_NL
+title: "Maatwerksoftware: bedrijfsapplicaties op maat | Zunkiree Labs"
+description: "Bedrijfsapplicaties op maat van uw workflows. Weg met het spreadsheetchaos dankzij speciaal gebouwde systemen. Interne tools die uw team echt gebruikt."
+permalink: /nl/services/custom-software/
+serviceId: custom-software
+hreflangAlternates:
+  - lang: en
+    url: /services/custom-software/
+  - lang: de
+    url: /de/services/custom-software/
+  - lang: de-CH
+    url: /de-ch/services/custom-software/
+  - lang: nl
+    url: /nl/services/custom-software/
+  - lang: x-default
+    url: /services/custom-software/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["nl"].details["custom-software"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

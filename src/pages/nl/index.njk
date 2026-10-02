@@ -2,138 +2,1954 @@
 layout: base.njk
 lang: nl
 ogLocale: nl_NL
-title: "Zunkiree Labs: AI-infrastructuur voor moderne bedrijven" # SEOAI:TITLE
-description: "Zunkiree Labs bouwt productieklare AI-systemen, maatwerksoftware en AEO/SEO-oplossingen voor klanten wereldwijd, waaronder in Nederland. Plan een gratis adviesgesprek."
+title: "AI-ontwikkeling | Zunkiree Labs"
+description: "Zunkiree Labs bouwt productieklare AI-systemen, RAG-pipelines en AI-agents vanuit Kathmandu, voor klanten wereldwijd. Vraag een gratis adviesgesprek aan."
 permalink: /nl/
 hreflangAlternates:
   - lang: en
     url: /
   - lang: de
     url: /de/
+  - lang: de-CH
+    url: /de-ch/
   - lang: nl
     url: /nl/
   - lang: x-default
     url: /
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
-{% set heroEyebrow = "AI-first technologiebedrijf" %}
-{% set heroTitleLine1 = "AI-infrastructuur." %}
-{% set heroTitleLine2 = "Op de juiste manier gebouwd." %}
-{% set heroDescription = "We bouwen AI-systemen op infrastructuurniveau, geen wrappers. Van intelligente zoekfunctionaliteit tot ondernemingsplatforms — onze AI-native architectuur vormt de basis voor moderne bedrijven." %}
-{% set heroCta1Url = "/products/" %}
-{% set heroCta1Text = "Ontdek onze producten" %}
-{% set heroCta2Url = "/contact/" %}
-{% set heroCta2Text = "Neem contact op" %}
-{% set heroImageAlt = "Orca Platform Dashboard - AI-infrastructuurbeheer" %}
-{% include "partials/homepage/hero.njk" %}
+{# =====================================================
+   HOMEPAGE V2 — now the live homepage at /.
+   Previous homepage (src/pages/index.njk) moved to
+   /home-legacy/ for reference only.
+   ===================================================== #}
 
-{% set trustText = "Vertrouwd door vooruitstrevende organisaties" %}
-{% set statProductsLabel = "Producten" %}
-{% set statIndustriesLabel = "Sectoren" %}
-{% set statServicesLabel = "Diensten" %}
-{% include "partials/homepage/social-proof.njk" %}
+{% include "partials/navbar-v2.njk" %}
 
-{% set showcaseEyebrow = "Onze diensten" %}
-{% set showcaseHeading = "Deskundige oplossingen om uw AI-traject te versnellen" %}
-{% set showcaseViewAllText = "Bekijk alle diensten" %}
-{% set iconGradientId = "icon-gradient-nl" %}
-{% set showcaseCards = [
-  {"title": "AI-ontwikkeling", "description": "Automatiseer werk en neem slimmere beslissingen met intelligente agents en applicaties"},
-  {"title": "Webontwikkeling", "description": "Bouw schaalbare, high-performance webapplicaties met moderne frameworks"},
-  {"title": "Mobiele ontwikkeling", "description": "Creëer native en cross-platform mobiele ervaringen waar gebruikers dol op zijn"},
-  {"title": "UI/UX-ontwerp", "description": "Ontwerp intuïtieve interfaces die gebruikers blij maken en betrokkenheid vergroten"},
-  {"title": "Data-engineering", "description": "Bouw robuuste datapijplijnen en infrastructuur voor bruikbare inzichten"},
-  {"title": "Cloudoplossingen", "description": "Implementeer en schaal uw applicaties met moderne cloudarchitectuur"},
-  {"title": "Systeemintegratie", "description": "Verbind uw systemen en automatiseer workflows tussen platforms"},
-  {"title": "Technisch consult", "description": "Strategisch advies om uw technologie-initiatieven te versnellen"}
+<script>
+  // Add synchronous class to html element to prevent FOUC (flash of unstyled content) before GSAP runs
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  /* Premium reveal fade-ins: hide items initially if JS is active so GSAP can animate them cleanly */
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+
+  /* Mobile sticky platform tabs: pin just below the fixed navbar (h-[72px], z-50)
+     while scrolling through the panels — sticking at top: 0 pushed them underneath
+     the navbar      and made them invisible. */
+  .platform-sticky-tabs { top: 73px; }
+</style>
+
+{# =====================================================
+   HOMEPAGE HERO — Website V2 (rebuilt 2026-07-21 as a direct
+   structural/visual copy of the Kore.ai homepage hero, per the
+   reference screenshot the user shared — literal copy for now,
+   brand-color pass ("tweak the designs") comes later. Matches:
+   headline + subhead, a dual CTA pair directly under the subhead
+   (mono-labelled, black primary / outline secondary), then the
+   "Platform teaser" dark card butting up against the hero below
+   with no gap — same as the reference.
+
+   Background — REVISED 2026-07-28:
+   using image.webp as the background image for the hero section, no scrim/tint on top.
+   ===================================================== #}
+<div class="relative overflow-x-clip bg-white">
+
+{# Section starts at the very top of the document since the navbar is `fixed`
+   (out of flow, 72px tall, z-50) — pt-32/36/44 clears it before the headline,
+   matching product-v2.njk's hero (see product-v2.njk:257 comment for the same issue). #}
+<section
+  class="relative z-10 flex min-h-[58vh] flex-col items-center justify-center overflow-hidden px-4 pb-4 pt-32 sm:min-h-[64vh] sm:px-6 sm:pt-36 lg:min-h-[70vh] lg:px-8 lg:pt-44"
+  aria-labelledby="hero-v2-heading"
+>
+
+  <div
+    class="relative z-10 mx-auto flex max-w-[56rem] flex-col items-center text-center sm:-translate-y-4 lg:-translate-y-8"
+    data-reveal-stagger
+  >
+
+    <!-- Headline — Display style, §5: 57px/500/1.1, normal tracking. Copy
+         carries CONTENT_SUMMARY.md §5's value-prop meaning ("we already run
+         this, live, for your industry") with commas instead of the doc's
+         em dashes. Manual <br> (not `text-wrap: balance`, which left line 2
+         wider than line 1 — the opposite of the reference's taper):
+         breaking after "live," gives line 1 a little more width than
+         line 2 while both stay centered on the same axis. -->
+    <h1
+      id="hero-v2-heading"
+      class="mt-[20px] text-center text-balance text-[38px] font-light leading-[1.15] tracking-tight text-[#111827] sm:text-[48px] sm:leading-[1.1] lg:text-[57px]"
+    >
+      AI bouwen om levens te verbeteren.
+    </h1>
+
+    <!-- Subhead — bumped to 26px per request (was 14px, §5 measured size). Manual
+         two-row break (not text-balance, which was wrapping to 3 uneven rows) so
+         each row centers independently under the hero title. -->
+    <p
+      class="mt-4 max-w-[380px] px-2 text-center text-[19px] font-medium leading-snug tracking-tight text-[#6B7280] sm:max-w-none sm:px-4 sm:text-[26px] sm:leading-relaxed"
+    >
+      Lanceer AI-workflows binnen je bedrijf in enkele dagen,
+      <br class="hidden sm:block" />
+      al bewezen in productie.
+    </p>
+
+    <!-- Dual CTA — brand-green primary + outline secondary (MASTER_DESIGN_SPEC.md §4: `#76B900` is the one accent hue, used for primary CTAs). Side-by-side on all screens with reduced padding on mobile to fit single row. -->
+    <div class="mt-8 flex w-full max-w-[320px] flex-row items-center justify-center gap-2 sm:max-w-none sm:gap-3">
+      <a
+        href="/nl/contact/"
+        class="inline-flex flex-1 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[#76B900] px-3 py-2.5 font-mono text-[11px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none sm:px-5 sm:py-2.5 sm:text-[13px]"
+      >
+        Demo aanvragen
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+      </a>
+      <a
+        href="/nl/contact/"
+        class="inline-flex items-center justify-center gap-1.5 rounded-md border border-navy-300 px-3 py-2.5 font-mono text-[11px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:flex-none sm:px-5 sm:py-2.5 sm:text-[13px]"
+      >
+        Ontdek het platform
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   PLATFORM TEASER — Website V2
+   Follows Kore.ai's "Meet {Artemis}" pattern — names one flagship
+   product directly in the headline instead of an abstract "platform"
+   claim. Swapped 2026-09-25 from Zunkiree Search to Orca (per explicit
+   direction — same card shell/layout kept as-is, only content changes).
+   Orca has no shipped product yet (src/_data/platformProducts.js's own
+   comment: "no fabricated stats, clients, or FAQ"), so no "Live" badge —
+   uses a "Coming Soon" hint badge instead. Subhead is a rephrased version
+   of Orca's real description (still just CRM/email/marketing-tool
+   orchestration — nothing added), matching the punchier tone of the
+   kore.ai reference rather than quoting platformProducts.js verbatim.
+   Same dark rounded card shell as before: mono eyebrow → headline w/
+   bracket-styled product name + hint badge → one-line support copy →
+   circular arrow CTA on the right, on a dark navy-950 surface with the
+   existing green/navy gradient bloom. Text-only card, per explicit
+   direction — no photographic/render asset (that's Kore's approach,
+   deliberately not copied here). ASCII/glyph texture was tried and
+   rejected (didn't read well) — visual richness comes from just the
+   enlarged, slow-drifting version of the existing green/slate bloom,
+   behind the text.
+
+   Links to /products/orca/ — Orca already has a real product page.
+   ===================================================== #}
+<section class="relative z-10 mt-6 px-4 pb-8 sm:-mt-10 sm:px-6 sm:pb-10 lg:-mt-12 lg:px-8 lg:pb-12" data-reveal>
+  <div class="mx-auto max-w-5xl">
+    <a
+      href="/products/orca/"
+      class="group relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl bg-navy-950 p-6 transition-colors duration-200 hover:bg-navy-900 sm:gap-8 sm:p-10 md:flex-row md:items-center lg:p-12"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+    >
+      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10). Enlarged + slow drift vs. the original static version. -->
+      <div
+        class="orca-card-bloom pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Marble swirl texture — same green/navy palette, SVG feTurbulence (no external image), slow independent drift so it reads as smoke rather than static noise. -->
+      <div
+        class="orca-card-swirl pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Fine grain overlay — very low opacity, matches the grain treatment used on the blog featured images. -->
+      <div
+        class="orca-card-grain pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+      ></div>
+
+      <div class="relative z-10 min-w-0 max-w-xl">
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+          Een product van Zunkiree Labs
+        </span>
+        <h2 class="mb-3 text-[28px] font-medium leading-[1.2] text-white sm:text-[34px] lg:text-[40px]">
+          Maak kennis met <span class="text-[#76B900]">{</span> <span class="italic text-[#76B900]">Orca</span> <span class="text-[#76B900]">}</span>
+        </h2>
+        <p class="text-[14px] leading-relaxed text-white/60">
+          Orca verbindt je CRM-, e-mail- en marketingtools tot één gecoördineerde laag — automatiseringsworkflows op maat, afgestemd op hoe je bedrijf werkelijk werkt, die over systemen heen handelen in plaats van één voor één.
+        </p>
+      </div>
+
+      <span
+        class="absolute right-6 top-6 z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-white text-navy-950 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 sm:right-8 sm:top-8 lg:right-10 lg:top-10"
+        aria-hidden="true"
+      >
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 17L17 7M17 7H8m9 0v9" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .orca-card-bloom {
+    background:
+      radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
+      radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
+    animation: orca-card-bloom-drift 14s ease-in-out infinite;
+  }
+  @keyframes orca-card-bloom-drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
+  }
+
+  /* Marble swirl — feTurbulence colorized to the same brand green (#76B900) + slate-navy pair used in
+     .orca-card-bloom, so it reads as texture on that gradient rather than a new hue. Opacity kept low
+     (mix-blend: screen, ~0.5) to protect text contrast per accessibility requirements. */
+  .orca-card-swirl {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='s' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.014' numOctaves='4' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='matrix' values='0 0 0 0 0.29  0 0 0 0 0.55  0 0 0 0 0.13  0 0 0 0.85 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+    background-size: 140% 140%;
+    background-position: 30% 85%;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+    animation: orca-card-swirl-drift 22s ease-in-out infinite;
+  }
+  @keyframes orca-card-swirl-drift {
+    0%, 100% { background-position: 30% 85%; transform: scale(1); }
+    50% { background-position: 42% 95%; transform: scale(1.08); }
+  }
+
+  /* Fine grain — same texture family as the blog featured-image treatment, kept very subtle here. */
+  .orca-card-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: screen;
+    opacity: 0.18;
+    -webkit-mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
+    mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orca-card-bloom { animation: none; }
+    .orca-card-swirl { animation: none; }
+  }
+</style>
+
+{# =====================================================
+   PLATFORM PILLARS — Website V2
+   Structural home is the OLD homepage's "AI infrastructure, built to
+   scale." pillar section — reskinned with glass-effect cards instead
+   of the retired solid-blue/`sky` treatment (MASTER_DESIGN_SPEC.md
+   §93/§114 retires that accent). Copy is reworked (not reused
+   verbatim) to carry the Kore.ai 3-tier concept (Pre-built →
+   Accelerators → Tailored/Platform), matching the new industry-first
+   positioning in CONTENT_SUMMARY.md §1 rather than the old
+   service-first "custom AI systems wired into your stack" framing
+   the original cards used:
+     1. Pre-built  (Kore's "Pre-built Applications")
+     2. Accelerators + deploy discipline (Kore's "Application Accelerators")
+     3. Opschalen naar elk gebruiksscenario (Kore's "Tailored Applications")
+
+   3 cards only, by design — no "Own it completely" / infrastructure-
+   ownership card. That claim belonged to the old service-first model
+   (client owns the infra we build for them) and doesn't fit the
+   current multi-tenant shared-platform model (CONTENT_SUMMARY.md §4/
+   company-industry-context.md §4), so it was dropped rather than
+   carried forward or replaced.
+
+   Card 1's copy says "proven in production," not "already running in
+   production" — deliberately avoids reading as a blanket live-status
+   claim across all four verticals; only Education (Admizz) and
+   Agencies (self-run + Mobilise) are confirmed live today, Healthcare
+   is capability-led and Real Estate has no client yet
+   (company-industry-context.md §3). Mirrors the same live-vs-
+   capability distinction the Industry Showcase section above already
+   makes explicit.
+   ===================================================== #}
+{% set pillars = [
+  {
+    title: "Kant-en-klare AI-toepassingen",
+    description: "Toepassingen die zich al in productie hebben bewezen — geen concepten, geen pilots.",
+    mockupImage: ""
+  },
+  {
+    title: "AI in productie brengen",
+    description: "Geteste, gemonitorde systemen, op schema opgeleverd met herbruikbare accelerators.",
+    mockupImage: ""
+  },
+  {
+    title: "Opschalen naar elk gebruiksscenario",
+    description: "Groeit mee met de vraag en breidt uit naar elk gebruiksscenario — zonder helemaal opnieuw te beginnen.",
+    mockupImage: ""
+  }
 ] %}
-{% include "partials/homepage/services-showcase.njk" %}
 
-{% set carouselEyebrow = "Case studies" %}
-{% set carouselHeading = "Hoe innovators Zunkiree gebruiken" %}
-{% set playLabel = "Carousel afspelen" %}
-{% set pauseLabel = "Carousel pauzeren" %}
-{% set carouselFnName = "caseStudyCarouselNl" %}
-{% set caseStudyAltSuffix = "case study" %}
-{% set studies = [
-  {"id": "admizz", "name": "Admizz Education", "logo": "/images/clients/admizz.webp", "stat": "45%", "statLabel": "snellere reactietijd", "headline": "Admizz transformeert het beheer van studentenvragen", "description": "Admizz Education revolutioneerde het proces voor studentenvragen met Zunkiree Search, waardoor de reactietijd daalde en de studenttevredenheid binnen hun adviesnetwerk sterk verbeterde.", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/admizz-case-study/"},
-  {"id": "corecloud365", "name": "Corecloud365", "logo": "/images/clients/corecloud365.svg", "stat": "60%", "statLabel": "kostenreductie", "headline": "Corecloud365 optimaliseert cloudactiviteiten", "description": "Corecloud365 realiseerde aanzienlijke kostenbesparingen door onze AI-gestuurde zoek- en automatiseringstools te integreren in hun cloudbeheerplatform.", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/corecloud365-case-study/"},
-  {"id": "rapid-investment", "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg", "stat": "10x", "statLabel": "snellere analyse", "headline": "Rapid Investment transformeert due diligence", "description": "Rapid Investment Group gebruikt onze AI-systemen om investeringskansen 10x sneller te analyseren, wat hen een concurrentievoordeel geeft op de financiële markten.", "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/rapid-investment-case-study/"},
-  {"id": "cms-group", "name": "CMS Group", "logo": "/images/clients/cms-group.webp", "stat": "85%", "statLabel": "automatiseringsgraad", "headline": "CMS Group automatiseert bedrijfsworkflows", "description": "CMS Group behaalde 85% automatisering van hun documentverwerkingsworkflows, waardoor hun team zich kon richten op strategisch werk met hoge toegevoegde waarde.", "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/cms-group-case-study/"},
-  {"id": "mach24orbital", "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp", "stat": "50%", "statLabel": "snellere lanceringen", "headline": "Mach24 Orbital stroomlijnt ruimtevaartactiviteiten", "description": "Mach24 Orbital integreerde onze AI-systemen om hun workflows voor satellietinzet te optimaliseren, waardoor de voorbereidingstijd voor lanceringen werd gehalveerd.", "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/mach24orbital-case-study/"},
-  {"id": "khushbu-nirman", "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp", "stat": "40%", "statLabel": "efficiëntiewinst", "headline": "Khushbu Nirman digitaliseert bouwmanagement", "description": "Khushbu Nirman Sewa transformeerde hun bouwprojectmanagement met onze AI-gestuurde tracking- en resource-optimalisatietools.", "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/khushbu-nirman-case-study/"},
-  {"id": "prime-tiles", "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp", "stat": "2x", "statLabel": "omzetgroei", "headline": "Prime Tiles revolutioneert productontdekking voor klanten", "description": "Prime Tiles implementeerde Zunkiree Search zodat klanten direct de perfecte tegels vinden, waardoor hun online conversieratio verdubbelde.", "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/prime-tiles-case-study/"},
-  {"id": "khems-cleaning", "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp", "stat": "70%", "statLabel": "meer boekingen", "headline": "Khems Cleaning schaalt met slimme planning", "description": "Khems Cleaning Services implementeerde ons AI-boekingssysteem, waardoor hun servicecapaciteit en klanttevredenheid sterk toenamen.", "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/khems-cleaning-case-study/"},
-  {"id": "chayce-properties", "name": "Chayce Properties", "logo": "/images/clients/chayce-properties.webp", "stat": "End-to-end", "statLabel": "digitale activiteiten, volledig in eigen beheer", "headline": "Chayce Properties draait haar volledige digitale operatie op Zunkiree-infrastructuur", "description": "Voor Chayce Properties, een Brits vastgoedbedrijf, is Zunkiree Labs geen leverancier voor één taak — wij beheren de volledige stack: website, AI-systemen en doorlopende technische dienstverlening, van begin tot eind.", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop", "ctaText": "Lees de case study", "ctaUrl": "/resources/chayce-properties-case-study/"}
+<style>
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 25s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mockups base cursor */
+  .simulated-cursor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 40;
+    width: 1px;
+    height: 1px;
+  }
+
+  /* Card 1 Animations */
+  .mockup-cursor-1 { animation: cursor-move-1 10s infinite ease-in-out; }
+  .mockup-click-ripple-1 { animation: ripple-anim-1 10s infinite ease-out; }
+  .mockup-search-text::after { content: ""; animation: typing-search 10s infinite; }
+  .mockup-chip-edu { animation: chip-edu-highlight 10s infinite; }
+  .mockup-row-edu { animation: row-edu-active 10s infinite; }
+
+  @keyframes cursor-move-1 {
+    0% { top: 160px; left: 80%; }
+    15% { top: 36px; left: 30%; }
+    18% { top: 36px; left: 30%; transform: scale(0.85); }
+    21% { top: 36px; left: 30%; transform: scale(1); }
+    40% { top: 75px; left: 16%; }
+    43% { top: 75px; left: 16%; transform: scale(0.85); }
+    46% { top: 75px; left: 16%; transform: scale(1); }
+    88% { top: 75px; left: 16%; }
+    94%, 100% { top: 160px; left: 80%; }
+  }
+  @keyframes ripple-anim-1 {
+    0%, 17.9% { transform: scale(0.2); opacity: 0; }
+    18% { transform: scale(0.2); opacity: 1; }
+    20% { transform: scale(2.2); opacity: 0; }
+    20.1%, 42.9% { transform: scale(0.2); opacity: 0; }
+    43% { transform: scale(0.2); opacity: 1; }
+    45% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes typing-search {
+    0%, 18% { content: ""; }
+20% { content: "O"; }
+    22% { content: "Ond"; }
+    24% { content: "Onde"; }
+    26% { content: "Onderw"; }
+    28% { content: "Onderwi"; }
+    30% { content: "Onderwijs"; }
+    32% { content: "Onderwijs-"; }
+    34% { content: "Onderwijs-CR"; }
+    36%, 88% { content: "Onderwijs-CRM"; }
+    90%, 100% { content: ""; }
+  }
+  @keyframes chip-edu-highlight {
+    0%, 43% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
+    45%, 88% { background-color: #0f172a; border-color: #0f172a; color: #fff; }
+    89%, 100% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
+  }
+  @keyframes row-edu-active {
+    0%, 43% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+    45%, 88% { background-color: rgba(255,255,255,0.35); border-color: rgba(118, 185, 0, 0.4); box-shadow: 0 0 10px rgba(118, 185, 0, 0.15); }
+    89%, 100% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+  }
+
+  /* Card 2 Animations */
+  .mockup-cursor-2 { animation: cursor-move-2 10s infinite ease-in-out; }
+  .mockup-click-ripple-2 { animation: ripple-anim-2 10s infinite ease-out; }
+  .mockup-run-btn-anim { animation: button-click-effect 10s infinite; }
+  .mockup-progress-bar { animation: progress-fill 10s infinite ease-out; }
+  .mockup-status-badge::after { content: "Gereed"; animation: status-badge-anim 10s infinite; }
+  .mockup-latency-val::after { content: "--"; animation: latency-text-anim 10s infinite; }
+  .mockup-status-val::after { content: "Gereed"; animation: status-val-text-anim 10s infinite; }
+  .mockup-dot-1 { animation: node-1-active 10s infinite; }
+  .mockup-dot-2 { animation: node-2-active 10s infinite; }
+  .mockup-dot-3 { animation: node-3-active 10s infinite; }
+
+  @keyframes cursor-move-2 {
+    0% { top: 190px; left: 80%; }
+    20% { top: 183px; left: 50%; }
+    23% { top: 183px; left: 50%; transform: scale(0.85); }
+    26% { top: 183px; left: 50%; transform: scale(1); }
+    90%, 100% { top: 190px; left: 80%; }
+  }
+  @keyframes ripple-anim-2 {
+    0%, 22.9% { transform: scale(0.2); opacity: 0; }
+    23% { transform: scale(0.2); opacity: 1; }
+    25% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes button-click-effect {
+    0%, 22.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
+    23%, 25% { background-color: #76B900; border-color: #76B900; color: #fff; transform: scale(0.95); }
+    26.1%, 90% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
+  }
+  @keyframes progress-fill {
+    0%, 24.9% { width: 0%; }
+    60%, 90% { width: 100%; }
+    92%, 100% { width: 0%; }
+  }
+  @keyframes status-badge-anim {
+    0%, 23.9% { content: "Gereed"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
+    24%, 39% { content: "Bouwen"; background-color: #fef3c7; color: #d97706; }
+    40%, 59% { content: "Testen"; background-color: #dbeafe; color: #2563eb; }
+    60%, 90% { content: "Live"; background-color: rgba(118, 185, 0, 0.15); color: #76B900; }
+    91%, 100% { content: "Gereed"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
+  }
+  @keyframes node-1-active {
+    0%, 27.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    28%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes node-2-active {
+    0%, 39.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    40%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes node-3-active {
+    0%, 59.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+    60%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
+    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+  }
+  @keyframes latency-text-anim {
+    0%, 59.9% { content: "--"; }
+    60%, 90% { content: "43ms"; }
+    91%, 100% { content: "--"; }
+  }
+  @keyframes status-val-text-anim {
+    0%, 23.9% { content: "Gereed"; color: rgba(15,23,42,0.5); }
+    24%, 59% { content: "Bezig"; color: #d97706; }
+    60%, 90% { content: "Actief & gezond"; color: #76B900; }
+    91%, 100% { content: "Gereed"; color: rgba(15,23,42,0.5); }
+  }
+
+  /* Card 3 Animations */
+  .mockup-cursor-3 { animation: cursor-move-3 10s infinite ease-in-out; }
+  .mockup-click-ripple-3 { animation: ripple-anim-3 10s infinite ease-out; }
+  .mockup-scale-btn-anim { animation: button-click-scale 10s infinite; }
+  .mockup-replicas-text::after { content: "3"; animation: replica-text-anim 10s infinite; }
+  .mockup-terminal { animation: terminal-slide-up 10s infinite ease-out; }
+  .mockup-server-node-1, .mockup-server-node-2, .mockup-server-node-3 { animation: node-1-3-active 10s infinite; }
+  .mockup-server-node-4, .mockup-server-node-5, .mockup-server-node-6 { animation: node-4-6-active 10s infinite; }
+
+  @keyframes cursor-move-3 {
+    0% { top: 170px; left: 80%; }
+    25% { top: 32px; left: 84%; }
+    28% { top: 32px; left: 84%; transform: scale(0.85); }
+    31% { top: 32px; left: 84%; transform: scale(1); }
+    90%, 100% { top: 170px; left: 80%; }
+  }
+  @keyframes ripple-anim-3 {
+    0%, 27.9% { transform: scale(0.2); opacity: 0; }
+    28% { transform: scale(0.2); opacity: 1; }
+    30% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @keyframes button-click-scale {
+    0%, 27.9% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
+    28%, 35% { background-color: #76B900; border-color: #76B900; color: #fff; }
+    35.1%, 90% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
+  }
+  @keyframes replica-text-anim {
+    0%, 29.9% { content: "3"; color: inherit; font-weight: normal; }
+    30%, 90% { content: "6"; color: #76B900; font-weight: bold; }
+    91%, 100% { content: "3"; color: inherit; font-weight: normal; }
+  }
+  @keyframes terminal-slide-up {
+    0%, 29.9% { transform: translateY(100%); opacity: 0; }
+    33%, 88% { transform: translateY(0); opacity: 1; }
+    90%, 100% { transform: translateY(100%); opacity: 0; }
+  }
+  @keyframes node-1-3-active {
+    0%, 29.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+    30%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
+    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+  }
+  @keyframes node-4-6-active {
+    0%, 34.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+    35%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
+    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
+  }
+
+  /* Tab 2/3 floating capability tile — gentle float, Kore.ai reference (2026-07-28) */
+  @keyframes tile-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .tile-float {
+    animation: tile-float 4s ease-in-out infinite;
+  }
+</style>
+
+<section class="relative z-10 px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-16" aria-labelledby="platform-pillars-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="platform-pillars-heading" class="sr-only">Hoe ziet productieklare AI-infrastructuur er eigenlijk uit?</h2>
+
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3" data-reveal-stagger>
+      {% for pillar in pillars %}
+        <a href="/#platform" class="group relative flex min-h-[420px] flex-col rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 shadow-subtle backdrop-blur-md transition-shadow duration-300 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2">
+          <!-- Corner crosshair marks — decorative "technical precision" edge detail, glass bg untouched -->
+          <span class="pointer-events-none absolute left-2 top-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute right-2 top-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute bottom-2 left-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+          <span class="pointer-events-none absolute bottom-2 right-2 font-mono text-[13px] leading-none text-navy-300" aria-hidden="true">+</span>
+
+          <div class="relative mb-3">
+            <h3 class="text-center text-[17px] font-medium leading-[1.3] text-[#111827] sm:text-[20px] sm:whitespace-nowrap">
+              {{ pillar.title }}
+            </h3>
+          </div>
+          <p class="mb-6 text-center text-[13.5px] leading-relaxed text-[#6B7280]">
+            {{ pillar.description }}
+          </p>
+
+          <!-- Mockup slot — real, lightweight glass interactive mockup -->
+          <div class="mt-auto flex flex-1 w-full items-center justify-center overflow-hidden rounded-lg border border-white/50 bg-white/10 relative min-h-[250px]">
+            {% if loop.index0 == 0 %}
+              {# Kant-en-klare AI-toepassingen mockup — clean glass rows with real client logos and search spotlight #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Simulated Search Spotlight Input -->
+                <div class="relative z-10 flex items-center w-full rounded-lg border border-navy-100/30 bg-white/70 px-3 py-2 backdrop-blur-sm shadow-sm">
+                  <svg class="h-3.5 w-3.5 text-navy-900/60 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <div class="text-[12px] font-medium text-navy-900/80 flex-1 h-4 flex items-center mockup-search-text"></div>
+                  <div class="mockup-search-cursor h-3.5 w-[2px] bg-navy-900/60 ml-0.5 animate-pulse flex-shrink-0"></div>
+                </div>
+
+                <!-- Industry chips -->
+                <div class="relative z-10 flex gap-1.5 mt-2 flex-wrap">
+                  <span class="mockup-chip-edu px-2 py-0.5 rounded-full border border-white/40 text-[9px] font-mono uppercase tracking-wide transition-all duration-300">Onderwijs</span>
+                  <span class="px-2 py-0.5 rounded-full border border-sky-200 bg-sky-50 text-[9px] font-mono uppercase tracking-wide text-navy-900 font-semibold">Zorg</span>
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/10 text-[9px] font-mono uppercase tracking-wide text-navy-900/40">Vastgoed</span>
+                </div>
+
+                <!-- List of live apps -->
+                <div class="relative z-10 flex flex-col gap-2 mt-3 w-full">
+                  <div class="mockup-row-edu flex items-center justify-between gap-3 rounded-lg border border-navy-100/20 bg-white/15 px-3 py-2 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <div class="flex items-center gap-2 min-w-0">
+                      <div class="min-w-0">
+                        <p class="truncate text-[12px] font-medium leading-tight text-navy-900">Onderwijs-CRM</p>
+                        <p class="truncate text-[9.5px] leading-tight text-navy-900/50">Admizz · Routing</p>
+                      </div>
+                    </div>
+                    <span class="flex flex-shrink-0 items-center gap-1 bg-[#76B900]/10 px-2 py-0.5 rounded-full border border-[#76B900]/25">
+                      <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#76B900]/30"></span>
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#76B900]"></span>
+                      </span>
+                      <span class="font-mono text-[8px] font-bold uppercase tracking-wider text-[#76B900]">Live</span>
+                    </span>
+                  </div>
+
+                  <div class="flex items-center justify-between gap-3 rounded-lg border border-navy-100/20 bg-white/60 px-3 py-2 backdrop-blur-sm shadow-sm">
+                    <div class="flex items-center gap-2 min-w-0">
+                      <div class="min-w-0">
+                        <p class="truncate text-[12px] font-medium leading-tight text-navy-900">Dienstplanner</p>
+                        <p class="truncate text-[9.5px] leading-tight text-navy-900/50">Gezondheidszorg · Diensten</p>
+                      </div>
+                    </div>
+                    <span class="flex flex-shrink-0 items-center gap-1 bg-sky-100/80 px-2 py-0.5 rounded-full border border-sky-300/30">
+                      <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400/30"></span>
+                        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+                      </span>
+                      <span class="font-mono text-[8px] font-bold uppercase tracking-wider text-sky-600">Actief</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-1 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-1 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% elif loop.index0 == 1 %}
+              {# AI in productie brengen mockup — clean node graphic and latency dashboard #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Pipeline Connection Flow Nodes -->
+                <div class="relative z-10 flex items-center justify-between w-full mt-2 px-1">
+                  <div class="absolute left-[15%] right-[15%] top-1/2 -translate-y-1/2 h-[1px] bg-navy-200/40 pointer-events-none"></div>
+
+                  <!-- Node 1 -->
+                  <div class="mockup-dot-1 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80">Model</span>
+                  </div>
+
+                  <!-- Node 2 -->
+                  <div class="mockup-dot-2 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80 font-semibold">RAG</span>
+                  </div>
+
+                  <!-- Node 3 -->
+                  <div class="mockup-dot-3 z-10 flex items-center gap-1.5 bg-white/80 border border-navy-100/30 rounded-lg px-2 py-1.5 backdrop-blur-sm shadow-sm transition-all duration-300">
+                    <span class="h-2 w-2 rounded-full bg-[#76B900] animate-pulse"></span>
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-navy-900/80">Prod</span>
+                  </div>
+                </div>
+
+                <!-- Reusable module chips — ties the pipeline to actual accelerator modules, not a generic ML pipeline -->
+                <div class="relative z-10 flex gap-1.5 mt-3 flex-wrap justify-center">
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Inschrijving</span>
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Bevoegdheden</span>
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Facturatie</span>
+                </div>
+
+                <!-- Telemetry Progress Dashboard -->
+                <div class="relative z-10 w-full flex flex-col gap-2 rounded-lg border border-navy-100/25 bg-white/70 p-3 mt-2 shadow-sm backdrop-blur-sm">
+                  <div class="flex items-center justify-between text-[11px] font-medium text-navy-900">
+                    <span>Deployment-status</span>
+                    <span class="font-mono text-[9px] uppercase px-1.5 py-0.5 rounded mockup-status-badge font-bold"></span>
+                  </div>
+                  <!-- Progress bar -->
+                  <div class="h-1.5 w-full bg-navy-100/50 rounded-full overflow-hidden">
+                    <div class="h-full bg-[#76B900] rounded-full mockup-progress-bar"></div>
+                  </div>
+                  <!-- Mini Readouts -->
+                  <div class="flex justify-between mt-1 text-[10px] font-mono text-navy-900/60">
+                    <span>Latentie: <span class="text-navy-900 font-bold mockup-latency-val"></span></span>
+                    <span>Status: <span class="text-navy-900 font-bold mockup-status-val"></span></span>
+                  </div>
+                </div>
+
+                <!-- Ship Accelerator Button -->
+                <div class="relative z-10 w-full mt-2 flex justify-center">
+                  <button class="mockup-run-btn px-4 py-1.5 rounded-lg border border-white/60 bg-white/30 text-[10px] font-mono uppercase tracking-wider text-navy-900/80 shadow-sm backdrop-blur-sm mockup-run-btn-anim font-bold">
+                    Accelerator opleveren
+                  </button>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-2 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-2 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% else %}
+              {# Platform layer mockup — names the actual shared infrastructure (edgeXcrm tenant
+                 architecture, Orca orchestration) rather than a generic cluster/pod scaling
+                 visual. Zunkiree Search dropped 2026-09-27 (no longer a live product). #}
+              <div class="relative w-full h-full min-h-[240px] flex flex-col justify-between p-4 overflow-hidden">
+                <!-- Browser/IDE mockup -->
+                <div class="relative z-10 w-full flex-1 rounded-lg border border-navy-100/30 bg-white/70 backdrop-blur-sm flex flex-col overflow-hidden shadow-sm min-h-[145px]">
+                  <!-- IDE Titlebar -->
+                  <div class="flex items-center justify-between px-3 py-1.5 border-b border-navy-100/20 bg-white/40 flex-shrink-0">
+                    <div class="flex gap-1 flex-shrink-0">
+                      <span class="w-1.5 h-1.5 rounded-full bg-red-400/80"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-yellow-400/80"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-green-400/80"></span>
+                    </div>
+                    <span class="text-[9px] font-mono text-navy-900/50">platform_scale.py</span>
+                    <button class="px-2 py-0.5 rounded border border-navy-900/20 bg-navy-900/5 text-[8px] font-mono uppercase tracking-wide flex-shrink-0 mockup-scale-btn-anim font-bold">
+                      Opschalen
+                    </button>
+                  </div>
+                  <!-- Code area -->
+                  <pre class="p-3 text-[10px] font-mono text-navy-900/80 overflow-hidden leading-relaxed text-left flex-1 select-none"><code><span class="text-navy-900 font-semibold">import</span> platform
+
+app = platform.init(
+  tenant=<span class="text-navy-900/50">"edgeXcrm"</span>,
+  orchestration=<span class="text-navy-900/50">"orca"</span>,
+  replicas=<span class="text-[#76B900] font-bold mockup-replicas-text"></span>
+)</code></pre>
+                  <!-- Terminal Log Console overlay (slides up) -->
+                  <div class="mockup-terminal absolute bottom-0 left-0 right-0 border-t border-navy-100/20 bg-slate-900 p-3 font-mono text-[9px] text-slate-300 leading-normal translate-y-full transition-all duration-500 z-20">
+                    <p class="text-white/60 leading-none mb-1">> python platform_scale.py</p>
+                    <p class="leading-none mb-1 text-slate-400">> Orca-orkestratie: actief</p>
+                    <p class="leading-none text-white font-bold">> Active pods: 6/6 (100% owned)</p>
+                  </div>
+                </div>
+
+                <!-- Platform component tags -->
+                <div class="relative z-10 flex gap-1.5 mt-3 flex-wrap justify-center flex-shrink-0">
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">edgeXcrm</span>
+                  <span class="px-2 py-0.5 rounded-full border border-navy-100/30 bg-white/40 text-[9px] font-mono uppercase tracking-wide text-navy-900/60">Orca</span>
+                </div>
+
+                <!-- Simulated Mouse Pointer -->
+                <div class="mockup-cursor-3 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                  <div class="mockup-click-ripple-3 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
+                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+  <!-- Bottom fade — blends the hero bg image into the white body background instead of
+       cutting off in a hard rectangle where this div ends. -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" aria-hidden="true"></div>
+
+</div>
+
+{# =====================================================
+   CLIENTS MARQUEE — Website V2
+   Continuous scrolling client track placed immediately below mockups.
+   ===================================================== #}
+{% set provenClients = [
+  { name: "Admizz", logo: "/assets/images/clients/admizz.webp" },
+  { name: "CoreCloud365", logo: "/assets/images/clients/corecloud365.webp" },
+  { name: "Rapid Investment", logo: "/assets/images/clients/rapid-investment.svg" },
+  { name: "CMS Group", logo: "/assets/images/clients/cms-group.webp" },
+  { name: "Mach24 Orbital", logo: "/assets/images/clients/mach24orbital.webp" },
+  { name: "Khushbu Nirman Sewa", logo: "/assets/images/clients/khushbu-nirman-sewa.webp" },
+  { name: "Prime Tiles", logo: "/assets/images/clients/prime-tiles.webp" },
+  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" },
+  { name: "Chayce Properties", logo: "/assets/images/clients/chayce-properties.webp" }
 ] %}
-{% include "partials/homepage/case-study-carousel.njk" %}
+<div class="w-full pb-12 sm:pb-16 lg:pb-20 overflow-hidden relative" data-reveal>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <p class="text-center font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] mb-8">Vertrouwd door teams die hun processen met AI moderniseren</p>
+    <div class="w-full overflow-hidden relative py-2">
+      <!-- Gradient Fade Edge Masks -->
+      <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-warm-off-white/30 to-transparent z-10"></div>
+      <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-warm-off-white/30 to-transparent z-10"></div>
+      
+      {# `gap` on the flex row (previously gap-16) applies only *between* items —
+         with 2×8 = 16 images that's 15 gaps total, so translateX(-50%) lands
+         half a gap short of where the duplicate list actually starts, producing
+         a visible stutter/gap at the loop seam once per cycle. Using mr-16 on
+         every image (including the last of each half) instead makes each half
+         a self-contained "S + 8 gaps" unit of identical width, so -50% always
+         lands exactly on the duplicate's first image — a truly seamless loop. #}
+      <div class="animate-marquee flex items-center">
+        <!-- Original List -->
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
+        {% endfor %}
+        <!-- Duplicated List for seamless loop -->
+        {% for client in provenClients %}
+          <img src="{{ client.logo }}" alt="{{ client.name }}" class="mr-16 h-6 w-auto flex-shrink-0 object-contain grayscale opacity-60 mix-blend-multiply select-none pointer-events-none" loading="lazy" />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
-{% set sliderEyebrow = "Onze diensten" %}
-{% set sliderHeading = "Technische topkwaliteit op elk niveau" %}
-{% set sliderSubtext = "Van AI-systemen tot dataplatforms — wij bouwen oplossingen op infrastructuurniveau die in waarde blijven groeien." %}
-{% set sliderViewAllText = "Bekijk alle diensten" %}
-{% set sliderIconGradientId = "service-icon-gradient-nl" %}
-{% set servicesList = [
-  {"title": "AI-ontwikkeling", "description": "Maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering. Wij bouwen AI die specifieke bedrijfsproblemen oplost, geen generieke chatbots.", "cta": "Bekijk", "url": "/services/ai-development/", "icon": "ai", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Admizz", "logo": "/images/clients/admizz.webp"}]},
-  {"title": "AI-klantervaring", "description": "AI-gestuurde supportsystemen die klantvragen direct beantwoorden. Verminder supporttickets met 40% en verbeter tegelijk de nauwkeurigheid van antwoorden.", "cta": "Bekijk", "url": "/services/ai-customer-experience/", "icon": "chat", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
-  {"title": "AI-ecommerceoplossingen", "description": "Bouw agentic-commercesystemen met AI-winkelagents, conversational commerce en slimme aanbevelingen. Gespecialiseerd voor de Nepalese markt met eSewa- en Khalti-integratie.", "cta": "Bekijk", "url": "/services/ai-ecommerce/", "icon": "cart", "clients": []},
-  {"title": "Datasystemen", "description": "Datapijplijnen, warehouses en analyse-infrastructuur gebouwd voor AI-workloads. Maak uw data gereed voor machine learning zonder maandenlange opschoning.", "cta": "Bekijk", "url": "/services/data-systems/", "icon": "data", "clients": [{"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]},
-  {"title": "Maatwerksoftware", "description": "Bedrijfsapplicaties op maat van uw workflows. Wij bouwen interne tools en bedrijfssystemen die teams daadwerkelijk graag gebruiken.", "cta": "Bekijk", "url": "/services/custom-software/", "icon": "code", "clients": [{"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}]},
-  {"title": "SaaS-ontwikkeling", "description": "Multi-tenant platforms met abonnementsfacturatie, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in maanden, niet jaren.", "cta": "Bekijk", "url": "/services/saas-development/", "icon": "cloud", "clients": [{"name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}]},
-  {"title": "Webontwikkeling", "description": "High-performance websites en webapps geoptimaliseerd voor snelheid en conversie. Moderne frameworks, responsive design, vanaf dag één gebouwd voor SEO.", "cta": "Bekijk", "url": "/services/web-development/", "icon": "globe", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp"}, {"name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp"}]},
-  {"title": "App-ontwikkeling", "description": "Native en cross-platform mobiele apps voor iOS en Android. Van consumentenapps tot enterprise mobility, met naadloze backend-integratie.", "cta": "Bekijk", "url": "/services/app-development/", "icon": "mobile", "clients": [{"name": "Admizz", "logo": "/images/clients/admizz.webp"}, {"name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg"}]},
-  {"title": "AEO & SEO", "description": "Word gevonden door Google en AI-assistenten zoals ChatGPT en Perplexity. Wij optimaliseren content voor traditionele zoekmachines en AI-citaties.", "cta": "Bekijk", "url": "/services/aeo-seo/", "icon": "search", "clients": [{"name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp"}, {"name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp"}, {"name": "CMS Group", "logo": "/images/clients/cms-group.webp"}]}
-] %}
-{% include "partials/homepage/services-slider.njk" %}
+{# =====================================================
+   INDUSTRY SELF-IDENTIFICATION — Website V2
+   PAGE_BLUEPRINTS.md §1, section 2 (immediately after hero).
+   COMPONENT_LIBRARY.md §3.5 Industry Showcase: Section Header +
+   Tabs (§1.5, pill-tabs) + Industry/Vertical Card (§4.2) per panel,
+   one full-width card per active tab (not a static 4-up grid).
 
-{% set solutionsEyebrow = "Oplossingen" %}
-{% set solutionsHeading = "AI-native systemen voor elke sector" %}
-{% set industriesGradientId = "solutions-icon-gradient-nl" %}
+   Content sourced from CONTENT_SUMMARY.md §2/§4/§7 and
+   PAGE_BLUEPRINTS.md §1's confirmed-client list only — no
+   fabricated logos/quotes. Healthcare has no public client name
+   yet (capability framing only); Real Estate uses the sanctioned
+   capability-led variant (no CRE client exists).
+
+   Card CTA routes to /industries/{id}/ — these pages now exist
+   (src/pages/industries/industry-pages.njk + src/_data/industries.js),
+   so the earlier "route to /contact/, pages don't exist yet" note
+   is stale and has been corrected here.
+
+   Card stats (2026-07-31 card redesign): Education uses its real
+   client stats (Admizz — 45% faster response, 3x satisfaction,
+   sourced from industries.js flagshipProof.stats). Agencies,
+   Healthcare, and Real Estate have no named-client metric yet
+   (Agencies is explicitly flagged "[NEEDS SADIN]" in industries.js;
+   Healthcare/Real Estate are capability-led by design) — per the
+   company-industry-context.md guardrail against fabricating client
+   metrics, those three reuse the real platform-layer stats instead
+   (99.9% Uptime SLA, 50+ Connectors — from industries.js
+   platformTieIn.stats, which describe the shared platform, not a
+   specific client).
+
+   Design-token compliance (MASTER_DESIGN_SPEC.md):
+   - §4 Color: `#76B900` is the ONE accent hue everywhere — the old
+     `zunkiree-*` Tailwind scale (sage green) is a retired token and
+     must not appear in Website V2 markup. Tints are `#76B900` at low
+     opacity (derived from the same hue), never the sage scale.
+   - §10 Backgrounds (revised 2026-07-26): the section's own
+     `bg-sky-50` full-bleed wash is retired — MASTER_DESIGN_SPEC.md
+     §3/§4/§10 now mandates one flat `#F8FAFC` background sitewide,
+     with `sky` scoped strictly to glass-card-surface tint and
+     secondary data/status differentiation, never a section wash.
+     This section now sits on the same flat body background
+     (`bg-warm-off-white`, set in base.njk) as every other section.
+   - §8 Radius: `radius-lg` (rounded-2xl) for the card, `radius-md`
+     (rounded-lg) for nested sub-elements, `radius-pill` for tabs/pills.
+   - §5 Type scale: H2 28–32px/600, H3 20–22px/500, normal tracking
+   - §5 Mono: reserved for the stat numeral only, not for labels/tabs.
+   - §7 Spacing: card internal padding stays in the space-3–space-4
+     micro range (24–32px), not the section's own macro padding.
+   - §9 Elevation: `elevation-1` (subtle shadow + hairline border) is
+     the card's resting state — not `elevation-2`, since it's not
+     sitting on a busy/gradient background here.
+   ===================================================== #}
 {% set industries = [
-  {"name": "Gezondheidszorg"},
-  {"name": "Productie"},
-  {"name": "Juridisch"},
-  {"name": "Zakelijke dienstverlening"},
-  {"name": "Onderwijs"},
-  {"name": "Human resources"}
+  {
+    id: "education",
+    label: "Onderwijs",
+    image: "/assets/images/industries/education.jpg",
+    headline: "Live voor onderwijsadviesbureaus en recruiters voor studeren in het buitenland.",
+    iconPath: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.083 12.083 0 01.665-6.479L12 14zm-4 6.16v-5.5l4-2.222",
+    proofType: "stat",
+    statValue: "45%",
+    statLabel: "snellere reactietijden, vandaag live in gebruik voor het onderwijs-CRM van Admizz."
+  },
+  {
+    id: "agencies",
+    label: "Bureaus",
+    image: "/assets/images/industries/agencies.jpg",
+    headline: "Wij draaien onze eigen bureauactiviteiten op precies dit platform.",
+    iconPath: "M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM10 5h4v2h-4V5zm10 13H4V9h16v9z",
+    proofType: "line",
+    proofLine: "ZunkireeLabs draait de eigen dealpipeline, offertes, oplevering en tijdregistratie op ditzelfde platform — Mobilise gebruikt dezelfde infrastructuur extern."
+  },
+  {
+    id: "healthcare",
+    label: "Gezondheidszorg",
+    image: "/assets/images/industries/healthcare.jpg",
+    headline: "Gebouwd voor Australische zorgaanbieders — ziekenhuizen, ouderenzorg, wijkzorg.",
+    iconPath: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    proofType: "line",
+    proofLine: "Vervangt handmatige roosterplanning, bevoegdheidsregistratie en de overdracht van personeel naar werving door één verbonden systeem."
+  },
+  {
+    id: "real-estate",
+    label: "Vastgoed",
+    image: "/assets/images/industries/real-estate.jpg",
+    headline: "Gebouwd voor CRE-sponsors die kapitaal bij beleggers ophalen.",
+    iconPath: "M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 9h1m3 0h1m-5 4h1m3 0h1m-5 4h1m3 0h1",
+    proofType: "line",
+    proofLine: "Beveiligde datarooms voor beleggers, aanbiedingen en tracking van toezeggingen — gebouwd voor kapitaalwerving, geen generiek CRM."
+  }
 ] %}
-{% include "partials/homepage/industries-grid.njk" %}
 
-{% set spotlightEyebrow = "Bronnen" %}
-{% set spotlightHeading = "In de schijnwerpers" %}
-{% set spotlightViewAllText = "Bekijk alle bronnen" %}
-{% set spotlightList = [
-  {"type": "RAPPORT", "title": "State of AI Search 2026: Enterprise-adoptierapport", "url": "/resources/ai-search-report-2026/", "image": "/assets/images/spotlight/report-ai-search-2026.svg", "cta": "Nu lezen"},
-  {"type": "ON DEMAND", "title": "Van zoekwoorden naar gesprekken: AI-zoekimplementatie", "url": "/resources/webinar-ai-search-implementation/", "image": "/assets/images/spotlight/ondemand-ai-implementation.svg", "cta": "Nu bekijken"},
-  {"type": "UITGELICHT RAPPORT", "title": "State of AI in Nepal 2026: Sectorrapport", "url": "/resources/state-of-ai-nepal-2026/", "image": "/assets/images/spotlight/report-ai-nepal-2026.svg", "cta": "Nu downloaden"},
-  {"type": "E-BOOK", "title": "Het AI Search Playbook voor productteams", "url": "/resources/ai-search-playbook/", "image": "/assets/images/spotlight/ebook-ai-playbook.svg", "cta": "Nu lezen"}
+<style>
+  .showcase-track-container {
+    --card-width: 72%;
+    --card-gap: 1rem;
+    --card-offset: 14%;
+  }
+  /* Same pattern as #logo-marquee (main.css): let vertical page scroll
+     pass through natively, we handle horizontal drag/swipe ourselves
+     via pointer events. Without this, touch browsers can hijack the
+     gesture as a page scroll before our pointermove handler ever fires. */
+  .industry-track-container {
+    touch-action: pan-y;
+  }
+  @media (min-width: 1024px) {
+    .showcase-track-container {
+      --card-width: 48%;
+      --card-gap: 1.5rem;
+      --card-offset: 26%;
+    }
+  }
+  @media (min-width: 1088px) {
+    .showcase-title-area {
+      margin-left: calc((100% - 1024px) / 2 - 2rem);
+    }
+  }
+
+  /* Auto-advancing tab indicator: the `.industry-tab-fill` class (which
+     carries the animation-name) is added/removed per tab via :class as
+     `activeTab` changes, rather than staying permanently applied and
+     being hidden/shown via x-show or x-if. Adding an animation-name to
+     an element that didn't have one a moment ago always starts that
+     animation fresh from its `from` keyframe — the one restart mechanism
+     that's actually reliable, unlike toggling `display` (an animation
+     that already finished doesn't reliably restart just because display
+     comes back) or remounting via `<template x-if>` (real mount cost,
+     noticeable next to this page's GSAP/Lenis/ScrollTrigger load). */
+  .industry-tab-fill {
+    animation-name: industry-tab-timer;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  @keyframes industry-tab-timer {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .industry-tab-fill { animation: none; transform: scaleX(1); }
+  }
+</style>
+
+<section
+  class="relative flex flex-col justify-center overflow-hidden py-12 sm:py-16 lg:py-20"
+  x-data="{
+    pos: 2,
+    autoplayMs: 4000,
+    autoplayTimer: null,
+    noTransition: false,
+    tabsOf: [2, 4, 1, 2, 3, 4, 1, 2],
+    get activeTab() {
+      return this.tabsOf[this.pos];
+    },
+    startAutoplay() {
+      clearTimeout(this.autoplayTimer);
+      this.autoplayTimer = setTimeout(() => {
+        this.next();
+      }, this.autoplayMs);
+    },
+    next() {
+      if (this.pos >= 6) this.snapToPos(2);
+      else this.pos++;
+    },
+    prev() {
+      if (this.pos <= 1) this.snapToPos(5);
+      else this.pos--;
+    },
+    selectTab(tab) {
+      this.pos = tab + 1;
+    },
+    snapToPos(newPos) {
+      this.noTransition = true;
+      this.pos = newPos;
+      this.$nextTick(() => {
+        if (this.$refs.industryTrack) void this.$refs.industryTrack.offsetWidth;
+        this.noTransition = false;
+      });
+    }
+  }"
+  x-init="startAutoplay(); $watch('pos', () => { startAutoplay(); })"
+  aria-labelledby="industry-showcase-heading"
+>
+  <!-- Header Wrapper (Centered, padded) -->
+  <div class="mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 showcase-title-area" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Branches
+      </span>
+
+      <h2 id="industry-showcase-heading" class="mb-6 text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Wat bouwt Zunkiree Labs voor jouw branche?
+      </h2>
+
+      <!-- Subhead copy + Tabs Row — aligned in the same row -->
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <p class="max-w-2xl text-body-lg text-[#6B7280]">
+          Vier branches, één gedeeld platform, al in productie.
+        </p>
+
+        <!-- Tabs — occupies the former Actions/CTAs slot -->
+        <div
+          role="tablist"
+          aria-label="Branches"
+          class="flex w-full flex-row items-center justify-between gap-4 overflow-x-auto pb-1 sm:w-auto sm:gap-6 lg:flex-shrink-0 lg:pl-12"
+        >
+          {% for industry in industries %}
+            {% set tabIndex = loop.index %}
+            <button
+              type="button"
+              role="tab"
+              id="industry-tab-{{ loop.index0 }}"
+              :aria-selected="activeTab === {{ tabIndex }} ? 'true' : 'false'"
+              aria-controls="industry-panel-{{ tabIndex }}"
+              :tabindex="activeTab === {{ tabIndex }} ? 0 : -1"
+              @click="selectTab({{ tabIndex }}); requestAnimationFrame(() => $el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }));"
+              class="group flex-none text-left focus:outline-none sm:flex-1 lg:flex-none lg:w-auto"
+            >
+              <!-- Indicator Line: track + auto-advancing timer fill -->
+              <div
+                class="relative mx-auto h-[3px] w-10 overflow-hidden rounded-full transition-colors duration-300 sm:w-12"
+                :class="activeTab === {{ tabIndex }} ? 'bg-navy-200/30' : 'bg-navy-200/30 group-hover:bg-navy-300/50'"
+              >
+                <div
+                  class="absolute inset-y-0 left-0 h-full w-full origin-left rounded-full bg-[#76B900]"
+                  :class="activeTab === {{ tabIndex }} ? 'industry-tab-fill' : 'opacity-0'"
+                  :style="'animation-duration: ' + autoplayMs + 'ms'"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <!-- Tab Label -->
+              <span
+                class="mt-3 block whitespace-nowrap font-mono text-[11px] uppercase tracking-wider text-center transition-colors duration-200"
+                :class="activeTab === {{ tabIndex }} ? 'text-navy-900 font-semibold' : 'text-navy-400 group-hover:text-navy-600'"
+              >
+                {{ industry.label }}
+              </span>
+            </button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Carousel Track with Duplicated Boundary Cards for Infinite Looping (Full Bleed, No Gaps) -->
+  {% set carouselItems = [
+    industries[1],
+    industries[3],
+    industries[0],
+    industries[1],
+    industries[2],
+    industries[3],
+    industries[0],
+    industries[1]
+  ] %}
+  {% set cardTabs = [2, 4, 1, 2, 3, 4, 1, 2] %}
+
+  <div
+    class="industry-track-container showcase-track-container relative w-full overflow-hidden cursor-grab select-none"
+    :class="isDragging ? 'cursor-grabbing' : ''"
+    data-reveal
+    x-data="{ isDragging: false, startX: 0, didDrag: false }"
+    @pointerdown="isDragging = true; startX = $event.clientX; $el.setPointerCapture($event.pointerId)"
+    @pointermove="if (isDragging) { $event.preventDefault() }"
+    @pointerup="
+      if (isDragging) {
+        const delta = $event.clientX - startX;
+        if (Math.abs(delta) >= 60) {
+          didDrag = true;
+          if (delta < 0) next();
+          else prev();
+        }
+      }
+      isDragging = false;
+    "
+    @pointercancel="isDragging = false"
+  >
+    <div
+      x-ref="industryTrack"
+      class="flex"
+      :class="noTransition ? 'transition-none' : 'transition-transform duration-500 ease-out'"
+      :style="'transform: translateX(calc(var(--card-offset) - (' + pos + ' * (var(--card-width) + var(--card-gap))))); gap: var(--card-gap);'"
+    >
+      {% for item in carouselItems %}
+        {% set originalIndex = loop.index0 %}
+        {# Map each track card to its industry tab (1-4) for click/aria behavior #}
+        {% set targetTab = cardTabs[originalIndex] %}
+
+        <div
+          role="tabpanel"
+          id="industry-panel-{{ originalIndex }}"
+          aria-labelledby="industry-tab-{{ targetTab }}"
+          :aria-hidden="pos !== {{ originalIndex }} ? 'true' : 'false'"
+          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] opacity-100"
+          :class="(pos === {{ originalIndex }} ? 'scale-100 z-10' : 'scale-95 z-0 cursor-pointer') + (noTransition ? '' : ' transition-all duration-500')"
+          style="width: var(--card-width);"
+          @click="
+            if (didDrag) { didDrag = false; }
+            else if (pos === {{ originalIndex }}) { next(); }
+            else { selectTab({{ targetTab }}); }
+          "
+          :tabindex="pos === {{ originalIndex }} ? 0 : -1"
+        >
+          <!-- Card Background photo -->
+          <img
+            src="{{ item.image }}"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+            decoding="async"
+            fetchpriority="high"
+            draggable="false"
+            width="1200"
+            height="800"
+          />
+
+          <!-- Sky Tint overlay for image styling -->
+          <div class="pointer-events-none absolute inset-0 bg-sky-900/20 mix-blend-color" aria-hidden="true"></div>
+
+          <!-- Legibility scrims — linear gradient darken top/bottom, transparent center -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" aria-hidden="true"></div>
+
+          <!-- Headline overlaid top-left on the image -->
+          <div class="absolute left-6 top-6 right-40 sm:left-8 sm:top-8 sm:right-auto sm:max-w-md z-20 text-left">
+            <h3 class="text-[20px] font-medium leading-[1.3] text-white sm:text-[24px] drop-shadow-md">
+              {{ item.headline }}
+            </h3>
+          </div>
+
+          <!-- Category badge overlaid top-right on the image -->
+          <div class="absolute right-5 top-5 z-20 sm:right-6 sm:top-6">
+            <div class="inline-flex items-center gap-2 rounded-full bg-black/35 px-3.5 py-1.5 backdrop-blur-md border border-white/10">
+              <svg class="h-4 w-4 text-[#76B900]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ item.iconPath }}"></path>
+              </svg>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-white">
+                {{ item.label }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Floating stat or proof box on the bottom-right corner with glass effect -->
+          <div class="absolute inset-x-4 bottom-5 z-20 mx-auto max-w-[280px] sm:inset-x-auto sm:right-6 sm:bottom-6">
+            {% if item.proofType == "stat" %}
+              <div class="rounded-lg bg-black/45 p-4 border border-white/10 backdrop-blur-md shadow-lg">
+                <span class="block font-mono text-3xl font-semibold leading-none text-white sm:text-4xl">{{ item.statValue }}</span>
+                <span class="mt-2 block text-[12.5px] font-medium leading-relaxed text-white/80">{{ item.statLabel }}</span>
+              </div>
+            {% else %}
+              <div class="rounded-lg bg-black/45 p-4 border border-white/10 backdrop-blur-md shadow-lg">
+                <span class="mb-1.5 block text-[10px] font-mono uppercase tracking-wider text-white">Vlaggenschipbewijs</span>
+                <span class="block text-[12.5px] leading-relaxed text-white/90">{{ item.proofLine }}</span>
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   OUTCOME FEATURE BLOCK — Website V2 (rebuilt 2026-07-26)
+   PAGE_BLUEPRINTS.md §1, section 5 — placed directly below Industry
+   Showcase per direction (Sadin, 2026-07-24), ahead of Proof/Testimonials.
+
+   REPLACES the previous Orca-dashboard mockup, which had 3 confirmed
+   problems checked against CONTENT_SUMMARY.md/company-industry-
+   context.md:
+   1. Subhead claimed the platform is "already running live across
+      four industries" — only Education/Agencies are confirmed live;
+      Healthcare/Real Estate are capability-led (company-industry-
+      context.md §3), same distinction the Industry Showcase section
+      above already makes correctly.
+   2. Orca was shown with real-time "live" node-status badges, but
+      CONTENT_SUMMARY.md §1 confirms Orca "is not a product at all
+      today — it exists only as an unlabeled dashboard image asset...
+      zero copy or page."
+   3. The activity feed showed a fabricated named result ("Supplier
+      Alpha, 4% defect rate") not sourced from any doc.
+
+   Fix, in two parts, both fact-checked against the two source docs
+   (no fabricated clients/quotes/metrics):
+
+   A. Problem/Solution/Outcome triptych (pattern borrowed from
+      koreai-content-reference.md §5 — structure only, not their
+      copy) replaces the overclaiming subhead. Outcome beat cites
+      only the two confirmed-live proof points (Admizz stat, self-run
+      agency), no blanket "across four industries" claim.
+      Visual: MASTER_DESIGN_SPEC.md §3 technique 1 (soft elevation —
+      opaque white card + hairline border + shadow-subtle), §6's
+      3-column repeater grid rule.
+
+   B. Four illustrative conversation-demo cards (one per vertical),
+      replacing the Orca dashboard — inspired structurally by
+      Kore.ai's own "Pre-built Applications" tabbed chat-mockup
+      pattern (screenshot reference, 2026-07-26; structure only, not
+      their copy or their fictional persona names). Each demo is
+      grounded in a real documented capability from company-industry-
+      context.md §3 (application-pipeline stages, deal/resourcing
+      pipeline, compliance-gated shift assignment, investor
+      commitments/data room) — no invented capability. Like Kore.ai's
+      own demo, no real person is named or implied to be real.
+      Education/Agencies are labeled "Live" (brand green, the
+      persuasion-accent color per §4); Healthcare/Real Estate are
+      labeled "Capability" (sky, the sanctioned secondary-status use
+      per §4 rule 2 — "distinguishing a... non-primary status state
+      from the brand-green one"), so nothing reads as a live-status
+      claim it isn't.
+      Visual: MASTER_DESIGN_SPEC.md §3 technique 2 (glass surface —
+      same border-white/60, sky-tinted gradient, backdrop-blur-md,
+      shadow-subtle treatment as the Platform Pillars cards above),
+      §6's 4-column repeater grid rule, §8 radius-lg outer card /
+      radius-md bubbles. The solid navy-900 fill used for the "user"
+      message bubble reuses an existing precedent already in this
+      file (the Platform Pillars mockup's active-chip animation,
+      `#0f172a`) rather than introducing a new color.
+   ===================================================== #}
+{# =====================================================
+   PLATFORM SECTION — rebuilt 2026-07-26, Linear-style stacked rows
+   Structural pattern adapted from linear.app's shipped homepage layout
+   (each vertical = its own full-width row: badge+label → headline →
+   description+CTA, then a floating product-demo card below, then
+   small capability footnotes) — fetched and read from linear.app's
+   actual CSS, not guessed from a screenshot.
+
+   IMPORTANT deviation from the literal Linear reference, by explicit
+   decision (2026-07-26 conversation): MASTER_DESIGN_SPEC.md retired
+   dark section backgrounds sitewide the same day this was built
+   (§3/§10/§24 — "no page opens on, or transitions to, any background
+   other than #F8FAFC... this now includes what were previously the
+   platform strip[...]'s dark backgrounds"). So this keeps Linear's
+   STRUCTURE (stacked full-width rows, 2-col header, floating demo
+   card, footnote row) but stays on the existing flat page background
+   and existing tokens — no new dark section, no new colors/fonts/
+   spacing introduced. The demo card reuses the glass-surface
+   technique (§3 technique 2) already established as this page's
+   sanctioned "platform framing" device.
+
+   Capability labels in `footnotes` are grounded in real, sourced
+   capabilities from CONTENT_SUMMARY.md §"real pain points"/§section
+   purposes (application pipeline/visa checklist, deal pipeline/
+   resourcing, credential compliance/shift rostering, investor
+   commitments/data room) — no fabricated capability names.
+   ===================================================== #}
+{% set platformSections = [
+  {
+    label: "Onderwijs",
+    live: true,
+    headline: "Elke fase van de aanvraag, automatisch gevolgd",
+    body: "Van documentverzameling via aanbod en visum tot inschrijving — bij de overdracht aan de partnerinstelling gaat niets verloren.",
+    footnotes: ["Application pipeline", "Visa checklist"],
+    messages: [
+      { from: "bot", text: "Je aanvraag voor de herfstintake staat nu op „Aanbod ontvangen”. Wil je hulp bij het starten van de visumchecklist?" },
+      { from: "user", text: "Ja, wat heb ik nodig?" },
+      { from: "bot", text: "Paspoortkopie, aanbiedingsbrief, bewijs van financiële middelen — ik heb al opgezocht wat in het dossier staat. Zal ik beginnen?" }
+    ]
+  },
+  {
+    label: "Bureaus",
+    live: true,
+    headline: "Dealflow die nooit stilstaat",
+    body: "Offertes, opleveringscapaciteit en resourceplanning in één draad — dezelfde infrastructuur waarop ZunkireeLabs zijn eigen bureau draait.",
+    footnotes: ["Deal pipeline", "Proposal share/print views", "Project cockpit", "RAID log", "Utilization dashboards"],
+    messages: [
+      { from: "bot", text: "Je offerte voor de klant is 2 uur geleden op „Verzonden” gezet. Wil je volgende week een herinnering inplannen?" },
+      { from: "user", text: "Ja — en controleer of we er opleveringscapaciteit voor hebben." },
+      { from: "bot", text: "Gecontroleerd. Het team heeft volgende sprint 12 uur vrij — aan deze offerte gekoppeld." }
+    ]
+  },
+  {
+    label: "Gezondheidszorg",
+    live: false,
+    headline: "Compliance die blokkeert voordat het misgaat",
+    body: "Verlopende bevoegdheden en ontbrekende licenties worden automatisch gesignaleerd en geblokkeerd, voordat een niet-conforme dienstindeling wordt verstuurd.",
+    footnotes: ["Credential compliance", "Shift rostering", "3-axis staff classification", "Time & attendance", "Leave management", "Connected recruitment platform"],
+    messages: [
+      { from: "bot", text: "Voor deze dienst is een RN-bevoegdheid nodig — de licentie van de ingedeelde medewerker verloopt over 5 dagen. De indeling blokkeren tot de verlenging?" },
+      { from: "user", text: "Ja, en de coördinator op de hoogte stellen." },
+      { from: "bot", text: "Klaar. Indeling geblokkeerd, coördinator op de hoogte gesteld, herinnering voor verlenging ingepland." }
+    ]
+  },
+  {
+    label: "Vastgoed",
+    live: false,
+    headline: "Kapitaalwerving zonder spreadsheetchaos",
+    body: "Toezeggingen van beleggers, aanbiedingen en een beveiligde dataroom op één plek in plaats van in verspreide inboxen.",
+    footnotes: ["Investor commitments", "Data room"],
+    messages: [
+      { from: "bot", text: "Toezegging van een belegger voor dit aanbod vastgelegd — $250K toegezegd, documenten geüpload naar de dataroom." },
+      { from: "user", text: "Het sponsorteam op de hoogte stellen." },
+      { from: "bot", text: "Op de hoogte gesteld. De toezegging staat nu op „Verificatie in behandeling”." }
+    ]
+  }
 ] %}
-{% include "partials/homepage/spotlight.njk" %}
+{# Tab 2 panel — "AI in productie brengen." Generic deployment-discipline
+   content (not per-industry), grounded in the already-shipped pillar
+   description (line 214: "Tested, monitored systems shipped on schedule
+   with reusable accelerators") and the real Deploy process step already
+   written for AI Development (servicesDetails.json — deployment +
+   monitoring + knowledge transfer + ongoing support). Deliberately drops
+   that page's numeric stats (40%, <3mo, 99.9%) — those are old-model,
+   unverified service-page marketing stats, not confirmed platform-wide
+   facts, so they're not reused here (same no-fabricated-metrics guardrail
+   as tab 1). No fake terminal/telemetry — a plain 4-step tracker instead. #}
+{% set deploymentPanel = {
+  badge: "Process",
+  headline: "Zo gaan we naar productie",
+  body: "Elke uitrol volgt dezelfde werkwijze: bouwen op het gedeelde platform, testen met echte data, uitrollen met monitoring op zijn plek en ook na de livegang ondersteund blijven — geen eenmalige bouw die wordt overgedragen en vergeten.",
+  steps: ["Build", "Test", "Deploy", "Support"],
+  footnotes: [
+    { label: "Monitoring", description: "Doorlopend inzicht in de gezondheid van het systeem na de livegang." },
+    { label: "Kennisoverdracht", description: "Je team leert het systeem kennen terwijl het wordt opgeleverd, niet erna." },
+    { label: "Supportovereenkomst", description: "Doorlopende ondersteuning zodra het systeem live is." }
+  ],
+  floatingTile: {
+    label: "Productie-uitrol",
+    badge: "Monitored",
+    tags: ["Monitoring", "Testing", "Support"]
+  }
+} %}
+{# Tab 3 panel — "Opschalen naar elk gebruiksscenario." The real shared-platform story:
+   multi-tenant CRM + Orca orchestration is the actual "why this scales"
+   answer — new industries get a tailored feature set on the same shared
+   infrastructure, not a rebuild. Zunkiree Search dropped 2026-09-27 (no
+   longer a live product — per explicit direction). Informational only,
+   no CTA (per 2026-07-28 decision) — no invented uptime/pod-count numbers. #}
+{% set scalePanel = {
+  badge: "Platform",
+  headline: "Het gedeelde platform onder elke uitrol",
+  body: "Opschalen naar een nieuw gebruiksscenario betekent het gedeelde platform configureren, niet opnieuw beginnen — elke brancheoplossing draait op dezelfde onderliggende infrastructuur.",
+  components: [
+    { name: "Multi-tenant CRM", description: "De gedeelde tenantarchitectuur waarop elke brancheoplossing draait." },
+    { name: "Orca", description: "De orkestratielaag die workflows over tenants heen coördineert." }
+  ],
+  floatingTile: {
+    label: "Orca",
+    badge: "Platform",
+    tags: ["Multi-tenant", "Shared infrastructure"]
+  }
+} %}
+<section id="platform" class="scroll-mt-24 py-12 sm:py-16 lg:py-20" aria-labelledby="platform-visual-heading" x-data="{
+  activeTab: 0,
+  scrollTabIntoView(index) {
+    this.$nextTick(() => {
+      const container = this.$refs.platformMobileTabs;
+      if (!container) return;
+      const btn = container.querySelector('[data-tab-index=' + index + ']');
+      if (!btn) return;
+      const cRect = container.getBoundingClientRect();
+      const bRect = btn.getBoundingClientRect();
+      if (bRect.left >= cRect.left && bRect.right <= cRect.right) return;
+      container.scrollTo({ left: container.scrollLeft + (bRect.left - cRect.left) - 12, behavior: 'smooth' });
+    });
+  }
+}">
+  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
 
-{% set whyUsEyebrow = "Waarom Zunkiree Labs" %}
-{% set whyUsHeading = "Waarom kiezen voor Zunkiree Labs voor uw AI-infrastructuur?" %}
-{% set whyUsBody = "Zunkiree Labs levert niet alleen AI-systemen, maar complete infrastructuuroplossingen die zijn afgestemd op de veranderende behoeften van moderne bedrijven. Onze AI-native architectuur zorgt ervoor dat onze oplossingen, anders dan generieke systemen, specifiek zijn ontworpen voor de uitdagingen van elke sector. Met meer dan 5 producten in 7 sectoren en 8 gespecialiseerde diensten zijn wij een betrouwbare partner voor vooruitstrevende organisaties. In het huidige competitieve landschap zorgt onze focus op moderne cloudarchitectuur, robuuste datapijplijnen en high-performance applicaties ervoor dat uw bedrijf de kracht van AI kan benutten, efficiënter kan werken en voorop kan blijven lopen. Onze ervaring met succesvolle integraties in de Nepalese markt, met name met platforms als eSewa en Khalti, toont bovendien aan dat we oplossingen effectief kunnen lokaliseren voor maximale relevantie en prestaties. Wij zetten innovatieve technologieën en methodes in zodat onze klanten niet alleen gelijke tred houden, maar ook floreren in het AI-tijdperk." %}
-{% include "partials/homepage/why-us.njk" %}
+    <!-- Sticky left column (header + tab sidebar) + capability cards (right) — Kore.ai
+         "purpose-built applications" pattern (screenshot reference, 2026-07-26).
+         Left column stays pinned in view (lg:sticky) while the right column's
+         cards scroll with the normal page scroll — no inner scrollbar.
+         Tabs are the three Platform Pillars above ("Kant-en-klare AI-toepassingen",
+         "AI in productie brengen", "Opschalen naar elk gebruiksscenario") — all three are
+         now active (2026-07-28); each renders its own panel below. -->
+    <div class="lg:grid lg:grid-cols-[30%_1fr] lg:gap-8 lg:items-start">
 
-{% set faqHeading = "Veelgestelde vragen" %}
-{% set expandAllText = "Alles uitklappen" %}
-{% set collapseAllText = "Alles inklappen" %}
-{% set faqItems = [
-  {"question": "Welke soorten producten biedt Zunkiree Labs?", "answer": "Zunkiree Labs biedt uiteenlopende producten, waaronder AI-ontwikkelingsoplossingen, web- en mobiele ontwikkeling, UI/UX-ontwerp, data-engineering, cloudoplossingen, systeemintegratie en technisch consult."},
-  {"question": "Hoe pakt Zunkiree Labs AI-ontwikkeling aan?", "answer": "Zunkiree Labs richt zich op maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering om specifieke bedrijfsproblemen op te lossen, in plaats van generieke chatbots te bouwen."},
-  {"question": "In welke sectoren is Zunkiree Labs actief?", "answer": "Zunkiree Labs levert oplossingen in de sectoren gezondheidszorg, productie, juridisch, zakelijke dienstverlening, onderwijs, human resources en vastgoed — en we nemen ook nieuwe sectoren aan waar onze AI- en softwarekennis van toepassing is."},
-  {"question": "Welke voordelen bieden Zunkiree's AI-gestuurde klantervaringsoplossingen?", "answer": "Onze AI-gestuurde klantervaringsoplossingen kunnen supporttickets met 40% verminderen en tegelijk de nauwkeurigheid van antwoorden verbeteren, wat de algehele klanttevredenheid verhoogt."},
-  {"question": "Kan Zunkiree Labs helpen met SaaS-ontwikkeling?", "answer": "Ja, Zunkiree Labs is gespecialiseerd in SaaS-ontwikkeling en biedt multi-tenant platforms met abonnementsfacturatie en gebruikersbeheer, waardoor bedrijven hun SaaS-product binnen enkele maanden kunnen lanceren."},
-  {"question": "Welke expertise biedt Zunkiree Labs op het gebied van data-engineering?", "answer": "Zunkiree Labs bouwt robuuste datapijplijnen en infrastructuur die specifiek zijn ontworpen voor AI-workloads, zodat organisaties hun data kunnen voorbereiden op machine learning zonder uitgebreide opschoning."}
+      <!-- Sticky left column: header + sidebar tabs. Sticky only from lg up
+           (a global `position: sticky` here pinned this column mid-scroll on
+           mobile too, which read as broken/stuck content on a phone) — plain
+           flow below lg, `lg:sticky` above it. -->
+      <div class="flex flex-col gap-8 mb-8 lg:sticky lg:mb-0 lg:self-start" style="top: 96px;">
+        <div data-reveal>
+          <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+            Een platform van Zunkiree Labs
+          </span>
+          <h2 id="platform-visual-heading" class="text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+            Waarom één AI-platform in plaats van een dozijn losse tools?
+          </h2>
+          <a
+            href="/nl/contact/"
+            class="mt-6 inline-flex w-full flex-shrink-0 items-center justify-center gap-2 rounded-md border border-navy-300 px-5 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto sm:py-2.5"
+          >
+            Ontdek het platform
+            <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="hidden gap-2 overflow-x-auto pb-1 lg:flex lg:flex-col lg:gap-3 lg:overflow-visible lg:pb-0">
+          {% for pillar in pillars %}
+            <button
+              type="button"
+              @click="
+                activeTab = {{ loop.index0 }};
+                $nextTick(() => { if (window.refreshScrollTriggers) window.refreshScrollTriggers(); });
+                if (window.__lenis) { window.__lenis.scrollTo('#platform', { offset: -96 }); } else { document.getElementById('platform').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+              "
+              class="flex flex-shrink-0 items-center justify-between gap-2 whitespace-nowrap rounded-lg border px-4 py-3 text-left font-mono text-[12px] uppercase tracking-wide transition-colors duration-200 lg:whitespace-normal"
+              :class="activeTab === {{ loop.index0 }} ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-navy-100 bg-white text-navy-900 hover:border-navy-300'"
+              :aria-pressed="activeTab === {{ loop.index0 }}"
+            >
+              <span>{{ pillar.title }}</span>
+            </button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Mobile sticky tab row — keeps the three platform tabs visible while scrolling
+           through the panels below. The row itself stays part of the page; only its
+           bottom hairline reads as pinned once stuck. Sticks within this section only,
+           then releases naturally once the section ends. -->
+      <div x-ref="platformMobileTabs" class="platform-sticky-tabs sticky z-40 mb-6 flex flex-row gap-2 overflow-x-auto scroll-smooth scrollbar-hide border-b border-navy-100 bg-white lg:hidden">
+        {% for pillar in pillars %}
+          <button
+            type="button"
+            data-tab-index="{{ loop.index0 }}"
+            @click="
+              activeTab = {{ loop.index0 }};
+              $nextTick(() => { if (window.refreshScrollTriggers) window.refreshScrollTriggers(); });
+              scrollTabIntoView({{ loop.index0 }});
+            "
+            class="flex flex-shrink-0 items-center justify-between gap-2 whitespace-nowrap rounded-lg border px-4 py-3 text-left font-mono text-[12px] uppercase tracking-wide transition-colors duration-200"
+            :class="activeTab === {{ loop.index0 }} ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-navy-100 bg-white text-navy-900 hover:border-navy-300'"
+            :aria-pressed="activeTab === {{ loop.index0 }}"
+          >
+            <span>{{ pillar.title }}</span>
+          </button>
+        {% endfor %}
+      </div>
+
+      <!-- Right column — single grid item wrapping all three tab panels (fixes the
+           layout glitch on tab switch: previously the 3 panels were separate direct
+           children of the `lg:grid lg:grid-cols-[30%_1fr]` container alongside the
+           sticky sidebar, so grid auto-placement recalculated column assignment
+           whenever a panel's display toggled. Wrapping them in one `min-w-0` column
+           guarantees exactly 2 grid items — sidebar + this column — always. -->
+      <div class="min-w-0">
+
+      <!-- Tab 1 panel — industry cards, normal page flow (no inner scroll) -->
+      <div
+        x-show="activeTab === 0"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+      >
+        <!-- Panel heading — Kore.ai "purpose-built applications" pattern (screenshot ref, 2026-07-28).
+             Subheading reuses pillars[0].description verbatim — already fact-checked (HOMEPAGE_V2_COPY.md §1). -->
+        <div class="mb-6">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
+            Toepassingen die voor jouw branche al live zijn
+          </h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
+            {{ pillars[0].description }}
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 lg:gap-6" data-reveal-stagger>
+          {% for section in platformSections %}
+            <div class="flex w-full flex-col rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle transition-all duration-300 hover:border-[#76B900]/30 hover:shadow-md sm:p-7">
+
+              <!-- Card header -->
+              <div class="mb-2 flex flex-wrap items-center gap-2.5">
+                <h3 class="text-[17px] font-semibold leading-[1.3] text-[#111827] sm:text-[18px]">
+                  AI voor <span class="text-[#76B900]">{{ section.label }}</span>
+                </h3>
+              </div>
+
+              <p class="mb-5 text-[13.5px] leading-relaxed text-[#6B7280]">
+                {{ section.body }}
+              </p>
+
+              <!-- Embedded chat — §3 technique 2 glass surface. User bubble now
+                   matches the bot bubble's white/glass treatment (previously a
+                   solid navy-900 fill) per 2026-07-28 feedback; avatars added
+                   so the thread reads as a real conversation — the Zunkiree
+                   Search sparkle mark for the AI side (matches the icon used
+                   for Search elsewhere on the site), a generic person glyph
+                   for the user side (no fabricated headshot, consistent with
+                   the testimonials section's initial-in-circle approach). -->
+              <div class="mt-auto rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4 backdrop-blur-md">
+                <div class="space-y-2.5">
+                  {% for message in section.messages %}
+                    {% if message.from == "user" %}
+                      <div class="flex items-end justify-end gap-2">
+                        <div class="max-w-[76%] rounded-lg border border-white/50 bg-white/70 px-3 py-2 backdrop-blur-sm">
+                          <p class="text-[12px] leading-relaxed text-navy-800">{{ message.text }}</p>
+                        </div>
+                        <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-navy-800 ring-1 ring-white/60" aria-hidden="true">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12Zm0 2.4c-3.3 0-9.8 1.6-9.8 4.9v2.5h19.6v-2.5c0-3.3-6.5-4.9-9.8-4.9Z" fill="white"/>
+                          </svg>
+                        </span>
+                      </div>
+                    {% else %}
+                      <div class="flex items-end gap-2">
+                        <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] ring-1 ring-white/60" aria-hidden="true">
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.965 7.89l.813-2.846A.75.75 0 019 4.5ZM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5Z"/>
+                          </svg>
+                        </span>
+                        <div class="max-w-[84%] rounded-lg border border-white/50 bg-white/70 px-3 py-2 backdrop-blur-sm">
+                          <p class="text-[12px] leading-relaxed text-navy-800">{{ message.text }}</p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+
+              <!-- Footnote capability tags — real, sourced capabilities only (CONTENT_SUMMARY.md) -->
+              <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1.5">
+                {% for note in section.footnotes %}
+                  <span class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">{{ note }}</span>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Tab 2 panel — deployment discipline, generic (not per-industry) -->
+      <div
+        x-show="activeTab === 1"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+      >
+        <!-- Panel heading — subheading reuses pillars[1].description verbatim (already fact-checked). -->
+        <div class="mb-6">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
+            Gebouwd om uit te rollen, niet alleen om te demonstreren
+          </h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
+            {{ pillars[1].description }}
+          </p>
+        </div>
+        <div class="flex w-full flex-col rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle sm:p-7 lg:min-h-[420px]">
+          <div class="lg:grid lg:grid-cols-[1fr_240px] lg:gap-8">
+
+            <!-- Left: discipline copy + step tracker + expanded footnotes -->
+            <div class="flex min-w-0 flex-col">
+              <div class="mb-2 flex flex-wrap items-center gap-2.5">
+                <h3 class="text-[17px] font-semibold leading-[1.3] text-[#111827] sm:text-[18px]">
+                  {{ deploymentPanel.headline }}
+                </h3>
+                <span class="inline-flex items-center rounded-full bg-navy-100 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#6B7280]">
+                  {{ deploymentPanel.badge }}
+                </span>
+              </div>
+
+              <p class="mb-5 text-[13.5px] leading-relaxed text-[#6B7280]">
+                {{ deploymentPanel.body }}
+              </p>
+
+              <!-- Plain 4-step tracker — no fake terminal/telemetry -->
+              <div class="rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4 backdrop-blur-md">
+                <div class="flex flex-wrap items-center gap-2">
+                  {% for step in deploymentPanel.steps %}
+                    <span class="inline-flex items-center rounded-lg border border-white/50 bg-white/70 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wide text-navy-800 backdrop-blur-sm">
+                      {{ step }}
+                    </span>
+                    {% if not loop.last %}
+                      <span class="text-[#9CA3AF]" aria-hidden="true">&rarr;</span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+
+              <!-- Footnotes expanded to label + one-line description -->
+              <div class="mt-5 flex flex-col gap-3">
+                {% for note in deploymentPanel.footnotes %}
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">{{ note.label }}</p>
+                    <p class="mt-0.5 text-[12.5px] leading-relaxed text-[#6B7280]">{{ note.description }}</p>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- Right: floating capability tile — Kore.ai reference (2026-07-28), real label only -->
+            <div class="relative mt-6 flex items-start justify-center rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 backdrop-blur-md lg:mt-0">
+              <span class="absolute left-6 top-6 h-16 w-px border-l border-dashed border-navy-200" aria-hidden="true"></span>
+              <div class="tile-float relative w-full max-w-[190px] rounded-xl border border-white/70 bg-white p-4 shadow-md">
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="h-2 w-2 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+                  <p class="text-[12.5px] font-semibold leading-tight text-[#111827]">{{ deploymentPanel.floatingTile.label }}</p>
+                </div>
+                <span class="mb-3 inline-flex items-center rounded-full bg-[#76B900]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[#4d7a00]">
+                  {{ deploymentPanel.floatingTile.badge }}
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  {% for tag in deploymentPanel.floatingTile.tags %}
+                    <span class="inline-flex items-center rounded-full border border-navy-100 bg-navy-50 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide text-[#6B7280]">
+                      {{ tag }}
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3 panel — shared platform story, informational only, no CTA -->
+      <div
+        x-show="activeTab === 2"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+      >
+        <!-- Panel heading — subheading reuses pillars[2].description verbatim (already fact-checked). -->
+        <div class="mb-6">
+          <h3 class="text-[22px] font-normal leading-[1.3] text-[#111827] sm:text-[24px]">
+            Eén platform dat met je meegroeit
+          </h3>
+          <p class="mt-2 text-[14px] leading-relaxed text-[#6B7280]">
+            {{ pillars[2].description }}
+          </p>
+        </div>
+        <div class="flex w-full flex-col rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle sm:p-7 lg:min-h-[420px]">
+          <div class="lg:grid lg:grid-cols-[1fr_240px] lg:gap-8">
+
+            <!-- Left: platform story + component list -->
+            <div class="flex min-w-0 flex-col">
+              <div class="mb-2 flex flex-wrap items-center gap-2.5">
+                <h3 class="text-[17px] font-semibold leading-[1.3] text-[#111827] sm:text-[18px]">
+                  {{ scalePanel.headline }}
+                </h3>
+                <span class="inline-flex items-center rounded-full bg-navy-100 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#6B7280]">
+                  {{ scalePanel.badge }}
+                </span>
+              </div>
+
+              <p class="mb-5 text-[13.5px] leading-relaxed text-[#6B7280]">
+                {{ scalePanel.body }}
+              </p>
+
+              <!-- Plain component list — no fake pod counts/uptime numbers -->
+              <div class="flex flex-col gap-3 rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-4 backdrop-blur-md">
+                {% for component in scalePanel.components %}
+                  <div class="rounded-lg border border-white/50 bg-white/70 px-3 py-2.5 backdrop-blur-sm">
+                    <p class="font-mono text-[11px] uppercase tracking-wide text-navy-800">{{ component.name }}</p>
+                    <p class="mt-1 text-[12px] leading-relaxed text-[#6B7280]">{{ component.description }}</p>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- Right: floating capability tile — Kore.ai reference (2026-07-28), real component only -->
+            <div class="relative mt-6 flex items-start justify-center rounded-xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-sky-50/30 to-white/40 p-6 backdrop-blur-md lg:mt-0">
+              <span class="absolute left-6 top-6 h-16 w-px border-l border-dashed border-navy-200" aria-hidden="true"></span>
+              <div class="tile-float relative w-full max-w-[190px] rounded-xl border border-white/70 bg-white p-4 shadow-md">
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="h-2 w-2 flex-shrink-0 rounded-full bg-[#76B900]" aria-hidden="true"></span>
+                  <p class="text-[12.5px] font-semibold leading-tight text-[#111827]">{{ scalePanel.floatingTile.label }}</p>
+                </div>
+                <span class="mb-3 inline-flex items-center rounded-full bg-[#76B900]/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[#4d7a00]">
+                  {{ scalePanel.floatingTile.badge }}
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  {% for tag in scalePanel.floatingTile.tags %}
+                    <span class="inline-flex items-center rounded-full border border-navy-100 bg-navy-50 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wide text-[#6B7280]">
+                      {{ tag }}
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- /right column wrapper -->
+
+    </div>
+
+  </div>
+</section>
+
+{# =====================================================
+   PROOF / TESTIMONIALS — Website V2
+   Linear-style two-card quote pattern (per reference screenshot):
+   white quote cards floating on the page's existing flat
+   bg-warm-off-white (§10 — same background already reused across
+   every section on this page), one wider card with a faint
+   decorative radial pattern in the brand accent, one plain white.
+    Bottom strip carries a real stat line + link into /customer-stories/.
+
+   Companies are two of the confirmed real clients (CONTENT_SUMMARY.md
+   §4). Quote copy and role-based attribution are illustrative
+   placeholder content pending real client-supplied quotes — no
+   invented personal name or headshot, just an initial-in-circle
+   mark (like Linear's own abstract logo mark) + role + company.
+   Swap in real quotes before this page ships to stage/production.
+   ===================================================== #}
+{% set testimonials = [
+  {
+    company: "Admizz",
+    role: "Operations Lead, Admizz",
+    quote: "De routering van reacties die vroeger in iemands inbox bleef liggen, loopt nu vanzelf — live in productie."
+  },
+  {
+    company: "CoreCloud365",
+    role: "Oprichter, CoreCloud365",
+    quote: "We wilden geen pilot, we wilden iets dat we aan ons team konden overdragen en daarna konden vergeten."
+  }
 ] %}
-{% include "partials/homepage/faq.njk" %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="testimonials-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="testimonials-heading" class="sr-only">Wat zeggen onze klanten over het werken met Zunkiree Labs?</h2>
+    <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" data-reveal>
+      Klantresultaten
+    </span>
 
-{% set relatedHeading = "Gerelateerde bronnen" %}
-{% set relatedLinks = [
-  {"label": "AI-ontwikkeling", "url": "https://zunkireelabs.com/services/"},
-  {"label": "Cloudoplossingen", "url": "https://zunkireelabs.com/products/"},
-  {"label": "Data-engineering", "url": "https://zunkireelabs.com/resources/state-of-ai-nepal-2026/"},
-  {"label": "Technisch consult", "url": "https://zunkireelabs.com/about/"},
-  {"label": "Maatwerksoftware", "url": "https://zunkireelabs.com/resources/zenly-case-study/"}
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-[1.4fr_1fr]" data-reveal-stagger>
+      <!-- Wider card — white with faint decorative pattern in the brand accent green (#76B900) -->
+      <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-[#76B900]/30">
+        <!-- Faint card-info-01 pattern -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-[0.35] pointer-events-none" style="background-image: url('/assets/images/card-info-01.avif');"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, rgba(118, 185, 0, 0.05) 0%, transparent 60%);"></div>
+        <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
+          "{{ testimonials[0].quote }}"
+        </blockquote>
+        <footer class="relative z-10 mt-8 flex items-center gap-3">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 font-mono text-[12px] font-semibold uppercase text-[#6B7280]">
+            {{ testimonials[0].company[0] }}
+          </span>
+          <cite class="text-[13px] font-normal not-italic leading-tight text-[#6B7280]">{{ testimonials[0].role }}</cite>
+        </footer>
+      </div>
+
+      <!-- Narrower card — white with faint decorative pattern in sky blue (#3D8FD4) -->
+      <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-sky-300/30">
+        <!-- Faint card-info-03 pattern -->
+        <div class="absolute inset-0 bg-cover bg-bottom opacity-[0.30] pointer-events-none" style="background-image: url('/assets/images/card-info-03.avif'); filter: invert(1);"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 20% 80%, rgba(61, 143, 212, 0.15) 0%, transparent 75%);"></div>
+        <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
+          "{{ testimonials[1].quote }}"
+        </blockquote>
+        <footer class="relative z-10 mt-8 flex items-center gap-3">
+          <span class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 font-mono text-[12px] font-semibold uppercase text-[#6B7280]">
+            {{ testimonials[1].company[0] }}
+          </span>
+          <cite class="text-[13px] font-normal not-italic leading-tight text-[#6B7280]">{{ testimonials[1].role }}</cite>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Bottom stat + link strip -->
+    <div class="mt-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center" data-reveal>
+      <p class="text-[14px] text-[#6B7280]">
+        Live in productie bij <span class="font-semibold text-[#111827]">8</span> klanten.
+      </p>
+      <a
+        href="/customer-stories/"
+        class="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:text-navy-600"
+      >
+        Klantverhalen
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   AI INSIGHTS — Website V2
+   Direct copy of Kore.ai's "AI-inzichten" blog teaser: heading +
+   "Alles bekijken" button, one large featured post left, a short list
+   of smaller posts right. Pulled from the real `collections.blog`
+   posts already published under src/blog/ — no placeholder content.
+   ===================================================== #}
+{% set sortedPosts = collections.articles | reverse %}
+{# Flat two-tone cover art for posts without a real featuredImage — MASTER_DESIGN_SPEC.md
+   §25 explicitly allows "flat gradient art (matching §10's accent gradient palette) instead
+   of a photo when no real photo exists" for article thumbnails. No blur/ambient bloom (both
+   retired sitewide 2026-07-26) — just a flat navy/sky diagonal split plus the one sanctioned
+   #76B900 accent, at low opacity as a ring+dot motif. #}
+{% set coverVariants = [
+  { base: "#1b3139", wash: "#0d2d4a" },
+  { base: "#0d2d4a", wash: "#1b3139" },
+  { base: "#1b3139", wash: "#1d5c94" }
 ] %}
-{% include "partials/homepage/related-resources.njk" %}
+{% macro coverArt(variant, cls) %}
+<svg class="{{ cls }}" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="400" height="300" fill="{{ variant.base }}" />
+  <polygon points="400,0 400,300 160,300" fill="{{ variant.wash }}" />
+  <circle cx="320" cy="70" r="26" fill="none" stroke="#76B900" stroke-width="3" opacity="0.55" />
+  <circle cx="320" cy="70" r="6" fill="#76B900" opacity="0.85" />
+</svg>
+{% endmacro %}
+{# Bento card: short title overlaid centered on the image (ElevenLabs "Latest updates"
+   pattern), full date + title below like before. Reused for all 5 AI-inzichten cards
+   (now laid out as a 3-up row + 2-up row, per the widget-grid layout reference). #}
+{% macro bentoCard(post, variant, cls, titleCls) %}
+<a href="{{ post.url }}" class="group flex flex-col {{ cls }}">
+  <div class="relative min-h-0 flex-1 overflow-hidden rounded-2xl bg-navy-100">
+    {% if post.data.featuredImage and (post.data.featuredImage | fileExists) %}
+      <img src="{{ post.data.featuredImage }}" alt="{{ post.data.featuredImageAlt or '' }}" class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+    {% else %}
+      {{ coverArt(variant, "absolute inset-0 h-full w-full transition-transform duration-300 group-hover:scale-105") }}
+    {% endif %}
+    <div class="absolute inset-0 flex items-center justify-center bg-black/10 p-6">
+      <h3 class="{{ titleCls }} text-center font-normal leading-[1.3] text-white drop-shadow-md">
+        {{ post.data.shortLabel or (post.data.title | shortLabel) }}
+      </h3>
+    </div>
+  </div>
+  <div class="shrink-0 pt-3">
+    <span class="mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+      {{ post.data.date | date("%B %d, %Y") }}
+    </span>
+    <h3 class="{{ titleCls }} line-clamp-2 min-h-[2.6em] font-normal leading-[1.3] text-[#111827] transition-colors group-hover:text-navy-600">
+      {{ post.data.title }}
+    </h3>
+  </div>
+</a>
+{% endmacro %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="insights-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 flex flex-wrap items-end justify-between gap-4 md:mb-12" data-reveal>
+      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+          Bronnen
+        </span>
+        <h2 id="insights-heading" class="text-[28px] font-light leading-[1.2] text-[#111827] sm:text-[30px] lg:text-[32px]">
+          AI-inzichten
+        </h2>
+      </div>
+      <a
+        href="/blog/"
+        class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-3 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50 sm:py-2.5"
+      >
+        Alles bekijken
+        <span class="h-1 w-1 flex-shrink-0 rounded-full bg-navy-400" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    {% if sortedPosts.length %}
+      {# Bento: single 3-up row only (bottom 2-up row removed per approval) #}
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-5" data-reveal-stagger>
+        {{ bentoCard(sortedPosts[0], coverVariants[0], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+        {{ bentoCard(sortedPosts[1], coverVariants[1], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+        {{ bentoCard(sortedPosts[2], coverVariants[2], "sm:col-span-2 min-h-[20rem] sm:min-h-[22rem]", "text-[18px] sm:text-[19px]") }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{# =====================================================
+   FAQ — Website V2
+   COMPONENT_LIBRARY.md §3.10 FAQ, accordion-only (the paired CTA
+   panel half of §3.10's "Accordion + CTA Banner" composition is
+   skipped here — the Closing CTA Banner section directly below
+   already fills that role; stacking two CTA panels back to back
+   would be redundant). Reuses the Accordion interaction pattern from
+   `cta-faq.njk` (Alpine activeIndex/expandAll) but is a fresh,
+   v2-token-compliant build rather than including that partial — it's
+   flagged in COMPONENT_LIBRARY.md §2.6 as DOM-id-coupled to
+   `main.js`'s `initFaqGreenGlow()` and still using retired v1 tokens
+   (`zunkiree-600`, dark gradient-bloom card) that MASTER_DESIGN_SPEC.md's
+   2026-07-26 update retired sitewide. Decoupling that partial is a
+   separate architectural fix, out of scope here.
+
+   Not in PAGE_BLUEPRINTS.md §1's homepage section list, but fills a
+   real, separately-confirmed gap: CLAUDE.md's AEO requirement ("FAQ
+   sections with natural-language questions") and the full-page audit
+   that found zero FAQ content anywhere on homepage-v2.
+
+   Content sourced from CONTENT_SUMMARY.md and company-industry-
+   context.md only — no fabricated facts. Q1 and Q3 deliberately
+   correct the stale "six industries" framing still live elsewhere on
+   the site (aboutFaq.json, contact.njk, agentic-as-a-service.njk —
+   flagged as a conflict in CONTENT_SUMMARY.md's Summary of Conflicts
+   #1) with the accurate four-vertical answer. No pricing question
+   included — no public pricing model is confirmed in any doc.
+   ===================================================== #}
+{% set homepageFaq = [
+  {
+    question: "Voor welke branches bouwt ZunkireeLabs?",
+    answer: "Vandaag vier kernbranches: Onderwijs, Bureaus, Gezondheidszorg en Vastgoed — elk draait op hetzelfde gedeelde platform. Onderwijs en Bureaus zijn nu live in productie; Gezondheidszorg en Vastgoed zijn volgens dezelfde standaard gebouwd."
+  },
+  {
+    question: "Is dit een demo, of draait het echt ergens?",
+    answer: "Het draait. Admizz gebruikt dit platform vandaag voor zijn onderwijs-CRM, en ZunkireeLabs draait de eigen bureauactiviteiten — dealpipeline, offertes, oplevering, tijdregistratie — op exact dezelfde infrastructuur. Niets van wat je hier ziet is een concept."
+  },
+  {
+    question: "Wat wordt over branches heen gedeeld en wat wordt per klant op maat gebouwd?",
+    answer: "De platformlaag — multi-tenantarchitectuur en Orca-orkestratie — wordt gedeeld. Daarbovenop zit per branche een kant-en-klare toepassing plus accelerators voor een snelle start, zodat een nieuwe klant niet bij nul begint."
+  },
+  {
+    question: "Moeten we onze bestaande systemen vervangen om dit te gebruiken?",
+    answer: "Nee — het platform is gebouwd om op je eigen infrastructuur te draaien en te integreren met wat je al gebruikt, niet om het volledig te vervangen."
+  }
+] %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+  <div class="mx-auto max-w-content">
+    <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        Support
+      </span>
+      <h2 id="faq-heading" class="text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Veelgestelde vragen
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" data-reveal x-data="{ activeIndex: null }">
+      <div class="divide-y divide-navy-100" data-reveal-stagger>
+        {% for item in homepageFaq %}
+          <div class="py-3">
+            <button
+              @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
+              class="flex w-full items-center justify-between gap-4 py-2 text-left group"
+              :aria-expanded="activeIndex === {{ loop.index }} ? 'true' : 'false'"
+              aria-controls="faq-answer-{{ loop.index }}"
+            >
+              <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">
+                {{ item.question }}
+              </span>
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === {{ loop.index }} ? 'rotate-45' : ''">
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              id="faq-answer-{{ loop.index }}"
+              x-show="activeIndex === {{ loop.index }}"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="overflow-hidden"
+            >
+              <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ item.answer }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in homepageFaq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>
+
+{# =====================================================
+   CLOSING CTA BANNER — Website V2
+   COMPONENT_LIBRARY.md §2.6 CTA Banner, `glass` variant (current
+   signature motif, MASTER_DESIGN_SPEC.md §2/§3 technique 2) — the
+   "Dual closing CTA" slot in PAGE_BLUEPRINTS.md §1 (section 8),
+   between the AI-inzichten teaser and the footer. Composition per
+   §2.6: Headline + one-line support copy + Button Primary + Button
+   Secondary (a mandatory hard+soft pair, not a single CTA — this
+   supersedes an earlier draft that sketched kore.ai's two-stage
+   back-to-back banner pattern; the project's own component spec
+   calls for one banner with a dual-CTA pair instead).
+
+   Both CTAs route to /contact/ — no dedicated platform page exists
+   yet (CONTENT_SUMMARY.md §7), matching how the Industry Showcase
+   section above already handles the same not-yet-built-page problem.
+   Copy avoids "Request a Demo" phrasing per CONTENT_SUMMARY.md §12's
+   outcome-oriented CTA guidance for industry-first messaging.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
+  <div class="mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      data-reveal
+    >
+      <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10) -->
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        aria-hidden="true"
+        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
+      ></div>
+
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">
+        Aan de slag
+      </span>
+      <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-light leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Wil je het zien draaien voor jouw branche?
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
+        Onderwijs, Bureaus, Gezondheidszorg, Vastgoed — praat met ons of ontdek het gedeelde platform eronder.
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a
+          href="/nl/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Praat met ons team
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/nl/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+        >
+          Ontdek het platform
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}

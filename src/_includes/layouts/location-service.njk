@@ -148,6 +148,18 @@ bodyClass: "v2-inter"
 </section>
 
 {# =====================================================
+   IN SHORT — answer-first summary for readers and AI assistants
+   ===================================================== #}
+{% if serviceContent.answer %}
+<section class="px-4 pb-4 sm:px-6 lg:px-8" aria-label="Summary">
+  <div class="mx-auto max-w-3xl rounded-2xl border border-navy-100/60 bg-white p-6 shadow-subtle" data-reveal>
+    <span class="mb-3 block font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]">In short</span>
+    <p class="text-[16px] leading-relaxed text-[#374151]">{{ serviceContent.answer }}</p>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
    SERVICES GRID
    ===================================================== #}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="services-grid-heading">
@@ -299,6 +311,73 @@ bodyClass: "v2-inter"
           </svg>
         </span>
         <p class="text-[15px] leading-relaxed text-[#374151]">{{ highlight }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# =====================================================
+   ABOUT THE CITY + CITY FAQs
+   Per-city copy from locations.js (intro, content, faqs) so the same service
+   page is not identical across cities. Shown only where the page has no
+   service-specific FAQ of its own, to avoid two FAQPage blocks.
+   ===================================================== #}
+{% if location.intro %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="about-city-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-3xl" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+        {{ location.name }}, {{ location.country }}
+      </span>
+      <h2 id="about-city-heading" class="mb-4 text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">
+        About Zunkiree Labs in {{ location.name }}
+      </h2>
+      <p class="text-[16px] leading-relaxed text-[#374151]">{{ location.intro }}</p>
+      {% if location.content %}
+      <p class="mt-4 whitespace-pre-line text-[16px] leading-relaxed text-[#374151]">{{ location.content }}</p>
+      {% endif %}
+      {% if location.sources and location.sources.length > 0 %}
+      <p class="mt-4 text-[13px] text-[#6B7280]">Sources: {% for src in location.sources %}<a href="{{ src.url }}" class="underline hover:text-[#374151]" target="_blank" rel="noopener noreferrer">{{ src.label }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if location.faqs and location.faqs.length > 0 and not (serviceContent.faqs and serviceContent.faqs.length > 0) %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8" aria-labelledby="city-faq-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="city-faq-heading" class="mb-8 text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">
+      Questions About Working With Us in {{ location.name }}
+    </h2>
+
+    <div class="max-w-3xl" x-data="{ activeIndex: null }">
+      {% for faq in location.faqs %}
+      <div class="border-b border-navy-100">
+        <button
+          @click="activeIndex = activeIndex === {{ loop.index }} ? null : {{ loop.index }}"
+          class="flex w-full items-center justify-between py-5 text-left"
+        >
+          <span class="pr-4 font-medium text-[#111827]">{{ faq.question }}</span>
+          <svg
+            class="h-5 w-5 flex-shrink-0 text-navy-400 transition-transform"
+            :class="{ 'rotate-180': activeIndex === {{ loop.index }} }"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div
+          x-show="activeIndex === {{ loop.index }}"
+          x-transition
+          class="pb-5 text-[14px] leading-relaxed text-navy-600"
+        >
+          {{ faq.answer }}
+        </div>
       </div>
       {% endfor %}
     </div>

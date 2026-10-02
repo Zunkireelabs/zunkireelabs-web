@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: nl
+ogLocale: nl_NL
+title: "Webontwikkeling: High-performance websites & apps | Zunkiree Labs"
+description: "High-performance websites voor snelheid, SEO en conversie. Laadtijden onder een seconde, PageSpeed-scores van 95+ en een architectuur die meegroeit."
+permalink: /nl/services/web-development/
+serviceId: web-development
+hreflangAlternates:
+  - lang: en
+    url: /services/web-development/
+  - lang: de
+    url: /de/services/web-development/
+  - lang: de-CH
+    url: /de-ch/services/web-development/
+  - lang: nl
+    url: /nl/services/web-development/
+  - lang: x-default
+    url: /services/web-development/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["nl"].details["web-development"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

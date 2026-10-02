@@ -1,0 +1,306 @@
+{
+  "id": "custom-software",
+  "relatedCaseStudies": [
+    {
+      "slug": "khushbu-nirman-case-study",
+      "title": "Khushbu Nirman Sewa",
+      "stat": "40% minder vertragingen"
+    }
+  ],
+  "title": "Maatwerksoftware",
+  "category": "Ontwikkeling",
+  "tagline": "Maatwerksoftware waar uw team naar grijpt. In plaats van omheen te werken.",
+  "description": "Bedrijfsapplicaties op maat van uw workflows. Wij bouwen interne tools, bedrijfssystemen en operationele software die het spreadsheetchaos vervangt door speciaal gebouwde oplossingen.",
+  "heroImage": "/assets/images/custom-software-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Nieuwe workflow aanmaken",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Legacy-data importeren",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Rapport genereren",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Melding versturen",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Goedkeuring verwerken",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Synchroniseren met ERP",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Exporteren naar dashboard",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Software die bij uw bedrijf past, niet andersom",
+    "content": "Standaardsoftware dwingt u uw processen aan te passen. Maatwerksoftware past zich aan u aan. Wij bouwen applicaties die uw specifieke workflows vastleggen, aansluiten op uw bestaande systemen en meegroeien met uw bedrijf. Het resultaat: teams die sneller werken, minder fouten maken en minder tijd kwijt zijn aan het vechten met hun tools."
+  },
+  "stats": [
+    {
+      "value": "60%",
+      "label": "Tijdwinst",
+      "description": "op kernworkflows"
+    },
+    {
+      "value": "85%",
+      "label": "Adoptiegraad",
+      "description": "binnen 30 dagen"
+    },
+    {
+      "value": "3x",
+      "label": "Productiviteitswinst",
+      "description": "ten opzichte van spreadsheets"
+    },
+    {
+      "value": "12 mnd",
+      "label": "Gem. terugverdientijd",
+      "description": "op investering"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Vervang spreadsheetchaos door echte systemen",
+      "description": "Dat cruciale proces dat draait op een gedeelde spreadsheet? Wij maken er een echte applicatie van met goede toegangscontrole, audit trails, validatie en integraties. Geen versieconflicten of formulefouten meer."
+    },
+    {
+      "icon": "integrate",
+      "title": "Koppel uw bestaande tools en data",
+      "description": "Maatwerksoftware die integreert met uw CRM, ERP, boekhoudsysteem en operationele databases. Eén bron van waarheid, zonder dat teams van platform hoeven te wisselen of data opnieuw hoeven in te voeren."
+    },
+    {
+      "icon": "speed",
+      "title": "Ontwikkel mee met uw bedrijf",
+      "description": "In tegenstelling tot rigide standaardsoftware kunnen maatwerksystemen zich aanpassen. Nieuwe regelgeving, nieuwe productlijnen, nieuwe workflows: wij bouwen software die met u meeverandert, in plaats van u tegen te houden."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "internal-tools",
+      "title": "Interne tools",
+      "headline": "Tools voor interne operatie",
+      "description": "Speciaal gebouwde tools voor operationele teams: orderbeheer, voorraadtracking, planning en resourcetoewijzing. Vervang handmatige processen door geautomatiseerde workflows.",
+      "features": [
+        "Workflowautomatisering",
+        "Rolgebaseerde toegang",
+        "Audit logging",
+        "Mobiele toegang"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-management",
+      "title": "Databeheer",
+      "headline": "Databeheersystemen",
+      "description": "Maatwerkdatabases en beheerinterfaces voor complexe data. Master data management, portalen voor data-invoer en kwaliteitscontrolesystemen, afgestemd op uw domein.",
+      "features": [
+        "Eigen datamodellen",
+        "Validatieregels",
+        "Import/export",
+        "Zoeken en filteren"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Workflowautomatisering",
+      "headline": "Automatisering van bedrijfsprocessen",
+      "description": "Automatiseer goedkeuringsprocessen, documentroutering en processen met meerdere stappen. Regelgebaseerde automatisering met afhandeling van uitzonderingen en human-in-the-loop wanneer nodig.",
+      "features": [
+        "Goedkeuringsworkflows",
+        "Documentroutering",
+        "Escalatieregels",
+        "Statustracking"
+      ],
+      "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "reporting-systems",
+      "title": "Rapportage",
+      "headline": "Maatwerk rapportagesystemen",
+      "description": "Rapporten en dashboards gebouwd voor uw specifieke metrics. Geautomatiseerde generatie, geplande verspreiding en interactieve verkenning van uw bedrijfsdata.",
+      "features": [
+        "Eigen KPI's",
+        "Geplande rapporten",
+        "Interactieve dashboards",
+        "Exportformaten"
+      ],
+      "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "legacy-modernization",
+      "title": "Modernisering",
+      "headline": "Modernisering van legacy-systemen",
+      "description": "Migreer van verouderde systemen zonder de bedrijfsvoering te verstoren. Stapsgewijze modernisering die cruciale functionaliteit behoudt en moderne mogelijkheden toevoegt.",
+      "features": [
+        "Gefaseerde migratie",
+        "Databehoud",
+        "API-integratie",
+        "Gebruikerstraining"
+      ],
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Ontdekken",
+      "description": "We begrijpen uw huidige workflows, knelpunten en doelen. We brengen het proces in kaart zoals het nu is en bepalen waar software de meeste waarde toevoegt.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "Procesmappen",
+        "Requirementsdocument",
+        "Scopedefinitie"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerpen",
+      "description": "We ontwerpen de gebruikerservaring en de systeemarchitectuur. Sleutelschermen en workflows worden als prototype gevalideerd voordat we bouwen.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "UX-ontwerpen",
+        "Architectuurplan",
+        "Interactief prototype"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouwen",
+      "description": "Iteratieve ontwikkeling met regelmatige demo's en feedbackrondes. Werkende software elke 2 weken, niet pas aan het einde van een lang project.",
+      "duration": "8-16 weken",
+      "deliverables": [
+        "Applicatie in productie",
+        "Documentatie",
+        "Trainingsmateriaal"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Support",
+      "description": "Support, onderhoud en doorontwikkeling na de livegang. Uw software blijft zich ontwikkelen op basis van gebruikersfeedback en veranderende bedrijfsbehoeften.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Bugfixes",
+        "Feature-updates",
+        "Performancemonitoring"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "React",
+      "category": "Frontend",
+      "description": "UI-framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "description": "Serverruntime",
+      "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "description": "Gegevensopslag",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Taal",
+      "description": "Typeveiligheid",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "Full stack",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Prisma",
+      "category": "ORM",
+      "description": "Datalaag",
+      "logo": "https://cdn.worldvectorlogo.com/logos/prisma-2.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastructuur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps",
+      "description": "Containers",
+      "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wanneer moeten we maatwerk bouwen en wanneer standaardsoftware kopen?",
+      "answer": "Bouw maatwerk wanneer uw proces een concurrentievoordeel is, wanneer standaardtools aanzienlijke omwegen vereisen of wanneer de integratie-eisen complex zijn. Koop wanneer er een sterke marktfit is en de behoefte aan aanpassing minimaal. Wij helpen klanten deze keuze eerlijk te maken: soms raden we maatwerk juist af."
+    },
+    {
+      "question": "Hoe zorgt u ervoor dat de software door teams wordt gebruikt?",
+      "answer": "Wij betrekken eindgebruikers vanaf dag één, niet alleen managers. Regelmatige demo's, feedbacksessies en iteratieve verfijning op basis van daadwerkelijk gebruik. Software die weerspiegelt hoe mensen echt werken, wordt gebruikt; software die in isolatie is ontworpen, wordt genegeerd."
+    },
+    {
+      "question": "Wat gebeurt er als onze requirements halverwege het project veranderen?",
+      "answer": "Wij verwachten dat requirements zich ontwikkelen. Daarom werken we iteratief. Elke cyclus van 2 weken levert werkende software op en de kans om de koers bij te sturen. Grote scopewijzigingen vragen een gesprek over afwegingen, maar het proces is ontworpen voor flexibiliteit, niet voor rigiditeit."
+    },
+    {
+      "question": "Hoe gaat u om met integratie met legacy-systemen?",
+      "answer": "Wij bouwen integratielagen die via API's, databaseverbindingen of bestandsuitwisseling aansluiten op bestaande systemen. Legacy-systemen blijven vaak langer in gebruik dan verwacht. Onze aanpak zorgt ervoor dat nieuwe software naast de oude werkt, zonder risicovolle volledige migraties."
+    },
+    {
+      "question": "Wat zijn de total cost of ownership van maatwerksoftware?",
+      "answer": "De initiële bouw duurt doorgaans 3-6 maanden ontwikkeling. Doorlopende kosten omvatten hosting (vaak $500-2000/maand), onderhoud (jaarlijks 10-20% van de bouwkosten) en uitbreidingen naar behoefte. Wij leveren gedetailleerde TCO-prognoses vóór de start van het project, zodat u ze kunt vergelijken met alternatieven."
+    }
+  ],
+  "relatedServices": [
+    "saas-development",
+    "web-development",
+    "ai-development"
+  ],
+  "cta": {
+    "headline": "Klaar om spreadsheets te vervangen door echte software?",
+    "description": "Vertel ons over uw workflowuitdagingen. Wij helpen u beoordelen of maatwerksoftware zinvol is en bepalen de scope van een oplossing.",
+    "primaryButton": {
+      "text": "Bespreek uw project",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Casestudy's bekijken",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "cms-group",
+    "khushbu-nirman-sewa",
+    "corecloud365"
+  ],
+  "heroAlt": "Heroafbeelding voor de sectie maatwerksoftware",
+  "metaTitle": "Maatwerksoftware: bedrijfsapplicaties op maat | Zunkiree Labs",
+  "metaDescription": "Bedrijfsapplicaties op maat van uw workflows. Weg met het spreadsheetchaos dankzij speciaal gebouwde systemen. Interne tools die uw team echt gebruikt."
+}

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "cross-env ELEVENTY_ENV=development eleventy --serve --port=8082",
     "build": "cross-env ELEVENTY_ENV=production eleventy",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "test:i18n": "node --test scripts/i18n.test.mjs"
   },
   "keywords": [
     "zunkiree",

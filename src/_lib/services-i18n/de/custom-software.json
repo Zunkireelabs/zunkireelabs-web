@@ -1,0 +1,306 @@
+{
+  "id": "custom-software",
+  "relatedCaseStudies": [
+    {
+      "slug": "khushbu-nirman-case-study",
+      "title": "Khushbu Nirman Sewa",
+      "stat": "40% weniger Verzögerungen"
+    }
+  ],
+  "title": "Individualsoftware",
+  "category": "Entwicklung",
+  "tagline": "Individualsoftware, nach der Ihr Team greift. Und die es nicht umgehen muss.",
+  "description": "Unternehmensanwendungen, maßgeschneidert auf Ihre Workflows. Wir entwickeln interne Tools, Business-Systeme und operative Software, die das Tabellenchaos durch gezielt entwickelte Lösungen ersetzt.",
+  "heroImage": "/assets/images/custom-software-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Neuen Workflow erstellen",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Altdaten importieren",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Bericht erstellen",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Benachrichtigung senden",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Freigabe verarbeiten",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Mit ERP synchronisieren",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "In Dashboard exportieren",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Software, die zu Ihrem Unternehmen passt, nicht umgekehrt",
+    "content": "Standardsoftware zwingt Sie, Ihre Prozesse anzupassen. Individualsoftware passt sich Ihnen an. Wir entwickeln Anwendungen, die Ihre konkreten Workflows abbilden, sich in Ihre bestehenden Systeme integrieren und mit Ihrem Unternehmen mitwachsen. Das Ergebnis: Teams, die schneller arbeiten, weniger Fehler machen und weniger Zeit im Kampf mit ihren Werkzeugen verlieren."
+  },
+  "stats": [
+    {
+      "value": "60%",
+      "label": "Zeitersparnis",
+      "description": "bei Kernworkflows"
+    },
+    {
+      "value": "85%",
+      "label": "Akzeptanzrate",
+      "description": "innerhalb von 30 Tagen"
+    },
+    {
+      "value": "3x",
+      "label": "Produktivitätsgewinn",
+      "description": "gegenüber Tabellenkalkulationen"
+    },
+    {
+      "value": "12 Mon.",
+      "label": "Ø Amortisation",
+      "description": "der Investition"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Ersetzen Sie das Tabellenchaos durch richtige Systeme",
+      "description": "Dieser kritische Prozess, der auf einer geteilten Tabelle läuft? Wir machen daraus eine echte Anwendung mit sauberer Zugriffskontrolle, Audit-Trails, Validierung und Integrationen. Schluss mit Versionskonflikten und Formelfehlern."
+    },
+    {
+      "icon": "integrate",
+      "title": "Verbinden Sie Ihre vorhandenen Tools und Daten",
+      "description": "Individualsoftware, die sich in Ihr CRM, Ihr ERP, Ihre Buchhaltung und Ihre operativen Datenbanken integriert. Eine zentrale Datenbasis (Single Source of Truth), ohne dass Teams die Plattform wechseln oder Daten erneut erfassen müssen."
+    },
+    {
+      "icon": "speed",
+      "title": "Entwickeln Sie sich mit Ihrem Unternehmen weiter",
+      "description": "Anders als starre Standardsoftware lassen sich individuelle Systeme anpassen. Neue Vorschriften, neue Produktlinien, neue Workflows – wir entwickeln Software, die sich mit Ihnen verändert, statt Sie auszubremsen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "internal-tools",
+      "title": "Interne Tools",
+      "headline": "Tools für interne Abläufe",
+      "description": "Gezielt entwickelte Tools für Operations-Teams: Auftragsverwaltung, Bestandsverfolgung, Terminplanung und Ressourcenzuweisung. Manuelle Prozesse werden durch automatisierte Workflows ersetzt.",
+      "features": [
+        "Workflow-Automatisierung",
+        "Rollenbasierter Zugriff",
+        "Audit-Protokollierung",
+        "Mobiler Zugriff"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-management",
+      "title": "Datenverwaltung",
+      "headline": "Datenverwaltungssysteme",
+      "description": "Individuelle Datenbanken und Verwaltungsoberflächen für komplexe Daten. Stammdatenmanagement, Dateneingabe-Portale und Qualitätskontrollsysteme, zugeschnitten auf Ihre Domäne.",
+      "features": [
+        "Individuelle Datenmodelle",
+        "Validierungsregeln",
+        "Import/Export",
+        "Suchen und Filtern"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Workflow-Automatisierung",
+      "headline": "Automatisierung von Geschäftsprozessen",
+      "description": "Automatisieren Sie Freigabeprozesse, Dokumentenrouting und mehrstufige Abläufe. Regelbasierte Automatisierung mit Ausnahmebehandlung und Human-in-the-Loop, wenn es nötig ist.",
+      "features": [
+        "Freigabe-Workflows",
+        "Dokumentenrouting",
+        "Eskalationsregeln",
+        "Statusverfolgung"
+      ],
+      "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "reporting-systems",
+      "title": "Reporting",
+      "headline": "Individuelle Reporting-Systeme",
+      "description": "Berichte und Dashboards, entwickelt für Ihre spezifischen Kennzahlen. Automatische Erstellung, terminierter Versand und interaktive Auswertung Ihrer Unternehmensdaten.",
+      "features": [
+        "Individuelle KPIs",
+        "Zeitgesteuerte Berichte",
+        "Interaktive Dashboards",
+        "Exportformate"
+      ],
+      "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "legacy-modernization",
+      "title": "Modernisierung",
+      "headline": "Modernisierung von Altsystemen",
+      "description": "Migrieren Sie von veralteten Systemen, ohne den Betrieb zu stören. Eine schrittweise Modernisierung, die kritische Funktionen erhält und moderne Möglichkeiten ergänzt.",
+      "features": [
+        "Phasenweise Migration",
+        "Datenerhalt",
+        "API-Integration",
+        "Schulung der Nutzer"
+      ],
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Wir verstehen Ihre aktuellen Workflows, Schmerzpunkte und Ziele. Wir bilden den Prozess so ab, wie er heute besteht, und identifizieren, wo Software den größten Nutzen stiftet.",
+      "duration": "1-2 Wochen",
+      "deliverables": [
+        "Prozessdiagramme",
+        "Anforderungsdokument",
+        "Scope-Definition"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Wir gestalten die User Experience und die Systemarchitektur. Zentrale Screens und Workflows werden vor der Umsetzung als Prototyp validiert.",
+      "duration": "2-3 Wochen",
+      "deliverables": [
+        "UX-Designs",
+        "Architekturplan",
+        "Interaktiver Prototyp"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Umsetzung",
+      "description": "Iterative Entwicklung mit regelmäßigen Demos und Feedbackzyklen. Lauffähige Software alle 2 Wochen, nicht erst am Ende eines langen Projekts.",
+      "duration": "8-16 Wochen",
+      "deliverables": [
+        "Produktive Anwendung",
+        "Dokumentation",
+        "Schulungsunterlagen"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Support",
+      "description": "Support, Wartung und Weiterentwicklung nach dem Launch. Ihre Software entwickelt sich auf Basis von Nutzerfeedback und veränderten Geschäftsanforderungen weiter.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Fehlerbehebungen",
+        "Feature-Updates",
+        "Performance-Monitoring"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "React",
+      "category": "Frontend",
+      "description": "UI-Framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "description": "Server-Laufzeitumgebung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Datenbank",
+      "description": "Datenspeicherung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Sprache",
+      "description": "Typsicherheit",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "Full Stack",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Prisma",
+      "category": "ORM",
+      "description": "Datenschicht",
+      "logo": "https://cdn.worldvectorlogo.com/logos/prisma-2.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastruktur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps",
+      "description": "Container",
+      "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wann sollten wir individuell entwickeln und wann Standardsoftware kaufen?",
+      "answer": "Entwickeln Sie individuell, wenn Ihr Prozess ein Wettbewerbsvorteil ist, wenn Standardtools erhebliche Umgehungslösungen erfordern oder wenn die Integrationsanforderungen komplex sind. Kaufen Sie, wenn es einen starken Marktfit gibt und kaum Anpassungsbedarf besteht. Wir helfen Kunden, diese Entscheidung ehrlich zu treffen – manchmal raten wir von einer Individualentwicklung ab."
+    },
+    {
+      "question": "Wie stellen Sie sicher, dass die Software von den Teams angenommen wird?",
+      "answer": "Wir binden die Endanwender vom ersten Tag an ein – nicht nur das Management. Regelmäßige Demos, Feedbackrunden und iterative Verfeinerung auf Basis der tatsächlichen Nutzung. Software, die abbildet, wie Menschen wirklich arbeiten, wird genutzt; Software, die im luftleeren Raum entsteht, wird ignoriert."
+    },
+    {
+      "question": "Was passiert, wenn sich unsere Anforderungen mitten im Projekt ändern?",
+      "answer": "Wir gehen davon aus, dass sich Anforderungen weiterentwickeln – deshalb arbeiten wir iterativ. Jeder 2-Wochen-Zyklus liefert lauffähige Software und die Gelegenheit, die Richtung anzupassen. Größere Änderungen am Umfang erfordern ein Gespräch über Abwägungen, aber der Prozess ist auf Flexibilität ausgelegt, nicht auf Starrheit."
+    },
+    {
+      "question": "Wie gehen Sie mit der Integration von Altsystemen um?",
+      "answer": "Wir bauen Integrationsschichten, die über APIs, Datenbankverbindungen oder Dateiaustausch an bestehende Systeme anbinden. Altsysteme überdauern oft ihre erwartete Lebensdauer – unser Ansatz sorgt dafür, dass neue Software neben der alten läuft, ohne riskante Komplettmigrationen zu erfordern."
+    },
+    {
+      "question": "Wie hoch sind die Gesamtbetriebskosten (TCO) von Individualsoftware?",
+      "answer": "Die Erstentwicklung dauert in der Regel 3-6 Monate. Laufende Kosten umfassen Hosting (oft $500-2000/Monat), Wartung (jährlich 10-20% der Entwicklungskosten) und Erweiterungen nach Bedarf. Vor Projektbeginn erstellen wir detaillierte TCO-Prognosen, damit Sie sie mit Alternativen vergleichen können."
+    }
+  ],
+  "relatedServices": [
+    "saas-development",
+    "web-development",
+    "ai-development"
+  ],
+  "cta": {
+    "headline": "Bereit, Tabellen durch echte Software zu ersetzen?",
+    "description": "Erzählen Sie uns von Ihren Workflow-Herausforderungen. Wir helfen Ihnen zu beurteilen, ob Individualsoftware sinnvoll ist, und grenzen eine Lösung ein.",
+    "primaryButton": {
+      "text": "Projekt besprechen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Fallstudien ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "cms-group",
+    "khushbu-nirman-sewa",
+    "corecloud365"
+  ],
+  "heroAlt": "Titelbild für den Bereich Individualsoftware",
+  "metaTitle": "Individuelle Softwareentwicklung: Unternehmensanwendungen | Zunkiree Labs",
+  "metaDescription": "Unternehmensanwendungen, maßgeschneidert auf Ihre Workflows. Schluss mit dem Tabellenchaos. Interne Tools, die Ihr Team wirklich nutzt."
+}

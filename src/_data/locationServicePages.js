@@ -22,6 +22,7 @@ for (const location of locations) {
       serviceName: service.title,
       isHeadquarters: location.isHeadquarters,
       hasUniqueContent: hasUniqueContent,
+      hasServiceFaqs: !!(serviceContent?.faqs && serviceContent.faqs.length),
       canonicalUrl: canonicalUrl,
       title: serviceContent?.title || `${service.title} in ${location.name} | Zunkiree Labs`,
       description: serviceContent?.description || `${service.description} Professional ${service.title.toLowerCase()} services in ${location.name}, ${location.country}.`,

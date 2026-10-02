@@ -1,0 +1,298 @@
+{
+  "id": "app-development",
+  "title": "App-ontwikkeling",
+  "category": "Ontwikkeling",
+  "tagline": "Mobiele app-ontwikkeling voor iOS en Android. Eén team, geen concessies.",
+  "description": "Mobiele applicaties voor iOS en Android die native aanvoelen en soepel presteren. Cross-platform ontwikkeling wanneer dat past, native wanneer dat niet zo is: de juiste aanpak voor uw product en gebruikers.",
+  "heroImage": "/assets/images/services-hero-bg.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Bouwen voor iOS",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Bouwen voor Android",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Offline data synchroniseren",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Pushmelding versturen",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Toegang tot camera",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Gebruiker authenticeren",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Indienen bij de App Store",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Apps die werken in de praktijk. Niet alleen in de demo.",
+    "content": "Wij bouwen mobiele apps die werken in de praktijk: bij wisselende verbindingen, op uiteenlopende apparaten en voor ongeduldige gebruikers. Onze apps voelen native aan omdat we platformconventies respecteren, en presteren soepel omdat we onophoudelijk optimaliseren. iOS en Android, opgeleverd vanuit één codebase door één team, zonder de gebruikelijke concessies."
+  },
+  "stats": [
+    {
+      "value": "4.7+",
+      "label": "App Store-beoordeling",
+      "description": "gemiddeld over alle apps"
+    },
+    {
+      "value": "60%",
+      "label": "Snellere ontwikkeling",
+      "description": "t.o.v. aparte native teams"
+    },
+    {
+      "value": "< 200ms",
+      "label": "UI-reactietijd",
+      "description": "doel bij interactie"
+    },
+    {
+      "value": "99%",
+      "label": "Crashvrij-percentage",
+      "description": "standaard in productie"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Tegelijk lanceren op iOS en Android",
+      "description": "Dankzij cross-platform frameworks leveren we vanuit één codebase aan beide platforms, zonder in te leveren op het native gevoel. Snellere time-to-market, lagere ontwikkelkosten en eenvoudiger onderhoud."
+    },
+    {
+      "icon": "workflow",
+      "title": "Offline werken, synchroniseren bij verbinding",
+      "description": "Echte apps moeten werken in liften, in vliegtuigen en in gebieden met slechte dekking. Wij bouwen offline-first wanneer uw toepassing dat vraagt, met naadloze synchronisatie zodra de verbinding terugkeert."
+    },
+    {
+      "icon": "integrate",
+      "title": "Koppelen met uw backend en diensten van derden",
+      "description": "Apps die verbinden met uw bestaande API's, authenticatiesystemen en bedrijfsdata. Pushmeldingen, analytics, betalingsverwerking en diepe integraties met platformfuncties."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "consumer-apps",
+      "title": "Consumentenapps",
+      "headline": "Mobiele consumentenapps",
+      "description": "B2C-apps voor iOS en Android. Fraaie UI, vloeiende animaties en engagementfuncties zoals pushmeldingen en social sharing.",
+      "features": [
+        "Verfijnde UI/UX",
+        "Pushmeldingen",
+        "Sociale functies",
+        "In-app-aankopen"
+      ],
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "enterprise-mobile",
+      "title": "Enterprise",
+      "headline": "Mobiele enterprise-apps",
+      "description": "Interne tools en buitendienst-apps voor teams in grote organisaties. Veilige toegang, offline-mogelijkheden en integratie met bedrijfssystemen.",
+      "features": [
+        "Veilige authenticatie (SSO)",
+        "Offline-ondersteuning",
+        "MDM-integratie",
+        "Toegang tot bedrijfsdata"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "companion-apps",
+      "title": "Companion-apps",
+      "headline": "Companion-apps voor IoT & hardware",
+      "description": "Mobiele apps die koppelen met hardwareapparaten: Bluetooth-connectiviteit, apparaatbeheer en realtime datavisualisatie.",
+      "features": [
+        "Bluetooth/BLE",
+        "Apparaten koppelen",
+        "Realtime data",
+        "Firmware-updates"
+      ],
+      "image": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "marketplace-apps",
+      "title": "Marktplaats",
+      "headline": "Mobiele marktplaats-apps",
+      "description": "Tweezijdige marktplaats-apps met ervaringen voor kopers en verkopers. Zoeken, ontdekken, transacties en berichten.",
+      "features": [
+        "Koper-/verkoper-flows",
+        "Zoeken & filters",
+        "In-app-betalingen",
+        "Berichten"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "on-demand-apps",
+      "title": "On-demand",
+      "headline": "On-demand service-apps",
+      "description": "Realtime service-apps: bezorging, ritdiensten, huisdiensten. Locatietracking, matching-algoritmen en directe communicatie.",
+      "features": [
+        "Realtime tracking",
+        "Matching-algoritmen",
+        "Chat & bellen",
+        "Beoordelingssystemen"
+      ],
+      "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Strategie",
+      "description": "De kernwaardepropositie, doelplatforms en MVP-scope van uw app bepalen. Platformspecifieke aandachtspunten en technische vereisten in kaart brengen.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "App-strategiedocument",
+        "Platformadvies",
+        "MVP-scope"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerpen",
+      "description": "Gebruikersflows, schermen en interacties ontwerpen volgens platformconventies. Belangrijke flows prototypen en valideren vóór de ontwikkeling.",
+      "duration": "2-4 weken",
+      "deliverables": [
+        "UI/UX-ontwerpen",
+        "Interactief prototype",
+        "Designsysteem"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Ontwikkelen",
+      "description": "De app bouwen met regelmatige TestFlight-/bètareleases. Iteratieve ontwikkeling met doorlopende feedback uit tests op echte apparaten.",
+      "duration": "8-16 weken",
+      "deliverables": [
+        "Bèta-app",
+        "API-integratie",
+        "Testsuite"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Lancering",
+      "description": "Indiening bij de App Store/Play Store, ondersteuning van de lanceringsmarketing en monitoring na de lancering. Doorlopende updates en functieontwikkeling.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "App Store-vermelding",
+        "Lanceringsondersteuning",
+        "Update-roadmap"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "React Native",
+      "category": "Framework",
+      "description": "Cross-platform",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+    },
+    {
+      "name": "Swift",
+      "category": "Taal",
+      "description": "Native iOS",
+      "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg"
+    },
+    {
+      "name": "Kotlin",
+      "category": "Taal",
+      "description": "Native Android",
+      "logo": "https://cdn.worldvectorlogo.com/logos/kotlin-2.svg"
+    },
+    {
+      "name": "Expo",
+      "category": "Platform",
+      "description": "Tools voor React Native",
+      "logo": "https://cdn.worldvectorlogo.com/logos/expo-1.svg"
+    },
+    {
+      "name": "Firebase",
+      "category": "Backend",
+      "description": "Mobiele backend",
+      "logo": "https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
+    },
+    {
+      "name": "RevenueCat",
+      "category": "Betalingen",
+      "description": "In-app-aankopen",
+      "logo": "https://cdn.simpleicons.org/revenuecat/F25A5A"
+    },
+    {
+      "name": "OneSignal",
+      "category": "Push",
+      "description": "Meldingen",
+      "logo": "https://cdn.simpleicons.org/onesignal/E54B4D"
+    },
+    {
+      "name": "Sentry",
+      "category": "Monitoring",
+      "description": "Crashrapportage",
+      "logo": "https://cdn.worldvectorlogo.com/logos/sentry-3.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Moeten we native of cross-platform bouwen?",
+      "answer": "Cross-platform (React Native, Flutter) werkt goed voor de meeste apps en verlaagt kosten en time-to-market aanzienlijk. Kies native bij zware graphics/gaming, diepe OS-integratie of maximale prestaties. Wij beoordelen uw specifieke eisen en adviseren eerlijk."
+    },
+    {
+      "question": "Hoe lang duurt goedkeuring in de App Store?",
+      "answer": "Apple beoordeelt apps doorgaans binnen 1-3 dagen. Google Play is sneller, vaak binnen enkele uren. Toch komen afwijzingen voor, meestal vanwege beleidskwesties en niet vanwege bugs. Wij kennen de richtlijnen en bereiden indieningen voor om het risico op afwijzing te minimaliseren."
+    },
+    {
+      "question": "Hoe gaat u om met verschillende schermformaten en apparaten?",
+      "answer": "Wij ontwerpen en testen over het hele apparaatspectrum: van iPhone SE tot iPad Pro, van budget-Androidtelefoons tot topmodellen. Responsive lay-outs passen zich aan schermformaten aan met behoud van bruikbaarheid en prestaties."
+    },
+    {
+      "question": "Hoe zit het met app-onderhoud en updates?",
+      "answer": "Apps hebben doorlopend updates nodig voor wijzigingen in het besturingssysteem (iOS en Android verschijnen jaarlijks), beveiligingspatches en functieverbeteringen. Wij bieden onderhoudspakketten die deze updates dekken, plus bugfixes en kleine verbeteringen."
+    },
+    {
+      "question": "Kunt u een bestaand app-project overnemen?",
+      "answer": "Ja, wij nemen regelmatig apps over van andere teams of interne ontwikkelaars. We beginnen met een code-audit om de kwaliteit te beoordelen en problemen te signaleren, en stellen daarna een stabilisatie- en verbeterplan op. Een eerlijke beoordeling van de bestaande code helpt realistische verwachtingen te scheppen."
+    }
+  ],
+  "relatedServices": [
+    "web-development",
+    "custom-software",
+    "saas-development"
+  ],
+  "cta": {
+    "headline": "Klaar om uw mobiele app te bouwen?",
+    "description": "Laten we uw app-idee en de beste aanpak voor uw gebruikers en budget bespreken. Wij helpen u een MVP te definiëren die waarde levert zonder te veel te bouwen.",
+    "primaryButton": {
+      "text": "Bespreek uw app",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk app-projecten",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "admizz",
+    "rapid-investment"
+  ],
+  "heroAlt": "Achtergrondafbeelding voor de hero van het dienstenoverzicht.",
+  "metaTitle": "App-ontwikkeling: Mobiele apps voor iOS & Android | Zunkiree Labs",
+  "metaDescription": "Mobiele apps voor iOS en Android met native kwaliteit. Cross-platform, offline-ondersteuning en naadloze backend-integratie. Gem. 4,7+ in de app stores."
+}

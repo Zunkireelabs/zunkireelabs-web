@@ -1,0 +1,297 @@
+{
+  "id": "saas-development",
+  "title": "SaaS-ontwikkeling",
+  "category": "Ontwikkeling",
+  "tagline": "SaaS-ontwikkeling gebouwd voor 10.000 tenants zonder herschrijven.",
+  "description": "Multi-tenant SaaS-platforms met abonnementsfacturatie, gebruikersbeheer en een architectuur die is ontworpen voor schaal. Wij bouwen producten die duizenden tenants aankunnen zonder dat het fundament herschreven hoeft te worden.",
+  "heroImage": "/assets/images/saas-development-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Tenant-workspace aanmaken",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Abonnement verwerken",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Gebruikslimieten toepassen",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Factuur genereren",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Abonnementsniveau upgraden",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Nieuwe gebruiker onboarden",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Infrastructuur schalen",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "SaaS-architectuur die niet bezwijkt onder schaal",
+    "content": "Wij hebben SaaS-producten gebouwd voor 10 tenants en producten voor 10.000. Het verschil is geen geluk, het is architectuur. Onze aanpak voor SaaS-ontwikkeling houdt vanaf dag één rekening met multi-tenancy, complexe abonnementen en schaaluitdagingen. U lanceert sneller en groeit zonder tegen muren aan te lopen die dure herschrijvingen vereisen."
+  },
+  "stats": [
+    {
+      "value": "3-6 mnd",
+      "label": "MVP-lancering",
+      "description": "typische doorlooptijd"
+    },
+    {
+      "value": "10k+",
+      "label": "Tenantschaal",
+      "description": "ondersteund door de architectuur"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptimedoel",
+      "description": "gebouwd voor betrouwbaarheid"
+    },
+    {
+      "value": "< $2k",
+      "label": "Infrastructuurkosten",
+      "description": "bij 1000 tenants"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Lanceer uw MVP in maanden, niet in jaren",
+      "description": "Kant-en-klare patronen voor authenticatie, facturatie, tenantbeheer en gangbare SaaS-functies. Wij bouwen niet vanaf nul, maar combineren bewezen componenten en passen aan waar uw product uniek is."
+    },
+    {
+      "icon": "workflow",
+      "title": "Schaal op zonder uw codebase te herschrijven",
+      "description": "Multi-tenant architectuur ontworpen voor groei: database-per-tenant-opties, horizontale schaling en kostenefficiënte deling van resources. Uw 10.000e klant behandelt u net zoals uw eerste."
+    },
+    {
+      "icon": "integrate",
+      "title": "Beheers de complexiteit van facturatie vanaf dag één",
+      "description": "Abonnementsplannen, gebruiksgebaseerde prijzen, proefperiodes, upgrades, downgrades en pro-ratafacturatie: facturatie is lastig. Wij integreren met Stripe of uw provider om de randgevallen af te handelen waar de meeste SaaS-producten over struikelen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "b2b-saas",
+      "title": "B2B SaaS",
+      "headline": "B2B SaaS-platforms",
+      "description": "Bedrijfssoftware als dienst: CRM's, projectmanagement, HR-tools en verticale oplossingen. Teamworkspaces, beheerfuncties en enterprise-functies.",
+      "features": [
+        "Teamworkspaces",
+        "Rolgebaseerde rechten",
+        "Beheerdashboards",
+        "SSO-integratie"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "marketplace",
+      "title": "Marketplace",
+      "headline": "Marketplace-platforms",
+      "description": "Tweezijdige marketplaces die kopers en verkopers verbinden. Betalingssplitsing, reviews, zoeken en ontdekken, en transactiebeheer.",
+      "features": [
+        "Koper-/verkoperflows",
+        "Betalingssplitsing",
+        "Reviewsystemen",
+        "Discovery-functies"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "api-product",
+      "title": "API-producten",
+      "headline": "API-first producten",
+      "description": "Ontwikkelaarsplatforms en API-producten. Gebruiksmeting, developerportalen, beheer van API-sleutels en SDK's voor gangbare programmeertalen.",
+      "features": [
+        "Gebruiksmeting",
+        "Developerportaal",
+        "Beheer van API-sleutels",
+        "SDK-generatie"
+      ],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "vertical-saas",
+      "title": "Verticale SaaS",
+      "headline": "Verticale SaaS-oplossingen",
+      "description": "Branchespecifieke software: gezondheidszorg, juridisch, vastgoed, bouw. Diepgaande domeinfuncties met ingebouwde naleving van regelgeving.",
+      "features": [
+        "Branche-workflows",
+        "Compliance-functies",
+        "Domeinintegraties",
+        "Gespecialiseerde rapportage"
+      ],
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "white-label",
+      "title": "White label",
+      "headline": "White label-platforms",
+      "description": "Platforms die partners kunnen doorverkopen of van hun eigen merk kunnen voorzien. Aanpasbare UI, geïsoleerde omgevingen en tools voor partnerbeheer.",
+      "features": [
+        "Eigen branding",
+        "Partnerbeheer",
+        "Geïsoleerde omgevingen",
+        "Omzetdeling"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Strategie",
+      "description": "We bepalen uw productvisie, doelmarkt en MVP-scope. We identificeren kernfuncties die waarde leveren en nice-to-haves die kunnen wachten.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "Productroadmap",
+        "MVP-scope",
+        "Architectuurplan"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Fundament",
+      "description": "We bouwen de kerninfrastructuur: authenticatie, multi-tenancy, facturatie-integratie en basis-UI. Het fundament waarop al het andere voortbouwt.",
+      "duration": "4-6 weken",
+      "deliverables": [
+        "Authenticatiesysteem",
+        "Tenantbeheer",
+        "Facturatie-integratie"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Functies",
+      "description": "We ontwikkelen uw onderscheidende functies. Iteratieve cycli met continuous deployment en verwerkte gebruikersfeedback.",
+      "duration": "8-12 weken",
+      "deliverables": [
+        "Kernfuncties",
+        "Gebruikersflows",
+        "Beheertools"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Lancering",
+      "description": "Productie-uitrol, monitoringsetup en lanceringsondersteuning. Hulp bij go-to-market, onboarding van eerste klanten en snelle iteratie.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Productie-uitrol",
+        "Monitoring",
+        "Lanceringsondersteuning"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "Full stack React",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Stripe",
+      "category": "Betalingen",
+      "description": "Facturatie & abonnementen",
+      "logo": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "description": "Multi-tenant data",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "Auth0",
+      "category": "Authenticatie",
+      "description": "Identiteitsbeheer",
+      "logo": "https://cdn.worldvectorlogo.com/logos/auth0-icon.svg"
+    },
+    {
+      "name": "Vercel",
+      "category": "Platform",
+      "description": "Edge-deployment",
+      "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+    },
+    {
+      "name": "Redis",
+      "category": "Cache",
+      "description": "Sessies & cache",
+      "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Taal",
+      "description": "Typeveiligheid",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastructuur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wat is het verschil tussen multi-tenant en single-tenant architectuur?",
+      "answer": "Bij multi-tenant delen klanten de infrastructuur (lagere kosten, eenvoudiger updates). Bij single-tenant krijgt elke klant geïsoleerde resources (hogere beveiliging, meer maatwerk). Voor de meeste SaaS-producten adviseren wij doorgaans multi-tenant met sterke isolatie, met single-tenant-opties voor enterprise-klanten."
+    },
+    {
+      "question": "Hoe gaat u om met verschillende prijsniveaus en feature gating?",
+      "answer": "Wij bouwen feature flagging en entitlement-systemen vanaf het begin in. Plannen bepalen toegang tot functies, gebruikslimieten en UI-varianten. Een upgrade ontgrendelt functies direct zonder codewijzigingen: alles is datagedreven."
+    },
+    {
+      "question": "En enterprise-klanten die maatwerkfuncties nodig hebben?",
+      "answer": "Onze architectuur ondersteunt zowel standaard- als enterprise-niveaus. Enterprise-functies zoals SSO, auditlogs, eigen branding en dedicated support zijn gebouwd als optionele modules. Grote klanten krijgen maatwerk zonder dat uw codebase wordt geforkt."
+    },
+    {
+      "question": "Hoe pakt u SaaS-beveiliging aan?",
+      "answer": "Beveiliging is ingebouwd, niet achteraf toegevoegd: tenantisolatie op databaseniveau, versleuteling in rust en tijdens transport, SOC 2-conforme werkwijzen en regelmatige beveiligingsaudits. Enterprise-klanten eisen dit vaak. Wij zorgen dat u voorbereid bent."
+    },
+    {
+      "question": "Wat is een realistische doorlooptijd voor een MVP?",
+      "answer": "Een gefocuste MVP met kernfuncties duurt doorgaans 3-4 maanden. Complexe producten met meerdere gebruikerstypen, integraties of wettelijke vereisten kunnen 5-6 maanden duren. Wij begroten eerlijk: onrealistische planningen leiden tot technische schuld die u later vertraagt."
+    }
+  ],
+  "relatedServices": [
+    "custom-software",
+    "web-development",
+    "ai-development"
+  ],
+  "cta": {
+    "headline": "Klaar om uw SaaS-product te bouwen?",
+    "description": "Laten we uw productvisie bespreken en de snelste weg naar de lancering uitstippelen. Wij helpen u een MVP af te bakenen dat waarde levert zonder overbouwd te zijn.",
+    "primaryButton": {
+      "text": "Bespreek uw product",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "SaaS-projecten bekijken",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "corecloud365",
+    "mach24orbital"
+  ],
+  "metaTitle": "Multi-tenant SaaS-ontwikkeling in Calgary | Zunkiree Labs",
+  "metaDescription": "Multi-tenant SaaS-platforms met abonnementsfacturatie, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in 3-6 maanden, niet in jaren."
+}

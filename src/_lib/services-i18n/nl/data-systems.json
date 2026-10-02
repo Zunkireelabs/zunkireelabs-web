@@ -1,0 +1,311 @@
+{
+  "id": "data-systems",
+  "relatedCaseStudies": [
+    {
+      "slug": "cms-group-case-study",
+      "title": "CMS Group",
+      "stat": "85% van de workflows geautomatiseerd"
+    },
+    {
+      "slug": "corecloud365-case-study",
+      "title": "Corecloud365",
+      "stat": "60% kostenreductie"
+    }
+  ],
+  "title": "Datasystemen",
+  "category": "AI & Data",
+  "tagline": "De meeste AI-projecten hebben betere datasystemen nodig. Wij bouwen die eerst.",
+  "description": "Datapijplijnen, datawarehouses en analytics-infrastructuur, ontworpen voor AI-workloads. Wij leggen het fundament waarop machine learning echt werkt: schone data, betrouwbare pijplijnen en een schaalbare architectuur.",
+  "heroImage": "/assets/images/data-systems-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Datastroom inlezen",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Schema transformeren",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Kwaliteit valideren",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Laden naar warehouse",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Embeddings genereren",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Synchroniseren met vector-DB",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Gezondheid van pijplijn bewaken",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Datapijplijnen die naar productie-ML gaan. Geen opruimtickets.",
+    "content": "De meeste AI-projecten mislukken door dataproblemen, niet door modelproblemen. Wij bouwen pijplijnen, datawarehouses en kwaliteitssystemen waarmee de opschoonfase van 6 maanden vervalt: schone invoer, betrouwbare uitvoer, een architectuur die meegroeit van gigabytes tot petabytes. Uw team brengt productie-ML in weken in gebruik, niet in kwartalen."
+  },
+  "stats": [
+    {
+      "value": "80%",
+      "label": "Snellere data-voorbereiding",
+      "description": "ten opzichte van handmatige processen"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime van pijplijnen",
+      "description": "met automatisch herstel"
+    },
+    {
+      "value": "10x",
+      "label": "Queryprestaties",
+      "description": "na optimalisatie"
+    },
+    {
+      "value": "<1 uur",
+      "label": "Actualiteit van data",
+      "description": "realtime beschikbaar"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "ML-features opleveren zonder knelpunten in data engineering",
+      "description": "Self-service data-infrastructuur waarmee datawetenschappers en ML-engineers toegang krijgen tot schone, gekoppelde en getransformeerde data, zonder te wachten op engineeringtickets. Feature stores, embedding-pijplijnen en trainingsdatasets op aanvraag."
+    },
+    {
+      "icon": "speed",
+      "title": "Van ruwe data naar productie-ML in weken",
+      "description": "Kant-en-klare patronen voor gangbare databronnen (CRM's, ERP's, event streams) met automatische schemadetectie en kwaliteitsvalidatie. De meeste klanten hebben hun eerste ML-model binnen 6 weken in productie."
+    },
+    {
+      "icon": "integrate",
+      "title": "Opschalen zonder replatforming",
+      "description": "Een architectuur die meegroeit van gigabytes tot petabytes zonder herschrijven. Begin met kostenefficiënte oplossingen en schaal de infrastructuur op naarmate uw datavolume en ML-gebruik toenemen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "data-pipelines",
+      "title": "Datapijplijnen",
+      "headline": "Datapijplijnen voor productie",
+      "description": "Betrouwbare ETL/ELT-pijplijnen die real-world data op schaal verwerken. Automatische foutafhandeling, datavalidatie en monitoring. Nooit data kwijt, nooit een gemiste load.",
+      "features": [
+        "Event-gestuurde inname",
+        "Schema-evolutie",
+        "Foutherstel",
+        "Data lineage tracking"
+      ],
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-warehouse",
+      "title": "Datawarehouse",
+      "headline": "Modern datawarehouse",
+      "description": "Cloud-native warehouses, geoptimaliseerd voor analytics- en ML-workloads. Scheiding van opslag en rekenkracht, automatische schaling en queryoptimalisatie.",
+      "features": [
+        "Kolomgeoriënteerde opslag",
+        "Automatisch schalende rekenkracht",
+        "Queryoptimalisatie",
+        "Gelijktijdige workloads"
+      ],
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "feature-store",
+      "title": "Feature store",
+      "headline": "ML feature store",
+      "description": "Gecentraliseerd featurebeheer voor ML-teams. Features opslaan, versioneren en consistent aanbieden voor training en productie. Weg met training-serving skew.",
+      "features": [
+        "Feature-versiebeheer",
+        "Online/offline serving",
+        "Hergebruik van features",
+        "Point-in-time queries"
+      ],
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "vector-infrastructure",
+      "title": "Vectorinfrastructuur",
+      "headline": "Vector- en embedding-infrastructuur",
+      "description": "Infrastructuur voor AI-toepassingen: embedding-generatie, vectoropslag en similarity search. Het fundament voor RAG, semantisch zoeken en aanbevelingssystemen.",
+      "features": [
+        "Embedding-pijplijnen",
+        "Vectordatabases",
+        "Similarity search",
+        "Hybride retrieval"
+      ],
+      "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-quality",
+      "title": "Datakwaliteit",
+      "headline": "Datakwaliteitssystemen",
+      "description": "Geautomatiseerde kwaliteitsbewaking die problemen opspoort voordat ze downstream-systemen raken. Data contracts, anomaliedetectie en alerting voor datateams.",
+      "features": [
+        "Schemavalidatie",
+        "Anomaliedetectie",
+        "Data contracts",
+        "Kwaliteitsdashboards"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Beoordelen",
+      "description": "In kaart brengen van uw huidige datalandschap: bronnen, volumes, kwaliteitsproblemen en downstream-behoeften. Quick wins en langetermijnbehoeften voor de architectuur worden geïdentificeerd.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "Data-inventaris",
+        "Kwaliteitsbeoordeling",
+        "Architectuuraanbevelingen"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerpen",
+      "description": "Ontwerp van de doelarchitectuur: pijplijnpatronen, warehouse-schema en integratiepunten. De technologiestack wordt gekozen op basis van uw schaal en eisen.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "Architectuurontwerp",
+        "Technologiekeuze",
+        "Migratieplan"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouwen",
+      "description": "Iteratieve implementatie van de infrastructuur. We beginnen met de meest waardevolle databronnen en breiden de dekking uit. Monitoring- en kwaliteitssystemen draaien vanaf dag één.",
+      "duration": "6-12 weken",
+      "deliverables": [
+        "Productiepijplijnen",
+        "Datawarehouse",
+        "Documentatie"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Beheren",
+      "description": "Doorlopend beheer: monitoring, optimalisatie en uitbreiding. Ondersteuning met SLA, 24/7 alerting en incidentafhandeling.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "SLA-rapportages",
+        "Optimalisatiereviews",
+        "Capaciteitsplanning"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Snowflake",
+      "category": "Warehouse",
+      "description": "Cloud-DWH",
+      "logo": "https://cdn.worldvectorlogo.com/logos/snowflake.svg"
+    },
+    {
+      "name": "dbt",
+      "category": "Transformatie",
+      "description": "Datamodellering",
+      "logo": "https://cdn.worldvectorlogo.com/logos/dbt.svg"
+    },
+    {
+      "name": "Airflow",
+      "category": "Orkestratie",
+      "description": "Workflow-DAG's",
+      "logo": "https://cdn.worldvectorlogo.com/logos/apache-airflow.svg"
+    },
+    {
+      "name": "Fivetran",
+      "category": "Inname",
+      "description": "ELT-pijplijnen",
+      "logo": "https://cdn.simpleicons.org/fivetran/0073FF"
+    },
+    {
+      "name": "Pinecone",
+      "category": "Vector-DB",
+      "description": "Embeddings",
+      "logo": "https://cdn.simpleicons.org/pinecone/000000"
+    },
+    {
+      "name": "Spark",
+      "category": "Verwerking",
+      "description": "Big data",
+      "logo": "https://cdn.worldvectorlogo.com/logos/apache-spark-5.svg"
+    },
+    {
+      "name": "Kafka",
+      "category": "Streaming",
+      "description": "Event streams",
+      "logo": "https://cdn.worldvectorlogo.com/logos/kafka.svg"
+    },
+    {
+      "name": "Databricks",
+      "category": "Platform",
+      "description": "Lakehouse",
+      "logo": "https://cdn.worldvectorlogo.com/logos/databricks.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Hoe lang duurt een datawarehouse-migratie doorgaans?",
+      "answer": "Een volledige migratie duurt 3-6 maanden, afhankelijk van de complexiteit, maar we leveren stapsgewijs waarde. De meeste klanten hebben hun eerste kritieke databronnen binnen 4-6 weken in productie, terwijl de uitbreiding parallel loopt aan de reguliere bedrijfsvoering."
+    },
+    {
+      "question": "Moeten we een datalake of een datawarehouse gebruiken?",
+      "answer": "Moderne lakehouse-architecturen combineren beide. Wij adviseren doorgaans cloudwarehouses (Snowflake, BigQuery) voor gestructureerde analyses en Databricks/Delta Lake voor ML-workloads. De juiste keuze hangt af van uw datatypen, de vaardigheden van uw team en uw use cases."
+    },
+    {
+      "question": "Hoe gaat u om met datakwaliteit in pijplijnen?",
+      "answer": "Wij voeren kwaliteitscontroles uit in elke fase: schemavalidatie bij inname, data contracts tussen teams, anomaliedetectie op kernmetrics en geautomatiseerde alerting. Problemen worden opgevangen voordat ze zich verspreiden, niet nadat ze downstream-modellen hebben aangetast."
+    },
+    {
+      "question": "Wat is het verschil tussen een feature store en een datawarehouse?",
+      "answer": "Datawarehouses bedienen analytische queries; feature stores bedienen ML-systemen. Een feature store zorgt ervoor dat de features waarmee een model wordt getraind precies de features zijn die in productie worden aangeboden. Zo verdwijnt training-serving skew, een belangrijke oorzaak van falende ML-modellen."
+    },
+    {
+      "question": "Hoe pakt u realtime versus batchverwerking van data aan?",
+      "answer": "We beginnen met batch, tenzij er een duidelijke realtime use case is. Batch is eenvoudiger, goedkoper en voor de meeste analyses voldoende. Wanneer realtime ertoe doet (fraudedetectie, personalisatie), implementeren we streaming met Kafka of managed services, met batch als terugvaloptie."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "custom-software",
+    "saas-development"
+  ],
+  "cta": {
+    "headline": "Klaar om uw datafundament op orde te brengen?",
+    "description": "Laten we uw huidige data-infrastructuur beoordelen en de snelste weg naar productieklare ML bepalen. Gratis data-audit voor gekwalificeerde projecten.",
+    "primaryButton": {
+      "text": "Data-audit aanvragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Casestudy's bekijken",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "rapid-investment",
+    "mach24orbital",
+    "cms-group"
+  ],
+  "heroAlt": "Heroafbeelding voor de sectie datasystemen",
+  "metaTitle": "Datasystemen: pijplijnen, datawarehouses & ML-infrastructuur | Zunkiree Labs",
+  "metaDescription": "Productieklare data-infrastructuur voor AI-workloads. Datapijplijnen, datawarehouses en feature stores voor machine learning. Geen opschoonfase van 6 maanden."
+}

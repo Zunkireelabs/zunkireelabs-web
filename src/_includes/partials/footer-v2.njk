@@ -10,6 +10,7 @@
    same real destinations as footer.njk (About/Careers/Blog/Contact,
    legal pages, LinkedIn) rather than inventing new ones.
    ===================================================== #}
+{% set fUi = i18n[lang or "en"] or i18n["en"] %}{% set fEn = (lang or "en") == "en" %}
 <footer class="relative z-10 border-t border-navy-100 bg-white">
   <div class="mx-auto max-w-[1280px] px-4 pt-12 pb-10 sm:px-6 sm:pt-16 lg:px-8">
 
@@ -18,7 +19,7 @@
       <div class="flex flex-wrap items-center gap-4">
         <img src="/assets/images/zunkireelabs-logo-footer.png" alt="Zunkiree Labs" class="h-6 w-auto" width="200" height="24" />
         <span class="hidden h-5 w-px bg-navy-200 sm:block" aria-hidden="true"></span>
-        <span class="text-[15px] font-medium text-navy-600">The AI infrastructure company.</span>
+        <span class="text-[15px] font-medium text-navy-600">{{ fUi.fTagline | safe }}</span>
       </div>
       <span class="inline-flex w-full items-center justify-center gap-1.5 rounded-md border border-navy-200 px-3 py-1.5 font-mono text-[12px] uppercase tracking-wider text-navy-500 sm:w-auto sm:justify-start">
         Nepal &middot; Global
@@ -28,47 +29,48 @@
     <div class="mb-12 border-t border-dashed border-navy-200"></div>
 
     <!-- Link columns + CTA card -->
-    <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 lg:grid-cols-[repeat(4,1fr)_22rem]">
+    <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-8 {% if fEn %} lg:grid-cols-[repeat(4,1fr)_22rem] {% else %} lg:grid-cols-[1fr_22rem] {% endif %}">
 
-      <div>
-        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Industries</span>
+{% if fEn %}      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">{{ fUi.fIndustries | safe }}</span>
         <ul class="space-y-1 sm:space-y-3">
-          <li><a href="/industries/education/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Education</a></li>
-          <li><a href="/industries/agencies/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Agencies</a></li>
-          <li><a href="/industries/healthcare/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Healthcare</a></li>
-          <li><a href="/industries/real-estate/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Real Estate</a></li>
+          <li><a href="/industries/education/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fEducation | safe }}</a></li>
+          <li><a href="/industries/agencies/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fAgencies | safe }}</a></li>
+          <li><a href="/industries/healthcare/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fHealthcare | safe }}</a></li>
+          <li><a href="/industries/real-estate/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fRealEstate | safe }}</a></li>
+        </ul>
+      </div>
+{% endif %}
+      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">{{ fUi.fCompany | safe }}</span>
+        <ul class="space-y-1 sm:space-y-3">
+          <li><a href="{{ fUi.aboutUrl }}" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fAbout | safe }}</a></li>
+          {% if fEn %}          <li><a href="/careers/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fCareers | safe }}</a></li>
+          {% endif %}          <li><a href="{{ fUi.blogUrl }}" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fBlog | safe }}</a></li>
+          {% if not fEn %}<li><a href="{{ fUi.servicesUrl }}" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fServices | safe }}</a></li>{% endif %}
+          <li><a href="{{ fUi.contactUrl }}" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fContact | safe }}</a></li>
         </ul>
       </div>
 
-      <div>
-        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Company</span>
+{% if fEn %}      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">{{ fUi.fResources | safe }}</span>
         <ul class="space-y-1 sm:space-y-3">
-          <li><a href="/about/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">About Us</a></li>
-          <li><a href="/careers/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Careers</a></li>
-          <li><a href="/blog/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Blog</a></li>
-          <li><a href="/contact/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Contact</a></li>
+          <li><a href="{{ fUi.servicesUrl }}" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fServices | safe }}</a></li>
+          <li><a href="/team/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fTeam | safe }}</a></li>
+          <li><a href="/pricing/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fPricing | safe }}</a></li>
         </ul>
       </div>
-
-      <div>
-        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Resources</span>
+{% endif %}
+{% if fEn %}      <div>
+        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">{{ fUi.fLocations | safe }}</span>
         <ul class="space-y-1 sm:space-y-3">
-          <li><a href="/services/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Services</a></li>
-          <li><a href="/team/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Team</a></li>
-          <li><a href="/pricing/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Pricing</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-400">Locations</span>
-        <ul class="space-y-1 sm:space-y-3">
-          <li><a href="/locations/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">All Locations</a></li>
+          <li><a href="/locations/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ fUi.fAllLocations | safe }}</a></li>
           {% for location in locations %}
           <li><a href="/locations/{{ location.id }}/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">{{ location.name }}</a></li>
           {% endfor %}
         </ul>
       </div>
-
+{% endif %}
       <!-- "Let's work together" CTA card — full-width below the link groups until
            lg, where it drops into the wide 22rem column beside them (sm:grid-cols-2
            alone would squeeze it into a half-width slot, too narrow for its copy/button). -->
@@ -78,15 +80,15 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8-1.06 0-2.077-.163-3.02-.462L3 20l1.5-3.75C3.55 15.06 3 13.57 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
         </span>
-        <h3 class="mb-1.5 text-lg font-medium text-navy-900">Let's work together</h3>
+        <h3 class="mb-1.5 text-lg font-medium text-navy-900">{{ fUi.fCtaTitle | safe }}</h3>
         <p class="mb-5 text-[14px] leading-relaxed text-navy-500">
-          Get answers and a customized plan for your industry.
+          {{ fUi.fCtaBody | safe }}
         </p>
         <a
-          href="/contact/"
+          href="{{ fUi.contactUrl }}"
           class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 text-[13px] font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#5a9100]"
         >
-          Talk to us
+          {{ fUi.fCtaButton | safe }}
         </a>
       </div>
     </div>
@@ -102,14 +104,15 @@
 
         <!-- Legal row -->
         <div class="flex flex-wrap items-center gap-x-5 gap-y-1 text-[13px] text-navy-400">
-          <a href="/privacy/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">Privacy Policy</a>
-          <a href="/terms/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">Terms of Service</a>
-          <a href="/cookie-policy/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">Cookie Policy</a>
+          <a href="/privacy/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">{{ fUi.fPrivacy | safe }}</a>
+          <a href="/terms/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">{{ fUi.fTerms | safe }}</a>
+          <a href="/cookie-policy/" class="-my-1.5 py-1.5 transition-colors hover:text-navy-700">{{ fUi.fCookie | safe }}</a>
+          {% include "partials/language-switcher.njk" %}
         </div>
       </div>
 
       <p class="mt-6 text-[13px] text-navy-400">
-        &copy; {% year %} {{ site.name }}. All trademarks are property of their respective owners.
+        &copy; {% year %} {{ site.name }}. {{ fUi.fRights | safe }}
       </p>
     </div>
   </div>
