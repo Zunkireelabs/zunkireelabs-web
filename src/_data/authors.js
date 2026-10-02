@@ -7,8 +7,7 @@ export default {
     avatar: "/assets/images/team/sadin-shrestha.webp",
     social: {
       twitter: "https://twitter.com/sadinshrestha",
-      linkedin: "https://linkedin.com/in/sadinshrestha",
-      github: "https://github.com/sadinshrestha"
+      linkedin: "https://linkedin.com/in/sadinshrestha"
     }
   },
   "zunkiree-team": {
@@ -16,9 +15,9 @@ export default {
     name: "Zunkiree Labs Team",
     role: "Engineering Team",
     bio: "The Zunkiree Labs engineering team builds AI systems, RAG pipelines, and enterprise software.",
-    avatar: "/assets/images/zunkireelabs-logo-round.svg",
-    // The "round" logo asset is actually the full wide wordmark (viewBox
-    // 4928x675), not a square icon mark. object-cover in a circular frame
+    avatar: "/assets/images/zunkireelabs-logo-light.png",
+    // The logo asset is the full wide wordmark (~9:1
+    // aspect), not a square icon mark. object-cover in a circular frame
     // crops most of it away, so this author's avatar needs object-contain
     // instead of the object-cover every other (headshot) avatar uses.
     avatarFit: "contain",

@@ -25,203 +25,206 @@ faqs:
     answer: "We werken in de zorg, productie, juridische dienstverlening, zakelijke dienstverlening, onderwijs, hr en vastgoed — en nemen ook nieuwe branches aan waar onze AI- en softwarekennis van toepassing is. Projecttypen variëren van AI-ontwikkeling en maatwerksoftware tot SaaS-platforms, datasystemen, AI-ecommerce, AI-klantervaring (inclusief Voice AI) en AEO/SEO."
   - question: "Hoe start ik een internationale samenwerking?"
     answer: "Begin met een kennismakingsgesprek. We bepalen de scope van uw project, spreken mijlpalen af en stemmen het communicatieritme af op uw tijdzone. De meeste trajecten starten binnen 1-2 weken na het eerste gesprek."
+hideChrome: true
+bodyClass: "v2-inter"
 ---
 
 {# =====================================================
-   SECTION 1: HERO
+   GLOBAL DELIVERY — RESKINNED ONTO WEBSITE V2
+   Copy, FAQ data and Service schema preserved verbatim; only the
+   visual system changed (navbar-v2 + footer-v2 chrome, Inter,
+   navy/green tokens, shadow-subtle card shells).
    ===================================================== #}
-<section class="pt-12 md:pt-20 pb-12 md:pb-20 bg-white overflow-hidden">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-      <div class="lg:col-span-7">
-        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-6" data-reveal>
-          Hoe wij werken
-        </p>
-        <h1 class="text-4xl sm:text-5xl md:text-[56px] lg:text-[52px] xl:text-[60px] font-normal tracking-tight leading-[1.08] text-gray-900 mb-6" data-reveal>
-          AI- en softwareontwikkeling, waar u ook bent
-        </h1>
-        <p class="text-xl md:text-2xl font-normal text-gray-700 leading-snug mb-6" data-reveal>
-          Levering is niet gebonden aan één locatie. Wel aan hoe we werken.
-        </p>
-        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8" data-reveal>
-          Zunkiree Labs levert AI-ontwikkeling, maatwerksoftware en AEO/SEO-diensten wereldwijd — aan de VS, het VK, India, Australië, Canada, Zwitserland, Nederland en daarbuiten. Ongeveer 60% van onze klanten is al internationaal.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4" data-reveal>
-          <a href="/nl/contact/" class="inline-flex items-center justify-center px-7 py-3.5 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-            Plan een kennismakingsgesprek
-          </a>
-          <a href="/services/" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition-colors">
-            Bekijk diensten
-          </a>
-        </div>
-      </div>
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+<div class="relative bg-white overflow-x-clip">
+
+{# SECTION 1 — HERO (light, centered) #}
+<section class="relative overflow-hidden px-4 pt-32 pb-12 text-center sm:px-6 sm:pt-36 sm:pb-16 lg:px-8 lg:pt-44" aria-labelledby="gd-hero-heading">
+  <div class="relative z-10 mx-auto max-w-[56rem]" data-reveal-stagger>
+    <span class="mb-5 inline-flex items-center rounded-full border border-sky-100/60 bg-sky-50/60 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-sky-600 shadow-subtle">
+      Hoe wij werken
+    </span>
+    <h1 id="gd-hero-heading" class="mx-auto max-w-3xl text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[44px] lg:text-[54px]">
+      AI- en softwareontwikkeling, waar u ook bent
+    </h1>
+    <p class="mx-auto mt-5 max-w-2xl text-[20px] font-medium leading-snug text-[#111827]">
+      Levering is niet gebonden aan één locatie. Wel aan hoe we werken.
+    </p>
+    <p class="mx-auto mt-4 max-w-2xl text-body-lg leading-relaxed text-[#6B7280]">
+      Zunkiree Labs levert AI-ontwikkeling, maatwerksoftware en AEO/SEO-diensten wereldwijd — aan de VS, het VK, India, Australië, Canada, Zwitserland, Nederland en daarbuiten. Ongeveer 60% van onze klanten is al internationaal.
+    </p>
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a href="/nl/contact/" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="global-delivery-hero-primary">
+        Plan een kennismakingsgesprek
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+      <a href="/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-navy-200 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-300 hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="global-delivery-hero-secondary">
+        Bekijk diensten
+      </a>
     </div>
   </div>
 </section>
 
-{# =====================================================
-   SECTION 2: DEFINITION BLOCK (AEO-Critical)
-   ===================================================== #}
-<section class="py-12 md:py-16 bg-gray-50 border-y border-gray-200">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="max-w-3xl" data-reveal>
-      <h2 class="text-sm uppercase tracking-widest text-gray-500 font-medium mb-4">
-        Definitie
-      </h2>
-      <p class="text-xl md:text-2xl text-gray-900 leading-relaxed font-normal">
+{# SECTION 2 — DEFINITION BLOCK (AEO-critical) #}
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="gd-definition-heading">
+  <div class="mx-auto max-w-4xl">
+    <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle sm:p-10" data-reveal>
+      <h2 id="gd-definition-heading" class="mb-4 font-mono text-[11px] font-normal uppercase tracking-wider text-[#9CA3AF]">Definitie</h2>
+      <p class="text-[18px] leading-relaxed text-[#111827] sm:text-[20px]">
         <strong>Wereldwijde levering bij Zunkiree Labs</strong> betekent AI-ontwikkeling, maatwerksoftware en AEO/SEO-diensten voor klanten overal ter wereld, met een gestructureerd, mijlpaalgericht proces en communicatie die aansluit op uw tijdzone — geen locatiegebonden outsourcingmodel.
       </p>
     </div>
   </div>
 </section>
 
-{# =====================================================
-   SECTION 3: HOW IT WORKS
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="mb-12" data-reveal>
-      <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">Het proces</p>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Hoe wereldwijde samenwerking werkt</h2>
+{# SECTION 3 — HOW IT WORKS #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="gd-process-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Het proces</span>
+      <h2 id="gd-process-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
+        Hoe wereldwijde samenwerking werkt
+      </h2>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="flex gap-4" data-reveal>
-        <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-          <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-          </svg>
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-3" data-reveal-stagger>
+      <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
         </div>
-        <div>
-          <h3 class="font-medium text-gray-900 mb-1">Kennismaking op uw tijd</h3>
-          <p class="text-gray-600 text-sm">We stemmen de scope af op uw werkuren — calls, asynchrone updates en documentatie passen bij uw team.</p>
-        </div>
+        <h3 class="mb-2 text-[17px] font-semibold tracking-tight text-[#111827]">Kennismaking op uw tijd</h3>
+        <p class="text-[15px] leading-relaxed text-[#6B7280]">We stemmen de scope af op uw werkuren — calls, asynchrone updates en documentatie passen bij uw team.</p>
       </div>
-
-      <div class="flex gap-4" data-reveal>
-        <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-          <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
+      <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <div>
-          <h3 class="font-medium text-gray-900 mb-1">Ontwikkeling in mijlpalen</h3>
-          <p class="text-gray-600 text-sm">Elk project wordt opgeleverd in toetsbare mijlpalen met duidelijke resultaten, zodat u altijd weet waar het project staat.</p>
-        </div>
+        <h3 class="mb-2 text-[17px] font-semibold tracking-tight text-[#111827]">Ontwikkeling in mijlpalen</h3>
+        <p class="text-[15px] leading-relaxed text-[#6B7280]">Elk project wordt opgeleverd in toetsbare mijlpalen met duidelijke resultaten, zodat u altijd weet waar het project staat.</p>
       </div>
-
-      <div class="flex gap-4" data-reveal>
-        <div class="w-10 h-10 bg-zunkiree-50 rounded-lg flex-shrink-0 flex items-center justify-center">
-          <svg class="w-5 h-5 text-zunkiree-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
+      <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle">
+        <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <div>
-          <h3 class="font-medium text-gray-900 mb-1">Ingebed, niet uitbesteed</h3>
-          <p class="text-gray-600 text-sm">We werken binnen uw bestaande tools en workflows als verlengstuk van uw team, met doorlopende ondersteuning na livegang.</p>
-        </div>
+        <h3 class="mb-2 text-[17px] font-semibold tracking-tight text-[#111827]">Ingebed, niet uitbesteed</h3>
+        <p class="text-[15px] leading-relaxed text-[#6B7280]">We werken binnen uw bestaande tools en workflows als verlengstuk van uw team, met doorlopende ondersteuning na livegang.</p>
       </div>
     </div>
   </div>
 </section>
 
-{# =====================================================
-   SECTION 4: FAQ - For FAQPage Schema
-   ===================================================== #}
-<section class="py-12 md:py-20 bg-gray-50">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+{# SECTION 4 — FAQ (feeds FAQPage schema) #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="gd-faq-heading">
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
 
-      <div data-reveal>
-        <p class="text-xs uppercase tracking-widest text-zunkiree-600 font-medium mb-4">FAQ</p>
-        <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-6">
-          Veelgestelde vragen over wereldwijd samenwerken
-        </h2>
-        <a href="/nl/contact/" class="inline-flex items-center gap-2 text-zunkiree-600 font-medium hover:gap-3 transition-all duration-200">
-          Nog vragen? Neem contact op
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    <div data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">FAQ</span>
+      <h2 id="gd-faq-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
+        Veelgestelde vragen over wereldwijd samenwerken
+      </h2>
+      <a href="/nl/contact/" class="inline-flex items-center gap-2 font-medium text-sky-600 transition-colors hover:text-[#5a9100]">
+        Nog vragen? Neem contact op
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+
+    <div x-data="{ activeIndex: 0, expandAll: false }">
+      <div class="mb-4 flex items-center justify-end">
+        <button
+          type="button"
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
+          class="font-mono text-[11px] uppercase tracking-wider text-navy-400 transition-colors hover:text-navy-900"
+        >
+          <span x-text="expandAll ? 'Alles inklappen' : 'Alles uitklappen'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-navy-100 border-y border-navy-100">
+        {% for item in faqs %}
+        <div class="py-5" data-reveal>
+          <button
+            type="button"
+            @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+            :aria-expanded="(activeIndex === {{ loop.index }} || expandAll).toString()"
+            class="group flex w-full items-center justify-between text-left"
+          >
+            <span class="pr-4 text-[16px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
+              {{ item.question }}
+            </span>
+            <span class="flex-shrink-0 text-navy-400">
+              <svg
+                class="h-5 w-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === {{ loop.index }} || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-[15px] leading-relaxed text-[#6B7280]">
+              {{ item.answer }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# SECTION 5 — CLOSING CTA (navy-950 banner, same recipe as careers/homepage-v2) #}
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"></div>
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">Aan de slag</span>
+      <h2 class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Klaar om samen te werken, waar u ook bent?
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/60">
+        Vertel ons wat u wilt bouwen. Wij richten de samenwerking in rond uw team, niet andersom.
+      </p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="/nl/contact/" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="global-delivery-bottom-primary">
+          Contact opnemen
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+        <a href="/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="global-delivery-bottom-secondary">
+          Bekijk diensten
         </a>
       </div>
-
-      <div x-data="{ activeIndex: 0, expandAll: false }">
-        <div class="flex items-center justify-end mb-4">
-          <button
-            @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
-            class="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <span x-text="expandAll ? 'Alles inklappen' : 'Alles uitklappen'"></span>
-          </button>
-        </div>
-
-        <div class="divide-y divide-gray-200">
-          {% for item in faqs %}
-          <div class="py-5" data-reveal>
-            <button
-              @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
-              class="w-full flex items-center justify-between text-left group"
-            >
-              <span class="text-lg font-medium text-gray-900 group-hover:text-zunkiree-600 transition-colors pr-4">
-                {{ item.question }}
-              </span>
-              <span class="flex-shrink-0 text-gray-400">
-                <svg
-                  class="w-5 h-5 transition-transform duration-200"
-                  :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-              </span>
-            </button>
-            <div
-              x-show="activeIndex === {{ loop.index }} || expandAll"
-              x-transition:enter="transition ease-out duration-200"
-              x-transition:enter-start="opacity-0 -translate-y-2"
-              x-transition:enter-end="opacity-100 translate-y-0"
-              x-transition:leave="transition ease-in duration-150"
-              x-transition:leave-start="opacity-100 translate-y-0"
-              x-transition:leave-end="opacity-0 -translate-y-2"
-              class="overflow-hidden"
-            >
-              <p class="pt-4 text-gray-600 leading-relaxed">
-                {{ item.answer }}
-              </p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-{# =====================================================
-   SECTION 5: CTA
-   ===================================================== #}
-<section class="py-16 md:py-24 bg-gray-900">
-  <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6 text-center">
-    <p class="text-sm uppercase tracking-widest text-zunkiree-400 font-medium mb-6" data-reveal>
-      Aan de slag
-    </p>
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-6 tracking-tight" data-reveal>
-      Klaar om samen te werken, waar u ook bent?
-    </h2>
-    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10" data-reveal>
-      Vertel ons wat u wilt bouwen. Wij richten de samenwerking in rond uw team, niet andersom.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal>
-      <a href="/nl/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors">
-        Contact opnemen
-      </a>
-      <a href="/services/" class="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">
-        Bekijk diensten
-      </a>
-    </div>
-  </div>
-</section>
+</div>
+
+{% include "partials/footer-v2.njk" %}
 
 {# =====================================================
    SCHEMA: Service + FAQPage JSON-LD
