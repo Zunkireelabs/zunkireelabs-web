@@ -1,5 +1,6 @@
 ---
 title: "What Is Superintelligence and Why Is It Called That?"
+shortLabel: "SuperIntelligence (SI)"
 translationKey: "what-is-superintelligence-and-why-is-it-called-that"
 description: "Superintelligence, AGI and the safety debate in plain language: where the term comes from and why it matters to businesses adopting AI."
 date: 2026-10-02
@@ -10,8 +11,8 @@ tags:
   - AGI
   - AI Safety
 readTime: 8
-featuredImage: "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "3D rendered abstract design featuring a digital brain visual with vibrant colors."
+featuredImage: "/assets/images/blog/what-is-superintelligence-and-why-is-it-called-that.svg"
+featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Google DeepMind on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
