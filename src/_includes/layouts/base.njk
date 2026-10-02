@@ -61,9 +61,7 @@
   {% endif %}
 
   <!-- Preload Critical Resources for LCP -->
-  {% if page.url == "/home-legacy/" %}
-  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high" media="(min-width:1024px)">
-  {% elif heroImage %}
+  {% if heroImage %}
   <link rel="preload" href="{{ heroImage }}" as="image" fetchpriority="high">
   {% endif %}
 
@@ -84,7 +82,7 @@
     "@id": "{{ site.url }}/#organization",
     "name": "Zunkiree Labs",
     "url": "{{ site.url }}",
-    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png",
     "description": "AI infrastructure company building custom AI systems, RAG pipelines, AI agents, and enterprise software. Headquartered in Kathmandu, Nepal.",
     "foundingDate": "2018",
     "founder": {
@@ -99,7 +97,7 @@
     },
     "sameAs": [
       "{{ site.social.linkedin }}",
-      "{{ site.social.github }}"
+      "{{ site.social.instagram }}"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -133,7 +131,7 @@
     "url": "{{ site.url }}",
     "telephone": "{{ site.phone }}",
     "email": "{{ site.email }}",
-    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png",
     "image": "{{ site.url }}/assets/images/og-image.svg",
     "address": {
       "@type": "PostalAddress",
