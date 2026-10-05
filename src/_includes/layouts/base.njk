@@ -30,6 +30,8 @@
   <meta property="og:title" content="{{ title or site.meta.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
+  {% if not ogImageUrl %}<meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">{% endif %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
   {% if ogType == 'article' %}
@@ -46,11 +48,16 @@
   <meta name="twitter:description" content="{{ description or site.description }}">
   <meta name="twitter:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
 
+  <link rel="alternate" type="application/atom+xml" title="Zunkiree Labs Insights" href="{{ site.url }}/feed.xml">
+
   <!-- Canonical URL -->
   {% if canonicalUrl %}
   <link rel="canonical" href="{{ site.url }}{{ canonicalUrl }}">
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  {% if category == "Insights" and layout == "blog-post.njk" and page.url.startsWith("/blog/") %}
+  <link rel="alternate" type="text/markdown" href="{{ site.url }}{{ page.url }}index.md">
   {% endif %}
 
   <!-- Hreflang alternates (language/region variants of this page) -->
@@ -83,6 +90,8 @@
     "@type": "Organization",
     "@id": "{{ site.url }}/#organization",
     "name": "Zunkiree Labs",
+    "alternateName": ["Zunkireelabs", "ZunkireeLabs"],
+    "knowsAbout": ["AI development", "RAG pipelines", "AI agents", "AI orchestration", "Enterprise software", "Answer engine optimization"],
     "url": "{{ site.url }}",
     "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
     "description": "AI infrastructure company building custom AI systems, RAG pipelines, AI agents, and enterprise software. Headquartered in Kathmandu, Nepal.",
@@ -99,7 +108,11 @@
     },
     "sameAs": [
       "{{ site.social.linkedin }}",
-      "{{ site.social.github }}"
+      "{{ site.social.github }}",
+      "{{ site.social.clutch }}",
+      "{{ site.social.goodfirms }}",
+      "{{ site.social.techbehemoths }}",
+      "{{ site.social.startupsnepal }}"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -174,6 +187,21 @@
   </script>
   {% endif %}
 
+  {% if schemaType == "industry" and industryId %}
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": site.url + page.url + "#service",
+    "name": title,
+    "description": description,
+    "url": site.url + page.url,
+    "serviceType": "AI software for " + (industryId | replace("-", " ")),
+    "provider": { "@type": "Organization", "@id": site.url + "/#organization", "name": "Zunkiree Labs", "url": site.url }
+  } | dump | safe }}
+  </script>
+  {% endif %}
+
   {% if schemaType == "service" and serviceId %}
   {%- set serviceData = servicesDetails[serviceId] -%}
   <script type="application/ld+json">
@@ -219,7 +247,9 @@
   {%- set productFaqData = (platformProducts | find("id", productId)) if productId else null -%}
   {%- set pageFaqs = faqs if faqs else (servicesDetails[serviceId].faq if serviceId and servicesDetails[serviceId] else (productFaqData.faq if productFaqData else null)) -%}
   {# hasServiceFaqs: location x service pages that render their own FAQ block (and FAQPage schema) in the layout #}
-  {% if pageFaqs and not hasServiceFaqs %}
+  {# A page body that already carries its own FAQPage JSON-LD (SEOAI:QACONTENT) wins; emitting a second one makes duplicate FAQPage entities #}
+  {%- set bodyHasFaqSchema = ('"FAQPage"' in (content | string)) -%}
+  {% if pageFaqs and not hasServiceFaqs and not bodyHasFaqSchema %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

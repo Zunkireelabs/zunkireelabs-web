@@ -189,6 +189,11 @@ export default [
     title: "Orca: AI Orchestration Layer | Zunkiree Labs",
     description: "Orca is the AI orchestration layer that coordinates agent workflows across your CRM, email, and marketing tools — one shared platform underneath every deployment.",
     eyebrow: "Orca",
+    relatedPosts: [
+      { title: "What Is Orca? The Orchestration Layer Explained", href: "/blog/what-is-orca-workflow-orchestration-layer-explained/" },
+      { title: "AI Orchestration vs Automation vs Agents: What Is the Difference?", href: "/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/" },
+      { title: "Disconnected Tools: What They Cost and How Orchestration Helps", href: "/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/" }
+    ],
     hero: {
       theme: "dark",
       headline: "One orchestration layer, every system connected",

@@ -2072,6 +2072,20 @@ layout: base.njk
   </div>
 </section>
 
+{% if product.relatedPosts and product.relatedPosts.length %}
+<section class="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-20" aria-labelledby="related-insights-heading">
+  <div class="mx-auto max-w-5xl">
+    <span class="mb-3 block font-mono text-[11px] uppercase tracking-wider {{ 'text-white/50' if heroDark else 'text-navy-400' }}">Insights</span>
+    <h2 id="related-insights-heading" class="text-[22px] font-medium tracking-tight {{ 'text-white' if heroDark else 'text-navy-950' }}">Related Insights</h2>
+    <ul class="mt-5 list-disc space-y-2 pl-5 text-[15px] {{ 'text-white/70 marker:text-white/40' if heroDark else 'text-[#6B7280]' }}">
+      {% for post in product.relatedPosts %}
+      <li><a class="underline underline-offset-2 {{ 'decoration-white/30 hover:text-white' if heroDark else 'hover:text-navy-900' }}" href="{{ post.href }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 {% if heroDark %}
   </div>
 </div>

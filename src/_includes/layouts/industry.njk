@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+schemaType: industry
 ---
 
 {# =====================================================
@@ -85,6 +86,10 @@ layout: base.njk
     <p class="mt-4 max-w-[720px] text-center text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
       {{ industry.hero.subhead | safe }}
     </p>
+
+    {% if industry.answer %}
+    <p class="mt-5 max-w-[720px] text-center text-[15px] leading-relaxed text-[#6B7280]" data-answer-summary>{{ industry.answer }}</p>
+    {% endif %}
 
     <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
       <a
@@ -607,6 +612,26 @@ layout: base.njk
    signature closer, while Platform Tie-in above stays light
    glass-surface per MASTER_DESIGN_SPEC.md §4/§10.
    ===================================================== #}
+{% if industry.faq %}
+{% set faqItems = industry.faq %}
+{% set faqHeading = "Questions about AI for " + (industry.eyebrow | replace("AI for ", "")) %}
+{% include "components/faq-accordion.njk" %}
+{% endif %}
+
+{% if industry.relatedPosts and industry.relatedPosts.length %}
+<section class="px-4 pb-4 sm:px-6 lg:px-8" aria-labelledby="related-insights-heading">
+  <div class="mx-auto max-w-3xl">
+    <h2 id="related-insights-heading" class="text-[20px] font-semibold tracking-tight text-[#111827]">Related Insights</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-5 text-[15px] text-[#6B7280]">
+      {% for post in industry.relatedPosts %}
+      <li><a class="underline hover:text-navy-900" href="{{ post.href }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <p class="mt-4 text-[15px] text-[#6B7280]">See all <a class="underline hover:text-navy-900" href="/blog/insights/">Insights</a> or our <a class="underline hover:text-navy-900" href="/services/">services</a>.</p>
+  </div>
+</section>
+{% endif %}
+
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
   <div class="mx-auto max-w-5xl">
     <div

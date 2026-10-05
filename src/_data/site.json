@@ -12,11 +12,15 @@
   },
   "social": {
     "linkedin": "https://www.linkedin.com/company/zunkireelabs",
-    "github": "https://github.com/Zunkireelabs"
+    "github": "https://github.com/Zunkireelabs",
+    "clutch": "https://clutch.co/profile/zunkiree-labs",
+    "goodfirms": "https://www.goodfirms.co/company/zunkiree-labs",
+    "techbehemoths": "https://techbehemoths.com/company/zunkiree-labs",
+    "startupsnepal": "https://www.startupsnepal.tech/startup/zunkiree-labs"
   },
   "calendlyUrl": "https://calendly.com/yukta-zunkireelabs/30min",
   "meta": {
     "title": "Zunkiree Labs | AI Development Company Nepal | Custom AI Systems",
-    "ogImage": "/assets/images/og-image.svg"
+    "ogImage": "/assets/images/og-image.png"
   }
 }
