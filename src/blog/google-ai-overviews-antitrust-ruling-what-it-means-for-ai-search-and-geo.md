@@ -5,6 +5,7 @@ description: "A judge dismissed Chegg and Penske's antitrust suits over Google A
 date: 2026-10-01
 lastUpdated: 2026-10-01
 category: Insights
+pillar: "it-market"
 tags:
   - AI Search
   - GEO

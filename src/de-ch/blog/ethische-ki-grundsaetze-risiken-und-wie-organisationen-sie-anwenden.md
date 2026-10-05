@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Ethische KI: Grundsätze, Risiken und wie Organisationen sie anwenden"
-description: "Ethische KI erklärt: die Rahmenwerke von UNESCO, OECD und NIST, wie das Recht nachzieht, die besonderen Risiken generativer KI und eine praktische Checkliste für Organisationen."
+title: "Ethische KI: Grundsätze, Risiken und wie man sie anwendet"
+description: "Ethische KI erklärt: Rahmenwerke von UNESCO, OECD und NIST, Rechtsentwicklung, Risiken generativer KI und eine praktische Checkliste für Organisationen."
 date: "2026-10-02T11:00:00+05:45"
 featuredImage: "/assets/images/blog/ethische-ki-grundsaetze-risiken-und-wie-organisationen-sie-anwenden.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

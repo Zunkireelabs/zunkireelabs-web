@@ -1,13 +1,14 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Warum KI-Agenten eine eigene Infrastruktur bekommen"
-description: "Agentenschwärme für Sicherheitstests, Agenten in Messaging-Apps und der Ruf nach einem KI-nativen Betriebssystem: Was die Agenten-Nachrichten dieser Woche für Unternehmen bedeuten."
+description: "Agentenschwärme für Sicherheitstests, Agenten in Messaging-Apps und der Ruf nach einem KI-nativen Betriebssystem: Was das für Unternehmen bedeutet."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 lastUpdated: "2026-10-02"
 translationKey: "ai-agents-are-getting-their-own-infrastructure"
 category: "Einblicke"
+pillar: "ai-frontier"
 readTime: 6
 ---
 

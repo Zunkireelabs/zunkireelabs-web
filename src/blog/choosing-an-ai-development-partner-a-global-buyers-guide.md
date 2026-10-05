@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Choosing an AI Development Partner: A Global Buyer's Guide"
-description: "Discover the key differences between a true AI infrastructure partner and those merely rebranding existing products, emphasizing real integration and architecture."
+description: "The key differences between a true AI infrastructure partner and one merely rebranding existing products, with real integration and architecture."
 date: "2026-09-24"
 shortLabel: "AI Partner"
 featuredImage: "/assets/images/blog/ai-development-partner-guide.webp"

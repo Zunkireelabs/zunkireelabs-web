@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Tech Events in Nepal 2026: What Has Happened and What Is Still Ahead"
+title: "Tech Events in Nepal 2026: Held So Far and Still Ahead"
 description: "Four tech events in Nepal in 2026, with dates, venues and organizers taken from the organizers' own pages, and which have already taken place."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/tech-events-in-nepal-2026.svg"

@@ -1,13 +1,14 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Kartellentscheidung zu Google AI Overviews: Was sie für GEO bedeutet"
-description: "Ein Richter hat die Kartellklagen von Chegg und Penske zu Google AI Overviews abgewiesen. Was die Entscheidung bedeutet und wie Sie für die KI-Suche (GEO) optimieren."
+title: "Kartellentscheidung zu Google AI Overviews: Folgen für GEO"
+description: "Ein Richter wies die Kartellklagen von Chegg und Penske zu Google AI Overviews ab. Was das bedeutet und wie Sie für die KI-Suche (GEO) optimieren."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/kartellentscheidung-zu-google-ai-overviews-was-sie-fuer-geo-bedeutet.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 lastUpdated: "2026-10-02"
 translationKey: "google-ai-overviews-antitrust-ruling-what-it-means-for-ai-search-and-geo"
 category: "Einblicke"
+pillar: "it-market"
 readTime: 7
 ---
 

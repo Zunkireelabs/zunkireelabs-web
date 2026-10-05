@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Die Rolle von KI im Cloud Computing: Unternehmen weltweit verändern"
-description: "Wie KI im Cloud Computing Branchen wie Gesundheitswesen, Bildung, Immobilien und Agenturen revolutioniert, die Effizienz steigert und innovative Lösungen ermöglicht."
+title: "Die Rolle von KI im Cloud Computing: Unternehmen verändern"
+description: "Wie KI im Cloud Computing Gesundheitswesen, Bildung, Immobilien und Agenturen verändert, die Effizienz steigert und innovative Lösungen ermöglicht."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/die-rolle-von-ki-im-cloud-computing-unternehmen-weltweit-veraendern.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

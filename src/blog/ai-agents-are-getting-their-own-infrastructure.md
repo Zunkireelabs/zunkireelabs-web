@@ -5,6 +5,7 @@ description: "Agent swarms for security testing, agents inside messaging apps an
 date: 2026-10-02
 lastUpdated: 2026-10-02
 category: Insights
+pillar: "ai-frontier"
 tags:
   - AI Agents
   - Agentic AI

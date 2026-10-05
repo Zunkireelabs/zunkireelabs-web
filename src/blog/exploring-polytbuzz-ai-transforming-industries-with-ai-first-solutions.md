@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Exploring PolytBuzz AI: Transforming Industries with AI-First Solutions"
-description: "Discover how PolytBuzz AI leverages AI-first technology to drive innovation across various industries, enhancing efficiency and transforming workflows for smarter decision-making."
+title: "PolytBuzz AI: Transforming Industries with AI-First Solutions"
+description: "How PolytBuzz AI uses AI-first technology to drive innovation across industries, improve efficiency and support smarter decisions."
 date: "2026-09-21"
 featuredImage: "https://images.pexels.com/photos/7109243/pexels-photo-7109243.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Businessman reviewing data analytics dashboard on laptop in bright office."

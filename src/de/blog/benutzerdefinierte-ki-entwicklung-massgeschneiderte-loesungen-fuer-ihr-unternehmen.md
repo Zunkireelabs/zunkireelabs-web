@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Benutzerdefinierte KI-Entwicklung: Maßgeschneiderte Lösungen für Ihr Unternehmen"
+title: "Benutzerdefinierte KI-Entwicklung: Maßgeschneiderte Lösungen"
 description: "Entdecken Sie die Vorteile der benutzerdefinierten KI-Entwicklung mit Zunkiree Labs. Pionierlösungen für Bildung, Gesundheitswesen, Immobilien und Agenturen."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/benutzerdefinierte-ki-entwicklung-massgeschneiderte-loesungen-fuer-ihr-unternehmen.svg"

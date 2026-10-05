@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Wat is machine learning? Hoe het werkt en waar het wordt gebruikt"
-description: "Machine learning uitgelegd: hoe systemen van data leren, hoe neurale netwerken, NLP en grote taalmodellen erbij horen, waar ML wordt gebruikt en wat u controleert voordat u bouwt."
+description: "Machine learning uitgelegd: hoe systemen van data leren, hoe neurale netwerken, NLP en taalmodellen erbij horen, waar ML wordt gebruikt en wat u checkt."
 date: "2026-10-02T14:00:00+05:45"
 featuredImage: "/assets/images/blog/wat-is-machine-learning-hoe-het-werkt-en-waar-het-wordt-gebruikt.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

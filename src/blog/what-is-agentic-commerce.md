@@ -1,6 +1,6 @@
 ---
-title: "What is Agentic Commerce? The Future of AI-Powered Ecommerce in Nepal"
-description: "Agentic commerce uses autonomous AI agents to handle the entire buying journey. Learn how Nepal businesses can leverage agentic ecommerce with eSewa, Khalti, and local market integration."
+title: "What Is Agentic Commerce? AI-Powered Ecommerce in Nepal"
+description: "Agentic commerce uses autonomous AI agents for the whole buying journey. See how Nepal businesses can use it with eSewa, Khalti and local integrations."
 date: 2026-04-03
 lastUpdated: 2026-10-02
 authorId: sadin-shrestha

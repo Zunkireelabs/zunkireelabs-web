@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Exploring AI Services Available in Nepali"
-description: "Discover the range of AI services offered in Nepali markets, focusing on solutions from infrastructure development to intelligent applications tailored for local needs."
+description: "The AI services offered in Nepali markets, from infrastructure development to intelligent applications tailored for local needs."
 date: "2026-08-28"
 featuredImage: "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "A female software engineer coding on dual monitors and a laptop in an office setting."

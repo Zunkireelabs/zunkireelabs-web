@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Transforming Businesses in Pokhara: Case Studies and Client Testimonials"
+title: "Transforming Businesses in Pokhara: Case Studies, Testimonials"
 description: "Discover how Zunkiree Labs is propelling businesses in Pokhara through cutting-edge AI solutions and hear firsthand testimonials from our satisfied clients."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/19895773/pexels-photo-19895773.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

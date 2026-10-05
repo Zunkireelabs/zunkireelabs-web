@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "AI Dental Assistant: Benefits for Modern Dentistry" # SEOAI:TITLE
-description: "Explore the numerous advantages of using AI dental assistants in modern dental practices. Discover how AI can enhance patient care, streamline operations, and improve diagnosis."
+description: "The advantages of AI dental assistants in modern practices, and how AI can improve patient care, streamline operations and aid diagnosis."
 date: "2026-08-28"
 featuredImage: "https://images.pexels.com/photos/6809638/pexels-photo-6809638.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Close-up of advanced dental equipment in a modern, clean clinic. Ideal for dental and medical themes."

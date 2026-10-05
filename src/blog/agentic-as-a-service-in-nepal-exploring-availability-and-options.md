@@ -1,6 +1,6 @@
 ---
 title: "Agentic-as-a-Service in Nepal: Exploring Availability and Options"
-description: "Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region."
+description: "The current landscape of Agentic-as-a-Service in Nepal, including potential companies, services and the future of AI in the region."
 date: "2026-07-27"
 featuredImage: "/assets/images/blog/gaas-nepal-availability.webp"
 featuredImageAlt: "Abstract gradient background"

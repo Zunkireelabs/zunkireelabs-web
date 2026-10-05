@@ -2,7 +2,7 @@
 templateEngineOverride: "njk, md"
 title: "Unlocking Business Potential with Orchestrated Agent Workflows"
 translationKey: "unlocking-business-potential-with-orchestrated-agent-workflows"
-description: "Discover how orchestrated agent workflows enhance automation and efficiency across various industries, and learn why Zunkiree Labs is the optimal choice for your GaaS needs."
+description: "How orchestrated agent workflows improve automation and efficiency across industries, and why Zunkiree Labs suits your GaaS needs."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/unlocking-business-potential-with-orchestrated-agent-workflows.svg"
 featuredImageAlt: "Abstract gradient background"

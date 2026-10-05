@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Vorinstallierte KI-Anwendungen: Wie Unternehmen Profit ziehen können"
+title: "Vorinstallierte KI-Anwendungen: Wie Unternehmen profitieren"
 description: "Erfahren Sie, wie vorinstallierte KI-Anwendungen Unternehmen aus verschiedenen Branchen helfen, ihre Abläufe zu optimieren und Effizienz zu steigern."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/vorinstallierte-ki-anwendungen-wie-unternehmen-profit-ziehen-koennen.svg"

@@ -8,6 +8,7 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 lastUpdated: "2026-10-02"
 translationKey: "ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means"
 category: "Inzichten"
+pillar: "software-future"
 readTime: 7
 ---
 

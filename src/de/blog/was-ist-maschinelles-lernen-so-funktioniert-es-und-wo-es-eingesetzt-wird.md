@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Was ist maschinelles Lernen? So funktioniert es und wo es eingesetzt wird"
-description: "Maschinelles Lernen erklärt: wie Systeme aus Daten lernen, wie neuronale Netze, NLP und große Sprachmodelle dazugehören, wo ML eingesetzt wird und was Sie vor dem Aufbau prüfen sollten."
+title: "Was ist maschinelles Lernen? Funktion und Einsatzgebiete"
+description: "Maschinelles Lernen erklärt: wie Systeme aus Daten lernen, wo ML eingesetzt wird, wie es zu NLP und Sprachmodellen passt und was Sie vorab prüfen sollten."
 date: "2026-10-02T14:00:00+05:45"
 featuredImage: "/assets/images/blog/was-ist-maschinelles-lernen-so-funktioniert-es-und-wo-es-eingesetzt-wird.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

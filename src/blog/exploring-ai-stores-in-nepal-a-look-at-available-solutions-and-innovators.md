@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Exploring AI Stores in Nepal: A Look at Available Solutions and Innovators"
+title: "Exploring AI Stores in Nepal: Solutions and Innovators"
 description: "Discover the landscape of AI stores in Nepal, showcasing innovative companies, their offerings, and how they are shaping the future of technology in the region."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=650&w=940"

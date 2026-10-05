@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "How to Choose a GaaS Provider: Key Considerations for Your Business"
-description: "Selecting the right Gateway as a Service (GaaS) provider is crucial for businesses looking to enhance connectivity and integration. Explore essential tips to help you make the best choice."
+title: "How to Choose a GaaS Provider: Key Considerations"
+description: "Selecting the right Gateway as a Service (GaaS) provider is crucial for businesses looking to enhance connectivity and integration."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/how-to-choose-a-gaas-provider-key-considerations-for-your-business.svg"
 featuredImageAlt: "Abstract gradient background"

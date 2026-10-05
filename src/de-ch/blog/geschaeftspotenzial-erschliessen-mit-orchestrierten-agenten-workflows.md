@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Geschäftspotenzial erschliessen mit orchestrierten Agenten-Workflows"
-description: "Wie orchestrierte Agenten-Workflows Automatisierung und Effizienz in verschiedenen Branchen steigern und warum Zunkiree Labs die richtige Wahl für Ihren GaaS-Bedarf ist."
+title: "Geschäftspotenzial erschliessen mit Agenten-Workflows"
+description: "Wie orchestrierte Agenten-Workflows Automatisierung und Effizienz in Branchen steigern und warum Zunkiree Labs die richtige Wahl für Ihren GaaS-Bedarf ist."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/geschaeftspotenzial-erschliessen-mit-orchestrierten-agenten-workflows.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

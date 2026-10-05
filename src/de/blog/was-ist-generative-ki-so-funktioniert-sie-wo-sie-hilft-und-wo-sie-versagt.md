@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Was ist generative KI? So funktioniert sie, wo sie hilft und wo sie versagt"
-description: "Generative KI erklärt: wie sie funktioniert, wie Organisationen sie nutzen, welche Risiken NIST nennt, etwa Konfabulation und Verzerrung, und wie Sie sie verantwortungsvoll einsetzen."
+title: "Was ist generative KI? Funktion, Nutzen und Grenzen"
+description: "Generative KI erklärt: wie sie funktioniert, wie Organisationen sie nutzen, welche Risiken NIST nennt und wie Sie sie verantwortungsvoll einsetzen."
 date: "2026-10-02T12:00:00+05:45"
 featuredImage: "/assets/images/blog/was-ist-generative-ki-so-funktioniert-sie-wo-sie-hilft-und-wo-sie-versagt.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

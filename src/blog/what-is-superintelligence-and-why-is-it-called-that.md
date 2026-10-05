@@ -6,6 +6,7 @@ description: "Superintelligence, AGI and the safety debate in plain language: wh
 date: 2026-10-02
 lastUpdated: 2026-10-02
 category: Insights
+pillar: "ai-frontier"
 tags:
   - Superintelligence
   - AGI
@@ -88,6 +89,8 @@ To see how this fits into the wider picture, read our overview of [AI trends and
 
 ## Related Insights
 
+- [Superintelligence and the Safety Debate: Who Wants What](/blog/superintelligence-safety-debate-who-wants-what/)
+- [Trump's Super Intelligence Force: What the Order Actually Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
 - [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 

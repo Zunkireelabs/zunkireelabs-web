@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Wat is Flow AI? AI toegepast op workflows uitgelegd"
-description: "Flow AI betekent AI toepassen op een workflow zodat die kan beslissen wat er vervolgens gebeurt en taken en tools coördineert. Hoe het verschilt van vaste automatisering, hoe het kan helpen en wat u controleert."
+description: "Flow AI betekent AI toepassen op een workflow zodat die kan beslissen wat er vervolgens gebeurt en taken en tools coördineert."
 date: "2026-10-02T10:00:00+05:45"
 featuredImage: "/assets/images/blog/wat-is-flow-ai-ai-toegepast-op-workflows-uitgelegd.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

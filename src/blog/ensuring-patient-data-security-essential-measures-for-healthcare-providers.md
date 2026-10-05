@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Patient Data Security: Essential Measures for Healthcare" # SEOAI:TITLE
-description: "Explore vital protocols and measures for ensuring patient data security, focusing on compliance, encryption, and continuous risk assessment in healthcare settings."
+description: "Key protocols for patient data security, focusing on compliance, encryption and continuous risk assessment in healthcare settings."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "A modern heart rate monitor in a sterile hospital setting, showcasing medical technology."

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "What Is Generative AI? How It Works, Where It Helps and Where It Fails"
+title: "What Is Generative AI? How It Works, Helps and Fails"
 translationKey: "what-is-generative-ai-how-it-works-and-where-it-fails"
 description: "Generative AI explained: how it works, how organizations use it, the risks NIST identifies such as confabulation and bias, and how to use it responsibly."
 date: "2026-10-02T12:00:00+05:45"

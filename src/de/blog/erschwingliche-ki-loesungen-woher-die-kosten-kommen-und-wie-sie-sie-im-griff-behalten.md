@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Erschwingliche KI-Lösungen: Woher die Kosten kommen und wie Sie sie im Griff behalten"
-description: "KI-Kosten hängen von Umfang, Daten, Integration und Nutzung ab. Wohin das Geld fließt, wie Sie es im Griff behalten und welche Fragen Sie jedem Anbieter vor dem Kauf stellen."
+title: "Erschwingliche KI-Lösungen: Woher die Kosten kommen"
+description: "KI-Kosten hängen von Umfang, Daten, Integration und Nutzung ab. Wohin das Geld fließt, wie Sie es im Griff behalten und was Sie Anbieter fragen sollten."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/erschwingliche-ki-loesungen-woher-die-kosten-kommen-und-wie-sie-sie-im-griff-behalten.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

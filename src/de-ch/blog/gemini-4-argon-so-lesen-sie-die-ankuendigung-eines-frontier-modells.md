@@ -1,13 +1,14 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells"
-description: "Google hat Gemini 4 Argon angekündigt, doch die meisten können es noch nicht nutzen. Was behauptet wurde, was unbewiesen ist und wie Unternehmen reagieren sollten."
+title: "Gemini 4 Argon: So lesen Sie die Frontier-Modell-Ankündigung"
+description: "Google hat Gemini 4 Argon angekündigt, doch die meisten können es noch nicht nutzen. Was behauptet wurde, was unbewiesen ist und wie Firmen reagieren."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 lastUpdated: "2026-10-02"
 translationKey: "gemini-4-argon-how-to-read-a-frontier-model-release"
 category: "Einblicke"
+pillar: "ai-frontier"
 readTime: 7
 ---
 

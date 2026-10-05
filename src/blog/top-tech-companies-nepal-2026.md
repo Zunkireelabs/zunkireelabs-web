@@ -29,7 +29,7 @@ Nepal has emerged as an unexpected hub for artificial intelligence work. Lower o
 
 ### Zunkiree Labs
 
-**Founded**: 2023 | **Location**: Kathmandu | **Team**: 15+
+**Founded**: 2018 | **Location**: Kathmandu | **Team**: 15+
 
 **Specialization**: AI-native search, RAG pipelines, enterprise AI infrastructure
 

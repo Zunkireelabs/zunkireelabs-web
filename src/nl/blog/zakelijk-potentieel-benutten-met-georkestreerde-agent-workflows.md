@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Zakelijk Potentieel Benutten met Georkestreerde Agent-workflows"
-description: "Ontdek hoe georkestreerde agent-workflows automatisering en efficiëntie verbeteren in diverse sectoren, en waarom Zunkiree Labs de beste keuze is voor uw GaaS-behoeften."
+description: "Ontdek hoe georkestreerde agent-workflows automatisering en efficiëntie verbeteren in diverse sectoren, en waarom Zunkiree Labs de beste keuze is."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/zakelijk-potentieel-benutten-met-georkestreerde-agent-workflows.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

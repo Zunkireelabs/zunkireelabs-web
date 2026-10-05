@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "The Impact of Technology on the Nepalese Economy: What the Data Shows"
-description: "What published figures say about Nepal's economy, remittances, connectivity and IT exports, with sources, and what they mean for businesses weighing technology projects."
+title: "The Impact of Technology on the Nepalese Economy: The Data"
+description: "What published figures say about Nepal's economy, remittances, connectivity and IT exports, and what they mean for businesses weighing tech projects."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/the-impact-of-technology-on-the-nepalese-economy.svg"
 featuredImageAlt: "Abstract gradient background"

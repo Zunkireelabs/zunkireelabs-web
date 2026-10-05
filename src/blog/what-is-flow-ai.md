@@ -2,7 +2,7 @@
 templateEngineOverride: "njk, md"
 title: "What Is Flow AI? AI Applied to Workflows, Explained"
 translationKey: "what-is-flow-ai"
-description: "Flow AI means applying AI to a workflow so it can decide what happens next and coordinate tasks and tools. How it differs from fixed automation, how it can help, and what to check."
+description: "Flow AI means applying AI to a workflow so it can decide what happens next and coordinate tasks and tools."
 date: "2026-10-02T10:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-flow-ai.svg"
 featuredImageAlt: "Abstract gradient background"

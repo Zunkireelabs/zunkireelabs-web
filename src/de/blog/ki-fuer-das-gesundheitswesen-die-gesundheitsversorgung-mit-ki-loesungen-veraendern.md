@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI für das Gesundheitswesen: Die Gesundheitsversorgung mit KI-Lösungen verändern"
-description: "Erfahren Sie, wie Künstliche Intelligenz im Gesundheitswesen eingesetzt wird, um Prozesse zu optimieren, den Patientenservice zu verbessern und betriebliche Effizienz zu steigern. Zunkiree Labs führt den Weg in die digitale Zukunft des Gesundheitswesens."
+title: "KI für das Gesundheitswesen: Versorgung mit KI verändern"
+description: "Wie Künstliche Intelligenz im Gesundheitswesen Prozesse optimiert, den Patientenservice verbessert und die Effizienz steigert. Mit Zunkiree Labs."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ki-fuer-das-gesundheitswesen-die-gesundheitsversorgung-mit-ki-loesungen-veraendern.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
