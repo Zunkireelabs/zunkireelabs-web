@@ -28,7 +28,8 @@ bodyClass: "v2-inter"
   "@type": "Article",
   "@id": "{{ site.url }}{{ page.url }}#article",
   "headline": "{{ title }}",
-  "description": "{{ description }}",{% if lang %}
+  "description": "{{ description }}",{% if pillar %}
+  "articleSection": "{{ pillar | pillarLabel(lang) }}",{% endif %}{% if lang %}
   "inLanguage": "{{ lang }}",{% endif %}
   {# featuredImage may be a site-relative path (/assets/images/blog/x.jpg, how
      hand-written posts set it) or an already-absolute URL (a remote image
@@ -41,6 +42,9 @@ bodyClass: "v2-inter"
   "image": "{% if "://" in schemaImage %}{{ schemaImage }}{% else %}{{ site.url }}{{ schemaImage }}{% endif %}",
   "datePublished": "{{ date | date('%Y-%m-%d') }}",
   "dateModified": "{{ lastUpdated | default(date) | date('%Y-%m-%d') }}",
+  "isAccessibleForFree": true,{% if pillar %}
+  "about": {"@type": "Thing", "name": "{{ pillar | pillarLabel(lang) }}"},{% endif %}{% set kw = [] %}{% for t in tags %}{% if t != "blog" and t != "post" and t.indexOf("blog-") != 0 %}{% set kw = (kw.push(t), kw) %}{% endif %}{% endfor %}{% if kw.length %}
+  "keywords": "{{ kw | join(', ') }}",{% endif %}
   "author": {
     "@type": "Person",
     "name": "{{ author.name }}",
@@ -203,6 +207,11 @@ bodyClass: "v2-inter"
             {% if category %}
             <span class="mb-4 inline-flex items-center rounded-full bg-[#76B900]/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#c3f562] backdrop-blur-sm">
               {{ category }}
+            </span>
+            {% endif %}
+            {% if pillar %}
+            <span class="mb-4 ml-2 inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+              {{ pillar | pillarLabel(lang) }}
             </span>
             {% endif %}
             <h1 class="max-w-3xl text-[26px] font-semibold leading-[1.15] tracking-tight text-white sm:text-[34px] lg:text-[40px]">
