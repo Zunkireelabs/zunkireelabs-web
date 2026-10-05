@@ -3,12 +3,22 @@ layout: "base.njk"
 permalink: "/cookie-preferences/"
 title: "Cookie Preferences | Zunkiree Labs"
 description: "Choose which cookies Zunkiree Labs may set on your device, and update your choices at any time."
-templateEngineOverride: "njk, md"
+bodyClass: "v2-inter"
+hideChrome: true
 ---
 
-<div
-  class="container-custom py-12 md:py-20 max-w-3xl"
-  x-data="{
+{#
+  Reskinned onto Website V2 (navbar-v2/footer-v2 chrome, Read-mode column
+  matching cookie-policy-zunkiree-labs.njk). Consent logic and localStorage
+  key are unchanged — visual system only.
+#}
+
+{% include "partials/navbar-v2.njk" %}
+
+<section class="bg-white px-4 pb-16 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pt-40">
+  <div
+    class="mx-auto max-w-3xl"
+    x-data="{
     analytics: true,
     marketing: true,
     saved: false,
@@ -32,66 +42,77 @@ templateEngineOverride: "njk, md"
       setTimeout(() => { window.location.reload(); }, 600);
     }
   }"
->
+  >
+    <nav class="mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-navy-400">
+        <li><a href="/" class="transition-colors hover:text-[#5a9100]">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-navy-900">Cookie Preferences</li>
+      </ol>
+    </nav>
 
-<h1 class="text-4xl sm:text-5xl md:text-[56px] font-normal tracking-tight leading-[1.1] text-gray-900 mb-4">Cookie Preferences</h1>
+    <h1 class="mb-4 text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1]">Cookie Preferences</h1>
 
-<p class="text-lg text-gray-600 leading-relaxed mb-10">Choose which cookies Zunkiree Labs may set on your device, and update your choices at any time. Necessary cookies always stay on since they keep the site working; the categories below are yours to choose. Changes take effect immediately on this device — see our <a href="/cookie-policy/" class="text-zunkiree-600 hover:underline">Cookie Policy</a> for what each category actually does.</p>
+    <p class="mb-10 text-[16px] leading-relaxed text-[#6B7280]">Control which cookies Zunkiree Labs is allowed to set on your device. Necessary cookies always stay on since they keep the site working; the categories below are yours to choose. Changes take effect immediately on this device &mdash; see our <a href="/cookie-policy/" class="font-medium text-sky-600 underline decoration-sky-200 underline-offset-2 transition-colors hover:text-[#5a9100]">Cookie Policy</a> for what each category actually does.</p>
 
-<div class="space-y-4">
+    <div class="space-y-4">
 
-  <div class="flex items-start justify-between gap-6 rounded-lg border border-gray-200 bg-gray-50 px-5 py-5">
-    <div>
-      <p class="font-medium text-gray-900 mb-1">Necessary</p>
-      <p class="text-sm text-gray-600 leading-relaxed">Required for the site to function. Always on.</p>
+      <div class="flex items-start justify-between gap-6 rounded-2xl border border-navy-100 bg-navy-50/50 p-5 shadow-subtle">
+        <div>
+          <p class="mb-1 text-[16px] font-semibold text-[#111827]">Necessary</p>
+          <p class="text-[14px] leading-relaxed text-[#6B7280]">Required for the site to function. Always on.</p>
+        </div>
+        <span class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full bg-[#76B900]/40 px-0.5" aria-hidden="true">
+          <span class="h-5 w-5 translate-x-5 rounded-full bg-white shadow"></span>
+        </span>
+      </div>
+
+      <div class="flex items-start justify-between gap-6 rounded-2xl border border-navy-100 bg-white p-5 shadow-subtle">
+        <div>
+          <p class="mb-1 text-[16px] font-semibold text-[#111827]">Analytics</p>
+          <p class="text-[14px] leading-relaxed text-[#6B7280]">Google Analytics (GA4) &mdash; helps us understand how visitors use the site.</p>
+        </div>
+        <button
+          type="button"
+          role="switch"
+          aria-label="Analytics cookies"
+          :aria-checked="analytics.toString()"
+          @click="analytics = !analytics"
+          class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full px-0.5 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          :class="analytics ? 'bg-[#76B900]' : 'bg-navy-200'"
+        >
+          <span class="h-5 w-5 rounded-full bg-white shadow transition-transform duration-200" :class="analytics ? 'translate-x-5' : 'translate-x-0'"></span>
+        </button>
+      </div>
+
+      <div class="flex items-start justify-between gap-6 rounded-2xl border border-navy-100 bg-white p-5 shadow-subtle">
+        <div>
+          <p class="mb-1 text-[16px] font-semibold text-[#111827]">Marketing</p>
+          <p class="text-[14px] leading-relaxed text-[#6B7280]">Meta/Facebook Pixel &mdash; used for ad conversions and retargeting.</p>
+        </div>
+        <button
+          type="button"
+          role="switch"
+          aria-label="Marketing cookies"
+          :aria-checked="marketing.toString()"
+          @click="marketing = !marketing"
+          class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full px-0.5 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
+          :class="marketing ? 'bg-[#76B900]' : 'bg-navy-200'"
+        >
+          <span class="h-5 w-5 rounded-full bg-white shadow transition-transform duration-200" :class="marketing ? 'translate-x-5' : 'translate-x-0'"></span>
+        </button>
+      </div>
+
     </div>
-    <span class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full bg-gray-300 px-0.5" aria-hidden="true">
-      <span class="h-5 w-5 translate-x-5 rounded-full bg-white shadow"></span>
-    </span>
-  </div>
 
-  <div class="flex items-start justify-between gap-6 rounded-lg border border-gray-200 px-5 py-5">
-    <div>
-      <p class="font-medium text-gray-900 mb-1">Analytics</p>
-      <p class="text-sm text-gray-600 leading-relaxed">Google Analytics (GA4) — helps us understand how visitors use the site.</p>
-    </div>
     <button
       type="button"
-      role="switch"
-      :aria-checked="analytics.toString()"
-      @click="analytics = !analytics"
-      class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full px-0.5 transition-colors duration-200"
-      :class="analytics ? 'bg-[#76B900]' : 'bg-gray-300'"
+      @click="save()"
+      class="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2"
     >
-      <span class="h-5 w-5 rounded-full bg-white shadow transition-transform duration-200" :class="analytics ? 'translate-x-5' : 'translate-x-0'"></span>
+      <span x-text="saved ? 'Saved' : 'Save preferences'"></span>
     </button>
   </div>
+</section>
 
-  <div class="flex items-start justify-between gap-6 rounded-lg border border-gray-200 px-5 py-5">
-    <div>
-      <p class="font-medium text-gray-900 mb-1">Marketing</p>
-      <p class="text-sm text-gray-600 leading-relaxed">Meta/Facebook Pixel — used for ad conversions and retargeting.</p>
-    </div>
-    <button
-      type="button"
-      role="switch"
-      :aria-checked="marketing.toString()"
-      @click="marketing = !marketing"
-      class="mt-1 inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full px-0.5 transition-colors duration-200"
-      :class="marketing ? 'bg-[#76B900]' : 'bg-gray-300'"
-    >
-      <span class="h-5 w-5 rounded-full bg-white shadow transition-transform duration-200" :class="marketing ? 'translate-x-5' : 'translate-x-0'"></span>
-    </button>
-  </div>
-
-</div>
-
-<button
-  type="button"
-  @click="save()"
-  class="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100]"
->
-  <span x-text="saved ? 'Saved' : 'Save preferences'"></span>
-</button>
-
-</div>
+{% include "partials/footer-v2.njk" %}
