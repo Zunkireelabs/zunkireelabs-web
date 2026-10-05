@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Cloud-Lösungen in der Schweiz: Datenbekanntgabe ins Ausland absichern"
-description: "Wie das Datenschutzgesetz die Bekanntgabe von Personendaten ins Ausland regelt, mit Angemessenheitsliste, Standardklauseln und verbindlichen Unternehmensregeln, und welche Fragen Sie einem Cloud-Anbieter stellen sollten."
+title: "Cloud-Lösungen in der Schweiz: Datenbekanntgabe ins Ausland"
+description: "Wie das Datenschutzgesetz die Bekanntgabe von Personendaten ins Ausland regelt, mit Angemessenheitsliste, Standardklauseln und Unternehmensregeln."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/cloud-loesungen-in-der-schweiz-datenbekanntgabe-ins-ausland-absichern.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

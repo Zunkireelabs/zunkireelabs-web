@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AI Infrastructure in Canada: The Privacy Rules Behind the Decision"
+title: "AI Infrastructure in Canada: The Privacy Rules Explained"
 description: "How Canada's federal private-sector privacy law and the Privacy Commissioner's guidance shape where and how an AI system should be hosted."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ai-infrastructure-in-canada-the-privacy-rules-behind-the-decision.svg"

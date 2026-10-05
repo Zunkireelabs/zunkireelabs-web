@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Die Zukunft von KI-Lösungen und KI-Entwicklung: Was sich ändert und was nicht"
+title: "Die Zukunft von KI-Lösungen: Was sich ändert und was nicht"
 description: "Verbreitung, Agenten-Workflows und neue Regeln verändern die KI-Entwicklung. Was Belege zeigen und was beim Bau funktionierender KI konstant bleibt."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/die-zukunft-von-ki-loesungen-und-ki-entwicklung-was-sich-aendert-und-was-nicht.svg"

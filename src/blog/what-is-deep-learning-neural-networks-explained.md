@@ -2,7 +2,7 @@
 templateEngineOverride: "njk, md"
 title: "What Is Deep Learning? Neural Networks Explained"
 translationKey: "what-is-deep-learning-neural-networks-explained"
-description: "Deep learning explained: how neural networks learn, the main architectures, where deep learning is used, its limits, and when a simpler method is the better choice."
+description: "Deep learning explained: how neural networks learn, main architectures, where it is used, its limits, and when a simpler method is better."
 date: "2026-10-02T13:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-deep-learning-neural-networks-explained.svg"
 featuredImageAlt: "Abstract gradient background"

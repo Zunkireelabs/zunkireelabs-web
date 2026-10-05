@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Enterprise Software for Canadian Businesses: Questions Before You Sign"
+title: "Enterprise Software for Canadian Businesses: Before You Sign"
 description: "The contract and accountability questions that matter when a Canadian organization commissions or buys enterprise software that handles personal information."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/enterprise-software-for-canadian-businesses-questions-before-you-sign.svg"

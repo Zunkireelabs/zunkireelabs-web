@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Affordable AI Technology Solutions: Where the Cost Comes From and How to Control It"
+title: "Affordable AI Solutions: Where the Cost Comes From"
 translationKey: "affordable-ai-technology-solutions-for-businesses-worldwide"
 description: "AI cost depends on scope, data, integration and usage. Where the money goes, ways to keep it under control, and questions to ask any supplier before you buy."
 date: "2026-10-02"

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Datatechniek Oplossingen: De Kracht van AI en Automatisering in Diversen Sectoren"
+title: "Datatechniek Oplossingen: AI en Automatisering in Sectoren"
 description: "Ontdek hoe Zunkiree Labs datatechniek oplossingen biedt door AI en automatisering in de sectoren onderwijs, gezondheidszorg, vastgoed en meer te integreren."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/datatechniek-oplossingen-de-kracht-van-ai-en-automatisering-in-diversen-sectoren.svg"

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "De Rol van AI in Cloud Computing: Bedrijven Wereldwijd Transformeren"
-description: "Ontdek hoe AI in cloud computing sectoren als gezondheidszorg, onderwijs, vastgoed en bureaus revolutioneert, de efficiëntie verhoogt en innovatieve oplossingen mogelijk maakt."
+title: "De Rol van AI in Cloud Computing: Bedrijven Transformeren"
+description: "Ontdek hoe AI in cloud computing sectoren als gezondheidszorg, onderwijs en vastgoed verandert, de efficiëntie verhoogt en innovatie mogelijk maakt."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/de-rol-van-ai-in-cloud-computing-bedrijven-wereldwijd-transformeren.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

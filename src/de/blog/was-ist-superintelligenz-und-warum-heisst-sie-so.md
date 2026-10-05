@@ -8,6 +8,7 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 lastUpdated: "2026-10-02"
 translationKey: "what-is-superintelligence-and-why-is-it-called-that"
 category: "Einblicke"
+pillar: "ai-frontier"
 readTime: 8
 ---
 

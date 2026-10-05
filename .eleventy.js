@@ -1,6 +1,7 @@
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import { hreflangFor, languageSwitcher, localDate } from "./src/_lib/i18n.js";
 import { createLocaleLinkRewriter } from "./src/_lib/locale-links.js";
+import pillars from "./src/_data/pillars.js";
 import path from "path";
 import fs from "fs";
 
@@ -11,7 +12,7 @@ function copyNonHtmlFiles() {
     closeBundle() {
       const eleventyTempDir = path.resolve(process.cwd(), '.11ty-vite');
       const outputDir = path.resolve(process.cwd(), 'dist');
-      const filesToCopy = ['sitemap.xml', 'robots.txt'];
+      const filesToCopy = ['sitemap.xml', 'robots.txt', 'feed.xml'];
 
       filesToCopy.forEach(file => {
         const src = path.join(eleventyTempDir, file);
@@ -184,6 +185,7 @@ export default function (eleventyConfig) {
     const extra = new Map(posts.map(p => [p.url, {
       tags: new Set((p.data?.tags || []).filter(t => t !== "blog" && t !== "post")),
       category: p.data?.category || null,
+      pillar: p.data?.pillar || null,
     }]));
     const similarity = (a, b) => {
       const A = vec.get(a.url), B = vec.get(b.url);
@@ -191,6 +193,7 @@ export default function (eleventyConfig) {
       let bonus = 0; const ea = extra.get(a.url), eb = extra.get(b.url);
       for (const t of eb.tags) if (ea.tags.has(t)) bonus += 0.05;
       if (ea.category && ea.category === eb.category) bonus += 0.03;
+      if (ea.pillar && ea.pillar === eb.pillar) bonus += 0.03;
       return dot / (A.norm * B.norm) + bonus;
     };
     const inbound = new Map(posts.map(p => [p.url, 0]));
@@ -282,6 +285,26 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("insights", (collectionApi) =>
     collectionApi.getFilteredByTag("blog").filter((p) => p.data.category === "Insights")
   );
+
+  // Pillars that have at least one Insights post, with counts, for the chip
+  // row on /blog/insights/ (a pillar with no posts shows no chip).
+  eleventyConfig.addCollection("insightsPillars", (collectionApi) => {
+    const posts = collectionApi.getFilteredByTag("blog").filter((p) => p.data.category === "Insights");
+    return pillars
+      .map((pl) => {
+        const own = posts.filter((p) => p.data.pillar === pl.slug).reverse();
+        return { ...pl, count: own.length, posts: own };
+      })
+      .filter((pl) => pl.count > 0);
+  });
+
+  // `{{ pillar | pillarLabel(lang) }}` -> display label ("" for an unknown slug).
+  eleventyConfig.addFilter("pillarLabel", (slug, lang) => {
+    const pl = pillars.find((x) => x.slug === slug);
+    if (!pl) return "";
+    const key = String(lang || "en").toLowerCase();
+    return pl[key] || pl.label;
+  });
 
   return {
     dir: {

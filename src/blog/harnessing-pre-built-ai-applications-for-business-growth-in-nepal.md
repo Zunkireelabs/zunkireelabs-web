@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Harnessing Pre-Built AI Applications for Business Growth in Nepal"
-description: "Discover how pre-built AI applications can transform businesses in Nepal. Learn about industry-specific solutions from Zunkiree Labs designed to improve efficiency and operational effectiveness."
+description: "How pre-built AI applications can transform businesses in Nepal, with industry-specific solutions from Zunkiree Labs for efficiency."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/harnessing-pre-built-ai-applications-for-business-growth-in-nepal.svg"
 featuredImageAlt: "Abstract gradient background"

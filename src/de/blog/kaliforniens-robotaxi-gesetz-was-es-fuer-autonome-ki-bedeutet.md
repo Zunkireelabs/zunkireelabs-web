@@ -8,6 +8,7 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 lastUpdated: "2026-10-02"
 translationKey: "robotaxis-first-responders-california-law-future-of-autonomous-systems"
 category: "Einblicke"
+pillar: "future-of-industries"
 readTime: 7
 ---
 

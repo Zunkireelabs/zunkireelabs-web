@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI-Entwicklung in der Schweiz: Was das Datenschutzgesetz für KI verlangt"
-description: "Was der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte zur Anwendung des Datenschutzgesetzes auf KI sagt, und welche Fragen Sie einem KI-Entwicklungspartner stellen sollten."
+title: "KI-Entwicklung in der Schweiz: Was das DSG für KI verlangt"
+description: "Was der Eidgenössische Datenschutzbeauftragte zur Anwendung des Datenschutzgesetzes auf KI sagt und welche Fragen Sie einem KI-Partner stellen sollten."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ki-entwicklung-in-der-schweiz-was-das-datenschutzgesetz-fuer-ki-verlangt.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

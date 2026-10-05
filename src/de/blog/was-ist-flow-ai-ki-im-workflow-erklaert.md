@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Was ist Flow AI? KI im Workflow erklärt"
-description: "Flow AI bedeutet, KI auf einen Workflow anzuwenden, damit sie entscheiden kann, was als Nächstes geschieht, und Aufgaben und Tools koordiniert. Wie es sich von fester Automatisierung unterscheidet, wie es helfen kann und was Sie prüfen sollten."
+description: "Flow AI heißt, KI auf einen Workflow anzuwenden, damit sie entscheidet, was als Nächstes geschieht. Unterschied zu fester Automatisierung und Prüfpunkte."
 date: "2026-10-02T10:00:00+05:45"
 featuredImage: "/assets/images/blog/was-ist-flow-ai-ki-im-workflow-erklaert.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

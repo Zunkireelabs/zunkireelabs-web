@@ -1,13 +1,14 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Gemini 4 Argon: zo leest u de release van een frontiermodel"
-description: "Google heeft Gemini 4 Argon aangekondigd, maar de meeste mensen kunnen het nog niet gebruiken. Wat er geclaimd is, wat onbewezen is en hoe bedrijven moeten reageren."
+description: "Google heeft Gemini 4 Argon aangekondigd, maar de meeste mensen kunnen het nog niet gebruiken."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 lastUpdated: "2026-10-02"
 translationKey: "gemini-4-argon-how-to-read-a-frontier-model-release"
 category: "Inzichten"
+pillar: "ai-frontier"
 readTime: 7
 ---
 

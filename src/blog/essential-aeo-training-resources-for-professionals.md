@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Essential AEO Training Resources for Professionals"
-description: "Explore comprehensive AEO training resources designed to enhance your skills in search engine optimization and AI-driven content strategies. Discover where to find training, best practices, and effective tools."
+description: "Explore comprehensive AEO training resources designed to enhance your skills in search engine optimization and AI-driven content strategies."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/39204832/pexels-photo-39204832.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Corporate training session in a bright, modern office setting with diverse professionals engaged in discussion."

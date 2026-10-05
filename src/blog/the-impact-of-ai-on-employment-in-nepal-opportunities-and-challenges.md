@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "The Impact of AI on Employment in Nepal: Opportunities and Challenges"
+title: "AI and Employment in Nepal: Opportunities and Challenges"
 description: "Explore how the adoption of AI in Nepal is transforming employment landscapes, creating new job opportunities, and presenting challenges for the workforce."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/7709240/pexels-photo-7709240.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

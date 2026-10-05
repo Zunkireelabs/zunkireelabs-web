@@ -48,7 +48,7 @@ export default {
     },
     "ai-ecommerce": {
       "title": "AI Ecommerce Solutions in Lalitpur",
-      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Lalitpur businesses. Delivered in person from our Sanepa, Lalitpur headquarters.",
+      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Lalitpur businesses.",
       "intro": "Patan's metalwork, wood carving and stone sculpture traditions give local makers products worth selling beyond the Valley. AI Ecommerce Solutions from Zunkiree Labs: aI shopping agents and conversational commerce for the Nepal market.",
       "highlights": [
         "Conversational commerce and smart recommendations",
@@ -90,7 +90,7 @@ export default {
     },
     "saas-development": {
       "title": "SaaS Development Company in Lalitpur",
-      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Lalitpur businesses. Delivered in person from our Sanepa, Lalitpur headquarters.",
+      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Lalitpur businesses.",
       "intro": "Lalitpur sits next to Kathmandu's startup and engineering-education scene, with Pulchowk Campus nearby, so local founders have talent close by. SaaS Development from Zunkiree Labs: multi-tenant platforms with subscription billing and user management.",
       "highlights": [
         "Multi-tenant architecture",
@@ -111,7 +111,7 @@ export default {
     },
     "aeo-seo": {
       "title": "SEO and AEO Services in Lalitpur",
-      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Lalitpur businesses. Delivered in person from our Sanepa, Lalitpur headquarters.",
+      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Lalitpur businesses.",
       "intro": "Heritage tourism and crafts bring international searchers to Patan, and more of them now ask AI assistants instead of searching. AEO & SEO from Zunkiree Labs: search and AI-assistant visibility for Google, ChatGPT and Perplexity.",
       "highlights": [
         "Optimization for traditional search and AI citation",
@@ -134,7 +134,7 @@ export default {
   "bhaktapur": {
     "ai-development": {
       "title": "AI Development Company in Bhaktapur",
-      "description": "Custom AI systems built on RAG pipelines and LLM integration, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "Custom AI systems built on RAG pipelines and LLM integration, delivered for Bhaktapur businesses.",
       "intro": "Bhaktapur's potters, craft sellers, guesthouses and restaurants run on repeated customer questions, orders and bookings, which suits automation. AI Development Services from Zunkiree Labs: custom AI systems built on RAG pipelines and LLM integration.",
       "highlights": [
         "RAG pipelines and LLM integration",
@@ -155,7 +155,7 @@ export default {
     },
     "ai-customer-experience": {
       "title": "AI Customer Support Solutions in Bhaktapur",
-      "description": "AI-powered support that answers customer questions instantly, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "AI-powered support that answers customer questions instantly, delivered for Bhaktapur businesses.",
       "intro": "Heritage tourism brings steady visitor questions to Bhaktapur's guesthouses, restaurants and craft shops. AI Customer Experience from Zunkiree Labs: aI-powered support that answers customer questions instantly.",
       "highlights": [
         "Support assistants grounded in your own documents",
@@ -176,7 +176,7 @@ export default {
     },
     "ai-ecommerce": {
       "title": "AI Ecommerce Solutions in Bhaktapur",
-      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Bhaktapur businesses.",
       "intro": "Bhaktapur's pottery and handicrafts are known across Nepal, and online selling can reach buyers beyond the Valley. AI Ecommerce Solutions from Zunkiree Labs: aI shopping agents and conversational commerce for the Nepal market.",
       "highlights": [
         "Conversational commerce and smart recommendations",
@@ -197,7 +197,7 @@ export default {
     },
     "data-systems": {
       "title": "Data Engineering and Analytics Services in Bhaktapur",
-      "description": "Data pipelines, warehouses and analytics built for AI workloads, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "Data pipelines, warehouses and analytics built for AI workloads, delivered for Bhaktapur businesses.",
       "intro": "Craft sellers, guesthouses and farm-produce traders in Bhaktapur often track stock, orders and bookings by hand. Data Systems from Zunkiree Labs: data pipelines, warehouses and analytics built for AI workloads.",
       "highlights": [
         "Pipelines and warehouses built for AI workloads",
@@ -218,7 +218,7 @@ export default {
     },
     "saas-development": {
       "title": "SaaS Development Company in Bhaktapur",
-      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Bhaktapur businesses.",
       "intro": "Khwopa Engineering College, set up by Bhaktapur Municipality, gives the area a local pool of computer-engineering graduates. SaaS Development from Zunkiree Labs: multi-tenant platforms with subscription billing and user management.",
       "highlights": [
         "Multi-tenant architecture",
@@ -260,7 +260,7 @@ export default {
     },
     "aeo-seo": {
       "title": "SEO and AEO Services in Bhaktapur",
-      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Bhaktapur businesses. Delivered from our Sanepa, Lalitpur headquarters, within the Kathmandu Valley.",
+      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Bhaktapur businesses.",
       "intro": "Travellers planning a visit to Bhaktapur increasingly ask AI assistants what to see, where to stay and what to buy. AEO & SEO from Zunkiree Labs: search and AI-assistant visibility for Google, ChatGPT and Perplexity.",
       "highlights": [
         "Optimization for traditional search and AI citation",
@@ -283,7 +283,7 @@ export default {
   "pokhara": {
     "ai-development": {
       "title": "AI Development Company in Pokhara",
-      "description": "Custom AI systems built on RAG pipelines and LLM integration, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "Custom AI systems built on RAG pipelines and LLM integration, delivered for Pokhara businesses.",
       "intro": "Pokhara's hotels, tour operators, trekking agencies and colleges field the same visitor and student questions all day, across several languages. AI Development Services from Zunkiree Labs: custom AI systems built on RAG pipelines and LLM integration.",
       "highlights": [
         "RAG pipelines and LLM integration",
@@ -304,7 +304,7 @@ export default {
     },
     "ai-customer-experience": {
       "title": "AI Customer Support Solutions in Pokhara",
-      "description": "AI-powered support that answers customer questions instantly, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "AI-powered support that answers customer questions instantly, delivered for Pokhara businesses.",
       "intro": "Visitors reach Pokhara from around the world and ask about treks, rooms, transport and weather at all hours. AI Customer Experience from Zunkiree Labs: aI-powered support that answers customer questions instantly.",
       "highlights": [
         "Support assistants grounded in your own documents",
@@ -325,7 +325,7 @@ export default {
     },
     "ai-ecommerce": {
       "title": "AI Ecommerce Solutions in Pokhara",
-      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for Pokhara businesses.",
       "intro": "With Pokhara Regional International Airport open since January 2023, tour operators and local sellers can reach customers directly online. AI Ecommerce Solutions from Zunkiree Labs: aI shopping agents and conversational commerce for the Nepal market.",
       "highlights": [
         "Conversational commerce and smart recommendations",
@@ -346,7 +346,7 @@ export default {
     },
     "data-systems": {
       "title": "Data Engineering and Analytics Services in Pokhara",
-      "description": "Data pipelines, warehouses and analytics built for AI workloads, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "Data pipelines, warehouses and analytics built for AI workloads, delivered for Pokhara businesses.",
       "intro": "Hotels, traders and colleges in Pokhara collect bookings, sales and student records that are rarely joined up. Data Systems from Zunkiree Labs: data pipelines, warehouses and analytics built for AI workloads.",
       "highlights": [
         "Pipelines and warehouses built for AI workloads",
@@ -367,7 +367,7 @@ export default {
     },
     "custom-software": {
       "title": "Custom Software Development Company in Pokhara",
-      "description": "Internal tools and business systems tailored to your workflows, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "Internal tools and business systems tailored to your workflows, delivered for Pokhara businesses.",
       "intro": "Pokhara's hospitality, trade and education sectors often run on spreadsheets and messaging apps that custom tools can replace. Custom Software Development from Zunkiree Labs: internal tools and business systems tailored to your workflows.",
       "highlights": [
         "Internal tools tailored to your workflows",
@@ -388,7 +388,7 @@ export default {
     },
     "saas-development": {
       "title": "SaaS Development Company in Pokhara",
-      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "Multi-tenant platforms with subscription billing and user management, delivered for Pokhara businesses.",
       "intro": "Pokhara University and the city's colleges produce graduates who could become both users and builders of local software products. SaaS Development from Zunkiree Labs: multi-tenant platforms with subscription billing and user management.",
       "highlights": [
         "Multi-tenant architecture",
@@ -430,7 +430,7 @@ export default {
     },
     "aeo-seo": {
       "title": "SEO and AEO Services in Pokhara",
-      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Pokhara businesses. Remote collaboration from Sanepa, Lalitpur, with travel for key project meetings.",
+      "description": "Search and AI-assistant visibility for Google, ChatGPT and Perplexity, delivered for Pokhara businesses.",
       "intro": "Travellers planning a Pokhara trip increasingly ask AI assistants for itineraries, hotels and trek advice. AEO & SEO from Zunkiree Labs: search and AI-assistant visibility for Google, ChatGPT and Perplexity.",
       "highlights": [
         "Optimization for traditional search and AI citation",
@@ -453,7 +453,7 @@ export default {
   "kathmandu": {
     "ai-ecommerce": {
       "title": "AI Ecommerce Solutions in Kathmandu",
-      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for businesses in Nepal's capital. Delivered from our Sanepa, Lalitpur headquarters, minutes from Kathmandu.",
+      "description": "AI shopping agents and conversational commerce for the Nepal market, delivered for businesses in Nepal's capital.",
       "intro": "Nepal's retailers and online sellers in the capital increasingly want conversational shopping and local payment options built in. AI Ecommerce Solutions from Zunkiree Labs: aI shopping agents and conversational commerce for the Nepal market.",
       "highlights": [
         "Conversational commerce and smart recommendations",

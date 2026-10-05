@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Wat is deep learning? Neurale netwerken uitgelegd"
-description: "Deep learning uitgelegd: hoe neurale netwerken leren, de belangrijkste architecturen, waar deep learning wordt gebruikt, wat de grenzen zijn en wanneer een eenvoudigere methode de betere keuze is."
+description: "Deep learning uitgelegd: hoe neurale netwerken leren, de belangrijkste architecturen, toepassingen, grenzen en wanneer een eenvoudigere methode beter is."
 date: "2026-10-02T13:00:00+05:45"
 featuredImage: "/assets/images/blog/wat-is-deep-learning-neurale-netwerken-uitgelegd.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

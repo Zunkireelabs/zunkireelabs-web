@@ -1,6 +1,6 @@
 ---
 title: "Understanding GaaS: Agentic as a Service Explained" # SEOAI:TITLE
-description: "How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business."
+description: "How Agentic as a Service (GaaS) apps are architected: manager/worker agents, Human-in-the-Loop gates, sandboxing and Cost-per-Outcome pricing."
 date: "2026-08-07"
 featuredImage: "https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Close-up of colorful programming code displayed on a computer monitor with a dark background."

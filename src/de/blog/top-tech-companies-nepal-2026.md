@@ -1,6 +1,6 @@
 ---
 title: "Die 50 wichtigsten IT- und Tech-Unternehmen in Nepal (Liste 2026)"
-description: "Eine recherchierte Liste von 50 IT-, Software-, KI- und Startup-Unternehmen in Nepal für 2026, nach Kategorien gegliedert, mit Angaben zur Auswahl der Unternehmen."
+description: "Eine recherchierte Liste von 50 IT-, Software-, KI- und Startup-Unternehmen in Nepal für 2026, nach Kategorien gegliedert, mit Hinweisen zur Auswahl."
 date: 2026-03-30
 lastUpdated: 2026-10-01
 authorId: sadin-shrestha
@@ -29,7 +29,7 @@ Nepal hat sich überraschend zu einem Zentrum für Arbeit im Bereich künstliche
 
 ### Zunkiree Labs
 
-**Gegründet**: 2023 | **Standort**: Kathmandu | **Team**: 15+
+**Gegründet**: 2018 | **Standort**: Kathmandu | **Team**: 15+
 
 **Spezialisierung**: KI-native Suche, RAG-Pipelines, KI-Infrastruktur für Unternehmen
 

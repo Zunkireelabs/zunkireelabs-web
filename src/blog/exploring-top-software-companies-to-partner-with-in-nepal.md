@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Exploring Top Software Companies to Partner With in Nepal"
-description: "Discover the best software companies in Nepal for strategic partnerships, focusing on AI development, web development, mobile applications, and innovative technology solutions."
+description: "The best software companies in Nepal for strategic partnerships, covering AI development, web and mobile apps, and technology solutions."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/34803973/pexels-photo-34803973.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Close-up of laptop with coding software and a motivational coffee mug on a desk."

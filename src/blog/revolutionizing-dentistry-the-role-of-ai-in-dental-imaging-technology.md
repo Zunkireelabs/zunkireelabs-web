@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Revolutionizing Dentistry: The Role of AI in Dental Imaging Technology"
-description: "Explore how Zunkireelabs is leveraging AI technology in dental imaging to enhance diagnostic accuracy, streamline workflows, and improve patient care in the dental industry."
+title: "The Role of AI in Dental Imaging Technology"
+description: "How Zunkiree Labs applies AI to dental imaging to improve diagnostic accuracy, streamline workflows and support better patient care."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/revolutionizing-dentistry-the-role-of-ai-in-dental-imaging-technology.svg"
 featuredImageAlt: "Abstract gradient background"

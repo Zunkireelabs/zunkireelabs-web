@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Betaalbare AI-oplossingen: Waar de kosten vandaan komen en hoe u ze beheerst"
-description: "AI-kosten hangen af van scope, data, integratie en gebruik. Waar het geld heen gaat, hoe u de kosten beheerst en welke vragen u elke leverancier stelt voordat u koopt."
+title: "Betaalbare AI-oplossingen: waar de kosten vandaan komen"
+description: "AI-kosten hangen af van scope, data, integratie en gebruik. Waar het geld heen gaat, hoe u kosten beheerst en welke vragen u elke leverancier stelt."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/betaalbare-ai-oplossingen-waar-de-kosten-vandaan-komen-en-hoe-u-ze-beheerst.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

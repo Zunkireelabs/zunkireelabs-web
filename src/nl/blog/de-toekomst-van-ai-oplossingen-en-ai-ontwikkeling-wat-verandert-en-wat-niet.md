@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "De Toekomst van AI-oplossingen en AI-ontwikkeling: Wat verandert en wat niet"
+title: "De Toekomst van AI-oplossingen: wat verandert en wat niet"
 description: "Adoptie, agent-workflows en nieuwe regels veranderen AI-ontwikkeling. Wat gepubliceerd bewijs laat zien en wat constant blijft bij het bouwen van AI die werkt."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/de-toekomst-van-ai-oplossingen-en-ai-ontwikkeling-wat-verandert-en-wat-niet.svg"

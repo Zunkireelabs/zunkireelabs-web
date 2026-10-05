@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Ethische AI: principes, risico's en hoe organisaties ze toepassen"
-description: "Ethische AI uitgelegd: de kaders van UNESCO, OECD en NIST, hoe de wetgeving bijtrekt, de specifieke risico's van generatieve AI en een praktische checklist voor organisaties."
+title: "Ethische AI: principes, risico's en toepassing in organisaties"
+description: "Ethische AI uitgelegd: de kaders van UNESCO, OECD en NIST, de wetgeving, de risico's van generatieve AI en een praktische checklist voor organisaties."
 date: "2026-10-02T11:00:00+05:45"
 featuredImage: "/assets/images/blog/ethische-ai-principes-risicos-en-hoe-organisaties-ze-toepassen.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

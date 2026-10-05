@@ -8,7 +8,7 @@ layout: glossary-term.njk
 hideChrome: true
 permalink: /glossary/{{ term.id }}/
 eleventyComputed:
-  title: "{{ term.term }} | AI Glossary | Zunkiree Labs"
+  title: '{{ term.term }} | AI Glossary{{ "" if term.term.length > 28 else " | Zunkiree Labs" }}'
   description: "{{ term.shortDef }} Learn more in our AI glossary."
   termId: "{{ term.id }}"
 ---

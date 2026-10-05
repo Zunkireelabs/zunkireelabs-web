@@ -1,13 +1,14 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Waarom AI-agents hun eigen infrastructuur krijgen"
-description: "Agentzwermen voor beveiligingstests, agents in berichten-apps en de roep om een AI-native besturingssysteem: wat het agentnieuws van deze week betekent voor bedrijven."
+description: "Agentzwermen voor beveiligingstests, agents in berichten-apps en de roep om een AI-native besturingssysteem: wat het agentnieuws betekent voor bedrijven."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 lastUpdated: "2026-10-02"
 translationKey: "ai-agents-are-getting-their-own-infrastructure"
 category: "Inzichten"
+pillar: "ai-frontier"
 readTime: 6
 ---
 

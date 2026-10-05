@@ -1,0 +1,22 @@
+---
+layout: base.njk
+eleventyComputed:
+  title: "{{ pl.label }} | AI & Technology Insights | Zunkiree Labs"
+  description: "{{ pl.intro }}"
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.insightsPillars
+  size: 1
+  alias: pl
+permalink: "/blog/insights/{{ pl.slug }}/"
+---
+{# One real page per Insights pillar, e.g. /blog/insights/ai-healthcare/. The
+   chips on /blog/insights/ link here, so the topic is in the URL path. #}
+{% set posts = [] %}
+{% for p in collections.insights | reverse %}{% if p.data.pillar == pl.slug %}{% set posts = (posts.push(p), posts) %}{% endif %}{% endfor %}
+{% set activePillar = pl.slug %}
+{% set activePillarLabel = pl.label %}
+{% set activePillarIntro = pl.intro %}
+{% set hidePagination = true %}
+{% include "partials/insights-listing.njk" %}

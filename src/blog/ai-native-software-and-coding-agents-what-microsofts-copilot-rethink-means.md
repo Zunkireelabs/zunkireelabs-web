@@ -5,6 +5,7 @@ description: "Microsoft pitches Copilot as an 'OS for work' with coding and agen
 date: 2026-10-01
 lastUpdated: 2026-10-01
 category: Insights
+pillar: "software-future"
 tags:
   - AI Coding Agents
   - AI-Native Software

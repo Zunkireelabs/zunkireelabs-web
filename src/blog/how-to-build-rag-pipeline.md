@@ -1,6 +1,6 @@
 ---
 title: "How to Build a RAG Pipeline: A Step-by-Step Guide for 2026"
-description: "Learn how to build a production-ready RAG (Retrieval-Augmented Generation) pipeline. From document ingestion to deployment, this guide covers architecture, tools, and best practices."
+description: "How to build a production-ready RAG (Retrieval-Augmented Generation) pipeline, from document ingestion to deployment, with architecture and tools."
 date: 2026-03-30
 lastUpdated: 2026-03-30
 authorId: sadin-shrestha

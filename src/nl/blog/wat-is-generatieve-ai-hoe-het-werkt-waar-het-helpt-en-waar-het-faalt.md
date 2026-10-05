@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Wat is generatieve AI? Hoe het werkt, waar het helpt en waar het faalt"
+title: "Wat is generatieve AI? Hoe het werkt, waar het helpt en faalt"
 description: "Generatieve AI uitgelegd: hoe het werkt, hoe organisaties het gebruiken, de risico's die NIST noemt, zoals confabulatie en bias, en hoe u het verantwoord inzet."
 date: "2026-10-02T12:00:00+05:45"
 featuredImage: "/assets/images/blog/wat-is-generatieve-ai-hoe-het-werkt-waar-het-helpt-en-waar-het-faalt.svg"

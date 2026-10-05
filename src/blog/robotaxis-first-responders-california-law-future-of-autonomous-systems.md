@@ -6,6 +6,7 @@ description: "California will fine robotaxi operators who block first responders
 date: 2026-10-02
 lastUpdated: 2026-10-02
 category: Insights
+pillar: "future-of-industries"
 tags:
   - Autonomous Systems
   - AI Regulation

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "De Toekomst van AI Ontwikkeling: Innovaties en Implicaties voor Diverse Sectoren"
-description: "Ontdek hoe Zunkiree Labs AI-ontwikkeling transformeert en de efficiëntie vergroot in sectoren zoals onderwijs, gezondheidszorg, vastgoed en meer. Leer over de toekomst van AI en wat het voor uw bedrijf kan betekenen."
+title: "De Toekomst van AI-ontwikkeling: Innovaties en Implicaties"
+description: "Ontdek hoe Zunkiree Labs AI-ontwikkeling transformeert en de efficiëntie vergroot in sectoren zoals onderwijs, gezondheidszorg, vastgoed en meer."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/de-toekomst-van-ai-ontwikkeling-innovaties-en-implicaties-voor-diverse-sectoren.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"

@@ -5,6 +5,7 @@ description: "Google announced Gemini 4 Argon but most people can't use it yet. 
 date: 2026-10-01
 lastUpdated: 2026-10-01
 category: Insights
+pillar: "ai-frontier"
 tags:
   - Frontier Models
   - Gemini

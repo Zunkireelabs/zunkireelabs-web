@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Webentwicklung für Schweizer Unternehmen: Was eine Website mit Personendaten zu tun hat"
-description: "Welche Datenschutzfragen bei einem Website-Projekt in der Schweiz anfallen, vor allem bei Hosting, Analyse-Tools und Auftragnehmern im Ausland, und was der EDÖB dazu sagt."
+title: "Webentwicklung für Schweizer Firmen: Website und Personendaten"
+description: "Welche Datenschutzfragen bei einem Website-Projekt in der Schweiz anfallen, etwa bei Hosting, Analyse-Tools und Auftragnehmern im Ausland, laut EDÖB."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/webentwicklung-fuer-schweizer-unternehmen-was-eine-website-mit-personendaten-zu-tun-hat.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

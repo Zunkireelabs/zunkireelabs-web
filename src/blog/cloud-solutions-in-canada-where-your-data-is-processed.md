@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Cloud Solutions in Canada: Where Your Data Is Processed"
-description: "What Canadian organizations should ask about data location, sub-processors and foreign access when choosing a cloud provider, based on the Privacy Commissioner's guidance."
+description: "What Canadian organizations should ask about data location, sub-processors and foreign access when choosing a cloud provider."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/cloud-solutions-in-canada-where-your-data-is-processed.svg"
 featuredImageAlt: "Abstract gradient background"

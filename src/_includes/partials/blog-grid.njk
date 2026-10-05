@@ -4,7 +4,7 @@
     {% if posts.length > 0 %}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for post in posts %}
-      <a href="{{ post.url }}" class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+      <a href="{{ post.url }}"{% if post.data.pillar %} data-pillar="{{ post.data.pillar }}"{% endif %} class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
         {# Featured Image #}
         {% if post.data.featuredImage %}
         <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
@@ -32,7 +32,10 @@
         <div class="p-6">
           {# Category + Date #}
           <div class="flex items-center gap-3 mb-3">
-            {% if post.data.category %}
+            {% if post.data.pillar %}
+            <span class="text-xs font-medium text-zunkiree-600">{{ post.data.pillar | pillarLabel }}</span>
+            <span class="text-gray-300">·</span>
+            {% elif post.data.category %}
             <span class="text-xs font-medium text-zunkiree-600">{{ post.data.category }}</span>
             <span class="text-gray-300">·</span>
             {% endif %}
@@ -60,7 +63,7 @@
       {% endfor %}
     </div>
 
-    {% if pagination.pages.length > 1 %}
+    {% if pagination.pages.length > 1 and not hidePagination %}
     {# Pagination — reuses this page's own real link/button/icon classes #}
     <nav class="mt-12 flex items-center justify-between" aria-label="Blog pagination">
       {% if pagination.href.previous %}

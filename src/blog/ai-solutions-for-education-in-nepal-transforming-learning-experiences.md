@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AI Solutions for Education in Nepal: Transforming Learning Experiences"
-description: "Explore how AI solutions are shaping the education sector in Nepal. Learn about the impact of technology on personalized learning, data management, and operational efficiency."
+title: "AI Solutions for Education in Nepal: Transforming Learning"
+description: "How AI solutions are shaping education in Nepal, from personalized learning and data management to operational efficiency."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ai-solutions-for-education-in-nepal-transforming-learning-experiences.svg"
 featuredImageAlt: "Abstract gradient background"

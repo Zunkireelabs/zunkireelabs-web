@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "AI Training Programs in Nepal: Empowering the Future of Tech"
-description: "Explore AI training programs in Nepal that equip individuals and businesses with the skills needed to thrive in the digital age. Discover how Zunkiree Labs contributes to this growing trend."
+description: "Explore AI training programs in Nepal that equip individuals and businesses with the skills needed to thrive in the digital age."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ai-training-programs-in-nepal-empowering-the-future-of-tech.svg"
 featuredImageAlt: "Abstract gradient background"

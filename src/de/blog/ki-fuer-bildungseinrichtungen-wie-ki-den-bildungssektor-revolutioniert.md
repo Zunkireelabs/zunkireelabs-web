@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI für Bildungseinrichtungen: Wie KI den Bildungssektor revolutioniert"
+title: "KI für Bildungseinrichtungen: Bildungssektor revolutionieren"
 description: "Entdecken Sie, wie Zunkiree Labs KI für Bildungseinrichtungen bereitstellt und revolutionieren Sie Ihre Bildungsstrategien mit intelligenten Lösungen."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ki-fuer-bildungseinrichtungen-wie-ki-den-bildungssektor-revolutioniert.svg"

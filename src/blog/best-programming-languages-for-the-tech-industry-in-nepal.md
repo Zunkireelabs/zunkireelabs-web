@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Best Programming Languages for the Tech Industry in Nepal"
-description: "Explore the best programming languages essential for Nepal's growing tech industry, from AI to web development. Discover how Zunkiree Labs can support your tech journey."
+description: "Explore the best programming languages essential for Nepal's growing tech industry, from AI to web development."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/best-programming-languages-for-the-tech-industry-in-nepal.svg"
 featuredImageAlt: "Abstract gradient background"

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI datenschutzkonform einsetzen: Was die Datenschutzkonferenz empfiehlt"
-description: "Was die Orientierungshilfe «Künstliche Intelligenz und Datenschutz» der deutschen Datenschutzaufsichtsbehörden Unternehmen rät, mit den Terminen des EU-KI-Gesetzes."
+title: "KI datenschutzkonform einsetzen: Empfehlung der DSK"
+description: "Was die Orientierungshilfe «Künstliche Intelligenz und Datenschutz» der Datenschutzaufsichtsbehörden Unternehmen rät, mit den Terminen des EU-KI-Gesetzes."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ki-datenschutzkonform-einsetzen-was-die-datenschutzkonferenz-empfiehlt.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

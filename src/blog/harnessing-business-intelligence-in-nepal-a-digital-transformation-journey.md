@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Harnessing Business Intelligence in Nepal: A Digital Transformation Journey"
-description: "Explore the role of Business Intelligence in transforming industries in Nepal, from healthcare to real estate. Discover strategies to drive data-driven decisions with Zunkiree Labs."
+title: "Business Intelligence in Nepal: A Digital Transformation"
+description: "Explore the role of Business Intelligence in transforming industries in Nepal, from healthcare to real estate."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/harnessing-business-intelligence-in-nepal-a-digital-transformation-journey.svg"
 featuredImageAlt: "Abstract gradient background"

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Was ist Deep Learning? Neuronale Netze erklärt"
-description: "Deep Learning erklärt: wie neuronale Netze lernen, welche Architekturen es gibt, wo Deep Learning eingesetzt wird, wo seine Grenzen liegen und wann ein einfacheres Verfahren die bessere Wahl ist."
+description: "Deep Learning erklärt: wie neuronale Netze lernen, welche Architekturen es gibt, wo es eingesetzt wird, wo die Grenzen liegen und wann Einfacheres reicht."
 date: "2026-10-02T13:00:00+05:45"
 featuredImage: "/assets/images/blog/was-ist-deep-learning-neuronale-netze-erklaert.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

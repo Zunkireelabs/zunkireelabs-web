@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Exploring Real-World Case Studies of GaaS Implementations"
-description: "Uncover how businesses successfully leverage GaaS (Agentic as a Service) through real-world case studies that demonstrate the transformative power of AI in various industries."
+description: "How businesses use GaaS (Agentic as a Service) successfully, through real-world case studies of AI at work across industries."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/4021266/pexels-photo-4021266.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Screen displaying real-time COVID-19 case data with global map and statistics."

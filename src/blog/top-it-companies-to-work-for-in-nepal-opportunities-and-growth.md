@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Zunkiree Labs: Careers in AI Infrastructure Based in Nepal" # SEOAI:TITLE
-description: "What to look for in a Nepali IT employer — work culture, growth paths, and the kind of technical projects that actually build a career. A look at the market, and at what working on AI infrastructure at Zunkiree Labs involves."
+description: "What to look for in a Nepali IT employer — work culture, growth paths, and the kind of technical projects that actually build a career."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/39204858/pexels-photo-39204858.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Diverse team of professionals working diligently in a modern open office setting."
