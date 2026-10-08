@@ -29,6 +29,31 @@ services:
       - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-web-staging.tls=true"
       - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
+      # dev-web serves a near-identical copy of the production homepage, so
+      # Google indexed it as a duplicate of the real site — it drove the bulk
+      # of Search Console's "Duplicate without user-selected canonical"
+      # errors on zunkireelabs.com.
+      #
+      # The middleware is defined HERE rather than referenced from Traefik's
+      # file provider (`noindex@file`) on purpose: a label that points at a
+      # middleware defined elsewhere breaks if that middleware is renamed or
+      # removed, and a router referencing a middleware that does not exist
+      # goes into an error state and stops serving the host. Defining it on
+      # the same container keeps this self-contained — the compose file that
+      # needs the header also creates it, so there is nothing external to
+      # keep in sync.
+      #
+      # The name is project-specific for the same reason the router/service
+      # names above are: middleware names are global across every container
+      # on the `hosting` network, and a generic "noindex" would collide with
+      # any other container defining one.
+      #
+      # Deliberately NOT paired with `Disallow: /` in robots.txt. Google has
+      # to be able to crawl these pages to SEE the noindex header. Blocking
+      # the crawl instead would freeze them in the index permanently, which
+      # is the opposite of the intent.
+      - "traefik.http.middlewares.zunkiree-web-staging-noindex.headers.customResponseHeaders.X-Robots-Tag=noindex, nofollow"
+      - "traefik.http.routers.zunkiree-web-staging.middlewares=zunkiree-web-staging-noindex"
       # HTTP to HTTPS redirect
       - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
       - "traefik.http.routers.zunkiree-web-staging-http.entrypoints=web"
