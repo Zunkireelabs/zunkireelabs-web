@@ -1,7 +1,7 @@
 ---
-title: "Gemini 4 Argon: How to Read a Frontier Model Release"
+title: "Gemini 4 Argon Release: What Was Claimed, What Is Unproven"
 translationKey: "gemini-4-argon-how-to-read-a-frontier-model-release"
-description: "Google announced Gemini 4 Argon but most people can't use it yet. What was claimed, what's unproven and how businesses should respond."
+description: "Gemini 4 Argon release news: what Google announced, who can use it now, what is unproven and how businesses should respond."
 date: 2026-10-01
 lastUpdated: 2026-10-01
 category: Insights

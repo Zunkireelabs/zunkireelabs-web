@@ -1,0 +1,685 @@
+---
+layout: base.njk
+title: "IT Companies in Nepal: How to Choose the Right Partner" # SEOAI:TITLE
+description: "A practical guide to hiring an IT company in Nepal: what they deliver, how to evaluate one, how to verify claims independently, and what engagement models cost."
+permalink: /it-companies-nepal/
+lastUpdated: "2026-10-08"
+hideChrome: true
+bodyClass: "v2-inter"
+faqs:
+  - question: "What do IT companies in Nepal actually do?"
+    answer: "Most fall into one of three groups. Service firms build software to order — web and mobile applications, custom business systems, SaaS platforms, and data infrastructure. Outsourcing and staff-augmentation firms supply engineers who work inside a client's own team and processes. Product companies build and sell their own software. A single company often spans more than one group, so the useful question is not what category it claims but which of those three the specific team assigned to you actually does day to day."
+  - question: "How do I verify an IT company in Nepal before signing anything?"
+    answer: "Check it somewhere the company does not control the copy. Independent directories such as Clutch, GoodFirms, and TechBehemoths publish reviews collected directly from clients, so a firm with real delivery history usually has a profile with named references. Then ask for two things: a reference you can speak to without the vendor present, and a code or architecture sample from work comparable to yours. A company confident in its delivery will produce both."
+  - question: "Is it cheaper to hire an IT company in Nepal than in the US or Europe?"
+    answer: "Rates are generally lower, but cost per delivered outcome is the number that matters, and that depends on how well the engagement is run rather than on the hourly rate. A low rate attached to vague scope, slow review cycles, and heavy rework can cost more in total than a higher rate with tight milestones. Ask for a fixed scope on the first milestone — it tells you more about the real cost than any rate card."
+  - question: "How do time zones work with a Nepal-based team?"
+    answer: "Nepal is UTC+5:45, which gives a working-hours overlap with Europe, the UK, the Middle East, India, Southeast Asia, and Australia. US clients typically get a morning or late-evening overlap window. The practical requirement is not full-day overlap but a reliable daily window for decisions, plus written async updates so work does not stall between calls."
+  - question: "Should I hire a large IT company or a small specialist team in Nepal?"
+    answer: "Match it to your risk. Large firms offer continuity and bench depth if people leave, which matters for long-running systems. Smaller specialist teams usually give you senior people directly on the work rather than behind an account layer, which matters when the problem is unusual. The failure mode to check for in either case is the same: whether the people in the sales meeting are the people who will build it."
+  - question: "What should be in the contract with a Nepali IT company?"
+    answer: "Four things that are routinely left vague. Who owns the intellectual property and source code on completion. Where your data is stored and processed. What happens at the end of the engagement — handover, documentation, and credentials. And the termination terms if delivery slips. Rates and timelines get negotiated carefully; these four decide what you are left holding if the relationship ends badly."
+  - question: "Does Zunkiree Labs only work with clients in Nepal?"
+    answer: "No. Zunkiree Labs is based in Kathmandu and roughly 60% of our clients are international, across the US, UK, India, Australia, Canada, Switzerland, and the Netherlands. Delivery runs on milestone-based process and time-zone-overlapping communication rather than a location-dependent outsourcing model."
+---
+
+{# =====================================================
+   DIRECTION CONTRACT
+   THESIS: This is the commercial hub for the "IT company in Nepal"
+   cluster — the page someone lands on when they are deciding whether to
+   hire, not browsing a list. It earns the click by being the most useful
+   page on the query rather than the most promotional.
+   WHY IT EXISTS: 4,046 impressions / 159 queries over 90 days currently
+   resolve to /blog/top-tech-companies-nepal-2026/ at average position
+   14.5. That post owns LIST intent ("top 50 ..."). The commercial
+   singular variants — "it company in nepal", "best it company in nepal",
+   "software company in nepal" — sit at positions 15.9-20.7 with no page
+   matched to them. This page targets those, and routes list intent to
+   the listicle instead of competing with it.
+   ANTI-CANNIBALISATION: distinct title, distinct intent (evaluate/hire,
+   not enumerate), and an explicit outbound link to both Nepal listicles.
+   HONESTY CONSTRAINT: every factual claim here is either about Zunkiree
+   Labs and sourced from the site's own data, or it is practical buying
+   advice. No market statistics, company counts, team sizes, or salary
+   figures are asserted, because none are available from a named source.
+   Do not add any without one.
+   OWN-WORLD: inherits global-delivery's reskinned Website V2 system —
+   white ground, navy-100 bordered shadow-subtle cards, #76B900 as the
+   single accent, mono uppercase eyebrows, navy-950 closing banner,
+   Inter at homepage-v2 weights. No new visual system invented.
+   SCHEMA: Service only. FAQPage is emitted by base.njk from the `faqs`
+   frontmatter above — do NOT add a second FAQPage block here, base.njk
+   suppresses its own when the body already contains one.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  @keyframes hub-in { 0%, 5% { opacity: 0; transform: translateY(10px); } 13%, 88% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+  .hub-row { opacity: 0; animation: hub-in 11s ease-out infinite both; animation-delay: var(--d, 0s); }
+  @keyframes hub-float { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-9px) rotate(var(--r, 0deg)); } }
+  .hub-float { animation: hub-float 7s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  @keyframes hub-fill { from { width: 0; } to { width: 100%; } }
+  .hub-fill { animation: hub-fill 5s linear forwards; }
+  @keyframes hub-pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .hub-pop { animation: hub-pop .35s ease-out both; }
+  @media (prefers-reduced-motion: reduce) { .hub-row, .hub-float, .hub-fill, .hub-pop { animation: none !important; opacity: 1; } .hub-fill { width: 100%; } }
+  .itn-glow { background: radial-gradient(ellipse 55% 60% at 50% 0%, rgba(118,185,0,0.10) 0%, transparent 70%), radial-gradient(ellipse 40% 50% at 90% 10%, rgba(87,119,130,0.10) 0%, transparent 70%); }
+  [data-reveal-stagger] > div.shadow-subtle { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  [data-reveal-stagger] > div.shadow-subtle:hover { transform: translateY(-2px); border-color: rgba(118,185,0,0.45); box-shadow: 0 12px 28px -14px rgba(15,23,42,0.18); }
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+<div class="relative bg-white overflow-x-clip">
+
+{# SECTION 1 — HERO #}
+<section class="itn-glow relative overflow-hidden px-4 pt-32 pb-16 sm:px-6 sm:pt-36 sm:pb-24 lg:px-8 lg:pt-40" aria-labelledby="itn-hero-heading">
+  <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
+    <div data-reveal-stagger>
+      <span class="mb-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>IT companies in Nepal &middot; Buyer&rsquo;s guide</span>
+      <h1 id="itn-hero-heading" class="text-[38px] font-medium leading-[1.08] tracking-tight text-[#111827] sm:text-[52px] lg:text-[58px]">IT companies in Nepal, and how to choose one</h1>
+      <p class="mt-6 text-[21px] font-medium leading-snug text-[#111827]">The hard part isn&rsquo;t finding a vendor. It&rsquo;s telling the good ones apart.</p>
+      <p class="mt-4 max-w-xl text-[17px] leading-relaxed text-[#6B7280]">Every firm&rsquo;s website says the same things. This page covers what IT companies in Nepal actually deliver, the questions that separate a real engineering team from a reseller, and how to verify any of it independently before you sign.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="/contact/" class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="it-nepal-hero-primary">Talk to our team
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+        <a href="#evaluate" class="inline-flex items-center justify-center rounded-md border border-navy-200 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors hover:border-navy-300 hover:bg-navy-50" data-track="cta" data-cta-id="it-nepal-hero-checklist">Skip to the checklist</a>
+      </div>
+      <nav class="mt-8 flex flex-wrap items-center gap-2" aria-label="On this page">
+        <a href="#deliver" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-sm transition-colors hover:border-[#76B900] hover:text-[#5a9100]">What they deliver</a>
+        <a href="#evaluate" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-sm transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Six questions</a>
+        <a href="#verify" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-sm transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Verify claims</a>
+        <a href="#lists" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-sm transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Company lists</a>
+        <a href="#faq" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-sm transition-colors hover:border-[#76B900] hover:text-[#5a9100]">FAQ</a>
+      </nav>
+    </div>
+
+    {# vendor check card #}
+    <div class="relative mx-auto w-full max-w-[34rem] pb-16 pl-2 pt-6 sm:pl-6" data-reveal>
+      <div class="pointer-events-none absolute -inset-10 -z-10" aria-hidden="true" style="background: radial-gradient(ellipse 55% 45% at 70% 30%, rgba(118,185,0,.20) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 15% 85%, rgba(87,119,130,.15) 0%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 35%, transparent 100%); mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 35%, transparent 100%);"></div>
+      <div class="overflow-hidden rounded-[24px] border border-navy-100 bg-white" style="box-shadow: 0 50px 80px -40px rgba(15,23,42,.4);">
+        <div class="flex items-center justify-between gap-3 bg-navy-950 px-5 py-3.5 text-white"><div class="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-wider"><span class="h-2 w-2 animate-pulse rounded-full bg-[#9bd600]"></span>Vendor check</div><span class="rounded-full bg-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">6 questions</span></div>
+        <ol class="divide-y divide-navy-100">
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 " style="--d:0.0s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Meet the engineers before you sign</p><p class="text-[12.5px] text-[#6B7280]">Technical lead on the call</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#5a9100]">Ask</span></li>
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 " style="--d:0.6s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Something comparable you can inspect</p><p class="text-[12.5px] text-[#6B7280]">A repo or architecture document</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#5a9100]">Ask</span></li>
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 " style="--d:1.2s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Milestone one, written down</p><p class="text-[12.5px] text-[#6B7280]">Precise and testable</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#5a9100]">Ask</span></li>
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 " style="--d:1.7999999999999998s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Code and data ownership in the contract</p><p class="text-[12.5px] text-[#6B7280]">IP assignment, data location</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#5a9100]">Ask</span></li>
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 bg-amber-50/70" style="--d:2.4s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-200 text-amber-800"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">A reference call without the vendor</p><p class="text-[12.5px] text-[#6B7280]">Reluctance is itself an answer</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-amber-700">Test it</span></li>
+          <li class="hub-row flex items-start gap-3.5 px-5 py-3.5 " style="--d:3.0s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Registration number, confirmed</p><p class="text-[12.5px] text-[#6B7280]">Legitimate firms produce it at once</p></div><span class="shrink-0 font-mono text-[9px] uppercase tracking-wider text-[#5a9100]">Ask</span></li>
+        </ol>
+        <div class="flex items-center justify-between border-t border-navy-100 bg-[#FAFBFC] px-5 py-3 font-mono text-[10px] uppercase tracking-wider text-[#6B7280]"><span>Harder to fake than a portfolio</span><span class="text-[#5a9100]">Ask all six</span></div>
+      </div>
+      <div class="hub-float absolute -left-1 -top-5 hidden rounded-xl border border-navy-100 bg-white px-3.5 py-2 shadow-lg sm:block" style="--d:.4s;--r:-2deg" aria-hidden="true"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Check independently</p><p class="text-[12.5px] font-medium text-[#111827]">Clutch &middot; GoodFirms &middot; TechBehemoths</p></div>
+      <div class="hub-float absolute -right-3 bottom-2 hidden w-48 rounded-2xl border border-navy-100 bg-white p-3 shadow-xl sm:block" style="--d:1.2s;--r:2deg" aria-hidden="true"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Based in</p><p class="mt-1 text-[13px] font-medium text-[#111827]">Kathmandu, Nepal</p><p class="text-[11.5px] leading-snug text-[#6B7280]">Serving clients in Nepal and abroad</p></div>
+      <p class="mt-6 text-center font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Illustrative checklist</p>
+    </div>
+  </div>
+</section>
+
+{# SECTION 2 — DEFINITION BLOCK (AEO-critical) #}
+<section class="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="itn-definition-heading" style="background: linear-gradient(180deg, #F6FAEC 0%, #FFFFFF 80%);">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
+    <div data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Definition</span>
+      <h2 id="itn-definition-heading" class="text-balance text-[30px] font-medium leading-[1.2] tracking-tight text-[#111827] sm:text-[40px]"><span class="text-[#5a9100]">An IT company in Nepal</span> is a firm that builds, integrates, or operates software for clients from a base in Nepal.</h2>
+      <p data-aeo="answer" class="mt-6 max-w-2xl text-[17px] leading-relaxed text-[#374151]">Typically that means custom software and web or mobile applications, SaaS platforms, data and AI systems, or engineers embedded into a client&rsquo;s own team. Most serve international clients remotely as well as domestic ones.</p>
+    </div>
+    <div class="border-b border-navy-100" data-reveal>
+      <div class="flex items-baseline gap-4 border-t border-navy-100 py-5"><span class="w-20 text-[64px] font-semibold leading-none tracking-tight text-transparent" style="-webkit-text-stroke: 1.5px #76B900;">3</span><span class="font-mono text-[11px] uppercase tracking-wider text-[#6B7280]">Kinds of IT company</span></div><div class="flex items-baseline gap-4 border-t border-navy-100 py-5"><span class="w-20 text-[64px] font-semibold leading-none tracking-tight text-transparent" style="-webkit-text-stroke: 1.5px #76B900;">6</span><span class="font-mono text-[11px] uppercase tracking-wider text-[#6B7280]">Questions to ask</span></div><div class="flex items-baseline gap-4 border-t border-navy-100 py-5"><span class="w-20 text-[64px] font-semibold leading-none tracking-tight text-transparent" style="-webkit-text-stroke: 1.5px #76B900;">4</span><span class="font-mono text-[11px] uppercase tracking-wider text-[#6B7280]">Places to verify</span></div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 3 — WHAT THEY DELIVER #}
+<section id="deliver" class="scroll-mt-24 border-y border-navy-100 bg-[#F8FAFC] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="itn-deliver-heading" x-data="kindPicker()" x-init="init()" @mouseenter="hold()" @mouseleave="release()">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>The work</span>
+        <h2 id="itn-deliver-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">What IT companies in Nepal deliver.</h2>
+      </div>
+      <p class="text-[16px] leading-relaxed text-[#6B7280] lg:pb-2">&ldquo;IT company&rdquo; covers three different businesses. Knowing which one you are talking to changes what you should ask for.</p>
+    </div>
+    <div class="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16" data-reveal>
+      <div role="tablist" aria-label="Kinds of IT company">
+        <button type="button" role="tab" @click="pick(0)" :aria-selected="k === 0" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="k === 0 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="k === 0 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">01</span>
+          <span class="flex-1"><span class="block text-[21px] font-medium leading-snug tracking-tight">Software &amp; product firms</span><span class="mt-0.5 block font-mono text-[11px] uppercase tracking-wider transition-colors" :class="k === 0 ? 'text-[#5a9100]' : 'text-[#9CA3AF]'">Build to order</span></span>
+          <span class="text-[18px] transition-all" :class="k === 0 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="k === 0 && counting"><span class="hub-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+        <button type="button" role="tab" @click="pick(1)" :aria-selected="k === 1" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="k === 1 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="k === 1 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">02</span>
+          <span class="flex-1"><span class="block text-[21px] font-medium leading-snug tracking-tight">Outsourcing &amp; staff augmentation</span><span class="mt-0.5 block font-mono text-[11px] uppercase tracking-wider transition-colors" :class="k === 1 ? 'text-[#5a9100]' : 'text-[#9CA3AF]'">Supply capacity</span></span>
+          <span class="text-[18px] transition-all" :class="k === 1 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="k === 1 && counting"><span class="hub-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+        <button type="button" role="tab" @click="pick(2)" :aria-selected="k === 2" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="k === 2 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="k === 2 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">03</span>
+          <span class="flex-1"><span class="block text-[21px] font-medium leading-snug tracking-tight">Product companies</span><span class="mt-0.5 block font-mono text-[11px] uppercase tracking-wider transition-colors" :class="k === 2 ? 'text-[#5a9100]' : 'text-[#9CA3AF]'">Sell their own</span></span>
+          <span class="text-[18px] transition-all" :class="k === 2 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="k === 2 && counting"><span class="hub-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+      </div>
+      <div class="relative h-[470px] overflow-hidden rounded-[28px] bg-[#141F24] sm:h-[450px]" style="box-shadow: 0 40px 70px -35px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(118,185,0,.22) 0%, transparent 60%);"></div>
+        <div x-show="k === 0" x-transition.opacity.duration.300ms class="absolute inset-0 flex flex-col p-7 sm:p-9">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Build to order</span>
+          <h3 class="mt-3 text-[26px] font-medium leading-snug tracking-tight text-white">Software &amp; product firms</h3>
+          <p class="mt-3 text-[15.5px] leading-relaxed text-white/65">They take a specification or a problem and ship a system: web and mobile applications, custom business software, SaaS platforms, data pipelines, AI features.</p>
+          <dl class="mt-auto space-y-0">
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[16px] text-white">A delivered outcome</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">What you negotiate</dt><dd class="mt-1 text-[16px] text-white">Scope and milestones</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who directs the work</dt><dd class="mt-1 text-[16px] text-[#9bd600]">The firm, against agreed scope</dd></div>
+          </dl>
+        </div>
+        <div x-show="k === 1" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col p-7 sm:p-9">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Supply capacity</span>
+          <h3 class="mt-3 text-[26px] font-medium leading-snug tracking-tight text-white">Outsourcing &amp; staff augmentation</h3>
+          <p class="mt-3 text-[15.5px] leading-relaxed text-white/65">They place engineers into your team, working your backlog under your process.</p>
+          <dl class="mt-auto space-y-0">
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[16px] text-white">Capacity, not an outcome</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">What you negotiate</dt><dd class="mt-1 text-[16px] text-white">Your own technical leadership</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who directs the work</dt><dd class="mt-1 text-[16px] text-[#9bd600]">You: your leadership decides whether it works</dd></div>
+          </dl>
+        </div>
+        <div x-show="k === 2" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col p-7 sm:p-9">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Sell their own</span>
+          <h3 class="mt-3 text-[26px] font-medium leading-snug tracking-tight text-white">Product companies</h3>
+          <p class="mt-3 text-[15.5px] leading-relaxed text-white/65">They build and license their own software. Engagements are configuration and integration rather than construction.</p>
+          <dl class="mt-auto space-y-0">
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[16px] text-white">Access to their product</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">What you negotiate</dt><dd class="mt-1 text-[16px] text-white">What is committed versus aspiration</dd></div>
+            <div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who owns the roadmap</dt><dd class="mt-1 text-[16px] text-[#9bd600]">The vendor</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <p class="mt-10 max-w-3xl text-[15px] leading-relaxed text-[#6B7280]" data-reveal>Plenty of firms do two or three of these. That is not a problem in itself, but it does mean the category on the homepage tells you less than the recent history of the specific team who would be assigned to you.</p>
+  </div>
+</section>
+
+{# SECTION 4 — EVALUATION CHECKLIST #}
+<section id="evaluate" class="scroll-mt-24 relative overflow-hidden bg-navy-950 px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28" aria-labelledby="itn-evaluate-heading" x-data="scorecard()">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 55% 60% at 0% 0%, rgba(118,185,0,0.16) 0%, transparent 60%), radial-gradient(ellipse 45% 55% at 100% 100%, rgba(87,119,130,0.22) 0%, transparent 60%);"></div>
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>The checklist</span>
+        <h2 id="itn-evaluate-heading" class="text-balance text-[32px] font-medium leading-[1.1] tracking-tight text-white sm:text-[46px]">Six questions that actually separate firms.</h2>
+      </div>
+      <p class="text-[16px] leading-relaxed text-white/60 lg:pb-2">Portfolios and client logos are easy to assemble. These are harder to fake, which is exactly why they are worth asking. Pick a question, then mark the answer you got.</p>
+    </div>
+    <div class="grid items-start gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10" data-reveal>
+      <ol class="border-b border-white/10">
+        <template x-for="(it, k) in qs" :key="k"><li><button type="button" @click="i = k" class="group flex w-full items-center gap-4 border-t border-white/10 px-1 py-4 text-left transition-colors hover:bg-white/[0.03]" :class="i === k ? 'bg-white/[0.04]' : ''" :aria-current="i === k">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border font-mono text-[11px] transition-all" :class="it.ans === 'good' ? 'border-[#76B900] bg-[#76B900] text-white' : (it.ans === 'bad' ? 'border-amber-300 bg-amber-300/20 text-amber-200' : (i === k ? 'border-[#9bd600] text-[#9bd600]' : 'border-white/20 text-white/40'))"><template x-if="it.ans === 'good'"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></template><template x-if="it.ans === 'bad'"><span>!</span></template><template x-if="!it.ans"><span x-text="'0' + (k + 1)"></span></template></span>
+          <span class="flex-1 text-[16.5px] leading-snug transition-colors" :class="i === k ? 'font-medium text-white' : 'text-white/60 group-hover:text-white/85'" x-text="'\u201c' + it.q + '\u201d'"></span>
+        </button></li></template>
+      </ol>
+      <div class="rounded-[26px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur sm:p-8">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]" x-text="'Question ' + (i + 1) + ' of 6'"></p>
+        <h3 class="mt-2 text-[24px] font-medium leading-snug tracking-tight text-white" x-text="'\u201c' + cur.q + '\u201d'"></h3>
+        <p class="mt-4 text-[15.5px] leading-relaxed text-white/65" x-text="cur.why"></p>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <button type="button" @click="mark('good')" class="rounded-2xl border p-4 text-left transition-all hover:-translate-y-0.5" :class="cur.ans === 'good' ? 'border-[#76B900] bg-[#76B900]/20' : 'border-white/15 hover:border-[#76B900]/60'"><span class="font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">A good answer</span><span class="mt-1.5 block text-[14px] leading-snug text-white/85" x-text="cur.good"></span></button>
+          <button type="button" @click="mark('bad')" class="rounded-2xl border p-4 text-left transition-all hover:-translate-y-0.5" :class="cur.ans === 'bad' ? 'border-amber-300 bg-amber-300/15' : 'border-white/15 hover:border-amber-300/60'"><span class="font-mono text-[10px] uppercase tracking-wider text-amber-300">A red flag</span><span class="mt-1.5 block text-[14px] leading-snug text-white/85" x-text="cur.bad"></span></button>
+        </div>
+        <div class="mt-6 flex items-center justify-between gap-4 border-t border-white/10 pt-5">
+          <div class="flex items-center gap-4"><div class="relative h-14 w-14"><svg viewBox="0 0 36 36" class="h-14 w-14 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="3.5"/><circle cx="18" cy="18" r="15.5" fill="none" stroke="#9bd600" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="97.4" :stroke-dashoffset="97.4 - (97.4 * answered / 6)" style="transition: stroke-dashoffset .5s ease"/></svg><span class="absolute inset-0 flex items-center justify-center text-[14px] font-semibold text-white" x-text="answered + '/6'"></span></div>
+            <p class="max-w-[16rem] text-[13.5px] leading-snug text-white/70" x-text="verdict"></p></div>
+          <button type="button" @click="next()" class="shrink-0 rounded-md border border-white/20 px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-white transition-colors hover:border-white/50 hover:bg-white/5">Next &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 5 — INDEPENDENT VERIFICATION #}
+<section id="verify" class="scroll-mt-24 relative overflow-hidden bg-navy-950 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="itn-verify-heading">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 55% 70% at 0% 100%, rgba(118,185,0,0.16) 0%, transparent 60%), radial-gradient(ellipse 45% 60% at 100% 0%, rgba(87,119,130,0.22) 0%, transparent 60%);"></div>
+  <div class="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+    <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>Due diligence</span>
+      <h2 id="itn-verify-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-white sm:text-[42px]">
+        Check us where we can&rsquo;t edit the copy.
+      </h2>
+      <p class="mt-6 max-w-md text-[16px] leading-relaxed text-white/60">
+        A company&rsquo;s own site is marketing, including this one. Independent directories verify reviews with the client who left them, so a firm with real delivery history usually has a profile carrying named references &mdash; and a firm with none is worth a second look.
+      </p>
+      <div class="mt-8 max-w-md rounded-2xl border border-[#76B900]/30 bg-[#76B900]/[0.08] p-5">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">One more check</p>
+        <p class="mt-2 text-[15px] leading-relaxed text-white/80">Ask any firm for its company registration number and confirm it. Legitimate firms produce it immediately.</p>
+      </div>
+    </div>
+    <div data-reveal>
+      <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-white/40">Where ours can be checked</p>
+      <ul class="border-t border-white/10">
+        <li><a href="https://clutch.co/profile/zunkiree-labs" rel="noopener nofollow" target="_blank" class="group flex items-center gap-5 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.03]">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-[18px] font-semibold text-white transition-colors group-hover:border-[#76B900] group-hover:text-[#9bd600]">C</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium text-white">Clutch</span><span class="mt-1 block text-[14px] leading-relaxed text-white/55">Reviews collected by interview, with project scope and budget ranges attached.</span></span>
+          <span class="text-[22px] text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#9bd600]" aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="https://www.goodfirms.co/company/zunkiree-labs" rel="noopener nofollow" target="_blank" class="group flex items-center gap-5 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.03]">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-[18px] font-semibold text-white transition-colors group-hover:border-[#76B900] group-hover:text-[#9bd600]">G</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium text-white">GoodFirms</span><span class="mt-1 block text-[14px] leading-relaxed text-white/55">Service-line breakdown and verified client feedback.</span></span>
+          <span class="text-[22px] text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#9bd600]" aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="https://techbehemoths.com/company/zunkiree-labs" rel="noopener nofollow" target="_blank" class="group flex items-center gap-5 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.03]">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-[18px] font-semibold text-white transition-colors group-hover:border-[#76B900] group-hover:text-[#9bd600]">T</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium text-white">TechBehemoths</span><span class="mt-1 block text-[14px] leading-relaxed text-white/55">Capability and sector coverage.</span></span>
+          <span class="text-[22px] text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#9bd600]" aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="{{ site.social.trustpilot }}" rel="noopener nofollow" target="_blank" class="group flex items-center gap-5 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.03]">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-[18px] font-semibold text-white transition-colors group-hover:border-[#76B900] group-hover:text-[#9bd600]">&#9733;</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium text-white">Trustpilot</span><span class="mt-1 block text-[14px] leading-relaxed text-white/55">Open public reviews from customers. Check how many there are and whether the firm replies.</span></span>
+          <span class="text-[22px] text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#9bd600]" aria-hidden="true">&nearr;</span></a></li>
+        <li><a href="https://www.linkedin.com/company/zunkireelabs" rel="noopener nofollow" target="_blank" class="group flex items-center gap-5 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.03]">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-[18px] font-semibold text-white transition-colors group-hover:border-[#76B900] group-hover:text-[#9bd600]">in</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium text-white">LinkedIn <span class="ml-2 rounded-full bg-[#76B900]/20 px-2 py-0.5 align-middle font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">Most useful</span></span><span class="mt-1 block text-[14px] leading-relaxed text-white/55">Whether the engineers named in the pitch actually work there, and for how long.</span></span>
+          <span class="text-[22px] text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#9bd600]" aria-hidden="true">&nearr;</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+{# SECTION 6 — LIST INTENT ROUTING (anti-cannibalisation) #}
+<section id="lists" class="scroll-mt-24 bg-[#F8FAFC] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="itn-lists-heading">
+  <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+    <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Looking for names?</span>
+      <h2 id="itn-lists-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[40px]">If you wanted the list, not the guide.</h2>
+      <p class="mt-5 max-w-md text-[16px] leading-relaxed text-[#6B7280]">We maintain two researched lists of companies operating in Nepal, including our competitors, with the selection criteria stated. The rest below goes deeper on briefing and working with a team.</p>
+    </div>
+    <ul class="border-t border-navy-100" data-reveal>
+        <li><a href="/blog/top-tech-companies-nepal-2026/" class="group flex items-start gap-5 border-b border-navy-100 py-6 transition-colors hover:bg-white">
+          <span class="mt-1.5 w-16 shrink-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">List</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Top 50 IT &amp; Tech Companies in Nepal (2026)</span><span class="mt-1 block text-[15px] leading-relaxed text-[#6B7280]">Fifty IT, software, AI and startup companies grouped by category, with how each was selected.</span></span>
+          <span class="mt-1 text-[20px] text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        <li><a href="/blog/top-ai-companies-nepal-2026/" class="group flex items-start gap-5 border-b border-navy-100 py-6 transition-colors hover:bg-white">
+          <span class="mt-1.5 w-16 shrink-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">List</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">AI Companies in Nepal (2026)</span><span class="mt-1 block text-[15px] leading-relaxed text-[#6B7280]">A narrower comparison of the firms building AI in Nepal and what each one actually ships.</span></span>
+          <span class="mt-1 text-[20px] text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        <li><a href="/blog/how-to-brief-a-software-team-in-nepal-scope-milestones-handover/" class="group flex items-start gap-5 border-b border-navy-100 py-6 transition-colors hover:bg-white">
+          <span class="mt-1.5 w-16 shrink-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Guide</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">How to Brief a Software Team in Nepal</span><span class="mt-1 block text-[15px] leading-relaxed text-[#6B7280]">Scope, milestones and handover: what to agree before the first line of code.</span></span>
+          <span class="mt-1 text-[20px] text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        <li><a href="/solutions/software-outsourcing/" class="group flex items-start gap-5 border-b border-navy-100 py-6 transition-colors hover:bg-white">
+          <span class="mt-1.5 w-16 shrink-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Partner</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Software Outsourcing Partner</span><span class="mt-1 block text-[15px] leading-relaxed text-[#6B7280]">Dedicated teams, fixed-scope projects and white-label builds for agencies and larger companies.</span></span>
+          <span class="mt-1 text-[20px] text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        <li><a href="/blog/outsourcing-software-to-nepal-from-europe-and-the-uk-time-zones-data-contracts/" class="group flex items-start gap-5 border-b border-navy-100 py-6 transition-colors hover:bg-white">
+          <span class="mt-1.5 w-16 shrink-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Guide</span>
+          <span class="min-w-0 flex-1"><span class="block text-[19px] font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Outsourcing to Nepal from Europe and the UK</span><span class="mt-1 block text-[15px] leading-relaxed text-[#6B7280]">Time zones, data location and contract terms to settle first.</span></span>
+          <span class="mt-1 text-[20px] text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+  </div>
+</section>
+
+{# SECTION 7 — WHERE WE WORK #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="itn-where-heading">
+  <style>
+    @keyframes route-flow { to { stroke-dashoffset: -40; } }
+    .route { animation: route-flow 2.4s linear infinite; }
+    @keyframes origin-ping { 0% { r: 7; opacity: .5; } 100% { r: 26; opacity: 0; } }
+    .origin-ping { animation: origin-ping 2.4s ease-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .route, .origin-ping { animation: none; } }
+  </style>
+  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+    <div data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Zunkiree Labs</span>
+      <h2 id="itn-where-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[42px]">Built in Kathmandu.<br>Delivered worldwide.</h2>
+      <p class="mt-5 max-w-lg text-[16px] leading-relaxed text-[#6B7280]">We are based in Kathmandu and roughly 60% of our clients are international. Nepal is where the team is, not a constraint on who we deliver to.</p>
+      <svg viewBox="0 0 520 330" class="mt-6 w-full max-w-xl" role="img" aria-label="Kathmandu connected to clients in the US, UK, India, Australia, Canada, Switzerland and the Netherlands">
+        <circle cx="96" cy="160" r="7" fill="#76B900" opacity=".5" class="origin-ping"/>
+        <path d="M96 160 C 220 160, 250 26, 372 26" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:0.0s"/><path d="M96 160 C 220 160, 250 72, 372 72" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:0.25s"/><path d="M96 160 C 220 160, 250 118, 372 118" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:0.5s"/><path d="M96 160 C 220 160, 250 164, 372 164" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:0.75s"/><path d="M96 160 C 220 160, 250 210, 372 210" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:1.0s"/><path d="M96 160 C 220 160, 250 256, 372 256" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:1.25s"/><path d="M96 160 C 220 160, 250 302, 372 302" fill="none" stroke="#76B900" stroke-width="1.4" stroke-opacity=".55" stroke-dasharray="3 7" class="route" style="animation-delay:1.5s"/>
+        <circle cx="96" cy="160" r="9" fill="#76B900"/><circle cx="96" cy="160" r="3.5" fill="#fff"/>
+        <text x="18" y="196" font-size="13" font-weight="600" fill="#111827" font-family="Inter,system-ui,sans-serif">Kathmandu</text>
+        <circle cx="372" cy="26" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="30" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">United States</text><circle cx="372" cy="72" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="76" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">United Kingdom</text><circle cx="372" cy="118" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="122" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">India</text><circle cx="372" cy="164" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="168" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">Australia</text><circle cx="372" cy="210" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="214" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">Canada</text><circle cx="372" cy="256" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="260" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">Switzerland</text><circle cx="372" cy="302" r="4.5" fill="#fff" stroke="#76B900" stroke-width="2"/><text x="388" y="306" font-size="13" fill="#111827" font-family="Inter,system-ui,sans-serif">Netherlands</text>
+      </svg>
+    </div>
+    <div class="space-y-10" data-reveal>
+      <div>
+        <p class="mb-4 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Across Nepal</p>
+        <div class="flex flex-wrap gap-2">
+          <a href="/locations/kathmandu/" class="rounded-full border border-navy-100 bg-white px-4 py-2 text-[14px] text-[#111827] transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Kathmandu</a>
+          <a href="/locations/lalitpur/" class="rounded-full border border-navy-100 bg-white px-4 py-2 text-[14px] text-[#111827] transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Lalitpur</a>
+          <a href="/locations/bhaktapur/" class="rounded-full border border-navy-100 bg-white px-4 py-2 text-[14px] text-[#111827] transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Bhaktapur</a>
+          <a href="/locations/pokhara/" class="rounded-full border border-navy-100 bg-white px-4 py-2 text-[14px] text-[#111827] transition-colors hover:border-[#76B900] hover:text-[#5a9100]">Pokhara</a>
+        </div>
+      </div>
+      <div>
+        <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">What we build</p>
+        <ul class="border-t border-navy-100">
+          <li><a href="/solutions/ai-development/" class="group flex items-center justify-between border-b border-navy-100 py-3.5 text-[16px] text-[#111827] transition-colors hover:text-[#5a9100]">AI Development<span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/solutions/custom-software/" class="group flex items-center justify-between border-b border-navy-100 py-3.5 text-[16px] text-[#111827] transition-colors hover:text-[#5a9100]">Custom Software<span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/solutions/saas-development/" class="group flex items-center justify-between border-b border-navy-100 py-3.5 text-[16px] text-[#111827] transition-colors hover:text-[#5a9100]">SaaS Development<span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/solutions/data-systems/" class="group flex items-center justify-between border-b border-navy-100 py-3.5 text-[16px] text-[#111827] transition-colors hover:text-[#5a9100]">Data Systems<span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/solutions/" class="group flex items-center justify-between border-b border-navy-100 py-3.5 text-[16px] font-medium text-[#5a9100]">All nine services<span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="mb-2 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">See the work</p>
+        <ul class="border-t border-navy-100">
+          <li><a href="/customer-stories/" class="group flex items-baseline justify-between gap-4 border-b border-navy-100 py-3.5 transition-colors hover:text-[#5a9100]"><span><span class="block text-[16px] font-medium text-[#111827] group-hover:text-[#5a9100]">Customer stories</span><span class="block text-[14px] text-[#6B7280]">Named clients and what we shipped for them</span></span><span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/projects/" class="group flex items-baseline justify-between gap-4 border-b border-navy-100 py-3.5 transition-colors hover:text-[#5a9100]"><span><span class="block text-[16px] font-medium text-[#111827] group-hover:text-[#5a9100]">Projects</span><span class="block text-[14px] text-[#6B7280]">Work in progress and delivered systems</span></span><span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/global-delivery/" class="group flex items-baseline justify-between gap-4 border-b border-navy-100 py-3.5 transition-colors hover:text-[#5a9100]"><span><span class="block text-[16px] font-medium text-[#111827] group-hover:text-[#5a9100]">How delivery works</span><span class="block text-[14px] text-[#6B7280]">Milestones, time zones and handover, in detail</span></span><span class="text-navy-300 transition-all group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 8 — FAQ (feeds FAQPage schema emitted by base.njk) #}
+<section id="faq" class="scroll-mt-24 bg-[#F8FAFC] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="itn-faq-heading">
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+
+    <div data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">FAQ</span>
+      <h2 id="itn-faq-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
+        Hiring an IT company in Nepal
+      </h2>
+      <a href="/contact/" class="inline-flex items-center gap-2 font-medium text-[#5a9100] underline-offset-4 transition-colors hover:underline">
+        Have more questions? Talk to us
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+
+    <div x-data="{ activeIndex: 0, expandAll: false }">
+      <div class="mb-4 flex items-center justify-end">
+        <button
+          type="button"
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
+          class="font-mono text-[11px] uppercase tracking-wider text-navy-400 transition-colors hover:text-navy-900"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-navy-100 border-y border-navy-100">
+        {% for item in faqs %}
+        <div class="py-5" data-reveal>
+          <button
+            type="button"
+            @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+            :aria-expanded="(activeIndex === {{ loop.index }} || expandAll).toString()"
+            class="group flex w-full items-center justify-between text-left"
+          >
+            <span class="pr-4 text-[16px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
+              {{ item.question }}
+            </span>
+            <span class="flex-shrink-0 text-navy-400">
+              <svg
+                class="h-5 w-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === {{ loop.index }} || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-[15px] leading-relaxed text-[#6B7280]">
+              {{ item.answer }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# ============ SOURCES ============ #}
+<section class="px-4 pb-12 pt-4 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="itn-src-heading">
+  <div class="mx-auto max-w-6xl border-t border-navy-100 pt-12 sm:pt-14">
+    <div class="grid gap-9">
+      <div class="flex flex-col">
+        <h2 id="itn-src-heading" class="font-mono text-[11px] font-normal uppercase tracking-wider text-[#5a9100]">Sources and further reading</h2>
+        <p class="mt-4 text-[22px] font-medium leading-snug tracking-tight text-[#111827] sm:text-[26px]">Where the claims on this page come from.</p>
+        <p class="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#6B7280]">Outside references for the claims on this page. Our own descriptions of what we build are our own account, not independent evidence.</p>
+        <p class="mt-6 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Last updated <time datetime="2026-10-09">9 October 2026</time> &middot; Zunkiree Labs, Kathmandu, Nepal</p>
+      </div>
+      <div class="divide-y divide-navy-100">
+        <a href="https://en.wikipedia.org/wiki/Time_in_Nepal" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">01</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Wikipedia</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Nepal Standard Time (UTC+5:45)</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">The time zone behind the working-hours overlap described on this page.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">02</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">European Commission</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">International dimension of data protection</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Rules for sending personal data outside the EU.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">03</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">UK Information Commissioner’s Office</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">International transfers</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Guidance for UK organisations sending personal data abroad.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 9 — CLOSING CTA #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"></div>
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">Get Started</span>
+      <h2 class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Put the checklist to us first
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/60">
+        Bring the six questions above to a discovery call. You&rsquo;ll meet the engineer who would lead the work, and leave with a written first milestone.
+      </p>
+      <p class="relative z-10 mx-auto mt-3 max-w-xl font-mono text-[11px] uppercase tracking-wider text-white/40">Based in Kathmandu, Nepal &middot; Clients in Nepal and abroad</p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="/contact/" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="it-nepal-bottom-primary">
+          Book a Discovery Call
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+        <a href="/get-a-quote/" class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="it-nepal-bottom-secondary">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+{% include "partials/footer-v2.njk" %}
+
+{# =====================================================
+   SCHEMA: Service JSON-LD.
+   FAQPage is emitted by base.njk from the `faqs` frontmatter — adding one
+   here would make base.njk suppress its own and duplicate the entity.
+   ===================================================== #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://zunkireelabs.com/it-companies-nepal/#service",
+      "name": "IT & Software Development Services in Nepal",
+      "serviceType": "IT and software development",
+      "url": "https://zunkireelabs.com/it-companies-nepal/",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://zunkireelabs.com/#organization",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kathmandu"
+        },
+        {
+          "@type": "Country",
+          "name": "Nepal"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Switzerland"
+        },
+        {
+          "@type": "Country",
+          "name": "Netherlands"
+        }
+      ],
+      "keywords": "IT company in Nepal, IT companies in Nepal, best IT company in Nepal, software company in Nepal, how to choose an IT company",
+      "description": "Zunkiree Labs is an IT company based in Kathmandu, Nepal, delivering AI development, custom software, SaaS platforms, data systems and AEO/SEO work to clients in Nepal and internationally."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zunkireelabs.com/it-companies-nepal/#webpage",
+      "url": "https://zunkireelabs.com/it-companies-nepal/",
+      "name": "IT Companies in Nepal: How to Choose the Right Partner",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com/"
+      },
+      "about": {
+        "@id": "https://zunkireelabs.com/it-companies-nepal/#service"
+      },
+      "mainEntity": {
+        "@id": "https://zunkireelabs.com/it-companies-nepal/#service"
+      },
+      "publisher": {
+        "@id": "https://zunkireelabs.com/#organization"
+      },
+      "dateModified": "2026-10-09",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "[data-aeo='answer']"
+        ]
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Nepal Standard Time (UTC+5:45)",
+          "url": "https://en.wikipedia.org/wiki/Time_in_Nepal",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Wikipedia"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "International dimension of data protection",
+          "url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en",
+          "publisher": {
+            "@type": "Organization",
+            "name": "European Commission"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "International transfers",
+          "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "UK Information Commissioner’s Office"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+{% raw %}
+<script>
+window.kindPicker = function () {
+  return {
+    k: 0, counting: false, timer: null, inView: false, auto: true, n: 3,
+    init() {
+      this.auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      var self = this;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { self.inView = e.isIntersecting; if (e.isIntersecting) { self.tick(); } else { self.stop(); } }); }, { threshold: 0.35 });
+        io.observe(this.$el);
+      }
+    },
+    stop() { clearTimeout(this.timer); this.timer = null; this.counting = false; },
+    tick() { var self = this; this.stop(); if (!this.auto || !this.inView) return; this.counting = true; this.timer = setTimeout(function () { self.k = (self.k + 1) % self.n; self.tick(); }, 5000); },
+    hold() { this.stop(); },
+    release() { this.tick(); },
+    pick(i) { this.k = i; this.stop(); }
+  };
+};
+window.scorecard = function () {
+  return {
+    i: 0, qs: [{"q": "Who writes the code, and will I meet them?", "why": "The single most predictive question. If the people in the pitch are account managers and the engineers stay invisible until kickoff, you are buying an unknown team. Ask to meet the technical lead before signing, not after.", "good": "Introduces the technical lead before you sign, and names who will write the code.", "bad": "Account managers on every call; engineers invisible until kickoff.", "ans": null}, {"q": "Show me something comparable you built.", "why": "Not a screenshot: a repository, an architecture document, or a walkthrough of a system close to yours in shape. Vague answers here usually mean the comparable work does not exist, or was done by people who have since left.", "good": "Walks you through a real system close to yours, in code or architecture.", "bad": "Screenshots and logos only; vague about who built it.", "ans": null}, {"q": "What does milestone one deliver, exactly?", "why": "A firm that can write down a precise, testable first milestone understands your problem. One that proposes three months of “discovery and development” before anything is reviewable is asking you to carry the risk.", "good": "A precise, testable first milestone with a fixed scope and price.", "bad": "Three months of “discovery and development” before anything can be reviewed.", "ans": null}, {"q": "Who owns the code and the data?", "why": "Get intellectual property assignment, repository access, and data location in writing. This is routinely left ambiguous and is the clause that matters most on the day an engagement ends badly.", "good": "IP assignment, repository access and data location, in writing.", "bad": "Ownership left ambiguous or “we will sort it out later”.", "ans": null}, {"q": "What happens after launch?", "why": "Software that nobody maintains starts decaying immediately. Establish before you start whether you are getting a handover with documentation and credentials, a support retainer, or nothing.", "good": "A stated handover with documentation and credentials, or a support retainer.", "bad": "No answer, or “we will see”.", "ans": null}, {"q": "Can I speak to a client without you there?", "why": "A reference call with no vendor on the line is where you learn how the firm behaved when something went wrong. Reluctance is itself an answer.", "good": "Offers a reference call with no vendor on the line.", "bad": "Hesitates, deflects, or offers only hand-picked quotes.", "ans": null}],
+    get cur() { return this.qs[this.i]; },
+    get answered() { return this.qs.filter(function (q) { return q.ans; }).length; },
+    get good() { return this.qs.filter(function (q) { return q.ans === 'good'; }).length; },
+    get bad() { return this.qs.filter(function (q) { return q.ans === 'bad'; }).length; },
+    get verdict() {
+      if (this.answered === 0) return 'Pick a question and mark the answer you got from a vendor.';
+      if (this.answered < 6) return this.good + ' good, ' + this.bad + ' red flag' + (this.bad === 1 ? '' : 's') + ' so far. ' + (6 - this.answered) + ' to go.';
+      if (this.bad === 0) return 'All six answered well. That is a firm worth a first milestone.';
+      if (this.bad <= 2) return this.bad + ' red flag' + (this.bad === 1 ? '' : 's') + '. Test them before signing.';
+      return this.bad + ' red flags. Treat this vendor with real caution.';
+    },
+    mark(v) { this.qs[this.i].ans = this.qs[this.i].ans === v ? null : v; if (this.qs[this.i].ans) { this.next(); } },
+    next() { this.i = (this.i + 1) % this.qs.length; }
+  };
+};
+</script>
+{% endraw %}

@@ -1,5 +1,5 @@
 ---
-title: "Gemma 4: What an Apache 2.0 Open Model Means for Your Business"
+title: "Gemma 4: What an Apache 2.0 Open Model Means for Business"
 shortLabel: "Gemma 4"
 translationKey: "gemma-4-open-model-what-apache-2-license-means-for-business"
 description: "Google's Gemma 4 is an open-weight model family under the Apache 2.0 license. Here is what that means for privacy, cost and control, and what to check first."

@@ -1,7 +1,10 @@
 ---
 layout: base.njk
-title: "Blog | Einblicke zu KI und Technologie von Zunkiree Labs"
-description: "Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur. Beiträge vom Team von Zunkiree Labs."
+eleventyComputed:
+  title: >-
+    {{ ("Blog | Einblicke zu KI und Technologie von Zunkiree Labs" if pagination.pageNumber == 0 else "Blog, Seite " + (pagination.pageNumber + 1) + " | Zunkiree Labs") | safe }}
+  description: >-
+    {{ "Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur. Beiträge vom Team von Zunkiree Labs." if pagination.pageNumber == 0 else "Seite " + (pagination.pageNumber + 1) + ". Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur. Beiträge vom Team von Zunkiree Labs." }}
 lang: de
 ogLocale: de_DE
 eleventyExcludeFromCollections: true

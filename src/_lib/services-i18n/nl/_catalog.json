@@ -7,7 +7,7 @@
       "category": "AI & Data",
       "description": "Maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering. Wij bouwen AI die specifieke bedrijfsproblemen oplost, geen generieke chatbots.",
       "cta": "Ontdek AI-ontwikkeling",
-      "url": "/services/ai-development/",
+      "url": "/solutions/ai-development/",
       "icon": "ai",
       "mockup": "/assets/images/ai-development-hero.webp",
       "clients": [
@@ -28,7 +28,7 @@
       "category": "AI & Data",
       "description": "AI-gestuurde supportsystemen die klantvragen direct beantwoorden. Verminder supporttickets met 40% en verbeter tegelijk de nauwkeurigheid van de antwoorden.",
       "cta": "Ontdek AI CX",
-      "url": "/services/ai-customer-experience/",
+      "url": "/solutions/ai-customer-experience/",
       "icon": "chat",
       "mockup": "/assets/images/ai-customer-experience-hero.webp",
       "clients": [
@@ -53,7 +53,7 @@
       "category": "AI & Data",
       "description": "Bouw agentic-commercesystemen met AI-shoppingagents, conversational commerce en slimme aanbevelingen. Gespecialiseerd voor de Nepalese markt met eSewa- en Khalti-integratie.",
       "cta": "Ontdek AI-commerce",
-      "url": "/services/ai-ecommerce/",
+      "url": "/solutions/ai-ecommerce/",
       "icon": "cart",
       "mockup": "/assets/images/service-ai.webp",
       "clients": []
@@ -65,7 +65,7 @@
       "category": "AI & Data",
       "description": "Datapipelines, datawarehouses en analytics-infrastructuur gebouwd voor AI-workloads. Maak uw data klaar voor machine learning zonder maandenlange opschoning.",
       "cta": "Ontdek datasystemen",
-      "url": "/services/data-systems/",
+      "url": "/solutions/data-systems/",
       "icon": "data",
       "mockup": "/assets/images/data-systems-hero.webp",
       "clients": [
@@ -90,7 +90,7 @@
       "category": "Ontwikkeling",
       "description": "Bedrijfsapplicaties op maat van uw workflows. Wij bouwen interne tools en bedrijfssystemen die teams echt graag gebruiken.",
       "cta": "Ontdek maatwerksoftware",
-      "url": "/services/custom-software/",
+      "url": "/solutions/custom-software/",
       "icon": "code",
       "mockup": "/assets/images/custom-software-hero.webp",
       "clients": [
@@ -115,7 +115,7 @@
       "category": "Ontwikkeling",
       "description": "Multi-tenant platforms met abonnementsfacturering, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in maanden, niet jaren.",
       "cta": "Ontdek SaaS-ontwikkeling",
-      "url": "/services/saas-development/",
+      "url": "/solutions/saas-development/",
       "icon": "cloud",
       "mockup": "/assets/images/saas-development-hero.webp",
       "clients": [
@@ -136,7 +136,7 @@
       "category": "Ontwikkeling",
       "description": "Krachtige websites en web-apps, geoptimaliseerd voor snelheid en conversie. Moderne frameworks, responsive design, vanaf dag één gebouwd voor SEO.",
       "cta": "Ontdek webontwikkeling",
-      "url": "/services/web-development/",
+      "url": "/solutions/web-development/",
       "icon": "globe",
       "mockup": "/assets/images/web-development-hero.webp",
       "clients": [
@@ -161,7 +161,7 @@
       "category": "Ontwikkeling",
       "description": "Native en cross-platform mobiele apps voor iOS en Android. Van consumenten-apps tot enterprise mobility, met naadloze backend-integratie.",
       "cta": "Ontdek app-ontwikkeling",
-      "url": "/services/app-development/",
+      "url": "/solutions/app-development/",
       "icon": "mobile",
       "mockup": "/assets/images/service-mobile.webp",
       "clients": [
@@ -182,7 +182,7 @@
       "category": "Marketing",
       "description": "Word gevonden door Google en AI-assistenten zoals ChatGPT en Perplexity. Wij optimaliseren content voor traditioneel zoeken en AI-citaties.",
       "cta": "Ontdek AEO & SEO",
-      "url": "/services/aeo-seo/",
+      "url": "/solutions/aeo-seo/",
       "icon": "search",
       "mockup": "/assets/images/aeo-seo-hero.webp",
       "clients": [

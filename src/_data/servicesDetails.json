@@ -2,8 +2,16 @@
   "ai-development": {
     "id": "ai-development",
     "relatedCaseStudies": [
-      { "slug": "rapid-investment-case-study", "title": "Rapid Investment", "stat": "10x faster deal analysis" },
-      { "slug": "mach24orbital-case-study", "title": "Mach24 Orbital", "stat": "50% faster launch prep" }
+      {
+        "slug": "rapid-investment-case-study",
+        "title": "Rapid Investment",
+        "stat": "10x faster deal analysis"
+      },
+      {
+        "slug": "mach24orbital-case-study",
+        "title": "Mach24 Orbital",
+        "stat": "50% faster launch prep"
+      }
     ],
     "title": "AI Development",
     "category": "AI & Data",
@@ -11,29 +19,69 @@
     "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
     "heroImage": "/assets/images/ai-development-hero.webp",
     "lastUpdated": "2026-03-23",
-
     "heroCommands": [
-      { "text": "Extract invoice data", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Analyze customer sentiment", "type": "Content", "offset": "top-20 right-24" },
-      { "text": "Process document batch", "type": "Actions", "offset": "top-32 right-8" },
-      { "text": "Generate knowledge response", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Train custom model", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Deploy to production", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Monitor model accuracy", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Extract invoice data",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Analyze customer sentiment",
+        "type": "Content",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Process document batch",
+        "type": "Actions",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Generate knowledge response",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Train custom model",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Deploy to production",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Monitor model accuracy",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "AI that acts on your business. Not just answers about it.",
       "content": "Generic AI answers questions. Zunkiree builds AI that does the work — RAG pipelines, LLM orchestration, and intelligent automation integrated with your infrastructure. Deployed across healthcare, finance, and manufacturing, our systems reduce operational costs by 40% and reach production in under 3 months."
     },
-
     "stats": [
-      { "value": "40%", "label": "Faster Development", "description": "vs traditional methods" },
-      { "value": "<3mo", "label": "Time-to-Production", "description": "for most projects" },
-      { "value": "99.9%", "label": "Uptime SLA", "description": "production systems" },
-      { "value": "24/7", "label": "Monitoring", "description": "included" }
+      {
+        "value": "40%",
+        "label": "Faster Development",
+        "description": "vs traditional methods"
+      },
+      {
+        "value": "<3mo",
+        "label": "Time-to-Production",
+        "description": "for most projects"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime SLA",
+        "description": "production systems"
+      },
+      {
+        "value": "24/7",
+        "label": "Monitoring",
+        "description": "included"
+      }
     ],
-
     "benefits": [
       {
         "icon": "workflow",
@@ -51,7 +99,6 @@
         "description": "Native connectors for Salesforce, SAP, Microsoft 365, and custom APIs. Our systems work alongside your current tools—no rip-and-replace required."
       }
     ],
-
     "useCases": [
       {
         "id": "document-ai",
@@ -119,49 +166,102 @@
         "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Discovery",
         "description": "Understand your data, workflows, and goals. Define success metrics and identify the right AI approach.",
         "duration": "2 weeks",
-        "deliverables": ["Requirements document", "Data assessment", "Architecture proposal"]
+        "deliverables": [
+          "Requirements document",
+          "Data assessment",
+          "Architecture proposal"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Architecture and tech stack selection. Data preparation and pipeline design. Prototype key functionality.",
         "duration": "2-3 weeks",
-        "deliverables": ["Technical architecture", "Data pipeline design", "Working prototype"]
+        "deliverables": [
+          "Technical architecture",
+          "Data pipeline design",
+          "Working prototype"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Iterative development with weekly demos. Continuous testing with real data. Refinement based on feedback.",
         "duration": "6-12 weeks",
-        "deliverables": ["Production code", "Test suite", "Documentation"]
+        "deliverables": [
+          "Production code",
+          "Test suite",
+          "Documentation"
+        ]
       },
       {
         "step": 4,
         "title": "Deploy",
         "description": "Production deployment with monitoring. Knowledge transfer and team training. Ongoing support and optimization.",
         "duration": "Ongoing",
-        "deliverables": ["Live system", "Monitoring dashboard", "Support agreement"]
+        "deliverables": [
+          "Live system",
+          "Monitoring dashboard",
+          "Support agreement"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "OpenAI", "category": "LLM", "description": "GPT-4, Embeddings", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
-      { "name": "Anthropic", "category": "LLM", "description": "Claude, Safety", "logo": "https://cdn.simpleicons.org/anthropic/191919" },
-      { "name": "LangChain", "category": "Framework", "description": "RAG Pipelines", "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg" },
-      { "name": "Pinecone", "category": "Vector DB", "description": "Embeddings Storage", "logo": "https://cdn.simpleicons.org/pinecone/000000" },
-      { "name": "Python", "category": "Language", "description": "ML & Backend", "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg" },
-      { "name": "FastAPI", "category": "Framework", "description": "API Development", "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" },
-      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
-      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" }
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "GPT-4, Embeddings",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "Anthropic",
+        "category": "LLM",
+        "description": "Claude, Safety",
+        "logo": "https://cdn.simpleicons.org/anthropic/191919"
+      },
+      {
+        "name": "LangChain",
+        "category": "Framework",
+        "description": "RAG Pipelines",
+        "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+      },
+      {
+        "name": "Pinecone",
+        "category": "Vector DB",
+        "description": "Embeddings Storage",
+        "logo": "https://cdn.simpleicons.org/pinecone/000000"
+      },
+      {
+        "name": "Python",
+        "category": "Language",
+        "description": "ML & Backend",
+        "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+      },
+      {
+        "name": "FastAPI",
+        "category": "Framework",
+        "description": "API Development",
+        "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+      },
+      {
+        "name": "AWS",
+        "category": "Cloud",
+        "description": "Infrastructure",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "Data Storage",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "What business problems does AI development solve?",
@@ -184,24 +284,41 @@
         "answer": "Yes. Modern AI systems support on-premise deployment, data encryption, role-based access, and compliance with SOC 2, HIPAA, and GDPR. Businesses can process sensitive documents, customer data, and proprietary information without data leaving their environment or being used to train external models."
       }
     ],
-
-    "relatedServices": ["ai-customer-experience", "data-systems", "custom-software"],
-
+    "relatedServices": [
+      "ai-customer-experience",
+      "data-systems",
+      "custom-software"
+    ],
     "cta": {
       "headline": "Ready to build intelligent systems?",
       "description": "Discuss your AI project with our engineering team. We'll help you identify the right approach and define a clear path to production.",
-      "primaryButton": { "text": "Schedule Consultation", "url": "/contact/" },
-      "secondaryButton": { "text": "View Our Work", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Schedule Consultation",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Our Work",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["corecloud365", "admizz"]
+    "clients": [
+      "corecloud365",
+      "admizz"
+    ]
   },
-
   "ai-customer-experience": {
     "id": "ai-customer-experience",
     "relatedCaseStudies": [
-      { "slug": "admizz-case-study", "title": "Admizz Education", "stat": "45% faster response times" },
-      { "slug": "khems-cleaning-case-study", "title": "Khems Cleaning", "stat": "70% increase in bookings" }
+      {
+        "slug": "admizz-case-study",
+        "title": "Admizz Education",
+        "stat": "45% faster response times"
+      },
+      {
+        "slug": "khems-cleaning-case-study",
+        "title": "Khems Cleaning",
+        "stat": "70% increase in bookings"
+      }
     ],
     "title": "AI Customer Experience",
     "category": "AI & Data",
@@ -210,29 +327,69 @@
     "heroImage": "/assets/images/ai-customer-experience-hero.webp",
     "heroBgColor": "#efefef",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Resolve customer inquiry", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Route to specialist", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Analyze sentiment", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Generate response", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Update knowledge base", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Escalate to human", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Track resolution time", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Resolve customer inquiry",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Route to specialist",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Analyze sentiment",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Generate response",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Update knowledge base",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Escalate to human",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Track resolution time",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Resolve 80% of tickets without a single human handoff.",
       "content": "We build AI systems that handle the 80% of inquiries that don't need human intervention — accurately. Our platforms integrate with your support stack, resolve billing and status queries in seconds, and route complex cases with full context. CSAT scores go up. Ticket volumes go down. Your team focuses on what matters."
     },
-
     "stats": [
-      { "value": "40%", "label": "Ticket Reduction", "description": "through self-service AI" },
-      { "value": "< 30s", "label": "Avg Response Time", "description": "vs 4+ hours industry avg" },
-      { "value": "92%", "label": "Resolution Rate", "description": "without human handoff" },
-      { "value": "4.8/5", "label": "CSAT Score", "description": "post-implementation avg" }
+      {
+        "value": "40%",
+        "label": "Ticket Reduction",
+        "description": "through self-service AI"
+      },
+      {
+        "value": "< 30s",
+        "label": "Avg Response Time",
+        "description": "vs 4+ hours industry avg"
+      },
+      {
+        "value": "92%",
+        "label": "Resolution Rate",
+        "description": "without human handoff"
+      },
+      {
+        "value": "4.8/5",
+        "label": "CSAT Score",
+        "description": "post-implementation avg"
+      }
     ],
-
     "benefits": [
       {
         "icon": "speed",
@@ -250,7 +407,6 @@
         "description": "Our systems improve continuously. Every resolved ticket, every feedback signal, every successful outcome trains the model to handle similar cases better. Your AI gets smarter every week."
       }
     ],
-
     "useCases": [
       {
         "id": "support-automation",
@@ -269,7 +425,7 @@
         "id": "omnichannel",
         "title": "Omnichannel",
         "headline": "Omnichannel Experience",
-        "description": "Consistent AI-powered support across email, chat, SMS, social, and voice. Single customer context flows across all channels—no fragmented conversations or repeated explanations.",
+        "description": "Consistent AI-powered support across email, chat, SMS and social, with phone handled by our dedicated voice agents. Single customer context flows across all channels — no fragmented conversations or repeated explanations.",
         "features": [
           "Unified customer view",
           "Channel-agnostic AI",
@@ -303,65 +459,104 @@
           "Quality assurance"
         ],
         "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
-      },
-      {
-        "id": "voice-ai",
-        "title": "Voice AI",
-        "headline": "Voice AI Systems",
-        "description": "Replace IVR trees with conversational AI that understands natural speech. Route calls intelligently, handle simple requests automatically, book and manage appointments over the phone, and reduce call center load.",
-        "features": [
-          "Speech recognition",
-          "Intent detection",
-          "Call routing",
-          "Voice authentication",
-          "Voice-driven appointment booking"
-        ],
-        "image": "https://images.unsplash.com/photo-1590935217281-8f102120d683?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Audit",
         "description": "Analyze your current support operations. Map ticket categories, response patterns, and resolution workflows to identify automation opportunities.",
         "duration": "1-2 weeks",
-        "deliverables": ["Support audit report", "Automation roadmap", "ROI projection"]
+        "deliverables": [
+          "Support audit report",
+          "Automation roadmap",
+          "ROI projection"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design conversation flows, escalation logic, and integration points. Build the knowledge base and train initial models on your documentation.",
         "duration": "2-3 weeks",
-        "deliverables": ["Conversation design", "Integration architecture", "Training data"]
+        "deliverables": [
+          "Conversation design",
+          "Integration architecture",
+          "Training data"
+        ]
       },
       {
         "step": 3,
         "title": "Deploy",
         "description": "Launch AI alongside existing support channels. Monitor accuracy, gather feedback, and iterate rapidly based on real customer interactions.",
         "duration": "4-6 weeks",
-        "deliverables": ["Live AI system", "Monitoring dashboard", "Agent training"]
+        "deliverables": [
+          "Live AI system",
+          "Monitoring dashboard",
+          "Agent training"
+        ]
       },
       {
         "step": 4,
         "title": "Optimize",
         "description": "Continuous improvement based on resolution data. Expand coverage, improve accuracy, and reduce escalation rates over time.",
         "duration": "Ongoing",
-        "deliverables": ["Weekly reports", "Model updates", "Coverage expansion"]
+        "deliverables": [
+          "Weekly reports",
+          "Model updates",
+          "Coverage expansion"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "OpenAI", "category": "LLM", "description": "GPT-4 Turbo", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
-      { "name": "Intercom", "category": "Platform", "description": "Customer Messaging", "logo": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg" },
-      { "name": "Zendesk", "category": "Platform", "description": "Help Desk", "logo": "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg" },
-      { "name": "Twilio", "category": "Voice", "description": "Voice & SMS", "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg" },
-      { "name": "Segment", "category": "Data", "description": "Customer Data", "logo": "https://cdn.worldvectorlogo.com/logos/segment-1.svg" },
-      { "name": "Python", "category": "Language", "description": "Backend Logic", "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg" },
-      { "name": "Redis", "category": "Cache", "description": "Session State", "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg" },
-      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" }
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "GPT-4 Turbo",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "Intercom",
+        "category": "Platform",
+        "description": "Customer Messaging",
+        "logo": "https://cdn.worldvectorlogo.com/logos/intercom-1.svg"
+      },
+      {
+        "name": "Zendesk",
+        "category": "Platform",
+        "description": "Help Desk",
+        "logo": "https://cdn.worldvectorlogo.com/logos/zendesk-1.svg"
+      },
+      {
+        "name": "Twilio",
+        "category": "Voice",
+        "description": "Voice & SMS",
+        "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg"
+      },
+      {
+        "name": "Segment",
+        "category": "Data",
+        "description": "Customer Data",
+        "logo": "https://cdn.worldvectorlogo.com/logos/segment-1.svg"
+      },
+      {
+        "name": "Python",
+        "category": "Language",
+        "description": "Backend Logic",
+        "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+      },
+      {
+        "name": "Redis",
+        "category": "Cache",
+        "description": "Session State",
+        "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+      },
+      {
+        "name": "AWS",
+        "category": "Cloud",
+        "description": "Infrastructure",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "How does AI customer support affect customer satisfaction?",
@@ -384,24 +579,38 @@
         "answer": "We deploy within your existing security perimeter. Data stays in your environment, models can run on-premise or in your cloud, and we support SOC 2, HIPAA, and GDPR compliance. AI never trains on customer data without explicit consent."
       }
     ],
-
-    "relatedServices": ["ai-development", "custom-software", "data-systems"],
-
+    "relatedServices": [
+      "voice-agent",
+      "ai-development",
+      "custom-software"
+    ],
     "cta": {
       "headline": "Ready to transform customer support?",
       "description": "See how AI can handle your support volume while improving satisfaction scores. We'll audit your current operations and show you exactly what's automatable.",
-      "primaryButton": { "text": "Schedule Support Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Schedule Support Audit",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Case Studies",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["admizz", "prime-tiles", "khems-cleaning"],
+    "clients": [
+      "admizz",
+      "prime-tiles",
+      "khems-cleaning"
+    ],
     "heroAlt": "Hero image showcasing customer experience and AI technology"
   },
-
   "ai-ecommerce": {
     "id": "ai-ecommerce",
     "relatedCaseStudies": [
-      { "slug": "prime-tiles-case-study", "title": "Prime Tiles", "stat": "2x online conversion rate" }
+      {
+        "slug": "prime-tiles-case-study",
+        "title": "Prime Tiles",
+        "stat": "2x online conversion rate"
+      }
     ],
     "title": "AI Ecommerce Solutions",
     "category": "AI & Data",
@@ -409,29 +618,69 @@
     "description": "Agentic commerce development for online stores in Nepal and globally. We build AI shopping agents, conversational commerce systems, and smart recommendation engines that increase conversions and automate customer support.",
     "heroImage": "/assets/images/ai-ecommerce-hero.svg",
     "lastUpdated": "2026-03-31",
-
     "heroCommands": [
-      { "text": "Find product for customer", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Process eSewa payment", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Track order status", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Recommend similar items", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Handle return request", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Recover abandoned cart", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Answer product question", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Find product for customer",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Process eSewa payment",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Track order status",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Recommend similar items",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Handle return request",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Recover abandoned cart",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Answer product question",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Ecommerce that sells itself — AI agents, not checkout forms.",
       "content": "AI Ecommerce replaces checkout friction with conversation. We build AI shopping agents and recommendation engines for businesses in Nepal and globally — integrating with eSewa, Khalti, and Fonepay. Customers shop through natural language. Your store handles product discovery, cart management, and payment processing without human intervention."
     },
-
     "stats": [
-      { "value": "40%", "label": "Cart Recovery", "description": "abandoned cart automation" },
-      { "value": "3x", "label": "Engagement", "description": "conversational commerce" },
-      { "value": "<2hr", "label": "Integration", "description": "widget deployment" },
-      { "value": "50%", "label": "Support Reduction", "description": "AI-handled queries" }
+      {
+        "value": "40%",
+        "label": "Cart Recovery",
+        "description": "abandoned cart automation"
+      },
+      {
+        "value": "3x",
+        "label": "Engagement",
+        "description": "conversational commerce"
+      },
+      {
+        "value": "<2hr",
+        "label": "Integration",
+        "description": "widget deployment"
+      },
+      {
+        "value": "50%",
+        "label": "Support Reduction",
+        "description": "AI-handled queries"
+      }
     ],
-
     "benefits": [
       {
         "icon": "chat",
@@ -449,7 +698,6 @@
         "description": "From product discovery to post-purchase support. AI handles recommendations, cart management, checkout, order tracking, returns, and customer inquiries—24/7 without human intervention."
       }
     ],
-
     "useCases": [
       {
         "id": "daraz-sellers",
@@ -517,49 +765,102 @@
         "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Discovery",
         "description": "Understand your ecommerce platform, customer journey, and automation opportunities. Map product catalog and define AI agent capabilities.",
         "duration": "1-2 weeks",
-        "deliverables": ["Ecommerce audit", "AI agent scope", "Integration plan"]
+        "deliverables": [
+          "Ecommerce audit",
+          "AI agent scope",
+          "Integration plan"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design conversation flows, product search logic, and payment integrations. Build knowledge base from your catalog and policies.",
         "duration": "2-3 weeks",
-        "deliverables": ["Conversation design", "Integration architecture", "Catalog mapping"]
+        "deliverables": [
+          "Conversation design",
+          "Integration architecture",
+          "Catalog mapping"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Develop AI agents with iterative testing. Connect to your ecommerce platform, payment gateways, and customer data systems.",
         "duration": "4-8 weeks",
-        "deliverables": ["AI agent system", "Platform integrations", "Payment setup"]
+        "deliverables": [
+          "AI agent system",
+          "Platform integrations",
+          "Payment setup"
+        ]
       },
       {
         "step": 4,
         "title": "Launch",
         "description": "Deploy AI agent with monitoring. Continuous optimization based on conversion data, customer feedback, and sales patterns.",
         "duration": "Ongoing",
-        "deliverables": ["Live AI agent", "Analytics dashboard", "Optimization reports"]
+        "deliverables": [
+          "Live AI agent",
+          "Analytics dashboard",
+          "Optimization reports"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "OpenAI", "category": "LLM", "description": "GPT-4 Turbo", "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg" },
-      { "name": "LangChain", "category": "Framework", "description": "Agent Framework", "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg" },
-      { "name": "Shopify", "category": "Platform", "description": "Ecommerce API", "logo": "https://cdn.worldvectorlogo.com/logos/shopify.svg" },
-      { "name": "WooCommerce", "category": "Platform", "description": "WordPress Ecommerce", "logo": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg" },
-      { "name": "eSewa", "category": "Payments", "description": "Nepal Payments", "logo": "/assets/images/esewa-logo.svg" },
-      { "name": "Khalti", "category": "Payments", "description": "Nepal Payments", "logo": "/assets/images/khalti-logo.svg" },
-      { "name": "FastAPI", "category": "Framework", "description": "API Development", "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" },
-      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" }
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "GPT-4 Turbo",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "LangChain",
+        "category": "Framework",
+        "description": "Agent Framework",
+        "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+      },
+      {
+        "name": "Shopify",
+        "category": "Platform",
+        "description": "Ecommerce API",
+        "logo": "https://cdn.worldvectorlogo.com/logos/shopify.svg"
+      },
+      {
+        "name": "WooCommerce",
+        "category": "Platform",
+        "description": "WordPress Ecommerce",
+        "logo": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg"
+      },
+      {
+        "name": "eSewa",
+        "category": "Payments",
+        "description": "Nepal Payments",
+        "logo": "/assets/images/esewa-logo.svg"
+      },
+      {
+        "name": "Khalti",
+        "category": "Payments",
+        "description": "Nepal Payments",
+        "logo": "/assets/images/khalti-logo.svg"
+      },
+      {
+        "name": "FastAPI",
+        "category": "Framework",
+        "description": "API Development",
+        "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "Data Storage",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "What is AI ecommerce and how does it help my online store?",
@@ -582,24 +883,38 @@
         "answer": "Traditional chatbots follow scripted responses and can only answer pre-programmed questions. AI commerce agents are autonomous systems that understand context, make decisions, and take actions—like searching your catalog, updating carts, processing payments, and handling exceptions. They're the difference between a FAQ bot and an AI sales representative."
       }
     ],
-
-    "relatedServices": ["ai-development", "ai-customer-experience", "custom-software"],
-
+    "relatedServices": [
+      "ai-development",
+      "ai-customer-experience",
+      "custom-software"
+    ],
     "cta": {
       "headline": "Ready to automate your ecommerce?",
       "description": "See how AI agents can increase conversions and provide 24/7 sales support. We'll audit your store and show you the automation opportunities.",
-      "primaryButton": { "text": "Get Ecommerce Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "View AI Commerce Agent", "url": "/resources/stella-case-study/" }
+      "primaryButton": {
+        "text": "Get Ecommerce Audit",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View AI Commerce Agent",
+        "url": "/resources/stella-case-study/"
+      }
     },
-
     "clients": []
   },
-
   "data-systems": {
     "id": "data-systems",
     "relatedCaseStudies": [
-      { "slug": "cms-group-case-study", "title": "CMS Group", "stat": "85% of workflows automated" },
-      { "slug": "corecloud365-case-study", "title": "Corecloud365", "stat": "60% cost reduction" }
+      {
+        "slug": "cms-group-case-study",
+        "title": "CMS Group",
+        "stat": "85% of workflows automated"
+      },
+      {
+        "slug": "corecloud365-case-study",
+        "title": "Corecloud365",
+        "stat": "60% cost reduction"
+      }
     ],
     "title": "Data Systems",
     "category": "AI & Data",
@@ -607,29 +922,69 @@
     "description": "Data pipelines, warehouses, and analytics infrastructure engineered for AI workloads. We build the foundation that makes machine learning actually work—clean data, reliable pipelines, and scalable architecture.",
     "heroImage": "/assets/images/data-systems-hero.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Ingest data stream", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Transform schema", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Validate quality", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Load to warehouse", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Generate embeddings", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Sync to vector DB", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Monitor pipeline health", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Ingest data stream",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Transform schema",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Validate quality",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Load to warehouse",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Generate embeddings",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Sync to vector DB",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Monitor pipeline health",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Data pipelines that ship to production ML. Not cleanup tickets.",
       "content": "Most AI projects fail because of data problems, not model problems. We build pipelines, warehouses, and quality systems that skip the 6-month cleanup phase — clean inputs, reliable outputs, architecture that scales from gigabytes to petabytes. Your team ships production ML in weeks, not quarters."
     },
-
     "stats": [
-      { "value": "80%", "label": "Faster Data Prep", "description": "vs manual processes" },
-      { "value": "99.9%", "label": "Pipeline Uptime", "description": "with auto-recovery" },
-      { "value": "10x", "label": "Query Performance", "description": "after optimization" },
-      { "value": "<1hr", "label": "Data Freshness", "description": "real-time available" }
+      {
+        "value": "80%",
+        "label": "Faster Data Prep",
+        "description": "vs manual processes"
+      },
+      {
+        "value": "99.9%",
+        "label": "Pipeline Uptime",
+        "description": "with auto-recovery"
+      },
+      {
+        "value": "10x",
+        "label": "Query Performance",
+        "description": "after optimization"
+      },
+      {
+        "value": "<1hr",
+        "label": "Data Freshness",
+        "description": "real-time available"
+      }
     ],
-
     "benefits": [
       {
         "icon": "workflow",
@@ -647,7 +1002,6 @@
         "description": "Architecture designed to grow from gigabytes to petabytes without rewrites. Start with cost-effective solutions and scale infrastructure as your data volume and ML usage demands increase."
       }
     ],
-
     "useCases": [
       {
         "id": "data-pipelines",
@@ -715,49 +1069,102 @@
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Assess",
         "description": "Map your current data landscape: sources, volumes, quality issues, and downstream needs. Identify quick wins and long-term architecture needs.",
         "duration": "1-2 weeks",
-        "deliverables": ["Data inventory", "Quality assessment", "Architecture recommendations"]
+        "deliverables": [
+          "Data inventory",
+          "Quality assessment",
+          "Architecture recommendations"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design the target architecture: pipeline patterns, warehouse schema, and integration points. Select technology stack based on your scale and requirements.",
         "duration": "2-3 weeks",
-        "deliverables": ["Architecture design", "Technology selection", "Migration plan"]
+        "deliverables": [
+          "Architecture design",
+          "Technology selection",
+          "Migration plan"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Implement infrastructure iteratively. Start with highest-value data sources and expand coverage. Deploy monitoring and quality systems from day one.",
         "duration": "6-12 weeks",
-        "deliverables": ["Production pipelines", "Data warehouse", "Documentation"]
+        "deliverables": [
+          "Production pipelines",
+          "Data warehouse",
+          "Documentation"
+        ]
       },
       {
         "step": 4,
         "title": "Operate",
         "description": "Ongoing operations: monitoring, optimization, and expansion. SLA-backed support with 24/7 alerting and incident response.",
         "duration": "Ongoing",
-        "deliverables": ["SLA reports", "Optimization reviews", "Capacity planning"]
+        "deliverables": [
+          "SLA reports",
+          "Optimization reviews",
+          "Capacity planning"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "Snowflake", "category": "Warehouse", "description": "Cloud DW", "logo": "https://cdn.worldvectorlogo.com/logos/snowflake.svg" },
-      { "name": "dbt", "category": "Transform", "description": "Data Modeling", "logo": "https://cdn.worldvectorlogo.com/logos/dbt.svg" },
-      { "name": "Airflow", "category": "Orchestration", "description": "Workflow DAGs", "logo": "https://cdn.worldvectorlogo.com/logos/apache-airflow.svg" },
-      { "name": "Fivetran", "category": "Ingestion", "description": "ELT Pipelines", "logo": "https://cdn.simpleicons.org/fivetran/0073FF" },
-      { "name": "Pinecone", "category": "Vector DB", "description": "Embeddings", "logo": "https://cdn.simpleicons.org/pinecone/000000" },
-      { "name": "Spark", "category": "Processing", "description": "Big Data", "logo": "https://cdn.worldvectorlogo.com/logos/apache-spark-5.svg" },
-      { "name": "Kafka", "category": "Streaming", "description": "Event Streams", "logo": "https://cdn.worldvectorlogo.com/logos/kafka.svg" },
-      { "name": "Databricks", "category": "Platform", "description": "Lakehouse", "logo": "https://cdn.worldvectorlogo.com/logos/databricks.svg" }
+      {
+        "name": "Snowflake",
+        "category": "Warehouse",
+        "description": "Cloud DW",
+        "logo": "https://cdn.worldvectorlogo.com/logos/snowflake.svg"
+      },
+      {
+        "name": "dbt",
+        "category": "Transform",
+        "description": "Data Modeling",
+        "logo": "https://cdn.worldvectorlogo.com/logos/dbt.svg"
+      },
+      {
+        "name": "Airflow",
+        "category": "Orchestration",
+        "description": "Workflow DAGs",
+        "logo": "https://cdn.worldvectorlogo.com/logos/apache-airflow.svg"
+      },
+      {
+        "name": "Fivetran",
+        "category": "Ingestion",
+        "description": "ELT Pipelines",
+        "logo": "https://cdn.simpleicons.org/fivetran/0073FF"
+      },
+      {
+        "name": "Pinecone",
+        "category": "Vector DB",
+        "description": "Embeddings",
+        "logo": "https://cdn.simpleicons.org/pinecone/000000"
+      },
+      {
+        "name": "Spark",
+        "category": "Processing",
+        "description": "Big Data",
+        "logo": "https://cdn.worldvectorlogo.com/logos/apache-spark-5.svg"
+      },
+      {
+        "name": "Kafka",
+        "category": "Streaming",
+        "description": "Event Streams",
+        "logo": "https://cdn.worldvectorlogo.com/logos/kafka.svg"
+      },
+      {
+        "name": "Databricks",
+        "category": "Platform",
+        "description": "Lakehouse",
+        "logo": "https://cdn.worldvectorlogo.com/logos/databricks.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "How long does a data warehouse migration typically take?",
@@ -780,24 +1187,38 @@
         "answer": "Start with batch unless you have a clear real-time use case. Batch is simpler, cheaper, and sufficient for most analytics. When real-time matters (fraud detection, personalization), we implement streaming with Kafka or managed services, with batch as fallback."
       }
     ],
-
-    "relatedServices": ["ai-development", "custom-software", "saas-development"],
-
+    "relatedServices": [
+      "ai-development",
+      "custom-software",
+      "saas-development"
+    ],
     "cta": {
       "headline": "Ready to fix your data foundation?",
       "description": "Let's assess your current data infrastructure and identify the fastest path to production-ready ML. Free data audit for qualified projects.",
-      "primaryButton": { "text": "Request Data Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Request Data Audit",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Case Studies",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["rapid-investment", "mach24orbital", "cms-group"],
+    "clients": [
+      "rapid-investment",
+      "mach24orbital",
+      "cms-group"
+    ],
     "heroAlt": "Hero image for data systems section"
   },
-
   "custom-software": {
     "id": "custom-software",
     "relatedCaseStudies": [
-      { "slug": "khushbu-nirman-case-study", "title": "Khushbu Nirman Sewa", "stat": "40% reduction in delays" }
+      {
+        "slug": "khushbu-nirman-case-study",
+        "title": "Khushbu Nirman Sewa",
+        "stat": "40% reduction in delays"
+      }
     ],
     "title": "Custom Software",
     "category": "Development",
@@ -805,29 +1226,69 @@
     "description": "Enterprise applications tailored to your workflows. We build internal tools, business systems, and operational software that replaces spreadsheet chaos with purpose-built solutions.",
     "heroImage": "/assets/images/custom-software-hero.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Create new workflow", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Import legacy data", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Generate report", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Send notification", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Process approval", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Sync with ERP", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Export to dashboard", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Create new workflow",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Import legacy data",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Generate report",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Send notification",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Process approval",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Sync with ERP",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Export to dashboard",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Software that fits your business, not the other way around",
       "content": "Off-the-shelf software forces you to adapt your processes. Custom software adapts to you. We build applications that encode your specific workflows, integrate with your existing systems, and evolve as your business changes. The result: teams that work faster, make fewer errors, and spend less time fighting their tools."
     },
-
     "stats": [
-      { "value": "60%", "label": "Time Saved", "description": "on core workflows" },
-      { "value": "85%", "label": "Adoption Rate", "description": "within 30 days" },
-      { "value": "3x", "label": "Productivity Gain", "description": "vs spreadsheets" },
-      { "value": "12mo", "label": "Avg Payback", "description": "on investment" }
+      {
+        "value": "60%",
+        "label": "Time Saved",
+        "description": "on core workflows"
+      },
+      {
+        "value": "85%",
+        "label": "Adoption Rate",
+        "description": "within 30 days"
+      },
+      {
+        "value": "3x",
+        "label": "Productivity Gain",
+        "description": "vs spreadsheets"
+      },
+      {
+        "value": "12mo",
+        "label": "Avg Payback",
+        "description": "on investment"
+      }
     ],
-
     "benefits": [
       {
         "icon": "workflow",
@@ -845,7 +1306,6 @@
         "description": "Unlike rigid packaged software, custom systems can adapt. New regulations, new product lines, new workflows—we build software that changes with you, not software that holds you back."
       }
     ],
-
     "useCases": [
       {
         "id": "internal-tools",
@@ -913,49 +1373,102 @@
         "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Discover",
         "description": "Understand your current workflows, pain points, and goals. Map the process as it exists today and identify where software can add the most value.",
         "duration": "1-2 weeks",
-        "deliverables": ["Process maps", "Requirements document", "Scope definition"]
+        "deliverables": [
+          "Process maps",
+          "Requirements document",
+          "Scope definition"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design the user experience and system architecture. Prototype key screens and workflows for validation before building.",
         "duration": "2-3 weeks",
-        "deliverables": ["UX designs", "Architecture plan", "Interactive prototype"]
+        "deliverables": [
+          "UX designs",
+          "Architecture plan",
+          "Interactive prototype"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Iterative development with regular demos and feedback cycles. Working software delivered every 2 weeks, not at the end of a long project.",
         "duration": "8-16 weeks",
-        "deliverables": ["Production application", "Documentation", "Training materials"]
+        "deliverables": [
+          "Production application",
+          "Documentation",
+          "Training materials"
+        ]
       },
       {
         "step": 4,
         "title": "Support",
         "description": "Post-launch support, maintenance, and enhancement. Your software continues to evolve based on user feedback and changing business needs.",
         "duration": "Ongoing",
-        "deliverables": ["Bug fixes", "Feature updates", "Performance monitoring"]
+        "deliverables": [
+          "Bug fixes",
+          "Feature updates",
+          "Performance monitoring"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "React", "category": "Frontend", "description": "UI Framework", "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
-      { "name": "Node.js", "category": "Backend", "description": "Server Runtime", "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
-      { "name": "PostgreSQL", "category": "Database", "description": "Data Storage", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
-      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { "name": "Next.js", "category": "Framework", "description": "Full Stack", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
-      { "name": "Prisma", "category": "ORM", "description": "Data Layer", "logo": "https://cdn.worldvectorlogo.com/logos/prisma-2.svg" },
-      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
-      { "name": "Docker", "category": "DevOps", "description": "Containers", "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg" }
+      {
+        "name": "React",
+        "category": "Frontend",
+        "description": "UI Framework",
+        "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      },
+      {
+        "name": "Node.js",
+        "category": "Backend",
+        "description": "Server Runtime",
+        "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "Data Storage",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Language",
+        "description": "Type Safety",
+        "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+      },
+      {
+        "name": "Next.js",
+        "category": "Framework",
+        "description": "Full Stack",
+        "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+      },
+      {
+        "name": "Prisma",
+        "category": "ORM",
+        "description": "Data Layer",
+        "logo": "https://cdn.worldvectorlogo.com/logos/prisma-2.svg"
+      },
+      {
+        "name": "AWS",
+        "category": "Cloud",
+        "description": "Infrastructure",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      },
+      {
+        "name": "Docker",
+        "category": "DevOps",
+        "description": "Containers",
+        "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "When should we build custom vs buy off-the-shelf?",
@@ -978,20 +1491,30 @@
         "answer": "Initial build is typically 3-6 months of development. Ongoing costs include hosting (often $500-2000/month), maintenance (10-20% of build cost annually), and enhancements as needed. We provide detailed TCO projections before project start so you can compare against alternatives."
       }
     ],
-
-    "relatedServices": ["saas-development", "web-development", "ai-development"],
-
+    "relatedServices": [
+      "saas-development",
+      "web-development",
+      "ai-development"
+    ],
     "cta": {
       "headline": "Ready to replace spreadsheets with real software?",
       "description": "Tell us about your workflow challenges. We'll help you evaluate whether custom software makes sense and scope a solution.",
-      "primaryButton": { "text": "Discuss Your Project", "url": "/contact/" },
-      "secondaryButton": { "text": "View Case Studies", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Discuss Your Project",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Case Studies",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["cms-group", "khushbu-nirman-sewa", "corecloud365"],
+    "clients": [
+      "cms-group",
+      "khushbu-nirman-sewa",
+      "corecloud365"
+    ],
     "heroAlt": "Hero image for custom software section"
   },
-
   "saas-development": {
     "id": "saas-development",
     "title": "SaaS Development",
@@ -1000,29 +1523,69 @@
     "description": "Multi-tenant SaaS platforms with subscription billing, user management, and architecture designed for scale. We build products that handle thousands of tenants without rewriting the foundation.",
     "heroImage": "/assets/images/saas-development-hero.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Create tenant workspace", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Process subscription", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Apply usage limits", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Generate invoice", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Upgrade plan tier", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Onboard new user", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Scale infrastructure", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Create tenant workspace",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Process subscription",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Apply usage limits",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Generate invoice",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Upgrade plan tier",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Onboard new user",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Scale infrastructure",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "SaaS architecture that doesn't break at scale",
       "content": "We've built SaaS products that serve 10 tenants and products that serve 10,000. The difference isn't luck—it's architecture. Our SaaS development approach handles multi-tenancy, subscription complexity, and scaling challenges from day one. You launch faster and grow without hitting walls that require expensive rewrites."
     },
-
     "stats": [
-      { "value": "3-6mo", "label": "MVP Launch", "description": "typical timeline" },
-      { "value": "10k+", "label": "Tenant Scale", "description": "architecture supports" },
-      { "value": "99.9%", "label": "Uptime Target", "description": "built for reliability" },
-      { "value": "< $2k", "label": "Infra Cost", "description": "at 1000 tenants" }
+      {
+        "value": "3-6mo",
+        "label": "MVP Launch",
+        "description": "typical timeline"
+      },
+      {
+        "value": "10k+",
+        "label": "Tenant Scale",
+        "description": "architecture supports"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime Target",
+        "description": "built for reliability"
+      },
+      {
+        "value": "< $2k",
+        "label": "Infra Cost",
+        "description": "at 1000 tenants"
+      }
     ],
-
     "benefits": [
       {
         "icon": "speed",
@@ -1040,7 +1603,6 @@
         "description": "Subscription plans, usage-based pricing, trials, upgrades, downgrades, and prorations—billing is hard. We integrate with Stripe or your provider to handle the edge cases that trip up most SaaS products."
       }
     ],
-
     "useCases": [
       {
         "id": "b2b-saas",
@@ -1108,49 +1670,102 @@
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Strategy",
         "description": "Define your product vision, target market, and MVP scope. Identify core features that deliver value versus nice-to-haves that can wait.",
         "duration": "1-2 weeks",
-        "deliverables": ["Product roadmap", "MVP scope", "Architecture plan"]
+        "deliverables": [
+          "Product roadmap",
+          "MVP scope",
+          "Architecture plan"
+        ]
       },
       {
         "step": 2,
         "title": "Foundation",
         "description": "Build core infrastructure: auth, multi-tenancy, billing integration, and base UI. The foundation that everything else builds on.",
         "duration": "4-6 weeks",
-        "deliverables": ["Auth system", "Tenant management", "Billing integration"]
+        "deliverables": [
+          "Auth system",
+          "Tenant management",
+          "Billing integration"
+        ]
       },
       {
         "step": 3,
         "title": "Features",
         "description": "Develop your differentiating features. Iterative cycles with continuous deployment and user feedback incorporated.",
         "duration": "8-12 weeks",
-        "deliverables": ["Core features", "User flows", "Admin tools"]
+        "deliverables": [
+          "Core features",
+          "User flows",
+          "Admin tools"
+        ]
       },
       {
         "step": 4,
         "title": "Launch",
         "description": "Production deployment, monitoring setup, and launch support. Help with go-to-market, early customer onboarding, and rapid iteration.",
         "duration": "Ongoing",
-        "deliverables": ["Production deployment", "Monitoring", "Launch support"]
+        "deliverables": [
+          "Production deployment",
+          "Monitoring",
+          "Launch support"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "Next.js", "category": "Framework", "description": "Full Stack React", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
-      { "name": "Stripe", "category": "Payments", "description": "Billing & Subscriptions", "logo": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg" },
-      { "name": "PostgreSQL", "category": "Database", "description": "Multi-Tenant Data", "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
-      { "name": "Auth0", "category": "Auth", "description": "Identity Management", "logo": "https://cdn.worldvectorlogo.com/logos/auth0-icon.svg" },
-      { "name": "Vercel", "category": "Platform", "description": "Edge Deployment", "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
-      { "name": "Redis", "category": "Cache", "description": "Session & Cache", "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg" },
-      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { "name": "AWS", "category": "Cloud", "description": "Infrastructure", "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg" }
+      {
+        "name": "Next.js",
+        "category": "Framework",
+        "description": "Full Stack React",
+        "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+      },
+      {
+        "name": "Stripe",
+        "category": "Payments",
+        "description": "Billing & Subscriptions",
+        "logo": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "Multi-Tenant Data",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      },
+      {
+        "name": "Auth0",
+        "category": "Auth",
+        "description": "Identity Management",
+        "logo": "https://cdn.worldvectorlogo.com/logos/auth0-icon.svg"
+      },
+      {
+        "name": "Vercel",
+        "category": "Platform",
+        "description": "Edge Deployment",
+        "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+      },
+      {
+        "name": "Redis",
+        "category": "Cache",
+        "description": "Session & Cache",
+        "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Language",
+        "description": "Type Safety",
+        "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+      },
+      {
+        "name": "AWS",
+        "category": "Cloud",
+        "description": "Infrastructure",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "What's the difference between multi-tenant and single-tenant architecture?",
@@ -1173,23 +1788,36 @@
         "answer": "A focused MVP with core features typically takes 3-4 months. Complex products with multiple user types, integrations, or regulatory requirements may take 5-6 months. We scope honestly—unrealistic timelines lead to technical debt that slows you down later."
       }
     ],
-
-    "relatedServices": ["custom-software", "web-development", "ai-development"],
-
+    "relatedServices": [
+      "custom-software",
+      "web-development",
+      "ai-development"
+    ],
     "cta": {
       "headline": "Ready to build your SaaS product?",
       "description": "Let's discuss your product vision and map out the fastest path to launch. We'll help you scope an MVP that delivers value without overbuilding.",
-      "primaryButton": { "text": "Discuss Your Product", "url": "/contact/" },
-      "secondaryButton": { "text": "View SaaS Projects", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Discuss Your Product",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View SaaS Projects",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["corecloud365", "mach24orbital"]
+    "clients": [
+      "corecloud365",
+      "mach24orbital"
+    ]
   },
-
   "web-development": {
     "id": "web-development",
     "relatedCaseStudies": [
-      { "slug": "chayce-properties-case-study", "title": "Chayce Properties", "stat": "Full-stack digital ownership" }
+      {
+        "slug": "chayce-properties-case-study",
+        "title": "Chayce Properties",
+        "stat": "Full-stack digital ownership"
+      }
     ],
     "title": "Web Development",
     "category": "Development",
@@ -1197,29 +1825,69 @@
     "description": "High-performance websites and web applications built for speed, SEO, and conversion. Modern frameworks, responsive design, and architecture that handles traffic without breaking.",
     "heroImage": "/assets/images/web-development-hero.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Optimize Core Web Vitals", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Generate static pages", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Deploy to edge", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Cache API response", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Compress images", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Prefetch navigation", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Analyze user flow", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Optimize Core Web Vitals",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Generate static pages",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Deploy to edge",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Cache API response",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Compress images",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Prefetch navigation",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Analyze user flow",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Fast. SEO-ready. Converts visitors. That's our web development baseline.",
       "content": "We build websites that load fast, rank high, and convert visitors to customers. Every site ships with optimized Core Web Vitals, mobile-first responsive design, and SEO best practices baked in—not bolted on. The result: organic traffic that actually converts, page speeds that beat competitors, and infrastructure that scales."
     },
-
     "stats": [
-      { "value": "<1s", "label": "Load Time", "description": "LCP target met" },
-      { "value": "95+", "label": "PageSpeed Score", "description": "mobile performance" },
-      { "value": "40%", "label": "Conversion Lift", "description": "avg after rebuild" },
-      { "value": "99.9%", "label": "Uptime", "description": "edge deployment" }
+      {
+        "value": "<1s",
+        "label": "Load Time",
+        "description": "LCP target met"
+      },
+      {
+        "value": "95+",
+        "label": "PageSpeed Score",
+        "description": "mobile performance"
+      },
+      {
+        "value": "40%",
+        "label": "Conversion Lift",
+        "description": "avg after rebuild"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime",
+        "description": "edge deployment"
+      }
     ],
-
     "benefits": [
       {
         "icon": "speed",
@@ -1237,7 +1905,6 @@
         "description": "JAMstack architecture with CDN distribution handles traffic spikes gracefully. No server capacity planning, no emergency scaling—just fast pages served from the edge."
       }
     ],
-
     "useCases": [
       {
         "id": "marketing-sites",
@@ -1305,49 +1972,102 @@
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Discover",
         "description": "Understand your goals, audience, and content needs. Audit existing site performance, SEO, and conversion funnels.",
         "duration": "1 week",
-        "deliverables": ["Site audit", "Content inventory", "Technical requirements"]
+        "deliverables": [
+          "Site audit",
+          "Content inventory",
+          "Technical requirements"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design responsive layouts, component systems, and user flows. Performance-oriented design that looks great without sacrificing speed.",
         "duration": "2-3 weeks",
-        "deliverables": ["Design system", "Page layouts", "Interactive prototype"]
+        "deliverables": [
+          "Design system",
+          "Page layouts",
+          "Interactive prototype"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Develop with modern frameworks, optimize for Core Web Vitals, and integrate CMS and third-party services.",
         "duration": "4-8 weeks",
-        "deliverables": ["Production website", "CMS setup", "SEO implementation"]
+        "deliverables": [
+          "Production website",
+          "CMS setup",
+          "SEO implementation"
+        ]
       },
       {
         "step": 4,
         "title": "Launch",
         "description": "Deploy to edge network, set up monitoring, and optimize based on real user data. Ongoing performance tuning and content support.",
         "duration": "Ongoing",
-        "deliverables": ["Live site", "Analytics setup", "Performance monitoring"]
+        "deliverables": [
+          "Live site",
+          "Analytics setup",
+          "Performance monitoring"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "Next.js", "category": "Framework", "description": "React Framework", "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
-      { "name": "Tailwind", "category": "Styling", "description": "CSS Framework", "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
-      { "name": "Vercel", "category": "Platform", "description": "Edge Hosting", "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg" },
-      { "name": "Sanity", "category": "CMS", "description": "Headless CMS", "logo": "https://cdn.worldvectorlogo.com/logos/sanity.svg" },
-      { "name": "TypeScript", "category": "Language", "description": "Type Safety", "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { "name": "Cloudflare", "category": "CDN", "description": "Edge Network", "logo": "https://cdn.worldvectorlogo.com/logos/cloudflare.svg" },
-      { "name": "Framer Motion", "category": "Animation", "description": "Motion Design", "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg" },
-      { "name": "Algolia", "category": "Search", "description": "Site Search", "logo": "https://cdn.worldvectorlogo.com/logos/algolia.svg" }
+      {
+        "name": "Next.js",
+        "category": "Framework",
+        "description": "React Framework",
+        "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+      },
+      {
+        "name": "Tailwind",
+        "category": "Styling",
+        "description": "CSS Framework",
+        "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+      },
+      {
+        "name": "Vercel",
+        "category": "Platform",
+        "description": "Edge Hosting",
+        "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+      },
+      {
+        "name": "Sanity",
+        "category": "CMS",
+        "description": "Headless CMS",
+        "logo": "https://cdn.worldvectorlogo.com/logos/sanity.svg"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Language",
+        "description": "Type Safety",
+        "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+      },
+      {
+        "name": "Cloudflare",
+        "category": "CDN",
+        "description": "Edge Network",
+        "logo": "https://cdn.worldvectorlogo.com/logos/cloudflare.svg"
+      },
+      {
+        "name": "Framer Motion",
+        "category": "Animation",
+        "description": "Motion Design",
+        "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+      },
+      {
+        "name": "Algolia",
+        "category": "Search",
+        "description": "Site Search",
+        "logo": "https://cdn.worldvectorlogo.com/logos/algolia.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "Why does page speed matter for business results?",
@@ -1370,19 +2090,29 @@
         "answer": "Websites are primarily content-focused (marketing sites, blogs, e-commerce). Web apps are functionality-focused (dashboards, tools, interactive features). The technology often overlaps, but the design priorities differ. Many projects combine both—a marketing site with an authenticated app section."
       }
     ],
-
-    "relatedServices": ["custom-software", "aeo-seo", "app-development"],
-
+    "relatedServices": [
+      "custom-software",
+      "aeo-seo",
+      "app-development"
+    ],
     "cta": {
       "headline": "Ready for a faster, higher-converting site?",
       "description": "Let's audit your current site performance and map out improvements. We'll show you exactly where you're losing visitors and how to fix it.",
-      "primaryButton": { "text": "Request Site Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "View Our Work", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Request Site Audit",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Our Work",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["prime-tiles", "khushbu-nirman-sewa", "khems-cleaning"]
+    "clients": [
+      "prime-tiles",
+      "khushbu-nirman-sewa",
+      "khems-cleaning"
+    ]
   },
-
   "app-development": {
     "id": "app-development",
     "title": "App Development",
@@ -1391,29 +2121,69 @@
     "description": "Mobile applications for iOS and Android that feel native and perform smoothly. Cross-platform development when it makes sense, native when it doesn't—the right approach for your product and users.",
     "heroImage": "/assets/images/services-hero-bg.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Build for iOS", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Build for Android", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Sync offline data", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Send push notification", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Access camera", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Authenticate user", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Submit to App Store", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Build for iOS",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Build for Android",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Sync offline data",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Send push notification",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Access camera",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Authenticate user",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Submit to App Store",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Apps that work in the real world. Not just in the demo.",
       "content": "We build mobile apps that work in the real world — spotty connections, diverse devices, impatient users. Our apps feel native because we respect platform conventions, and perform smoothly because we optimize relentlessly. iOS and Android, shipped from one codebase by one team, without the usual tradeoffs."
     },
-
     "stats": [
-      { "value": "4.7+", "label": "App Store Rating", "description": "average across apps" },
-      { "value": "60%", "label": "Faster Development", "description": "vs dual native teams" },
-      { "value": "< 200ms", "label": "UI Response", "description": "interaction target" },
-      { "value": "99%", "label": "Crash-Free Rate", "description": "production standard" }
+      {
+        "value": "4.7+",
+        "label": "App Store Rating",
+        "description": "average across apps"
+      },
+      {
+        "value": "60%",
+        "label": "Faster Development",
+        "description": "vs dual native teams"
+      },
+      {
+        "value": "< 200ms",
+        "label": "UI Response",
+        "description": "interaction target"
+      },
+      {
+        "value": "99%",
+        "label": "Crash-Free Rate",
+        "description": "production standard"
+      }
     ],
-
     "benefits": [
       {
         "icon": "speed",
@@ -1431,7 +2201,6 @@
         "description": "Apps that connect to your existing APIs, authentication systems, and business data. Push notifications, analytics, payment processing, and deep integrations with platform features."
       }
     ],
-
     "useCases": [
       {
         "id": "consumer-apps",
@@ -1499,49 +2268,102 @@
         "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Strategy",
         "description": "Define your app's core value proposition, target platforms, and MVP scope. Identify platform-specific considerations and technical requirements.",
         "duration": "1-2 weeks",
-        "deliverables": ["App strategy document", "Platform recommendations", "MVP scope"]
+        "deliverables": [
+          "App strategy document",
+          "Platform recommendations",
+          "MVP scope"
+        ]
       },
       {
         "step": 2,
         "title": "Design",
         "description": "Design user flows, screens, and interactions following platform conventions. Prototype key flows for validation before development.",
         "duration": "2-4 weeks",
-        "deliverables": ["UI/UX designs", "Interactive prototype", "Design system"]
+        "deliverables": [
+          "UI/UX designs",
+          "Interactive prototype",
+          "Design system"
+        ]
       },
       {
         "step": 3,
         "title": "Develop",
         "description": "Build the app with regular TestFlight/beta releases. Iterative development with continuous feedback from real device testing.",
         "duration": "8-16 weeks",
-        "deliverables": ["Beta app", "API integration", "Testing suite"]
+        "deliverables": [
+          "Beta app",
+          "API integration",
+          "Testing suite"
+        ]
       },
       {
         "step": 4,
         "title": "Launch",
         "description": "App Store/Play Store submission, launch marketing support, and post-launch monitoring. Ongoing updates and feature development.",
         "duration": "Ongoing",
-        "deliverables": ["App Store listing", "Launch support", "Update roadmap"]
+        "deliverables": [
+          "App Store listing",
+          "Launch support",
+          "Update roadmap"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "React Native", "category": "Framework", "description": "Cross-Platform", "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
-      { "name": "Swift", "category": "Language", "description": "iOS Native", "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg" },
-      { "name": "Kotlin", "category": "Language", "description": "Android Native", "logo": "https://cdn.worldvectorlogo.com/logos/kotlin-2.svg" },
-      { "name": "Expo", "category": "Platform", "description": "React Native Tools", "logo": "https://cdn.worldvectorlogo.com/logos/expo-1.svg" },
-      { "name": "Firebase", "category": "Backend", "description": "Mobile Backend", "logo": "https://cdn.worldvectorlogo.com/logos/firebase-1.svg" },
-      { "name": "RevenueCat", "category": "Payments", "description": "In-App Purchases", "logo": "https://cdn.simpleicons.org/revenuecat/F25A5A" },
-      { "name": "OneSignal", "category": "Push", "description": "Notifications", "logo": "https://cdn.simpleicons.org/onesignal/E54B4D" },
-      { "name": "Sentry", "category": "Monitoring", "description": "Crash Reporting", "logo": "https://cdn.worldvectorlogo.com/logos/sentry-3.svg" }
+      {
+        "name": "React Native",
+        "category": "Framework",
+        "description": "Cross-Platform",
+        "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      },
+      {
+        "name": "Swift",
+        "category": "Language",
+        "description": "iOS Native",
+        "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg"
+      },
+      {
+        "name": "Kotlin",
+        "category": "Language",
+        "description": "Android Native",
+        "logo": "https://cdn.worldvectorlogo.com/logos/kotlin-2.svg"
+      },
+      {
+        "name": "Expo",
+        "category": "Platform",
+        "description": "React Native Tools",
+        "logo": "https://cdn.worldvectorlogo.com/logos/expo-1.svg"
+      },
+      {
+        "name": "Firebase",
+        "category": "Backend",
+        "description": "Mobile Backend",
+        "logo": "https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
+      },
+      {
+        "name": "RevenueCat",
+        "category": "Payments",
+        "description": "In-App Purchases",
+        "logo": "https://cdn.simpleicons.org/revenuecat/F25A5A"
+      },
+      {
+        "name": "OneSignal",
+        "category": "Push",
+        "description": "Notifications",
+        "logo": "https://cdn.simpleicons.org/onesignal/E54B4D"
+      },
+      {
+        "name": "Sentry",
+        "category": "Monitoring",
+        "description": "Crash Reporting",
+        "logo": "https://cdn.worldvectorlogo.com/logos/sentry-3.svg"
+      }
     ],
-
     "faq": [
       {
         "question": "Should we build native or cross-platform?",
@@ -1564,20 +2386,29 @@
         "answer": "Yes, we regularly take over apps from other teams or internal developers. We start with a code audit to assess quality and identify issues, then create a stabilization and improvement plan. Honest assessment of the existing code helps set realistic expectations."
       }
     ],
-
-    "relatedServices": ["web-development", "custom-software", "saas-development"],
-
+    "relatedServices": [
+      "web-development",
+      "custom-software",
+      "saas-development"
+    ],
     "cta": {
       "headline": "Ready to build your mobile app?",
       "description": "Let's discuss your app idea and the best approach for your users and budget. We'll help you define an MVP that delivers value without overbuilding.",
-      "primaryButton": { "text": "Discuss Your App", "url": "/contact/" },
-      "secondaryButton": { "text": "View App Projects", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Discuss Your App",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View App Projects",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["admizz", "rapid-investment"],
+    "clients": [
+      "admizz",
+      "rapid-investment"
+    ],
     "heroAlt": "Hero background image for services section."
   },
-
   "aeo-seo": {
     "id": "aeo-seo",
     "title": "AEO & SEO",
@@ -1586,29 +2417,69 @@
     "description": "Search optimization for the AI era. We optimize your content to rank in traditional search and get cited by AI assistants like ChatGPT, Perplexity, and Google AI Overviews. The new rules require a new approach.",
     "heroImage": "/assets/images/aeo-seo-hero.webp",
     "lastUpdated": "2026-03-24",
-
     "heroCommands": [
-      { "text": "Audit AI visibility", "type": "Content", "offset": "top-8 right-12" },
-      { "text": "Optimize for citation", "type": "Actions", "offset": "top-20 right-24" },
-      { "text": "Add schema markup", "type": "Content", "offset": "top-32 right-8" },
-      { "text": "Structure FAQ content", "type": "Actions", "offset": "top-44 right-32" },
-      { "text": "Track AI mentions", "type": "Content", "offset": "top-56 right-16" },
-      { "text": "Improve Core Web Vitals", "type": "Actions", "offset": "top-68 right-4" },
-      { "text": "Analyze search intent", "type": "Content", "offset": "top-80 right-28" }
+      {
+        "text": "Audit AI visibility",
+        "type": "Content",
+        "offset": "top-8 right-12"
+      },
+      {
+        "text": "Optimize for citation",
+        "type": "Actions",
+        "offset": "top-20 right-24"
+      },
+      {
+        "text": "Add schema markup",
+        "type": "Content",
+        "offset": "top-32 right-8"
+      },
+      {
+        "text": "Structure FAQ content",
+        "type": "Actions",
+        "offset": "top-44 right-32"
+      },
+      {
+        "text": "Track AI mentions",
+        "type": "Content",
+        "offset": "top-56 right-16"
+      },
+      {
+        "text": "Improve Core Web Vitals",
+        "type": "Actions",
+        "offset": "top-68 right-4"
+      },
+      {
+        "text": "Analyze search intent",
+        "type": "Content",
+        "offset": "top-80 right-28"
+      }
     ],
-
     "definition": {
       "heading": "Visible on Google. Cited by ChatGPT. That's modern search.",
       "content": "AI systems like ChatGPT, Perplexity, and Google AI Overviews now answer millions of queries that once sent traffic to your website. Staying visible requires optimization for both search engines and AI citation — structured content, authoritative positioning, and technical precision. We call this AEO, and it's inseparable from effective SEO today."
     },
-
     "stats": [
-      { "value": "40%", "label": "AI Traffic Share", "description": "by 2027 projection" },
-      { "value": "3x", "label": "Citation Rate", "description": "with AEO optimization" },
-      { "value": "200%", "label": "Organic Growth", "description": "avg client improvement" },
-      { "value": "< 30d", "label": "First Results", "description": "for quick wins" }
+      {
+        "value": "40%",
+        "label": "AI Traffic Share",
+        "description": "by 2027 projection"
+      },
+      {
+        "value": "3x",
+        "label": "Citation Rate",
+        "description": "with AEO optimization"
+      },
+      {
+        "value": "200%",
+        "label": "Organic Growth",
+        "description": "avg client improvement"
+      },
+      {
+        "value": "< 30d",
+        "label": "First Results",
+        "description": "for quick wins"
+      }
     ],
-
     "benefits": [
       {
         "icon": "workflow",
@@ -1626,7 +2497,6 @@
         "description": "Both traditional SEO and AEO reward authority. We build it through content depth, expert positioning, backlink acquisition, and technical excellence. The result is traffic that grows and compounds, not ads that stop when you stop paying."
       }
     ],
-
     "useCases": [
       {
         "id": "ai-visibility",
@@ -1694,49 +2564,102 @@
         "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
       }
     ],
-
     "process": [
       {
         "step": 1,
         "title": "Audit",
         "description": "Comprehensive audit of technical SEO, content quality, AI visibility, and competitive positioning. Identify quick wins and long-term opportunities.",
         "duration": "1-2 weeks",
-        "deliverables": ["SEO audit report", "AEO assessment", "Priority roadmap"]
+        "deliverables": [
+          "SEO audit report",
+          "AEO assessment",
+          "Priority roadmap"
+        ]
       },
       {
         "step": 2,
         "title": "Fix",
         "description": "Address technical issues and implement quick wins. Schema markup, site speed improvements, and content structure optimizations.",
         "duration": "2-4 weeks",
-        "deliverables": ["Technical fixes", "Schema implementation", "Content restructuring"]
+        "deliverables": [
+          "Technical fixes",
+          "Schema implementation",
+          "Content restructuring"
+        ]
       },
       {
         "step": 3,
         "title": "Build",
         "description": "Execute content strategy: create new content, optimize existing pages, and build topical authority. Ongoing link building and PR.",
         "duration": "Ongoing",
-        "deliverables": ["Content calendar", "Link acquisition", "Ranking reports"]
+        "deliverables": [
+          "Content calendar",
+          "Link acquisition",
+          "Ranking reports"
+        ]
       },
       {
         "step": 4,
         "title": "Measure",
         "description": "Track rankings, traffic, AI citations, and conversions. Monthly reporting with insights and strategy adjustments based on data.",
         "duration": "Ongoing",
-        "deliverables": ["Monthly reports", "Ranking tracking", "AI citation monitoring"]
+        "deliverables": [
+          "Monthly reports",
+          "Ranking tracking",
+          "AI citation monitoring"
+        ]
       }
     ],
-
     "techStack": [
-      { "name": "Ahrefs", "category": "SEO Tool", "description": "Backlink Analysis", "logo": "https://cdn.simpleicons.org/ahrefs/FF6600" },
-      { "name": "Semrush", "category": "SEO Tool", "description": "Keyword Research", "logo": "https://cdn.worldvectorlogo.com/logos/semrush.svg" },
-      { "name": "Screaming Frog", "category": "Crawler", "description": "Technical Audit", "logo": "https://cdn.simpleicons.org/screamingfrog/9DCA31" },
-      { "name": "Google Search Console", "category": "Analytics", "description": "Search Data", "logo": "https://cdn.worldvectorlogo.com/logos/google-search-console.svg" },
-      { "name": "Schema.org", "category": "Structured Data", "description": "Markup Standard", "logo": "https://schema.org/docs/favicon.ico" },
-      { "name": "PageSpeed Insights", "category": "Performance", "description": "Core Web Vitals", "logo": "https://cdn.worldvectorlogo.com/logos/google-lighthouse.svg" },
-      { "name": "Clearscope", "category": "Content", "description": "Content Optimization", "logo": "https://cdn.simpleicons.org/c/5046E5" },
-      { "name": "Surfer SEO", "category": "Content", "description": "On-Page SEO", "logo": "https://cdn.simpleicons.org/surfshark/178BF1" }
+      {
+        "name": "Ahrefs",
+        "category": "SEO Tool",
+        "description": "Backlink Analysis",
+        "logo": "https://cdn.simpleicons.org/ahrefs/FF6600"
+      },
+      {
+        "name": "Semrush",
+        "category": "SEO Tool",
+        "description": "Keyword Research",
+        "logo": "https://cdn.worldvectorlogo.com/logos/semrush.svg"
+      },
+      {
+        "name": "Screaming Frog",
+        "category": "Crawler",
+        "description": "Technical Audit",
+        "logo": "https://cdn.simpleicons.org/screamingfrog/9DCA31"
+      },
+      {
+        "name": "Google Search Console",
+        "category": "Analytics",
+        "description": "Search Data",
+        "logo": "https://cdn.worldvectorlogo.com/logos/google-search-console.svg"
+      },
+      {
+        "name": "Schema.org",
+        "category": "Structured Data",
+        "description": "Markup Standard",
+        "logo": "https://schema.org/docs/favicon.ico"
+      },
+      {
+        "name": "PageSpeed Insights",
+        "category": "Performance",
+        "description": "Core Web Vitals",
+        "logo": "https://cdn.worldvectorlogo.com/logos/google-lighthouse.svg"
+      },
+      {
+        "name": "Clearscope",
+        "category": "Content",
+        "description": "Content Optimization",
+        "logo": "https://cdn.simpleicons.org/c/5046E5"
+      },
+      {
+        "name": "Surfer SEO",
+        "category": "Content",
+        "description": "On-Page SEO",
+        "logo": "https://cdn.simpleicons.org/surfshark/178BF1"
+      }
     ],
-
     "faq": [
       {
         "question": "What is AEO and why does it matter?",
@@ -1759,16 +2682,651 @@
         "answer": "AI systems favor clear definitions, structured data (schema markup), authoritative positioning (credentials, citations, data), and well-organized content. FAQ sections, comparison tables, and self-contained paragraphs are more likely to be extracted and cited than walls of text."
       }
     ],
-
-    "relatedServices": ["web-development", "custom-software", "ai-customer-experience"],
-
+    "relatedServices": [
+      "web-development",
+      "custom-software",
+      "ai-customer-experience"
+    ],
     "cta": {
       "headline": "Ready to get found by Google and AI?",
       "description": "Let's audit your current visibility and show you exactly where you're missing opportunities. Free SEO/AEO audit for qualified businesses.",
-      "primaryButton": { "text": "Request Free Audit", "url": "/contact/" },
-      "secondaryButton": { "text": "See Results", "url": "/projects/" }
+      "primaryButton": {
+        "text": "Request Free Audit",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "See Results",
+        "url": "/projects/"
+      }
     },
-
-    "clients": ["prime-tiles", "mach24orbital", "cms-group"]
+    "clients": [
+      "prime-tiles",
+      "mach24orbital",
+      "cms-group"
+    ]
+  },
+  "voice-agent": {
+    "id": "voice-agent",
+    "relatedCaseStudies": [
+      {
+        "slug": "zenly-case-study",
+        "title": "Zennly",
+        "stat": "AI booking engine"
+      },
+      {
+        "slug": "khems-cleaning-case-study",
+        "title": "Khems Cleaning",
+        "stat": "70% increase in bookings"
+      },
+      {
+        "slug": "dental-ai-case-study",
+        "title": "Dental AI Assistant",
+        "stat": "24/7 patient communication"
+      }
+    ],
+    "title": "Voice Agent",
+    "category": "AI & Data",
+    "tagline": "The call you missed was the booking you lost.",
+    "description": "An AI voice agent that answers your phone and actually takes the booking — checking live availability, writing it into the system you already run, confirming by SMS, and handling the reschedules and cancellations that follow. Built on Zennly, our own scheduling engine, so it copes with availability a plain calendar cannot represent.",
+    "heroImage": "/assets/images/voice-agent-hero.svg",
+    "heroAlt": "Booking calendar, time slots and upcoming appointments — the surface a voice agent writes into",
+    "lastUpdated": "2026-10-08",
+    "definition": {
+      "heading": "It answers the phone, checks real availability, and books it.",
+      "content": "A booking voice agent picks up an inbound call, works out what the caller wants from natural speech, checks live availability against the real constraints — which staff member, which room, which equipment, how long, what has to happen before and after — offers slots that genuinely exist, writes the appointment into your system, and confirms it in writing. It then handles the follow-on traffic that fills most reception phones: reschedules, cancellations, reminders and “are you open on Saturday”. The hard part is never the talking; it is the availability logic and the write-back."
+    },
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "The after-hours enquiry becomes a booking, not a voicemail",
+        "description": "In appointment-led businesses most lost revenue is simply the unanswered call — evenings, weekends, lunch, or while reception is with someone. The agent answers on the first ring at any hour and completes the booking, so the 9pm enquiry is on the calendar by 9:01 instead of in a voicemail box nobody returns."
+      },
+      {
+        "icon": "workflow",
+        "title": "Availability a calendar cannot represent",
+        "description": "Real booking rules are messy: two staff and one treatment room, a 20-minute clean between slots, a double appointment that needs a senior clinician, a deposit before a weekend slot. We run the agent on Zennly, our own scheduling engine built for exactly this multi-provider, multi-resource case, so it offers slots that are genuinely bookable."
+      },
+      {
+        "icon": "integrate",
+        "title": "Reschedules and no-shows handled on the phone",
+        "description": "Most of a reception phone is not new bookings — it is moving them. The agent takes the reschedule, frees the old slot, offers alternatives, and places the reminder calls that stop no-shows, with two-way rescheduling so the caller can move the appointment on the spot instead of cancelling."
+      }
+    ],
+    "useCases": [
+      {
+        "id": "take-a-booking",
+        "title": "Take a Booking",
+        "headline": "Take a Booking End to End",
+        "description": "The agent establishes what is needed and for whom, checks live availability against staff, room and equipment constraints, offers slots that actually exist, writes the appointment to your system, and confirms by SMS or email.",
+        "features": [
+          "Live availability check",
+          "Service and duration matching",
+          "Writes to your system of record",
+          "SMS/email confirmation"
+        ],
+        "image": "/assets/images/solutions/voice-appointment-booking.svg"
+      },
+      {
+        "id": "reschedule-cancel",
+        "title": "Reschedule & Cancel",
+        "headline": "Reschedules, Cancellations and Waitlists",
+        "description": "The traffic that fills most reception phones. The agent identifies the caller, moves or cancels the appointment, releases the slot, and offers it to anyone on the waitlist — so a cancellation becomes a refill rather than a gap.",
+        "features": [
+          "Caller identification",
+          "Slot release and refill",
+          "Waitlist offers",
+          "Cancellation policy enforcement"
+        ],
+        "image": "/assets/images/solutions/voice-reschedule-cancel.svg"
+      },
+      {
+        "id": "reminders-no-shows",
+        "title": "Reminders",
+        "headline": "Outbound Reminders That Reduce No-Shows",
+        "description": "Reminder calls placed as real conversations rather than recordings, so the caller can confirm, move or cancel during the call. A no-show costs the whole slot; a reschedule costs nothing.",
+        "features": [
+          "Two-way rescheduling",
+          "Confirmation capture",
+          "Escalation on no answer",
+          "Opt-out handling"
+        ],
+        "image": "/assets/images/solutions/voice-outbound.svg"
+      },
+      {
+        "id": "complex-availability",
+        "title": "Complex Availability",
+        "headline": "Multi-Provider, Multi-Resource Booking",
+        "description": "Clinics with several practitioners and shared rooms, workshops with limited bays, studios where the kit matters as much as the person. Zennly resolves the conflicts the agent would otherwise have to guess at.",
+        "features": [
+          "Multi-provider matching",
+          "Shared resource conflicts",
+          "Buffer and turnaround time",
+          "Automatic conflict resolution"
+        ],
+        "image": "/assets/images/solutions/voice-complex-availability.svg"
+      },
+      {
+        "id": "after-hours",
+        "title": "After Hours",
+        "headline": "Out-of-Hours and Overflow Cover",
+        "description": "Cover evenings, weekends and holidays without a rota, and absorb the overflow when every line is busy. Urgent calls route to the on-call person; everything else is booked or queued with a transcript waiting in the morning.",
+        "features": [
+          "24/7 coverage",
+          "Overflow from busy lines",
+          "On-call escalation rules",
+          "Morning transcripts and summaries"
+        ],
+        "image": "/assets/images/solutions/voice-after-hours.svg"
+      },
+      {
+        "id": "enquiries",
+        "title": "Enquiries",
+        "headline": "Questions Before the Booking",
+        "description": "Opening hours, parking, what a treatment involves, whether you take a particular insurer or payment method — answered from your own documents, so the caller gets to the booking instead of ringing off to check.",
+        "features": [
+          "Grounded in your documents",
+          "Pricing and policy answers",
+          "Directions and hours",
+          "Handoff when unsure"
+        ],
+        "image": "/assets/images/solutions/voice-enquiries.svg"
+      }
+    ],
+    "techStack": [
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "Speech & reasoning",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "Twilio",
+        "category": "Voice",
+        "description": "Telephony & SMS",
+        "logo": "https://cdn.worldvectorlogo.com/logos/twilio-2.svg"
+      },
+      {
+        "name": "Anthropic",
+        "category": "LLM",
+        "description": "Claude, Safety",
+        "logo": "https://cdn.simpleicons.org/anthropic/191919"
+      },
+      {
+        "name": "Python",
+        "category": "Language",
+        "description": "Agent backend",
+        "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+      },
+      {
+        "name": "FastAPI",
+        "category": "Framework",
+        "description": "Realtime APIs",
+        "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+      },
+      {
+        "name": "Redis",
+        "category": "Cache",
+        "description": "Call state",
+        "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "Transcripts & bookings",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      },
+      {
+        "name": "AWS",
+        "category": "Cloud",
+        "description": "Infrastructure",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can it book into the calendar and system we already use?",
+        "answer": "That is the requirement that separates a demo from something useful, so it is where we start. The agent reads live availability from your system and writes the appointment back into it — no second diary for someone to reconcile. Where your booking rules are more complex than your calendar can express, Zennly sits between the two and resolves them."
+      },
+      {
+        "question": "What stops it double-booking or offering a slot that does not exist?",
+        "answer": "Availability is never the model's judgement. The agent asks the scheduling engine what is bookable and can only offer what comes back, and the write is a transactional booking against the same engine — so two callers racing for the last slot cannot both get it. If the engine cannot confirm, the agent says so and offers alternatives rather than guessing."
+      },
+      {
+        "question": "Will it reduce no-shows?",
+        "answer": "Two-way reminder calls are the mechanism — the caller can move the appointment during the call instead of silently not turning up, and a released slot can be offered to a waitlist. We would rather measure it on your own numbers than quote someone else's: we baseline your current no-show rate first, so the before-and-after is yours."
+      },
+      {
+        "question": "What happens when the agent cannot handle a call?",
+        "answer": "It hands over, and the escalation rules are yours — by topic, by detected frustration, by caller, or on request. The person taking over gets the transcript and the detected intent, so the caller does not start again. A booking agent that cannot escalate cleanly is worse than no agent at all."
+      },
+      {
+        "question": "Does it handle deposits or payment at the point of booking?",
+        "answer": "Where you already take payment through a provider we can integrate, yes — typically as a payment link sent by SMS during or straight after the call, which is both easier for the caller and safer than reading card details to an automated line. We would not recommend taking card numbers over a voice agent."
+      },
+      {
+        "question": "What languages and accents does it handle?",
+        "answer": "English and Nepali are what we deploy most. What actually decides quality is not the language but your vocabulary and your callers' accents — treatment names, product codes, place names. So we test against recordings of your real calls before committing to a language, and tune on the terms that matter to you."
+      },
+      {
+        "question": "Will callers know they are talking to an AI?",
+        "answer": "The agent says so at the start of the call, and we would push back on hiding it. In practice callers mind far less than people expect, because what they are comparing it against is a menu tree or a voicemail box. What they object to is not getting the appointment they rang for — which is the part worth engineering."
+      },
+      {
+        "question": "How long does it take to get live?",
+        "answer": "It depends almost entirely on the booking system and the complexity of your availability rules, not on the voice part. We scope it by looking at your real calls and your actual constraints, and we will tell you up front if your rules are simple enough that a booking link would serve you better than a voice agent."
+      }
+    ],
+    "relatedServices": [
+      "ai-customer-experience",
+      "custom-agent",
+      "ai-development"
+    ],
+    "cta": {
+      "headline": "Let it answer your own phone line",
+      "description": "Send us a handful of real call recordings and your booking rules. We will build an agent against them and give you a number to ring, so you are judging it on your own calls rather than a scripted demo.",
+      "primaryButton": {
+        "text": "Book a Voice Demo",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "Read the Zennly Case Study",
+        "url": "/resources/zenly-case-study/"
+      }
+    },
+    "clients": [
+      "admizz"
+    ]
+  },
+  "generative-ui": {
+    "id": "generative-ui",
+    "relatedCaseStudies": [
+      {
+        "slug": "corecloud365-case-study",
+        "title": "Corecloud365",
+        "stat": "60% cost reduction"
+      },
+      {
+        "slug": "chayce-properties-case-study",
+        "title": "Chayce Properties",
+        "stat": "Full-stack digital ownership"
+      }
+    ],
+    "title": "Generative UI",
+    "category": "AI & Data",
+    "tagline": "Stop making users learn your dashboard.",
+    "description": "Interfaces assembled at runtime around what the user is actually trying to do. The model chooses and fills real components from your design system — so the answer arrives as a working control, not a paragraph describing one.",
+    "lastUpdated": "2026-10-08",
+    "definition": {
+      "heading": "The interface is the answer, not a description of it.",
+      "content": "Generative UI is the pattern where an AI system responds by composing interface rather than text. Instead of returning a paragraph about last quarter's numbers, it returns the chart, the filter and the export button, already populated. The components are yours — real elements from your design system with your validation and permissions — and the model decides which to use and how to fill them. That boundary is the whole technique: the model gets to choose the arrangement, never to invent the markup."
+    },
+    "benefits": [
+      {
+        "icon": "speed",
+        "title": "One surface instead of forty screens",
+        "description": "Most internal tools grow a screen per question until nobody can find anything. A generative surface collapses that: the user states the need in their own words and the interface for it is assembled, so the product stops being a navigation problem."
+      },
+      {
+        "icon": "workflow",
+        "title": "Answers you can act on in place",
+        "description": "A chat reply ends the moment you need to change something. Generated interface carries the controls with it — adjust the date range, correct the field, approve the record — so the task finishes where it started instead of sending the user elsewhere."
+      },
+      {
+        "icon": "integrate",
+        "title": "Your components, your guardrails",
+        "description": "The model selects from a registry of your approved components and passes props a schema validates. Anything outside that registry cannot be rendered, which is what keeps a generative surface inside your design system and your permission model."
+      }
+    ],
+    "useCases": [
+      {
+        "id": "conversational-dashboards",
+        "title": "Dashboards",
+        "headline": "Conversational Dashboards",
+        "description": "Users ask for the view they want and get a real, interactive one — filtered, charted, exportable — rather than hunting for a saved report somebody built two years ago.",
+        "features": [
+          "Natural-language querying",
+          "Charts rendered from live data",
+          "Drill-down and filtering",
+          "Export and share"
+        ],
+        "image": "/assets/images/solutions/genui-dashboards.webp",
+        "imageAlt": "A natural-language request rendering a complete itinerary interface with cards, comparisons and follow-up questions"
+      },
+      {
+        "id": "guided-forms",
+        "title": "Adaptive Forms",
+        "headline": "Forms That Adapt As They Go",
+        "description": "Long conditional forms rebuilt as a short conversation that renders only the fields a given case actually needs, with validation and conditional logic intact.",
+        "features": [
+          "Context-aware field sets",
+          "Progressive disclosure",
+          "Schema-backed validation",
+          "Resume part-finished entries"
+        ],
+        "image": "/assets/images/solutions/genui-adaptive-forms.webp",
+        "imageAlt": "An adaptive form generating its next question and options from the answers already given"
+      },
+      {
+        "id": "internal-tools",
+        "title": "Internal Tools",
+        "headline": "Generative Internal Tools",
+        "description": "Operations teams describe the task and get the tool: a filtered queue, a bulk action, a reconciliation view. The long tail of requests that never justified a sprint gets served.",
+        "features": [
+          "Role-aware components",
+          "Bulk actions",
+          "Audit trail",
+          "No per-request build"
+        ],
+        "image": "/assets/images/solutions/genui-internal-tools-ui.webp",
+        "imageAlt": "An internal workspace where a request renders a summary dashboard with KPIs, trends and recommended actions"
+      },
+      {
+        "id": "in-product-assistants",
+        "title": "In-Product Assistants",
+        "headline": "Assistants That Render, Not Just Reply",
+        "description": "An assistant embedded in your product that answers with working interface — a populated settings panel, a comparison table, a prefilled checkout — instead of instructions the user must follow by hand.",
+        "features": [
+          "Component registry",
+          "Streamed rendering",
+          "Deep links into app state",
+          "Fallback to text"
+        ],
+        "image": "/assets/images/solutions/genui-in-product-assistant.webp",
+        "imageAlt": "An in-product assistant answering with a populated trip page rather than a block of text"
+      }
+    ],
+    "techStack": [
+      {
+        "name": "React",
+        "category": "Frontend",
+        "description": "Component registry",
+        "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Language",
+        "description": "Prop schemas",
+        "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+      },
+      {
+        "name": "Next.js",
+        "category": "Framework",
+        "description": "Streaming UI",
+        "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+      },
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "Structured outputs",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "Anthropic",
+        "category": "LLM",
+        "description": "Tool use",
+        "logo": "https://cdn.simpleicons.org/anthropic/191919"
+      },
+      {
+        "name": "Tailwind",
+        "category": "Styling",
+        "description": "Design tokens",
+        "logo": "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+      },
+      {
+        "name": "Framer Motion",
+        "category": "Animation",
+        "description": "Transitions",
+        "logo": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+      },
+      {
+        "name": "Vercel",
+        "category": "Platform",
+        "description": "Edge streaming",
+        "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is generative UI, in one sentence?",
+        "answer": "It is an interface composed at runtime by a model choosing and filling components from your design system, rather than a set of screens laid out in advance by a developer."
+      },
+      {
+        "question": "How is this different from a chatbot in our product?",
+        "answer": "A chatbot returns text and leaves the user to go and do the thing. Generative UI returns the thing — the populated form, the chart with its filters, the button that completes the action. The conversation is the input method; the output is still your product's interface."
+      },
+      {
+        "question": "Can the model invent components or break our design system?",
+        "answer": "No, and that is the point of the architecture rather than a promise about model behaviour. It can only emit a component name from a registry you define, with props a schema validates. An unknown name or an invalid prop fails closed and falls back to text, so the worst case is a plain answer, never broken or off-brand markup."
+      },
+      {
+        "question": "Does every screen in our product need rebuilding?",
+        "answer": "No — and it would be a poor idea. Fixed screens are better wherever the task is well understood and repeated, which is most of a mature product. Generative surfaces earn their place on the long tail: the questions nobody anticipated and the one-off views that never justified a build. We usually start with a single surface alongside your existing UI."
+      },
+      {
+        "question": "What about latency — will users wait for an interface to generate?",
+        "answer": "Components stream as they resolve rather than appearing all at once at the end, so the first useful element lands quickly. Where a task is predictable we cache the arrangement and regenerate only the data, which removes model latency from the common path entirely."
+      },
+      {
+        "question": "How do you test an interface that is different every time?",
+        "answer": "You test the pieces and the contract, not the permutations. The components have their own tests as usual; the model's output is validated against the prop schemas; and we keep a suite of recorded real requests as regression cases. What you cannot do is rely on screenshot comparison of whole pages, which is the genuine cost of the approach."
+      }
+    ],
+    "relatedServices": [
+      "custom-agent",
+      "ai-development",
+      "web-development"
+    ],
+    "cta": {
+      "headline": "Try it on one surface first",
+      "description": "Pick the screen your users complain about most. We will build a generative version against your real components and data, and you can compare them side by side.",
+      "primaryButton": {
+        "text": "Scope a Pilot",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Case Studies",
+        "url": "/projects/"
+      }
+    },
+    "clients": [
+      "corecloud365",
+      "chayce-properties"
+    ]
+  },
+  "custom-agent": {
+    "id": "custom-agent",
+    "relatedCaseStudies": [
+      {
+        "slug": "admizz-case-study",
+        "title": "Admizz Education",
+        "stat": "45% faster response times"
+      },
+      {
+        "slug": "mach24orbital-case-study",
+        "title": "Mach24 Orbital",
+        "stat": "50% faster launch prep"
+      }
+    ],
+    "title": "Custom Agent",
+    "category": "AI & Data",
+    "tagline": "A general assistant knows everything except your business.",
+    "description": "Agents built for one workflow in one business — your systems, your rules, your definition of done. Scoped narrowly enough to be trusted with real work, and bounded so that what it may do is a decision you make, not a hope.",
+    "lastUpdated": "2026-10-08",
+    "definition": {
+      "heading": "One job, your rules, and a clear edge where it stops.",
+      "content": "A custom agent is built around a specific workflow rather than sold as a general assistant. It is given the tools that workflow needs and no others, grounded in your own documents and data, and bounded by explicit rules about what it may do alone and what needs a person to approve. The narrow scope is what makes it reliable: a general agent has to be right about everything, while an agent that only reconciles invoices has to be right about invoices."
+    },
+    "benefits": [
+      {
+        "icon": "workflow",
+        "title": "Scoped to one job, so it can be trusted with it",
+        "description": "Reliability comes from narrowness. We pick one workflow with a measurable outcome, give the agent only the tools that workflow needs, and prove it against your real cases before widening anything."
+      },
+      {
+        "icon": "integrate",
+        "title": "It works in the systems you already run",
+        "description": "The agent reads and writes through your existing stack rather than beside it. No parallel spreadsheet to reconcile, no new place for the team to check, and no migration as a precondition to getting value."
+      },
+      {
+        "icon": "speed",
+        "title": "Bounded authority, auditable actions",
+        "description": "You decide which actions it takes alone, which need approval, and which are forbidden. Every tool call and decision is logged, so when somebody asks why it did that, the answer is in a record rather than a reconstruction."
+      }
+    ],
+    "useCases": [
+      {
+        "id": "document-processing",
+        "title": "Document Work",
+        "headline": "Document Intake and Processing",
+        "description": "Invoices, applications, claims and contracts read, classified, checked against your rules, and entered into the system of record — with the uncertain cases queued for a person instead of guessed at.",
+        "features": [
+          "Extraction and classification",
+          "Rule-based validation",
+          "Writes to system of record",
+          "Confidence-based escalation"
+        ],
+        "image": "/assets/images/solutions/agent-document-processing.svg"
+      },
+      {
+        "id": "back-office",
+        "title": "Back Office",
+        "headline": "Back-Office Reconciliation",
+        "description": "The recurring cross-checks that eat a day a week: matching records between systems, chasing mismatches, and preparing the exceptions for review.",
+        "features": [
+          "Cross-system matching",
+          "Exception reports",
+          "Scheduled runs",
+          "Full audit trail"
+        ],
+        "image": "/assets/images/solutions/agent-back-office.svg"
+      },
+      {
+        "id": "research-agents",
+        "title": "Research",
+        "headline": "Research and Monitoring Agents",
+        "description": "Standing briefs that watch sources you care about — tenders, competitors, regulatory changes, pricing — and report what changed with citations, rather than returning a search dump.",
+        "features": [
+          "Scheduled monitoring",
+          "Source citations",
+          "Change detection",
+          "Digest delivery"
+        ],
+        "image": "/assets/images/solutions/agent-research-agents.svg"
+      },
+      {
+        "id": "workflow-agents",
+        "title": "Operations",
+        "headline": "Internal Workflow Agents",
+        "description": "Agents that carry a multi-step internal process end to end: onboarding a client, preparing a quote, assembling a compliance pack — pausing for approval at the steps you nominate.",
+        "features": [
+          "Multi-step execution",
+          "Human-in-the-loop gates",
+          "Integration with your tools",
+          "Retry and rollback"
+        ],
+        "image": "/assets/images/solutions/agent-workflow-agents.svg"
+      }
+    ],
+    "techStack": [
+      {
+        "name": "OpenAI",
+        "category": "LLM",
+        "description": "Reasoning & tool use",
+        "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+      },
+      {
+        "name": "Anthropic",
+        "category": "LLM",
+        "description": "Claude, Safety",
+        "logo": "https://cdn.simpleicons.org/anthropic/191919"
+      },
+      {
+        "name": "LangChain",
+        "category": "Framework",
+        "description": "Agent orchestration",
+        "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+      },
+      {
+        "name": "Pinecone",
+        "category": "Vector DB",
+        "description": "Grounding data",
+        "logo": "https://cdn.simpleicons.org/pinecone/000000"
+      },
+      {
+        "name": "Python",
+        "category": "Language",
+        "description": "Agent backend",
+        "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+      },
+      {
+        "name": "FastAPI",
+        "category": "Framework",
+        "description": "Tool APIs",
+        "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Database",
+        "description": "State & audit log",
+        "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+      },
+      {
+        "name": "Docker",
+        "category": "DevOps",
+        "description": "Deployment",
+        "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you build custom agents, or offer ready-made ones?",
+        "answer": "Both. For a workflow specific to your business, we build a custom agent around it: your systems, your rules and your authority limits. For common jobs such as phone booking, selling through chat, or scheduling, we can start from an agent we have already built, such as our voice booking agent, Stella or Zennly, and adapt it to your rules instead of building from scratch. Tell us about the work and we will say which route fits, or that an agent is the wrong tool."
+      },
+      {
+        "question": "How is a custom agent different from using ChatGPT with our documents?",
+        "answer": "A general assistant answers questions; an agent completes work. The difference that matters in practice is authority and integration — a custom agent holds credentials for your systems, takes actions in them under rules you set, runs on a schedule rather than when someone remembers, and logs what it did. Uploading documents to a chat window gives you none of that."
+      },
+      {
+        "question": "What stops it doing something expensive or wrong?",
+        "answer": "Explicit bounds rather than good intentions. Each agent gets a fixed set of tools, limits on what those tools may do, and approval gates on the steps you nominate. Anything outside that set is not refused by the model — it is simply not available to it, which is a stronger guarantee."
+      },
+      {
+        "question": "Which workflow should we start with?",
+        "answer": "One that is repetitive, has a clear definition of done, and where somebody can tell quickly whether the output is right. Those three properties matter more than how impressive the workflow sounds, because they are what let us measure the agent against reality rather than against a demo."
+      },
+      {
+        "question": "What happens when it gets something wrong?",
+        "answer": "It should be visible and recoverable, which is a design requirement rather than an afterthought. Actions are logged and reversible where the underlying system allows it, low-confidence cases route to a person before acting, and we track the escalation rate as a headline metric — an agent whose escalation rate is falling while accuracy holds is working."
+      },
+      {
+        "question": "Do we need our data cleaned up first?",
+        "answer": "Usually less than people assume. Agents cope with messy source documents better than traditional automation, because reading unstructured input is the thing they are good at. What does need to be in order is the destination — the system being written to — and the rules the work is checked against."
+      },
+      {
+        "question": "Who owns the agent and can we run it ourselves?",
+        "answer": "You own the code, the prompts, the configuration and the data. It deploys into your infrastructure, and the handover includes documentation and credentials. Models are called through providers, so switching provider later is a configuration change rather than a rebuild."
+      }
+    ],
+    "relatedServices": [
+      "voice-agent",
+      "generative-ui",
+      "ai-development"
+    ],
+    "cta": {
+      "headline": "Bring us one workflow you are tired of",
+      "description": "We will scope it, tell you honestly whether an agent is the right tool for it, and if it is, show you what the first version does before you commit to the rest.",
+      "primaryButton": {
+        "text": "Scope a Workflow",
+        "url": "/contact/"
+      },
+      "secondaryButton": {
+        "text": "View Case Studies",
+        "url": "/projects/"
+      }
+    },
+    "clients": [
+      "admizz",
+      "corecloud365"
+    ]
   }
 }

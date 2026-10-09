@@ -7,7 +7,7 @@
       "category": "KI & Daten",
       "description": "Individuelle KI-Systeme mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung. Wir entwickeln KI, die konkrete Geschäftsprobleme löst, keine generischen Chatbots.",
       "cta": "KI-Entwicklung entdecken",
-      "url": "/services/ai-development/",
+      "url": "/solutions/ai-development/",
       "icon": "ai",
       "mockup": "/assets/images/ai-development-hero.webp",
       "clients": [
@@ -28,7 +28,7 @@
       "category": "KI & Daten",
       "description": "KI-gestützte Support-Systeme, die Kundenfragen sofort beantworten. Reduzieren Sie Support-Tickets um 40 % und verbessern Sie gleichzeitig die Genauigkeit der Antworten.",
       "cta": "KI-CX entdecken",
-      "url": "/services/ai-customer-experience/",
+      "url": "/solutions/ai-customer-experience/",
       "icon": "chat",
       "mockup": "/assets/images/ai-customer-experience-hero.webp",
       "clients": [
@@ -53,7 +53,7 @@
       "category": "KI & Daten",
       "description": "Entwickeln Sie Agentic-Commerce-Systeme mit KI-Shopping-Agenten, Conversational Commerce und intelligenten Empfehlungen. Spezialisiert auf den nepalesischen Markt mit eSewa- und Khalti-Integration.",
       "cta": "KI-Commerce entdecken",
-      "url": "/services/ai-ecommerce/",
+      "url": "/solutions/ai-ecommerce/",
       "icon": "cart",
       "mockup": "/assets/images/service-ai.webp",
       "clients": []
@@ -65,7 +65,7 @@
       "category": "KI & Daten",
       "description": "Datenpipelines, Data Warehouses und Analytics-Infrastruktur für KI-Workloads. Machen Sie Ihre Daten für maschinelles Lernen bereit, ohne monatelange Bereinigung.",
       "cta": "Datensysteme entdecken",
-      "url": "/services/data-systems/",
+      "url": "/solutions/data-systems/",
       "icon": "data",
       "mockup": "/assets/images/data-systems-hero.webp",
       "clients": [
@@ -90,7 +90,7 @@
       "category": "Entwicklung",
       "description": "Unternehmensanwendungen, maßgeschneidert auf Ihre Arbeitsabläufe. Wir entwickeln interne Tools und Geschäftssysteme, die Teams wirklich gerne nutzen.",
       "cta": "Individualentwicklung entdecken",
-      "url": "/services/custom-software/",
+      "url": "/solutions/custom-software/",
       "icon": "code",
       "mockup": "/assets/images/custom-software-hero.webp",
       "clients": [
@@ -115,7 +115,7 @@
       "category": "Entwicklung",
       "description": "Multi-Tenant-Plattformen mit Abonnement-Abrechnung, Benutzerverwaltung und skalierbarer Architektur. Bringen Sie Ihr SaaS-Produkt in Monaten statt Jahren an den Markt.",
       "cta": "SaaS-Entwicklung entdecken",
-      "url": "/services/saas-development/",
+      "url": "/solutions/saas-development/",
       "icon": "cloud",
       "mockup": "/assets/images/saas-development-hero.webp",
       "clients": [
@@ -136,7 +136,7 @@
       "category": "Entwicklung",
       "description": "Hochperformante Websites und Web-Apps, optimiert auf Geschwindigkeit und Conversion. Moderne Frameworks, Responsive Design, von Anfang an für SEO gebaut.",
       "cta": "Webentwicklung entdecken",
-      "url": "/services/web-development/",
+      "url": "/solutions/web-development/",
       "icon": "globe",
       "mockup": "/assets/images/web-development-hero.webp",
       "clients": [
@@ -161,7 +161,7 @@
       "category": "Entwicklung",
       "description": "Native und plattformübergreifende Mobile Apps für iOS und Android. Von Consumer-Apps bis zu Enterprise Mobility, mit nahtloser Backend-Integration.",
       "cta": "App-Entwicklung entdecken",
-      "url": "/services/app-development/",
+      "url": "/solutions/app-development/",
       "icon": "mobile",
       "mockup": "/assets/images/service-mobile.webp",
       "clients": [
@@ -182,7 +182,7 @@
       "category": "Marketing",
       "description": "Werden Sie von Google und KI-Assistenten wie ChatGPT und Perplexity gefunden. Wir optimieren Inhalte für die klassische Suche und für KI-Zitate.",
       "cta": "AEO & SEO entdecken",
-      "url": "/services/aeo-seo/",
+      "url": "/solutions/aeo-seo/",
       "icon": "search",
       "mockup": "/assets/images/aeo-seo-hero.webp",
       "clients": [

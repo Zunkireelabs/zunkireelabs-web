@@ -87,49 +87,49 @@
             "items": [
               {
                 "label": "AI Development",
-                "url": "/services/ai-development/",
+                "url": "/solutions/ai-development/",
                 "icon": "ai",
                 "description": "Custom AI systems, RAG pipelines, and LLM integration"
               },
               {
                 "label": "AI Customer Experience",
-                "url": "/services/ai-customer-experience/",
+                "url": "/solutions/ai-customer-experience/",
                 "icon": "chat",
                 "description": "Intelligent chatbots and conversational AI support"
               },
               {
                 "label": "Data Systems",
-                "url": "/services/data-systems/",
+                "url": "/solutions/data-systems/",
                 "icon": "database",
                 "description": "Data pipelines and AI-ready architecture"
               },
               {
                 "label": "Custom Software",
-                "url": "/services/custom-software/",
+                "url": "/solutions/custom-software/",
                 "icon": "code",
                 "description": "Enterprise apps and business tools"
               },
               {
                 "label": "SaaS Development",
-                "url": "/services/saas-development/",
+                "url": "/solutions/saas-development/",
                 "icon": "cloud",
                 "description": "Multi-tenant platforms with subscription billing"
               },
               {
                 "label": "Web & App Development",
-                "url": "/services/web-development/",
+                "url": "/solutions/web-development/",
                 "icon": "globe",
                 "description": "High-performance sites and mobile apps"
               },
               {
                 "label": "AEO & SEO",
-                "url": "/services/aeo-seo/",
+                "url": "/solutions/aeo-seo/",
                 "icon": "trending",
                 "description": "Get found by Google and AI assistants"
               },
               {
                 "label": "AI Ecommerce",
-                "url": "/services/ai-ecommerce/",
+                "url": "/solutions/ai-ecommerce/",
                 "icon": "cart",
                 "description": "Agentic commerce and AI-powered online stores",
                 "badge": "New"
@@ -150,7 +150,7 @@
                 "badge": "New"
               }
             ],
-            "seeAll": { "label": "See all services", "url": "/services/" }
+            "seeAll": { "label": "See all services", "url": "/solutions/" }
           },
           {
             "header": "USE CASES",
@@ -214,7 +214,7 @@
             "type": "descriptive",
             "items": [
               { "label": "Legal", "url": "/solutions/legal/", "description": "Document intelligence and contract review automation" },
-              { "label": "Professional Services", "url": "/solutions/services/", "description": "Automate client delivery and knowledge work" }
+              { "label": "Professional Services", "url": "/solutions/professional-services/", "description": "Automate client delivery and knowledge work" }
             ]
           },
           {
@@ -352,14 +352,15 @@
       { "label": "Pricing", "url": "/pricing/" }
     ],
     "services": [
-      { "label": "AI Development", "url": "/services/ai-development/" },
-      { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/" },
-      { "label": "Data Systems", "url": "/services/data-systems/" },
-      { "label": "Custom Software", "url": "/services/custom-software/" },
-      { "label": "SaaS Development", "url": "/services/saas-development/" },
-      { "label": "Web Development", "url": "/services/web-development/" },
-      { "label": "App Development", "url": "/services/app-development/" },
-      { "label": "AEO & SEO", "url": "/services/aeo-seo/" },
+      { "label": "AI Development", "url": "/solutions/ai-development/" },
+      { "label": "AI Customer Experience", "url": "/solutions/ai-customer-experience/" },
+      { "label": "Data Systems", "url": "/solutions/data-systems/" },
+      { "label": "Custom Software", "url": "/solutions/custom-software/" },
+      { "label": "Software Outsourcing", "url": "/solutions/software-outsourcing/" },
+      { "label": "SaaS Development", "url": "/solutions/saas-development/" },
+      { "label": "Web Development", "url": "/solutions/web-development/" },
+      { "label": "App Development", "url": "/solutions/app-development/" },
+      { "label": "AEO & SEO", "url": "/solutions/aeo-seo/" },
       { "label": "Agentic as a Service (GaaS)", "url": "/agentic-as-a-service/" }
     ],
     "resources": [
@@ -377,6 +378,7 @@
       { "label": "Customers", "url": "/customer-stories/" },
       { "label": "Projects", "url": "/projects/" },
       { "label": "Careers", "url": "/careers/" },
+      { "label": "Partner with us", "url": "/solutions/software-outsourcing/" },
       { "label": "Contact", "url": "/contact/" },
       { "label": "Blog", "url": "/blog/" }
     ],

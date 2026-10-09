@@ -1,0 +1,648 @@
+---
+layout: base.njk
+title: "Software Outsourcing Partner in Nepal | Zunkiree Labs" # SEOAI:TITLE
+description: "Zunkiree Labs builds its own products and is the outsourced engineering team for agencies and software firms: dedicated teams, fixed-scope, white-label."
+permalink: /solutions/software-outsourcing/
+lastUpdated: "2026-10-09"
+hideChrome: true
+bodyClass: "v2-inter"
+faqs:
+  - question: "Do you work as an outsourcing partner for larger companies?"
+    answer: "Yes. Alongside work for direct clients, Zunkiree Labs takes on delivery for larger software companies, agencies and product teams that want an engineering partner rather than another hire. Roughly 60% of our clients are international."
+  - question: "What engagement models do you offer?"
+    answer: "Three, which can be combined. A dedicated team that works inside your process and backlog, fixed-scope project delivery with paid milestones, and white-label builds where the work ships under your brand. We agree which model fits during discovery rather than starting from a rate card."
+  - question: "Can you work white-label, under our brand?"
+    answer: "Yes, where the contract provides for it. We can build under your brand and communicate with your client only through you. What matters is that ownership, confidentiality and handover terms are agreed in writing before work begins."
+  - question: "Who owns the code and intellectual property?"
+    answer: "That is set in the agreement, and we expect it to be explicit before work starts: who owns the source code and IP on completion, where data is stored, and how handover works. Our standard position is that you own what you pay for."
+  - question: "How do you work across time zones?"
+    answer: "Nepal is UTC+5:45, which overlaps with Europe, the UK, the Middle East, India, Southeast Asia and Australia. We agree one reliable daily or weekly decision window and keep written async updates so work does not stall between calls."
+  - question: "How do we start?"
+    answer: "A discovery call, then a small first milestone with fixed scope and price. That first milestone shows how we estimate, communicate and handle review before you commit to anything larger."
+---
+
+{# =====================================================
+   DIRECTION CONTRACT
+   THESIS: A partner page for companies that outsource delivery to a
+   build team (agencies, larger software companies, product teams) —
+   distinct from /it-companies-nepal/, which helps a buyer evaluate any
+   vendor. This page is Zunkiree Labs speaking about its own offer.
+   HONESTY CONSTRAINT: no client names, team sizes, headcounts, rates or
+   delivery statistics are asserted. The only quantified claim is the
+   ~60% international client share already published on the Nepal hub.
+   Add no other figures without a named source.
+   SCHEMA: Service only. FAQPage comes from base.njk via `faqs`.
+   ===================================================== #}
+
+{% include "partials/navbar-v2.njk" %}
+
+<script>
+  document.documentElement.classList.add('js-reveal-hidden');
+</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
+    opacity: 0;
+  }
+</style>
+
+<div class="relative bg-white overflow-x-clip">
+
+{# SECTION 1 — HERO #}
+<section class="relative overflow-hidden px-4 pt-32 pb-16 sm:px-6 sm:pt-36 sm:pb-20 lg:px-8 lg:pt-40" aria-labelledby="so-hero-heading" style="background: radial-gradient(ellipse 60% 55% at 15% 0%, rgba(118,185,0,0.12) 0%, transparent 65%), radial-gradient(ellipse 45% 50% at 95% 10%, rgba(87,119,130,0.12) 0%, transparent 65%);">
+  <style>
+    @keyframes so-flow { to { stroke-dashoffset: -36; } }
+    .so-flow { animation: so-flow 2s linear infinite; }
+    @keyframes so-pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    .so-pulse { animation: so-pulse 2.4s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .so-flow, .so-pulse { animation: none; } }
+  </style>
+  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+    <div data-reveal-stagger>
+      <span class="mb-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Software outsourcing partner &middot; Kathmandu, Nepal</span>
+      <h1 id="so-hero-heading" class="text-[38px] font-medium leading-[1.08] tracking-tight text-[#111827] sm:text-[52px] lg:text-[60px]">The engineering team behind the teams that sell.</h1>
+      <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-[#6B7280]">We build our own products, and we build for other companies too. Agencies, larger software firms and product teams bring us in as their delivery team: embedded in your process, shipping fixed-scope projects, or building under your brand.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="/contact/" class="inline-flex items-center justify-center rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="outsourcing-hero-primary">Talk to our team</a>
+        <a href="#models" class="inline-flex items-center justify-center rounded-md border border-navy-200 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors hover:border-navy-300 hover:bg-navy-50">See how we work</a>
+      </div>
+    </div>
+    <div class="relative" data-reveal>
+      <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-5 sm:p-7" style="box-shadow: 0 50px 70px -35px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 15% 100%, rgba(118,185,0,.25) 0%, transparent 60%);"></div>
+        <svg viewBox="0 0 520 330" class="relative w-full" role="img" aria-label="A client request passes through your company to the Zunkiree Labs engineering team, and finished work is delivered back under your name">
+          <text x="26" y="34" font-size="11" fill="#ffffff" fill-opacity=".45" font-family="ui-monospace,Menlo,monospace" letter-spacing="1.5">HOW WORK MOVES</text>
+          <rect x="26" y="70" width="130" height="90" rx="16" fill="#1E2E35" stroke="#2C4048"/><text x="91" y="108" text-anchor="middle" font-size="12" fill="#ffffff" fill-opacity=".55" font-family="Inter,system-ui,sans-serif">Your client</text><text x="91" y="134" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" font-family="Inter,system-ui,sans-serif">Brief</text>
+          <rect x="196" y="70" width="130" height="90" rx="16" fill="#1E2E35" stroke="#76B900" stroke-width="1.5"/><text x="261" y="108" text-anchor="middle" font-size="12" fill="#9bd600" font-family="Inter,system-ui,sans-serif">Your company</text><text x="261" y="134" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" font-family="Inter,system-ui,sans-serif">Your brand</text>
+          <rect x="366" y="70" width="130" height="90" rx="16" fill="#76B900" fill-opacity=".14" stroke="#76B900" stroke-dasharray="4 5"/><text x="431" y="108" text-anchor="middle" font-size="12" fill="#9bd600" font-family="Inter,system-ui,sans-serif">Kathmandu</text><text x="431" y="134" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" font-family="Inter,system-ui,sans-serif">Zunkiree team</text>
+          <path d="M156 115 H196" stroke="#76B900" stroke-width="2" stroke-dasharray="4 6" class="so-flow"/><path d="M326 115 H366" stroke="#76B900" stroke-width="2" stroke-dasharray="4 6" class="so-flow"/>
+          <path d="M431 160 V225 Q431 250 406 250 H116 Q91 250 91 225 V164" fill="none" stroke="#9bd600" stroke-width="2" stroke-dasharray="4 6" class="so-flow" style="animation-direction: reverse"/>
+          <rect x="146" y="238" width="250" height="26" rx="13" fill="#141F24" stroke="#2C4048"/><text x="271" y="255" text-anchor="middle" font-size="12" fill="#ffffff" fill-opacity=".8" font-family="Inter,system-ui,sans-serif">Delivered under your name</text>
+          <g class="so-pulse"><circle cx="261" cy="190" r="4" fill="#9bd600"/></g>
+          <text x="26" y="306" font-size="11" fill="#ffffff" fill-opacity=".4" font-family="ui-monospace,Menlo,monospace" letter-spacing="1">DEDICATED TEAM &middot; FIXED SCOPE &middot; WHITE-LABEL</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 2 — THE BASICS #}
+<section class="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="so-def-heading" style="background: linear-gradient(180deg, #F6FAEC 0%, #FFFFFF 75%);">
+  <div class="pointer-events-none absolute -right-6 -top-2 hidden h-36 w-36 text-[#76B900]/20 lg:block" aria-hidden="true"><svg class="h-full w-full"><defs><pattern id="so-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="currentColor"/></pattern></defs><rect width="100%" height="100%" fill="url(#so-dots)"/></svg></div>
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mx-auto mb-12 max-w-3xl text-center" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>The basics<span class="h-px w-8 bg-[#5a9100]"></span></span>
+      <h2 id="so-def-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[46px]">What does <span class="text-[#5a9100]">software outsourcing</span> mean?</h2>
+      <p data-aeo="answer" class="mx-auto mt-5 max-w-2xl text-balance text-[18px] leading-relaxed text-[#374151]">Hiring an outside engineering team to design, build or maintain software for you. <span class="text-[#6B7280]">You stay in charge of what gets built and why. They handle how.</span></p>
+    </div>
+
+    {# split band: who decides what #}
+    <div class="relative grid overflow-hidden rounded-[30px] border border-navy-100 bg-white md:grid-cols-2" style="box-shadow: 0 40px 70px -40px rgba(15,23,42,.35);" data-reveal>
+      <div class="p-8 sm:p-10 md:p-12">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">You decide</p>
+        <h3 class="mt-2 text-[26px] font-medium tracking-tight text-[#111827]">What gets built, and why.</h3>
+        <ul class="mt-6 space-y-3 text-[16px] text-[#374151]">
+          <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#76B900]/12 text-[#5a9100]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"/></svg></span>The goals</li>
+          <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#76B900]/12 text-[#5a9100]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg></span>The priorities</li>
+          <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#76B900]/12 text-[#5a9100]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>What counts as done</li>
+        </ul>
+      </div>
+      <div class="relative overflow-hidden bg-navy-950 p-8 sm:p-10 md:p-12">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(118,185,0,.28) 0%, transparent 60%);"></div>
+        <div class="relative">
+          <p class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">The team handles</p>
+          <h3 class="mt-2 text-[26px] font-medium tracking-tight text-white">How it gets built.</h3>
+          <ul class="mt-6 space-y-3 text-[16px] text-white/80">
+            <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#9bd600]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></span>Design</li>
+            <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#9bd600]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></span>Build and test</li>
+            <li class="flex items-center gap-3"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-[#9bd600]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg></span>Ship and maintain</li>
+          </ul>
+        </div>
+      </div>
+      <span class="absolute left-1/2 top-1/2 z-10 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-white bg-[#76B900] text-white shadow-lg md:flex" aria-hidden="true"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 4m0 0l4 4m-4-4h16m0 0l-4-4m4 4l-4 4"/></svg></span>
+    </div>
+    <p class="mx-auto mt-6 max-w-2xl text-center text-[15px] leading-relaxed text-[#6B7280]" data-reveal>We do this from Kathmandu, Nepal, for clients in Nepal and abroad. Some hire us directly for their own product. Others use us as the delivery team behind the work they sell.</p>
+  </div>
+</section>
+
+{# SECTION 2a — BOTH SIDES #}
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="so-both-heading">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-10 max-w-3xl" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Why us</span>
+      <h2 id="so-both-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[42px]">A product company makes a different kind of outsourcing partner.</h2>
+      <p class="mt-5 text-[17px] leading-relaxed text-[#6B7280]">Most outsourcing firms only ever build to someone else&rsquo;s brief. We also ship and run our own software, so we know what it costs to maintain what we write, and we build with that in mind for you.</p>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-2" data-reveal-stagger>
+      <div class="rounded-[28px] border border-navy-100 bg-white p-7 sm:p-9">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">What we build for ourselves</span>
+        <h3 class="mt-3 text-[26px] font-medium leading-[1.2] tracking-tight text-[#111827]">Our own products, in production.</h3>
+        <ul class="mt-6 divide-y divide-navy-100 border-y border-navy-100 text-[16px]">
+          <li><a href="/products/orca/" class="group flex items-center justify-between py-3.5 text-[#111827] hover:text-[#5a9100]"><span><strong class="font-medium">Orca</strong> <span class="text-[#6B7280]">&middot; AI orchestration layer</span></span><span class="text-navy-300 transition-transform group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/resources/zenly-case-study/" class="group flex items-center justify-between py-3.5 text-[#111827] hover:text-[#5a9100]"><span><strong class="font-medium">Zennly</strong> <span class="text-[#6B7280]">&middot; AI booking engine</span></span><span class="text-navy-300 transition-transform group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/products/search/" class="group flex items-center justify-between py-3.5 text-[#111827] hover:text-[#5a9100]"><span><strong class="font-medium">Zunkiree Search</strong> <span class="text-[#6B7280]">&middot; AI-native search</span></span><span class="text-navy-300 transition-transform group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+          <li><a href="/products/ai-crm/" class="group flex items-center justify-between py-3.5 text-[#111827] hover:text-[#5a9100]"><span><strong class="font-medium">AI CRM</strong> <span class="text-[#6B7280]">&middot; customer relationships</span></span><span class="text-navy-300 transition-transform group-hover:translate-x-1 group-hover:text-[#5a9100]" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+        <p class="mt-5 text-[14px] leading-relaxed text-[#6B7280]">Running products means we live with our own architecture decisions, which shapes how we hand work over to you.</p>
+      </div>
+      <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-7 sm:p-9">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(118,185,0,.25) 0%, transparent 60%);"></div>
+        <div class="relative">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">What we build for you</span>
+          <h3 class="mt-3 text-[26px] font-medium leading-[1.2] tracking-tight text-white">Your product, your roadmap, our engineers.</h3>
+          <ul class="mt-6 space-y-4">
+            <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0" fill="none" stroke="#9bd600" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><p class="text-[15px] leading-relaxed text-white/75"><strong class="font-medium text-white">For agencies:</strong> the build team behind projects you sell, under your brand if you prefer.</p></li>
+            <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0" fill="none" stroke="#9bd600" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><p class="text-[15px] leading-relaxed text-white/75"><strong class="font-medium text-white">For larger software companies:</strong> extra capacity or a specialist squad, working inside your process.</p></li>
+            <li class="flex gap-3"><svg class="mt-1 h-4 w-4 shrink-0" fill="none" stroke="#9bd600" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><p class="text-[15px] leading-relaxed text-white/75"><strong class="font-medium text-white">For product teams:</strong> an MVP or a major feature, built and handed over cleanly.</p></li>
+          </ul>
+          <a href="/contact/" class="mt-7 inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="outsourcing-both-contact">Talk about your project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 2c — WHAT WE TAKE ON #}
+<section class="bg-[#F8FAFC] border-y border-navy-100 px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="so-scope-heading">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-10 grid gap-6 lg:grid-cols-2 lg:items-end" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>What we take on</span>
+        <h2 id="so-scope-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[42px]">From a single feature to the whole build.</h2>
+      </div>
+      <p class="text-[16px] leading-relaxed text-[#6B7280] lg:pb-2">Whatever the model, the work falls into a handful of areas. Each links to what we build in that area.</p>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3" data-reveal-stagger>
+      <a href="/solutions/custom-software/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg md:col-span-2"><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Custom software</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Internal tools and business systems built around your workflows, replacing spreadsheet sprawl.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+      <a href="/solutions/ai-development/" class="group relative overflow-hidden rounded-3xl bg-navy-950 p-7 transition-transform duration-300 hover:-translate-y-1 md:row-span-2"><div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(118,185,0,.28) 0%, transparent 60%);"></div><div class="relative"><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/15 ring-1 ring-inset ring-[#76B900]/30"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></span><h3 class="text-[22px] font-medium tracking-tight text-white">AI development</h3><p class="mt-2 text-[15px] leading-relaxed text-white/60">Custom AI systems, RAG pipelines and LLM integration, taken to production.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></div></a>
+      <a href="/solutions/web-development/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg "><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-2.4 3.75-5.4 3.75-9S14.5 5.4 12 3m0 18c-2.5-2.4-3.75-5.4-3.75-9S9.5 5.4 12 3m-8.5 9h17"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Web development</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Fast, search-ready websites and web apps.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+      <a href="/solutions/app-development/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg "><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Mobile apps</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">iOS and Android apps with a solid backend.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+      <a href="/solutions/saas-development/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg "><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">SaaS platforms</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Multi-tenant platforms with billing and user management.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+      <a href="/solutions/data-systems/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg "><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375 7.444 2.25 12 2.25s8.25 1.847 8.25 4.125zm0 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Data systems</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Pipelines, warehouses and infrastructure for machine learning.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+      <a href="/solutions/custom-agent/" class="group rounded-3xl border border-navy-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg "><span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="#76B900" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M15.75 3v1.5M3.75 8.25h16.5v9a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25v-9zM9 13.5h.008v.008H9V13.5zm6 0h.008v.008H15V13.5z"/></svg></span><h3 class="text-[20px] font-medium tracking-tight text-[#111827]">AI agents</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Voice and workflow agents scoped to one job.</p><span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Explore <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span></a>
+    </div>
+  </div>
+</section>
+
+{# SECTION 2d — TYPICAL ENGAGEMENTS #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="so-typ-heading">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-10 max-w-3xl" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>What it looks like</span>
+      <h2 id="so-typ-heading" class="text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[42px]">Three typical shapes of an engagement.</h2>
+      <p class="mt-4 text-[15px] leading-relaxed text-[#6B7280]">These describe how engagements are usually structured. They are not named client case studies.</p>
+    </div>
+    <ol class="divide-y divide-navy-100 border-y border-navy-100" data-reveal>
+      <li class="grid gap-4 py-8 md:grid-cols-[6rem_1fr_1fr] md:gap-8"><span class="font-mono text-[13px] text-[#5a9100]">AGENCY</span><div><h3 class="text-[22px] font-medium tracking-tight text-[#111827]">You sold the project. We build it.</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">A fixed-scope build with paid milestones, delivered under your brand. Your client talks to you; we talk to you.</p></div><p class="text-[14px] leading-relaxed text-[#6B7280] md:pt-1"><span class="block font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Model</span><strong class="font-medium text-[#111827]">White-label, fixed scope</strong></p></li>
+      <li class="grid gap-4 py-8 md:grid-cols-[6rem_1fr_1fr] md:gap-8"><span class="font-mono text-[13px] text-[#5a9100]">SOFTWARE FIRM</span><div><h3 class="text-[22px] font-medium tracking-tight text-[#111827]">Your backlog outgrew your team.</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Engineers join your standups, tracker and review process for as long as you need them, and scale down when you do not.</p></div><p class="text-[14px] leading-relaxed text-[#6B7280] md:pt-1"><span class="block font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Model</span><strong class="font-medium text-[#111827]">Dedicated team</strong></p></li>
+      <li class="grid gap-4 py-8 md:grid-cols-[6rem_1fr_1fr] md:gap-8"><span class="font-mono text-[13px] text-[#5a9100]">PRODUCT TEAM</span><div><h3 class="text-[22px] font-medium tracking-tight text-[#111827]">You need an MVP, not a hiring plan.</h3><p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">A small first milestone, then expansion, then a clean handover of repositories and documentation to your own engineers.</p></div><p class="text-[14px] leading-relaxed text-[#6B7280] md:pt-1"><span class="block font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Model</span><strong class="font-medium text-[#111827]">Fixed scope, then handover</strong></p></li>
+    </ol>
+  </div>
+</section>
+
+{# SECTION 2b — WHY AND WHAT IT ISN'T #}
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="so-why-heading">
+  <div class="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[1.05fr_0.95fr]">
+    <div class="rounded-[28px] border border-navy-100 bg-white p-7 sm:p-10" data-reveal>
+      <span class="mb-6 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Why companies outsource</span>
+      <h2 id="so-why-heading" class="sr-only">Why companies outsource</h2>
+      <ol class="space-y-0">
+        <li class="flex items-start gap-5 border-b border-navy-100 py-5 first:pt-0"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 text-[#5a9100] ring-4 ring-[#F6FAEC]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></span><div><p class="text-[19px] font-medium tracking-tight text-[#111827]">More capacity, sooner</p><p class="mt-1 text-[15px] leading-relaxed text-[#6B7280]">Add engineers for a backlog or a deadline without a long hiring process.</p></div></li>
+        <li class="flex items-start gap-5 border-b border-navy-100 py-5"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 text-[#5a9100] ring-4 ring-[#F6FAEC]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></span><div><p class="text-[19px] font-medium tracking-tight text-[#111827]">Skills you don&rsquo;t have in-house</p><p class="mt-1 text-[15px] leading-relaxed text-[#6B7280]">Reach specialists, such as AI agents or data systems, for the length of one project.</p></div></li>
+        <li class="flex items-start gap-5 py-5 pb-0"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#76B900]/10 text-[#5a9100] ring-4 ring-[#F6FAEC]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg></span><div><p class="text-[19px] font-medium tracking-tight text-[#111827]">Flexible headcount</p><p class="mt-1 text-[15px] leading-relaxed text-[#6B7280]">Deliver client work or a product build without growing the permanent team.</p></div></li>
+      </ol>
+    </div>
+    <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-7 sm:p-10" data-reveal>
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 0% 100%, rgba(118,185,0,.22) 0%, transparent 60%);"></div>
+      <div class="relative">
+        <span class="mb-6 block font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">What it is not</span>
+        <ul class="space-y-6">
+          <li><p class="flex flex-wrap items-center gap-2 text-[18px] font-medium text-white"><span class="rounded-md bg-red-500/15 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-red-300">Not</span><span class="text-white/45 line-through decoration-red-400/70">handing over control</span></p><p class="mt-2 text-[15px] leading-relaxed text-white/70">You decide the goals, priorities and what counts as done.</p></li>
+          <li><p class="flex flex-wrap items-center gap-2 text-[18px] font-medium text-white"><span class="rounded-md bg-red-500/15 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-red-300">Not</span><span class="text-white/45 line-through decoration-red-400/70">the same as hiring freelancers</span></p><p class="mt-2 text-[15px] leading-relaxed text-white/70">You get a team with its own process, review and handover, not a single person.</p></li>
+          <li><p class="flex flex-wrap items-center gap-2 text-[18px] font-medium text-white"><span class="rounded-md bg-red-500/15 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-red-300">Not</span><span class="text-white/45 line-through decoration-red-400/70">automatically cheaper</span></p><p class="mt-2 text-[15px] leading-relaxed text-white/70">Rates may be lower, but what matters is cost per delivered outcome, and that depends on how well the work is scoped and run.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 4 — MODELS #}
+<section id="models" class="scroll-mt-24 border-y border-navy-100 bg-[#F8FAFC] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="so-models-heading" x-data="modelPicker()" x-init="init()" @mouseenter="hold()" @mouseleave="release()">
+  <style>
+    @keyframes so-fill { from { width: 0; } to { width: 100%; } }
+    .so-fill { animation: so-fill 5s linear forwards; }
+    @media (prefers-reduced-motion: reduce) { .so-fill { animation: none; width: 100%; } }
+  </style>
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 grid gap-6 lg:grid-cols-2 lg:items-end" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Engagement models</span>
+        <h2 id="so-models-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Three ways to work together.</h2>
+      </div>
+      <p class="text-[16px] leading-relaxed text-[#6B7280] lg:pb-2">They can be combined. We agree which fits during discovery, not from a rate card.</p>
+    </div>
+    <div class="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16" data-reveal>
+      <div role="tablist" aria-label="Engagement models">
+        <button type="button" role="tab" @click="pick(0)" :aria-selected="m === 0" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="m === 0 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="m === 0 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">01</span>
+          <span class="flex-1"><span class="block text-[22px] font-medium tracking-tight">Dedicated team</span><span class="mt-0.5 block text-[14px] transition-colors" :class="m === 0 ? 'text-[#6B7280]' : 'text-[#9CA3AF]'">Engineers inside your process.</span></span>
+          <span class="text-[18px] transition-all" :class="m === 0 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="m === 0 && counting"><span class="so-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+        <button type="button" role="tab" @click="pick(1)" :aria-selected="m === 1" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="m === 1 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="m === 1 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">02</span>
+          <span class="flex-1"><span class="block text-[22px] font-medium tracking-tight">Fixed-scope project</span><span class="mt-0.5 block text-[14px] transition-colors" :class="m === 1 ? 'text-[#6B7280]' : 'text-[#9CA3AF]'">A defined deliverable, paid by milestone.</span></span>
+          <span class="text-[18px] transition-all" :class="m === 1 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="m === 1 && counting"><span class="so-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+        <button type="button" role="tab" @click="pick(2)" :aria-selected="m === 2" class="group relative flex w-full items-center gap-5 border-t border-navy-100 py-6 text-left transition-colors last:border-b" :class="m === 2 ? 'text-[#111827]' : 'text-[#9CA3AF] hover:text-navy-600'">
+          <span class="text-[44px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300" :style="m === 2 ? '-webkit-text-stroke: 1.5px #76B900' : '-webkit-text-stroke: 1.5px #cbd5e1'">03</span>
+          <span class="flex-1"><span class="block text-[22px] font-medium tracking-tight">White-label build</span><span class="mt-0.5 block text-[14px] transition-colors" :class="m === 2 ? 'text-[#6B7280]' : 'text-[#9CA3AF]'">We build. You present.</span></span>
+          <span class="text-[18px] transition-all" :class="m === 2 ? 'translate-x-0 text-[#5a9100] opacity-100' : '-translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-60'" aria-hidden="true">&rarr;</span>
+          <template x-if="m === 2 && counting"><span class="so-fill absolute bottom-[-1px] left-0 h-[2px] bg-[#76B900]"></span></template>
+        </button>
+      </div>
+      <div class="relative h-[600px] overflow-hidden rounded-[28px] bg-[#141F24] sm:h-[620px]" style="box-shadow: 0 40px 70px -35px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 85% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div x-show="m === 0" x-transition.opacity.duration.300ms class="absolute inset-0 flex flex-col">
+          <div class="relative shrink-0 px-6 pt-6 sm:px-8"><svg viewBox="0 0 480 300" class="relative mx-auto w-full max-w-sm" role="img" aria-label="Your team and Zunkiree engineers working together inside your process and backlog">
+            <rect x="24" y="30" width="432" height="230" rx="20" fill="none" stroke="#76B900" stroke-opacity=".6" stroke-dasharray="5 6"/>
+            <text x="46" y="58" font-size="11" fill="#9bd600" font-family="ui-monospace,Menlo,monospace" letter-spacing="1.2">YOUR PROCESS &middot; YOUR BACKLOG</text>
+            <text x="56" y="100" font-size="12" fill="#fff" fill-opacity=".6" font-family="Inter,system-ui,sans-serif">Your team</text>
+            <rect x="56" y="112" width="34" height="34" rx="9" fill="#2C4048"/><rect x="98" y="112" width="34" height="34" rx="9" fill="#2C4048"/><rect x="140" y="112" width="34" height="34" rx="9" fill="#2C4048"/>
+            <text x="262" y="100" font-size="12" fill="#9bd600" font-family="Inter,system-ui,sans-serif">Zunkiree engineers</text>
+            <rect x="262" y="112" width="34" height="34" rx="9" fill="#76B900" fill-opacity=".9"/><rect x="304" y="112" width="34" height="34" rx="9" fill="#76B900" fill-opacity=".9"/><rect x="346" y="112" width="34" height="34" rx="9" fill="#76B900" fill-opacity=".9"/>
+            <path d="M184 129 H252" stroke="#76B900" stroke-width="2" stroke-dasharray="4 6" class="so-flow"/>
+            <rect x="56" y="176" width="368" height="56" rx="12" fill="#1E2E35" stroke="#2C4048"/><text x="72" y="198" font-size="10" fill="#fff" fill-opacity=".5" font-family="ui-monospace,Menlo,monospace" letter-spacing="1.2">SHARED BACKLOG</text>
+            <rect x="72" y="208" width="60" height="12" rx="6" fill="#2C4048"/><rect x="140" y="208" width="80" height="12" rx="6" fill="#76B900" fill-opacity=".75"/><rect x="228" y="208" width="50" height="12" rx="6" fill="#2C4048"/><rect x="286" y="208" width="70" height="12" rx="6" fill="#76B900" fill-opacity=".75"/>
+          </svg></div>
+          <div class="flex flex-1 flex-col px-6 pb-6 pt-2 sm:px-8"><h3 class="text-[22px] font-medium leading-snug tracking-tight text-white">Engineers inside your process.</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">You are buying capacity. They work your backlog, your standups and your review rules. Best when you have technical leadership and need more hands, not a different way of working.</p><dl class="mt-auto grid grid-cols-2 gap-x-6 pt-4"><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Capacity</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who directs the work</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">You</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Main risk</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Weak direction on your side</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Best when</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">You have a backlog and technical leadership</dd></div></dl></div>
+        </div>
+        <div x-show="m === 1" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
+          <div class="relative shrink-0 px-6 pt-6 sm:px-8"><svg viewBox="0 0 480 300" class="relative mx-auto w-full max-w-sm" role="img" aria-label="A project moving through a brief, two paid milestones and handover">
+            <path d="M60 150 H420" stroke="#2C4048" stroke-width="4" stroke-linecap="round"/><path d="M60 150 H280" stroke="#76B900" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="60" cy="150" r="15" fill="#76B900"/><path d="M53 150 l5 5 9-10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="170" cy="150" r="15" fill="#76B900"/><path d="M163 150 l5 5 9-10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="280" cy="150" r="15" fill="#141F24" stroke="#76B900" stroke-width="2.4"/><circle cx="280" cy="150" r="5" fill="#9bd600" class="so-pulse"/>
+            <circle cx="390" cy="150" r="15" fill="#141F24" stroke="#2C4048" stroke-width="2.4"/>
+            <g font-family="Inter,system-ui,sans-serif" font-size="12" fill="#fff" text-anchor="middle"><text x="60" y="196" fill-opacity=".8">Brief</text><text x="170" y="196" fill-opacity=".8">Milestone 1</text><text x="280" y="196" fill-opacity=".8">Milestone 2</text><text x="390" y="196" fill-opacity=".5">Handover</text></g>
+            <g font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#9bd600" text-anchor="middle" letter-spacing="1.2"><text x="170" y="112">PAID</text><text x="280" y="112">IN REVIEW</text></g>
+            <text x="240" y="262" text-anchor="middle" font-size="12" fill="#fff" fill-opacity=".55" font-family="Inter,system-ui,sans-serif">Scope and price fixed per milestone</text>
+          </svg></div>
+          <div class="flex flex-1 flex-col px-6 pb-6 pt-2 sm:px-8"><h3 class="text-[22px] font-medium leading-snug tracking-tight text-white">A defined deliverable, paid by milestone.</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">You are buying an outcome. Each milestone produces something you can run or review. Best when the scope is clear and you want a delivered result rather than hours.</p><dl class="mt-auto grid grid-cols-2 gap-x-6 pt-4"><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">An outcome</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who directs the work</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Us, against agreed scope</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Main risk</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Vague scope</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Best when</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">The scope is clear and bounded</dd></div></dl></div>
+        </div>
+        <div x-show="m === 2" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
+          <div class="relative shrink-0 px-6 pt-6 sm:px-8"><svg viewBox="0 0 480 300" class="relative mx-auto w-full max-w-sm" role="img" aria-label="The end client deals only with your brand, while Zunkiree Labs builds behind the scenes">
+            <rect x="14" y="100" width="118" height="84" rx="14" fill="#1E2E35" stroke="#2C4048"/><text x="73" y="136" text-anchor="middle" font-size="11" fill="#fff" fill-opacity=".55" font-family="Inter,system-ui,sans-serif">End client</text><text x="73" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#fff" font-family="Inter,system-ui,sans-serif">Sees</text>
+            <rect x="180" y="100" width="118" height="84" rx="14" fill="#1E2E35" stroke="#76B900" stroke-width="1.8"/><text x="239" y="136" text-anchor="middle" font-size="11" fill="#9bd600" font-family="Inter,system-ui,sans-serif">Your brand</text><text x="239" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#fff" font-family="Inter,system-ui,sans-serif">You</text>
+            <rect x="348" y="100" width="118" height="84" rx="14" fill="#76B900" fill-opacity=".1" stroke="#76B900" stroke-opacity=".6" stroke-dasharray="4 5"/><text x="407" y="136" text-anchor="middle" font-size="11" fill="#9bd600" font-family="Inter,system-ui,sans-serif">Kathmandu</text><text x="407" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#fff" fill-opacity=".85" font-family="Inter,system-ui,sans-serif">Zunkiree</text>
+            <path d="M132 142 H180" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><path d="M298 142 H348" stroke="#76B900" stroke-width="2" stroke-dasharray="4 6" class="so-flow"/>
+            <path d="M323 70 V214" stroke="#fff" stroke-opacity=".35" stroke-dasharray="3 5"/><text x="323" y="62" text-anchor="middle" font-size="9.5" fill="#fff" fill-opacity=".5" font-family="ui-monospace,Menlo,monospace" letter-spacing="1.2">BEHIND THE SCENES</text>
+            <text x="240" y="262" text-anchor="middle" font-size="12" fill="#fff" fill-opacity=".55" font-family="Inter,system-ui,sans-serif">Ships under your name</text>
+          </svg></div>
+          <div class="flex flex-1 flex-col px-6 pb-6 pt-2 sm:px-8"><h3 class="text-[22px] font-medium leading-snug tracking-tight text-white">We build. You present.</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">You are buying an outcome under your brand. The work ships under your name, and confidentiality and who may speak to your client are agreed in writing before anything starts.</p><dl class="mt-auto grid grid-cols-2 gap-x-6 pt-4"><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">You are buying</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">An outcome under your brand</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Who directs the work</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Us, to your client\u2019s brief</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Main risk</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">Unclear ownership and client contact</dd></div><div class="border-t border-white/10 py-3"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Best when</dt><dd class="mt-1 text-[14.5px] leading-snug text-white">You sell the work to your own clients</dd></div></dl></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 5 — HOW #}
+<section class="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="so-how-heading" style="background: linear-gradient(180deg, #FFFFFF 0%, #F6FAEC 100%);">
+  <style>
+    .so-route-fill { width: 0; transition: width 1.8s cubic-bezier(.4,0,.2,1) .2s; }
+    .revealed .so-route-fill { width: 100%; }
+    @media (prefers-reduced-motion: reduce) { .so-route-fill { transition: none; width: 100%; } }
+  </style>
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-14" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>How it works</span>
+        <h2 id="so-how-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">From first call to handover.</h2>
+      </div>
+      <p class="mt-5 max-w-3xl text-[15px] leading-relaxed text-[#6B7280]">Evaluating vendors first? Read <a href="/it-companies-nepal/" class="text-[#5a9100] underline underline-offset-2">how to choose an IT company in Nepal</a> and <a href="/blog/how-to-brief-a-software-team-in-nepal-scope-milestones-handover/" class="text-[#5a9100] underline underline-offset-2">how to brief a software team</a>. For what we build, see <a href="/solutions/custom-software/" class="text-[#5a9100] underline underline-offset-2">custom software</a>, <a href="/solutions/ai-development/" class="text-[#5a9100] underline underline-offset-2">AI development</a> and <a href="/solutions/saas-development/" class="text-[#5a9100] underline underline-offset-2">SaaS development</a>.</p>
+    </div>
+    <div class="relative" data-reveal>
+      <span class="pointer-events-none absolute left-6 right-[calc(25%-1.5rem)] top-6 hidden h-0.5 bg-navy-100 md:block" aria-hidden="true"><span class="so-route-fill block h-full bg-gradient-to-r from-[#76B900] to-[#9bd600]"></span></span>
+      <span class="pointer-events-none absolute bottom-10 left-6 top-6 w-0.5 bg-gradient-to-b from-[#76B900] to-navy-100 md:hidden" aria-hidden="true"></span>
+      <ol class="relative grid md:grid-cols-4">
+      <li class="relative flex flex-col pb-10 pl-16 md:pb-0 md:pl-0 md:pr-6">
+        <span class="absolute left-0 top-0 md:static md:block"><span class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#76B900] bg-white font-mono text-[14px] text-[#5a9100] shadow-md ring-4 ring-[#F6FAEC]">1</span></span>
+        <p class="mt-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100] md:mt-6">Step 1</p>
+        <h3 class="mt-1 text-[22px] font-medium leading-snug tracking-tight text-[#111827]">Discovery</h3>
+        <p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">We agree the problem, constraints, what is out of scope and how you will judge the result.</p>
+        <div class="mt-auto md:-mr-6 md:min-h-[3.75rem]"><p class="inline-flex items-center gap-2 lg:whitespace-nowrap rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3 py-1.5 text-[12.5px] text-[#3d6600]"><span class="shrink-0 whitespace-nowrap font-mono text-[9.5px] uppercase tracking-wider text-[#5a9100]">You get</span>An agreed scope</p></div>
+      </li>
+      <li class="relative flex flex-col pb-10 pl-16 md:pb-0 md:pl-0 md:pr-6">
+        <span class="absolute left-0 top-0 md:static md:block"><span class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#76B900] bg-white font-mono text-[14px] text-[#5a9100] shadow-md ring-4 ring-[#F6FAEC]">2</span></span>
+        <p class="mt-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100] md:mt-6">Step 2</p>
+        <h3 class="mt-1 text-[22px] font-medium leading-snug tracking-tight text-[#111827]">A small paid first milestone</h3>
+        <p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Fixed scope and price. It shows how we estimate, communicate and handle review.</p>
+        <div class="mt-auto md:-mr-6 md:min-h-[3.75rem]"><p class="inline-flex items-center gap-2 lg:whitespace-nowrap rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3 py-1.5 text-[12.5px] text-[#3d6600]"><span class="shrink-0 whitespace-nowrap font-mono text-[9.5px] uppercase tracking-wider text-[#5a9100]">You get</span>A fixed scope and price</p></div>
+      </li>
+      <li class="relative flex flex-col pb-10 pl-16 md:pb-0 md:pl-0 md:pr-6">
+        <span class="absolute left-0 top-0 md:static md:block"><span class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#76B900] bg-white font-mono text-[14px] text-[#5a9100] shadow-md ring-4 ring-[#F6FAEC]">3</span></span>
+        <p class="mt-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100] md:mt-6">Step 3</p>
+        <h3 class="mt-1 text-[22px] font-medium leading-snug tracking-tight text-[#111827]">Delivery in milestones</h3>
+        <p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Each milestone produces something you can run or review, with written async updates between calls.</p>
+        <div class="mt-auto md:-mr-6 md:min-h-[3.75rem]"><p class="inline-flex items-center gap-2 lg:whitespace-nowrap rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3 py-1.5 text-[12.5px] text-[#3d6600]"><span class="shrink-0 whitespace-nowrap font-mono text-[9.5px] uppercase tracking-wider text-[#5a9100]">You get</span>Something to run or review</p></div>
+      </li>
+      <li class="relative flex flex-col pb-10 pl-16 md:pb-0 md:pl-0 md:pr-6">
+        <span class="absolute left-0 top-0 md:static md:block"><span class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-[#76B900] text-white shadow-lg ring-4 ring-[#F6FAEC]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></span>
+        <p class="mt-0 font-mono text-[11px] uppercase tracking-wider text-[#5a9100] md:mt-6">Step 4</p>
+        <h3 class="mt-1 text-[22px] font-medium leading-snug tracking-tight text-[#111827]">Handover</h3>
+        <p class="mt-2 mb-4 text-[15px] leading-relaxed text-[#6B7280]">Repositories, documentation, credentials and a walkthrough, agreed in the contract before work starts.</p>
+        <div class="mt-auto md:-mr-6 md:min-h-[3.75rem]"><p class="inline-flex items-center gap-2 lg:whitespace-nowrap rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3 py-1.5 text-[12.5px] text-[#3d6600]"><span class="shrink-0 whitespace-nowrap font-mono text-[9.5px] uppercase tracking-wider text-[#5a9100]">You get</span>Repos, docs and credentials</p></div>
+      </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+{# SECTION 8 — FAQ (feeds FAQPage schema emitted by base.njk) #}
+<section class="bg-[#F8FAFC] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="so-faq-heading">
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+
+    <div data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">FAQ</span>
+      <h2 id="so-faq-heading" class="mb-6 text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">
+        Working with us as an outsourcing partner
+      </h2>
+      <a href="/contact/" class="inline-flex items-center gap-2 font-medium text-[#5a9100] underline-offset-4 transition-colors hover:underline">
+        Have more questions? Talk to us
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+
+    <div x-data="{ activeIndex: 0, expandAll: false }">
+      <div class="mb-4 flex items-center justify-end">
+        <button
+          type="button"
+          @click="expandAll = !expandAll; activeIndex = expandAll ? 'all' : 0"
+          class="font-mono text-[11px] uppercase tracking-wider text-navy-400 transition-colors hover:text-navy-900"
+        >
+          <span x-text="expandAll ? 'Collapse All' : 'Expand All'"></span>
+        </button>
+      </div>
+
+      <div class="divide-y divide-navy-100 border-y border-navy-100">
+        {% for item in faqs %}
+        <div class="py-5" data-reveal>
+          <button
+            type="button"
+            @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
+            :aria-expanded="(activeIndex === {{ loop.index }} || expandAll).toString()"
+            class="group flex w-full items-center justify-between text-left"
+          >
+            <span class="pr-4 text-[16px] font-medium text-[#111827] transition-colors group-hover:text-[#5a9100]">
+              {{ item.question }}
+            </span>
+            <span class="flex-shrink-0 text-navy-400">
+              <svg
+                class="h-5 w-5 transition-transform duration-200"
+                :class="{ 'rotate-45': activeIndex === {{ loop.index }} || expandAll }"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+              </svg>
+            </span>
+          </button>
+          <div
+            x-show="activeIndex === {{ loop.index }} || expandAll"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="overflow-hidden"
+          >
+            <p class="pt-4 text-[15px] leading-relaxed text-[#6B7280]">
+              {{ item.answer }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{# ============ SOURCES ============ #}
+<section class="px-4 pb-12 pt-4 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="so-src-heading">
+  <div class="mx-auto max-w-6xl border-t border-navy-100 pt-12 sm:pt-14">
+    <div class="relative grid gap-9">
+      <div class="flex flex-col">
+        <h2 id="so-src-heading" class="font-mono text-[11px] font-normal uppercase tracking-wider text-[#5a9100]">Sources and further reading</h2>
+        <p class="mt-4 text-[22px] font-medium leading-snug tracking-tight text-[#111827] sm:text-[26px]">Where the claims on this page come from.</p>
+        <p class="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#6B7280]">Outside references for the claims on this page. Our own descriptions of what we build are our own account, not independent evidence.</p>
+        <p class="mt-6 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Last updated <time datetime="2026-10-09">9 October 2026</time> &middot; Zunkiree Labs, Kathmandu, Nepal</p>
+      </div>
+      <div class="divide-y divide-navy-100">
+        <a href="https://en.wikipedia.org/wiki/Time_in_Nepal" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">01</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Wikipedia</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Nepal Standard Time (UTC+5:45)</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">The time zone behind the working-hours overlap described on this page.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://gdpr-info.eu/art-28-gdpr/" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">02</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">GDPR text (gdpr-info.eu)</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Article 28: Processor</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">When a vendor processes personal data for you, a written contract is required. Unofficial reproduction of Regulation (EU) 2016/679.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">03</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">European Commission</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">International dimension of data protection</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Rules for sending personal data outside the EU.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# SECTION 9 — CLOSING CTA #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"></div>
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">Get Started</span>
+      <h2 class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
+        Tell us what your team needs to ship
+      </h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/60">
+        Describe the work, the stack and the timeline. You&rsquo;ll speak with the engineer who would lead it and leave with a written first milestone.
+      </p>
+      <p class="relative z-10 mx-auto mt-3 max-w-xl font-mono text-[11px] uppercase tracking-wider text-white/40">Based in Kathmandu, Nepal &middot; Clients in Nepal and abroad</p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="/contact/" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="it-nepal-bottom-primary">
+          Talk About a Partnership
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+        <a href="/get-a-quote/" class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#76B900] focus-visible:ring-offset-2 sm:w-auto" data-track="cta" data-cta-id="it-nepal-bottom-secondary">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+{% include "partials/footer-v2.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://zunkireelabs.com/solutions/software-outsourcing/#service",
+      "name": "Software Outsourcing Partner in Nepal",
+      "serviceType": "Software outsourcing",
+      "url": "https://zunkireelabs.com/solutions/software-outsourcing/",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://zunkireelabs.com/#organization",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kathmandu"
+        },
+        {
+          "@type": "Country",
+          "name": "Nepal"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Switzerland"
+        },
+        {
+          "@type": "Country",
+          "name": "Netherlands"
+        }
+      ],
+      "keywords": "software outsourcing Nepal, outsourcing partner Nepal, white-label software development, dedicated development team, software development outsourcing",
+      "description": "Zunkiree Labs builds its own products and is the outsourced engineering team for agencies and software firms: dedicated teams, fixed-scope, white-label."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zunkireelabs.com/solutions/software-outsourcing/#webpage",
+      "url": "https://zunkireelabs.com/solutions/software-outsourcing/",
+      "name": "Software Outsourcing Partner in Nepal | Zunkiree Labs",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com/"
+      },
+      "about": {
+        "@id": "https://zunkireelabs.com/solutions/software-outsourcing/#service"
+      },
+      "mainEntity": {
+        "@id": "https://zunkireelabs.com/solutions/software-outsourcing/#service"
+      },
+      "publisher": {
+        "@id": "https://zunkireelabs.com/#organization"
+      },
+      "dateModified": "2026-10-09",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "[data-aeo='answer']"
+        ]
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Nepal Standard Time (UTC+5:45)",
+          "url": "https://en.wikipedia.org/wiki/Time_in_Nepal",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Wikipedia"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Article 28: Processor",
+          "url": "https://gdpr-info.eu/art-28-gdpr/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "GDPR text (gdpr-info.eu)"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "International dimension of data protection",
+          "url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en",
+          "publisher": {
+            "@type": "Organization",
+            "name": "European Commission"
+          }
+        }
+      ],
+      "description": "Zunkiree Labs builds its own products and is the outsourced engineering team for agencies and software firms: dedicated teams, fixed-scope, white-label."
+    }
+  ]
+}
+</script>
+{% raw %}
+<script>
+window.modelPicker = function () {
+  return {
+    m: 0, counting: false, timer: null, inView: false, auto: true, n: 3,
+    init() {
+      this.auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      var self = this;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { self.inView = e.isIntersecting; if (e.isIntersecting) { self.tick(); } else { self.stop(); } }); }, { threshold: 0.35 });
+        io.observe(this.$el);
+      }
+    },
+    stop() { clearTimeout(this.timer); this.timer = null; this.counting = false; },
+    tick() { var self = this; this.stop(); if (!this.auto || !this.inView) return; this.counting = true; this.timer = setTimeout(function () { self.m = (self.m + 1) % self.n; self.tick(); }, 5000); },
+    hold() { this.stop(); },
+    release() { this.tick(); },
+    pick(i) { this.m = i; this.stop(); }
+  };
+};
+</script>
+{% endraw %}

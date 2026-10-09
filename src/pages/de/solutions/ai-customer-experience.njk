@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: de
+ogLocale: de_DE
+title: "KI im Kundenerlebnis: Intelligenter Support | Zunkiree Labs"
+description: "Kundensupport mit KI, die Anfragen sofort löst. Support-Tickets um 40 % senken und die Zufriedenheit steigern. Intelligente Automatisierung rund um die Uhr."
+permalink: /de/solutions/ai-customer-experience/
+serviceId: ai-customer-experience
+hreflangAlternates:
+  - lang: en
+    url: /solutions/ai-customer-experience/
+  - lang: de
+    url: /de/solutions/ai-customer-experience/
+  - lang: de-CH
+    url: /de-ch/solutions/ai-customer-experience/
+  - lang: nl
+    url: /nl/solutions/ai-customer-experience/
+  - lang: x-default
+    url: /solutions/ai-customer-experience/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["de"].details["ai-customer-experience"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

@@ -43,6 +43,6 @@ translationKey: "the-role-of-ai-in-cloud-computing-transforming-businesses-globa
 
 ## Über Zunkiree Labs
 
-<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen. Die vollständige Liste finden Sie auf der <a href="/services/">Leistungsseite</a>.</p>
+<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen. Die vollständige Liste finden Sie auf der <a href="/solutions/">Leistungsseite</a>.</p>
 
 </div>

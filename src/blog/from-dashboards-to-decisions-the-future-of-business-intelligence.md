@@ -1,5 +1,5 @@
 ---
-title: "From Dashboards to Decisions: The Future of Business Intelligence"
+title: "From Dashboards to Decisions: The Future of BI"
 shortLabel: "Dashboards to Decisions"
 translationKey: "from-dashboards-to-decisions-the-future-of-business-intelligence"
 description: "BI is moving from charts you read to agents that act on company data. What Databricks announced, what Deloitte and Gartner found, and what is unresolved."

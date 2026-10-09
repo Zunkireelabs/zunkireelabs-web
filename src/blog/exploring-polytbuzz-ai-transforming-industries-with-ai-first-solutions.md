@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "PolytBuzz AI: Transforming Industries with AI-First Solutions"
+title: "PolytBuzz AI: AI-First Solutions for Industries"
 description: "How PolytBuzz AI uses AI-first technology to drive innovation across industries, improve efficiency and support smarter decisions."
 date: "2026-09-21"
 featuredImage: "https://images.pexels.com/photos/7109243/pexels-photo-7109243.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

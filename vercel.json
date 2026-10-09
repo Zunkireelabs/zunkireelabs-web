@@ -165,6 +165,86 @@
       "permanent": true
     },
     {
+      "source": "/blog/the-best-software-solutions-from-leading-it-companies-in-nepal",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-best-software-solutions-from-leading-it-companies-in-nepal/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-best-it-companies-in-nepal",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-the-best-it-companies-in-nepal/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/finding-the-best-it-company-in-nepal-for-software-development",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/finding-the-best-it-company-in-nepal-for-software-development/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-it-companies-based-in-nepal-pioneers-of-innovation",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-it-companies-based-in-nepal-pioneers-of-innovation/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-top-software-companies-to-partner-with-in-nepal",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exploring-top-software-companies-to-partner-with-in-nepal/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/key-considerations-when-choosing-a-software-company-in-nepal",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/key-considerations-when-choosing-a-software-company-in-nepal/",
+      "destination": "/it-companies-nepal/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/unlocking-potential-the-expertise-of-ai-companies-in-nepal",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/unlocking-potential-the-expertise-of-ai-companies-in-nepal/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-companies-based-in-kathmandu",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-companies-based-in-kathmandu/",
+      "destination": "/blog/top-ai-companies-nepal-2026/",
+      "permanent": true
+    },
+    {
       "source": "/customers",
       "destination": "/customer-stories/",
       "permanent": true
@@ -216,92 +296,92 @@
     },
     {
       "source": "/locations//ai-customer-experience/",
-      "destination": "/services/ai-customer-experience/",
+      "destination": "/solutions/ai-customer-experience/",
       "permanent": true
     },
     {
       "source": "/locations/ai-customer-experience/",
-      "destination": "/services/ai-customer-experience/",
+      "destination": "/solutions/ai-customer-experience/",
       "permanent": true
     },
     {
       "source": "/locations//ai-development/",
-      "destination": "/services/ai-development/",
+      "destination": "/solutions/ai-development/",
       "permanent": true
     },
     {
       "source": "/locations/ai-development/",
-      "destination": "/services/ai-development/",
+      "destination": "/solutions/ai-development/",
       "permanent": true
     },
     {
       "source": "/locations//custom-software/",
-      "destination": "/services/custom-software/",
+      "destination": "/solutions/custom-software/",
       "permanent": true
     },
     {
       "source": "/locations/custom-software/",
-      "destination": "/services/custom-software/",
+      "destination": "/solutions/custom-software/",
       "permanent": true
     },
     {
       "source": "/locations//ai-ecommerce/",
-      "destination": "/services/ai-ecommerce/",
+      "destination": "/solutions/ai-ecommerce/",
       "permanent": true
     },
     {
       "source": "/locations/ai-ecommerce/",
-      "destination": "/services/ai-ecommerce/",
+      "destination": "/solutions/ai-ecommerce/",
       "permanent": true
     },
     {
       "source": "/locations//saas-development/",
-      "destination": "/services/saas-development/",
+      "destination": "/solutions/saas-development/",
       "permanent": true
     },
     {
       "source": "/locations/saas-development/",
-      "destination": "/services/saas-development/",
+      "destination": "/solutions/saas-development/",
       "permanent": true
     },
     {
       "source": "/locations//web-development/",
-      "destination": "/services/web-development/",
+      "destination": "/solutions/web-development/",
       "permanent": true
     },
     {
       "source": "/locations/web-development/",
-      "destination": "/services/web-development/",
+      "destination": "/solutions/web-development/",
       "permanent": true
     },
     {
       "source": "/locations//data-systems/",
-      "destination": "/services/data-systems/",
+      "destination": "/solutions/data-systems/",
       "permanent": true
     },
     {
       "source": "/locations/data-systems/",
-      "destination": "/services/data-systems/",
+      "destination": "/solutions/data-systems/",
       "permanent": true
     },
     {
       "source": "/locations//app-development/",
-      "destination": "/services/app-development/",
+      "destination": "/solutions/app-development/",
       "permanent": true
     },
     {
       "source": "/locations/app-development/",
-      "destination": "/services/app-development/",
+      "destination": "/solutions/app-development/",
       "permanent": true
     },
     {
       "source": "/locations//aeo-seo/",
-      "destination": "/services/aeo-seo/",
+      "destination": "/solutions/aeo-seo/",
       "permanent": true
     },
     {
       "source": "/locations/aeo-seo/",
-      "destination": "/services/aeo-seo/",
+      "destination": "/solutions/aeo-seo/",
       "permanent": true
     },
     {
@@ -322,6 +402,416 @@
     {
       "source": "/resources/cms-group-case-study",
       "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/homepage-v2-canvas/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/homepage-v2-canvas",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/services/aeo-seo",
+      "destination": "/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/services/aeo-seo/",
+      "destination": "/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-customer-experience",
+      "destination": "/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-customer-experience/",
+      "destination": "/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-development",
+      "destination": "/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-development/",
+      "destination": "/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-ecommerce",
+      "destination": "/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/services/ai-ecommerce/",
+      "destination": "/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/services/app-development",
+      "destination": "/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/app-development/",
+      "destination": "/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-software",
+      "destination": "/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-software/",
+      "destination": "/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-systems",
+      "destination": "/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/services/data-systems/",
+      "destination": "/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/services/saas-development",
+      "destination": "/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/saas-development/",
+      "destination": "/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-development",
+      "destination": "/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/services/web-development/",
+      "destination": "/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services",
+      "destination": "/de/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/",
+      "destination": "/de/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/aeo-seo",
+      "destination": "/de/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/aeo-seo/",
+      "destination": "/de/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-customer-experience",
+      "destination": "/de/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-customer-experience/",
+      "destination": "/de/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-development",
+      "destination": "/de/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-development/",
+      "destination": "/de/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-ecommerce",
+      "destination": "/de/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/ai-ecommerce/",
+      "destination": "/de/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/app-development",
+      "destination": "/de/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/app-development/",
+      "destination": "/de/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/custom-software",
+      "destination": "/de/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/custom-software/",
+      "destination": "/de/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/data-systems",
+      "destination": "/de/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/data-systems/",
+      "destination": "/de/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/saas-development",
+      "destination": "/de/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/saas-development/",
+      "destination": "/de/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/web-development",
+      "destination": "/de/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de/services/web-development/",
+      "destination": "/de/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services",
+      "destination": "/de-ch/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/",
+      "destination": "/de-ch/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/aeo-seo",
+      "destination": "/de-ch/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/aeo-seo/",
+      "destination": "/de-ch/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-customer-experience",
+      "destination": "/de-ch/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-customer-experience/",
+      "destination": "/de-ch/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-development",
+      "destination": "/de-ch/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-development/",
+      "destination": "/de-ch/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-ecommerce",
+      "destination": "/de-ch/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/ai-ecommerce/",
+      "destination": "/de-ch/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/app-development",
+      "destination": "/de-ch/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/app-development/",
+      "destination": "/de-ch/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/custom-software",
+      "destination": "/de-ch/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/custom-software/",
+      "destination": "/de-ch/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/data-systems",
+      "destination": "/de-ch/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/data-systems/",
+      "destination": "/de-ch/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/saas-development",
+      "destination": "/de-ch/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/saas-development/",
+      "destination": "/de-ch/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/web-development",
+      "destination": "/de-ch/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/de-ch/services/web-development/",
+      "destination": "/de-ch/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services",
+      "destination": "/nl/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/",
+      "destination": "/nl/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/aeo-seo",
+      "destination": "/nl/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/aeo-seo/",
+      "destination": "/nl/solutions/aeo-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-customer-experience",
+      "destination": "/nl/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-customer-experience/",
+      "destination": "/nl/solutions/ai-customer-experience/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-development",
+      "destination": "/nl/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-development/",
+      "destination": "/nl/solutions/ai-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-ecommerce",
+      "destination": "/nl/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/ai-ecommerce/",
+      "destination": "/nl/solutions/ai-ecommerce/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/app-development",
+      "destination": "/nl/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/app-development/",
+      "destination": "/nl/solutions/app-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/custom-software",
+      "destination": "/nl/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/custom-software/",
+      "destination": "/nl/solutions/custom-software/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/data-systems",
+      "destination": "/nl/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/data-systems/",
+      "destination": "/nl/solutions/data-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/saas-development",
+      "destination": "/nl/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/saas-development/",
+      "destination": "/nl/solutions/saas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/web-development",
+      "destination": "/nl/solutions/web-development/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/services/web-development/",
+      "destination": "/nl/solutions/web-development/",
       "permanent": true
     }
   ]

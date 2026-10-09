@@ -1,7 +1,10 @@
 ---
 layout: base.njk
-title: "Blog | KI- und Technologie-Einblicke von Zunkiree Labs (Schweiz)"
-description: "Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur für die Schweiz. Beiträge vom Team von Zunkiree Labs."
+eleventyComputed:
+  title: >-
+    {{ ("Blog | KI- und Technologie-Einblicke von Zunkiree Labs (CH)" if pagination.pageNumber == 0 else "Blog, Seite " + (pagination.pageNumber + 1) + " | Zunkiree Labs (CH)") | safe }}
+  description: >-
+    {{ "Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur für die Schweiz. Beiträge vom Team von Zunkiree Labs." if pagination.pageNumber == 0 else "Seite " + (pagination.pageNumber + 1) + ". Praxisnahe Einblicke zu KI-Entwicklung und KI-Infrastruktur für die Schweiz. Beiträge vom Team von Zunkiree Labs." }}
 lang: de-CH
 ogLocale: de_CH
 eleventyExcludeFromCollections: true

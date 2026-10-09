@@ -19,7 +19,9 @@ featuredImageCredit: "Photo by Caio on Pexels"
 
 Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions. IT/AI exports crossed $1 billion for the first time, and the sector now operates under the government's [National Artificial Intelligence Policy, 2025](https://giwmscdnone.gov.np/media/pdf_upload/National%20AI%20Policy-Final_uxc94vg.pdf) ([Nepal Economic Forum, NEFsearch: Artificial Intelligence in Nepal](https://issuu.com/nepaleconomicforum/docs/nefsearch_artificial_intelligence_ai_in_nepal)).
 
-This guide profiles 50 of the most significant tech companies operating in Nepal—from established enterprises to fast-growing startups. Whether you're looking for an AI development partner, evaluating software vendors, or researching the market, this is your starting point.
+Once you have chosen a vendor, see [how to brief a software team in Nepal](/blog/how-to-brief-a-software-team-in-nepal-scope-milestones-handover/) for scope, milestones and handover.
+
+This guide profiles 50 of the most significant tech companies operating in Nepal—from established enterprises to fast-growing startups. Whether you're looking for an AI development partner, evaluating software vendors, or researching the market, this is your starting point. If you're choosing between vendors rather than browsing, our guide to [choosing an IT company in Nepal](/it-companies-nepal/) covers how to evaluate one and how to verify its claims independently.
 
 Well-known IT and software companies in Nepal include Leapfrog Technology, F1Soft, Deerwalk, Javra, and Verisk Nepal. Leading AI-focused companies include Fusemachines, CloudFactory, Docsumo, and Zunkiree Labs. The full list of 50 is below. For data on how ready Nepali organizations are for AI, see our [State of AI in Nepal 2026 report](/resources/state-of-ai-nepal-2026/).
 
@@ -971,3 +973,8 @@ The companies profiled here represent the leading edge of what's possible from K
     </div>
   </div>
 </section><!-- SEOAI:INTERNALLINKS:END -->
+
+## Related Insights
+
+- [Software Outsourcing Partner in Nepal](/solutions/software-outsourcing/)
+- [Software Outsourcing Models Compared](/blog/software-outsourcing-models-dedicated-team-vs-fixed-price-vs-white-label/)

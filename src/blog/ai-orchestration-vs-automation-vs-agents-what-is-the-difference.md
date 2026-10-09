@@ -1,5 +1,5 @@
 ---
-title: "AI Orchestration vs Automation vs Agents: What Is the Difference?"
+title: "AI Orchestration vs Automation vs Agents: The Difference"
 shortLabel: "AI Orchestration Explained"
 translationKey: "ai-orchestration-vs-automation-vs-agents-what-is-the-difference"
 description: "Automation follows fixed steps, agents choose their own, orchestration coordinates them. What Anthropic, Microsoft and Gartner say, and when to use each."
@@ -92,6 +92,9 @@ For more context, read our overview of [AI trends and predictions for 2026](/blo
 
 ## Related Insights
 
+- [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)
+- [Flow AI vs Workflow Automation](/blog/flow-ai-vs-workflow-automation-what-is-the-difference/)
+- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [AI Coding Agents in 2026: How Developers Actually Work Now](/blog/ai-coding-agents-2026-how-developers-actually-work-now/)
 - [FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)

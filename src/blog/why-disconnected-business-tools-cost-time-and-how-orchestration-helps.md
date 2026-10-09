@@ -1,5 +1,5 @@
 ---
-title: "Disconnected Tools: What They Cost and How Orchestration Helps"
+title: "Disconnected Tools: The Cost and How Orchestration Helps"
 shortLabel: "Disconnected Tools"
 translationKey: "why-disconnected-business-tools-cost-time-and-how-orchestration-helps"
 description: "Surveys show companies run 100+ apps but only 27% are connected. What Salesforce, Okta, Asana and UC Irvine found, and how orchestration layers help."
@@ -89,6 +89,7 @@ For related reading, see [from dashboards to decisions](/blog/from-dashboards-to
 
 ## Related Insights
 
+- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
 - [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)

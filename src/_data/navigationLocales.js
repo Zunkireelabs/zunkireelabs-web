@@ -26,7 +26,7 @@ function translate(node, idx, ch, base) {
   if (node && typeof node === 'object') {
     // Translated pages only link "see more" to the services listing; the other "see all" links lead to
     // English-only listings, so they are left out of the localized menus.
-    return Object.fromEntries(Object.entries(node).filter(([k, v]) => !(k === 'seeAll' && v && v.url !== '/services/')).map(([k, v]) => [k, (k === 'url' || k === 'href') && typeof v === 'string' && (LOCAL_PAGES[v] || v.startsWith('/services/')) ? base + (LOCAL_PAGES[v] || v.slice(1)) : NON_TEXT.has(k) ? v : translate(v, idx, ch, base)]));
+    return Object.fromEntries(Object.entries(node).filter(([k, v]) => !(k === 'seeAll' && v && v.url !== '/solutions/')).map(([k, v]) => [k, (k === 'url' || k === 'href') && typeof v === 'string' && (LOCAL_PAGES[v] || v.startsWith('/solutions/')) ? base + (LOCAL_PAGES[v] || v.slice(1)) : NON_TEXT.has(k) ? v : translate(v, idx, ch, base)]));
   }
   if (typeof node === 'string' && T[node]) return ch ? swiss(T[node][idx]) : T[node][idx];
   return node;
@@ -37,7 +37,7 @@ function translate(node, idx, ch, base) {
 const flat = (idx, ch, base, template) => {
   const t = (k) => (ch ? swiss(T[k][idx]) : T[k][idx]);
   const item = (label, url) => ({ ...template, label, url });
-  return { ...template.__nav, main: [item(t('Services'), base + 'services/'), item('Blog', base + 'blog/'), item(t('About Us'), base + 'about/')] };
+  return { ...template.__nav, main: [item(t('Solutions'), base + 'solutions/'), item('Blog', base + 'blog/'), item(t('About Us'), base + 'about/')] };
 };
 const tmpl = (() => { const { label, url, ...rest } = en.main.find((m) => !m.dropdownType && m.url) || {}; return { ...rest, __nav: en }; })();
 const clean = (o) => { const { __nav, ...rest } = o; return rest; };

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AI-codeeragents: wat de Copilot-herziening van Microsoft betekent"
+title: "AI-codeeragents: wat Microsofts Copilot-herziening betekent"
 description: "Microsoft presenteert Copilot als een “OS for work” met ingebouwd coderen en agents. Wat AI-native software betekent voor teams die software bouwen of kopen."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/ai-codeeragents-wat-de-copilot-herziening-van-microsoft-betekent.svg"

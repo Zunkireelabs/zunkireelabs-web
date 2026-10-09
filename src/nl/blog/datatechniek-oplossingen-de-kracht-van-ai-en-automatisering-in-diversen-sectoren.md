@@ -35,6 +35,6 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Over Zunkiree Labs</h2>
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. Het volledige overzicht staat op de <a href="/services/" class="text-zunkiree-600 hover:underline">dienstenpagina</a> (in het Engels).</p>
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. Het volledige overzicht staat op de <a href="/solutions/" class="text-zunkiree-600 hover:underline">dienstenpagina</a> (in het Engels).</p>
 
 </div>

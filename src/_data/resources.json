@@ -289,7 +289,7 @@
       "relatedResources": [
         { "slug": "admizz-case-study", "title": "Case Study: Admizz Education" },
         { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
-        { "href": "/services/ai-development/", "title": "AI Development Services" }
+        { "href": "/solutions/ai-development/", "title": "AI Development Services" }
       ],
       "title": "Rapid Investment Analyzes Deals 10x Faster",
       "subtitle": "AI-powered due diligence for faster, more confident investment decisions",
@@ -315,7 +315,7 @@
       "relatedResources": [
         { "slug": "corecloud365-case-study", "title": "Case Study: Corecloud365" },
         { "slug": "rapid-investment-case-study", "title": "Case Study: Rapid Investment" },
-        { "href": "/services/data-systems/", "title": "Data Systems Services" }
+        { "href": "/solutions/data-systems/", "title": "Data Systems Services" }
       ],
       "title": "CMS Group Automates 85% of Enterprise Workflows",
       "subtitle": "AI-powered document processing frees teams for higher-value work",
@@ -341,7 +341,7 @@
       "relatedResources": [
         { "slug": "cms-group-case-study", "title": "Case Study: CMS Group" },
         { "slug": "prime-tiles-case-study", "title": "Case Study: Prime Tiles" },
-        { "href": "/services/ai-development/", "title": "AI Development Services" }
+        { "href": "/solutions/ai-development/", "title": "AI Development Services" }
       ],
       "title": "Mach24 Orbital Cuts Launch Prep Time in Half",
       "subtitle": "AI-optimized satellite deployment workflows",
@@ -367,7 +367,7 @@
       "relatedResources": [
         { "slug": "mach24orbital-case-study", "title": "Case Study: Mach24 Orbital" },
         { "slug": "khems-cleaning-case-study", "title": "Case Study: Khems Cleaning" },
-        { "href": "/services/ai-ecommerce/", "title": "AI Ecommerce Services" }
+        { "href": "/solutions/ai-ecommerce/", "title": "AI Ecommerce Services" }
       ],
       "title": "Prime Tiles Doubles Online Conversion Rates",
       "subtitle": "AI-native search helps customers find the right product instantly",
@@ -393,7 +393,7 @@
       "relatedResources": [
         { "slug": "prime-tiles-case-study", "title": "Case Study: Prime Tiles" },
         { "slug": "chayce-properties-case-study", "title": "Case Study: Chayce Properties" },
-        { "href": "/services/ai-customer-experience/", "title": "AI Customer Experience Services" }
+        { "href": "/solutions/ai-customer-experience/", "title": "AI Customer Experience Services" }
       ],
       "title": "Khems Cleaning Increases Bookings by 70%",
       "subtitle": "AI-powered scheduling scales service capacity",
@@ -419,7 +419,7 @@
       "relatedResources": [
         { "href": "/global-delivery/", "title": "Global AI & Software Delivery" },
         { "slug": "khems-cleaning-case-study", "title": "Case Study: Khems Cleaning" },
-        { "href": "/services/web-development/", "title": "Web Development Services" }
+        { "href": "/solutions/web-development/", "title": "Web Development Services" }
       ],
       "title": "Chayce Properties Runs Its Entire Digital Operation on Zunkiree Infrastructure",
       "subtitle": "A UK real estate company's website, AI systems, and ongoing technical delivery, managed end to end",
@@ -644,7 +644,7 @@
       "relatedResources": [
         { "slug": "state-of-ai-nepal-2026", "title": "State of AI in Nepal 2026" },
         { "slug": "ai-search-report-2026", "title": "State of AI Search 2026" },
-        { "href": "/services/ai-development/", "title": "AI Development Services" }
+        { "href": "/solutions/ai-development/", "title": "AI Development Services" }
       ],
       "title": "State of Enterprise AI Adoption 2026",
       "subtitle": "Insights from 500+ enterprise technology leaders",
@@ -679,7 +679,7 @@
       "relatedResources": [
         { "slug": "semantic-search-vs-keyword-search", "title": "Semantic Search vs Keyword Search" },
         { "slug": "ai-search-stack-guide", "title": "The AI Search Stack for the Modern Enterprise" },
-        { "href": "/services/ai-development/", "title": "AI Development Services" }
+        { "href": "/solutions/ai-development/", "title": "AI Development Services" }
       ],
       "title": "Natural Language Processing Fundamentals",
       "subtitle": "From theory to production-ready NLP systems",

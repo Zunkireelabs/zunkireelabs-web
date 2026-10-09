@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Zakelijk Potentieel Benutten met Georkestreerde Agent-workflows"
+title: "Zakelijk potentieel met georkestreerde agent-workflows"
 description: "Ontdek hoe georkestreerde agent-workflows automatisering en efficiëntie verbeteren in diverse sectoren, en waarom Zunkiree Labs de beste keuze is."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/zakelijk-potentieel-benutten-met-georkestreerde-agent-workflows.svg"
@@ -39,6 +39,6 @@ translationKey: "unlocking-business-potential-with-orchestrated-agent-workflows"
 
 ## Over Zunkiree Labs
 
-<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. De volledige lijst staat op de <a href="/services/">pagina met diensten</a>.</p>
+<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. De volledige lijst staat op de <a href="/solutions/">pagina met diensten</a>.</p>
 
 </div>

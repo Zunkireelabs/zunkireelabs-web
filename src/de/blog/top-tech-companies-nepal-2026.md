@@ -1,5 +1,5 @@
 ---
-title: "Die 50 wichtigsten IT- und Tech-Unternehmen in Nepal (Liste 2026)"
+title: "Top 50 IT- und Tech-Unternehmen in Nepal (Liste 2026)"
 description: "Eine recherchierte Liste von 50 IT-, Software-, KI- und Startup-Unternehmen in Nepal für 2026, nach Kategorien gegliedert, mit Hinweisen zur Auswahl."
 date: 2026-03-30
 lastUpdated: 2026-10-01

@@ -35,6 +35,6 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Über Zunkiree Labs</h2>
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen. Die vollständige Übersicht finden Sie auf der <a href="/services/" class="text-zunkiree-600 hover:underline">Leistungsseite</a> (auf Englisch).</p>
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen. Die vollständige Übersicht finden Sie auf der <a href="/solutions/" class="text-zunkiree-600 hover:underline">Leistungsseite</a> (auf Englisch).</p>
 
 </div>

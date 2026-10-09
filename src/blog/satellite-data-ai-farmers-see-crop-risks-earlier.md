@@ -1,5 +1,5 @@
 ---
-title: "How Satellite Data and AI Help Farmers See Crop Risks Earlier"
+title: "Satellite Data and AI Help Farmers Spot Crop Risks Earlier"
 shortLabel: "AI for Farming"
 translationKey: "satellite-data-ai-farmers-see-crop-risks-earlier"
 description: "What satellite imagery, weather data and AI can forecast about crops, from a peer-reviewed rice study in Nepal's Terai to NASA Harvest and FAO pilots."

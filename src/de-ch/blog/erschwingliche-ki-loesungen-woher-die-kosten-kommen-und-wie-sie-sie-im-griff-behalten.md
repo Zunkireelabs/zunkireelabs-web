@@ -31,7 +31,7 @@ translationKey: "affordable-ai-technology-solutions-for-businesses-worldwide"
 
 ## Was Zunkiree Labs anbietet
 
-<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Liste finden Sie auf der <a href="/services/" rel="noopener">Leistungsseite</a>. Orca, unsere Intelligenz- und Orchestrierungsschicht, koordiniert Agenten-Workflows über die CRM-, E-Mail- und Marketing-Tools, die eine Organisation bereits nutzt. Ob davon etwas zu Ihrem Budget passt, hängt von Ihrem Arbeitsablauf ab, deshalb würden wir bei einem realen Anwendungsfall beginnen. Siehe auch <a href="/blog/what-is-flow-ai/" rel="noopener">was Flow AI ist</a>.</p>
+<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Liste finden Sie auf der <a href="/solutions/" rel="noopener">Leistungsseite</a>. Orca, unsere Intelligenz- und Orchestrierungsschicht, koordiniert Agenten-Workflows über die CRM-, E-Mail- und Marketing-Tools, die eine Organisation bereits nutzt. Ob davon etwas zu Ihrem Budget passt, hängt von Ihrem Arbeitsablauf ab, deshalb würden wir bei einem realen Anwendungsfall beginnen. Siehe auch <a href="/blog/what-is-flow-ai/" rel="noopener">was Flow AI ist</a>.</p>
 
 ## Quellen
 

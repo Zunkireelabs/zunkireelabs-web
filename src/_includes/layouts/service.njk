@@ -13,7 +13,7 @@ bodyClass: "v2-inter"
    shells). Homepage V2 is the single source of truth for the
    design system and component recipes.
 
-   This is the SHARED Services template driving /services/*.
+   This is the SHARED Services template driving /solutions/*.
    Content, headings, copy hierarchy, SEO structure, metadata,
    links, images, and all data bindings are preserved verbatim
    from the prior layout (data via servicesDetails.json,
@@ -548,7 +548,12 @@ bodyClass: "v2-inter"
    SECTION 9 — SERVICE LOCATIONS
    Location pills. Links /locations/{id}/{serviceId}/ preserved.
    ===================================================== #}
-{# Location pages exist in English only. #}{% if not svLoc %}<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" data-reveal>
+{# Location pages exist in English only, and only for services that take part in
+   the city x service matrix. A solution with skipLocationPages set in
+   services.json has no /locations/{id}/{serviceId}/ pages, so rendering these
+   pills would emit one broken link per city. Gated on locationServiceIds rather
+   than service.skipLocationPages: `service` here comes from servicesDetails.json,
+   which does not carry that flag. #}{% if not svLoc and serviceId in locationServiceIds %}<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" data-reveal>
   <div class="mx-auto max-w-5xl">
     <div class="mb-10 text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">{{ ui.svLocations | safe }}</span>

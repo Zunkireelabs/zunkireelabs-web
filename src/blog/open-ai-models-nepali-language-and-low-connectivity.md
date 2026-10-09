@@ -1,5 +1,5 @@
 ---
-title: "Open AI Models for Nepal: Nepali Language and Low Connectivity"
+title: "Open AI Models for Nepal: Nepali Language, Low Connectivity"
 shortLabel: "Open AI for Nepal"
 translationKey: "open-ai-models-nepali-language-and-low-connectivity"
 description: "Open models like Gemma 4 can run on phones and laptops, but how well do they handle Nepali? What benchmarks and connectivity data show, and what is unproven."

@@ -6,12 +6,18 @@
     "category": "AI & Data",
     "description": "Custom AI systems using RAG pipelines, LLM integration, and intelligent automation. We build AI that solves specific business problems, not generic chatbots.",
     "cta": "Explore AI Dev",
-    "url": "/services/ai-development/",
+    "url": "/solutions/ai-development/",
     "icon": "ai",
     "mockup": "/assets/images/ai-development-hero.webp",
     "clients": [
-      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
-      { "name": "Admizz", "logo": "/images/clients/admizz.webp" }
+      {
+        "name": "CoreCloud365",
+        "logo": "/images/clients/corecloud365.svg"
+      },
+      {
+        "name": "Admizz",
+        "logo": "/images/clients/admizz.webp"
+      }
     ]
   },
   {
@@ -21,13 +27,22 @@
     "category": "AI & Data",
     "description": "AI-powered support systems that answer customer questions instantly. Reduce support tickets by 40% while improving response accuracy.",
     "cta": "Explore AI CX",
-    "url": "/services/ai-customer-experience/",
+    "url": "/solutions/ai-customer-experience/",
     "icon": "chat",
     "mockup": "/assets/images/ai-customer-experience-hero.webp",
     "clients": [
-      { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
-      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp" }
+      {
+        "name": "Admizz",
+        "logo": "/images/clients/admizz.webp"
+      },
+      {
+        "name": "Prime Tiles",
+        "logo": "/images/clients/prime-tiles.webp"
+      },
+      {
+        "name": "Khems Cleaning",
+        "logo": "/images/clients/khems-cleaning.webp"
+      }
     ]
   },
   {
@@ -37,7 +52,7 @@
     "category": "AI & Data",
     "description": "Build agentic commerce systems with AI shopping agents, conversational commerce, and smart recommendations. Specialized for Nepal market with eSewa and Khalti integration.",
     "cta": "Explore AI Commerce",
-    "url": "/services/ai-ecommerce/",
+    "url": "/solutions/ai-ecommerce/",
     "icon": "cart",
     "mockup": "/assets/images/service-ai.webp",
     "clients": []
@@ -49,13 +64,22 @@
     "category": "AI & Data",
     "description": "Data pipelines, warehouses, and analytics infrastructure built for AI workloads. Get your data ready for machine learning without months of cleanup.",
     "cta": "Explore Data Systems",
-    "url": "/services/data-systems/",
+    "url": "/solutions/data-systems/",
     "icon": "data",
     "mockup": "/assets/images/data-systems-hero.webp",
     "clients": [
-      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" }
+      {
+        "name": "Rapid Investment",
+        "logo": "/images/clients/rapid-investment.svg"
+      },
+      {
+        "name": "Mach24 Orbital",
+        "logo": "/images/clients/mach24orbital.webp"
+      },
+      {
+        "name": "CMS Group",
+        "logo": "/images/clients/cms-group.webp"
+      }
     ]
   },
   {
@@ -65,13 +89,22 @@
     "category": "Development",
     "description": "Enterprise applications tailored to your workflows. We build internal tools and business systems that teams actually want to use.",
     "cta": "Explore Custom Dev",
-    "url": "/services/custom-software/",
+    "url": "/solutions/custom-software/",
     "icon": "code",
     "mockup": "/assets/images/custom-software-hero.webp",
     "clients": [
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" },
-      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
-      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" }
+      {
+        "name": "CMS Group",
+        "logo": "/images/clients/cms-group.webp"
+      },
+      {
+        "name": "Khushbu Nirman Sewa",
+        "logo": "/images/clients/khushbu-nirman-sewa.webp"
+      },
+      {
+        "name": "CoreCloud365",
+        "logo": "/images/clients/corecloud365.svg"
+      }
     ]
   },
   {
@@ -81,12 +114,18 @@
     "category": "Development",
     "description": "Multi-tenant platforms with subscription billing, user management, and scalable architecture. Launch your SaaS product in months, not years.",
     "cta": "Explore SaaS Dev",
-    "url": "/services/saas-development/",
+    "url": "/solutions/saas-development/",
     "icon": "cloud",
     "mockup": "/assets/images/saas-development-hero.webp",
     "clients": [
-      { "name": "CoreCloud365", "logo": "/images/clients/corecloud365.svg" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" }
+      {
+        "name": "CoreCloud365",
+        "logo": "/images/clients/corecloud365.svg"
+      },
+      {
+        "name": "Mach24 Orbital",
+        "logo": "/images/clients/mach24orbital.webp"
+      }
     ]
   },
   {
@@ -96,13 +135,22 @@
     "category": "Development",
     "description": "High-performance websites and web apps optimized for speed and conversion. Modern frameworks, responsive design, built for SEO from day one.",
     "cta": "Explore Web Dev",
-    "url": "/services/web-development/",
+    "url": "/solutions/web-development/",
     "icon": "globe",
     "mockup": "/assets/images/web-development-hero.webp",
     "clients": [
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
-      { "name": "Khushbu Nirman Sewa", "logo": "/images/clients/khushbu-nirman-sewa.webp" },
-      { "name": "Khems Cleaning", "logo": "/images/clients/khems-cleaning.webp" }
+      {
+        "name": "Prime Tiles",
+        "logo": "/images/clients/prime-tiles.webp"
+      },
+      {
+        "name": "Khushbu Nirman Sewa",
+        "logo": "/images/clients/khushbu-nirman-sewa.webp"
+      },
+      {
+        "name": "Khems Cleaning",
+        "logo": "/images/clients/khems-cleaning.webp"
+      }
     ]
   },
   {
@@ -112,12 +160,18 @@
     "category": "Development",
     "description": "Native and cross-platform mobile apps for iOS and Android. From consumer apps to enterprise mobility, with seamless backend integration.",
     "cta": "Explore App Dev",
-    "url": "/services/app-development/",
+    "url": "/solutions/app-development/",
     "icon": "mobile",
     "mockup": "/assets/images/service-mobile.webp",
     "clients": [
-      { "name": "Admizz", "logo": "/images/clients/admizz.webp" },
-      { "name": "Rapid Investment", "logo": "/images/clients/rapid-investment.svg" }
+      {
+        "name": "Admizz",
+        "logo": "/images/clients/admizz.webp"
+      },
+      {
+        "name": "Rapid Investment",
+        "logo": "/images/clients/rapid-investment.svg"
+      }
     ]
   },
   {
@@ -127,13 +181,70 @@
     "category": "Marketing",
     "description": "Get found by Google and AI assistants like ChatGPT and Perplexity. We optimize content for traditional search and AI citation.",
     "cta": "Explore AEO & SEO",
-    "url": "/services/aeo-seo/",
+    "url": "/solutions/aeo-seo/",
     "icon": "search",
     "mockup": "/assets/images/aeo-seo-hero.webp",
     "clients": [
-      { "name": "Prime Tiles", "logo": "/images/clients/prime-tiles.webp" },
-      { "name": "Mach24 Orbital", "logo": "/images/clients/mach24orbital.webp" },
-      { "name": "CMS Group", "logo": "/images/clients/cms-group.webp" }
+      {
+        "name": "Prime Tiles",
+        "logo": "/images/clients/prime-tiles.webp"
+      },
+      {
+        "name": "Mach24 Orbital",
+        "logo": "/images/clients/mach24orbital.webp"
+      },
+      {
+        "name": "CMS Group",
+        "logo": "/images/clients/cms-group.webp"
+      }
     ]
+  },
+  {
+    "id": "voice-agent",
+    "title": "Voice Agent",
+    "tagline": "Nobody has ever enjoyed pressing 1 for sales.",
+    "category": "AI & Data",
+    "description": "AI voice agents that answer the phone, understand natural speech, and finish the call — booking appointments, answering questions, and routing what needs a person.",
+    "cta": "Explore Voice Agents",
+    "url": "/solutions/voice-agent/",
+    "icon": "voice",
+    "clients": [],
+    "skipLocationPages": true
+  },
+  {
+    "id": "generative-ui",
+    "title": "Generative UI",
+    "tagline": "Stop making users learn your dashboard.",
+    "category": "AI & Data",
+    "description": "Interfaces assembled at runtime from your own components, so the answer arrives as a working control rather than a paragraph describing one.",
+    "cta": "Explore Generative UI",
+    "url": "/solutions/generative-ui/",
+    "icon": "ui",
+    "clients": [],
+    "skipLocationPages": true
+  },
+  {
+    "id": "custom-agent",
+    "title": "Custom Agent",
+    "tagline": "A general assistant knows everything except your business.",
+    "category": "AI & Data",
+    "description": "Agents built for one workflow in one business — your systems, your rules, bounded so that what it may do is a decision you make.",
+    "cta": "Explore Custom Agents",
+    "url": "/solutions/custom-agent/",
+    "icon": "agent",
+    "clients": [],
+    "skipLocationPages": true
+  },
+  {
+    "id": "software-outsourcing",
+    "title": "Software Outsourcing",
+    "tagline": "Engineering capacity for companies that build for other people.",
+    "category": "Development",
+    "description": "A Kathmandu-based delivery partner for agencies, larger software companies and product teams: dedicated teams, fixed-scope projects and white-label builds.",
+    "cta": "Explore Outsourcing",
+    "url": "/solutions/software-outsourcing/",
+    "icon": "code",
+    "clients": [],
+    "skipLocationPages": true
   }
 ]

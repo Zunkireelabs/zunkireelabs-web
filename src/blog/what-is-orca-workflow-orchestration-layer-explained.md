@@ -90,6 +90,7 @@ Orchestration is the coordination layer between the tools a business already run
 
 ## Related Insights
 
+- [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
 - [AI Orchestration vs Automation vs Agents: What Is the Difference?](/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/)

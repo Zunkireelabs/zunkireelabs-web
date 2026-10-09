@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Empowering Businesses Through GaaS: Real Stories from Our Clients"
+title: "GaaS in Practice: Real Stories from Our Clients"
 description: "Discover how Zunkiree Labs’ GaaS (Genuine as a Service) solutions are transforming businesses."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/8439695/pexels-photo-8439695.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI-Coding-Agenten 2026: Wie Entwickler heute wirklich arbeiten"
+title: "KI-Coding-Agenten 2026: Wie Entwickler wirklich arbeiten"
 description: "Was zwei Entwicklerumfragen über KI-Coding-Agenten 2026 zeigen: wie Entwickler Werkzeuge kombinieren, wo das Vertrauen fehlt und was das für Teams heisst."
 date: "2026-10-05"
 featuredImage: "/assets/images/blog/ki-coding-agenten-2026-wie-entwickler-heute-wirklich-arbeiten.svg"

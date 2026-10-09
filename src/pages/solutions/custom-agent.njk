@@ -1,0 +1,722 @@
+---
+layout: base.njk
+title: "Custom AI Agent Development | Zunkiree Labs" # SEOAI:TITLE
+description: "Custom AI agents built for one workflow in your business, or started from an agent we already built: your rules, bounded authority, a full audit trail."
+permalink: /solutions/custom-agent/
+hideChrome: true
+bodyClass: "v2-inter"
+faqs:
+  - question: "Do you build custom agents, or offer ready-made ones?"
+    answer: "Both. For a workflow specific to your business, we build a custom agent around it: your systems, your rules and your authority limits. For common jobs such as phone booking, selling through chat, or scheduling, we can start from an agent we have already built, such as our voice booking agent, Stella or Zennly, and adapt it to your rules instead of building from scratch. Tell us about the work and we will say which route fits, or that an agent is the wrong tool."
+  - question: "How is a custom agent different from using ChatGPT with our documents?"
+    answer: "A general assistant answers questions; an agent completes work. The difference that matters in practice is authority and integration — a custom agent holds credentials for your systems, takes actions in them under rules you set, runs on a schedule rather than when someone remembers, and logs what it did. Uploading documents to a chat window gives you none of that."
+  - question: "What stops it doing something expensive or wrong?"
+    answer: "Explicit bounds rather than good intentions. Each agent gets a fixed set of tools, limits on what those tools may do, and approval gates on the steps you nominate. Anything outside that set is not refused by the model — it is simply not available to it, which is a stronger guarantee."
+  - question: "Which workflow should we start with?"
+    answer: "One that is repetitive, has a clear definition of done, and where somebody can tell quickly whether the output is right. Those three properties matter more than how impressive the workflow sounds, because they are what let us measure the agent against reality rather than against a demo."
+  - question: "What happens when it gets something wrong?"
+    answer: "It should be visible and recoverable, which is a design requirement rather than an afterthought. Actions are logged and reversible where the underlying system allows it, low-confidence cases route to a person before acting, and we track the escalation rate as a headline metric — an agent whose escalation rate is falling while accuracy holds is working."
+  - question: "Do we need our data cleaned up first?"
+    answer: "Usually less than people assume. Agents cope with messy source documents better than traditional automation, because reading unstructured input is the thing they are good at. What does need to be in order is the destination — the system being written to — and the rules the work is checked against."
+  - question: "Who owns the agent and can we run it ourselves?"
+    answer: "You own the code, the prompts, the configuration and the data. It deploys into your infrastructure, and the handover includes documentation and credentials. Models are called through providers, so switching provider later is a configuration change rather than a rebuild."
+---
+
+{# Standalone page. Concept: an agent control room (run ticket, authority board, run trace, use-case rail, versus selector, scoping checklist). All run/log content is illustrative and labelled as such. FAQ text lives in frontmatter for the schema and is rendered from servicesDetails.json: keep in sync. HONESTY: no statistics without a named source. #}
+
+{% include "partials/navbar-v2.njk" %}
+{% set sd = servicesDetails['custom-agent'] %}
+
+<script>document.documentElement.classList.add('js-reveal-hidden');</script>
+<style>
+  .js-reveal-hidden [data-reveal]:not(.revealed),
+  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * { opacity: 0; }
+  .ca-glow { background: radial-gradient(ellipse 60% 55% at 50% 0%, rgba(118,185,0,0.13) 0%, transparent 70%), radial-gradient(ellipse 40% 45% at 6% 30%, rgba(87,119,130,0.12) 0%, transparent 70%); }
+  @keyframes ca-in { 0%, 6% { opacity: 0; transform: translateY(10px); } 14%, 86% { opacity: 1; transform: none; } 95%, 100% { opacity: 0; transform: translateY(-4px); } }
+  .ca-row { opacity: 0; animation: ca-in 10s ease-out infinite both; animation-delay: var(--d, 0s); }
+  @keyframes ca-float { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-9px) rotate(var(--r, 0deg)); } }
+  .ca-float { animation: ca-float 7s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  @keyframes ca-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .ca-cursor { animation: ca-blink 1s steps(1) infinite; }
+  @keyframes tabfill { from { width: 0; } to { width: 100%; } }
+  .tabfill { animation: tabfill 4s linear forwards; }
+  @keyframes ca-pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .ca-pop { animation: ca-pop .35s ease-out both; }
+  .ca-rail { scrollbar-width: none; overscroll-behavior-x: contain; scroll-snap-type: x proximity; touch-action: pan-x pan-y; } .ca-rail::-webkit-scrollbar { display: none; }
+  @media (prefers-reduced-motion: reduce) { .ca-row, .ca-float, .ca-cursor, .tabfill, .ca-pop { animation: none !important; opacity: 1; } .tabfill { width: 100%; } }
+</style>
+
+<div class="relative bg-white overflow-x-clip">
+
+{# ============ HERO ============ #}
+<section class="ca-glow relative overflow-hidden px-4 pt-32 pb-16 sm:px-6 sm:pt-36 sm:pb-24 lg:px-8 lg:pt-40" aria-labelledby="ca-hero-heading">
+  <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
+    <div data-reveal-stagger>
+      <nav class="mb-6 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" aria-label="Breadcrumb"><a href="/" class="hover:text-[#5a9100]">Home</a> / <a href="/solutions/" class="hover:text-[#5a9100]">Solutions</a> / <span class="text-[#5a9100]">Custom Agent</span></nav>
+      <p class="mb-3 inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Custom AI agent development</p>
+      <h1 id="ca-hero-heading" class="text-[38px] font-medium leading-[1.08] tracking-tight text-[#111827] sm:text-[52px] lg:text-[58px]">A general assistant knows everything except your business.</h1>
+      <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-[#6B7280]">Custom AI agents are built for one workflow in one business: your systems, your rules, your definition of done. Scoped narrowly enough to be trusted with real work, and bounded so that what it may do is a decision you make, not a hope.</p>
+      <p class="mt-4 max-w-xl text-[16px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">Built around your workflow, or started from an agent we have already built</strong> and adapted to your rules. <a href="#paths" class="text-[#5a9100] underline underline-offset-4">See the two ways</a>.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="#authority" class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="agent-hero-board">Set its authority
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></a>
+        <a href="/contact/" class="inline-flex items-center justify-center rounded-md border border-navy-200 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-navy-900 transition-colors hover:border-navy-300 hover:bg-navy-50" data-track="cta" data-cta-id="agent-hero-contact">Scope a workflow</a>
+      </div>
+      <p class="mt-6 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">One workflow &middot; fixed tools &middot; an explicit edge</p>
+    </div>
+
+    {# run ticket #}
+    <div class="relative mx-auto w-full max-w-[34rem] pb-20 pl-2 pt-6 sm:pl-6" data-reveal>
+      <div class="pointer-events-none absolute -inset-10 -z-10" aria-hidden="true" style="background: radial-gradient(ellipse 55% 45% at 70% 30%, rgba(118,185,0,.20) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 15% 85%, rgba(87,119,130,.15) 0%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 35%, transparent 100%); mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 35%, transparent 100%);"></div>
+      <div class="overflow-hidden rounded-[24px] border border-navy-100 bg-white" style="box-shadow: 0 50px 80px -40px rgba(15,23,42,.4);">
+        <div class="flex items-center justify-between gap-3 bg-navy-950 px-5 py-3.5 text-white">
+          <div class="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-wider"><span class="h-2 w-2 animate-pulse rounded-full bg-[#9bd600]"></span>Run #2041 &middot; Supplier invoices</div>
+          <span class="rounded-full bg-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">Scheduled</span>
+        </div>
+        <ol class="divide-y divide-navy-100">
+          <li class="ca-row flex items-start gap-3.5 px-5 py-3.5" style="--d:0s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Trigger</p><p class="text-[13px] text-[#6B7280]">Schedule fired. Nobody had to remember.</p></div><span class="font-mono text-[10px] text-[#9CA3AF]">09:00:00</span></li>
+          <li class="ca-row flex items-start gap-3.5 px-5 py-3.5" style="--d:.7s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Read</p><p class="text-[13px] text-[#6B7280]">Invoices pulled from the shared inbox.</p></div><span class="font-mono text-[10px] text-[#9CA3AF]">09:00:02</span></li>
+          <li class="ca-row flex items-start gap-3.5 px-5 py-3.5" style="--d:1.4s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Check against your rules</p><p class="text-[13px] text-[#6B7280]">Validated against your business rules, not the model&rsquo;s judgement.</p></div><span class="font-mono text-[10px] text-[#9CA3AF]">09:00:19</span></li>
+          <li class="ca-row flex items-start gap-3.5 px-5 py-3.5" style="--d:2.1s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#76B900]/15 text-[#5a9100]"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Write back</p><p class="text-[13px] text-[#6B7280]">Confident cases posted to the system of record.</p></div><span class="font-mono text-[10px] text-[#9CA3AF]">09:00:31</span></li>
+          <li class="ca-row flex items-start gap-3.5 bg-amber-50/70 px-5 py-3.5" style="--d:2.8s"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-200 text-amber-800"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01"/></svg></span><div class="min-w-0 flex-1"><p class="text-[14px] font-medium text-[#111827]">Needs a person</p><p class="text-[13px] text-[#6B7280]">The uncertain ones are queued, with the reason attached.</p></div><span class="rounded-md bg-[#111827] px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-white">Review</span></li>
+        </ol>
+        <div class="flex items-center justify-between border-t border-navy-100 bg-[#FAFBFC] px-5 py-3 font-mono text-[10px] uppercase tracking-wider text-[#6B7280]"><span>Every action logged against the record it touched</span><span class="text-[#5a9100]">Audit trail</span></div>
+      </div>
+      <div class="ca-float absolute -left-2 -top-12 hidden rounded-xl border border-navy-100 bg-white px-3.5 py-2 shadow-lg sm:block" style="--d:.4s;--r:-2deg" aria-hidden="true"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Tools it was given</p><p class="text-[12.5px] font-medium text-[#111827]">inbox.read &middot; ledger.post</p></div>
+      <div class="ca-float absolute -right-3 -bottom-4 hidden w-48 rounded-2xl border border-navy-100 bg-white p-3 shadow-xl sm:block" style="--d:1.3s;--r:2deg" aria-hidden="true"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Not available to it</p><p class="mt-1 text-[12px] leading-snug text-[#111827]">Everything outside its toolset. It is not refused, it simply does not exist for the agent.</p></div>
+      <p class="mt-6 text-center font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Illustrative run</p>
+    </div>
+  </div>
+</section>
+
+{# ============ ONE JOB ============ #}
+<section class="border-t border-navy-100 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-scope-heading">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+    <div data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>What is a custom agent?</span>
+      <h2 id="ca-scope-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">One job, your rules, and a clear edge where it stops.</h2>
+      <p data-aeo="answer" class="mt-6 max-w-md text-[17px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">A custom agent is built around a specific workflow</strong> rather than sold as a general assistant. It is given the tools that workflow needs and no others, grounded in your own documents and data, and bounded by explicit rules about what it may do alone and what needs a person to approve.</p>
+    </div>
+    <div class="space-y-9" data-reveal>
+      <div>
+        <div class="mb-3 flex items-baseline justify-between gap-4"><p class="font-mono text-[11px] uppercase tracking-wider text-[#6B7280]">A general agent</p><p class="text-[13px] text-[#6B7280]">has to be right about everything</p></div>
+        <div class="h-8 w-full rounded-lg" style="background-image: radial-gradient(circle at 3px 3px, rgba(100,116,139,.45) 2.2px, transparent 0); background-size: 11px 11px;"></div>
+      </div>
+      <div>
+        <div class="mb-3 flex items-baseline justify-between gap-4"><p class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">An agent that only reconciles invoices</p><p class="text-[13px] text-[#111827]">has to be right about invoices</p></div>
+        <div class="h-8 w-[26%] rounded-lg" style="background-image: radial-gradient(circle at 3px 3px, #76B900 2.4px, transparent 0); background-size: 11px 11px; box-shadow: 0 0 0 1px rgba(118,185,0,.35); background-color: rgba(118,185,0,.08);"></div>
+      </div>
+      <p class="max-w-lg text-[15px] leading-relaxed text-[#6B7280]">The narrow scope is what makes it reliable. We pick one workflow with a measurable outcome, give the agent only the tools that workflow needs, and put the edge where it should stop and ask.</p>
+    </div>
+  </div>
+</section>
+
+{# ============ TWO WAYS ============ #}
+<section id="paths" class="scroll-mt-20 relative overflow-hidden border-t border-navy-100 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-paths-heading" x-data="pathPicker()" style="background: linear-gradient(180deg, #F6FAEC 0%, #FFFFFF 70%);">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 max-w-3xl" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Two ways to get an agent</span>
+      <h2 id="ca-paths-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Built for you, or started from one of ours.</h2>
+      <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-[#374151]">If the workflow is specific to your business, we <strong class="font-medium text-[#111827]">build a custom agent around it</strong>. If the job is a common one, we can <strong class="font-medium text-[#111827]">start from an agent we have already built</strong> and adapt it to your rules, instead of building from scratch.</p>
+    </div>
+
+    {# the two paths side by side #}
+    <div class="grid gap-5 lg:grid-cols-2" data-reveal-stagger>
+      <div class="relative flex flex-col rounded-[28px] border border-navy-100 bg-white p-7 sm:p-9">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Path 1</span>
+        <h3 class="mt-2 text-[26px] font-medium tracking-tight text-[#111827]">A custom agent, built for your workflow.</h3>
+        <p class="mt-3 text-[15.5px] leading-relaxed text-[#6B7280]">Best when the work is specific to you: your documents, your systems, your rules.</p>
+        <ol class="mt-6 flex-1 space-y-0">
+          <li class="flex items-start gap-4 border-t border-navy-100 py-3.5"><span class="font-mono text-[12px] text-[#5a9100]">01</span><p class="text-[15px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">We scope one workflow</strong> and tell you honestly whether an agent is the right tool.</p></li>
+          <li class="flex items-start gap-4 border-t border-navy-100 py-3.5"><span class="font-mono text-[12px] text-[#5a9100]">02</span><p class="text-[15px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">We give it only the tools it needs</strong> and write your rules and approval gates into the system around it.</p></li>
+          <li class="flex items-start gap-4 border-t border-navy-100 py-3.5"><span class="font-mono text-[12px] text-[#5a9100]">03</span><p class="text-[15px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">You see the first version</strong> do your real cases before you commit to the rest.</p></li>
+        </ol>
+        <p class="mt-5 rounded-xl bg-[#76B900]/10 px-4 py-3 text-[13.5px] leading-snug text-[#3d6600]"><span class="font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Fits</span> &nbsp;Invoice intake, reconciliation, research briefs, internal workflows, inbox triage, compliance checks.</p>
+      </div>
+      <div class="relative flex flex-col overflow-hidden rounded-[28px] bg-navy-950 p-7 sm:p-9" style="box-shadow: 0 40px 60px -30px rgba(15,23,42,.5);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 0%, rgba(118,185,0,.28) 0%, transparent 60%);"></div>
+        <div class="relative flex flex-1 flex-col">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Path 2</span>
+          <h3 class="mt-2 text-[26px] font-medium tracking-tight text-white">An agent we have already built, adapted to you.</h3>
+          <p class="mt-3 text-[15.5px] leading-relaxed text-white/65">Best when the job is a common one and you would rather not start from a blank page.</p>
+          <ol class="mt-6 flex-1 space-y-0">
+            <li class="flex items-start gap-4 border-t border-white/10 py-3.5"><span class="font-mono text-[12px] text-[#9bd600]">01</span><p class="text-[15px] leading-relaxed text-white/80"><strong class="font-medium text-white">We start from an agent that already exists,</strong> with the hard parts built and tested.</p></li>
+            <li class="flex items-start gap-4 border-t border-white/10 py-3.5"><span class="font-mono text-[12px] text-[#9bd600]">02</span><p class="text-[15px] leading-relaxed text-white/80"><strong class="font-medium text-white">We connect it to your systems</strong> and set your rules, hours and escalation path.</p></li>
+            <li class="flex items-start gap-4 border-t border-white/10 py-3.5"><span class="font-mono text-[12px] text-[#9bd600]">03</span><p class="text-[15px] leading-relaxed text-white/80"><strong class="font-medium text-white">Anything specific to you is added on top,</strong> so you are not paying to rebuild what already works.</p></li>
+          </ol>
+          <p class="mt-5 rounded-xl bg-white/10 px-4 py-3 text-[13.5px] leading-snug text-white/80"><span class="font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">Fits</span> &nbsp;Phone booking, selling through chat, scheduling across providers, patient communication.</p>
+        </div>
+      </div>
+    </div>
+
+    {# picker #}
+    <div class="mt-16 grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14" data-reveal>
+      <div>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Which way fits you?</p>
+        <h3 class="mt-2 text-[26px] font-medium leading-snug tracking-tight text-[#111827]">What does the work look like?</h3>
+        <div class="mt-6 space-y-2.5" role="tablist" aria-label="Describe your work">
+          <template x-for="(o, k) in opts" :key="o.t"><button type="button" role="tab" :aria-selected="i === k" @click="i = k" class="group flex w-full items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all" :class="i === k ? 'border-[#76B900] bg-[#76B900]/10 shadow-sm' : 'border-navy-100 bg-white hover:border-[#76B900]/50'"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 transition-colors" :class="i === k ? 'border-[#76B900] bg-[#76B900]' : 'border-navy-200'"><i x-show="i === k" class="h-2 w-2 rounded-full bg-white"></i></span><span class="text-[16px] leading-snug text-[#111827]" x-text="o.t"></span></button></template>
+        </div>
+      </div>
+      <div class="relative overflow-hidden rounded-[26px] bg-[#0b1115] p-7 sm:p-9" style="box-shadow: 0 40px 70px -35px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(118,185,0,.22) 0%, transparent 60%);"></div>
+        <div class="relative min-h-[280px]">
+          <p class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Our suggestion</p>
+          <h4 class="ca-pop mt-2 text-[26px] font-medium leading-snug tracking-tight text-white" :key="i" x-text="cur.rec"></h4>
+          <p class="mt-3 text-[15.5px] leading-relaxed text-white/65" x-text="cur.why"></p>
+          <ul class="mt-5 space-y-2">
+            <template x-for="s in cur.next" :key="s"><li class="flex items-start gap-3 text-[14.5px] leading-snug text-white/85"><svg class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="#9bd600" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span x-text="s"></span></li></template>
+          </ul>
+          <a href="/contact/" class="mt-7 inline-flex items-center gap-2 rounded-md bg-[#76B900] px-5 py-2.5 font-mono text-[12px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="agent-paths-contact">Tell us about your work</a>
+        </div>
+      </div>
+    </div>
+
+    {# our agents #}
+    <div class="mt-16" data-reveal>
+      <div class="mb-6 flex flex-wrap items-end justify-between gap-4"><div><p class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Agents we have already built</p><h3 class="mt-2 text-[24px] font-medium tracking-tight text-[#111827]">Where Path 2 starts from.</h3></div><p class="max-w-md text-[14px] leading-relaxed text-[#6B7280]">These are our own descriptions. Each links to the page where we explain it in more detail.</p></div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="/solutions/voice-agent/" class="group flex flex-col rounded-3xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg">
+          <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 text-[#5a9100] ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></span>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Voice booking agent</h3>
+          <p class="mt-2 flex-1 text-[14.5px] leading-relaxed text-[#6B7280]">Answers the phone, checks live availability and books it.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Solution page <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/resources/stella-case-study/" class="group flex flex-col rounded-3xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg">
+          <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 text-[#5a9100] ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></span>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Stella</h3>
+          <p class="mt-2 flex-1 text-[14.5px] leading-relaxed text-[#6B7280]">An autonomous commerce agent for selling through chat, with eSewa, Khalti and Fonepay support.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Case study <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/resources/zenly-case-study/" class="group flex flex-col rounded-3xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg">
+          <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 text-[#5a9100] ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg></span>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Zennly</h3>
+          <p class="mt-2 flex-1 text-[14.5px] leading-relaxed text-[#6B7280]">An AI booking engine that resolves scheduling conflicts across providers and resources.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Case study <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/resources/dental-ai-case-study/" class="group flex flex-col rounded-3xl border border-navy-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#76B900]/50 hover:shadow-lg">
+          <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#76B900]/10 text-[#5a9100] ring-1 ring-inset ring-[#76B900]/20"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></span>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#111827]">Dental AI Assistant</h3>
+          <p class="mt-2 flex-1 text-[14.5px] leading-relaxed text-[#6B7280]">A 24/7 patient communication and scheduling partner for dental practices. In private beta.</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Case study · private beta <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============ ASSISTANT VS AGENT ============ #}
+<section class="bg-[#F8FAFC] border-y border-navy-100 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-diff-heading">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-12 max-w-3xl" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>The difference</span>
+      <h2 id="ca-diff-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">An assistant answers. An agent finishes.</h2>
+      <p class="mt-3 font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">Fifty invoices arrive</p>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-2" data-reveal-stagger>
+      <div class="rounded-[28px] border border-navy-100 bg-white p-7 sm:p-9">
+        <p class="mb-6 font-mono text-[11px] uppercase tracking-wider text-[#6B7280]">Assistant with your documents</p>
+        <div class="space-y-3">
+          <div class="ml-auto w-fit max-w-[88%] rounded-2xl rounded-br-sm bg-[#111827] px-4 py-2.5 text-[14.5px] text-white">What does this invoice say?</div>
+          <div class="w-fit max-w-[88%] rounded-2xl rounded-bl-sm bg-slate-100 px-4 py-2.5 text-[14.5px] text-[#111827]">Supplier, date and total, all correct.</div>
+          <div class="w-fit max-w-[88%] rounded-2xl rounded-bl-sm bg-slate-100 px-4 py-2.5 text-[14.5px] text-[#6B7280]">Somebody uploads one and asks what it says. They type the values into the system themselves.</div>
+          <div class="ml-auto w-fit max-w-[88%] rounded-2xl rounded-br-sm bg-[#111827] px-4 py-2.5 text-[14.5px] text-white">Next one&hellip;</div>
+        </div>
+        <p class="mt-6 border-t border-navy-100 pt-5 text-[14px] leading-relaxed text-[#6B7280]">Forty-nine to go, and nothing is logged. Genuinely useful, and still a person doing the work one item at a time. Nothing ran unless somebody remembered to run it.</p>
+      </div>
+      <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-7 sm:p-9" style="box-shadow: 0 40px 60px -30px rgba(15,23,42,.5);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 60% at 100% 0%, rgba(118,185,0,.28) 0%, transparent 60%);"></div>
+        <div class="relative">
+          <p class="mb-6 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]">Custom agent</p>
+          <ol class="space-y-2.5 font-mono text-[13px] leading-relaxed">
+            <li class="flex gap-3"><span class="text-white/35">09:00</span><span class="text-white/85">runs on a schedule, not when someone remembers</span></li>
+            <li class="flex gap-3"><span class="text-white/35">09:00</span><span class="text-white/85">each one read, classified and checked against your rules</span></li>
+            <li class="flex gap-3"><span class="text-white/35">09:01</span><span class="text-[#9bd600]">confident cases written to the system of record</span></li>
+            <li class="flex gap-3"><span class="text-white/35">09:01</span><span class="text-amber-300">uncertain ones queued for a person, with the reason</span></li>
+            <li class="flex gap-3"><span class="text-white/35">09:01</span><span class="text-white/85">every action logged against the record it touched</span></li>
+          </ol>
+          <p class="mt-6 border-t border-white/10 pt-5 text-[14px] leading-relaxed text-white/60">The same model underneath. The difference is authority, integration and an audit trail, none of which a chat window has.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============ RUN TRACE ============ #}
+<section id="run" class="scroll-mt-20 relative overflow-hidden bg-[#0b1115] px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28" aria-labelledby="ca-run-heading" x-data="runTrace()" x-init="init()" @mouseenter="hold()" @mouseleave="release()">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 55% 60% at 0% 0%, rgba(118,185,0,0.16) 0%, transparent 60%), radial-gradient(ellipse 45% 55% at 100% 100%, rgba(87,119,130,0.22) 0%, transparent 60%);"></div>
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mb-12 max-w-3xl" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>How an agent run works</span>
+      <h2 id="ca-run-heading" class="text-balance text-[34px] font-medium leading-[1.1] tracking-tight text-white sm:text-[46px]">Reliability comes from narrowness.</h2>
+      <p class="mt-5 max-w-xl text-[17px] leading-relaxed text-white/60">One workflow, a fixed set of tools, and an explicit edge where it stops and asks. Follow a single run, step by step.</p>
+    </div>
+    <div data-reveal>
+      <div class="relative mb-10 hidden md:block">
+        <span class="absolute left-0 right-0 top-[19px] h-px bg-white/15" aria-hidden="true"></span>
+        <span class="absolute left-0 top-[19px] h-px bg-[#9bd600] transition-all duration-500" :style="'width:' + (i / (steps.length - 1) * 100) + '%'" aria-hidden="true"></span>
+        <div class="relative grid grid-cols-6">
+          <template x-for="(s, k) in steps" :key="s.t"><button type="button" @click="pick(k)" class="group flex flex-col items-start gap-3 text-left"><span class="flex h-10 w-10 items-center justify-center rounded-full border font-mono text-[12px] transition-all duration-300" :class="k < i ? 'border-[#76B900] bg-[#76B900] text-white' : (k === i ? 'border-[#9bd600] bg-[#0b1115] text-[#9bd600] shadow-[0_0_0_6px_rgba(155,214,0,.15)]' : 'border-white/20 bg-[#0b1115] text-white/40 group-hover:border-white/50')" x-text="k + 1"></span><span class="text-[13.5px] transition-colors" :class="k === i ? 'font-medium text-white' : 'text-white/45 group-hover:text-white/75'" x-text="s.t"></span></button></template>
+        </div>
+      </div>
+      <div class="mb-6 flex gap-1.5 overflow-x-auto md:hidden"><template x-for="(s, k) in steps" :key="s.t"><button type="button" @click="pick(k)" class="shrink-0 rounded-full border px-3.5 py-1.5 text-[12px]" :class="k === i ? 'border-[#9bd600] bg-[#76B900]/20 text-white' : 'border-white/15 text-white/50'" x-text="(k + 1) + '. ' + s.t"></button></template></div>
+      <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="min-h-[170px]"><template x-for="(s, k) in steps" :key="'d' + k"><div x-show="k === i" x-transition.opacity.duration.250ms style="display:none"><p class="font-mono text-[11px] uppercase tracking-wider text-[#9bd600]" x-text="'Step ' + (k + 1) + ' of 6'"></p><h3 class="mt-2 text-[28px] font-medium tracking-tight text-white" x-text="s.t"></h3><p class="mt-3 max-w-md text-[16px] leading-relaxed text-white/60" x-text="s.d"></p></div></template></div>
+        <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+          <div class="flex items-center justify-between border-b border-white/10 px-5 py-3"><span class="font-mono text-[10px] uppercase tracking-wider text-white/45">Run #2041 &middot; trace</span><span class="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider" :class="counting ? 'text-[#9bd600]' : 'text-white/35'"><i class="h-1.5 w-1.5 rounded-full" :class="counting ? 'animate-pulse bg-[#76B900]' : 'bg-white/25'"></i><span x-text="counting ? 'Replaying' : 'Paused'"></span></span></div>
+          <div class="h-[210px] space-y-1.5 overflow-hidden px-5 py-4 font-mono text-[12px] leading-relaxed">
+            <template x-for="(l, k) in lines()" :key="i + '-' + k"><p class="ca-pop"><span class="mr-2 text-white/30" x-text="l[0]"></span><span class="mr-2 inline-block w-14 text-[10px] uppercase tracking-wider" :class="l[1] === 'ok' ? 'text-emerald-300' : (l[1] === 'warn' ? 'text-amber-300' : 'text-sky-300')" x-text="l[1]"></span><span class="text-white/80" x-text="l[2]"></span></p></template>
+            <p class="text-white/40"><span class="ca-cursor">_</span></p>
+          </div>
+        </div>
+      </div>
+      <p class="mt-5 font-mono text-[10px] uppercase tracking-wider text-white/35">Illustrative trace. Times, counts and tool names are examples, not a real run.</p>
+    </div>
+  </div>
+</section>
+
+{# ============ AUTHORITY BOARD ============ #}
+<section id="authority" class="scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-auth-heading" x-data="authBoard()">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-10 grid gap-6 lg:grid-cols-2 lg:items-end" data-reveal>
+      <div>
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Bounded authority, not good intentions</span>
+        <h2 id="ca-auth-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">You decide what it does alone.</h2>
+      </div>
+      <p class="max-w-xl text-[16px] leading-relaxed text-[#6B7280] lg:pb-2">Each agent is given a fixed set of tools and nothing else. Limits and approval gates are enforced in the surrounding system, not requested in a prompt. Click any action to move it between lanes.</p>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3" data-reveal>
+      <template x-for="lane in lanes" :key="lane.id">
+        <div class="flex min-h-[270px] flex-col rounded-3xl border p-5 transition-colors" :class="lane.box">
+          <div class="mb-4 flex items-center justify-between"><p class="font-mono text-[11px] uppercase tracking-wider" :class="lane.text" x-text="lane.title"></p><span class="rounded-full px-2.5 py-0.5 font-mono text-[10px]" :class="lane.pill" x-text="items.filter(function (a) { return a.lane === lane.id; }).length"></span></div>
+          <p class="mb-4 text-[13px] leading-snug text-[#6B7280]" x-text="lane.sub"></p>
+          <div class="flex flex-1 flex-col gap-2">
+            <template x-for="a in items.filter(function (x) { return x.lane === lane.id; })" :key="a.id"><button type="button" @click="move(a)" class="group flex items-center justify-between gap-3 rounded-xl border border-navy-100 bg-white px-3.5 py-2.5 text-left text-[13.5px] text-[#111827] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#76B900]/60 hover:shadow-md"><span x-text="a.label"></span><span class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF] transition-colors group-hover:text-[#5a9100]">move &rarr;</span></button></template>
+            <p x-show="items.filter(function (x) { return x.lane === lane.id; }).length === 0" class="rounded-xl border border-dashed border-navy-200 px-3.5 py-3 text-[12.5px] text-[#9CA3AF]">Nothing here. Click an action in another lane.</p>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="mt-4 overflow-hidden rounded-2xl bg-[#0b1115]" data-reveal>
+      <div class="flex items-center justify-between border-b border-white/10 px-5 py-3"><span class="font-mono text-[10px] uppercase tracking-wider text-white/45">What the surrounding system enforces</span><span class="font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">Supplier invoices example</span></div>
+      <div class="min-h-[110px] space-y-1.5 px-5 py-4 font-mono text-[12.5px] leading-relaxed">
+        <p x-show="log.length === 0" class="text-white/35">Move an action to see the rule it creates.</p>
+        <template x-for="(l, k) in log" :key="l.n"><p class="ca-pop"><span class="mr-2 inline-block w-16 text-[10px] uppercase tracking-wider" :class="l.cls" x-text="l.tag"></span><span class="text-white/80" x-text="l.text"></span></p></template>
+      </div>
+    </div>
+    <p class="mt-4 text-[14px] leading-relaxed text-[#6B7280]" data-reveal>Anything outside the toolset is not refused by the model. It is simply not available to it, which is a far stronger guarantee than instruction-following.</p>
+  </div>
+</section>
+
+{# ============ USE-CASE RAIL ============ #}
+<section class="border-t border-navy-100 bg-[#F8FAFC] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-fit-heading" x-data="{ scrollBy(dir) { var r = this.$refs.rail; r.scrollBy({ left: dir * Math.min(420, r.clientWidth * 0.8), behavior: 'smooth' }); } }">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-10 flex flex-wrap items-end justify-between gap-6" data-reveal>
+      <div class="max-w-3xl">
+        <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Where custom agents pay off</span>
+        <h2 id="ca-fit-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Repetitive, a clear definition of done, quickly checkable.</h2>
+        <p class="mt-4 max-w-xl text-[16px] leading-relaxed text-[#6B7280]">Those three properties matter more than how impressive the workflow sounds.</p>
+      </div>
+      <div class="flex gap-2"><button type="button" @click="scrollBy(-1)" class="flex h-11 w-11 items-center justify-center rounded-full border border-navy-200 bg-white text-navy-700 transition-colors hover:border-[#76B900] hover:text-[#5a9100]" aria-label="Previous"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button><button type="button" @click="scrollBy(1)" class="flex h-11 w-11 items-center justify-center rounded-full border border-navy-200 bg-white text-navy-700 transition-colors hover:border-[#76B900] hover:text-[#5a9100]" aria-label="Next"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+    <div x-ref="rail" x-init="$el.addEventListener('wheel', function (e) { if (Math.abs(e.deltaX) > Math.abs(e.deltaY) * 0.4) { e.preventDefault(); e.stopPropagation(); $el.scrollLeft += e.deltaX; } }, { passive: false })" class="ca-rail -mx-4 flex gap-5 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0" data-reveal>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] "><img src="/assets/images/solutions/agent-document-processing.svg" alt="Document intake illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">01</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Document intake</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Invoices, applications, claims and contracts read, classified, checked against your rules and entered into the system of record, with uncertain cases queued rather than guessed.</p></div>
+      </article>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] "><img src="/assets/images/solutions/agent-back-office.svg" alt="Back-office reconciliation illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">02</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Back-office reconciliation</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">The recurring cross-checks that eat a day a week: matching records between systems, chasing mismatches, preparing exceptions for review.</p></div>
+      </article>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] "><img src="/assets/images/solutions/agent-research-agents.svg" alt="Research and monitoring illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">03</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Research and monitoring</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Standing briefs that watch tenders, competitors, regulatory changes or pricing, and report what changed with citations rather than a search dump.</p></div>
+      </article>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] "><img src="/assets/images/solutions/agent-workflow-agents.svg" alt="Internal workflows illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">04</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Internal workflows</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">A multi-step process carried end to end, such as onboarding a client, preparing a quote or assembling a compliance pack, pausing for approval where you nominate.</p></div>
+      </article>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] min-h-[203px]"><div class="space-y-2 px-8 py-9"><div class="flex items-center gap-2.5 rounded-lg bg-white/[0.06] px-3 py-2"><i class="h-2 w-2 rounded-full bg-[#9bd600]"></i><i class="h-1.5 flex-1 rounded-full bg-white/20"></i><i class="h-4 w-12 rounded bg-[#76B900]/60"></i></div><div class="flex items-center gap-2.5 rounded-lg bg-white/[0.06] px-3 py-2"><i class="h-2 w-2 rounded-full bg-sky-300"></i><i class="h-1.5 flex-1 rounded-full bg-white/20"></i><i class="h-4 w-12 rounded bg-sky-300/50"></i></div><div class="flex items-center gap-2.5 rounded-lg bg-white/[0.06] px-3 py-2"><i class="h-2 w-2 rounded-full bg-amber-300"></i><i class="h-1.5 flex-1 rounded-full bg-white/20"></i><i class="h-4 w-12 rounded bg-amber-300/50"></i></div><div class="flex items-center gap-2.5 rounded-lg bg-white/[0.06] px-3 py-2"><i class="h-2 w-2 rounded-full bg-[#9bd600]"></i><i class="h-1.5 flex-1 rounded-full bg-white/20"></i><i class="h-4 w-12 rounded bg-[#76B900]/60"></i></div></div></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">05</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Inbox triage</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">High-volume shared inboxes sorted, routed and drafted against your own precedent, with a person approving anything that goes out.</p></div>
+      </article>
+      <article class="group relative flex w-[300px] shrink-0 snap-start flex-col overflow-hidden rounded-[26px] bg-[#141F24] transition-transform duration-300 hover:-translate-y-1.5 sm:w-[360px]" style="box-shadow: 0 30px 50px -30px rgba(15,23,42,.55);">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(118,185,0,.2) 0%, transparent 60%);"></div>
+        <div class="relative overflow-hidden bg-[#141F24] min-h-[203px]"><div class="space-y-2 px-8 py-9"><div class="flex items-center gap-3 rounded-lg bg-white/[0.06] px-3 py-2.5"><span class="flex h-5 w-5 items-center justify-center rounded border-2 border-[#76B900] bg-[#76B900] text-white"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><i class="h-1.5 flex-1 rounded-full bg-white/20"></i></div><div class="flex items-center gap-3 rounded-lg bg-white/[0.06] px-3 py-2.5"><span class="flex h-5 w-5 items-center justify-center rounded border-2 border-[#76B900] bg-[#76B900] text-white"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><i class="h-1.5 flex-1 rounded-full bg-white/20"></i></div><div class="flex items-center gap-3 rounded-lg bg-white/[0.06] px-3 py-2.5"><span class="flex h-5 w-5 items-center justify-center rounded border-2 border-amber-300 text-amber-300">!</span><i class="h-1.5 flex-1 rounded-full bg-white/20"></i></div><div class="flex items-center gap-3 rounded-lg bg-white/[0.06] px-3 py-2.5"><span class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/25"></span><i class="h-1.5 flex-1 rounded-full bg-white/20"></i></div></div></div>
+        <div class="relative flex flex-1 flex-col p-6"><span class="font-mono text-[11px] text-[#9bd600]">06</span><h3 class="mt-2 text-[21px] font-medium leading-snug tracking-tight text-white">Compliance checks</h3><p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Routine conformance work where the rule is written down and the volume makes human review expensive, with the full audit trail a reviewer will ask for.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{# ============ VERSUS ============ #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="ca-vs-heading" x-data="versus()">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Alternatives</span>
+      <h2 id="ca-vs-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Assistant, RPA, or custom agent?</h2>
+      <p class="mx-auto mt-3 max-w-xl text-[16px] leading-relaxed text-[#6B7280]">Three ways to automate the same workflow, with very different failure modes. Compare the agent against either.</p>
+    </div>
+    <div class="mb-6 flex justify-center" data-reveal><div class="inline-flex rounded-full border border-navy-100 bg-white p-1 shadow-sm" role="tablist"><template x-for="o in options" :key="o.id"><button type="button" role="tab" :aria-selected="side === o.id" @click="side = o.id" class="rounded-full px-5 py-2 text-[14px] transition-colors" :class="side === o.id ? 'bg-[#111827] text-white' : 'text-navy-600'" x-text="o.name"></button></template></div></div>
+    <div class="overflow-hidden rounded-[28px] border border-navy-100 bg-white" data-reveal>
+      <div class="grid grid-cols-[1.1fr_1fr_1fr] border-b border-navy-100 bg-[#FAFBFC] px-5 py-4 sm:px-8"><span></span><span class="font-mono text-[11px] uppercase tracking-wider text-[#6B7280]" x-text="current.name"></span><span class="font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">Custom agent</span></div>
+      <template x-for="(r, k) in rows" :key="r[0]">
+        <div class="grid grid-cols-[1.1fr_1fr_1fr] items-start gap-x-3 border-b border-navy-100 px-5 py-4 last:border-b-0 sm:px-8"><span class="text-[14px] font-medium text-[#111827]" x-text="r[0]"></span><span class="text-[14px] leading-snug text-[#6B7280]" x-text="r[1][side]"></span><span class="rounded-lg bg-[#76B900]/[0.08] px-3 py-1.5 text-[14px] leading-snug text-[#111827]" x-text="r[2]"></span></div>
+      </template>
+    </div>
+    <p class="mx-auto mt-6 max-w-3xl text-[15px] leading-relaxed text-[#6B7280]" data-reveal>Where a process genuinely never varies, scripted automation is cheaper and more predictable, and we will say so. Agents earn their place where the input varies enough to break a script.</p>
+  </div>
+</section>
+
+{# ============ SCOPE CHECKLIST ============ #}
+<section class="relative overflow-hidden bg-navy-950 px-4 py-20 sm:px-6 sm:py-24 lg:px-8" aria-labelledby="ca-scope2-heading" x-data="scopeList()">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 70% at 100% 100%, rgba(118,185,0,.22) 0%, transparent 60%), radial-gradient(ellipse 45% 55% at 0% 0%, rgba(87,119,130,.22) 0%, transparent 60%);"></div>
+  <div class="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+    <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+      <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>Go live</span>
+      <h2 id="ca-scope2-heading" class="text-balance text-[32px] font-medium leading-[1.1] tracking-tight text-white sm:text-[44px]">What we need to scope it.</h2>
+      <p class="mt-5 max-w-md text-[16px] leading-relaxed text-white/60">We will also tell you honestly if an agent is the wrong tool for the workflow you bring. Tick off what you already have.</p>
+      <div class="mt-8 flex items-center gap-5">
+        <div class="relative h-24 w-24"><svg viewBox="0 0 36 36" class="h-24 w-24 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="3"/><circle cx="18" cy="18" r="15.5" fill="none" stroke="#9bd600" stroke-width="3" stroke-linecap="round" stroke-dasharray="97.4" :stroke-dashoffset="97.4 - (97.4 * done / items.length)" style="transition: stroke-dashoffset .5s ease"/></svg><span class="absolute inset-0 flex items-center justify-center text-[22px] font-semibold text-white" x-text="done + '/' + items.length"></span></div>
+        <p class="max-w-[14rem] text-[14px] leading-snug text-white/70" x-text="done === items.length ? 'That is everything. Bring it to a call.' : (done === 0 ? 'Nothing ticked yet. Start with the workflow.' : 'Good start. The rest we can work out together.')"></p>
+      </div>
+      <a href="/contact/" x-show="done === items.length" style="display:none" class="ca-pop mt-6 inline-flex items-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white hover:bg-[#5a9100]" data-track="cta" data-cta-id="agent-scope-ready">Scope a workflow</a>
+    </div>
+    <ul class="border-b border-white/10" data-reveal>
+      <template x-for="(it, k) in items" :key="it.t"><li><button type="button" @click="it.on = !it.on" class="group flex w-full items-start gap-5 border-t border-white/10 py-6 text-left transition-colors hover:bg-white/[0.03]" :aria-pressed="it.on"><span class="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-2 transition-all duration-300" :class="it.on ? 'border-[#76B900] bg-[#76B900]' : 'border-white/25 group-hover:border-white/50'"><svg x-show="it.on" class="h-4 w-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span><span class="block text-[20px] font-medium tracking-tight transition-colors" :class="it.on ? 'text-[#9bd600]' : 'text-white'" x-text="it.t"></span><span class="mt-1.5 block max-w-xl text-[14.5px] leading-relaxed text-white/55" x-text="it.d"></span></span></button></li></template>
+    </ul>
+  </div>
+</section>
+
+
+{# ============ FAQ ============ #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ca-faq-heading">
+  <div class="mx-auto max-w-3xl">
+    <div class="mb-8 text-center" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">FAQ</span>
+      <h2 id="ca-faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">Questions about custom agents</h2>
+    </div>
+    <div class="space-y-3" data-reveal>
+      {% for item in sd.faq %}
+      <details class="group rounded-2xl border border-navy-100 bg-white px-5 py-4 shadow-subtle open:border-[#76B900]/40">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-[16px] font-medium text-[#111827]">{{ item.question }}<span class="shrink-0 text-[#76B900] transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary>
+        <p class="pt-3 text-[15px] leading-relaxed text-[#6B7280]">{{ item.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ============ SOURCES ============ #}
+<section class="px-4 pb-12 pt-4 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="ca-src-heading">
+  <div class="mx-auto max-w-6xl border-t border-navy-100 pt-12 sm:pt-14">
+    <div class="grid gap-9">
+      <div class="flex flex-col">
+        <h2 id="ca-src-heading" class="font-mono text-[11px] font-normal uppercase tracking-wider text-[#5a9100]">Sources and further reading</h2>
+        <p class="mt-4 text-[22px] font-medium leading-snug tracking-tight text-[#111827] sm:text-[26px]">Where the claims on this page come from.</p>
+        <p class="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#6B7280]">Outside references for the claims on this page. Our own descriptions of what we build are our own account, not independent evidence.</p>
+        <p class="mt-6 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Last updated <time datetime="2026-10-09">9 October 2026</time> &middot; Zunkiree Labs, Kathmandu, Nepal</p>
+      </div>
+      <div class="divide-y divide-navy-100">
+        <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">01</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Anthropic</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Building effective agents</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Distinguishes workflows that follow predefined paths from agents that direct their own process, and advises using the simplest approach that works.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">02</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">OWASP Gen AI Security Project</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">LLM06:2025 Excessive Agency</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Recommends limiting the tools an agent can call to the minimum necessary and requiring human approval for high-impact actions, the same principle as bounded authority.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Robotic_process_automation" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">
+          <span class="font-mono text-[13px] text-[#9CA3AF]" aria-hidden="true">03</span>
+          <span class="min-w-0">
+            <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">Wikipedia</span>
+            <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">Robotic process automation</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">Background on scripted automation, compared with an agent in the table above.</span>
+          </span>
+          <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============ RELATED ============ #}
+<section class="px-4 pb-8 sm:px-6 lg:px-8" aria-label="Related">
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
+    <span>Related</span>
+    <a href="/solutions/voice-agent/" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 text-navy-500 hover:border-[#76B900] hover:text-[#5a9100]">Voice Agent</a>
+    <a href="/solutions/generative-ui/" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 text-navy-500 hover:border-[#76B900] hover:text-[#5a9100]">Generative UI</a>
+    <a href="/solutions/ai-development/" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 text-navy-500 hover:border-[#76B900] hover:text-[#5a9100]">AI Development</a>
+    <a href="/resources/admizz-case-study/" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 text-navy-500 hover:border-[#76B900] hover:text-[#5a9100]">Admizz Education</a>
+    <a href="/resources/mach24orbital-case-study/" class="rounded-full border border-navy-100 bg-white px-3.5 py-1.5 text-navy-500 hover:border-[#76B900] hover:text-[#5a9100]">Mach24 Orbital</a>
+  </div>
+</section>
+
+{# ============ CTA ============ #}
+<section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
+      <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"></div>
+      <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">Get Started</span>
+      <h2 class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[36px]">{{ sd.cta.headline }}</h2>
+      <p class="relative z-10 mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/60">{{ sd.cta.description }}</p>
+      <p class="relative z-10 mx-auto mt-3 max-w-xl font-mono text-[11px] uppercase tracking-wider text-white/40">Based in Kathmandu, Nepal &middot; Clients in Nepal and abroad</p>
+      <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="{{ sd.cta.primaryButton.url }}" class="inline-flex w-full items-center justify-center rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100] sm:w-auto" data-track="cta" data-cta-id="agent-cta-primary">{{ sd.cta.primaryButton.text }}</a>
+        <a href="{{ sd.cta.secondaryButton.url }}" class="inline-flex w-full items-center justify-center rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:border-white/40 hover:bg-white/5 sm:w-auto">{{ sd.cta.secondaryButton.text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+{% include "partials/footer-v2.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://zunkireelabs.com/solutions/custom-agent/#service",
+      "name": "Custom AI Agent Development",
+      "serviceType": "Custom AI agent development",
+      "url": "https://zunkireelabs.com/solutions/custom-agent/",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://zunkireelabs.com/#organization",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Kathmandu"
+        },
+        {
+          "@type": "Country",
+          "name": "Nepal"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Switzerland"
+        },
+        {
+          "@type": "Country",
+          "name": "Netherlands"
+        }
+      ],
+      "keywords": "custom AI agent development, build a custom AI agent, AI agents for business, workflow automation agent, AI agent audit trail",
+      "description": "Custom AI agents built for one workflow in your business, or started from an agent we already built: your rules, bounded authority, a full audit trail.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Two ways to get an agent",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom-built agent for one workflow"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Start from an agent we already built, adapted to your rules"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zunkireelabs.com/solutions/custom-agent/#webpage",
+      "url": "https://zunkireelabs.com/solutions/custom-agent/",
+      "name": "Custom AI Agent Development | Zunkiree Labs",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Zunkiree Labs",
+        "url": "https://zunkireelabs.com/"
+      },
+      "about": {
+        "@id": "https://zunkireelabs.com/solutions/custom-agent/#service"
+      },
+      "mainEntity": {
+        "@id": "https://zunkireelabs.com/solutions/custom-agent/#service"
+      },
+      "publisher": {
+        "@id": "https://zunkireelabs.com/#organization"
+      },
+      "dateModified": "2026-10-09",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "[data-aeo='answer']"
+        ]
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Building effective agents",
+          "url": "https://www.anthropic.com/engineering/building-effective-agents",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Anthropic"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "LLM06:2025 Excessive Agency",
+          "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "OWASP Gen AI Security Project"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Robotic process automation",
+          "url": "https://en.wikipedia.org/wiki/Robotic_process_automation",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Wikipedia"
+          }
+        }
+      ],
+      "description": "Custom AI agents built for one workflow in your business, or started from an agent we already built: your rules, bounded authority, a full audit trail."
+    }
+  ]
+}
+</script>
+
+{% raw %}
+<script>
+window.pathPicker = function () {
+  return {
+    i: 0,
+    opts: [
+      { t: 'A workflow only my business has', rec: 'Build a custom agent.', why: 'When the documents, systems and rules are specific to you, there is nothing off the shelf to start from. The narrow scope is what makes it trustworthy.', next: ['We scope the one workflow and say honestly if an agent is the wrong tool.', 'We give it only the tools it needs, with your rules and approval gates enforced around it.', 'You see the first version handle your real cases before committing.'] },
+      { t: 'A common job: phone booking, selling in chat, scheduling', rec: 'Start from one of our agents.', why: 'When the job is a familiar one, the hard parts have already been built and tested. We connect it to your systems and set your rules instead of rebuilding it.', next: ['We match the job to an agent we have already built.', 'We connect it to your systems and set your hours, rules and escalation path.', 'You judge it on your own cases, not a scripted demo.'] },
+      { t: 'A common job, plus steps that are specific to us', rec: 'Start from ours, then add a custom edge.', why: 'The shared parts come from an agent that already works, and the parts that are yours are built on top, so you only pay to build what is genuinely different.', next: ['We start from the closest agent we have built.', 'We scope only the parts that are specific to your business.', 'The custom part gets the same limits, approval gates and audit trail.'] },
+      { t: 'I am not sure yet', rec: 'Bring us one workflow you are tired of.', why: 'You do not need to choose in advance. Describe the work and we will tell you which way fits, and whether an agent is the right tool at all.', next: ['Describe where the work arrives and what done means.', 'We tell you honestly which route fits, or that neither does.', 'If it fits, we show you a first version before you commit.'] }
+    ],
+    get cur() { return this.opts[this.i]; }
+  };
+};
+window.runTrace = function () {
+  var STEPS = [
+    { t: 'Trigger', d: 'A schedule, a webhook, a new row, an inbound email. It runs without anybody deciding to run it.', l: [['09:00:00', 'info', 'schedule fired: supplier-invoices'], ['09:00:00', 'info', 'run #2041 started, toolset loaded (2 tools)']] },
+    { t: 'Read', d: 'Source material is pulled from where it already lives: inbox, drive, database, API. Reading messy unstructured input is the part agents are genuinely good at.', l: [['09:00:02', 'tool', 'inbox.read(folder="invoices")'], ['09:00:03', 'ok', '50 messages with attachments fetched'], ['09:00:04', 'info', 'attachments parsed: PDF, scan, spreadsheet']] },
+    { t: 'Plan and act', d: 'The agent works through the steps, calling only the tools this workflow was given. The sequence is decided at runtime, which is what lets it handle cases nobody enumerated.', l: [['09:00:06', 'info', 'plan: classify, extract, match to purchase order'], ['09:00:07', 'tool', 'extract(fields=[supplier, date, total, po])'], ['09:00:12', 'info', 'handling a case with no PO number: look up by supplier']] },
+    { t: 'Check against your rules', d: 'Output is validated against your business rules, not the model\u2019s judgement. Below a confidence threshold it stops rather than guesses.', l: [['09:00:19', 'ok', 'rule: total matches purchase order'], ['09:00:19', 'ok', 'rule: supplier is on the approved list'], ['09:00:20', 'warn', '3 items below confidence: held back, not guessed']] },
+    { t: 'Write back', d: 'Results are written into your system of record through its own API. No parallel spreadsheet for somebody to reconcile.', l: [['09:00:31', 'tool', 'ledger.post(batch)'], ['09:00:32', 'ok', '47 entries posted through the ledger API'], ['09:00:32', 'info', 'no spreadsheet created, nothing to reconcile']] },
+    { t: 'Log and escalate', d: 'Every tool call and decision is recorded. Anything uncertain or above its authority goes to a person with the context attached.', l: [['09:00:33', 'warn', 'queued 3 for review with the reason for each'], ['09:00:33', 'ok', 'every call logged against the record it touched'], ['09:00:33', 'info', 'run #2041 complete']] }
+  ];
+  return {
+    steps: STEPS, i: 0, counting: false, timer: null, inView: false, auto: true,
+    lines() { return STEPS[this.i].l; },
+    init() {
+      this.auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      var self = this;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { self.inView = e.isIntersecting; if (e.isIntersecting) { self.tick(); } else { self.stop(); } }); }, { threshold: 0.35 });
+        io.observe(this.$el);
+      }
+    },
+    stop() { clearTimeout(this.timer); this.timer = null; this.counting = false; },
+    tick() { var self = this; this.stop(); if (!this.auto || !this.inView) return; this.counting = true; this.timer = setTimeout(function () { self.i = (self.i + 1) % STEPS.length; self.tick(); }, 4200); },
+    hold() { this.stop(); },
+    release() { this.tick(); },
+    pick(k) { this.i = k; this.stop(); }
+  };
+};
+window.authBoard = function () {
+  var LANES = [
+    { id: 'alone', title: 'Acts alone', sub: 'Allowed without asking, and logged.', box: 'border-[#76B900]/30 bg-[#76B900]/[0.06]', text: 'text-[#3d6600]', pill: 'bg-[#76B900]/20 text-[#3d6600]', tag: 'ALONE', cls: 'text-[#9bd600]', say: function (a) { return a + ': allowed to act alone, every call logged'; } },
+    { id: 'person', title: 'Needs a person', sub: 'Stops at an approval gate with the context attached.', box: 'border-amber-300/50 bg-amber-50', text: 'text-amber-800', pill: 'bg-amber-200 text-amber-900', tag: 'GATE', cls: 'text-amber-300', say: function (a) { return a + ': now stops at an approval gate until a person signs off'; } },
+    { id: 'never', title: 'Forbidden', sub: 'Not in its toolset. It cannot do this at all.', box: 'border-navy-200 bg-slate-100', text: 'text-navy-700', pill: 'bg-navy-200 text-navy-800', tag: 'REMOVED', cls: 'text-red-300', say: function (a) { return a + ': tool removed, it is not available to the agent at all'; } }
+  ];
+  var ORDER = ['alone', 'person', 'never'];
+  return {
+    lanes: LANES, n: 0, log: [],
+    items: [
+      { id: 1, label: 'Match an invoice to its purchase order', lane: 'alone' }, { id: 2, label: 'Classify and file the document', lane: 'alone' },
+      { id: 3, label: 'Post a confident match to the ledger', lane: 'alone' }, { id: 4, label: 'Flag a mismatch for review', lane: 'alone' },
+      { id: 5, label: 'Email a supplier', lane: 'person' }, { id: 6, label: 'Pay a supplier', lane: 'person' },
+      { id: 7, label: 'Change a supplier\u2019s bank details', lane: 'never' }, { id: 8, label: 'Delete a record', lane: 'never' }
+    ],
+    move(a) {
+      var next = ORDER[(ORDER.indexOf(a.lane) + 1) % ORDER.length];
+      a.lane = next;
+      var L = LANES.filter(function (l) { return l.id === next; })[0];
+      this.n++; this.log.unshift({ n: this.n, tag: L.tag, cls: L.cls, text: L.say(a.label) });
+      this.log = this.log.slice(0, 3);
+    }
+  };
+};
+window.versus = function () {
+  var OPTIONS = [{ id: 'assistant', name: 'Assistant + your docs' }, { id: 'rpa', name: 'RPA / scripted automation' }];
+  var ROWS = [
+    ['Handles messy input', { assistant: 'Yes', rpa: 'Poorly: breaks on variation' }, 'Yes'],
+    ['Runs unattended', { assistant: 'No', rpa: 'Yes' }, 'Yes'],
+    ['Writes to your systems', { assistant: 'No', rpa: 'Yes' }, 'Yes, under set limits'],
+    ['Copes with a new edge case', { assistant: 'A person decides', rpa: 'Breaks, needs a rule' }, 'Escalates with context'],
+    ['Audit trail', { assistant: 'No', rpa: 'Usually' }, 'Yes, every tool call'],
+    ['Breaks when the UI changes', { assistant: 'n/a', rpa: 'Frequently' }, 'No: works through APIs'],
+    ['Best when', { assistant: 'A person is in the loop anyway', rpa: 'The process never varies' }, 'Volume plus variation']
+  ];
+  return { options: OPTIONS, rows: ROWS, side: 'assistant', get current() { var s = this.side; return OPTIONS.filter(function (o) { return o.id === s; })[0]; } };
+};
+window.scopeList = function () {
+  return {
+    items: [
+      { t: 'One workflow, described end to end', d: 'Where the work arrives, what a person does with it today, and what \u201cdone\u201d means. One workflow, not a category: \u201cprocess supplier invoices\u201d rather than \u201cfinance\u201d.', on: false },
+      { t: 'The rules it is checked against', d: 'What makes an output correct, and what makes one suspicious enough to escalate. If this only exists in somebody\u2019s head, extracting it is the first piece of work.', on: false },
+      { t: 'Access to the destination system', d: 'API access to write results where they belong. Source material can be messy; the destination is the part that needs to be in order.', on: false },
+      { t: 'Your authority boundaries', d: 'Which actions it may take alone, which need approval, and which are forbidden. These become enforced limits, not prompt instructions.', on: false },
+      { t: 'A sample of real cases', d: 'Thirty or so, including the awkward ones. The edge cases are what determine whether this is worth building, so we would rather see them early than after launch.', on: false }
+    ],
+    get done() { return this.items.filter(function (i) { return i.on; }).length; }
+  };
+};
+</script>
+{% endraw %}

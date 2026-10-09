@@ -33,7 +33,7 @@ translationKey: "the-future-of-ai-solutions-and-development-with-zunkiree-labs"
 
 ## Was Zunkiree Labs anbietet
 
-<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Liste finden Sie auf der <a href="/services/" rel="noopener">Leistungsseite</a>. Wir treffen keine Vorhersagen darüber, welche Werkzeuge sich durchsetzen werden. Wir beginnen bei einem realen Arbeitsablauf, bauen die kleinste nützliche Version und messen sie.</p>
+<p>Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Liste finden Sie auf der <a href="/solutions/" rel="noopener">Leistungsseite</a>. Wir treffen keine Vorhersagen darüber, welche Werkzeuge sich durchsetzen werden. Wir beginnen bei einem realen Arbeitsablauf, bauen die kleinste nützliche Version und messen sie.</p>
 
 ## Quellen
 

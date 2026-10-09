@@ -47,6 +47,11 @@ export default [
       zunkiree: "Businesses wanting AI-powered customer support, knowledge bases, and conversational search experiences.",
       competitor: "E-commerce and media sites needing fast, traditional keyword search with autocomplete."
     },
+    faq: [
+      { q: "What is the difference between Zunkiree Search and Algolia?", a: "Zunkiree Labs describes the main difference as search type. Zunkiree Search is semantic and AI-based and returns direct answers with sources, while Algolia is keyword search with typo tolerance that returns a ranked list of results. The comparison also notes that Algolia needs index configuration and a separate AI layer, while Zunkiree Search has built-in RAG and an LLM." },
+      { q: "How is Zunkiree Search priced compared with Algolia?", a: "According to this comparison, Zunkiree Search uses a flat monthly rate, while Algolia is priced per search and per record. The page says usage-based pricing can be expensive. It lists predictable pricing as one of Zunkiree Search's strengths." },
+      { q: "When should I choose Algolia instead of Zunkiree Search?", a: "The comparison says to choose Algolia if you need traditional keyword search for product catalogs or content libraries, such as e-commerce and media sites that want fast search with autocomplete. It recommends Zunkiree Search for businesses wanting AI-powered customer support, knowledge bases and conversational search." },
+    ],
     verdict: "Choose Zunkiree Search if you want AI that understands questions and provides direct answers. Choose Algolia if you need traditional keyword search for product catalogs or content libraries."
   },
   {
@@ -92,6 +97,11 @@ export default [
       zunkiree: "Teams wanting AI search without infrastructure complexity. Customer support, internal tools, and knowledge management.",
       competitor: "Engineering teams with DevOps resources who need full control over search infrastructure and complex custom queries."
     },
+    faq: [
+      { q: "Is Zunkiree Search easier to run than Elasticsearch?", a: "According to this comparison, yes. Zunkiree Search is a fully managed SaaS with zero ops required, automatic scaling and setup in hours. Elasticsearch is described as self-hosted or Elastic Cloud, with ongoing cluster management, manual scaling and setup taking days to weeks." },
+      { q: "Does Elasticsearch have built-in AI search?", a: "This comparison says Elasticsearch has no built-in AI or LLM support and needs custom integration, while Zunkiree Search includes built-in LLM and RAG. It also notes that Elasticsearch uses a JSON Query DSL, whereas Zunkiree Search accepts natural language queries." },
+      { q: "When is Elasticsearch the better choice?", a: "The comparison recommends Elasticsearch for engineering teams with dedicated DevOps resources who need full control over search infrastructure and complex custom queries. It suggests Zunkiree Search for teams that want AI search without the operational burden, such as customer support, internal tools and knowledge management." },
+    ],
     verdict: "Choose Zunkiree Search for AI-powered search without the operational burden. Choose Elasticsearch if you have dedicated DevOps resources and need complete infrastructure control."
   },
   {
@@ -137,6 +147,11 @@ export default [
       zunkiree: "Businesses wanting intelligent search that understands intent and provides direct answers to customer questions.",
       competitor: "Developers who want a self-hosted, open-source alternative to Algolia for traditional search."
     },
+    faq: [
+      { q: "How does Zunkiree Search compare with Typesense?", a: "According to this comparison, Typesense is an open-source, typo-tolerant, keyword-based engine that can be self-hosted, while Zunkiree Search is fully managed with semantic search and native LLM integration. Typesense returns ranked results, whereas Zunkiree Search returns answers with citations." },
+      { q: "Is Typesense open source?", a: "Yes. The comparison lists Typesense as open source under GPL-3.0 and self-hostable, positioned as an alternative to Algolia. It lists Zunkiree Search as not open source, offered fully managed with SSO, analytics and an API." },
+      { q: "When should I choose Typesense over Zunkiree Search?", a: "The comparison says to choose Typesense if you want an open-source, self-hosted solution for traditional keyword search, aimed at developers who want an Algolia alternative. It recommends Zunkiree Search for businesses wanting search that understands intent and gives direct answers to customer questions." },
+    ],
     verdict: "Choose Zunkiree Search if you want AI that provides answers, not just results. Choose Typesense if you want an open-source, self-hosted solution for traditional keyword search."
   },
   {
@@ -189,6 +204,12 @@ export default [
       zunkiree: "Businesses wanting to reduce friction, increase conversions, and provide AI-powered shopping experiences. Ideal for Nepal market with eSewa/Khalti integration.",
       competitor: "Businesses with simple product catalogs where customers prefer full control over browsing and purchasing decisions."
     },
+    faq: [
+      { q: "What is agentic commerce?", a: "According to this comparison, agentic commerce means an AI agent handles the buying journey, from conversational product discovery to comparing options across platforms and completing the purchase autonomously. In traditional ecommerce, the customer browses, compares and checks out manually." },
+      { q: "How is agentic commerce different from traditional ecommerce?", a: "The comparison contrasts them across discovery, comparison, decision making, checkout, personalization, support and payments. Traditional ecommerce relies on browsing categories, manual comparison and manual checkout with reactive support, while agentic commerce is described as conversational, proactive and able to complete purchases for the customer." },
+      { q: "Does agentic commerce reduce cart abandonment?", a: "Zunkiree Labs says agentic commerce significantly reduces cart abandonment, and the page lists traditional ecommerce at roughly 70% average abandonment. These are the page's own claims and figures, not independent measurements." },
+      { q: "Does agentic commerce work in Nepal?", a: "The comparison says it suits the Nepal market, with intelligent payment routing across eSewa, Khalti and cards, search across Daraz, local stores and brands, and natural Nepali and English queries." },
+    ],
     verdict: "Choose agentic commerce if you want AI to handle the buying journey, reduce cart abandonment, and provide personalized service at scale. Choose traditional ecommerce if your customers prefer complete manual control and you have a straightforward product catalog.",
     ctaProduct: "ai-commerce-agent",
     ctaService: "ai-ecommerce"

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Satellitendaten und KI: So erkennen Landwirte Ernterisiken früher"
+title: "Satellitendaten und KI: Ernterisiken früher erkennen"
 description: "Was Satellitenbilder, Wetterdaten und KI über Ernteerträge vorhersagen können, anhand einer Reisstudie im nepalesischen Terai und von Feldpiloten."
 date: "2026-10-05"
 lastUpdated: "2026-10-05"

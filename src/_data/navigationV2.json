@@ -11,15 +11,31 @@
           {
             "type": "descriptive",
             "items": [
-              { "label": "AI for Education", "url": "/industries/education/", "description": "Admissions pipeline and campaign management" },
-              { "label": "AI for Agencies", "url": "/industries/agencies/", "description": "Deal pipeline and delivery management" }
+              {
+                "label": "AI for Education",
+                "url": "/industries/education/",
+                "description": "Admissions pipeline and campaign management"
+              },
+              {
+                "label": "AI for Agencies",
+                "url": "/industries/agencies/",
+                "description": "Deal pipeline and delivery management"
+              }
             ]
           },
           {
             "type": "descriptive",
             "items": [
-              { "label": "AI for Healthcare", "url": "/industries/healthcare/", "description": "Credential tracking and scheduling" },
-              { "label": "AI for Real Estate", "url": "/industries/real-estate/", "description": "Capital raising for CRE sponsors" }
+              {
+                "label": "AI for Healthcare",
+                "url": "/industries/healthcare/",
+                "description": "Credential tracking and scheduling"
+              },
+              {
+                "label": "AI for Real Estate",
+                "url": "/industries/real-estate/",
+                "description": "Capital raising for CRE sponsors"
+              }
             ]
           }
         ],
@@ -49,13 +65,34 @@
           "url": "/contact/"
         },
         "services": {
-          "title": "Services",
+          "title": "Solutions",
           "description": "Custom AI and software built end to end by our team.",
           "items": [
-            { "label": "AI Development", "url": "/services/ai-development/", "description": "Custom AI systems and LLM integration" },
-            { "label": "AI Customer Experience", "url": "/services/ai-customer-experience/", "description": "Chatbots and conversational AI support" }
+            {
+              "label": "Voice Agent",
+              "url": "/solutions/voice-agent/",
+              "description": "Answers the phone and books appointments"
+            },
+            {
+              "label": "Generative UI",
+              "url": "/solutions/generative-ui/",
+              "description": "Interfaces assembled from your components"
+            },
+            {
+              "label": "Custom Agent",
+              "url": "/solutions/custom-agent/",
+              "description": "Agents scoped to one workflow"
+            },
+            {
+              "label": "Software Outsourcing",
+              "url": "/solutions/software-outsourcing/",
+              "description": "Dedicated teams and white-label delivery"
+            }
           ],
-          "seeAll": { "label": "See more services", "url": "/services/" }
+          "seeAll": {
+            "label": "See all solutions",
+            "url": "/solutions/"
+          }
         }
       }
     },
@@ -88,14 +125,20 @@
                 "description": "AI orchestration layer coordinating agent workflows across CRMs, email, and marketing tools"
               }
             ],
-            "seeAll": { "label": "See all products", "url": "/products/" }
+            "seeAll": {
+              "label": "See all products",
+              "url": "/products/"
+            }
           }
         ],
         "featured": {
           "label": "FEATURED",
           "title": "Try Zunkiree Search Free",
           "description": "See how AI search delivers direct answers instead of links. Transform your customer experience.",
-          "cta": { "label": "Start free trial", "url": "/products/search/" }
+          "cta": {
+            "label": "Start free trial",
+            "url": "/products/search/"
+          }
         },
         "cta": {
           "prompt": "Ready to build with AI?",
@@ -144,7 +187,10 @@
                 "description": "See how Zunkiree compares to alternatives"
               }
             ],
-            "seeAll": { "label": "See all resources", "url": "/resources/" }
+            "seeAll": {
+              "label": "See all resources",
+              "url": "/resources/"
+            }
           },
           {
             "header": "COMPANY",
@@ -175,7 +221,10 @@
           "label": "FEATURED REPORT",
           "title": "State of AI in Nepal 2026",
           "description": "The definitive guide to AI adoption across Nepali industries. Free download.",
-          "cta": { "label": "Download report", "url": "/resources/state-of-ai-nepal-2026/" }
+          "cta": {
+            "label": "Download report",
+            "url": "/resources/state-of-ai-nepal-2026/"
+          }
         },
         "cta": {
           "prompt": "Ready to build with AI?",

@@ -89,6 +89,7 @@ To see how this fits into the wider picture, read our overview of [AI trends and
 
 ## Related Insights
 
+- [Superintelligence vs AGI vs Narrow AI](/blog/superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean/)
 - [Superintelligence and the Safety Debate: Who Wants What](/blog/superintelligence-safety-debate-who-wants-what/)
 - [Trump's Super Intelligence Force: What the Order Actually Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
 - [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)

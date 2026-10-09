@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: de-CH
+ogLocale: de_CH
+title: "Individuelle Software für Unternehmen | Zunkiree Labs"
+description: "Unternehmensanwendungen, massgeschneidert auf Ihre Workflows. Schluss mit dem Tabellenchaos. Interne Tools, die Ihr Team wirklich nutzt."
+permalink: /de-ch/solutions/custom-software/
+serviceId: custom-software
+hreflangAlternates:
+  - lang: en
+    url: /solutions/custom-software/
+  - lang: de
+    url: /de/solutions/custom-software/
+  - lang: de-CH
+    url: /de-ch/solutions/custom-software/
+  - lang: nl
+    url: /nl/solutions/custom-software/
+  - lang: x-default
+    url: /solutions/custom-software/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["de-CH"].details["custom-software"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Kaliforniens Robotaxi-Gesetz: Was es für autonome KI bedeutet"
+title: "Kaliforniens Robotaxi-Gesetz: Folgen für autonome KI"
 description: "Kalifornien will Robotaxi-Betreiber bestrafen, die Rettungskräfte länger als 30 Minuten blockieren. Was SB 1246 verlangt und was es für KI bedeutet."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/kaliforniens-robotaxi-gesetz-was-es-fuer-autonome-ki-bedeutet.svg"

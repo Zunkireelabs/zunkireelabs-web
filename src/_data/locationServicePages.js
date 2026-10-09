@@ -6,6 +6,13 @@ const pages = [];
 
 for (const location of locations) {
   for (const service of services) {
+    // Newer solution lines opt out of the city x service matrix. Without this
+    // every added service silently generates one page per location (4 today),
+    // canonicalised away but still crawled — exactly the kind of thin,
+    // auto-generated URL we spent a cleanup removing from Search Console.
+    // Opt one in by deleting its skipLocationPages flag in services.json and
+    // writing real city copy in locationServiceEntries.js.
+    if (service.skipLocationPages) continue;
     const serviceContent = location.services?.[service.id];
     const hasUniqueContent = !!serviceContent;
 
@@ -13,7 +20,7 @@ for (const location of locations) {
     // canonical points to main service page to avoid thin content penalty
     const canonicalUrl = hasUniqueContent
       ? null  // Use default (self-referencing)
-      : `/services/${service.id}/`;
+      : `/solutions/${service.id}/`;
 
     pages.push({
       locationId: location.id,

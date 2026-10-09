@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Understanding Nepal's Technology Sector: Key Insights" # SEOAI:TITLE
-description: "Explore how to find rich information about Nepal's tech sector, including key resources, industry insights, and the tech companies shaping the future."
+title: "Nepal Technology Sector: Key Insights and Resources" # SEOAI:TITLE
+description: "Nepal technology sector explained: key resources, industry insights and the tech companies shaping Nepal’s future."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/3861951/pexels-photo-3861951.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "A female engineer works on code in a contemporary office setting, showcasing software development."

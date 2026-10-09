@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Webentwicklung für Schweizer Firmen: Website und Personendaten"
+title: "Schweizer Firmenwebsite: Webentwicklung und Personendaten"
 description: "Welche Datenschutzfragen bei einem Website-Projekt in der Schweiz anfallen, etwa bei Hosting, Analyse-Tools und Auftragnehmern im Ausland, laut EDÖB."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/webentwicklung-fuer-schweizer-unternehmen-was-eine-website-mit-personendaten-zu-tun-hat.svg"
@@ -28,7 +28,7 @@ lastUpdated: "2026-10-02"
 
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Wo Zunkiree Labs steht</h2>
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Übersicht finden Sie auf der <a href="/services/" class="text-zunkiree-600 hover:underline" rel="noopener">Leistungsseite</a> (auf Englisch). Wo die Daten eines Projekts liegen und wer darauf zugreift, ist vor Projektbeginn schriftlich zu klären. Fragen Sie jeden Anbieter, auch uns, nach einer schriftlichen Antwort auf diese Fragen.</p>
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs entwickelt individuelle KI-Systeme (unter anderem mit RAG-Pipelines, LLM-Integration und intelligenter Automatisierung), Datensysteme, Individualsoftware sowie Web- und Mobile-Anwendungen und hat seinen Sitz in Nepal. Die vollständige Übersicht finden Sie auf der <a href="/solutions/" class="text-zunkiree-600 hover:underline" rel="noopener">Leistungsseite</a> (auf Englisch). Wo die Daten eines Projekts liegen und wer darauf zugreift, ist vor Projektbeginn schriftlich zu klären. Fragen Sie jeden Anbieter, auch uns, nach einer schriftlichen Antwort auf diese Fragen.</p>
 
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Quellen</h2>
 
