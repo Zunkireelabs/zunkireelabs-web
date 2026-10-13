@@ -33,6 +33,6 @@ At Zunkiree Labs, we specialize in building scalable, high-performance SaaS appl
 <!-- SEOAI:EXPANDEDCONTENT:START --><!-- SEOAI:FOCUS:external-citations --><div >
   <section class="gap-2">
     <h2 class="font-normal text-gray-900 text-2xl">References</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://uxpilot.ai/blogs/saas-development-process" class="text-zunkiree-600 hover:underline">How to Design a SaaS Development Process in 8 Steps</a> — uxpilot.ai</li><li><a href="https://www.infoq.com/articles/SaaS-Lifecycle" class="text-zunkiree-600 hover:underline">The SaaS Development Lifecycle - InfoQ</a> — infoq.com</li><li><a href="https://www.netguru.com/blog/saas-development-life-cycle" class="text-zunkiree-600 hover:underline">SaaS Development Life Cycle: Key Stages &amp; Best Practices</a> — netguru.com</li></ul></div>
+    <div class="text-gray-600 leading-relaxed"><ul class="space-y-3"><li><a href="https://uxpilot.ai/blogs/saas-development-process" class="text-zunkiree-600 hover:underline">How to Design a SaaS Development Process in 8 Steps</a> — uxpilot.ai</li><li><a href="https://www.infoq.com/articles/SaaS-Lifecycle" class="text-zunkiree-600 hover:underline">The SaaS Development Lifecycle - InfoQ</a> — infoq.com</li><li><a href="https://www.netguru.com/blog/saas-development-life-cycle" class="text-zunkiree-600 hover:underline">SaaS Development Life Cycle: Key Stages &amp; Best Practices</a> — netguru.com</li></ul></div>
   </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

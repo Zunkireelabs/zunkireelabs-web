@@ -29,6 +29,11 @@ services:
       - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-web-staging.tls=true"
       - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
+      # Keep staging out of Google. It serves a full copy of the site, and
+      # Search Console showed dev-web URLs indexed. Do NOT block it in
+      # robots.txt: Google must be able to crawl a page to see the noindex.
+      - "traefik.http.routers.zunkiree-web-staging.middlewares=zunkiree-web-staging-noindex"
+      - "traefik.http.middlewares.zunkiree-web-staging-noindex.headers.customresponseheaders.X-Robots-Tag=noindex, nofollow"
       # HTTP to HTTPS redirect
       - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
       - "traefik.http.routers.zunkiree-web-staging-http.entrypoints=web"

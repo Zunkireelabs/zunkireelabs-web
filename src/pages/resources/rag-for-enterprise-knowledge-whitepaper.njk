@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "Retrieval-Augmented Generation for Enterprise Knowledge: An Implementation Whitepaper"
+description: "How retrieval-augmented generation works, how to chunk, index and evaluate it on your own documents, and the failure modes that cause wrong answers."
+permalink: /resources/rag-for-enterprise-knowledge-whitepaper/
+slug: rag-for-enterprise-knowledge-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How RAG works</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Retrieval-augmented generation answers a question in two steps. First, a retrieval step finds the passages in your own documents that are most relevant to the question. Second, a language model writes an answer using only those passages as its source. The model supplies the language; your documents supply the facts.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This is why RAG is preferred over fine-tuning for most company knowledge. Documents change, and updating an index is far easier than retraining a model.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Building the pipeline</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The main stages are ingestion, chunking, embedding, indexing, retrieval, generation and citation. Chunk size is the choice with the largest effect: chunks that are too small lose context, and chunks that are too large dilute the match and waste the model's input space.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Most production systems combine semantic retrieval with keyword retrieval so that exact identifiers such as product codes and names are still found. Showing the source passage beside each answer lets users check it.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Evaluating it honestly</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Do not judge a RAG system on a handful of demo questions. Collect real questions from support logs or staff, write the correct answer and source for each, and measure how often retrieval finds the right passage and how often the final answer is correct.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Track two failures separately: retrieval misses, where the right passage was never found, and generation errors, where the right passage was found but the answer was still wrong. They have different fixes.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Permissions and freshness</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    An enterprise system must respect who may see what. A retrieval index that ignores document permissions will leak content, so access rules need to be applied at query time, not only at ingestion.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Set a refresh schedule for each source and show the last-updated date. An answer drawn from a policy that changed last month is worse than no answer.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "RAG pipeline, retrieval augmented generation, enterprise AI search",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is retrieval-augmented generation?", "acceptedAnswer": {"@type": "Answer", "text": "RAG retrieves relevant passages from your own documents and has a language model write an answer using only those passages, so answers stay grounded in your content."}}, {"@type": "Question", "name": "Is RAG better than fine-tuning?", "acceptedAnswer": {"@type": "Answer", "text": "For company knowledge that changes, usually yes. Updating a document index is simpler and cheaper than retraining a model, and answers can cite their sources."}}, {"@type": "Question", "name": "How do I test a RAG system?", "acceptedAnswer": {"@type": "Answer", "text": "Build an evaluation set from real user questions with known correct answers and sources, then measure retrieval accuracy and answer accuracy separately."}}, {"@type": "Question", "name": "Can RAG respect document permissions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if access rules are applied at query time so a user only retrieves passages they are allowed to see."}}]}</script><!-- SEOAI:FAQ:END -->

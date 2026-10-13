@@ -1,7 +1,7 @@
 ---
-title: "Gemini 4 Argon Release: What Was Claimed, What Is Unproven"
+title: "Gemini 4 Argon Release Date and Claims: What Is Unproven"
 translationKey: "gemini-4-argon-how-to-read-a-frontier-model-release"
-description: "Gemini 4 Argon release news: what Google announced, who can use it now, what is unproven and how businesses should respond."
+description: "Gemini 4 Argon release date and news: what Google announced in October 2026, who can use it now, what is unproven and how businesses should respond."
 date: 2026-10-01
 lastUpdated: 2026-10-01
 category: Insights

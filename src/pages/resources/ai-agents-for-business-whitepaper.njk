@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "AI Agents for Business: What They Do, Where They Pay Off and Where They Fail"
+description: "What an AI agent is, how it differs from a chatbot or a workflow script, which business tasks suit it and the guardrails a production agent needs."
+permalink: /resources/ai-agents-for-business-whitepaper/
+slug: ai-agents-for-business-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What an AI agent actually is</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A chatbot answers questions. A workflow script follows a fixed sequence of steps. An AI agent sits between the two: it is given a goal, can call tools such as a calendar, a database or an email system, and decides which step to take next based on what it finds. That ability to choose the next step is what makes it useful on messy, variable work, and it is also what makes it riskier than a script.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For a business reader the useful definition is operational: an agent is software that completes a task on your behalf, inside limits you set, and reports what it did. If it cannot do those three things, it is a chatbot with a longer name.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Where agents pay off</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Agents fit tasks that are frequent, rule-bound at the edges and expensive in human attention: answering the same customer questions, triaging inbound requests, scheduling and rescheduling, and routing documents. The common thread is that a person currently does the work by reading something, checking a system and taking a small action.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our published case studies show this pattern. Khems Cleaning increased bookings by 70% with automated scheduling and cancellation backfill, and CMS Group automated 85% of its document processing workflows with classification and routing. Both are narrow, repetitive jobs rather than open-ended judgement.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Where agents fail</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Agents fail when the goal is vague, when the data they read is stale or contradictory, or when a wrong action is costly and cannot be undone. An agent that can issue refunds without a limit, or edit records without a log, is a liability regardless of how good the underlying model is.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The fix is design, not optimism. Give each agent a narrow scope, a list of actions it may take, a spending or impact ceiling, and a clear route to a human when confidence is low.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">A safe rollout path</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Start with a single task and keep a person approving every action. Review the log weekly, note where the agent was overruled and fix the cause. Once approvals are routine, let the agent act alone on the low-risk cases and keep approval for the rest.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Measure the outcome the business cares about, such as response time, bookings or hours saved, rather than the number of conversations handled. Expand scope only when the measured result holds for several weeks.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI agents for business, autonomous AI agents, agentic AI",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an AI agent in business?", "acceptedAnswer": {"@type": "Answer", "text": "An AI agent is software that is given a goal, can use tools such as calendars, databases and email, and decides its own next step to complete a task within limits you set."}}, {"@type": "Question", "name": "How is an AI agent different from a chatbot?", "acceptedAnswer": {"@type": "Answer", "text": "A chatbot responds to questions. An agent can also take actions in other systems, such as booking a slot or routing a document, and decides which action to take."}}, {"@type": "Question", "name": "Which business tasks suit an AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Frequent, repetitive tasks that currently need a person to read something, check a system and take a small action, such as scheduling, triage and document routing."}}, {"@type": "Question", "name": "How do I keep an AI agent safe?", "acceptedAnswer": {"@type": "Answer", "text": "Limit its scope and the actions it may take, log every action, cap its impact, require human approval for risky cases and review the log regularly."}}]}</script><!-- SEOAI:FAQ:END -->

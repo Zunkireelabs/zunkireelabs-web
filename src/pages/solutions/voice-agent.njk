@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "AI Voice Agent for Appointment Booking | Zunkiree Labs" # SEOAI:TITLE
-description: "An AI voice agent that answers your phone and takes the booking: live availability, written into your system, SMS confirmation, reschedules and reminders."
+title: "AI Voice Agent Development for Business | Zunkiree Labs" # SEOAI:TITLE
+description: "AI voice agent development: an agent that answers your phone, checks live availability, books the appointment and sends confirmations and reminders."
 permalink: /solutions/voice-agent/
 hideChrome: true
 bodyClass: "v2-inter"
@@ -58,7 +58,7 @@ faqs:
     <div data-reveal-stagger>
       <nav class="mb-6 font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" aria-label="Breadcrumb"><a href="/" class="hover:text-[#5a9100]">Home</a> / <a href="/solutions/" class="hover:text-[#5a9100]">Solutions</a> / <span class="text-[#5a9100]">Voice Agent</span></nav>
       <p class="mb-3 inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>AI voice agent for appointment booking</p>
-      <h1 id="va-hero-heading" class="text-[38px] font-medium leading-[1.08] tracking-tight text-[#111827] sm:text-[52px] lg:text-[60px]">The call you missed was the booking you lost.</h1>
+      <h1 id="va-hero-heading" class="text-[#111827] text-[34px] sm:text-[44px] lg:text-[54px] font-medium leading-[1.15] tracking-tight">The call you missed was the booking you lost.</h1>
       <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-[#6B7280]">An AI voice agent that answers your phone and actually takes the booking: live availability, written into the system you already run, confirmed by SMS, with reschedules and reminders handled on the same line.</p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href="#live-demo" class="inline-flex items-center justify-center gap-2 rounded-md bg-[#76B900] px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors hover:bg-[#5a9100]" data-track="cta" data-cta-id="voice-hero-demo">Watch a call get booked
@@ -117,7 +117,7 @@ faqs:
   <div class="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
     <div data-reveal>
       <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>What is a voice agent?</span>
-      <h2 id="va-what-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">A phone agent that finishes the job, not just the call.</h2>
+      <h2 id="va-what-heading" class="text-balance text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">A phone agent that finishes the job, not just the call.</h2>
       <p data-aeo="answer" class="mt-6 max-w-md text-[17px] leading-relaxed text-[#374151]"><strong class="font-medium text-[#111827]">A booking voice agent picks up an inbound call,</strong> works out what the caller wants from natural speech, checks live availability against the real constraints, offers slots that genuinely exist, writes the appointment into your system and confirms it in writing.</p>
       <p class="mt-4 max-w-md text-[15px] leading-relaxed text-[#6B7280]">It then handles the traffic that fills most reception phones: reschedules, cancellations, reminders and &ldquo;are you open on Saturday&rdquo;.</p>
       <div class="mt-7 flex flex-wrap gap-2" aria-hidden="true"><span class="rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-wider text-[#3d6600]">Inbound</span><span class="rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-wider text-[#3d6600]">Outbound reminders</span><span class="rounded-full border border-[#76B900]/30 bg-[#76B900]/10 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-wider text-[#3d6600]">Writes to your system</span></div>
@@ -158,9 +158,16 @@ faqs:
   <div class="relative mx-auto max-w-7xl">
     <div class="mb-12 text-center" data-reveal>
       <span class="mb-4 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>Live demo<span class="h-px w-8 bg-[#9bd600]"></span></span>
-      <h2 id="va-demo-heading" class="text-balance text-[34px] font-medium leading-[1.08] tracking-tight text-white sm:text-[52px]">Hear it. <span class="text-[#9bd600]">Watch it work.</span></h2>
+      <h2 id="va-demo-heading" class="text-balance text-white text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">Hear it. <span class="text-[#9bd600]">Watch it work.</span></h2>
       <p class="mx-auto mt-4 max-w-2xl text-balance text-[17px] leading-relaxed text-white/60">The agent picks up the moment you reach this section and plays four real calls on its own. Scroll on and it stops. Pick any call below to replay it.</p>
       <p x-show="auto && inView && !userDriven" style="display:none" class="mt-4 flex items-center justify-center gap-2 font-mono text-[10px] uppercase tracking-wider text-[#9bd600]"><i class="h-1.5 w-1.5 rounded-full bg-[#76B900]" :class="autoDone ? '' : 'animate-pulse'"></i><span x-text="autoDone ? 'All four calls played · pick one below to replay' : 'Playing automatically · scroll on and it stops'"></span></p>
+      <div class="mt-7 flex flex-col items-center gap-2.5">
+        <p class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-white/55"><svg class="h-3.5 w-3.5 text-[#9bd600]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>Hear the call in<span class="text-white/30">·</span><span lang="ne" class="text-[12px] normal-case tracking-normal">भाषा छान्नुहोस्</span></p>
+        <div class="inline-flex items-center gap-1.5 rounded-full border border-[#9bd600]/40 bg-white/[0.07] p-1.5 shadow-[0_0_0_4px_rgba(155,214,0,0.07)] backdrop-blur" role="group" aria-label="Call language">
+          <button type="button" @click="setLang('en')" :aria-pressed="lang === 'en'" class="rounded-full px-6 py-2.5 text-[14px] font-semibold tracking-wide transition-colors" :class="lang === 'en' ? 'bg-[#76B900] text-white shadow-lg' : 'text-white/80 hover:bg-white/10 hover:text-white'">English</button>
+          <button type="button" @click="hasNe && setLang('ne')" :disabled="!hasNe" :aria-pressed="lang === 'ne'" class="flex items-center gap-2 rounded-full px-6 py-2.5 text-[15px] font-semibold transition-colors disabled:cursor-not-allowed disabled:text-white/70" :class="lang === 'ne' ? 'bg-[#76B900] text-white shadow-lg' : (hasNe ? 'text-white/80 hover:bg-white/10 hover:text-white' : 'text-white/60')"><span lang="ne">नेपाली</span><span x-show="!hasNe" class="rounded-full bg-white/10 px-2 py-0.5 font-mono text-[9px] font-normal uppercase tracking-wider text-white/60">soon</span></button>
+        </div>
+      </div>
     </div>
 
     <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_22rem_minmax(0,1fr)] lg:gap-10" data-reveal :class="status === 'live' ? 'va-live' : ''">
@@ -228,7 +235,7 @@ faqs:
             <div class="relative mt-3 flex-1 space-y-2 overflow-hidden px-5" aria-live="polite" x-ref="tr">
               <template x-for="(l, i) in lines.slice(-2)" :key="lines.length - 2 + i + l.text">
                 <div class="assemble flex" :class="l.who === 'agent' ? 'justify-end' : 'justify-start'">
-                  <p class="max-w-[88%] rounded-2xl px-3.5 py-2 text-[13px] leading-snug" :class="l.who === 'agent' ? 'rounded-br-sm bg-[#76B900]/25 text-white' : 'rounded-bl-sm bg-white/12 text-white/90'" x-text="l.text"></p>
+                  <p class="max-w-[88%] rounded-2xl px-3.5 py-2 text-[13px] leading-snug" :class="l.who === 'agent' ? 'rounded-br-sm bg-[#76B900]/25 text-white' : 'rounded-bl-sm bg-white/12 text-white/90'" ><span x-text="l.text"></span><template x-if="l.gloss"><span class="mt-1 block text-[11px] leading-snug opacity-60" x-text="l.gloss"></span></template></p>
                 </div>
               </template>
               <p x-show="lines.length === 0" class="pt-6 text-center text-[13px] text-white/40">Press the green button to start the call.</p>
@@ -247,7 +254,7 @@ faqs:
             </div>
           </div>
         </div>
-        <p class="mt-3 text-center font-mono text-[10px] uppercase tracking-wider" :class="soundBlocked ? 'text-amber-300' : 'text-white/45'" x-text="soundBlocked ? 'Your browser blocked autoplay sound. Click anywhere to hear the call.' : (sound ? ('Voices on' + (voiceInfo.agent ? ' · Agent: ' + voiceInfo.agent + ' · Caller: ' + voiceInfo.caller : '') + '. Built-in browser speech.') : (inView ? 'Sound is off. Tap the speaker to hear the call.' : 'Sound starts when you reach this section.'))"></p>
+        <p class="mt-3 text-center font-mono text-[10px] uppercase tracking-wider" :class="soundBlocked ? 'text-amber-300' : 'text-white/45'" x-text="soundBlocked ? 'Your browser blocked autoplay sound. Click anywhere to hear the call.' : (sound && clipMode ? 'Voices on. AI voices, recorded for this demo. Simulated example.' : sound ? ('Voices on' + (voiceInfo.agent ? ' · Agent: ' + voiceInfo.agent + ' · Caller: ' + voiceInfo.caller : '') + '. Built-in browser speech.') : (inView ? 'Sound is off. Tap the speaker to hear the call.' : 'Sound starts when you reach this section.'))"></p>
       </div>
         </div>
       </div>
@@ -300,7 +307,7 @@ faqs:
   <div class="mx-auto max-w-6xl">
     <div class="mb-12 max-w-3xl" data-reveal>
       <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>In action</span>
-      <h2 id="va-tabs-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Everything that fills a reception phone.</h2>
+      <h2 id="va-tabs-heading" class="text-balance text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">Everything that fills a reception phone.</h2>
       <p class="mt-4 max-w-xl text-[16px] leading-relaxed text-[#6B7280]">Bookings are only the start. Most of the traffic on a reception line is moving, cancelling, confirming and asking.</p>
     </div>
     <div class="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16" data-reveal>
@@ -347,7 +354,7 @@ faqs:
         <div x-show="tab === 0" x-transition.opacity.duration.300ms class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-appointment-booking.svg" alt="Take a Booking illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Take a Booking End to End</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Take a Booking End to End</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">The agent establishes what is needed and for whom, checks live availability against staff, room and equipment constraints, offers slots that actually exist, writes the appointment to your system, and confirms by SMS or email.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">"I'd like a check-up for Tuesday morning."</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"I can offer 10:30 with Anna, or 11:30 with Dev."</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Live availability check</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Service and duration matching</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Writes to your system of record</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">SMS/email confirmation</span></div></div>
           </div>
@@ -355,7 +362,7 @@ faqs:
         <div x-show="tab === 1" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-reschedule-cancel.svg" alt="Reschedule & Cancel illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Reschedules, Cancellations and Waitlists</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Reschedules, Cancellations and Waitlists</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">The traffic that fills most reception phones. The agent identifies the caller, moves or cancels the appointment, releases the slot, and offers it to anyone on the waitlist — so a cancellation becomes a refill rather than a gap.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">"I need to move my Wednesday appointment."</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"Thursday at 11:00 is free. I have released your old slot."</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Caller identification</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Slot release and refill</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Waitlist offers</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Cancellation policy enforcement</span></div></div>
           </div>
@@ -363,7 +370,7 @@ faqs:
         <div x-show="tab === 2" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-outbound.svg" alt="Reminders illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Outbound Reminders That Reduce No-Shows</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Outbound Reminders That Reduce No-Shows</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Reminder calls placed as real conversations rather than recordings, so the caller can confirm, move or cancel during the call. A no-show costs the whole slot; a reschedule costs nothing.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">(Outbound) "Hi, this is Northside Clinic about tomorrow."</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"Shall I keep 10:30, or move it? I can do Thursday."</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Two-way rescheduling</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Confirmation capture</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Escalation on no answer</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Opt-out handling</span></div></div>
           </div>
@@ -371,7 +378,7 @@ faqs:
         <div x-show="tab === 3" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-complex-availability.svg" alt="Complex Availability illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Multi-Provider, Multi-Resource Booking</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Multi-Provider, Multi-Resource Booking</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Clinics with several practitioners and shared rooms, workshops with limited bays, studios where the kit matters as much as the person. Zennly resolves the conflicts the agent would otherwise have to guess at.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">"I need a double appointment on Thursday."</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"A double needs the senior clinician and Room 2 together. They are free from 12:00."</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Multi-provider matching</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Shared resource conflicts</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Buffer and turnaround time</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Automatic conflict resolution</span></div></div>
           </div>
@@ -379,7 +386,7 @@ faqs:
         <div x-show="tab === 4" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-after-hours.svg" alt="After Hours illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Out-of-Hours and Overflow Cover</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Out-of-Hours and Overflow Cover</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Cover evenings, weekends and holidays without a rota, and absorb the overflow when every line is busy. Urgent calls route to the on-call person; everything else is booked or queued with a transcript waiting in the morning.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">(Sunday, 9:04pm) "Is anyone there?"</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"The office is closed, but I can book you in right now."</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">24/7 coverage</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Overflow from busy lines</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">On-call escalation rules</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Morning transcripts and summaries</span></div></div>
           </div>
@@ -387,7 +394,7 @@ faqs:
         <div x-show="tab === 5" x-transition.opacity.duration.300ms style="display:none" class="absolute inset-0 flex flex-col">
           <div class="overflow-hidden"><img src="/assets/images/solutions/voice-enquiries.svg" alt="Enquiries illustration" class="block w-full" width="640" height="360" loading="lazy" decoding="async"></div>
           <div class="flex flex-1 flex-col p-6 sm:p-8">
-            <h3 class="text-[22px] font-medium leading-snug tracking-tight text-white sm:text-[26px]">Questions Before the Booking</h3>
+            <h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Questions Before the Booking</h3>
             <p class="mt-2 text-[14.5px] leading-relaxed text-white/60">Opening hours, parking, what a treatment involves, whether you take a particular insurer or payment method — answered from your own documents, so the caller gets to the booking instead of ringing off to check.</p>
             <div class="mt-auto pt-5"><div class="mb-4 space-y-1.5 text-[13px]"><p class="rounded-2xl rounded-bl-sm bg-white/10 px-3.5 py-2 text-white/85 w-fit max-w-[92%]">"Are you open on Saturday, and what does a cleaning cost?"</p><p class="ml-auto w-fit max-w-[92%] rounded-2xl rounded-br-sm bg-[#76B900]/25 px-3.5 py-2 text-white">"We are open until 1pm on Saturday. A cleaning is on our price list; shall I book one?"</p></div><div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Grounded in your documents</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Pricing and policy answers</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Directions and hours</span><span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12.5px] text-white/80">Handoff when unsure</span></div></div>
           </div>
@@ -402,7 +409,7 @@ faqs:
   <div class="mx-auto max-w-6xl">
     <div class="mb-12 text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#5a9100]">The difference</span>
-      <h2 id="va-two-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">The same call, two outcomes.</h2>
+      <h2 id="va-two-heading" class="text-balance text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">The same call, two outcomes.</h2>
       <p class="mx-auto mt-3 font-mono text-[12px] uppercase tracking-wider text-[#9CA3AF]">Sunday, 9:04pm</p>
     </div>
     <div class="grid gap-5 lg:grid-cols-2" data-reveal-stagger>
@@ -429,33 +436,33 @@ faqs:
   <div class="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
     <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
       <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#9bd600]"><span class="h-px w-8 bg-[#9bd600]"></span>The call</span>
-      <h2 id="va-steps-heading" class="text-balance text-[34px] font-medium leading-[1.1] tracking-tight text-white sm:text-[46px]">The talking is the easy part.</h2>
+      <h2 id="va-steps-heading" class="text-balance text-white text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">The talking is the easy part.</h2>
       <p class="mt-6 max-w-md text-[17px] leading-relaxed text-white/60">Steps three and five decide whether a voice agent works, and they are where most of them fail. Both depend on the system behind the voice, not the voice itself.</p>
     </div>
     <ol class="border-b border-white/10" data-reveal>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">01</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Answer</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Picks up on the first ring, identifies itself as an assistant, and asks what the caller needs. No menu, no hold music, no &ldquo;press 1&rdquo;.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Answer</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Picks up on the first ring, identifies itself as an assistant, and asks what the caller needs. No menu, no hold music, no &ldquo;press 1&rdquo;.</p></div>
       </li>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">02</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Understand</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Works out the service, the duration it implies, whether a specific person is requested, and whether this is a new or returning caller, handling interruptions and corrections the way real callers talk.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Understand</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Works out the service, the duration it implies, whether a specific person is requested, and whether this is a new or returning caller, handling interruptions and corrections the way real callers talk.</p></div>
       </li>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">03</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Check real availability<span class="ml-3 rounded-full bg-[#76B900]/20 px-2.5 py-0.5 align-middle font-mono text-[9.5px] uppercase tracking-wider text-[#9bd600]">Where most agents fail</span></h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">The agent asks the scheduling engine what is bookable and can only offer what comes back. Staff, room, equipment and buffer rules are resolved there, never inferred by the model.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Check real availability<span class="ml-3 rounded-full bg-[#76B900]/20 px-2.5 py-0.5 align-middle font-mono text-[9.5px] uppercase tracking-wider text-[#9bd600]">Where most agents fail</span></h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">The agent asks the scheduling engine what is bookable and can only offer what comes back. Staff, room, equipment and buffer rules are resolved there, never inferred by the model.</p></div>
       </li>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">04</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Offer and agree</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Offers two or three genuine options rather than reading a list, takes the caller&rsquo;s choice, and collects only what the booking actually requires.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Offer and agree</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Offers two or three genuine options rather than reading a list, takes the caller&rsquo;s choice, and collects only what the booking actually requires.</p></div>
       </li>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">05</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Write it back<span class="ml-3 rounded-full bg-[#76B900]/20 px-2.5 py-0.5 align-middle font-mono text-[9.5px] uppercase tracking-wider text-[#9bd600]">Where most agents fail</span></h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Written to your system as a transactional booking against the same engine that quoted the slot, so two callers racing for the last appointment cannot both get it.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Write it back<span class="ml-3 rounded-full bg-[#76B900]/20 px-2.5 py-0.5 align-middle font-mono text-[9.5px] uppercase tracking-wider text-[#9bd600]">Where most agents fail</span></h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Written to your system as a transactional booking against the same engine that quoted the slot, so two callers racing for the last appointment cannot both get it.</p></div>
       </li>
       <li class="group relative grid grid-cols-[4rem_1fr] items-start gap-x-5 border-t border-white/10 py-6 transition-colors duration-300 hover:bg-white/[0.03] sm:grid-cols-[6rem_1fr] sm:gap-x-8 sm:py-8">
         <span class="text-[48px] font-semibold leading-none tracking-tight text-transparent transition-all duration-300 group-hover:text-[#9bd600] sm:text-[72px]" style="-webkit-text-stroke: 1.5px #76B900;">06</span>
-        <div class="max-w-xl"><h3 class="text-[21px] font-medium leading-snug tracking-tight text-white sm:text-[25px]">Confirm and follow up</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Confirmation by SMS or email with a link to change it, then a two-way reminder call before the appointment so the caller can move it rather than not turn up.</p></div>
+        <div class="max-w-xl"><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Confirm and follow up</h3><p class="mt-2 text-[15px] leading-relaxed text-white/55 transition-colors group-hover:text-white/80">Confirmation by SMS or email with a link to change it, then a two-way reminder call before the appointment so the caller can move it rather than not turn up.</p></div>
       </li>
     </ol>
   </div>
@@ -466,7 +473,7 @@ faqs:
   <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
     <div data-reveal>
       <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Why it works</span>
-      <h2 id="va-avail-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[44px]">Availability a plain calendar cannot represent.</h2>
+      <h2 id="va-avail-heading" class="text-balance text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">Availability a plain calendar cannot represent.</h2>
       <p class="mt-6 max-w-xl text-[16.5px] leading-relaxed text-[#374151]">Most booking automation assumes a calendar with free and busy time. Real constraints rarely look like that: two practitioners sharing one treatment room, a twenty-minute turnaround between slots, a double appointment that needs a senior clinician, a weekend slot that needs a deposit first. A tool that only sees free/busy will cheerfully offer a slot that cannot be honoured.</p>
       <p class="mt-4 max-w-xl text-[16.5px] leading-relaxed text-[#374151]">We run booking agents on <a href="/resources/zenly-case-study/" class="font-medium text-[#5a9100] underline underline-offset-2">Zennly</a>, our own scheduling engine, built for exactly this multi-provider, multi-resource case with automatic conflict resolution. The voice agent is the phone front end; Zennly is the part that knows what is genuinely bookable. If your existing calendar already expresses your rules, we will say so and connect straight to it.</p>
     </div>
@@ -482,13 +489,13 @@ faqs:
   <div class="mx-auto max-w-6xl">
     <div class="mb-14 max-w-3xl" data-reveal>
       <span class="mb-5 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#5a9100]"><span class="h-px w-8 bg-[#5a9100]"></span>Alternatives</span>
-      <h2 id="va-alt-heading" class="text-balance text-[32px] font-medium leading-[1.12] tracking-tight text-[#111827] sm:text-[42px]">Voice agent, IVR, or answering service?</h2>
+      <h2 id="va-alt-heading" class="text-balance text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">Voice agent, IVR, or answering service?</h2>
       <p class="mt-4 max-w-xl text-[16px] leading-relaxed text-[#6B7280]">All three answer the phone. They differ in what happens next, and a voice agent is not always the right one.</p>
     </div>
     <div class="grid md:grid-cols-3 md:items-stretch" data-reveal>
-      <div class="py-2 md:py-8 md:pr-8"><div class="relative"><h3 class="text-[24px] font-medium tracking-tight text-[#111827]">IVR menu</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#6B7280]">A menu that routes calls.</p><dl><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Navigates a menu</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Rarely: routes or takes a message</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">No</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Message only</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Yes</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">None</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">You only need routing</dd></div></dl></div></div>
-      <div class="py-2 md:border-l md:border-navy-100 md:px-8 md:py-8"><div class="relative"><h3 class="text-[24px] font-medium tracking-tight text-[#111827]">Answering service</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#6B7280]">A person who takes the call.</p><dl><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Speaks to a person</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Sometimes: often a message</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Only if given access</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Costs more overnight</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">No</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Good</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Calls are few, complex, high value</dd></div></dl></div></div>
-      <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-8 md:-my-5 md:p-10"><div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 80% 50% at 100% 0%, rgba(118,185,0,.28) 0%, transparent 60%);"></div><div class="relative"><span class="mb-3 inline-block rounded-full bg-[#76B900]/20 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">What we build</span><h3 class="text-[24px] font-medium tracking-tight text-white">Voice agent</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#9bd600]">Answers, books and follows up.</p><dl><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Speaks naturally</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes, written to your system</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes, from the scheduling engine</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Same as any other hour</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Escalates to a person</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Calls are many, repetitive, bookable</dd></div></dl></div></div>
+      <div class="py-2 md:py-8 md:pr-8"><div class="relative"><h3 class="text-[#111827] text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">IVR menu</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#6B7280]">A menu that routes calls.</p><dl><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Navigates a menu</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Rarely: routes or takes a message</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">No</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Message only</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Yes</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">None</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">You only need routing</dd></div></dl></div></div>
+      <div class="py-2 md:border-l md:border-navy-100 md:px-8 md:py-8"><div class="relative"><h3 class="text-[#111827] text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Answering service</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#6B7280]">A person who takes the call.</p><dl><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Speaks to a person</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Sometimes: often a message</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Only if given access</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Costs more overnight</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">No</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Good</dd></div><div class="border-t border-navy-100 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-[#111827]">Calls are few, complex, high value</dd></div></dl></div></div>
+      <div class="relative overflow-hidden rounded-[28px] bg-navy-950 p-8 md:-my-5 md:p-10"><div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background: radial-gradient(ellipse 80% 50% at 100% 0%, rgba(118,185,0,.28) 0%, transparent 60%);"></div><div class="relative"><span class="mb-3 inline-block rounded-full bg-[#76B900]/20 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[#9bd600]">What we build</span><h3 class="text-white text-[20px] sm:text-[22px] font-semibold leading-[1.3] tracking-tight">Voice agent</h3><p class="mt-1 mb-5 text-[14px] leading-snug text-[#9bd600]">Answers, books and follows up.</p><dl><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Caller experience</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Speaks naturally</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Completes the booking</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes, written to your system</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Knows real availability</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes, from the scheduling engine</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Out of hours</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Same as any other hour</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Twenty calls at once</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Yes</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Judgement on an odd case</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Escalates to a person</dd></div><div class="border-t border-white/10 py-3.5"><dt class="font-mono text-[10px] uppercase tracking-wider text-white/40">Best when</dt><dd class="mt-1 text-[15.5px] leading-snug text-white">Calls are many, repetitive, bookable</dd></div></dl></div></div>
     </div>
     <p class="mt-12 max-w-3xl text-[15px] leading-relaxed text-[#6B7280]">If your phone rings a handful of times a day with complex, high-value enquiries, a good receptionist beats any agent and we will tell you so. The case for a voice agent is volume and repetition.</p>
   </div>
@@ -529,7 +536,7 @@ faqs:
   <div class="mx-auto max-w-3xl">
     <div class="mb-8 text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">FAQ</span>
-      <h2 id="va-faq-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px]">Questions about voice agents</h2>
+      <h2 id="va-faq-heading" class="text-[#111827] text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">Questions about voice agents</h2>
     </div>
     <div class="space-y-3" data-reveal>
       {% for item in sd.faq %}
@@ -576,7 +583,7 @@ faqs:
           <span class="min-w-0">
             <span class="block font-mono text-[10px] uppercase tracking-wider text-[#5a9100]">MDN Web Docs</span>
             <span class="mt-1.5 block text-[18px] font-medium leading-snug tracking-tight text-[#111827] transition-colors group-hover:text-[#5a9100]">SpeechSynthesis</span>
-            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">The live demo’s voices use the browser’s built-in speech synthesis, described here.</span>
+            <span class="mt-1.5 block max-w-xl text-[14px] leading-relaxed text-[#6B7280]">The live demo plays recorded AI voices. If a recording cannot load, it falls back to the browser’s built-in speech synthesis, described here.</span>
           </span>
           <span class="mt-5 text-[#9CA3AF] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#5a9100]"><span class="sr-only">Read source</span><svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg></span>
         </a>
@@ -602,7 +609,7 @@ faqs:
     <div class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16" style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);" data-reveal>
       <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true" style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"></div>
       <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">Get Started</span>
-      <h2 class="relative z-10 mx-auto max-w-2xl text-[28px] font-semibold leading-[1.2] tracking-tight text-white sm:text-[36px]">{{ sd.cta.headline }}</h2>
+      <h2 class="relative z-10 mx-auto max-w-2xl text-white text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-[1.2] tracking-tight">{{ sd.cta.headline }}</h2>
       <p class="relative z-10 mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/60">{{ sd.cta.description }}</p>
       <p class="relative z-10 mx-auto mt-3 max-w-xl font-mono text-[11px] uppercase tracking-wider text-white/40">Based in Kathmandu, Nepal &middot; Clients in Nepal and abroad</p>
       <div class="relative z-10 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -737,6 +744,7 @@ faqs:
 }
 </script>
 
+<script>window.VOICE_CLIPS = {{ (voiceClips or {}) | dump | safe }};</script>
 {% raw %}
 <script>
 window.voiceDemo = function () {
@@ -798,7 +806,12 @@ window.voiceDemo = function () {
     }
   };
   return {
-    scenarios: Object.keys(SC).map(function (k) { return { id: k, label: SC[k].label }; }),
+    clips: window.VOICE_CLIPS || { en: {}, ne: {} }, lang: 'en', clipMode: false, _a: null,
+    get hasNe() { return this.neIds().length > 0; },
+    get scenarios() { var self = this; return (this.lang === 'ne' ? this.neIds() : Object.keys(SC)).map(function (k) { return { id: k, label: SC[k].label }; }); },
+    neIds() { var self = this, ne = this.clips.ne || {}; return Object.keys(SC).filter(function (k) { return SC[k].steps.every(function (_, i) { return ne[k + '-' + i]; }); }); },
+    clipFor(id, i) { var c = (this.clips[this.lang] || {})[id + '-' + i]; return c ? { url: '/assets/audio/voice-demo/' + this.lang + '/' + id + '-' + i + '.mp3', c: c } : null; },
+    setLang(l) { if (this.lang === l) return; this.lang = l; this.userDriven = true; this.select(l === 'ne' ? this.neIds()[0] : 'booking'); this.play(); },
     phases: ['Listen', 'Understand', 'Check availability', 'Book', 'Confirm'],
     active: 'booking', lines: [], logs: [], cells: {}, bookings: [], sms: null, status: 'ready', phase: -1, speaker: null,
     sound: false, soundBlocked: false, userMuted: false, primed: false, autoDone: false, voiceInfo: { agent: '', caller: '' }, _v: null, inView: false, auto: true, userDriven: false, started: false, token: 0, clock: '0:00', t0: 0, tick: null, timers: [],
@@ -827,7 +840,7 @@ window.voiceDemo = function () {
       if (this.inView) return;
       this.inView = true; this.userDriven = false; this.started = true; this.autoDone = false;
       this.soundBlocked = false;
-      if ('speechSynthesis' in window && !this.userMuted) { this.sound = true; this.pickVoices(); }
+      if (('speechSynthesis' in window || this.hasClips()) && !this.userMuted) { this.sound = true; if ('speechSynthesis' in window) this.pickVoices(); }
       this.select('booking');
       this.play();
     },
@@ -848,9 +861,11 @@ window.voiceDemo = function () {
         self.select(nxt); self.play();
       }, 2600));
     },
+    hasClips() { return !!(Object.keys(this.clips.en || {}).length || Object.keys(this.clips.ne || {}).length); },
     toggleSound() {
       this.sound = !this.sound; this.userMuted = !this.sound; this.soundBlocked = false;
       if (!this.sound && 'speechSynthesis' in window) window.speechSynthesis.cancel();
+      if (!this.sound && this._a) { try { this._a.pause(); } catch (e) {} }
       if (this.sound && 'speechSynthesis' in window) { window.speechSynthesis.getVoices(); this.pickVoices(); }
     },
     halt() {
@@ -858,6 +873,7 @@ window.voiceDemo = function () {
       this.timers.forEach(clearTimeout); this.timers = [];
       if (this.tick) { clearInterval(this.tick); this.tick = null; }
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      if (this._a) { try { this._a.onended = null; this._a.onerror = null; this._a.pause(); } catch (e) {} this._a = null; }
       this.speaker = null;
     },
     select(id) {
@@ -874,11 +890,16 @@ window.voiceDemo = function () {
       var run = function (i) {
         if (tok !== self.token) return;
         if (i >= steps.length) { self.status = 'done'; self.speaker = null; if (self.tick) { clearInterval(self.tick); self.tick = null; } if (self.auto && self.inView && !self.userDriven) { self.nextScenario(); } return; }
-        var st = steps[i]; self.apply(st);
+        var st = steps[i], cl = self.clipFor(id, i), txt = (self.lang === 'ne' && cl) ? cl.c.text : st.text;
+        self.apply(st, txt, (self.lang === 'ne' && cl) ? cl.c.gloss : '');
         var advanced = false;
         var next = function (gap) { if (advanced || tok !== self.token) return; advanced = true; self.speaker = null; self.timers.push(setTimeout(function () { run(i + 1); }, gap)); };
-        var fallback = Math.max(1500, st.text.length * 70);
-        if (self.sound && 'speechSynthesis' in window) {
+        var fallback = Math.max(1500, txt.length * 70);
+        if (self.sound && cl) {
+          self.playClip(cl.url, function () { next(450); }, function () { if (self.lang === 'en' && 'speechSynthesis' in window) { self.clipMode = false; self.speak(st, function () { next(450); }); } else { next(300); } });
+          self.timers.push(setTimeout(function () { next(300); }, Math.round(cl.c.d * 1000) + 8000));
+        } else if (self.sound && 'speechSynthesis' in window && self.lang === 'en') {
+          self.clipMode = false;
           self.speak(st, function () { next(450); });
           self.timers.push(setTimeout(function () { next(300); }, fallback + 6000));
         } else {
@@ -886,6 +907,21 @@ window.voiceDemo = function () {
         }
       };
       this.timers.push(setTimeout(function () { run(0); }, 500));
+    },
+    playClip(url, done, failed) {
+      var self = this;
+      if (!this.inView) { done(); return; }
+      try {
+        var a = new Audio(url); a.preload = 'auto'; this._a = a;
+        var finished = false, end = function () { if (finished) return; finished = true; done(); };
+        a.onended = end;
+        a.onerror = function () { if (finished) return; finished = true; failed(); };
+        var pr = a.play();
+        if (pr && pr.then) { pr.then(function () { self.clipMode = true; }).catch(function (e) {
+          if (finished) return; finished = true;
+          if (e && e.name === 'NotAllowedError') { self.sound = false; self.soundBlocked = true; done(); } else { failed(); }
+        }); } else { this.clipMode = true; }
+      } catch (e) { failed(); }
     },
     pickVoices() {
       if (this._v) return this._v;
@@ -928,10 +964,10 @@ window.voiceDemo = function () {
         }, 1000);
       } catch (e) { done(); }
     },
-    apply(s) {
+    apply(s, text, gloss) {
       var self = this, a = s.act || {};
       this.speaker = s.who; this.phase = s.ph;
-      this.lines.push({ who: s.who, text: s.text });
+      this.lines.push({ who: s.who, text: text || s.text, gloss: gloss || '' });
       (s.log || []).forEach(function (e) { self.logs.push(e); });
       (a.hold || []).forEach(function (k) { self.cells[k] = 'hold'; });
       (a.free || []).forEach(function (k) { delete self.cells[k]; });

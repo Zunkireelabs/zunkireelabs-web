@@ -881,6 +881,10 @@
       {
         "question": "What's the difference between a chatbot and an AI commerce agent?",
         "answer": "Traditional chatbots follow scripted responses and can only answer pre-programmed questions. AI commerce agents are autonomous systems that understand context, make decisions, and take actions—like searching your catalog, updating carts, processing payments, and handling exceptions. They're the difference between a FAQ bot and an AI sales representative."
+      },
+      {
+        "question": "Can Zunkiree Labs deliver AI ecommerce work regardless of where my team is located?",
+        "answer": "Yes. Our AI ecommerce implementations, including Stella, serve online retailers globally, including the US, UK, India, Australia, and Canada, with remote setup and ongoing optimization regardless of where your storefront operates."
       }
     ],
     "relatedServices": [
@@ -1489,6 +1493,10 @@
       {
         "question": "What's the total cost of ownership for custom software?",
         "answer": "Initial build is typically 3-6 months of development. Ongoing costs include hosting (often $500-2000/month), maintenance (10-20% of build cost annually), and enhancements as needed. We provide detailed TCO projections before project start so you can compare against alternatives."
+      },
+      {
+        "question": "Can Zunkiree Labs deliver custom software work regardless of where my team is located?",
+        "answer": "Yes. We deliver custom software projects globally, including for clients across the US, UK, India, Australia, Canada, Switzerland, and the Netherlands, using the same agile process and milestone reporting regardless of location, with time-zone overlap built into every engagement."
       }
     ],
     "relatedServices": [
@@ -2680,6 +2688,10 @@
       {
         "question": "What makes content get cited by AI systems?",
         "answer": "AI systems favor clear definitions, structured data (schema markup), authoritative positioning (credentials, citations, data), and well-organized content. FAQ sections, comparison tables, and self-contained paragraphs are more likely to be extracted and cited than walls of text."
+      },
+      {
+        "question": "Can Zunkiree Labs run AEO/SEO work regardless of where my team is located?",
+        "answer": "Yes. We run AEO and SEO programs for clients globally, including the US, UK, India, Australia, Canada, Switzerland, and the Netherlands, tailoring keyword and structured-data strategy to each market's own search and AI-answer behavior."
       }
     ],
     "relatedServices": [

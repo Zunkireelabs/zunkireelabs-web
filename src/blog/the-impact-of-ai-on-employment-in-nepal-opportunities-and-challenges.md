@@ -44,6 +44,6 @@ The integration of AI in Nepal is a double-edged sword, presenting both immense 
 <!-- SEOAI:EXPANDEDCONTENT:START --><!-- SEOAI:FOCUS:external-citations --><div >
   <section class="gap-2">
     <h2 class="font-normal text-gray-900 text-2xl">References</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://thelondoncollege.edu.np/blogs/imapct-of-ai-and-automation-in-nepal-job-market" class="text-zunkiree-600 hover:underline">The London College | Impact of AI and Automation in Nepal's Job Market</a> — thelondoncollege.edu.np</li><li><a href="https://www.oecd.org/en/topics/sub-issues/ai-and-work.html" class="text-zunkiree-600 hover:underline">AI and work</a> — oecd.org</li></ul></div>
+    <div class="text-gray-600 leading-relaxed"><ul class="space-y-3"><li><a href="https://thelondoncollege.edu.np/blogs/imapct-of-ai-and-automation-in-nepal-job-market" class="text-zunkiree-600 hover:underline">The London College | Impact of AI and Automation in Nepal's Job Market</a> — thelondoncollege.edu.np</li><li><a href="https://www.oecd.org/en/topics/sub-issues/ai-and-work.html" class="text-zunkiree-600 hover:underline">AI and work</a> — oecd.org</li></ul></div>
   </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

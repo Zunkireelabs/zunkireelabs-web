@@ -1,4 +1,4 @@
-# AI Labs Running Top Models With Safeguards Off? What GovAI Says
+# Top AI Models With Safeguards Off? What GovAI Says
 
 URL: https://zunkireelabs.com/blog/frontier-ai-labs-internal-models-safeguards-off-govai/
 Published: 2026-10-05

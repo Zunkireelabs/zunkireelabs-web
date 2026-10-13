@@ -208,6 +208,7 @@
     "cta": "Explore Voice Agents",
     "url": "/solutions/voice-agent/",
     "icon": "voice",
+    "mockup": "/assets/images/service-card-voice-agent.webp",
     "clients": [],
     "skipLocationPages": true
   },
@@ -220,6 +221,7 @@
     "cta": "Explore Generative UI",
     "url": "/solutions/generative-ui/",
     "icon": "ui",
+    "mockup": "/assets/images/service-card-generative-ui.webp",
     "clients": [],
     "skipLocationPages": true
   },
@@ -232,6 +234,7 @@
     "cta": "Explore Custom Agents",
     "url": "/solutions/custom-agent/",
     "icon": "agent",
+    "mockup": "/assets/images/service-card-custom-agent.webp",
     "clients": [],
     "skipLocationPages": true
   },
@@ -244,6 +247,7 @@
     "cta": "Explore Outsourcing",
     "url": "/solutions/software-outsourcing/",
     "icon": "code",
+    "mockup": "/assets/images/service-card-software-outsourcing.webp",
     "clients": [],
     "skipLocationPages": true
   }
