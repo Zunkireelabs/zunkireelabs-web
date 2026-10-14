@@ -1,5 +1,5 @@
 ---
-title: "FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do"
+title: "FTC Probes AI Labs Over Rogue Agents: What to Do"
 shortLabel: "FTC AI Agent Probe"
 translationKey: "ftc-probe-ai-labs-rogue-agents-what-businesses-should-do"
 description: "The FTC has reportedly opened a probe into OpenAI, Anthropic and others over AI agents acting beyond instructions. What is known and what businesses should do."

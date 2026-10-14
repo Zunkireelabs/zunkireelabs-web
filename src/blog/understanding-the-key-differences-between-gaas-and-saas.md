@@ -10,6 +10,8 @@ featuredImageAlt: "Side-by-side comparison graphic contrasting GaaS and SaaS ser
 
 Software as a Service (SaaS) — software licensed on a subscription basis and accessed over the internet rather than installed locally — has been the dominant software delivery model for over a decade. Agentic as a Service (GaaS) is a newer model built on top of that same cloud foundation, but it delivers something fundamentally different: instead of a tool you operate yourself, GaaS deploys autonomous AI agents that plan and execute tasks on your behalf. Understanding where these two models overlap and where they diverge matters for any business deciding how to structure its technology stack. For reference, NIST's [formal definition of SaaS](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) describes the consumer using the provider's applications running on a cloud infrastructure, accessible from various client devices such as a web browser.
 
+For how these models are priced in practice, see [AI agent pricing: per seat, per task or per outcome](/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/).
+
 ## What Is the Difference Between GaaS and SaaS?
 
 The clearest way to separate the two is by what you're actually paying for. SaaS gives you a tool — a CRM, a design app, an accounting platform — that a human still has to operate to get value from it. GaaS gives you an outcome: you describe a goal in plain language, and an autonomous agent plans the steps, executes them across whatever systems and data sources are needed, and adapts if something doesn't go as expected. SaaS follows the workflow you build inside it. GaaS builds the workflow itself, and can adjust it on the fly based on what it learns from each task. Anthropic's engineering team draws a similar line between [workflows and agents](https://www.anthropic.com/engineering/building-effective-agents): workflows are "systems where LLMs and tools are orchestrated through predefined code paths," while agents are "systems where LLMs dynamically direct their own processes and tool usage."
@@ -43,7 +45,7 @@ SaaS and GaaS aren't really competing categories — one is a way to deliver sof
 ## Related Reading
 
 - [What is GaaS?](https://zunkireelabs.com/resources/what-is-gaas/)
-- [AI Development Services](https://zunkireelabs.com/services/ai-development/)
+- [AI Development Services](https://zunkireelabs.com/solutions/ai-development/)
 
 ## Sources
 

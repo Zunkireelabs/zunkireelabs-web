@@ -1,4 +1,4 @@
-# Disconnected Tools: What They Cost and How Orchestration Helps
+# Disconnected Tools: The Cost and How Orchestration Helps
 
 URL: https://zunkireelabs.com/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/
 Published: 2026-10-05
@@ -86,6 +86,7 @@ The evidence is mixed. Asana's own survey of more than 10,000 knowledge workers 
 
 ## Related Insights
 
+- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
 - [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)

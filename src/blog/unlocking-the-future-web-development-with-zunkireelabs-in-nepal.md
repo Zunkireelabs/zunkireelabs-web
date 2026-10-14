@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Unlocking the Future: Web Development with Zunkiree Labs in Nepal"
+title: "Web Development with Zunkiree Labs in Nepal"
 description: "Discover how Zunkiree Labs is transforming web development in Nepal through innovative technology and custom solutions tailored for a global market."
 date: "2026-09-21"
 shortLabel: "Web Development"

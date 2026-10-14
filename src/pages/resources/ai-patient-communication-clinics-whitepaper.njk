@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "AI Patient Communication for Dental and Medical Clinics: A Safe-Adoption Whitepaper"
+description: "Where AI can safely handle patient enquiries and scheduling in clinics, what it must never decide, and the privacy checks to complete first."
+permalink: /resources/ai-patient-communication-clinics-whitepaper/
+slug: ai-patient-communication-clinics-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The front-desk problem</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Clinic staff spend a large part of the day answering the same questions about prices, insurance, opening hours and availability, while patients in the building wait. The same pattern repeats on the phone and in messages.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    AI suits this routine communication because the questions are repetitive and the answers come from the clinic's own information.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What AI must not do</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    An assistant should not diagnose, recommend treatment or interpret results. Its scope should be administrative: answering from approved information, booking, rescheduling and passing clinical questions to staff with the context attached.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Write the scope down and test it with adversarial questions before launch. Clinical safety comes from what the assistant is not allowed to answer.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Privacy and consent</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Patient data is sensitive. Decide what the assistant stores, for how long, and who can read it. Make sure patients know they are speaking with an automated system and that vendors handling the data meet your obligations.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Requirements vary by country and by practice type, so confirm them with your own legal and compliance advice.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">A supervised pilot</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Begin with one channel and a short list of approved topics, with staff reviewing a sample of conversations each week. Track unresolved questions and handoffs to find gaps in the approved information.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Widen scope only after the review shows consistent, safe answers. Our Dental AI Assistant is being built along these lines, as described in its case study.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI for dental clinics, AI patient communication, healthcare chatbot",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can AI answer patient questions for a clinic?", "acceptedAnswer": {"@type": "Answer", "text": "Yes for administrative questions such as prices, hours and availability, drawn from approved clinic information, with clinical questions passed to staff."}}, {"@type": "Question", "name": "Should an AI assistant give medical advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It should not diagnose or recommend treatment and should hand clinical questions to qualified staff."}}, {"@type": "Question", "name": "Is patient data safe with an AI assistant?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what is stored, where, for how long and who has access. Complete a privacy and consent review before launch."}}, {"@type": "Question", "name": "How should a clinic start?", "acceptedAnswer": {"@type": "Answer", "text": "With one channel, a short list of approved topics and weekly staff review of sampled conversations."}}]}</script><!-- SEOAI:FAQ:END -->

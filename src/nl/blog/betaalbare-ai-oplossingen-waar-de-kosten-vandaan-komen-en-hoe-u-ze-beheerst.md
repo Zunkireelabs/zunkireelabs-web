@@ -31,7 +31,7 @@ translationKey: "affordable-ai-technology-solutions-for-businesses-worldwide"
 
 ## Wat Zunkiree Labs aanbiedt
 
-<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties, en is gevestigd in Nepal. De volledige lijst staat op de <a href="/services/" rel="noopener">pagina met diensten</a>. Orca, onze intelligentie- en orkestratielaag, coördineert agent-workflows over de CRM-, e-mail- en marketingtools die een organisatie al gebruikt. Of iets daarvan binnen uw budget past, hangt af van uw workflow, dus wij zouden beginnen bij één echte toepassing. Zie ook <a href="/blog/what-is-flow-ai/" rel="noopener">wat Flow AI is</a>.</p>
+<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties, en is gevestigd in Nepal. De volledige lijst staat op de <a href="/solutions/" rel="noopener">pagina met diensten</a>. Orca, onze intelligentie- en orkestratielaag, coördineert agent-workflows over de CRM-, e-mail- en marketingtools die een organisatie al gebruikt. Of iets daarvan binnen uw budget past, hangt af van uw workflow, dus wij zouden beginnen bij één echte toepassing. Zie ook <a href="/blog/what-is-flow-ai/" rel="noopener">wat Flow AI is</a>.</p>
 
 ## Bronnen
 

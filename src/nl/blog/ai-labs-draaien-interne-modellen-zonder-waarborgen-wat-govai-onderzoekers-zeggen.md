@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AI-labs en interne modellen zonder waarborgen: wat GovAI zegt"
+title: "AI-labs draaien modellen zonder waarborgen: wat GovAI zegt"
 description: "Twee GovAI-onderzoekers vertelden Fortune dat labs hun meest capabele modellen intern vaak zonder waarborgen draaien."
 date: "2026-10-05"
 featuredImage: "/assets/images/blog/ai-labs-draaien-interne-modellen-zonder-waarborgen-wat-govai-onderzoekers-zeggen.svg"

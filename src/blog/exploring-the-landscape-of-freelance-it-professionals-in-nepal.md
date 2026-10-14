@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Exploring the Landscape of Freelance IT Professionals in Nepal"
+title: "The Landscape of Freelance IT Professionals in Nepal"
 description: "The evolving role of freelance IT professionals in Nepal, with trends, opportunities and their contribution to the digital landscape."
 date: "2026-09-21"
 featuredImage: "https://images.pexels.com/photos/36444642/pexels-photo-36444642.png?auto=compress&cs=tinysrgb&h=650&w=940"

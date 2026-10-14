@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Trumps Super Intelligence Force: Was die Executive Order sagt"
+title: "Super Intelligence Force: Was Trumps Executive Order sagt"
 description: "Die US-Regierung hat KI in „Super Intelligence“ umbenannt und eine Task Force gegründet. Was die Anordnung sagt, was offen ist und was es für Firmen heißt."
 date: "2026-10-05"
 featuredImage: "/assets/images/blog/trumps-super-intelligence-force-was-die-executive-order-wirklich-sagt.svg"

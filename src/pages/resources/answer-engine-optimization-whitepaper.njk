@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "Answer Engine Optimization: How Brands Get Cited by AI Overviews and Chat Assistants"
+description: "How AI Overviews and chat assistants choose sources, what makes a page citable, and a practical AEO checklist for brands."
+permalink: /resources/answer-engine-optimization-whitepaper/
+slug: answer-engine-optimization-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How AI answers choose sources</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    AI Overviews and chat assistants assemble an answer from passages they retrieve, then link to the pages they used. Pages that state something clearly, early and in a self-contained passage are easier to lift than pages that make the reader hunt.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Citation is not ranking. A page can be cited for part of an answer without being the first result, and a brand can be described by a source it does not control.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Make passages quotable</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Lead each section with a direct statement that makes sense out of context: what something is, who it is for, what it does. Use descriptive headings that match the question people ask, and keep facts specific and consistent across pages.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Add structured data such as Organization, Article and FAQ markup so machines can read the page without guessing.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Entities and third-party proof</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Assistants weigh independent signals. Consistent company naming, the same description across your site and profiles, and listings on reputable third-party sites all help a system decide you are a real, relevant entity.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Own your descriptions. If other sites describe you in other words, the summary will follow them.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Beware of feeding competitors</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    We saw this ourselves: a neutral list page on our own site, with detailed profiles of competitors, was used by an AI Overview as the source for their descriptions. Detailed competitor profiles on your pages can make those competitors more visible than you.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Keep comparison pages focused on your own offer, name competitors sparingly and avoid supplying full descriptions.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "answer engine optimization, AEO, generative engine optimization, AI Overviews",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is answer engine optimization?", "acceptedAnswer": {"@type": "Answer", "text": "AEO is the practice of structuring content so AI assistants and AI Overviews can find, understand and cite it when answering questions."}}, {"@type": "Question", "name": "How is AEO different from SEO?", "acceptedAnswer": {"@type": "Answer", "text": "SEO aims to rank pages in search results. AEO aims to have specific passages selected and cited inside generated answers, which depends on clarity, structure and entity signals."}}, {"@type": "Question", "name": "Can I guarantee I'll appear in AI Overviews?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can improve the odds with clear, quotable content, structured data and consistent third-party signals, but the platform decides."}}, {"@type": "Question", "name": "Should I mention competitors on my pages?", "acceptedAnswer": {"@type": "Answer", "text": "Sparingly. Detailed competitor profiles can be reused by AI systems and promote those competitors."}}]}</script><!-- SEOAI:FAQ:END -->

@@ -1,5 +1,5 @@
 ---
-title: "Understanding the Meaning of Complex Availability in Scheduling" # SEOAI:TITLE
+title: "What Is Complex Availability in Scheduling?" # SEOAI:TITLE
 description: "What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zennly resolve it automatically."
 date: "2026-07-26"
 featuredImage: "https://images.pexels.com/photos/6170653/pexels-photo-6170653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

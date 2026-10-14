@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "AI in het dagelijks leven: wat de gebruiksdata echt laten zien"
+title: "AI in het dagelijks leven: wat de data echt laten zien"
 description: "Ongeveer de helft van de Amerikaanse volwassenen gebruikt AI-chatbots, wereldwijd slechts een op de vijf werkenden. Wat de enquêtes wel en niet laten zien."
 date: "2026-10-05"
 lastUpdated: "2026-10-05"

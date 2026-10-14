@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Robotaxiwet van Californië: Wat het betekent voor autonome AI"
+title: "Robotaxiwet Californië: wat het betekent voor autonome AI"
 description: "Californië wil robotaxi-exploitanten beboeten die hulpdiensten langer dan 30 minuten blokkeren. Wat SB 1246 vereist en wat het betekent voor AI-automatisering."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/robotaxiwet-van-californie-wat-het-betekent-voor-autonome-ai.svg"

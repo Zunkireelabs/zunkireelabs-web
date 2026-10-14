@@ -32,8 +32,10 @@ services:
       - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-web-staging.tls=true"
       - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
-      # Keep staging out of search engines. noindex@file is defined on the VPS
-      # in traefik/dynamic/noindex.yml (it was applied by hand on the server).
+      # Keep staging out of search engines. It serves a full copy of the site, and
+      # Search Console showed dev-web URLs indexed. noindex@file is defined on the
+      # VPS in traefik/dynamic/noindex.yml. Do NOT block staging in robots.txt:
+      # Google must be able to crawl a page to see the noindex.
       - "traefik.http.routers.zunkiree-web-staging.middlewares=noindex@file"
       # HTTP to HTTPS redirect
       - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"

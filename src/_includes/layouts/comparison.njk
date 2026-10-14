@@ -283,6 +283,24 @@ layout: base.njk
   </div>
 </section>
 
+{# FAQ: visible accordion + FAQPage markup, both generated from comp.faq #}
+{% if comp.faq and comp.faq.length %}
+<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="comparison-faq-heading">
+  <div class="mx-auto max-w-5xl">
+    <h2 id="comparison-faq-heading" class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+    <div class="divide-y divide-navy-100 border-y border-navy-100" data-reveal>
+      {% for f in comp.faq %}
+      <details class="group py-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-[16px] font-medium leading-snug text-[#111827] sm:text-[17px]">{{ f.q }}<span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span></summary>
+        <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">{{ f.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{% for f in comp.faq %}{"@type":"Question","name":{{ f.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | dump | safe }} } }{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+{% endif %}
+
 {# =====================================================
    OTHER COMPARISONS — pill list, navy-50 resting state,
    #76B900 accent on hover (same interaction language as the

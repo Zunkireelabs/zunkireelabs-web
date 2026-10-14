@@ -1,4 +1,4 @@
-# Open AI Models for Nepal: Nepali Language and Low Connectivity
+# Open AI Models for Nepal: Nepali Language, Low Connectivity
 
 URL: https://zunkireelabs.com/blog/open-ai-models-nepali-language-and-low-connectivity/
 Published: 2026-10-05

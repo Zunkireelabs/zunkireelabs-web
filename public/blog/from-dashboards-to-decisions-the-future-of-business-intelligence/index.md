@@ -1,4 +1,4 @@
-# From Dashboards to Decisions: The Future of Business Intelligence
+# From Dashboards to Decisions: The Future of BI
 
 URL: https://zunkireelabs.com/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/
 Published: 2026-10-05

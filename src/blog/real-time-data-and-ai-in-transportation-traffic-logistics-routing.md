@@ -1,5 +1,5 @@
 ---
-title: "How Real-Time Data and AI Are Making Transport More Efficient"
+title: "Real-Time Data and AI Make Transport More Efficient"
 shortLabel: "AI in Transport"
 translationKey: "real-time-data-and-ai-in-transportation-traffic-logistics-routing"
 description: "Traffic-signal AI from Google and UPS's ORION routing show what real-time data can save in transport, and where cities and fleets say the limits are."

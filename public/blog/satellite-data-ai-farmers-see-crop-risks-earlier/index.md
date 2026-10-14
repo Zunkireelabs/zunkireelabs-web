@@ -1,4 +1,4 @@
-# How Satellite Data and AI Help Farmers See Crop Risks Earlier
+# Satellite Data and AI Help Farmers Spot Crop Risks Earlier
 
 URL: https://zunkireelabs.com/blog/satellite-data-ai-farmers-see-crop-risks-earlier/
 Published: 2026-10-05

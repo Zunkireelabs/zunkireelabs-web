@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "AI Governance and Data Privacy for SMEs: A Practical Checklist"
+description: "A lightweight AI governance and data privacy checklist for small and mid-sized businesses: what data to share, vendor questions and review routines."
+permalink: /resources/ai-governance-data-privacy-sme-whitepaper/
+slug: ai-governance-data-privacy-sme-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Start with a simple policy</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A useful AI policy fits on a page. State which tools are approved, what data may be entered, who reviews output that reaches customers and who to tell when something goes wrong. A short rule people follow beats a long one they ignore.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Review it every six months, because tools and risks change quickly.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Classify your data</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Sort information into three groups: public, internal and restricted. Restricted data, such as customer identifiers, health or financial records and credentials, should not be pasted into general-purpose AI tools unless a vendor agreement and your own review allow it.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Staff often share data with AI tools out of convenience, so make the safe route the easy one.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Questions for vendors</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Ask where data is stored and processed, how long it is retained, whether it is used to train models, who at the vendor can access it and what happens to it if you leave. Get the answers in writing.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Nepal's National AI Policy, approved in 2025, sets up national bodies but standards are still being developed, so do not rely on regulation alone to protect your data.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Review and incidents</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Require a person to check AI output before it reaches a customer in any high-stakes setting. Keep a log of errors and near-misses and review it monthly.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Decide in advance how you will correct a wrong answer, notify affected people and fix the cause.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI governance checklist, AI data privacy, responsible AI for small business",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do small businesses need an AI policy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A one-page policy covering approved tools, allowed data and review rules prevents most avoidable problems."}}, {"@type": "Question", "name": "What data should never go into an AI tool?", "acceptedAnswer": {"@type": "Answer", "text": "Restricted data such as customer identifiers, health or financial records and credentials, unless a vendor agreement and your own review allow it."}}, {"@type": "Question", "name": "What should I ask an AI vendor about data?", "acceptedAnswer": {"@type": "Answer", "text": "Where data is stored, how long it is kept, whether it trains models, who can access it and what happens when you leave."}}, {"@type": "Question", "name": "Is regulation enough to protect my data?", "acceptedAnswer": {"@type": "Answer", "text": "Not on its own. Nepal's AI policy is new and standards are still being developed, so apply your own controls."}}]}</script><!-- SEOAI:FAQ:END -->

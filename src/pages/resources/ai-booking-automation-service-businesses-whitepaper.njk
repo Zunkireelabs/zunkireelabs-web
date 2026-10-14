@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "AI Booking Automation for Service Businesses: Scheduling, No-Shows and Backfill"
+description: "How AI scheduling handles complex availability, cancellations and backfill, and how service businesses measure the bookings it recovers."
+permalink: /resources/ai-booking-automation-service-businesses-whitepaper/
+slug: ai-booking-automation-service-businesses-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Where bookings are lost</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Service businesses lose bookings in three quiet places: enquiries that arrive outside working hours, replies that take longer than the customer will wait, and cancelled slots that nobody refills. None of these show up as a complaint, only as an emptier diary.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Automating the first response and the refill recovers capacity you already pay for.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Modelling real availability</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Simple calendar tools assume one person and one slot. Real services have staff skills, equipment, travel time between jobs, buffers and rules such as minimum notice. The scheduling logic must encode these or it will propose bookings the team cannot honour.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This is the problem our Zennly booking engine is built around, and the reason we treat availability rules as data to be configured, not code to be rewritten per client.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Cancellation backfill</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    When a customer cancels, the system can offer that slot to a waiting list, ranked by fit and priority, and confirm the first acceptance. Done well, a cancellation becomes a short interruption instead of an empty hour.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Khems Cleaning increased bookings by 70% after adopting automated scheduling and cancellation backfill, as described in its case study.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Measuring the result</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Track fill rate, time to first response, no-show rate and the share of bookings made without staff involvement. Compare against the same weeks before launch to avoid mistaking seasonality for improvement.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Keep a person in the loop for exceptions such as disputes and unusual requests.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI booking system, appointment scheduling automation, reduce no-shows",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is AI booking automation?", "acceptedAnswer": {"@type": "Answer", "text": "Software that answers booking enquiries, applies your availability rules, confirms appointments and refills cancelled slots without staff handling each one."}}, {"@type": "Question", "name": "How does cancellation backfill work?", "acceptedAnswer": {"@type": "Answer", "text": "When a booking is cancelled, the slot is offered to waiting customers in priority order and confirmed with the first to accept."}}, {"@type": "Question", "name": "Can it handle staff, rooms and travel time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if those rules are modelled as part of the availability logic rather than assuming a single calendar."}}, {"@type": "Question", "name": "How do I measure whether it works?", "acceptedAnswer": {"@type": "Answer", "text": "Compare fill rate, response time, no-show rate and the share of unassisted bookings with the same period before launch."}}]}</script><!-- SEOAI:FAQ:END -->

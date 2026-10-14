@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Top AI Services in Nepal: Pioneering the Future of Technology"
+title: "Top AI Services in Nepal: Pioneering Future Technology"
 description: "Explore some of the best AI services available in Nepal, including AI development, cloud solutions, and more."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/7654133/pexels-photo-7654133.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

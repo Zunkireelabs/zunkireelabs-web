@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Trumps Super Intelligence Force: wat de executive order echt zegt"
+title: "Super Intelligence Force: wat Trumps executive order zegt"
 description: "De Amerikaanse overheid hernoemde AI tot “Super Intelligence” en richtte een taskforce op. Wat het bevel zegt, wat onduidelijk blijft en wat het betekent."
 date: "2026-10-05"
 featuredImage: "/assets/images/blog/trumps-super-intelligence-force-wat-de-executive-order-echt-zegt.svg"
