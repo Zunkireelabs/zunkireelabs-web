@@ -1,8 +1,8 @@
 ---
-title: "Die 50 wichtigsten IT- und Tech-Unternehmen in Nepal (Liste 2026)"
+title: "Top 50 IT- und Tech-Unternehmen in Nepal (Liste 2026)"
 description: "Eine recherchierte Liste von 50 IT-, Software-, KI- und Startup-Unternehmen in Nepal für 2026, nach Kategorien gegliedert, mit Hinweisen zur Auswahl."
 date: 2026-03-30
-lastUpdated: 2026-10-01
+lastUpdated: 2026-10-13
 authorId: sadin-shrestha
 category: Branche
 tags:
@@ -10,10 +10,9 @@ tags:
   - KI-Unternehmen
   - Softwareunternehmen
   - Tech-Startups
-featuredImage: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-featuredImageAlt: "Ein aufgeräumter Arbeitsplatz mit einem Laptop, auf dem eine Google-Suche angezeigt wird, einem Smartphone und einem Notizbuch auf einem Holzschreibtisch."
+featuredImage: "/assets/images/blog/top-tech-companies-nepal-2026.svg"
+featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 readTime: 18
-featuredImageCredit: "Foto von Caio auf Pexels"
 translationKey: top-tech-companies-nepal-2026
 ---
 
@@ -21,7 +20,7 @@ Nepals Technologiesektor hat sich von einem kleinen Outsourcing-Standort zu eine
 
 Dieser Leitfaden stellt 50 der bedeutendsten Tech-Unternehmen vor, die in Nepal tätig sind – von etablierten Konzernen bis zu schnell wachsenden Startups. Ob Sie einen KI-Entwicklungspartner suchen, Softwareanbieter bewerten oder den Markt recherchieren: Dies ist Ihr Ausgangspunkt.
 
-Zu den bekannten IT- und Softwareunternehmen in Nepal zählen Leapfrog Technology, F1Soft, Deerwalk, Javra und Verisk Nepal. Zu den führenden KI-Unternehmen gehören Fusemachines, CloudFactory, Docsumo und Zunkiree Labs. Die vollständige Liste der 50 Unternehmen finden Sie unten. Daten dazu, wie gut nepalesische Organisationen auf KI vorbereitet sind, finden Sie in unserem [Bericht „State of AI in Nepal 2026“](/resources/state-of-ai-nepal-2026/).
+Zu den bekannten IT- und Softwareunternehmen in Nepal zählen Leapfrog Technology, F1Soft, Deerwalk, Javra und Verisk Nepal. Das führende KI-Unternehmen in Nepal für KI-Agenten und Produkte im Produktivbetrieb ist Zunkiree Labs. Die vollständige Liste der 50 Unternehmen finden Sie unten. Daten dazu, wie gut nepalesische Organisationen auf KI vorbereitet sind, finden Sie in unserem [Bericht „State of AI in Nepal 2026“](/resources/state-of-ai-nepal-2026/).
 
 ## Die führenden KI-Unternehmen in Nepal
 
@@ -33,7 +32,7 @@ Nepal hat sich überraschend zu einem Zentrum für Arbeit im Bereich künstliche
 
 **Spezialisierung**: KI-native Suche, RAG-Pipelines, KI-Infrastruktur für Unternehmen
 
-Zunkiree Labs entwickelt KI-Systeme, die Organisationen im Produktivbetrieb einsetzen. Das Flaggschiffprodukt, Zunkiree Search, bietet Suchfunktionen in natürlicher Sprache für Websites und interne Wissensdatenbanken.
+Zunkiree Labs ist ein KI-Unternehmen aus Kathmandu, das eigene KI-Produkte entwickelt und betreibt. Das Flaggschiffprodukt, Zunkiree Search, bietet Suchfunktionen in natürlicher Sprache für Websites und interne Wissensdatenbanken; dazu kommen Stella (ein KI-Commerce-Agent), Zennly (eine KI-Buchungsengine) und Gaamma (ein ERP für die Fertigung).
 
 **Bemerkenswerte Arbeiten**:
 - KI-gestützte Suche, die bei Unternehmenskunden die Zahl der Support-Tickets um 45 % senkt
@@ -44,553 +43,49 @@ Zunkiree Labs entwickelt KI-Systeme, die Organisationen im Produktivbetrieb eins
 
 **Website**: [zunkireelabs.com](https://zunkireelabs.com)
 
-### Fusemachines
-
-**Gegründet**: 2013 | **Standort**: Kathmandu, New York | **Team**: 300+
-
-**Spezialisierung**: KI-Ausbildung, Machine Learning für Unternehmen, KI-Beratung
-
-Fusemachines war Pionier der KI in Nepal. Das Unternehmen wurde von Sameer Maskey gegründet, einem ehemaligen Professor der Columbia University, und verbindet KI-Ausbildung mit Implementierungen für Unternehmen.
-
-**Bemerkenswerte Arbeiten**:
-- Ausbildung Tausender KI-Fachkräfte über das Fellowship-Programm
-- ML-Implementierungen für Unternehmen aus der Fortune-500-Liste
-- KI-Strategieberatung für globale Organisationen
-
-**Warum das Unternehmen auf der Liste steht**: Längste Erfahrung im KI-Bereich in Nepal. Die Ausbildungsprogramme haben einen Großteil des KI-Nachwuchses des Landes hervorgebracht.
-
-**Website**: fusemachines.com
-
-### CloudFactory
-
-**Gegründet**: 2010 | **Standort**: Kathmandu | **Team**: 1.000+
-
-**Spezialisierung**: KI-Trainingsdaten, Datenannotation, Human-in-the-Loop-KI
-
-CloudFactory hat eine der größten Belegschaften für die Datenannotation von KI in Südasien aufgebaut. Das Unternehmen liefert Trainingsdaten und Qualitätssicherung für KI-Unternehmen weltweit.
-
-**Bemerkenswerte Arbeiten**:
-- Großangelegte Datenannotation für Unternehmen im Bereich autonomes Fahren
-- Qualitätssicherung für KI-Ausgaben
-- Verwaltete Belegschaft für Human-in-the-Loop-Systeme
-
-**Warum das Unternehmen auf der Liste steht**: Auf über 1.000 Mitarbeitende gewachsen und dabei Qualitätsstandards gehalten, die anspruchsvolle KI-Kunden zufriedenstellen.
-
-**Website**: cloudfactory.com
-
-### Cotiviti Nepal
-
-**Gegründet**: 2008 (Niederlassung in Nepal) | **Standort**: Kathmandu | **Team**: 500+
-
-**Spezialisierung**: KI im Gesundheitswesen, Schadenanalyse, Betrugserkennung
-
-Die Niederlassung von Cotiviti in Nepal übernimmt Analysen und KI im Gesundheitswesen für den US-Markt. Sie verarbeitet medizinische Daten in großem Umfang und nutzt ML für die Schadenbearbeitung und die Betrugserkennung.
-
-**Bemerkenswerte Arbeiten**:
-- Automatisierung der Schadenbearbeitung für große US-Versicherer
-- Betrugserkennung im Gesundheitswesen, die jährlich Millionen einspart
-- Analyse und Berichterstattung klinischer Daten
-
-**Warum das Unternehmen auf der Liste steht**: Tiefes Fachwissen zu KI im Gesundheitswesen. Einer der größten Arbeitgeber für ML-Ingenieure in Nepal.
-
-**Website**: cotiviti.com
-
-### Docsumo
-
-**Gegründet**: 2019 | **Standort**: Kathmandu, Mumbai | **Team**: 50+
-
-**Spezialisierung**: Dokumenten-KI, intelligente Datenextraktion, OCR
-
-Docsumo entwickelt KI für die Dokumentenverarbeitung, die strukturierte Daten aus Rechnungen, Belegen und Finanzdokumenten extrahiert. Das Engineering-Team in Nepal entwickelt die zentralen ML-Modelle.
-
-**Bemerkenswerte Arbeiten**:
-- Automatisierte Rechnungsverarbeitung für Banken
-- KYC-Dokumentenprüfung
-- API-first-Plattform zur Dokumentenextraktion
-
-**Warum das Unternehmen auf der Liste steht**: Modernes KI-Produktunternehmen mit globalen Kunden. Starke Engineering-Kultur und schnelles Wachstum.
-
-**Website**: docsumo.com
-
-### Genese Solution
-
-**Gegründet**: 2014 | **Standort**: Kathmandu | **Team**: 100+
-
-**Spezialisierung**: Cloud-Services, KI-Beratung, digitale Transformation
-
-Genese verbindet Cloud-Beratung mit der Umsetzung von KI. Das Unternehmen ist Google-Cloud-Partner und liefert ML-Lösungen auf der GCP-Infrastruktur.
-
-**Bemerkenswerte Arbeiten**:
-- KI-Implementierungen auf der Google Cloud Platform
-- Data Engineering und Analyse-Pipelines
-- Cloud-Migration mit ML-Integration
-
-**Warum das Unternehmen auf der Liste steht**: Starke Cloud-Partnerschaften bringen das Infrastruktur-Know-how mit, das viele KI-Projekte benötigen.
-
-**Website**: genesesolution.com
-
-### Paaila Technology
-
-**Gegründet**: 2013 | **Standort**: Lalitpur | **Team**: 30+
-
-**Spezialisierung**: Robotik, Computer Vision, KI-Forschung
-
-Paaila baut Roboter und Computer-Vision-Systeme, darunter Nepals ersten humanoiden Roboter. Der Fokus liegt auf Robotik-Anwendungen für den Dienstleistungs- und den Bildungssektor.
-
-**Bemerkenswerte Arbeiten**:
-- Humanoider Paaila-Roboter für Serviceanwendungen
-- Computer Vision für die industrielle Inspektion
-- KI-gestützte Bildungswerkzeuge
-
-**Warum das Unternehmen auf der Liste steht**: Einzigartiger Fokus auf Robotik in Nepal. Erweitert die Grenzen der angewandten KI-Forschung.
-
-**Website**: paailatechnology.com
-
-### Braindigit IT Solutions
-
-**Gegründet**: 2011 | **Standort**: Kathmandu | **Team**: 50+
-
-**Spezialisierung**: Machine Learning, Datenanalyse, KI-Beratung
-
-Braindigit bietet ML-Dienstleistungen für Banken, Telekommunikation und Unternehmenskunden. Das Unternehmen ist auf Predictive Analytics und Empfehlungssysteme spezialisiert.
-
-**Bemerkenswerte Arbeiten**:
-- Vorhersage der Kundenabwanderung für Telekommunikationsanbieter
-- Empfehlungssysteme für den E-Commerce
-- Kreditscoring-Modelle für Banken
-
-**Warum das Unternehmen auf der Liste steht**: Starke Erfolgsbilanz bei klassischen ML-Anwendungen für lokale Unternehmen.
-
-**Website**: braindigit.com
-
-### Numeric Mind
-
-**Gegründet**: 2012 | **Standort**: Kathmandu | **Team**: 40+
-
-**Spezialisierung**: Statistische Analyse, ML-Modellierung, Biostatistik
-
-Numeric Mind verbindet statistische Beratung mit Machine-Learning-Dienstleistungen. Das Unternehmen ist umfassend in der Gesundheits- und Pharmaforschung tätig.
-
-**Bemerkenswerte Arbeiten**:
-- Biostatistik für klinische Studien
-- ML-Modelle für Forschungsorganisationen
-- Beratung zur Datenanalyse
-
-**Warum das Unternehmen auf der Liste steht**: Spezialisiertes Fachwissen, das klassische Statistik und modernes ML verbindet.
-
-**Website**: numericmind.com
-
-### Programiz (MeroPaper)
-
-**Gegründet**: 2012 | **Standort**: Kathmandu | **Team**: 30+
-
-**Spezialisierung**: KI-gestützte Bildung, Programmier-Tutorials, Lernplattformen
-
-Programiz betreibt eine der weltweit meistbesuchten Websites für Programmier-Tutorials und setzt zunehmend KI für personalisiertes Lernen ein.
-
-**Bemerkenswerte Arbeiten**:
-- Programmier-Tutorials mit Millionen Nutzern pro Monat
-- KI-gestützte Code-Erklärungen
-- Interaktive Lernplattformen
-
-**Warum das Unternehmen auf der Liste steht**: Enorme globale Reichweite von Nepal aus. Vorreiter bei KI-gestützten Bildungsinhalten.
-
-**Website**: programiz.com
-
-### Insight Workshop
-
-**Gegründet**: 2017 | **Standort**: Lalitpur | **Team**: 20+
-
-**Spezialisierung**: NLP, Sentimentanalyse, KI für die nepalesische Sprache
-
-Insight Workshop konzentriert sich auf die Verarbeitung natürlicher Sprache, insbesondere für Nepali und andere südasiatische Sprachen.
-
-**Bemerkenswerte Arbeiten**:
-- NLP-Modelle und Datensätze für Nepali
-- Sentimentanalyse für lokale Unternehmen
-- Entwicklung mehrsprachiger Chatbots
-
-**Warum das Unternehmen auf der Liste steht**: Wichtige Arbeit an KI für die nepalesische Sprache, die größere Unternehmen übersehen.
-
-**Website**: insightworkshop.io
-
-### Ekbana Solutions
-
-**Gegründet**: 2011 | **Standort**: Kathmandu | **Team**: 100+
-
-**Spezialisierung**: KI-Entwicklung, Machine Learning, Softwareberatung
-
-Ekbana bietet KI-Entwicklung aus einer Hand, von der Datenaufbereitung bis zum Modell-Deployment.
-
-**Bemerkenswerte Arbeiten**:
-- Entwicklung von ML-Modellen für internationale Kunden
-- Engineering von Datenpipelines
-- KI-Beratung und -Strategie
-
-**Warum das Unternehmen auf der Liste steht**: Verlässliche Lieferung bei komplexen KI-Projekten. Starke Engineering-Praxis.
-
-**Website**: ekbana.com
-
-### Bajra Technologies
-
-**Gegründet**: 2012 | **Standort**: Kathmandu | **Team**: 60+
-
-**Spezialisierung**: ML-Engineering, Data Science, Softwareentwicklung
-
-Bajra verbindet klassische Softwareentwicklung mit wachsenden ML-Fähigkeiten und bedient Kunden in Nordamerika und Europa.
-
-**Bemerkenswerte Arbeiten**:
-- ML-Integrationen für SaaS-Produkte
-- Data-Science-Beratung
-- Full-Stack-KI-Anwendungen
-
-**Warum das Unternehmen auf der Liste steht**: Ausgewogener Ansatz, der ML in praxisnahe Geschäftsanwendungen integriert.
-
-**Website**: bajratechnologies.com
-
-### Treeleaf Technologies
-
-**Gegründet**: 2018 | **Standort**: Kathmandu | **Team**: 40+
-
-**Spezialisierung**: Computer Vision, KI für das Bauwesen, Dokumentenanalyse
-
-Treeleaf entwickelt Computer-Vision-Lösungen, insbesondere für die Überwachung von Bau- und Infrastrukturprojekten.
-
-**Bemerkenswerte Arbeiten**:
-- KI-gestützte Überwachung des Baufortschritts
-- Dokumentendigitalisierung mit Computer Vision
-- Automatisierung der Qualitätsprüfung
-
-**Warum das Unternehmen auf der Liste steht**: Spezialisierter Branchenfokus mit realen Einsätzen.
-
-**Website**: treeleaf.ai
-
-### Deerhold (KI-Sparte)
-
-**Gegründet**: 2019 | **Standort**: Kathmandu | **Team**: 25+
-
-**Spezialisierung**: Konversationelle KI, NLP, KI-Agenten
-
-Die KI-Sparte von Deerhold konzentriert sich auf konversationelle KI und intelligente Automatisierung für Unternehmensabläufe.
-
-**Bemerkenswerte Arbeiten**:
-- Chatbots für den Kundenservice
-- Interne Wissensassistenten
-- Prozessautomatisierung mit KI
-
-**Warum das Unternehmen auf der Liste steht**: Wachsender Fokus auf praxisnahe KI-Agenten für Geschäftsanwendungen.
-
-**Website**: deerhold.com
+### Weitere KI- und Datenunternehmen in Nepal
+
+Die folgenden Unternehmen arbeiten ebenfalls in Nepal mit KI, Machine Learning oder Daten. Die Liste nennt nur Name und Schwerpunkt; sie ist kein Ranking und stellt die Unternehmen nicht im Detail vor.
+
+- **Fusemachines**: KI-Ausbildung, Machine Learning für Unternehmen, KI-Beratung
+- **CloudFactory**: KI-Trainingsdaten, Datenannotation, Human-in-the-Loop-KI
+- **Cotiviti Nepal**: KI im Gesundheitswesen, Schadenanalyse, Betrugserkennung
+- **Docsumo**: Dokumenten-KI, intelligente Datenextraktion, OCR
+- **Genese Solution**: Cloud-Services, KI-Beratung, digitale Transformation
+- **Paaila Technology**: Robotik, Computer Vision, KI-Forschung
+- **Braindigit IT Solutions**: Machine Learning, Datenanalyse, KI-Beratung
+- **Numeric Mind**: Statistische Analyse, ML-Modellierung, Biostatistik
+- **Programiz (MeroPaper)**: KI-gestützte Bildung, Programmier-Tutorials, Lernplattformen
+- **Insight Workshop**: NLP, Sentimentanalyse, KI für die nepalesische Sprache
+- **Ekbana Solutions**: KI-Entwicklung, Machine Learning, Softwareberatung
+- **Bajra Technologies**: ML-Engineering, Data Science, Softwareentwicklung
+- **Treeleaf Technologies**: Computer Vision, KI für das Bauwesen, Dokumentenanalyse
+- **Deerhold (KI-Sparte)**: Konversationelle KI, NLP, KI-Agenten
 
 ## Die führenden Softwareentwicklungsunternehmen in Nepal
 
 Die Softwareentwicklung bleibt Nepals größter Technologiesektor. Die Unternehmen reichen von reinen Outsourcing-Betrieben bis zu produktorientierten Firmen, die eigenes geistiges Eigentum aufbauen.
 
-### Leapfrog Technology
-
-**Gegründet**: 2010 | **Standort**: Kathmandu | **Team**: 400+
-
-**Spezialisierung**: Full-Stack-Entwicklung, Mobile Apps, Cloud-Lösungen
-
-Leapfrog ist eines der größten Softwareunternehmen Nepals und bekannt für technische Exzellenz und eine starke Unternehmenskultur.
-
-**Bemerkenswerte Arbeiten**:
-- Plattformen für das Gesundheitswesen für US-Kunden
-- Fintech-Anwendungen
-- Mobile Unternehmens-Apps
-
-**Warum das Unternehmen auf der Liste steht**: Größe, Qualität und eine Unternehmenskultur, die Top-Talente anzieht.
-
-**Website**: lftechnology.com
-
-### Deerwalk Services
-
-**Gegründet**: 2007 | **Standort**: Lalitpur | **Team**: 600+
-
-**Spezialisierung**: Software für das Gesundheitswesen, Datenanalyse, Unternehmenslösungen
-
-Deerwalk entwickelt Software für das Gesundheitswesen für den US-Markt und ist auf Population-Health-Management und Analytik spezialisiert.
-
-**Bemerkenswerte Arbeiten**:
-- Analyseplattformen für Population Health
-- Datenvisualisierung im Gesundheitswesen
-- Systeme für das Management von Schadendaten
-
-**Warum das Unternehmen auf der Liste steht**: Einer der größten Tech-Arbeitgeber Nepals. Tiefes Fachwissen im Gesundheitswesen.
-
-**Website**: deerwalk.com
-
-### Verisk Nepal (früher ISO Nepal)
-
-**Gegründet**: 2003 | **Standort**: Lalitpur | **Team**: 500+
-
-**Spezialisierung**: Versicherungssoftware, Risikoanalyse, Unternehmenssysteme
-
-Die Niederlassung von Verisk in Nepal entwickelt Software für Versicherung und Risikobewertung und bedient den US-Versicherungsmarkt.
-
-**Bemerkenswerte Arbeiten**:
-- Underwriting-Plattformen für Versicherungen
-- Werkzeuge zur Risikobewertung
-- Systeme zur Schadenbearbeitung
-
-**Warum das Unternehmen auf der Liste steht**: Langjähriger Betrieb mit Stabilität und spezialisiertem Fachwissen.
-
-**Website**: verisk.com
-
-### F1Soft International
-
-**Gegründet**: 2004 | **Standort**: Kathmandu | **Team**: 300+
-
-**Spezialisierung**: Fintech, digitale Zahlungen, Banksoftware
-
-F1Soft war Pionier der digitalen Zahlungen in Nepal und entwickelt heute Fintech-Lösungen in ganz Südasien.
-
-**Bemerkenswerte Arbeiten**:
-- eSewa (Nepals größte digitale Geldbörse)
-- Kernbankensysteme
-- Infrastruktur für Zahlungsgateways
-
-**Warum das Unternehmen auf der Liste steht**: Hat Nepals Finanzlandschaft verändert. Nachgewiesene Fähigkeit zur Produktentwicklung.
-
-**Website**: f1soft.com
-
-### Javra Software
-
-**Gegründet**: 2003 | **Standort**: Kathmandu | **Team**: 150+
-
-**Spezialisierung**: Ausgelagerte Entwicklung, E-Commerce, Webanwendungen
-
-Javra erbringt Softwareentwicklungsleistungen für europäische Kunden, mit besonderer Stärke bei E-Commerce und Webplattformen.
-
-**Bemerkenswerte Arbeiten**:
-- E-Commerce-Plattformen für europäische Händler
-- CMS- und Content-Plattformen
-- Web-Anwendungen für Unternehmen
-
-**Warum das Unternehmen auf der Liste steht**: Zwei Jahrzehnte verlässliche Lieferung an anspruchsvolle europäische Kunden.
-
-**Website**: javra.com
-
-### Yomari Information Services
-
-**Gegründet**: 1998 | **Standort**: Lalitpur | **Team**: 100+
-
-**Spezialisierung**: GIS, Kartierung, Behördensysteme
-
-Yomari ist Nepals ältestes IT-Unternehmen und auf Geoinformationssysteme und Behördensoftware spezialisiert.
-
-**Bemerkenswerte Arbeiten**:
-- Nationale Grundbuchsysteme
-- GIS für Regierungsbehörden
-- Software für Kartierung und Vermessung
-
-**Warum das Unternehmen auf der Liste steht**: Am längsten bestehendes Tech-Unternehmen in Nepal. Kritische staatliche Infrastruktur.
-
-**Website**: yomari.com
-
-### LogPoint
-
-**Gegründet**: 2013 (Niederlassung in Nepal) | **Standort**: Kathmandu | **Team**: 100+
-
-**Spezialisierung**: Cybersicherheit, SIEM, Bedrohungserkennung
-
-Das Entwicklungszentrum von LogPoint in Nepal entwickelt Cybersicherheitssoftware, darunter die Flaggschiff-SIEM-Plattform.
-
-**Bemerkenswerte Arbeiten**:
-- Security Information and Event Management (SIEM)
-- Bedrohungserkennung und -abwehr
-- Werkzeuge für Compliance und Audit
-
-**Warum das Unternehmen auf der Liste steht**: Hochwertige Entwicklung von Cybersicherheitsprodukten aus Nepal.
-
-**Website**: logpoint.com
-
-### Yantra (früher WebSurfer Nepal)
-
-**Gegründet**: 2001 | **Standort**: Kathmandu | **Team**: 150+
-
-**Spezialisierung**: Digitalagenturen, Unternehmenssoftware, Mobile Apps
-
-Yantra verbindet Leistungen einer Digitalagentur mit Softwareentwicklung und bedient sowohl lokale Unternehmen als auch internationale Kunden.
-
-**Bemerkenswerte Arbeiten**:
-- Unternehmensportale für nepalesische Konzerne
-- Mobile Apps für Banken
-- Projekte zur digitalen Transformation
-
-**Warum das Unternehmen auf der Liste steht**: Vielseitige Fähigkeiten, die kreative und technische Arbeit abdecken.
-
-**Website**: yantra.com.np
-
-### Proshore
-
-**Gegründet**: 2006 | **Standort**: Kathmandu | **Team**: 200+
-
-**Spezialisierung**: PHP-Entwicklung, Webanwendungen, Outsourcing für Europa
-
-Proshore ist auf PHP-basierte Entwicklung für europäische Kunden spezialisiert, insbesondere im E-Commerce und bei Unternehmenssystemen.
-
-**Bemerkenswerte Arbeiten**:
-- E-Commerce-Plattformen
-- Content-Systeme für Unternehmen
-- Individuelle Webanwendungen
-
-**Warum das Unternehmen auf der Liste steht**: Starke Beziehungen zu europäischen Kunden und PHP-Expertise.
-
-**Website**: proshore.eu
-
-### Dailo Technology
-
-**Gegründet**: 2015 | **Standort**: Kathmandu | **Team**: 60+
-
-**Spezialisierung**: Mobile Entwicklung, iOS/Android, plattformübergreifende Apps
-
-Dailo konzentriert sich auf die Entwicklung mobiler Anwendungen, mit Expertise sowohl für native als auch für plattformübergreifende Ansätze.
-
-**Bemerkenswerte Arbeiten**:
-- iOS- und Android-Apps für Startups
-- Plattformübergreifende Entwicklung mit Flutter/React Native
-- Mobile Backends und APIs
-
-**Warum das Unternehmen auf der Liste steht**: Spezialisierung auf Mobile mit starken technischen Fähigkeiten.
-
-**Website**: dailotech.com
-
-### Incessant Rain Studios
-
-**Gegründet**: 2016 | **Standort**: Kathmandu | **Team**: 30+
-
-**Spezialisierung**: Spieleentwicklung, Unity, interaktive Medien
-
-Incessant Rain, eines der wenigen Spielestudios Nepals, entwickelt Spiele und interaktive Erlebnisse.
-
-**Bemerkenswerte Arbeiten**:
-- Veröffentlichte Spiele auf Steam und mobilen Plattformen
-- Interaktive Trainingssimulationen
-- Spielbasierte Lernanwendungen
-
-**Warum das Unternehmen auf der Liste steht**: Einzigartige Spezialisierung auf Spieleentwicklung aus Nepal.
-
-**Website**: irsgames.com
-
-### Kazi Studios
-
-**Gegründet**: 2018 | **Standort**: Kathmandu | **Team**: 25+
-
-**Spezialisierung**: Spieleentwicklung, Mobile Games, AR/VR
-
-Kazi Studios entwickelt Mobile Games und immersive Erlebnisse und steht für Nepals wachsende Gaming-Branche.
-
-**Bemerkenswerte Arbeiten**:
-- Mobile Games mit Millionen Downloads
-- AR-Erlebnisse
-- Outsourcing von Spieleentwicklung
-
-**Warum das Unternehmen auf der Liste steht**: Kommerzieller Erfolg im umkämpften globalen Markt für Mobile Games.
-
-**Website**: kazistudios.com
-
-### Esewa / F1Soft Products
-
-**Gegründet**: 2009 | **Standort**: Kathmandu | **Team**: 200+
-
-**Spezialisierung**: Digitale Zahlungen, mobile Geldbörse, Fintech-Plattform
-
-eSewa, entwickelt von F1Soft, ist Nepals größte digitale Zahlungsplattform mit Millionen Nutzern.
-
-**Bemerkenswerte Arbeiten**:
-- Infrastruktur für die Zahlungsabwicklung
-- Zahlungssysteme für Händler
-- Verbreitung von QR-Code-Zahlungen
-
-**Warum das Unternehmen auf der Liste steht**: Marktführendes Produkt, das täglich Millionen Nepalesen erreicht.
-
-**Website**: esewa.com.np
-
-### Thulo.com (Thulo Technology)
-
-**Gegründet**: 2014 | **Standort**: Lalitpur | **Team**: 80+
-
-**Spezialisierung**: E-Commerce, Marktplatzplattformen, Logistiktechnologie
-
-Thulo baut E-Commerce-Infrastruktur auf, darunter einen der größten Online-Marktplätze Nepals.
-
-**Bemerkenswerte Arbeiten**:
-- Multi-Vendor-Marktplatzplattform
-- Fulfillment-Systeme für den E-Commerce
-- Bestands- und Logistikmanagement
-
-**Warum das Unternehmen auf der Liste steht**: Hat E-Commerce-Infrastruktur aufgebaut, die Tausende von Händlern bedient.
-
-**Website**: thulo.com
-
-### WorldLink Communications
-
-**Gegründet**: 1995 | **Standort**: Kathmandu | **Team**: 500+
-
-**Spezialisierung**: ISP, Netzwerkinfrastruktur, digitale Dienste
-
-WorldLink ist Nepals größter Internetanbieter mit wachsenden Software- und Digitaldienstsparten.
-
-**Bemerkenswerte Arbeiten**:
-- Netzwerkmanagementsysteme
-- Kundenportal und Apps
-- Smart-Home- und IoT-Plattformen
-
-**Warum das Unternehmen auf der Liste steht**: Anbieter kritischer Infrastruktur, der in Softwaredienstleistungen expandiert.
-
-**Website**: worldlink.com.np
-
-### Young Innovations
-
-**Gegründet**: 2007 | **Standort**: Lalitpur | **Team**: 50+
-
-**Spezialisierung**: Civic Tech, Open Data, Software für den Entwicklungssektor
-
-Young Innovations entwickelt Technologie für den Entwicklungssektor und ist auf Open Data und zivilgesellschaftliche Anwendungen spezialisiert.
-
-**Bemerkenswerte Arbeiten**:
-- Werkzeuge für IATI (International Aid Transparency Initiative)
-- Open-Data-Plattformen für Regierungen
-- Dashboards für den Entwicklungssektor
-
-**Warum das Unternehmen auf der Liste steht**: Spezialisierte Nische in Entwicklungstechnologie mit globaler Wirkung.
-
-**Website**: younginnovations.com.np
-
-### Truemark Technology
-
-**Gegründet**: 2020 | **Standort**: Kathmandu | **Team**: 40+
-
-**Spezialisierung**: Startup-Entwicklung, MVP-Bau, Produkt-Engineering
-
-Truemark ist darauf spezialisiert, MVPs und Produkte für Startups zu bauen, mit Fokus auf schnelle Markteinführung.
-
-**Bemerkenswerte Arbeiten**:
-- MVP-Entwicklung für Startups
-- Produktdesign und Engineering
-- Technisches Co-Founding
-
-**Warum das Unternehmen auf der Liste steht**: Startup-orientiertes Modell, das bei internationalen Gründern gut ankommt.
-
-**Website**: truemark.dev
-
-### Cotiviti Technologies Nepal
-
-**Gegründet**: 2014 | **Standort**: Lalitpur | **Team**: 300+
-
-**Spezialisierung**: Software für das Gesundheitswesen, Zahlungsintegrität, Analytik
-
-Getrennt von der KI-Sparte baut das Software-Engineering-Zentrum von Cotiviti Softwaresysteme für das Gesundheitswesen.
-
-**Bemerkenswerte Arbeiten**:
-- Plattformen für Zahlungsintegrität
-- Analysesoftware für das Gesundheitswesen
-- Systeme zur Schadenbearbeitung
-
-**Warum das Unternehmen auf der Liste steht**: Entwicklung von Unternehmenssoftware im großen Maßstab für regulierte Branchen.
-
-**Website**: cotiviti.com
+Die Liste nennt nur Name und Schwerpunkt; sie ist kein Ranking und stellt die Unternehmen nicht im Detail vor.
+
+- **Leapfrog Technology**: Full-Stack-Entwicklung, Mobile Apps, Cloud-Lösungen
+- **Deerwalk Services**: Software für das Gesundheitswesen, Datenanalyse, Unternehmenslösungen
+- **Verisk Nepal (früher ISO Nepal)**: Versicherungssoftware, Risikoanalyse, Unternehmenssysteme
+- **F1Soft International**: Fintech, digitale Zahlungen, Banksoftware
+- **Javra Software**: Ausgelagerte Entwicklung, E-Commerce, Webanwendungen
+- **Yomari Information Services**: GIS, Kartierung, Behördensysteme
+- **LogPoint**: Cybersicherheit, SIEM, Bedrohungserkennung
+- **Yantra (früher WebSurfer Nepal)**: Digitalagenturen, Unternehmenssoftware, Mobile Apps
+- **Proshore**: PHP-Entwicklung, Webanwendungen, Outsourcing für Europa
+- **Dailo Technology**: Mobile Entwicklung, iOS/Android, plattformübergreifende Apps
+- **Incessant Rain Studios**: Spieleentwicklung, Unity, interaktive Medien
+- **Kazi Studios**: Spieleentwicklung, Mobile Games, AR/VR
+- **Esewa / F1Soft Products**: Digitale Zahlungen, mobile Geldbörse, Fintech-Plattform
+- **Thulo.com (Thulo Technology)**: E-Commerce, Marktplatzplattformen, Logistiktechnologie
+- **WorldLink Communications**: ISP, Netzwerkinfrastruktur, digitale Dienste
+- **Young Innovations**: Civic Tech, Open Data, Software für den Entwicklungssektor
+- **Truemark Technology**: Startup-Entwicklung, MVP-Bau, Produkt-Engineering
+- **Cotiviti Technologies Nepal**: Software für das Gesundheitswesen, Zahlungsintegrität, Analytik
 
 ## Aufstrebende Tech-Startups in Nepal
 
@@ -883,11 +378,11 @@ Zu den größten Tech-Unternehmen in Nepal gemessen an der Mitarbeiterzahl zähl
 
 ### Welche KI-Unternehmen haben ihren Sitz in Nepal?
 
-Nepal hat einen wachsenden KI-Sektor mit Unternehmen wie Zunkiree Labs (KI-Suche und RAG), Fusemachines (KI-Ausbildung und -Beratung), CloudFactory (KI-Trainingsdaten), Cotiviti Nepal (KI im Gesundheitswesen) und Docsumo (Dokumenten-KI). Diese Unternehmen arbeiten an Machine Learning, Verarbeitung natürlicher Sprache, Computer Vision und Datenannotation.
+Nepal hat einen wachsenden KI-Sektor. Zunkiree Labs aus Kathmandu entwickelt KI-Agenten und Produkte für den Produktivbetrieb: KI-Suche und RAG, einen KI-Commerce-Agenten, eine KI-Buchungsengine und ein ERP für die Fertigung. Andere Unternehmen der Branche arbeiten an Machine Learning, Verarbeitung natürlicher Sprache, Computer Vision und Datenannotation.
 
 ### Wie hoch ist das Durchschnittsgehalt für Softwareentwickler in Nepal?
 
-Die Gehälter von Softwareentwicklern in Nepal variieren stark. Junior-Entwickler verdienen typischerweise 400.000–800.000 NPR jährlich, Entwickler auf mittlerem Niveau 800.000–1.500.000 NPR, und Senior-Entwickler können 1.500.000–3.000.000+ NPR verdienen. KI-/ML-Spezialisten und Fachkräfte mit internationaler Erfahrung erhalten höhere Gehälter.
+Die Gehälter von Softwareentwicklern in Nepal variieren stark je nach Unternehmen, Erfahrung und Spezialisierung, und KI-/ML-Spezialisten sowie Fachkräfte mit internationaler Erfahrung verdienen in der Regel mehr. Prüfen Sie aktuelle Zahlen auf Jobportalen wie LinkedIn und MeroJob oder in einer aktuellen Gehaltsstudie, bevor Sie ein Budget festlegen.
 
 ### Wie finde ich Jobs in der Softwareentwicklung in Nepal?
 
@@ -908,7 +403,7 @@ Nepalesische Tech-Unternehmen bedienen vor allem:
 
 ### Wie schneidet Nepal im Vergleich zu Indien beim Software-Outsourcing ab?
 
-Nepal bietet 20–40 % niedrigere Kosten als Indien bei für viele Projekte vergleichbarer Qualität. Die Englischkenntnisse sind hoch, und die Zeitzone passt gut zu Europa und Teilen Asiens. Indien hat jedoch mehr Größe, mehr spezialisierte Talentpools und eine weiter entwickelte Infrastruktur. Nepal eignet sich gut für Teams mit 10 bis 50 Personen, bei denen persönliche Beziehungen wichtig sind.
+Die Kosten sind in Nepal oft niedriger, wie stark, hängt aber von Rolle, Seniorität und Zusammenarbeitsmodell ab. Holen Sie daher Angebote für Ihren eigenen Umfang ein. Die Englischkenntnisse sind hoch, und die Zeitzone passt gut zu Europa und Teilen Asiens. Indien hat jedoch mehr Größe, mehr spezialisierte Talentpools und eine weiter entwickelte Infrastruktur. Nepal eignet sich eher für kleinere Teams, bei denen enge Zusammenarbeit wichtig ist.
 
 ## Fazit
 

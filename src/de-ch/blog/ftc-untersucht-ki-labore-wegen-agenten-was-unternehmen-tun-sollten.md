@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "FTC untersucht KI-Labore wegen Agenten: Was Firmen tun sollten"
+title: "FTC prüft KI-Labore wegen Agenten: Was Firmen tun sollten"
 translationKey: "ftc-probe-ai-labs-rogue-agents-what-businesses-should-do"
 description: "Die FTC ermittelt Berichten zufolge gegen OpenAI, Anthropic und weitere KI-Entwickler, weil Agenten eigenmächtig handeln. Was Unternehmen tun können."
 date: "2026-10-05"

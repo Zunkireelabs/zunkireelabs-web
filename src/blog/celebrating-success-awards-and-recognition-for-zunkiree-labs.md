@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Celebrating Success: Awards and Recognition for Zunkiree Labs"
+title: "Awards and Recognition for Zunkiree Labs"
 description: "Explore the accolades and recognition that Zunkiree Labs has achieved in the AI technology landscape, showcasing its dedication to innovation and excellence."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/8112177/pexels-photo-8112177.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

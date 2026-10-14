@@ -88,6 +88,9 @@ Spider 2.0 showed that models which looked excellent on tidy benchmarks struggle
 
 ## Related Insights
 
+- [AI and Real Estate Valuation and Price Forecasting](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
+- [How AI and Transaction Data Are Changing Fraud Detection](/blog/how-ai-and-transaction-data-are-changing-fraud-detection/)
+- [Real-Time Data and AI in Transportation and Logistics Routing](/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/)
 - [How AI Helps Scientists Find What Humans Could Miss](/blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss/)
 - [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
 - [How AI and Data Help Predict Energy Demand and Run Power Grids](/blog/how-ai-and-data-help-predict-energy-demand-and-run-power-grids/)

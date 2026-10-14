@@ -1,5 +1,5 @@
 ---
-title: "AI Labs Running Top Models With Safeguards Off? What GovAI Says"
+title: "Top AI Models With Safeguards Off? What GovAI Says"
 shortLabel: "Internal AI Deployments"
 translationKey: "frontier-ai-labs-internal-models-safeguards-off-govai"
 description: "GovAI researchers told Fortune that labs often run top models internally with safeguards off. What is confirmed, what is not, and what to ask AI vendors."

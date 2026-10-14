@@ -1,5 +1,5 @@
 ---
-title: "How to Choose an AI Development Company: 8 Things to Look For"
+title: "Choose an AI Development Company: 8 Things to Look For"
 description: "Selecting the right AI development partner is critical for project success. Learn the 8 key factors to evaluate when choosing an AI company for your business."
 date: 2026-03-30
 lastUpdated: 2026-03-30

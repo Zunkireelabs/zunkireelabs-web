@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Navigating Challenges: The Struggles of AI Companies in Nepal"
+title: "The Struggles of AI Companies in Nepal: Key Challenges"
 description: "Explore the various challenges faced by AI companies in Nepal, including talent shortages, regulatory obstacles, and technological barriers."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

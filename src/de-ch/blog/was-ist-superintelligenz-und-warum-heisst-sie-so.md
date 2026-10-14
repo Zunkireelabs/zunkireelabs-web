@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Was ist Superintelligenz und warum heisst sie so?"
-description: "Superintelligenz, AGI und die Sicherheitsdebatte in einfacher Sprache: Woher der Begriff stammt und warum er für Unternehmen wichtig ist, die KI einführen."
+title: "Was ist Superintelligenz? Bedeutung, Herkunft und Unterschied zu AGI"
+description: "Superintelligenz einfach erklärt: Bedeutung des Begriffs, Herkunft, Unterschied zu AGI und warum das Thema für Unternehmen wichtig ist, die KI einführen."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/was-ist-superintelligenz-und-warum-heisst-sie-so.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
@@ -14,7 +14,7 @@ readTime: 8
 
 <div class="container-custom py-12 md:py-20">
 
-**Kurz gesagt:** Superintelligenz ist eine hypothetische KI, die dem Menschen in nahezu allen relevanten Bereichen weit überlegen wäre. Sie heisst so, weil «super» «jenseits von» bedeutet. Bei keinem System besteht allgemeine Einigkeit, dass es sie erreicht hat. Die praktische Frage für Unternehmen lautet daher, wie sie zunehmend leistungsfähige KI so einsetzen, dass sie sie überwachen und kontrollieren können.
+**Kurz gesagt:** Superintelligenz (auch „Super-Intelligenz“ oder englisch „super intelligence“ geschrieben) ist eine hypothetische KI, die dem Menschen in nahezu allen relevanten Bereichen weit überlegen wäre. Sie heisst so, weil «super» «jenseits von» bedeutet. Bei keinem System besteht allgemeine Einigkeit, dass es sie erreicht hat. Die praktische Frage für Unternehmen lautet daher, wie sie zunehmend leistungsfähige KI so einsetzen, dass sie sie überwachen und kontrollieren können.
 
 ## Das Wichtigste auf einen Blick
 

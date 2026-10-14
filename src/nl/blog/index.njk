@@ -1,7 +1,10 @@
 ---
 layout: base.njk
-title: "Blog | AI- en technologie-inzichten van Zunkiree Labs"
-description: "Praktische inzichten over AI-ontwikkeling en AI-infrastructuur. Artikelen van het team van Zunkiree Labs."
+eleventyComputed:
+  title: >-
+    {{ ("Blog | AI- en technologie-inzichten van Zunkiree Labs" if pagination.pageNumber == 0 else "Blog, pagina " + (pagination.pageNumber + 1) + " | Zunkiree Labs") | safe }}
+  description: >-
+    {{ "Praktische inzichten over AI-ontwikkeling en AI-infrastructuur. Artikelen van het team van Zunkiree Labs." if pagination.pageNumber == 0 else "Pagina " + (pagination.pageNumber + 1) + ". Praktische inzichten over AI-ontwikkeling en AI-infrastructuur. Artikelen van het team van Zunkiree Labs." }}
 lang: nl
 ogLocale: nl_NL
 eleventyExcludeFromCollections: true

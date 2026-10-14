@@ -1,4 +1,4 @@
-# FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do
+# FTC Probes AI Labs Over Rogue Agents: What to Do
 
 URL: https://zunkireelabs.com/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
 Published: 2026-10-05

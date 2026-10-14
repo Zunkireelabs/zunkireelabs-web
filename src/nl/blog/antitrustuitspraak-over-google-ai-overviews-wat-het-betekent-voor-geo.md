@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Antitrustuitspraak over Google AI Overviews: gevolgen voor GEO"
+title: "Antitrustuitspraak Google AI Overviews: gevolgen voor GEO"
 description: "Een rechter heeft de antitrustzaken van Chegg en Penske over Google AI Overviews afgewezen."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/antitrustuitspraak-over-google-ai-overviews-wat-het-betekent-voor-geo.svg"

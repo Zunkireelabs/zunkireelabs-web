@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "The Power of Partnerships and Collaborations in AI Development"
+title: "Partnerships and Collaborations in AI Development"
 description: "Why partnerships and collaborations matter for AI development, in the context of Zunkiree Labs' solutions and community engagement."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

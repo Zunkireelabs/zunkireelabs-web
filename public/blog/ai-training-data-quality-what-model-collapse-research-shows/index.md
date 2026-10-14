@@ -81,6 +81,9 @@ If you train or fine-tune models, keep a record of data sources, label synthetic
 
 ## Related Insights
 
+- [AI and Real Estate Valuation and Price Forecasting](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
+- [How AI and Transaction Data Are Changing Fraud Detection](/blog/how-ai-and-transaction-data-are-changing-fraud-detection/)
+- [Real-Time Data and AI in Transportation and Logistics Routing](/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/)
 - [How AI Helps Scientists Find What Humans Could Miss](/blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss/)
 - [AI Over Business Data: What the Spider 2.0 Benchmark Shows](/blog/ai-over-business-data-what-the-spider-2-benchmark-shows/)
 - [How AI Is Changing Everyday Life: What Usage Data Shows](/blog/ai-everyday-life-what-the-usage-data-shows/)

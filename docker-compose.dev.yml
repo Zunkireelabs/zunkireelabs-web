@@ -8,6 +8,9 @@ services:
       - hosting
       - internal
     restart: unless-stopped
+    # Persisted here so redeploys stop wiping the cap (see
+    # zunkireelabs-ai-office infrastructure-ops/reference/COMPOSE-MEM-LIMITS.md).
+    mem_limit: 256m
     depends_on:
       - api
     healthcheck:
@@ -29,10 +32,15 @@ services:
       - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-web-staging.tls=true"
       - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
+      # Keep staging out of search engines. It serves a full copy of the site, and
+      # Search Console showed dev-web URLs indexed. noindex@file is defined on the
+      # VPS in traefik/dynamic/noindex.yml. Do NOT block staging in robots.txt:
+      # Google must be able to crawl a page to see the noindex.
+      - "traefik.http.routers.zunkiree-web-staging.middlewares=noindex@file"
       # HTTP to HTTPS redirect
       - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
       - "traefik.http.routers.zunkiree-web-staging-http.entrypoints=web"
-      - "traefik.http.routers.zunkiree-web-staging-http.middlewares=zunkiree-web-staging-redirect"
+      - "traefik.http.routers.zunkiree-web-staging-http.middlewares=zunkiree-web-staging-redirect,noindex@file"
       - "traefik.http.middlewares.zunkiree-web-staging-redirect.redirectscheme.scheme=https"
       # Service port
       - "traefik.http.services.zunkiree-web-staging.loadbalancer.server.port=80"

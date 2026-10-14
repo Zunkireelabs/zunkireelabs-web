@@ -1,5 +1,5 @@
 ---
-title: "Predictive Maintenance: How Sensor Data and AI Predict Failures"
+title: "Predictive Maintenance: Sensor Data and AI Predict Failures"
 shortLabel: "Predictive Maintenance"
 translationKey: "predictive-maintenance-how-sensor-data-and-ai-predict-failures"
 description: "How sensors and AI predict machine failures, from an 85-study 2026 review to a heavy-industry case that cut false alarms by 90%. What works and where it fails."

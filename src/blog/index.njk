@@ -1,7 +1,10 @@
 ---
 layout: base.njk
-title: "AI & Technology Blog | Insights from Zunkiree Labs"
-description: "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company."
+eleventyComputed:
+  title: >-
+    {{ ("AI & Technology Blog | Insights from Zunkiree Labs" if pagination.pageNumber == 0 else "AI & Technology Blog, Page " + (pagination.pageNumber + 1) + " | Zunkiree Labs") | safe }}
+  description: >-
+    {{ "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company." if pagination.pageNumber == 0 else "Page " + (pagination.pageNumber + 1) + ". Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company." }}
 eleventyExcludeFromCollections: true
 hideChrome: true
 pagination:

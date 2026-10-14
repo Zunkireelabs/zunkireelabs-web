@@ -33,7 +33,7 @@ translationKey: "the-future-of-ai-solutions-and-development-with-zunkiree-labs"
 
 ## Wat Zunkiree Labs aanbiedt
 
-<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties, en is gevestigd in Nepal. De volledige lijst staat op de <a href="/services/" rel="noopener">pagina met diensten</a>. Wij doen geen voorspellingen over welke tools zullen winnen. Wij beginnen bij één echte workflow, bouwen de kleinste bruikbare versie en meten die.</p>
+<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties, en is gevestigd in Nepal. De volledige lijst staat op de <a href="/solutions/" rel="noopener">pagina met diensten</a>. Wij doen geen voorspellingen over welke tools zullen winnen. Wij beginnen bij één echte workflow, bouwen de kleinste bruikbare versie en meten die.</p>
 
 ## Bronnen
 

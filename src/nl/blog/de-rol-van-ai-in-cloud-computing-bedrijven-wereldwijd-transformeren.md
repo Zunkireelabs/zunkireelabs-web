@@ -43,6 +43,6 @@ translationKey: "the-role-of-ai-in-cloud-computing-transforming-businesses-globa
 
 ## Over Zunkiree Labs
 
-<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. De volledige lijst staat op de <a href="/services/">pagina met diensten</a>.</p>
+<p>Zunkiree Labs bouwt maatwerk-AI-systemen (waaronder RAG-pipelines, LLM-integratie en intelligente automatisering), datasystemen, maatwerksoftware en web- en mobiele applicaties. De volledige lijst staat op de <a href="/solutions/">pagina met diensten</a>.</p>
 
 </div>

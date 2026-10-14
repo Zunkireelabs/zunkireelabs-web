@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "KI-Coding-Agenten: Was Microsofts Copilot-Neuausrichtung bedeutet"
+title: "Copilot-Neuausrichtung bei Microsoft: Folgen für KI-Coding"
 description: "Microsoft bewirbt Copilot als «OS for work» mit eingebautem Coding und Agenten. Was KI-native Software für Teams bedeutet, die Software entwickeln oder kaufen."
 date: "2026-10-01"
 featuredImage: "/assets/images/blog/ki-coding-agenten-was-microsofts-copilot-neuausrichtung-bedeutet.svg"

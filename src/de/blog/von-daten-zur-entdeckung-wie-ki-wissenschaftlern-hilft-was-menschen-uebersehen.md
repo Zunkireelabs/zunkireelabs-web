@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Wie KI Wissenschaftlern hilft, was Menschen übersehen könnten"
+title: "Wie KI Wissenschaftlern hilft, Übersehenes zu finden"
 description: "Ein Nature-Paper von Google-Forschern (Mai 2026) zeigt, wie KI wissenschaftliche Software erzeugt, die Expertenbenchmarks schlägt. Belege und Grenzen."
 date: "2026-10-05"
 lastUpdated: "2026-10-05"

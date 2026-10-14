@@ -1,4 +1,4 @@
-# Gemma 4: What an Apache 2.0 Open Model Means for Your Business
+# Gemma 4: What an Apache 2.0 Open Model Means for Business
 
 URL: https://zunkireelabs.com/blog/gemma-4-open-model-what-apache-2-license-means-for-business/
 Published: 2026-10-05

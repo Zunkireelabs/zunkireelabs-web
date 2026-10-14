@@ -1,4 +1,4 @@
-# AI Orchestration vs Automation vs Agents: What Is the Difference?
+# AI Orchestration vs Automation vs Agents: The Difference
 
 URL: https://zunkireelabs.com/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/
 Published: 2026-10-05
@@ -89,6 +89,9 @@ The Model Context Protocol (MCP) connects an AI agent to tools, data and applica
 
 ## Related Insights
 
+- [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)
+- [Flow AI vs Workflow Automation](/blog/flow-ai-vs-workflow-automation-what-is-the-difference/)
+- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [AI Coding Agents in 2026: How Developers Actually Work Now](/blog/ai-coding-agents-2026-how-developers-actually-work-now/)
 - [FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)

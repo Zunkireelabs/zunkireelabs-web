@@ -86,6 +86,7 @@ There is no single superintelligence debate. There are calls to prohibit it unti
 
 ## Related Insights
 
+- [Superintelligence vs AGI vs Narrow AI](/blog/superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean/)
 - [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 - [Trump's Super Intelligence Force: What the Executive Order Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
 - [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)

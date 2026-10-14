@@ -1,5 +1,5 @@
 ---
-title: "How AI and Data Help Predict Energy Demand and Run Power Grids"
+title: "How AI and Data Predict Energy Demand and Run Power Grids"
 shortLabel: "AI and Power Grids"
 translationKey: "how-ai-and-data-help-predict-energy-demand-and-run-power-grids"
 description: "How weather, meter and grid data feed AI forecasts of demand and wind output, what the IEA and DeepMind report, and the limits, including data-centre demand."

@@ -85,6 +85,9 @@ It needs a scorable task, meaning one where success can be measured as a number,
 
 ## Related Insights
 
+- [AI and Real Estate Valuation and Price Forecasting](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
+- [How AI and Transaction Data Are Changing Fraud Detection](/blog/how-ai-and-transaction-data-are-changing-fraud-detection/)
+- [Real-Time Data and AI in Transportation and Logistics Routing](/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/)
 - [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 - [Anthropic, OpenAI, Google in Enterprise: Who Is Winning?](/blog/enterprise-ai-anthropic-openai-google-who-is-winning/)
 - [AI Coding Agents in 2026: How Developers Actually Work Now](/blog/ai-coding-agents-2026-how-developers-actually-work-now/)

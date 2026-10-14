@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Anthropic, OpenAI en Google: wie wint en waarom het verschilt"
+title: "Anthropic, OpenAI en Google: wie wint en waarom"
 description: "Twee recente rapporten geven een ander beeld van het marktaandeel van enterprise-AI. Wat elk meet, waarom ze verschillen en hoe u een leverancier kiest."
 date: "2026-10-05"
 lastUpdated: "2026-10-05"

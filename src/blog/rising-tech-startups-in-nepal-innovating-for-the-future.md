@@ -38,21 +38,26 @@ The future of tech startups in Nepal looks promising, with numerous opportunitie
 As we witness the ascent of the tech startup landscape in Nepal, it becomes evident that these enterprises are not just contributors to the economy but also catalysts for broader social change. Through their innovative solutions, they are redefining the business landscape and creating new job opportunities in the country. The blend of youthful energy, creativity, and technological advancement sets the groundwork for a robust future. The potential for economic impact extends beyond just monetary gains, as startups also create avenues for social development, addressing various societal challenges through their products. With ongoing support and strategic initiatives, the Nepali tech startup ecosystem is poised to flourish, making a considerable mark in the global tech arena. By fostering creativity, nurturing talent, and promoting collaboration, Nepal could emerge as a key player in the global tech industry, putting forth innovations that resonate with a diverse range of audiences.
 <div class="container-custom py-12 md:py-20">
 
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">How to follow Nepal's startup ecosystem</h2>
+## How to follow Nepal's startup ecosystem
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Policy and funding announcements change quickly, so it helps to know which public records to watch. These are the facts we could verify from published sources.</p>
+Policy and funding announcements change quickly, so it helps to know which public records to watch. These are the facts we could verify from published sources.
 
-<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><strong>Startup policy.</strong> The ekantipur newspaper reported in May 2024 that the budget's startup programs were described as compatible with the recently released National Startup Enterprise Policy (<a href="https://ekantipur.com/news/2024/05/29/en/flexible-policy-to-support-startups-47-20.html" class="text-zunkiree-600 hover:underline" rel="noopener">ekantipur</a>).</li><li><strong>Budget provisions for FY 2081/82.</strong> Law firm Pioneer Law summarized the budget as allocating NPR 1 billion to a Startup Fund, planning incubation centers in each province, and encouraging banks to lend to startups based on project collateral. It also noted a Finance Act, 2081 change exempting startups from the change-in-control provision when new shareholders are added without altering the existing shareholding structure or capital (<a href="https://pioneerlaw.com/?p=1222" class="text-zunkiree-600 hover:underline" rel="noopener">Pioneer Law</a>). These are plans and rules as summarized by the firm; check the official budget speech and Finance Act for current status.</li></ul></div>
+- **Startup policy.** The ekantipur newspaper reported in May 2024 that the budget's startup programs were described as compatible with the recently released National Startup Enterprise Policy ([ekantipur](https://ekantipur.com/news/2024/05/29/en/flexible-policy-to-support-startups-47-20.html)).
+- **Budget provisions for FY 2081/82.** Law firm Pioneer Law summarized the budget as allocating NPR 1 billion to a Startup Fund, planning incubation centers in each province, and encouraging banks to lend to startups based on project collateral. It also noted a Finance Act, 2081 change exempting startups from the change-in-control provision when new shareholders are added without altering the existing shareholding structure or capital ([Pioneer Law](https://pioneerlaw.com/?p=1222)). These are plans and rules as summarized by the firm; check the official budget speech and Finance Act for current status.
 
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Where to keep watching</h2>
+## Where to keep watching
 
-<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><strong>Government budget speeches and Finance Acts,</strong> published each fiscal year, for funds, tax rules and incubation plans.</li><li><strong>Legal and advisory summaries,</strong> such as the Pioneer Law note above, which explain what a budget change means in practice.</li><li><strong>National newspapers,</strong> which report when programs are announced, revised or delayed.</li><li><strong>Community events,</strong> where founders discuss what has and has not reached them. See our <a href="/blog/tech-events-in-nepal-2026/" class="text-zunkiree-600 hover:underline" rel="noopener">tech events in Nepal</a> guide and our article on <a href="/blog/unlocking-funding-opportunities-for-ai-companies-in-nepal/" class="text-zunkiree-600 hover:underline" rel="noopener">funding opportunities for AI companies in Nepal</a>.</li></ul></div>
+- **Government budget speeches and Finance Acts,** published each fiscal year, for funds, tax rules and incubation plans.
+- **Legal and advisory summaries,** such as the Pioneer Law note above, which explain what a budget change means in practice.
+- **National newspapers,** which report when programs are announced, revised or delayed.
+- **Community events,** where founders discuss what has and has not reached them. See our [tech events in Nepal](/blog/tech-events-in-nepal-2026/) guide and our article on [funding opportunities for AI companies in Nepal](/blog/unlocking-funding-opportunities-for-ai-companies-in-nepal/).
 
-<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">A practical habit: when you read a claim about the ecosystem, including in this article, find the original document and check its date. Announced funds and programs are not the same as money disbursed or centers operating.</p>
+A practical habit: when you read a claim about the ecosystem, including in this article, find the original document and check its date. Announced funds and programs are not the same as money disbursed or centers operating.
 
-<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Sources</h2>
+## Sources
 
-<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://ekantipur.com/news/2024/05/29/en/flexible-policy-to-support-startups-47-20.html" class="text-zunkiree-600 hover:underline" rel="noopener">Flexible policy to support startups (ekantipur, May 29, 2024)</a></li><li><a href="https://pioneerlaw.com/?p=1222" class="text-zunkiree-600 hover:underline" rel="noopener">Key Budget Highlights Every Startup Entrepreneur Should Know for Fiscal Year 2081/82 (Pioneer Law)</a></li></ul></div>
+- [Flexible policy to support startups (ekantipur, May 29, 2024)](https://ekantipur.com/news/2024/05/29/en/flexible-policy-to-support-startups-47-20.html)
+- [Key Budget Highlights Every Startup Entrepreneur Should Know for Fiscal Year 2081/82 (Pioneer Law)](https://pioneerlaw.com/?p=1222)
 
 </div>
 
@@ -69,6 +74,6 @@ As we witness the ascent of the tech startup landscape in Nepal, it becomes evid
 <!-- SEOAI:FOCUS:external-citations --><div >
   <section class="gap-2">
     <h2 class="font-normal text-gray-900 text-2xl">References</h2>
-    <div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://www.startupblink.com/top-startups/nepal" class="text-zunkiree-600 hover:underline">Top Startups in Nepal | StartupBlink</a> — startupblink.com</li><li><a href="https://www.goodfirms.co/it-services/nepal" class="text-zunkiree-600 hover:underline">Top IT Services Companies in Nepal - 2026 Reviews | Goodfirms</a> — goodfirms.co</li></ul></div>
+    <ul><li><a href="https://www.startupblink.com/top-startups/nepal" class="text-zunkiree-600 hover:underline">Top Startups in Nepal | StartupBlink</a> — startupblink.com</li><li><a href="https://www.goodfirms.co/it-services/nepal" class="text-zunkiree-600 hover:underline">Top IT Services Companies in Nepal - 2026 Reviews | Goodfirms</a> — goodfirms.co</li></ul>
   </section>
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->

@@ -1,0 +1,76 @@
+---
+layout: resource-content.njk
+title: "Voice AI Agents for Customer Support: A Buyer's and Builder's Whitepaper"
+description: "How AI voice agents handle phone calls, the latency, accent and handoff problems to plan for, and a checklist for piloting one safely."
+permalink: /resources/voice-ai-agents-customer-support-whitepaper/
+slug: voice-ai-agents-customer-support-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How a voice agent works</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A voice agent chains three capabilities: speech recognition turns the caller's words into text, a language model decides what to say or do, and speech synthesis speaks the reply. Between those steps it can call tools, for example to check a diary or look up an order.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Each link adds delay. Callers tolerate a short pause but not a long one, so end-to-end response time is the first thing to measure in any demo.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What to test before you commit</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Test with real callers, not scripted ones. Check interruptions, background noise, strong accents, code-switching between languages and names that are hard to spell. A system that handles a clean demo line can still fail on a noisy mobile call.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If you serve callers in Nepali or mixed Nepali and English, test those specifically. Support differs sharply between vendors and between models.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Handoff to a person</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The most important design decision is when the agent stops. Define triggers: caller frustration, a request outside scope, a payment or medical question, or two failed attempts to understand. On handoff, pass the transcript so the caller does not repeat themselves.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A voice agent that cannot escape to a human damages trust faster than a long hold queue.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Consent, recording and data</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Tell callers they are speaking to an automated system and obtain consent where recording applies. Decide how long recordings and transcripts are kept, who can read them and where they are stored.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Healthcare and financial calls carry stricter obligations. Confirm requirements with your own legal advice before going live.
+  </p>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI voice agent, voice AI for customer service, AI phone agent",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an AI voice agent?", "acceptedAnswer": {"@type": "Answer", "text": "An AI voice agent answers phone calls using speech recognition, a language model and speech synthesis, and can take actions such as booking an appointment."}}, {"@type": "Question", "name": "Can an AI voice agent handle Nepali?", "acceptedAnswer": {"@type": "Answer", "text": "Support varies by vendor and model, so test with real Nepali and mixed-language calls before committing."}}, {"@type": "Question", "name": "When should a voice agent hand over to a human?", "acceptedAnswer": {"@type": "Answer", "text": "On frustration, out-of-scope requests, payment or medical questions, or repeated failures to understand, passing the transcript along."}}, {"@type": "Question", "name": "How long should a voice agent pilot run?", "acceptedAnswer": {"@type": "Answer", "text": "About four weeks with a defined call volume, success measures and clear criteria for continuing or stopping."}}]}</script><!-- SEOAI:FAQ:END -->

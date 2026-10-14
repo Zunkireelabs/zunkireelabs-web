@@ -1,6 +1,6 @@
 /**
  * AI Glossary Terms
- * 20 definitions for AEO - captures "What is X?" queries
+ * 29 definitions for AEO - captures "What is X?" queries
  */
 
 export default [
@@ -191,5 +191,77 @@ export default [
     relatedService: "ai-development",
     relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "AI Training"
+  },
+  {
+    id: "agentic-ai",
+    term: "Agentic AI",
+    shortDef: "AI that pursues a goal across multiple steps, choosing its own actions and tools rather than answering one prompt at a time.",
+    definition: "Agentic AI describes systems that take a goal and work toward it over multiple steps instead of responding to a single prompt. An agentic system plans a sequence of actions, calls tools or APIs to carry them out, reads the results, and adjusts its next move — repeating until the goal is met or it gives up. The distinction from ordinary automation is that the sequence is decided at runtime rather than scripted in advance, which is what lets one agent handle cases nobody enumerated. This is the capability that makes delivery models like Agentic-as-a-Service possible.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "AI Orchestration vs Automation vs Agents", url: "/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/" }, { title: "Understanding Agentic-as-a-Service", url: "/blog/understanding-agentic-as-a-service-a-comprehensive-guide/" }],
+    category: "AI Fundamentals"
+  },
+  {
+    id: "mcp",
+    term: "MCP (Model Context Protocol)",
+    shortDef: "An open standard for connecting AI models to external tools and data sources through one consistent interface.",
+    definition: "The Model Context Protocol (MCP) is an open standard that defines how AI models connect to external tools, data sources, and services. Before MCP, every model-to-tool integration was bespoke: each combination of application and data source needed its own connector. MCP replaces that with one protocol a server implements once and any compliant client can use, the way a database driver works. For teams running agents in production this matters because it decouples the model from the integrations — swapping the underlying model no longer means rewriting every connector.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "AI Agents Are Getting Their Own Infrastructure", url: "/blog/ai-agents-are-getting-their-own-infrastructure/" }],
+    category: "AI Architecture"
+  },
+  {
+    id: "function-calling",
+    term: "Function Calling",
+    shortDef: "The mechanism that lets a language model invoke real code by returning a structured request instead of prose.",
+    definition: "Function calling is how a language model triggers real work. The application gives the model a schema describing the functions available — their names, parameters, and types — and the model responds with a structured call naming the function and its arguments rather than free text. The application executes that function and feeds the result back. This is the bridge between a model that can only produce text and a system that can query a database, send an email, or book an appointment, and it is the foundation every tool-using agent is built on.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Flow AI?", url: "/blog/what-is-flow-ai/" }],
+    category: "AI Architecture"
+  },
+  {
+    id: "hallucination",
+    term: "Hallucination",
+    shortDef: "When an AI model states something fluently and confidently that is simply not true.",
+    definition: "A hallucination is output that is fluent, confident, and factually wrong. It happens because language models are trained to produce plausible continuations of text, not to verify claims — so when the training data is thin on a topic, the model fills the gap with something that reads correctly instead of declining to answer. Invented citations, fabricated product specifications, and plausible-sounding but non-existent API methods are all hallucinations. Grounding techniques such as retrieval-augmented generation reduce the rate substantially by giving the model verified source material to answer from, but no method eliminates it, which is why production systems keep a human in the loop for consequential decisions.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
+    category: "AI Fundamentals"
+  },
+  {
+    id: "ai-guardrails",
+    term: "AI Guardrails",
+    shortDef: "The checks that sit around a model to constrain what reaches it and what it is allowed to do or say.",
+    definition: "Guardrails are the controls placed around an AI model rather than inside it. They operate on the way in — validating and sanitising user input, stripping injected instructions — and on the way out, screening responses for unsafe content, leaked data, or claims the system is not permitted to make. For agentic systems they also bound actions: which tools an agent may call, what spending limits apply, and which operations require human approval before they execute. Guardrails matter because a model's own training provides no enforceable guarantee; the limits that actually hold are the ones implemented in the surrounding system.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "FTC Probe Into Rogue AI Agents: What Businesses Should Do", url: "/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/" }],
+    category: "AI Operations"
+  },
+  {
+    id: "chain-of-thought",
+    term: "Chain-of-Thought Prompting",
+    shortDef: "Prompting a model to reason step by step before it answers, which improves accuracy on multi-step problems.",
+    definition: "Chain-of-thought prompting asks a model to show its intermediate reasoning rather than jumping to a conclusion. On problems that require several dependent steps — arithmetic, logic, multi-constraint planning — generating the steps measurably improves accuracy, because each step conditions the next instead of the whole answer resting on a single leap. It is invoked either by instruction or by including worked examples in the prompt. The trade-off is cost and latency: reasoning tokens are billed and generated like any others, so chain-of-thought earns its place on hard problems and wastes money on simple lookups.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
+    category: "AI Practice"
+  },
+  {
+    id: "transformer",
+    term: "Transformer",
+    shortDef: "The neural network architecture behind modern language models, using attention to weigh how much each word matters to the others.",
+    definition: "The transformer is the neural network architecture that modern language models are built on, introduced in 2017. Its central idea is self-attention: for each token, the model computes how relevant every other token in the input is, so meaning that depends on distant context is captured directly rather than passed along step by step. Because those comparisons are independent of one another, they run in parallel — which is what made training on internet-scale text practical and is the reason the architecture displaced the recurrent networks that came before it. GPT, Claude, and Llama are all transformers.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Deep Learning?", url: "/blog/what-is-deep-learning-neural-networks-explained/" }],
+    category: "AI Models"
+  },
+  {
+    id: "multimodal-ai",
+    term: "Multimodal AI",
+    shortDef: "A model that handles more than one kind of input — text, images, audio, video — within a single shared representation.",
+    definition: "Multimodal AI refers to models that work across more than one type of data: text, images, audio, and video. Rather than bolting separate specialist models together, a multimodal model maps every input type into one shared representation, so it can reason across them — reading a chart and answering a question about it, or describing what is happening in a clip. In practice this removes whole integration layers: a document pipeline that previously needed OCR, layout detection, and a language model in sequence can often be handled by one model reading the page directly.",
+    relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
+    category: "AI Models"
   }
 ];

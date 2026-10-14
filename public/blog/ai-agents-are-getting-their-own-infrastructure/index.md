@@ -76,6 +76,7 @@ Start with one well-defined workflow, such as answering customer questions from 
 
 ## Related Insights
 
+- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
 - [AI Coding Agents: What Microsoft's Copilot Rethink Means](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
 - [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
