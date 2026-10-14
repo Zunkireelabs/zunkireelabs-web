@@ -32,10 +32,13 @@ services:
       - "traefik.http.routers.zunkiree-web-staging.entrypoints=websecure"
       - "traefik.http.routers.zunkiree-web-staging.tls=true"
       - "traefik.http.routers.zunkiree-web-staging.tls.certresolver=letsencrypt"
+      # Keep staging out of search engines. noindex@file is defined on the VPS
+      # in traefik/dynamic/noindex.yml (it was applied by hand on the server).
+      - "traefik.http.routers.zunkiree-web-staging.middlewares=noindex@file"
       # HTTP to HTTPS redirect
       - "traefik.http.routers.zunkiree-web-staging-http.rule=Host(`dev-web.zunkireelabs.com`)"
       - "traefik.http.routers.zunkiree-web-staging-http.entrypoints=web"
-      - "traefik.http.routers.zunkiree-web-staging-http.middlewares=zunkiree-web-staging-redirect"
+      - "traefik.http.routers.zunkiree-web-staging-http.middlewares=zunkiree-web-staging-redirect,noindex@file"
       - "traefik.http.middlewares.zunkiree-web-staging-redirect.redirectscheme.scheme=https"
       # Service port
       - "traefik.http.services.zunkiree-web-staging.loadbalancer.server.port=80"
