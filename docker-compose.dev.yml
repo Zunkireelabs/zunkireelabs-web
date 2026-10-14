@@ -8,6 +8,9 @@ services:
       - hosting
       - internal
     restart: unless-stopped
+    # Persisted here so redeploys stop wiping the cap (see
+    # zunkireelabs-ai-office infrastructure-ops/reference/COMPOSE-MEM-LIMITS.md).
+    mem_limit: 256m
     depends_on:
       - api
     healthcheck:
