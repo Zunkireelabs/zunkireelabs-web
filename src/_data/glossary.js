@@ -18,6 +18,7 @@ export default [
     shortDef: "An AI architecture that combines information retrieval with text generation to produce accurate, context-aware responses.",
     definition: "Retrieval-Augmented Generation (RAG) is an AI architecture pattern that enhances large language models by connecting them to external knowledge sources. When a user asks a question, the system first retrieves relevant documents from a knowledge base, then uses that context to generate an accurate response. RAG solves the hallucination problem common in pure LLMs by grounding responses in verified information. This approach is widely used for enterprise chatbots, document Q&A systems, and customer support automation.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
     category: "AI Architecture"
   },
   {
@@ -26,6 +27,7 @@ export default [
     shortDef: "An AI model trained on massive text datasets that can understand and generate human-like text.",
     definition: "A Large Language Model (LLM) is a type of artificial intelligence trained on billions of words from books, websites, and documents. LLMs like GPT-4, Claude, and Llama can understand context, answer questions, write content, and assist with complex tasks. They work by predicting the most likely next word in a sequence, but at scale, this creates emergent capabilities like reasoning and code generation. Businesses use LLMs for customer support, content creation, code assistance, and process automation.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }, { title: "What Is Deep Learning?", url: "/blog/what-is-deep-learning-neural-networks-explained/" }],
     category: "AI Models"
   },
   {
@@ -34,6 +36,7 @@ export default [
     shortDef: "A database optimized for storing and searching high-dimensional vectors, enabling semantic search and AI applications.",
     definition: "A vector database is a specialized database designed to store and query high-dimensional vectors (embeddings). Unlike traditional databases that match exact keywords, vector databases find semantically similar content. When text is converted to vectors using embedding models, similar concepts cluster together in vector space. This enables semantic search, recommendation systems, and RAG applications. Popular vector databases include Pinecone, Weaviate, Qdrant, and pgvector for PostgreSQL.",
     relatedService: "data-systems",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "Data Infrastructure"
   },
   {
@@ -42,6 +45,7 @@ export default [
     shortDef: "An autonomous AI system that can perceive its environment, make decisions, and take actions to achieve goals.",
     definition: "An AI agent is a software system that uses artificial intelligence to autonomously perform tasks on behalf of users. Unlike simple chatbots that only respond to queries, AI agents can plan multi-step workflows, use tools (APIs, databases, web browsers), and adapt their approach based on results. Examples include coding assistants that can write and test code, research agents that gather information from multiple sources, and customer service agents that can process refunds or schedule appointments.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "Ethical AI: Principles and Risks", url: "/blog/ethical-ai-principles-risks-and-how-organizations-apply-them/" }],
     category: "AI Architecture"
   },
   {
@@ -50,6 +54,7 @@ export default [
     shortDef: "Numerical representations of text, images, or other data that capture semantic meaning in a format AI can process.",
     definition: "Embeddings are dense numerical vectors that represent the meaning of text, images, or other data in a format that AI systems can process. Created by specialized models like OpenAI's text-embedding-ada-002, embeddings capture semantic relationships—similar concepts have similar vector representations. A 1,536-dimensional embedding can encode nuanced meaning, enabling applications like semantic search, clustering, and recommendation systems. Embeddings are fundamental to RAG systems, where they enable finding relevant documents based on meaning rather than keywords.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "AI Fundamentals"
   },
   {
@@ -74,6 +79,7 @@ export default [
     shortDef: "The process of further training an AI model on specific data to improve performance for particular tasks.",
     definition: "Fine-tuning is the process of taking a pre-trained AI model and training it further on domain-specific data. This customization improves the model's performance for particular tasks, industries, or writing styles. For example, fine-tuning GPT on legal documents creates a model better at legal analysis, while fine-tuning on customer support conversations improves response quality. Fine-tuning requires less data and compute than training from scratch while achieving excellent results for specific use cases.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }, { title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
     category: "AI Training"
   },
   {
@@ -82,6 +88,7 @@ export default [
     shortDef: "The practice of designing effective instructions for AI models to produce desired outputs.",
     definition: "Prompt engineering is the practice of crafting effective instructions (prompts) for AI models to produce desired outputs. Good prompts include clear context, specific requirements, examples of desired output, and appropriate constraints. Techniques include few-shot prompting (providing examples), chain-of-thought prompting (asking the model to reason step-by-step), and role-based prompting (asking the AI to act as an expert). Effective prompt engineering can dramatically improve AI output quality without model changes.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
     category: "AI Practice"
   },
   {
@@ -98,6 +105,7 @@ export default [
     shortDef: "The field of AI that enables computers to understand, interpret, and generate human language.",
     definition: "Natural Language Processing (NLP) is a branch of artificial intelligence focused on enabling computers to understand and work with human language. NLP powers applications like chatbots, sentiment analysis, translation, text summarization, and voice assistants. Modern NLP uses transformer architectures and large language models to achieve human-level performance on many tasks. Key capabilities include named entity recognition, intent classification, semantic understanding, and text generation.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }, { title: "What Is Deep Learning?", url: "/blog/what-is-deep-learning-neural-networks-explained/" }],
     category: "AI Fundamentals"
   },
   {
@@ -114,6 +122,13 @@ export default [
     shortDef: "Software architecture where a single application serves multiple customers while keeping their data separate.",
     definition: "Multi-tenant Software-as-a-Service (SaaS) is an architecture where one application instance serves multiple customers (tenants) while keeping their data logically separated. Each tenant gets their own isolated environment within the shared infrastructure, reducing costs and simplifying maintenance. Key considerations include data isolation, customization options, and scalable resource allocation. This model powers most modern SaaS products, from CRMs to project management tools.",
     relatedService: "saas-development",
+    faq: [
+      { q: "What is the difference between SaaS and multi-tenant architecture?", a: "SaaS is a business model, where the vendor hosts and maintains the software for its customers. Multi-tenancy is an architecture, where at least some components are shared between multiple tenants, which usually correspond to customers. Many SaaS products use a multi-tenant architecture, but the two terms are not interchangeable." },
+      { q: "How do you migrate to SaaS?", a: "A sensible first step is to decide what a tenant means for your product, such as a customer business or a group of users, and which tenancy model fits, because that choice depends on whether you serve businesses (B2B) or consumers (B2C). From there, plan data isolation, customization options and scalable resource allocation, which are the key considerations for any multi-tenant SaaS." },
+      { q: "Does multi-tenant mean everything is shared?", a: "No. Multi-tenancy means at least some components are shared across tenants, not every component. Each tenant still gets an isolated environment for its data within the shared infrastructure." },
+      { q: "Why do companies choose multi-tenant SaaS?", a: "Sharing infrastructure between tenants reduces costs and simplifies maintenance, while keeping each customer's data logically separated." }
+    ],
+    faqSource: { label: "Microsoft Azure Architecture Center: SaaS and multitenant solution architecture", url: "https://learn.microsoft.com/en-us/azure/architecture/guide/saas-multitenant-solution-architecture/" },
     category: "Software Architecture"
   },
   {
@@ -138,6 +153,7 @@ export default [
     shortDef: "The process of running a trained AI model to generate predictions or outputs from new input data.",
     definition: "Inference is the process of using a trained AI model to generate predictions or outputs from new input data. While training teaches the model, inference is when the model applies what it learned. Inference latency (speed) and cost are critical considerations for production AI systems. Options include cloud APIs (OpenAI, Anthropic), self-hosted models, and edge deployment. Optimization techniques like quantization and batching reduce inference costs while maintaining quality.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "AI Operations"
   },
   {
@@ -146,6 +162,7 @@ export default [
     shortDef: "The basic unit of text that AI models process, roughly equivalent to 4 characters or 0.75 words.",
     definition: "A token is the basic unit of text that AI language models process. Tokenization breaks text into subword units that the model can understand. In English, one token roughly equals 4 characters or 0.75 words. 'Artificial intelligence' might be 3 tokens: 'Art', 'ificial', 'intelligence'. Token counts matter because they determine costs (APIs charge per token) and context limits. Understanding tokenization helps optimize prompts and estimate API costs.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
     category: "AI Fundamentals"
   },
   {
@@ -154,6 +171,7 @@ export default [
     shortDef: "The maximum amount of text an AI model can process in a single request, measured in tokens.",
     definition: "A context window is the maximum amount of text (measured in tokens) that an AI model can process in a single request. GPT-4 Turbo has a 128K token context window (roughly 100,000 words), while Claude offers up to 200K tokens. Larger context windows enable processing longer documents, maintaining conversation history, and providing more context for accurate responses. Context window size is a key differentiator between AI models and affects architecture decisions for RAG systems.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Generative AI?", url: "/blog/what-is-generative-ai-how-it-works-and-where-it-fails/" }],
     category: "AI Fundamentals"
   },
   {
@@ -162,6 +180,7 @@ export default [
     shortDef: "An AI model's ability to perform tasks it wasn't explicitly trained on, without examples.",
     definition: "Zero-shot learning refers to an AI model's ability to perform tasks it wasn't explicitly trained on, without being given examples. Modern large language models exhibit strong zero-shot capabilities—you can ask them to translate, summarize, or classify text without fine-tuning. This contrasts with traditional machine learning, which required task-specific training data. Zero-shot capability makes LLMs versatile tools, though performance often improves with examples (few-shot) or fine-tuning.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "AI Training"
   },
   {
@@ -170,6 +189,7 @@ export default [
     shortDef: "Teaching an AI model new tasks by providing just a few examples in the prompt.",
     definition: "Few-shot learning is a technique where an AI model learns to perform a task from just a few examples provided in the prompt. Instead of fine-tuning on thousands of examples, you include 2-5 demonstrations of the desired input-output pattern. The model generalizes from these examples to handle new inputs. Few-shot prompting is more reliable than zero-shot for complex tasks and more practical than fine-tuning when data is limited or tasks change frequently.",
     relatedService: "ai-development",
+    relatedGuides: [{ title: "What Is Machine Learning?", url: "/blog/what-is-machine-learning-how-it-works-and-where-its-used/" }],
     category: "AI Training"
   }
 ];

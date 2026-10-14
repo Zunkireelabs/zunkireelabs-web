@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="dental-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="dental-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#99f6e4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#dental-bg)"/>
+
+  <!-- Abstract tooth -->
+  <g transform="translate(560, 70)" opacity="0.1">
+    <path d="M80 0c-30 0-60 14-60 52 0 28 10 44 16 76 4 22 8 52 22 52 16 0 12-44 22-44s6 44 22 44c14 0 18-30 22-52 6-32 16-48 16-76C160 14 130 0 80 0z" fill="#fff"/>
+  </g>
+
+  <!-- Chat visualization -->
+  <g transform="translate(80, 100)">
+    <!-- Patient message -->
+    <g transform="translate(0, 0)">
+      <rect width="280" height="50" fill="#fff" opacity="0.15" rx="8"/>
+      <circle cx="30" cy="25" r="15" fill="#fff" opacity="0.3"/>
+      <rect x="55" y="15" width="180" height="8" fill="#fff" opacity="0.4" rx="4"/>
+      <rect x="55" y="30" width="140" height="6" fill="#fff" opacity="0.3" rx="3"/>
+    </g>
+
+    <!-- AI response -->
+    <g transform="translate(100, 70)">
+      <rect width="320" height="70" fill="url(#dental-accent)" opacity="0.2" rx="8"/>
+      <circle cx="30" cy="35" r="15" fill="url(#dental-accent)"/>
+      <text x="30" y="40" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
+      <rect x="55" y="20" width="220" height="8" fill="#fff" opacity="0.6" rx="4"/>
+      <rect x="55" y="35" width="180" height="6" fill="#fff" opacity="0.4" rx="3"/>
+      <rect x="55" y="48" width="120" height="6" fill="#fff" opacity="0.3" rx="3"/>
+    </g>
+
+    <!-- Booked confirmation -->
+    <g transform="translate(0, 160)">
+      <rect width="240" height="50" fill="#fff" opacity="0.15" rx="8"/>
+      <circle cx="30" cy="25" r="15" fill="#fff" opacity="0.3"/>
+      <rect x="55" y="15" width="150" height="8" fill="#fff" opacity="0.4" rx="4"/>
+      <rect x="55" y="30" width="100" height="6" fill="#fff" opacity="0.3" rx="3"/>
+    </g>
+  </g>
+
+  <text x="80" y="405" font-family="system-ui, sans-serif" font-size="14" fill="#fff" opacity="0.7">Patient Communication</text>
+
+  <!-- Case study badge -->
+  <rect x="620" y="370" width="120" height="35" fill="url(#dental-accent)" rx="4"/>
+  <text x="680" y="393" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#134e4a" text-anchor="middle">CASE STUDY</text>
+</svg>

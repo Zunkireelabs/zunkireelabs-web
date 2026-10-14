@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "How AI Growth Agents Automate Technical SEO Fixes with Zunkiree Labs"
+title: "How AI Growth Agents Automate Technical SEO Fixes"
 description: "Discover how Zunkiree Labs harnesses AI technology to automate technical SEO fixes, streamlining the process and enhancing online visibility."
 date: "2026-09-08"
 featuredImage: "https://images.pexels.com/photos/4604607/pexels-photo-4604607.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Exploring the Landscape of Freelance IT Professionals in Nepal"
-description: "Discover the evolving role of freelance IT professionals in Nepal, trends, opportunities, and how they contribute to the digital landscape with a global perspective."
+description: "The evolving role of freelance IT professionals in Nepal, with trends, opportunities and their contribution to the digital landscape."
 date: "2026-09-21"
 featuredImage: "https://images.pexels.com/photos/36444642/pexels-photo-36444642.png?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Photographer with camera captures stunning mountain landscape in Garzê Tibetan Autonomous Prefecture, Sichuan."

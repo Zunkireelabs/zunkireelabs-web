@@ -28,6 +28,23 @@ hideChrome: true
   .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
     opacity: 0;
   }
+  /* Country-code dropdown list (lead-capture-form-v2.njk) already scrolls
+     (max-h-64 overflow-y-auto) — force the scrollbar visible instead of
+     relying on the browser's hover-to-reveal default. */
+  .country-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  .country-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  .country-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .country-scroll::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 9999px;
+  }
 </style>
 
 <section class="bg-white px-4 pb-10 pt-32 sm:px-6 sm:pb-14 sm:pt-36 lg:px-8 lg:pb-16 lg:pt-40">
@@ -126,7 +143,7 @@ hideChrome: true
           <h3 class="mb-3 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-400">Related Resources</h3>
           <div class="divide-y divide-navy-100/40">
             {% for related in resource.relatedResources %}
-            <a href="{{ related.href if related.href else '/resources/' + related.slug + '/' }}" class="group flex items-center justify-between gap-4 py-4">
+            <a href="{{ related.href if related.href else '/resources/' + related.slug + '/' }}" class="group flex items-center justify-between gap-4 py-4"{% if related.href and related.href.startsWith('http') %} target="_blank" rel="noopener noreferrer"{% endif %}>
               <p class="text-[15px] font-medium leading-snug text-navy-900 transition-colors group-hover:text-[#5a9100]">
                 {{ related.title }}
               </p>
@@ -154,8 +171,10 @@ hideChrome: true
   <div class="mx-auto max-w-5xl">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
 
-      {# Left Column: Content #}
-      <div class="lg:col-span-7">
+      {# Left Column: Content — id targeted by the lead-capture form's
+         client-side PDF export (no PDF file exists for these resources;
+         the form generates one from this rendered content on submit) #}
+      <div class="lg:col-span-7" id="resource-article-content">
         {{ content | safe }}
       </div>
 
@@ -164,6 +183,8 @@ hideChrome: true
         <div class="lg:sticky lg:top-24">
           {% set formTitle = resource.formTitle %}
           {% set ctaText = resource.ctaText %}
+          {% set resourceSlug = resource.slug %}
+          {% set resourceTitle = resource.title %}
           {% include "components/lead-capture-form-v2.njk" %}
         </div>
       </div>

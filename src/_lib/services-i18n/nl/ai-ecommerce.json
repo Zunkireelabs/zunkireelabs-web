@@ -1,0 +1,301 @@
+{
+  "id": "ai-ecommerce",
+  "relatedCaseStudies": [
+    {
+      "slug": "prime-tiles-case-study",
+      "title": "Prime Tiles",
+      "stat": "2x online conversieratio"
+    }
+  ],
+  "title": "AI-ecommerceoplossingen",
+  "category": "AI & Data",
+  "tagline": "Uw winkel sluit om middernacht. AI-ecommerce niet.",
+  "description": "Agentic-commerce-ontwikkeling voor webshops in Nepal en wereldwijd. Wij bouwen AI-shoppingagents, conversational-commerce-systemen en slimme aanbevelingsengines die conversies verhogen en klantenservice automatiseren.",
+  "heroImage": "/assets/images/ai-ecommerce-hero.svg",
+  "lastUpdated": "2026-03-31",
+  "heroCommands": [
+    {
+      "text": "Product zoeken voor klant",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "eSewa-betaling verwerken",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Bestelstatus volgen",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Vergelijkbare artikelen aanbevelen",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Retourverzoek afhandelen",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Verlaten winkelwagen terugwinnen",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Productvraag beantwoorden",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Ecommerce die zichzelf verkoopt — AI-agents, geen afrekenformulieren.",
+    "content": "AI-ecommerce vervangt wrijving bij het afrekenen door een gesprek. Wij bouwen AI-shoppingagents en aanbevelingsengines voor bedrijven in Nepal en wereldwijd — met koppelingen naar eSewa, Khalti en Fonepay. Klanten winkelen in natuurlijke taal. Uw winkel regelt productontdekking, winkelwagenbeheer en betalingsverwerking zonder menselijke tussenkomst."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Winkelwagenherstel",
+      "description": "automatisering van verlaten winkelwagens"
+    },
+    {
+      "value": "3x",
+      "label": "Engagement",
+      "description": "conversational commerce"
+    },
+    {
+      "value": "<2 uur",
+      "label": "Integratie",
+      "description": "uitrol van de widget"
+    },
+    {
+      "value": "50%",
+      "label": "Minder support",
+      "description": "door AI afgehandelde vragen"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "chat",
+      "title": "Conversational commerce die converteert",
+      "description": "Winkelervaringen in natuurlijke taal, waarin klanten vragen stellen en AI hen naar de aankoop begeleidt. 'Toon me rode sneakers onder Rs 5000' levert precies op wat ze willen — zonder filteren, zonder zoeken."
+    },
+    {
+      "icon": "integrate",
+      "title": "Expertise in de Nepalese markt",
+      "description": "Native integratie met eSewa, Khalti, Fonepay en ConnectIPS. Wij kennen het Nepalese ecommerce-ecosysteem — Daraz-verkopers, lokale betaalvoorkeuren en meertalige support in het Nepalees en Engels."
+    },
+    {
+      "icon": "speed",
+      "title": "AI-automatisering door de hele funnel",
+      "description": "Van productontdekking tot support na aankoop. AI regelt aanbevelingen, winkelwagenbeheer, afrekenen, orderopvolging, retouren en klantvragen — 24/7 zonder menselijke tussenkomst."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "daraz-sellers",
+      "title": "AI voor Daraz-verkopers",
+      "headline": "Automatiseer uw Daraz-winkel",
+      "description": "24/7 AI-agent die klantvragen afhandelt, productinformatie geeft, bestellingen volgt en retouren beheert voor Daraz-verkopers in Nepal. Spreekt met klanten in het Nepalees en Engels.",
+      "features": [
+        "Automatisering van klantvragen",
+        "Bestelstatus volgen",
+        "Productvragen en -antwoorden",
+        "Afhandeling van retouren en ruilingen"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "ecommerce-chatbot",
+      "title": "Ecommerce-chatbot Nepal",
+      "headline": "24/7 verkoopassistent",
+      "description": "Conversationele AI die de klok rond voor u verkoopt. Beantwoordt vragen, beveelt producten aan, helpt bij maatadvies en begeleidt klanten door het afrekenen in het Nepalees en Engels.",
+      "features": [
+        "Meertalige support",
+        "Productaanbevelingen",
+        "Advies over maat en pasvorm",
+        "Hulp bij het afrekenen"
+      ],
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "ai-recommendations",
+      "title": "AI-productaanbevelingen",
+      "headline": "Slimme aanbevelingen",
+      "description": "Gepersonaliseerde productsuggesties die de gemiddelde orderwaarde verhogen. AI leert van browsegedrag, aankoopgeschiedenis en vergelijkbare klanten om relevante producten aan te bevelen.",
+      "features": [
+        "Gedragsgebaseerde targeting",
+        "Cross-sell en upsell",
+        "Personalisatie",
+        "A/B-testen"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "order-management",
+      "title": "Geautomatiseerd orderbeheer",
+      "headline": "AI-orderafhandeling",
+      "description": "Automatiseer statusupdates, verzendmeldingen, bezorgtracking en retourverwerking. Klanten krijgen direct antwoord zonder op support te hoeven wachten.",
+      "features": [
+        "Statusautomatisering",
+        "Verzendupdates",
+        "Retourverwerking",
+        "Afhandeling van uitzonderingen"
+      ],
+      "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "inventory-ai",
+      "title": "Slimme voorraad-AI",
+      "headline": "Intelligent voorraadbeheer",
+      "description": "Vraagvoorspelling en voorraadoptimalisatie op basis van AI. Voorspel wat klanten gaan kopen, voorkom uitverkoop en optimaliseer voorraadniveaus automatisch.",
+      "features": [
+        "Vraagvoorspelling",
+        "Voorraadmeldingen",
+        "Automatisch bijbestellen",
+        "Trendanalyse"
+      ],
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Uw ecommerceplatform, klantreis en automatiseringskansen in kaart brengen. Productcatalogus doorlopen en de mogelijkheden van de AI-agent bepalen.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "Ecommerce-audit",
+        "Scope van de AI-agent",
+        "Integratieplan"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerp",
+      "description": "Ontwerp gespreksflows, productzoeklogica en betaalintegraties. Bouw een kennisbank op uit uw catalogus en beleid.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "Gespreksontwerp",
+        "Integratiearchitectuur",
+        "Cataloguskoppeling"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouw",
+      "description": "Ontwikkel AI-agents met iteratief testen. Koppel aan uw ecommerceplatform, betaalgateways en klantdatasystemen.",
+      "duration": "4-8 weken",
+      "deliverables": [
+        "AI-agentsysteem",
+        "Platformintegraties",
+        "Betalingsinrichting"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Lancering",
+      "description": "Zet de AI-agent in met monitoring. Continue optimalisatie op basis van conversiedata, klantfeedback en verkooppatronen.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Live AI-agent",
+        "Analytics-dashboard",
+        "Optimalisatierapporten"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4 Turbo",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "LangChain",
+      "category": "Framework",
+      "description": "Agentframework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+    },
+    {
+      "name": "Shopify",
+      "category": "Platform",
+      "description": "Ecommerce-API",
+      "logo": "https://cdn.worldvectorlogo.com/logos/shopify.svg"
+    },
+    {
+      "name": "WooCommerce",
+      "category": "Platform",
+      "description": "WordPress-ecommerce",
+      "logo": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg"
+    },
+    {
+      "name": "eSewa",
+      "category": "Betalingen",
+      "description": "Betalingen in Nepal",
+      "logo": "/assets/images/esewa-logo.svg"
+    },
+    {
+      "name": "Khalti",
+      "category": "Betalingen",
+      "description": "Betalingen in Nepal",
+      "logo": "/assets/images/khalti-logo.svg"
+    },
+    {
+      "name": "FastAPI",
+      "category": "Framework",
+      "description": "API-ontwikkeling",
+      "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "description": "Gegevensopslag",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wat is AI-ecommerce en hoe helpt het mijn webshop?",
+      "answer": "AI-ecommerce gebruikt kunstmatige intelligentie om online winkelervaringen te automatiseren en te verbeteren. Denk aan conversational commerce waarbij klanten in natuurlijke taal winkelen, AI-productaanbevelingen, geautomatiseerde klantenservice en slim voorraadbeheer. Winkels met AI-ecommerce zien 35% hogere conversieratio's en 50% lagere supportkosten."
+    },
+    {
+      "question": "Bouwt u AI-oplossingen voor Daraz-verkopers in Nepal?",
+      "answer": "Ja. Wij zijn gespecialiseerd in AI-oplossingen voor Daraz-verkopers, waaronder geautomatiseerde klantenservice, orderopvolging, productvragen en retourbeheer. Onze AI-agents handelen vragen af in het Nepalees en Engels, waardoor uw supportwerklast afneemt en de klanttevredenheid stijgt."
+    },
+    {
+      "question": "Wat kost een ecommerce-AI-chatbot in Nepal?",
+      "answer": "De kosten van een ecommerce-AI-chatbot in Nepal hangen af van complexiteit en functies. Eenvoudige conversational-commerce-widgets beginnen bij $2.000-5.000. Volledige agentic-commerce-systemen met betaalintegratie, voorraadsynchronisatie en uitrol op meerdere platforms liggen tussen $10.000 en $25.000. Neem contact met ons op voor een offerte op maat, afgestemd op uw specifieke wensen."
+    },
+    {
+      "question": "Kunnen AI-agents betalingen afhandelen via eSewa of Khalti?",
+      "answer": "Ja. Onze AI-commercesystemen integreren native met eSewa, Khalti, Fonepay en ConnectIPS voor de Nepalese markt. Klanten kunnen complete transacties afronden via een gesprek — producten bekijken, aan de winkelwagen toevoegen en betalen — zonder de chatinterface te verlaten."
+    },
+    {
+      "question": "Wat is het verschil tussen een chatbot en een AI-commerce-agent?",
+      "answer": "Traditionele chatbots volgen vaste antwoorden en kunnen alleen vooraf geprogrammeerde vragen beantwoorden. AI-commerce-agents zijn autonome systemen die context begrijpen, beslissingen nemen en acties uitvoeren — zoals uw catalogus doorzoeken, winkelwagens bijwerken, betalingen verwerken en uitzonderingen afhandelen. Het is het verschil tussen een FAQ-bot en een AI-verkoopvertegenwoordiger."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "ai-customer-experience",
+    "custom-software"
+  ],
+  "cta": {
+    "headline": "Klaar om uw ecommerce te automatiseren?",
+    "description": "Ontdek hoe AI-agents conversies kunnen verhogen en 24/7 verkoopondersteuning bieden. Wij auditen uw winkel en laten u de automatiseringskansen zien.",
+    "primaryButton": {
+      "text": "Vraag een ecommerce-audit aan",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk AI Commerce Agent",
+      "url": "/resources/stella-case-study/"
+    }
+  },
+  "clients": [],
+  "metaTitle": "AI-webshopoplossingen en -diensten in Nepal door Zunkiree Labs",
+  "metaDescription": "Start een AI-webshop in Nepal: AI-agents voor Shopify, WooCommerce en Daraz, conversational commerce en eSewa- en Khalti-integratie. Vraag een gratis audit aan."
+}

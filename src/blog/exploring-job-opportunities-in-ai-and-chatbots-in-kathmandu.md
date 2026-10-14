@@ -38,7 +38,7 @@ The main challenge for job seekers isn't a lack of interest — it's that many r
 ## Conclusion
 
 AI and chatbot roles in Kathmandu have grown from a niche into a real career path, but the strongest opportunities go to people who understand how these systems are actually built and evaluated, not just how to use them. Whether you're starting out or switching into the field, focus on the infrastructure behind the chatbot — retrieval, data pipelines, evaluation — since that's where the real, durable skill sits.
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><!-- SEOAI:SCHEMA:END -->
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20">
   <div class="container-custom">
       <div class="max-w-3xl mx-auto">

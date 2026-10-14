@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: "Blog | AI- en technologie-inzichten van Zunkiree Labs"
+description: "Praktische inzichten over AI-ontwikkeling en AI-infrastructuur. Artikelen van het team van Zunkiree Labs."
+lang: nl
+ogLocale: nl_NL
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.blog-nl
+  size: 15
+  reverse: true
+  alias: posts
+permalink: "{{ '/nl/blog/' if pagination.pageNumber == 0 else '/nl/blog/page/' + (pagination.pageNumber + 1) + '/' }}"
+---
+{# Listing for the nl blog. Only generated once this locale has at least one
+   post (Eleventy emits no pages for an empty collection), so an empty
+   locale never publishes an empty index. Markup lives in the shared partial. #}
+{% include "partials/blog-index-locale.njk" %}

@@ -1,7 +1,7 @@
 // Industry vertical page data — one entry per /industries/{id}/ page.
 // Rendered by src/_includes/layouts/industry.njk via src/pages/industries/industry-pages.njk.
 // Content sourced from docs/INDUSTRY_PAGES_CONTENT_PLAN.md — see that doc for guardrails/citations.
-export default [
+const industries = [
   {
     id: "education",
     title: "AI for Education | Zunkiree Labs",
@@ -129,7 +129,7 @@ export default [
     },
     appOverview: {
       heading: "Agency operations, run end-to-end",
-      body: "Deal pipeline through proposal, project delivery, and time/resourcing — one connected system, the same one ZunkireeLabs runs its own business on.",
+      body: "Deal pipeline through proposal, project delivery, and time/resourcing — one connected system, the same one Zunkiree Labs runs its own business on.",
       image: null
     },
     accelerators: {
@@ -322,3 +322,70 @@ export default [
     }
   }
 ];
+
+// SEO / answer-engine layer: an answer-first definition under the hero, an FAQ
+// (rendered by components/faq-accordion.njk, which also emits the FAQPage
+// JSON-LD from the same items), and related Insights. Answers restate what the
+// page above already says about the product; they add no new metrics.
+const seo = {
+  education: {
+    title: "AI for Education Consultancies | Zunkiree Labs",
+    description: "A multi-tenant CRM and AI search platform for education consultancies: application pipelines, partner colleges, visa tracking. Live in production.",
+    answer: "Zunkiree Labs provides a multi-tenant CRM with an education module for study-abroad and education consultancies. It manages the application pipeline from document collection to enrollment, tracks partner-college relationships and visas, and adds AI-powered search over student and program information. It is in production use at Admizz.",
+    faq: [
+      { question: "What does Zunkiree Labs offer education consultancies?", answer: "A multi-tenant CRM education module covering document collection, application submission, offer management, visa tracking and enrollment confirmation, plus partner-college relationship management, campaign tracking and AI-powered search over student and program information." },
+      { question: "Is this platform live with a real consultancy?", answer: "Yes. Admizz Education, a study-abroad recruitment consultancy, runs its student inquiry pipeline on the platform alongside Zunkiree Search." },
+      { question: "How is AI used in the application pipeline?", answer: "The pipeline runs as connected AI agents, such as intake, offer, visa tracking and enrollment agents, so each stage of an application is tracked in one record instead of across email threads and spreadsheets." },
+      { question: "How do I start with Zunkiree Labs for my consultancy?", answer: "Use the contact page to talk to the Education team. They can walk through the pipeline against your current process." }
+    ],
+    relatedPosts: [
+      { title: "AI Tutoring and Personalized Learning: What the Trials Show", href: "/blog/ai-personalized-learning-what-tutoring-trials-show/" },
+      { title: "Why AI Matters for Nepal: What the Evidence Shows", href: "/blog/why-ai-matters-for-nepal-what-the-evidence-shows/" }
+    ]
+  },
+  agencies: {
+    title: "AI Operating System for Agencies | Zunkiree Labs",
+    description: "The agency operating system Zunkiree Labs runs its own business on: deal pipeline, proposals, project delivery and resourcing in one connected system.",
+    answer: "Zunkiree Labs offers an agency operating system that connects the deal pipeline, proposals, project delivery and time and resourcing in one system. It is the same system Zunkiree Labs runs its own business on, delivered with connected AI agents.",
+    faq: [
+      { question: "What is the agency operating system?", answer: "One connected system for the deal pipeline through proposal, project delivery, and time and resourcing, so sales, delivery and staffing share one record instead of separate tools." },
+      { question: "Does Zunkiree Labs use it itself?", answer: "Yes. The page describes it as the same system Zunkiree Labs runs its own business on." },
+      { question: "Why connect pipeline, delivery and resourcing?", answer: "When these live in separate tools, handoffs depend on people copying data between them. A connected system keeps one version of each deal and project. Our Orca explainer covers the general idea of an orchestration layer." },
+      { question: "How do I talk to the team?", answer: "Use the contact page and ask for the agencies team." }
+    ],
+    relatedPosts: [
+      { title: "What Is Orca? The Orchestration Layer Explained", href: "/blog/what-is-orca-workflow-orchestration-layer-explained/" },
+      { title: "Disconnected Tools: What They Cost and How Orchestration Helps", href: "/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/" }
+    ]
+  },
+  healthcare: {
+    title: "AI Workforce Compliance for Healthcare | Zunkiree Labs",
+    description: "Compliance-gated workforce management for care providers: credential and licensure checks run before a shift can be assigned. Live in production.",
+    answer: "Zunkiree Labs provides compliance-gated workforce management for care providers. Credential and licensure checks run automatically before a shift can be assigned, so unsafe rostering is blocked at the source rather than caught afterwards. It is live for Australian care providers.",
+    faq: [
+      { question: "What does the healthcare platform do?", answer: "It manages care-workforce rostering with compliance built in: credential and licensure checks run automatically before a shift can be assigned." },
+      { question: "What does compliance-gated mean?", answer: "A shift cannot be assigned to someone whose required credentials or licences do not pass the check, so the problem is blocked before it reaches a roster." },
+      { question: "Who is it live for?", answer: "Australian care providers, according to the page." },
+      { question: "Does it give clinical advice?", answer: "No. It is workforce and compliance software. For evidence on AI in clinical settings, see our sepsis early-warning analysis." }
+    ],
+    relatedPosts: [
+      { title: "AI Sepsis Early Warning: What the Evidence Shows", href: "/blog/ai-sepsis-early-warning-what-the-evidence-shows/" }
+    ]
+  },
+  "real-estate": {
+    title: "AI for CRE Sponsors and Capital Raises | Zunkiree Labs",
+    description: "Offerings management, investor commitments and a secure data room in one workflow for commercial real estate sponsor firms running a capital raise.",
+    answer: "Zunkiree Labs provides a connected workflow for commercial real estate sponsor firms raising capital from investors: offerings management, investor commitments and a secure data room in one place.",
+    faq: [
+      { question: "Who is the real estate platform for?", answer: "Commercial real estate sponsor firms that raise capital from investors." },
+      { question: "What does it include?", answer: "Offerings management, investor commitments and a secure data room, connected in one workflow for running a raise." },
+      { question: "Is this about property valuation?", answer: "No. It supports the capital-raise workflow. For how AI and data are changing valuation, see our real estate analysis." },
+      { question: "How do I get started?", answer: "Use the contact page to talk to the team about your raise." }
+    ],
+    relatedPosts: [
+      { title: "How AI and Data Are Changing Real Estate Valuation", href: "/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/" }
+    ]
+  }
+};
+
+export default industries.map((i) => ({ ...i, ...seo[i.id] }));

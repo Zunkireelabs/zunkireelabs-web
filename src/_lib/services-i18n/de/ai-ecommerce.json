@@ -1,0 +1,301 @@
+{
+  "id": "ai-ecommerce",
+  "relatedCaseStudies": [
+    {
+      "slug": "prime-tiles-case-study",
+      "title": "Prime Tiles",
+      "stat": "2x Online-Conversion-Rate"
+    }
+  ],
+  "title": "KI-E-Commerce-Lösungen",
+  "category": "KI & Daten",
+  "tagline": "Ihr Shop schließt um Mitternacht. KI-E-Commerce nicht.",
+  "description": "Agentic-Commerce-Entwicklung für Online-Shops in Nepal und weltweit. Wir entwickeln KI-Shopping-Agenten, Conversational-Commerce-Systeme und intelligente Empfehlungs-Engines, die Conversions steigern und den Kundensupport automatisieren.",
+  "heroImage": "/assets/images/ai-ecommerce-hero.svg",
+  "lastUpdated": "2026-03-31",
+  "heroCommands": [
+    {
+      "text": "Produkt für Kunden finden",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "eSewa-Zahlung verarbeiten",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Bestellstatus verfolgen",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Ähnliche Artikel empfehlen",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Retourenanfrage bearbeiten",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Abgebrochenen Warenkorb zurückgewinnen",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Produktfrage beantworten",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "E-Commerce, der sich selbst verkauft – KI-Agenten statt Checkout-Formulare.",
+    "content": "KI-E-Commerce ersetzt Reibung im Checkout durch Konversation. Wir entwickeln KI-Shopping-Agenten und Empfehlungs-Engines für Unternehmen in Nepal und weltweit – mit Anbindung an eSewa, Khalti und Fonepay. Kunden kaufen in natürlicher Sprache ein. Ihr Shop übernimmt Produktsuche, Warenkorbverwaltung und Zahlungsabwicklung ohne menschliches Eingreifen."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Warenkorb-Rückgewinnung",
+      "description": "Automatisierung abgebrochener Warenkörbe"
+    },
+    {
+      "value": "3x",
+      "label": "Engagement",
+      "description": "Conversational Commerce"
+    },
+    {
+      "value": "<2 Std.",
+      "label": "Integration",
+      "description": "Widget-Bereitstellung"
+    },
+    {
+      "value": "50%",
+      "label": "Weniger Support-Aufwand",
+      "description": "von der KI bearbeitete Anfragen"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "chat",
+      "title": "Conversational Commerce, der konvertiert",
+      "description": "Einkaufserlebnisse in natürlicher Sprache, in denen Kunden Fragen stellen und die KI sie zum Kauf führt. „Zeig mir rote Sneaker unter Rs 5000“ liefert genau das Gewünschte – ohne Filtern, ohne Suchen."
+    },
+    {
+      "icon": "integrate",
+      "title": "Expertise für den nepalesischen Markt",
+      "description": "Native Integration mit eSewa, Khalti, Fonepay und ConnectIPS. Wir kennen das nepalesische E-Commerce-Ökosystem – Daraz-Verkäufer, lokale Zahlungspräferenzen und mehrsprachigen Support auf Nepali und Englisch."
+    },
+    {
+      "icon": "speed",
+      "title": "KI-Automatisierung über den gesamten Funnel",
+      "description": "Von der Produktsuche bis zum Support nach dem Kauf. Die KI übernimmt Empfehlungen, Warenkorbverwaltung, Checkout, Bestellverfolgung, Retouren und Kundenanfragen – rund um die Uhr ohne menschliches Eingreifen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "daraz-sellers",
+      "title": "KI für Daraz-Verkäufer",
+      "headline": "Automatisieren Sie Ihren Daraz-Shop",
+      "description": "KI-Agent rund um die Uhr, der Kundenanfragen beantwortet, Produktinformationen liefert, Bestellungen verfolgt und Retouren für Daraz-Verkäufer in Nepal abwickelt. Spricht mit Kunden auf Nepali und Englisch.",
+      "features": [
+        "Automatisierung von Kundenanfragen",
+        "Verfolgung des Bestellstatus",
+        "Produkt-Q&A",
+        "Abwicklung von Retouren und Umtausch"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "ecommerce-chatbot",
+      "title": "E-Commerce-Chatbot Nepal",
+      "headline": "Verkaufsassistent rund um die Uhr",
+      "description": "Konversations-KI, die rund um die Uhr für Sie verkauft. Beantwortet Fragen, empfiehlt Produkte, hilft bei der Größenwahl und führt Kunden auf Nepali und Englisch durch den Checkout.",
+      "features": [
+        "Mehrsprachiger Support",
+        "Produktempfehlungen",
+        "Beratung zu Größe und Passform",
+        "Unterstützung beim Checkout"
+      ],
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "ai-recommendations",
+      "title": "KI-Produktempfehlungen",
+      "headline": "Intelligente Empfehlungen",
+      "description": "Personalisierte Produktvorschläge, die den durchschnittlichen Bestellwert steigern. Die KI lernt aus Browsing-Verhalten, Kaufhistorie und ähnlichen Kunden, um relevante Produkte zu empfehlen.",
+      "features": [
+        "Verhaltensbasiertes Targeting",
+        "Cross-Selling und Upselling",
+        "Personalisierung",
+        "A/B-Tests"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "order-management",
+      "title": "Automatisiertes Bestellmanagement",
+      "headline": "KI-gestützte Bestellabwicklung",
+      "description": "Statusupdates, Versandbenachrichtigungen, Sendungsverfolgung und Retourenabwicklung automatisieren. Kunden erhalten sofort Antworten, ohne auf den Support warten zu müssen.",
+      "features": [
+        "Status-Automatisierung",
+        "Versandupdates",
+        "Retourenabwicklung",
+        "Ausnahmebehandlung"
+      ],
+      "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "inventory-ai",
+      "title": "Intelligente Lagerhaltung mit KI",
+      "headline": "Intelligente Bestandsführung",
+      "description": "KI-gestützte Bedarfsprognose und Bestandsoptimierung. Vorhersagen, was Kunden kaufen werden, Out-of-Stock-Situationen vermeiden und Lagerbestände automatisch optimieren.",
+      "features": [
+        "Bedarfsprognose",
+        "Bestandswarnungen",
+        "Automatische Nachbestellung",
+        "Trendanalyse"
+      ],
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Ihre E-Commerce-Plattform, die Customer Journey und Automatisierungspotenziale verstehen. Produktkatalog erfassen und die Fähigkeiten des KI-Agenten definieren.",
+      "duration": "1–2 Wochen",
+      "deliverables": [
+        "E-Commerce-Audit",
+        "Umfang des KI-Agenten",
+        "Integrationsplan"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Gesprächsabläufe, Produktsuchlogik und Zahlungsintegrationen entwerfen. Wissensdatenbank aus Ihrem Katalog und Ihren Richtlinien aufbauen.",
+      "duration": "2–3 Wochen",
+      "deliverables": [
+        "Gesprächsdesign",
+        "Integrationsarchitektur",
+        "Katalog-Mapping"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Entwicklung",
+      "description": "KI-Agenten mit iterativen Tests entwickeln. Anbindung an Ihre E-Commerce-Plattform, Zahlungsgateways und Kundendatensysteme.",
+      "duration": "4–8 Wochen",
+      "deliverables": [
+        "KI-Agenten-System",
+        "Plattform-Integrationen",
+        "Zahlungseinrichtung"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Launch",
+      "description": "KI-Agent mit Monitoring bereitstellen. Kontinuierliche Optimierung auf Basis von Conversion-Daten, Kundenfeedback und Verkaufsmustern.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Live-KI-Agent",
+        "Analytics-Dashboard",
+        "Optimierungsberichte"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4 Turbo",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "LangChain",
+      "category": "Framework",
+      "description": "Agenten-Framework",
+      "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+    },
+    {
+      "name": "Shopify",
+      "category": "Plattform",
+      "description": "E-Commerce-API",
+      "logo": "https://cdn.worldvectorlogo.com/logos/shopify.svg"
+    },
+    {
+      "name": "WooCommerce",
+      "category": "Plattform",
+      "description": "WordPress-E-Commerce",
+      "logo": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg"
+    },
+    {
+      "name": "eSewa",
+      "category": "Zahlungen",
+      "description": "Zahlungen in Nepal",
+      "logo": "/assets/images/esewa-logo.svg"
+    },
+    {
+      "name": "Khalti",
+      "category": "Zahlungen",
+      "description": "Zahlungen in Nepal",
+      "logo": "/assets/images/khalti-logo.svg"
+    },
+    {
+      "name": "FastAPI",
+      "category": "Framework",
+      "description": "API-Entwicklung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Datenbank",
+      "description": "Datenspeicherung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Was ist KI-E-Commerce und wie hilft er meinem Online-Shop?",
+      "answer": "KI-E-Commerce nutzt künstliche Intelligenz, um Online-Einkaufserlebnisse zu automatisieren und zu verbessern. Dazu gehören Conversational Commerce, bei dem Kunden in natürlicher Sprache einkaufen, KI-Produktempfehlungen, automatisierter Kundensupport und intelligentes Bestandsmanagement. Shops mit KI-E-Commerce erzielen 35 % höhere Conversion-Raten und 50 % geringere Supportkosten."
+    },
+    {
+      "question": "Entwickeln Sie KI-Lösungen für Daraz-Verkäufer in Nepal?",
+      "answer": "Ja. Wir sind auf KI-Lösungen für Daraz-Verkäufer spezialisiert, darunter automatisierter Kundensupport, Bestellverfolgung, Produkt-Q&A und Retourenmanagement. Unsere KI-Agenten bearbeiten Anfragen auf Nepali und Englisch, entlasten Ihren Support und steigern die Kundenzufriedenheit."
+    },
+    {
+      "question": "Was kostet ein E-Commerce-KI-Chatbot in Nepal?",
+      "answer": "Die Kosten für einen E-Commerce-KI-Chatbot in Nepal hängen von Komplexität und Funktionsumfang ab. Einfache Conversational-Commerce-Widgets beginnen bei 2.000–5.000 $. Vollständige Agentic-Commerce-Systeme mit Zahlungsintegration, Bestandsabgleich und Multi-Plattform-Bereitstellung liegen zwischen 10.000 und 25.000 $. Kontaktieren Sie uns für ein individuelles Angebot auf Basis Ihrer konkreten Anforderungen."
+    },
+    {
+      "question": "Können KI-Agenten Zahlungen über eSewa oder Khalti abwickeln?",
+      "answer": "Ja. Unsere KI-Commerce-Systeme sind für den nepalesischen Markt nativ in eSewa, Khalti, Fonepay und ConnectIPS integriert. Kunden können komplette Transaktionen im Gespräch abschließen – Produkte ansehen, in den Warenkorb legen und bezahlen –, ohne die Chat-Oberfläche zu verlassen."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen einem Chatbot und einem KI-Commerce-Agenten?",
+      "answer": "Herkömmliche Chatbots folgen vorgegebenen Antworten und können nur vorprogrammierte Fragen beantworten. KI-Commerce-Agenten sind autonome Systeme, die Kontext verstehen, Entscheidungen treffen und Aktionen ausführen – etwa Ihren Katalog durchsuchen, Warenkörbe aktualisieren, Zahlungen verarbeiten und Ausnahmen behandeln. Das ist der Unterschied zwischen einem FAQ-Bot und einem KI-Vertriebsmitarbeiter."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "ai-customer-experience",
+    "custom-software"
+  ],
+  "cta": {
+    "headline": "Bereit, Ihren E-Commerce zu automatisieren?",
+    "description": "Erfahren Sie, wie KI-Agenten Conversions steigern und rund um die Uhr Verkaufsunterstützung bieten. Wir prüfen Ihren Shop und zeigen Ihnen die Automatisierungspotenziale.",
+    "primaryButton": {
+      "text": "E-Commerce-Audit anfordern",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "KI-Commerce-Agent ansehen",
+      "url": "/resources/stella-case-study/"
+    }
+  },
+  "clients": [],
+  "metaTitle": "KI-Shop-Lösungen und -Services in Nepal von Zunkiree Labs",
+  "metaDescription": "KI-Shop in Nepal starten: KI-Agenten für Shopify, WooCommerce und Daraz, Conversational Commerce, eSewa- und Khalti-Integration. Kostenloses Audit sichern."
+}

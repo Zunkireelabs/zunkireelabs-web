@@ -3,8 +3,9 @@ layout: base.njk
 title: "AI & Technology Blog | Insights from Zunkiree Labs"
 description: "Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company."
 eleventyExcludeFromCollections: true
+hideChrome: true
 pagination:
-  data: collections.blog
+  data: collections.articles
   size: 10
   reverse: true
   alias: posts
@@ -13,12 +14,21 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
 
 {# =====================================================
    BLOG LISTING PAGE
+   hideChrome: true + navbar-v2/footer-v2 included directly,
+   same convention as blog-post.njk (individual posts) and
+   every other V2 page — base.njk's own header.njk/footer.njk
+   are a different, older design (warm-charcoal/zunkiree-600)
+   and previously rendered here on a page that otherwise never
+   used them, mismatching every post this page links to.
    ===================================================== #}
+{% include "partials/navbar-v2.njk" %}
 
 {# =====================================================
    HERO SECTION
+   pt-32/36/44 clears navbar-v2's fixed 72px bar, same values
+   blog-post.njk itself already uses.
    ===================================================== #}
-<section class="pt-16 pb-12 md:pt-20 md:pb-16 bg-white">
+<section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     {# Breadcrumb #}
     <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
@@ -33,6 +43,9 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
     <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
       Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs.
     </p>
+
+    {% set blogFilter = "all" %}
+    {% include "partials/blog-filter.njk" %}
   </div>
 </section>
 
@@ -42,107 +55,7 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
 <section class="pb-16 md:pb-24 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {% if posts.length > 0 %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% for post in posts %}
-      <a href="{{ post.url }}" class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-        {# Featured Image #}
-        {% if post.data.featuredImage %}
-        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
-          <img
-            src="{{ post.data.featuredImage }}"
-            alt="{{ post.data.title }}"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-black/10 flex items-center justify-center p-6">
-            <h2 class="text-white text-2xl md:text-3xl font-medium text-center leading-tight drop-shadow-md line-clamp-3">
-              {{ post.data.title }}
-            </h2>
-          </div>
-        </div>
-        {% else %}
-        <div class="relative aspect-[4/5] bg-gradient-to-br from-zunkiree-500 to-zunkiree-700 flex items-center justify-center p-6">
-          <h2 class="text-white text-2xl md:text-3xl font-medium text-center leading-tight drop-shadow-md line-clamp-3">
-            {{ post.data.title }}
-          </h2>
-        </div>
-        {% endif %}
-
-        {# Content #}
-        <div class="p-6">
-          {# Category + Date #}
-          <div class="flex items-center gap-3 mb-3">
-            {% if post.data.category %}
-            <span class="text-xs font-medium text-zunkiree-600">{{ post.data.category }}</span>
-            <span class="text-gray-300">·</span>
-            {% endif %}
-            <time class="text-sm text-gray-500" datetime="{{ post.date | date('%Y-%m-%d') }}">
-              {{ post.date | date('%B %d, %Y') }}
-            </time>
-          </div>
-
-          {# Description #}
-          {% if post.data.description %}
-          <p class="text-gray-600 text-sm line-clamp-2">
-            {{ post.data.description }}
-          </p>
-          {% endif %}
-
-          {# Read more #}
-          <div class="mt-4 flex items-center gap-2 text-sm font-medium text-zunkiree-600 group-hover:gap-3 transition-all">
-            Read article
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-
-    {% if pagination.pages.length > 1 %}
-    {# Pagination — reuses this page's own real link/button/icon classes #}
-    <nav class="mt-12 flex items-center justify-between" aria-label="Blog pagination">
-      {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" class="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-900 font-medium hover:bg-gray-50 transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
-        </svg>
-        Previous
-      </a>
-      {% else %}
-      <span></span>
-      {% endif %}
-
-      <span class="text-sm text-gray-500">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
-
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-        Next
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
-      {% else %}
-      <span></span>
-      {% endif %}
-    </nav>
-    {% endif %}
-
-    {% else %}
-    {# Empty state #}
-    <div class="text-center py-16">
-      <svg class="w-16 h-16 text-gray-300 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-      </svg>
-      <h2 class="text-xl font-medium text-gray-900 mb-2">Coming soon</h2>
-      <p class="text-gray-600 mb-8">We're working on our first articles. Check back soon.</p>
-      <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
-        Back to Home
-      </a>
-    </div>
-    {% endif %}
+    {% include "partials/blog-grid.njk" %}
 
   </div>
 </section>
@@ -163,9 +76,9 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
     </a>
   </div>
 </section>
-<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers AI products and solutions, including AI-native search, practice management software for dental care, and business analytics platforms.","@type":"Answer"}},{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers products such as Zunkiree Search, Dental AI, Gaamma for business analytics, Stella (AI Commerce Agent), Zenly (AI Booking Engine), and AI CRM.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial available on their website.","@type":"Answer"}},{"name":"What services does Zunkiree Labs provide?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides services including AI development, AI customer experience, data systems, custom software development, SaaS development, web & app development, and SEO.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs serves various industries, including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is the purpose of the Agentic as a Service (GaaS) offering?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) provides autonomous AI agents deployed as managed services to enhance business workflows.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
+<!-- SEOAI:FAQ:START --><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Zunkiree Labs?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers AI products and solutions, including AI-native search, practice management software for dental care, and business analytics platforms.","@type":"Answer"}},{"name":"What products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers products such as Zunkiree Search, Dental AI, Gaamma for business analytics, Stella (AI Commerce Agent), Zennly (AI Booking Engine), and AI CRM.","@type":"Answer"}},{"name":"How can I try Zunkiree Search?","@type":"Question","acceptedAnswer":{"text":"You can try Zunkiree Search for free by starting a free trial available on their website.","@type":"Answer"}},{"name":"What services does Zunkiree Labs provide?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs provides services including AI development, AI customer experience, data systems, custom software development, SaaS development, web & app development, and SEO.","@type":"Answer"}},{"name":"What industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs serves various industries, including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"What is the purpose of the Agentic as a Service (GaaS) offering?","@type":"Question","acceptedAnswer":{"text":"Agentic as a Service (GaaS) provides autonomous AI agents deployed as managed services to enhance business workflows.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","headline":"AI & Technology Blog | Insights from Zunkiree Labs","articleBody":"Insights & Guides Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs. August 7, 2026 AI & Technology Blog | Insights from Zunkiree Labs Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company. Read article August 7, 2026 The Ultimate Guide to Building an Agentic as a Service (GaaS) Application How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business. Read article August 4, 2026 Exploring Technological Innovations at Zunkiree Labs Dive into the latest technological innovations and research initiatives at Zunkiree Labs, highlighting cutting-edge advancements in AI and more. Read article July 27, 2026 Why User Testimonials Matter: Real Voices from Zunkiree Labs Why case studies and customer results matter more than marketing copy when evaluating an AI vendor, and what Zunkiree Labs' published case studies actually show. Read article July 27, 2026 What is a Dental AI Virtual Assistant? What a dental AI virtual assistant is from a patient's perspective, what it can answer on its own, and where it hands off to your dental team. Read article July 27, 2026 Understanding the Role of a Dental AI Admin Explore the essential responsibilities and skills of a Dental AI Administrator and how they contribute to modern dental practices. Read article July 27, 2026 Top AI Companies to Watch in Nepal Discover the best AI companies in Nepal, their innovative solutions, and how they're contributing to the tech landscape in 2026. Read article July 27, 2026 Revolutionizing Dental Practice Efficiency: The Impact of AI on Scheduling Discover how AI can enhance scheduling in dental practices, leading to improved efficiency, reduced no-shows, and better patient experiences. Read article July 27, 2026 Exploring Specialized AI Companies for Healthcare in Nepal Discover the emerging landscape of specialized AI companies in the healthcare sector of Nepal, their contributions, and potential impact on healthcare delivery. Read article July 27, 2026 Agentic-as-a-Service in Nepal: Exploring Availability and Options Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region. Read article July 26, 2026 Dental AI Secretary Solutions for Practices How AI-powered dental secretaries handle scheduling, reminders, and front-desk communication — and what dental practices can expect from adopting one. Read article July 26, 2026 Understanding Complex Availability in Scheduling What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zenly resolve it automatically. Read article July 26, 2026 Exploring Job Opportunities in AI.","datePublished":"2026-08-07"}</script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","headline":"AI & Technology Blog | Insights from Zunkiree Labs","articleBody":"Insights & Guides Practical insights on AI development, RAG systems, and building production-grade AI infrastructure. From the team at Zunkiree Labs. August 7, 2026 AI & Technology Blog | Insights from Zunkiree Labs Expert insights on AI development, RAG pipelines, machine learning, and building AI systems. Practical guides from Nepal's leading AI company. Read article August 7, 2026 The Ultimate Guide to Building an Agentic as a Service (GaaS) Application How Agentic as a Service (GaaS) applications are architected — manager/worker agents, Human-in-the-Loop gates, sandboxed execution, and Cost-per-Outcome pricing — and how to plan one for your business. Read article August 4, 2026 Exploring Technological Innovations at Zunkiree Labs Dive into the latest technological innovations and research initiatives at Zunkiree Labs, highlighting cutting-edge advancements in AI and more. Read article July 27, 2026 Why User Testimonials Matter: Real Voices from Zunkiree Labs Why case studies and customer results matter more than marketing copy when evaluating an AI vendor, and what Zunkiree Labs' published case studies actually show. Read article July 27, 2026 What is a Dental AI Virtual Assistant? What a dental AI virtual assistant is from a patient's perspective, what it can answer on its own, and where it hands off to your dental team. Read article July 27, 2026 Understanding the Role of a Dental AI Admin Explore the essential responsibilities and skills of a Dental AI Administrator and how they contribute to modern dental practices. Read article July 27, 2026 Top AI Companies to Watch in Nepal Discover the best AI companies in Nepal, their innovative solutions, and how they're contributing to the tech landscape in 2026. Read article July 27, 2026 Revolutionizing Dental Practice Efficiency: The Impact of AI on Scheduling Discover how AI can enhance scheduling in dental practices, leading to improved efficiency, reduced no-shows, and better patient experiences. Read article July 27, 2026 Exploring Specialized AI Companies for Healthcare in Nepal Discover the emerging landscape of specialized AI companies in the healthcare sector of Nepal, their contributions, and potential impact on healthcare delivery. Read article July 27, 2026 Agentic-as-a-Service in Nepal: Exploring Availability and Options Discover the current landscape of Agentic-as-a-Service offerings in Nepal, including potential companies, services, and insights on the future of AI in the region. Read article July 26, 2026 Dental AI Secretary Solutions for Practices How AI-powered dental secretaries handle scheduling, reminders, and front-desk communication — and what dental practices can expect from adopting one. Read article July 26, 2026 Understanding Complex Availability in Scheduling What 'complex availability' means in scheduling, why it breaks simple calendar tools, and how AI-powered systems like Zennly resolve it automatically. Read article July 26, 2026 Exploring Job Opportunities in AI.","datePublished":"2026-08-07","dateModified":"2026-09-29"}</script><!-- SEOAI:SCHEMA:END -->
 
 <!-- SEOAI:EXPANDEDCONTENT:START --><section class="py-12 md:py-20 bg-white">
   <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-6">
@@ -179,3 +92,5 @@ permalink: "{{ '/blog/' if pagination.pageNumber == 0 else '/blog/page/' + (pagi
     </div>
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
+
+{% include "partials/footer-v2.njk" %}

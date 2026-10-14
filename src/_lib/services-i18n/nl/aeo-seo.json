@@ -1,0 +1,298 @@
+{
+  "id": "aeo-seo",
+  "title": "AEO & SEO",
+  "category": "Marketing",
+  "tagline": "Scoor op Google. Word geciteerd door AI. Dat is AEO & SEO.",
+  "description": "Zoekoptimalisatie voor het AI-tijdperk. Wij optimaliseren uw content om te scoren in traditionele zoekmachines en geciteerd te worden door AI-assistenten als ChatGPT, Perplexity en Google AI Overviews. Nieuwe regels vragen om een nieuwe aanpak.",
+  "heroImage": "/assets/images/aeo-seo-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "AI-zichtbaarheid auditen",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Optimaliseren voor citatie",
+      "type": "Acties",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Schema-markup toevoegen",
+      "type": "Inhoud",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "FAQ-content structureren",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "AI-vermeldingen tracken",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Core Web Vitals verbeteren",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Zoekintentie analyseren",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Zichtbaar op Google. Geciteerd door ChatGPT. Dat is moderne zoekmachine-optimalisatie.",
+    "content": "AI-systemen als ChatGPT, Perplexity en Google AI Overviews beantwoorden nu miljoenen vragen die voorheen verkeer naar uw website brachten. Zichtbaar blijven vraagt om optimalisatie voor zowel zoekmachines als AI-citatie: gestructureerde content, gezaghebbende positionering en technische precisie. Wij noemen dit AEO, en het is tegenwoordig onlosmakelijk verbonden met effectieve SEO."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Aandeel AI-verkeer",
+      "description": "prognose tot 2027"
+    },
+    {
+      "value": "3x",
+      "label": "Citatiegraad",
+      "description": "met AEO-optimalisatie"
+    },
+    {
+      "value": "200%",
+      "label": "Organische groei",
+      "description": "gem. verbetering bij klanten"
+    },
+    {
+      "value": "< 30 d",
+      "label": "Eerste resultaten",
+      "description": "bij quick wins"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Geciteerd worden door AI-systemen, niet alleen scoren",
+      "description": "Wanneer ChatGPT of Perplexity een vraag beantwoordt, noemen ze bronnen. Wij structureren uw content zodat AI-systemen uw autoriteit herkennen en naar uw merk verwijzen, voor naamsbekendheid en verkeer, ook als gebruikers niet op zoekresultaten klikken."
+    },
+    {
+      "icon": "speed",
+      "title": "Featured snippets en AI Overviews veroveren",
+      "description": "De AI Overviews van Google putten uit goed gestructureerde content. Wij optimaliseren voor positie nul: heldere definities, opgemaakte lijsten en schema-markup die zoekmachines precies vertelt wat uw content bevat."
+    },
+    {
+      "icon": "integrate",
+      "title": "Autoriteit opbouwen die zich in de loop der tijd opstapelt",
+      "description": "Zowel traditionele SEO als AEO belonen autoriteit. Wij bouwen die op via inhoudelijke diepgang, expertpositionering, linkbuilding en technische uitmuntendheid. Het resultaat is verkeer dat groeit en zich opstapelt, geen advertenties die stoppen zodra u stopt met betalen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "ai-visibility",
+      "title": "AI-zichtbaarheid",
+      "headline": "AI-zichtbaarheidsoptimalisatie",
+      "description": "Word geciteerd door ChatGPT, Perplexity, Claude en Google AI Overviews. Structureer content voor AI-extractie met definitieblokken, FAQ's en gezaghebbende positionering.",
+      "features": [
+        "AI-citatieoptimalisatie",
+        "Definitieblokken maken",
+        "FAQ-structurering",
+        "Autoriteitssignalen"
+      ],
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "technical-seo",
+      "title": "Technische SEO",
+      "headline": "Technische SEO",
+      "description": "De technische basis op orde brengen: sitesnelheid, crawlbaarheid, gestructureerde data en Core Web Vitals. Technische problemen die rankings en zichtbaarheid blokkeren.",
+      "features": [
+        "Optimalisatie van sitesnelheid",
+        "Schema-markup",
+        "Crawl-optimalisatie",
+        "Core Web Vitals"
+      ],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "content-strategy",
+      "title": "Contentstrategie",
+      "headline": "Contentstrategie",
+      "description": "Waardevolle onderwerpen identificeren, content maken die scoort en converteert en topical authority opbouwen. Content die zowel gebruikers als zoekalgoritmen bedient.",
+      "features": [
+        "Zoekwoordonderzoek",
+        "Contentplanning",
+        "Topic clusters",
+        "Concurrentieanalyse"
+      ],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "local-seo",
+      "title": "Lokale SEO",
+      "headline": "Lokale SEO",
+      "description": "Optimaliseren voor lokaal zoeken: Google Bedrijfsprofiel, lokale vermeldingen en reviewbeheer. Gevonden worden door klanten in uw servicegebied.",
+      "features": [
+        "Optimalisatie van Google Bedrijfsprofiel",
+        "Lokale vermeldingen",
+        "Reviewbeheer",
+        "Lokale schema-markup"
+      ],
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "seo-migration",
+      "title": "SEO-migratie",
+      "headline": "SEO-migratie & herstel",
+      "description": "Rankings beschermen tijdens sitemigraties en redesigns. Herstellen van algoritmestraffen of verkeersdalingen met gerichte oplossingen.",
+      "features": [
+        "Migratieplanning",
+        "Redirect-mapping",
+        "Herstel na straf",
+        "Verkeersherstel"
+      ],
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Audit",
+      "description": "Uitgebreide audit van technische SEO, contentkwaliteit, AI-zichtbaarheid en concurrentiepositie. Quick wins en kansen op de lange termijn identificeren.",
+      "duration": "1-2 weken",
+      "deliverables": [
+        "SEO-auditrapport",
+        "AEO-beoordeling",
+        "Geprioriteerde roadmap"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Herstellen",
+      "description": "Technische problemen aanpakken en quick wins doorvoeren. Schema-markup, verbetering van de sitesnelheid en optimalisatie van de contentstructuur.",
+      "duration": "2-4 weken",
+      "deliverables": [
+        "Technische oplossingen",
+        "Schema-implementatie",
+        "Herstructurering van content"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouwen",
+      "description": "De contentstrategie uitvoeren: nieuwe content maken, bestaande pagina's optimaliseren en topical authority opbouwen. Doorlopende linkbuilding en PR.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Contentkalender",
+        "Linkacquisitie",
+        "Rankingrapporten"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Meten",
+      "description": "Rankings, verkeer, AI-citaties en conversies bijhouden. Maandelijkse rapportage met inzichten en strategieaanpassingen op basis van data.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Maandrapporten",
+        "Rankingtracking",
+        "Monitoring van AI-citaties"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Ahrefs",
+      "category": "SEO-tool",
+      "description": "Backlinkanalyse",
+      "logo": "https://cdn.simpleicons.org/ahrefs/FF6600"
+    },
+    {
+      "name": "Semrush",
+      "category": "SEO-tool",
+      "description": "Zoekwoordonderzoek",
+      "logo": "https://cdn.worldvectorlogo.com/logos/semrush.svg"
+    },
+    {
+      "name": "Screaming Frog",
+      "category": "Crawler",
+      "description": "Technische audit",
+      "logo": "https://cdn.simpleicons.org/screamingfrog/9DCA31"
+    },
+    {
+      "name": "Google Search Console",
+      "category": "Analytics",
+      "description": "Zoekdata",
+      "logo": "https://cdn.worldvectorlogo.com/logos/google-search-console.svg"
+    },
+    {
+      "name": "Schema.org",
+      "category": "Gestructureerde data",
+      "description": "Markupstandaard",
+      "logo": "https://schema.org/docs/favicon.ico"
+    },
+    {
+      "name": "PageSpeed Insights",
+      "category": "Prestaties",
+      "description": "Core Web Vitals",
+      "logo": "https://cdn.worldvectorlogo.com/logos/google-lighthouse.svg"
+    },
+    {
+      "name": "Clearscope",
+      "category": "Content",
+      "description": "Contentoptimalisatie",
+      "logo": "https://cdn.simpleicons.org/c/5046E5"
+    },
+    {
+      "name": "Surfer SEO",
+      "category": "Content",
+      "description": "On-page SEO",
+      "logo": "https://cdn.simpleicons.org/surfshark/178BF1"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wat is AEO en waarom is het belangrijk?",
+      "answer": "AEO (AI Engine Optimization) is het optimaliseren van content om geciteerd te worden door AI-systemen als ChatGPT, Perplexity en Google AI Overviews. Naarmate AI meer vragen direct beantwoordt, dalen traditionele doorklikpercentages. AEO zorgt ervoor dat uw merk wordt genoemd en geciteerd, ook wanneer gebruikers geen zoekresultaten bezoeken, zodat uw zichtbaarheid in het AI-tijdperk behouden blijft."
+    },
+    {
+      "question": "Hoe lang duurt het voordat SEO resultaat laat zien?",
+      "answer": "Technische oplossingen en quick wins laten vaak binnen 2-4 weken resultaat zien. Rankings voor concurrerende zoekwoorden duren doorgaans 3-6 maanden. Het opbouwen van domeinautoriteit en het scoren op waardevolle termen kan 6-12 maanden duren. Wij geven prioriteit aan quick wins en werken tegelijk toe naar langetermijndoelen."
+    },
+    {
+      "question": "Moeten we ons richten op SEO of op betaald adverteren?",
+      "answer": "Beide dienen een ander doel. Betaalde advertenties leveren direct verkeer op, maar stoppen zodra u stopt met betalen. SEO bouwt waarde op die zich opstapelt: content die scoort blijft jarenlang verkeer opleveren. De meeste bedrijven hebben baat bij betaalde advertenties voor directe behoeften, terwijl ze organisch verkeer opbouwen voor efficiëntie op de lange termijn."
+    },
+    {
+      "question": "Hoe houdt u AI-citaties bij?",
+      "answer": "Wij monitoren AI-systemen op merkvermeldingen en citaties: we volgen wanneer ChatGPT, Perplexity of andere AI-tools naar uw content verwijzen. Dit is een nieuwe discipline met zich ontwikkelende tools, maar we hebben monitoringsystemen gebouwd die AI-zichtbaarheid naast traditionele zoekmetrieken bijhouden."
+    },
+    {
+      "question": "Wat zorgt ervoor dat content door AI-systemen wordt geciteerd?",
+      "answer": "AI-systemen geven de voorkeur aan heldere definities, gestructureerde data (schema-markup), gezaghebbende positionering (referenties, bronnen, data) en goed georganiseerde content. FAQ-secties, vergelijkingstabellen en op zichzelf staande alinea's worden eerder opgepikt en geciteerd dan muren van tekst."
+    }
+  ],
+  "relatedServices": [
+    "web-development",
+    "custom-software",
+    "ai-customer-experience"
+  ],
+  "cta": {
+    "headline": "Klaar om gevonden te worden door Google en AI?",
+    "description": "Laten we uw huidige zichtbaarheid doorlichten en u precies laten zien waar u kansen mist. Gratis SEO-/AEO-audit voor gekwalificeerde bedrijven.",
+    "primaryButton": {
+      "text": "Gratis audit aanvragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk resultaten",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "prime-tiles",
+    "mach24orbital",
+    "cms-group"
+  ],
+  "metaTitle": "AEO & SEO: AI-zoekoptimalisatie & traditionele SEO | Zunkiree Labs",
+  "metaDescription": "Word gevonden door Google en AI-systemen als ChatGPT, Perplexity en AI Overviews. Zoekoptimalisatie voor het AI-tijdperk. 3x hogere AI-citatiegraad met AEO."
+}

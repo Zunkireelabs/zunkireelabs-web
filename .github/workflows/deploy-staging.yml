@@ -39,25 +39,31 @@ jobs:
           script: |
             cd /home/zunkireelabs/devprojects/zunkiree-web-staging
             git pull origin stage
+            # Written fresh each deploy, never committed — read by docker
+            # compose for the `api` sidecar's EDGEX_CRM_TOKEN substitution
+            # (docker-compose.dev.yml). See server/submit-lead-server.js.
+            echo "EDGEX_CRM_TOKEN=${{ secrets.EDGEX_CRM_TOKEN }}" > .env
             # Full down/up so the container re-attaches to the external `hosting`
             # network and Traefik re-registers the router. A bare `up -d --build`
             # on an existing container can leave a stale network attachment,
             # which makes Traefik 404 the host even while the container is healthy.
             docker compose -f docker-compose.dev.yml down --remove-orphans
             docker compose -f docker-compose.dev.yml up -d --build --force-recreate
-            echo "Waiting for container to be healthy..."
+            echo "Waiting for containers to be healthy..."
             sleep 10
             for i in $(seq 1 12); do
-              STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-staging 2>/dev/null || echo "unknown")
-              if [ "$STATUS" = "healthy" ]; then
-                echo "Container is healthy!"
+              APP_STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-staging 2>/dev/null || echo "unknown")
+              API_STATUS=$(docker inspect --format='{{.State.Health.Status}}' zunkiree-staging-api 2>/dev/null || echo "unknown")
+              if [ "$APP_STATUS" = "healthy" ] && [ "$API_STATUS" = "healthy" ]; then
+                echo "Containers are healthy!"
                 exit 0
               fi
-              echo "Attempt $i/12: Status is $STATUS, waiting..."
+              echo "Attempt $i/12: app=$APP_STATUS api=$API_STATUS, waiting..."
               sleep 10
             done
-            echo "Container did not become healthy within 2 minutes"
+            echo "Containers did not become healthy within 2 minutes"
             docker logs zunkiree-staging --tail 50
+            docker logs zunkiree-staging-api --tail 50
             exit 1
 
       - name: Verify Health
@@ -68,4 +74,12 @@ jobs:
           else
             echo "Staging health check failed (HTTP $HTTP_CODE)"
             exit 1
+          fi
+
+          API_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST https://dev-web.zunkireelabs.com/api/submit-lead -H "Content-Type: application/json" -d '{}')
+          if [ "$API_CODE" = "404" ]; then
+            echo "Lead-form proxy check failed: /api/submit-lead returned 404 (route not reachable)"
+            exit 1
+          else
+            echo "Lead-form proxy check passed (HTTP $API_CODE, route reachable)"
           fi

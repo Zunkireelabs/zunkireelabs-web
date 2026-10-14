@@ -125,20 +125,20 @@
   ],
   "zenly-case-study": [
     {
-      "question": "What is Zenly?",
-      "answer": "Zenly is Zunkiree Labs' AI booking engine. It handles complex availability across providers, locations, and equipment, and resolves scheduling conflicts automatically."
+      "question": "What is Zennly?",
+      "answer": "Zennly is Zunkiree Labs' AI booking engine. It handles complex availability across providers, locations, and equipment, and resolves scheduling conflicts automatically."
     },
     {
-      "question": "How does Zenly resolve double-bookings?",
-      "answer": "Zenly models availability as a constraint problem rather than a single calendar, so when a conflict comes up it proposes alternatives or automatically rebooks the affected appointment with the customer's approval."
+      "question": "How does Zennly resolve double-bookings?",
+      "answer": "Zennly models availability as a constraint problem rather than a single calendar, so when a conflict comes up it proposes alternatives or automatically rebooks the affected appointment with the customer's approval."
     },
     {
-      "question": "How does Zenly reduce no-shows?",
+      "question": "How does Zennly reduce no-shows?",
       "answer": "It sends reminders timed to when a given customer is actually likely to respond, across SMS, email, or voice, and makes rescheduling easy so a change happens instead of a no-show."
     },
     {
-      "question": "What calendars does Zenly integrate with?",
-      "answer": "Zenly syncs with Google Calendar, Outlook, and Apple Calendar, and can be embedded anywhere via a JavaScript SDK."
+      "question": "What calendars does Zennly integrate with?",
+      "answer": "Zennly syncs with Google Calendar, Outlook, and Apple Calendar, and can be embedded anywhere via a JavaScript SDK."
     }
   ],
   "gaamma-case-study": [

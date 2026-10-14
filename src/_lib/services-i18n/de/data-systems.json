@@ -1,0 +1,311 @@
+{
+  "id": "data-systems",
+  "relatedCaseStudies": [
+    {
+      "slug": "cms-group-case-study",
+      "title": "CMS Group",
+      "stat": "85% der Workflows automatisiert"
+    },
+    {
+      "slug": "corecloud365-case-study",
+      "title": "Corecloud365",
+      "stat": "60% Kostensenkung"
+    }
+  ],
+  "title": "Datensysteme",
+  "category": "KI & Daten",
+  "tagline": "Die meisten KI-Projekte brauchen bessere Datensysteme. Wir bauen sie zuerst.",
+  "description": "Datenpipelines, Data Warehouses und Analytics-Infrastruktur, ausgelegt für KI-Workloads. Wir schaffen das Fundament, auf dem Machine Learning wirklich funktioniert – saubere Daten, zuverlässige Pipelines und eine skalierbare Architektur.",
+  "heroImage": "/assets/images/data-systems-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Datenstrom einlesen",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Schema transformieren",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Qualität validieren",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Ins Warehouse laden",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Embeddings generieren",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Mit Vektor-DB synchronisieren",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Pipeline-Zustand überwachen",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "Datenpipelines, die in produktives ML gehen. Keine Aufräum-Tickets.",
+    "content": "Die meisten KI-Projekte scheitern an Datenproblemen, nicht an Modellproblemen. Wir bauen Pipelines, Data Warehouses und Qualitätssysteme, die die sechsmonatige Bereinigungsphase überflüssig machen – saubere Eingangsdaten, verlässliche Ergebnisse, eine Architektur, die von Gigabytes bis zu Petabytes mitwächst. Ihr Team bringt produktives ML in Wochen statt in Quartalen live."
+  },
+  "stats": [
+    {
+      "value": "80%",
+      "label": "Schnellere Datenaufbereitung",
+      "description": "im Vergleich zu manuellen Prozessen"
+    },
+    {
+      "value": "99.9%",
+      "label": "Pipeline-Verfügbarkeit",
+      "description": "mit automatischer Wiederherstellung"
+    },
+    {
+      "value": "10x",
+      "label": "Abfrageleistung",
+      "description": "nach der Optimierung"
+    },
+    {
+      "value": "<1 Std.",
+      "label": "Datenaktualität",
+      "description": "Echtzeit verfügbar"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "ML-Features ausliefern, ohne Engpässe im Data Engineering",
+      "description": "Self-Service-Dateninfrastruktur, mit der Data Scientists und ML-Engineers auf saubere, verknüpfte und transformierte Daten zugreifen, ohne auf Engineering-Tickets zu warten. Feature Stores, Embedding-Pipelines und Trainingsdatensätze auf Abruf."
+    },
+    {
+      "icon": "speed",
+      "title": "Vom Rohdatenbestand zu produktivem ML in Wochen",
+      "description": "Vorgefertigte Muster für gängige Datenquellen (CRMs, ERPs, Event-Streams) mit automatischer Schemaerkennung und Qualitätsvalidierung. Die meisten Kunden haben ihr erstes ML-Modell innerhalb von 6 Wochen in Produktion."
+    },
+    {
+      "icon": "integrate",
+      "title": "Skalieren ohne Replatforming",
+      "description": "Eine Architektur, die von Gigabytes bis zu Petabytes wächst, ohne dass neu geschrieben werden muss. Starten Sie mit kosteneffizienten Lösungen und skalieren Sie die Infrastruktur, wenn Datenvolumen und ML-Nutzung steigen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "data-pipelines",
+      "title": "Datenpipelines",
+      "headline": "Datenpipelines für die Produktion",
+      "description": "Zuverlässige ETL/ELT-Pipelines, die reale Daten in großem Maßstab verarbeiten. Automatische Fehlerbehandlung, Datenvalidierung und Monitoring. Kein Datenverlust, kein verpasster Ladevorgang.",
+      "features": [
+        "Ereignisgesteuerte Datenaufnahme",
+        "Schema-Evolution",
+        "Fehlerbehebung und Wiederanlauf",
+        "Nachverfolgung der Data Lineage"
+      ],
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-warehouse",
+      "title": "Data Warehouse",
+      "headline": "Modernes Data Warehouse",
+      "description": "Cloud-native Data Warehouses, optimiert für Analytics- und ML-Workloads. Trennung von Speicher und Rechenleistung, automatische Skalierung und Abfrageoptimierung.",
+      "features": [
+        "Spaltenorientierte Speicherung",
+        "Automatisch skalierende Rechenleistung",
+        "Abfrageoptimierung",
+        "Parallele Workloads"
+      ],
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "feature-store",
+      "title": "Feature Store",
+      "headline": "ML Feature Store",
+      "description": "Zentrale Feature-Verwaltung für ML-Teams. Features speichern, versionieren und konsistent für Training und Produktion bereitstellen. Training-Serving-Skew gehört der Vergangenheit an.",
+      "features": [
+        "Feature-Versionierung",
+        "Online-/Offline-Bereitstellung",
+        "Wiederverwendung von Features",
+        "Point-in-Time-Abfragen"
+      ],
+      "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "vector-infrastructure",
+      "title": "Vektor-Infrastruktur",
+      "headline": "Vektor- und Embedding-Infrastruktur",
+      "description": "Infrastruktur für KI-Anwendungen: Embedding-Generierung, Vektorspeicher und Ähnlichkeitssuche. Das Fundament für RAG, semantische Suche und Empfehlungssysteme.",
+      "features": [
+        "Embedding-Pipelines",
+        "Vektordatenbanken",
+        "Ähnlichkeitssuche",
+        "Hybrid Retrieval"
+      ],
+      "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "data-quality",
+      "title": "Datenqualität",
+      "headline": "Datenqualitätssysteme",
+      "description": "Automatisiertes Qualitätsmonitoring, das Probleme erkennt, bevor sie nachgelagerte Systeme beeinträchtigen. Data Contracts, Anomalieerkennung und Alerting für Datenteams.",
+      "features": [
+        "Schemavalidierung",
+        "Anomalieerkennung",
+        "Data Contracts",
+        "Qualitäts-Dashboards"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Analyse",
+      "description": "Wir erfassen Ihre aktuelle Datenlandschaft: Quellen, Volumen, Qualitätsprobleme und Anforderungen nachgelagerter Systeme. Wir identifizieren Quick Wins und den langfristigen Architekturbedarf.",
+      "duration": "1-2 Wochen",
+      "deliverables": [
+        "Dateninventar",
+        "Qualitätsbewertung",
+        "Architekturempfehlungen"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design",
+      "description": "Wir entwerfen die Zielarchitektur: Pipeline-Muster, Warehouse-Schema und Integrationspunkte. Der Technologie-Stack wird passend zu Ihrem Umfang und Ihren Anforderungen ausgewählt.",
+      "duration": "2-3 Wochen",
+      "deliverables": [
+        "Architekturentwurf",
+        "Technologieauswahl",
+        "Migrationsplan"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Umsetzung",
+      "description": "Wir setzen die Infrastruktur iterativ um. Wir beginnen mit den wertvollsten Datenquellen und erweitern die Abdeckung schrittweise. Monitoring- und Qualitätssysteme sind vom ersten Tag an im Einsatz.",
+      "duration": "6-12 Wochen",
+      "deliverables": [
+        "Produktive Pipelines",
+        "Data Warehouse",
+        "Dokumentation"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Betrieb",
+      "description": "Laufender Betrieb: Monitoring, Optimierung und Ausbau. SLA-gestützter Support mit 24/7-Alerting und Incident Response.",
+      "duration": "Laufend",
+      "deliverables": [
+        "SLA-Berichte",
+        "Optimierungs-Reviews",
+        "Kapazitätsplanung"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Snowflake",
+      "category": "Data Warehouse",
+      "description": "Cloud-DWH",
+      "logo": "https://cdn.worldvectorlogo.com/logos/snowflake.svg"
+    },
+    {
+      "name": "dbt",
+      "category": "Transformation",
+      "description": "Datenmodellierung",
+      "logo": "https://cdn.worldvectorlogo.com/logos/dbt.svg"
+    },
+    {
+      "name": "Airflow",
+      "category": "Orchestrierung",
+      "description": "Workflow-DAGs",
+      "logo": "https://cdn.worldvectorlogo.com/logos/apache-airflow.svg"
+    },
+    {
+      "name": "Fivetran",
+      "category": "Datenaufnahme",
+      "description": "ELT-Pipelines",
+      "logo": "https://cdn.simpleicons.org/fivetran/0073FF"
+    },
+    {
+      "name": "Pinecone",
+      "category": "Vektor-DB",
+      "description": "Embeddings",
+      "logo": "https://cdn.simpleicons.org/pinecone/000000"
+    },
+    {
+      "name": "Spark",
+      "category": "Verarbeitung",
+      "description": "Big Data",
+      "logo": "https://cdn.worldvectorlogo.com/logos/apache-spark-5.svg"
+    },
+    {
+      "name": "Kafka",
+      "category": "Streaming",
+      "description": "Event-Streams",
+      "logo": "https://cdn.worldvectorlogo.com/logos/kafka.svg"
+    },
+    {
+      "name": "Databricks",
+      "category": "Plattform",
+      "description": "Lakehouse",
+      "logo": "https://cdn.worldvectorlogo.com/logos/databricks.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie lange dauert eine Data-Warehouse-Migration in der Regel?",
+      "answer": "Eine vollständige Migration dauert je nach Komplexität 3-6 Monate, wir liefern jedoch schrittweise Mehrwert. Die meisten Kunden haben ihre ersten kritischen Datenquellen innerhalb von 4-6 Wochen in Produktion, der Ausbau läuft parallel zum laufenden Geschäftsbetrieb."
+    },
+    {
+      "question": "Sollten wir einen Data Lake oder ein Data Warehouse einsetzen?",
+      "answer": "Moderne Lakehouse-Architekturen vereinen beides. In der Regel empfehlen wir Cloud-Data-Warehouses (Snowflake, BigQuery) für strukturierte Analysen und Databricks/Delta Lake für ML-Workloads. Die richtige Wahl hängt von Ihren Datentypen, den Kompetenzen Ihres Teams und Ihren Anwendungsfällen ab."
+    },
+    {
+      "question": "Wie gehen Sie mit der Datenqualität in Pipelines um?",
+      "answer": "Wir setzen Qualitätsprüfungen in jeder Phase um: Schemavalidierung bei der Datenaufnahme, Data Contracts zwischen Teams, Anomalieerkennung bei Schlüsselmetriken und automatisiertes Alerting. Probleme werden abgefangen, bevor sie sich ausbreiten, und nicht erst, nachdem sie nachgelagerte Modelle beschädigt haben."
+    },
+    {
+      "question": "Worin unterscheidet sich ein Feature Store von einem Data Warehouse?",
+      "answer": "Data Warehouses bedienen Analytics-Abfragen, Feature Stores bedienen ML-Systeme. Ein Feature Store stellt sicher, dass die Features, mit denen ein Modell trainiert wird, exakt den Features entsprechen, die in der Produktion bereitgestellt werden – und beseitigt so den Training-Serving-Skew, eine der Hauptursachen für das Scheitern von ML-Modellen."
+    },
+    {
+      "question": "Wie gehen Sie bei Echtzeit- und Batch-Datenverarbeitung vor?",
+      "answer": "Wir beginnen mit Batch, sofern es keinen klaren Echtzeit-Anwendungsfall gibt. Batch ist einfacher, günstiger und für die meisten Analysen ausreichend. Wenn Echtzeit zählt (Betrugserkennung, Personalisierung), setzen wir Streaming mit Kafka oder Managed Services um, mit Batch als Fallback."
+    }
+  ],
+  "relatedServices": [
+    "ai-development",
+    "custom-software",
+    "saas-development"
+  ],
+  "cta": {
+    "headline": "Bereit, Ihr Datenfundament in Ordnung zu bringen?",
+    "description": "Lassen Sie uns Ihre aktuelle Dateninfrastruktur analysieren und den schnellsten Weg zu produktionsreifem ML finden. Kostenloses Daten-Audit für qualifizierte Projekte.",
+    "primaryButton": {
+      "text": "Daten-Audit anfragen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Fallstudien ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "rapid-investment",
+    "mach24orbital",
+    "cms-group"
+  ],
+  "heroAlt": "Titelbild für den Bereich Datensysteme",
+  "metaTitle": "Datensysteme: Pipelines, Data Warehouses & ML-Infrastruktur | Zunkiree Labs",
+  "metaDescription": "Produktionsreife Dateninfrastruktur für KI-Workloads. Datenpipelines, Data Warehouses und Feature Stores für ML. Ohne sechsmonatige Bereinigungsphase."
+}

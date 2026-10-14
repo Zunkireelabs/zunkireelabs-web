@@ -1,10 +1,21 @@
 ---
 layout: base.njk
-title: "About Zunkiree Labs | Top AI & Software Company in Nepal | Founded 2018"
-description: "Zunkiree Labs is a leading AI company in Kathmandu, Nepal founded in 2018. We build custom AI systems, RAG pipelines, and enterprise software for global clients."
+title: "About Zunkiree Labs | AI Company in Nepal"
+description: "Zunkiree Labs is a leading AI company in Kathmandu, Nepal, founded in 2018, building custom AI systems and enterprise software."
 permalink: /about/
 hideChrome: true
 bodyClass: "v2-inter"
+hreflangAlternates:
+  - lang: en
+    url: /about/
+  - lang: de
+    url: /de/about/
+  - lang: de-CH
+    url: /de-ch/about/
+  - lang: nl
+    url: /nl/about/
+  - lang: x-default
+    url: /about/
 ---
 
 {# =====================================================
@@ -86,7 +97,7 @@ bodyClass: "v2-inter"
     <div class="mb-3 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" data-reveal-stagger>
       <div>
         <span class="mb-4 inline-flex items-center rounded-full border border-navy-100/60 bg-white px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-500 shadow-subtle">
-          About
+          About Us
         </span>
         <h1 id="hero-heading" class="text-balance text-[38px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
           The AI infrastructure company
@@ -257,6 +268,44 @@ bodyClass: "v2-inter"
           {% endfor %}
         {% endfor %}
       </div>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
+   CASE STUDIES — real outcomes, linked to the full write-ups
+   already published under /resources/*-case-study/. Stats below
+   are copied verbatim from resources.json (the same source the
+   case-study pages themselves render from) — no new numbers
+   introduced here, same §24 anti-fabrication guardrail as the
+   client-logo marquee above.
+   ===================================================== #}
+{% set aboutCaseStudies = [
+  { client: "Admizz", result: "45% faster response times", href: "/resources/admizz-case-study/" },
+  { client: "CMS Group", result: "85% of document workflows automated", href: "/resources/cms-group-case-study/" },
+  { client: "Rapid Investment", result: "10x faster deal analysis", href: "/resources/rapid-investment-case-study/" }
+] %}
+<section class="px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20" aria-labelledby="case-studies-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Proof in production</span>
+      <h2 id="case-studies-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Client success stories
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3" data-reveal-stagger>
+      {% for item in aboutCaseStudies %}
+        <a href="{{ item.href }}" class="group flex flex-col gap-2 rounded-xl border border-navy-100 bg-white p-5 transition-colors hover:border-[#76B900]/40 hover:bg-[#F8FAFC]">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">{{ item.client }}</span>
+          <span class="text-[17px] font-semibold leading-snug text-[#111827]">{{ item.result }}</span>
+          <span class="mt-1 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#5a9100] group-hover:gap-2.5 transition-all">
+            Read the case study
+            <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -596,8 +645,13 @@ bodyClass: "v2-inter"
 {# =====================================================
    FAQ — same aboutFaq.json data, restyled to the sitewide
    accordion recipe used on contact.njk/homepage-v2.njk.
+   Bottom padding trimmed (pb, not py) since the next section
+   (Infrastructure-Level AI) brings its own top padding — the
+   two stacking at full py-20+py-20 left an oversized gap at
+   just this one boundary, without affecting the section's own
+   top spacing or any other section-to-section transition.
    ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
+<section class="px-4 pt-12 pb-6 sm:px-6 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-20 lg:pb-10" aria-labelledby="faq-heading">
   <div class="mx-auto max-w-content">
     <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
@@ -651,11 +705,15 @@ bodyClass: "v2-inter"
    INFRASTRUCTURE-LEVEL AI COMPARISON
    Recovered from commit 8d68e55 (SEOAI expanded-content
    block, since removed) and re-homed into the v2 layout.
+   Aligned to the FAQ section's own mx-auto max-w-3xl reading
+   column directly above it — it previously sat in the wider
+   max-w-content container with no inner centering, so its left
+   edge started well before the FAQ column's left edge.
    ===================================================== #}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
-  <div class="mx-auto max-w-content">
+  <div class="mx-auto max-w-3xl">
     <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">Infrastructure-Level AI, Not Wrappers</h2>
-    <div class="mt-4 max-w-2xl text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
+    <div class="mt-4 text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
       <p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p>
       <div class="mt-8 mb-2 overflow-hidden rounded-lg border border-gray-200">
         <table class="w-full text-sm">
@@ -746,7 +804,7 @@ bodyClass: "v2-inter"
   "@type": "Organization",
   "name": "Zunkiree Labs",
   "url": "https://zunkireelabs.com",
-  "logo": "https://zunkireelabs.com/assets/images/zunkiree-logo.png",
+  "logo": "https://zunkireelabs.com/assets/images/zunkireelabs-logo-light.png",
   "description": "Zunkiree Labs is a product-first AI and software engineering company from Kathmandu, Nepal. We build intelligent platforms like Zunkiree Search and Gaamma ERP.",
   "foundingDate": "2018",
   "foundingLocation": {

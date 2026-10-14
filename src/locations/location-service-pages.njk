@@ -7,12 +7,13 @@ pagination:
 layout: location-service.njk
 permalink: "{{ page.permalink }}"
 eleventyComputed:
-  title: "{{ page.title }}"
-  description: "{{ page.description }}"
+  title: "{{ page.title | safe }}"
+  description: "{{ page.description | safe }}"
   locationId: "{{ page.locationId }}"
   serviceId: "{{ page.serviceId }}"
   canonicalUrl: "{{ page.canonicalUrl }}"
   hasUniqueContent: "{{ page.hasUniqueContent }}"
+  hasServiceFaqs: "{{ 1 if page.hasServiceFaqs else '' }}"
 ---
 
 {# Location × Service pages are generated programmatically #}

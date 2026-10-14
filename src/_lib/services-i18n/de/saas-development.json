@@ -1,0 +1,297 @@
+{
+  "id": "saas-development",
+  "title": "SaaS-Entwicklung",
+  "category": "Entwicklung",
+  "tagline": "SaaS-Entwicklung, ausgelegt auf 10.000 Mandanten ohne Neuentwicklung.",
+  "description": "Mandantenfähige SaaS-Plattformen mit Abo-Abrechnung, Benutzerverwaltung und einer auf Skalierung ausgelegten Architektur. Wir bauen Produkte, die Tausende von Mandanten bewältigen, ohne dass das Fundament neu geschrieben werden muss.",
+  "heroImage": "/assets/images/saas-development-hero.webp",
+  "lastUpdated": "2026-03-24",
+  "heroCommands": [
+    {
+      "text": "Mandanten-Workspace erstellen",
+      "type": "Inhalt",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Abonnement verarbeiten",
+      "type": "Aktionen",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Nutzungslimits anwenden",
+      "type": "Inhalt",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Rechnung erstellen",
+      "type": "Aktionen",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Tarifstufe upgraden",
+      "type": "Inhalt",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Neuen Nutzer onboarden",
+      "type": "Aktionen",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Infrastruktur skalieren",
+      "type": "Inhalt",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "SaaS-Architektur, die bei Skalierung nicht in die Knie geht",
+    "content": "Wir haben SaaS-Produkte gebaut, die 10 Mandanten bedienen, und Produkte, die 10.000 bedienen. Der Unterschied ist kein Zufall – es ist die Architektur. Unser Ansatz in der SaaS-Entwicklung berücksichtigt Mandantenfähigkeit, komplexe Abonnementmodelle und Skalierungsherausforderungen vom ersten Tag an. Sie starten schneller und wachsen, ohne an Grenzen zu stoßen, die teure Neuentwicklungen erfordern."
+  },
+  "stats": [
+    {
+      "value": "3-6 Mon.",
+      "label": "MVP-Launch",
+      "description": "typischer Zeitrahmen"
+    },
+    {
+      "value": "10k+",
+      "label": "Mandanten-Skalierung",
+      "description": "von der Architektur unterstützt"
+    },
+    {
+      "value": "99.9%",
+      "label": "Verfügbarkeitsziel",
+      "description": "auf Zuverlässigkeit ausgelegt"
+    },
+    {
+      "value": "< $2k",
+      "label": "Infrastrukturkosten",
+      "description": "bei 1000 Mandanten"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "speed",
+      "title": "Bringen Sie Ihr MVP in Monaten live, nicht in Jahren",
+      "description": "Vorgefertigte Muster für Authentifizierung, Abrechnung, Mandantenverwaltung und gängige SaaS-Funktionen. Wir bauen nicht alles von Grund auf neu – wir setzen bewährte Komponenten zusammen und passen sie dort an, wo Ihr Produkt einzigartig ist."
+    },
+    {
+      "icon": "workflow",
+      "title": "Skalieren Sie, ohne Ihre Codebasis neu zu schreiben",
+      "description": "Mandantenfähige Architektur, ausgelegt auf Wachstum: Datenbank-pro-Mandant-Optionen, horizontale Skalierung und kosteneffiziente gemeinsame Ressourcennutzung. Ihr 10.000. Kunde wird genauso bedient wie Ihr erster."
+    },
+    {
+      "icon": "integrate",
+      "title": "Beherrschen Sie die Komplexität der Abrechnung vom ersten Tag an",
+      "description": "Abonnementpläne, nutzungsbasierte Preise, Testphasen, Upgrades, Downgrades und anteilige Abrechnungen – Abrechnung ist anspruchsvoll. Wir binden Stripe oder Ihren Anbieter an und behandeln die Sonderfälle, an denen die meisten SaaS-Produkte scheitern."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "b2b-saas",
+      "title": "B2B-SaaS",
+      "headline": "B2B-SaaS-Plattformen",
+      "description": "Unternehmenssoftware als Service: CRMs, Projektmanagement, HR-Tools und Branchenlösungen. Team-Workspaces, Admin-Kontrollen und Enterprise-Funktionen.",
+      "features": [
+        "Team-Workspaces",
+        "Rollenbasierte Berechtigungen",
+        "Admin-Dashboards",
+        "SSO-Integration"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "marketplace",
+      "title": "Marktplatz",
+      "headline": "Marktplatz-Plattformen",
+      "description": "Zweiseitige Marktplätze, die Käufer und Verkäufer zusammenbringen. Zahlungsaufteilung, Bewertungen, Suche und Entdeckung sowie Transaktionsabwicklung.",
+      "features": [
+        "Käufer-/Verkäufer-Abläufe",
+        "Zahlungsaufteilung",
+        "Bewertungssysteme",
+        "Discovery-Funktionen"
+      ],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "api-product",
+      "title": "API-Produkte",
+      "headline": "API-First-Produkte",
+      "description": "Entwicklerplattformen und API-Produkte. Nutzungsmessung, Developer-Portale, API-Key-Verwaltung und SDKs für gängige Sprachen.",
+      "features": [
+        "Nutzungsmessung",
+        "Developer-Portal",
+        "API-Key-Verwaltung",
+        "SDK-Generierung"
+      ],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "vertical-saas",
+      "title": "Vertikale SaaS",
+      "headline": "Vertikale SaaS-Lösungen",
+      "description": "Branchenspezifische Software: Gesundheitswesen, Recht, Immobilien, Bauwesen. Tiefe Fachfunktionen mit integrierter Regelkonformität.",
+      "features": [
+        "Branchen-Workflows",
+        "Compliance-Funktionen",
+        "Domänenintegrationen",
+        "Spezialisiertes Reporting"
+      ],
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "white-label",
+      "title": "White Label",
+      "headline": "White-Label-Plattformen",
+      "description": "Plattformen, die Partner weiterverkaufen oder mit eigener Marke versehen können. Anpassbare UI, isolierte Umgebungen und Tools für das Partnermanagement.",
+      "features": [
+        "Individuelles Branding",
+        "Partnermanagement",
+        "Isolierte Umgebungen",
+        "Umsatzbeteiligung"
+      ],
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Strategie",
+      "description": "Wir definieren Ihre Produktvision, Ihren Zielmarkt und den MVP-Umfang. Wir identifizieren Kernfunktionen, die Mehrwert liefern, und Nice-to-haves, die warten können.",
+      "duration": "1-2 Wochen",
+      "deliverables": [
+        "Produkt-Roadmap",
+        "MVP-Umfang",
+        "Architekturplan"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Fundament",
+      "description": "Wir bauen die Kerninfrastruktur: Authentifizierung, Mandantenfähigkeit, Billing-Integration und Basis-UI. Das Fundament, auf dem alles Weitere aufbaut.",
+      "duration": "4-6 Wochen",
+      "deliverables": [
+        "Authentifizierungssystem",
+        "Mandantenverwaltung",
+        "Billing-Integration"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Funktionen",
+      "description": "Wir entwickeln Ihre differenzierenden Funktionen. Iterative Zyklen mit Continuous Deployment und eingearbeitetem Nutzerfeedback.",
+      "duration": "8-12 Wochen",
+      "deliverables": [
+        "Kernfunktionen",
+        "User Flows",
+        "Admin-Tools"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Launch",
+      "description": "Produktivbetrieb, Monitoring-Setup und Launch-Support. Unterstützung bei Go-to-Market, Onboarding der ersten Kunden und schneller Iteration.",
+      "duration": "Laufend",
+      "deliverables": [
+        "Produktivsetzung",
+        "Monitoring",
+        "Launch-Support"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "Next.js",
+      "category": "Framework",
+      "description": "Full-Stack-React",
+      "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+    },
+    {
+      "name": "Stripe",
+      "category": "Zahlungen",
+      "description": "Abrechnung & Abonnements",
+      "logo": "https://cdn.worldvectorlogo.com/logos/stripe-4.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Datenbank",
+      "description": "Mandantendaten",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "Auth0",
+      "category": "Authentifizierung",
+      "description": "Identitätsmanagement",
+      "logo": "https://cdn.worldvectorlogo.com/logos/auth0-icon.svg"
+    },
+    {
+      "name": "Vercel",
+      "category": "Plattform",
+      "description": "Edge-Deployment",
+      "logo": "https://cdn.worldvectorlogo.com/logos/vercel.svg"
+    },
+    {
+      "name": "Redis",
+      "category": "Cache",
+      "description": "Sitzungen & Cache",
+      "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Sprache",
+      "description": "Typsicherheit",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastruktur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Worin unterscheiden sich mandantenfähige und Single-Tenant-Architekturen?",
+      "answer": "Bei Multi-Tenant teilen sich die Kunden die Infrastruktur (geringere Kosten, einfachere Updates). Bei Single-Tenant erhält jeder Kunde isolierte Ressourcen (höhere Sicherheit, mehr Anpassungsmöglichkeiten). Für die meisten SaaS-Produkte empfehlen wir in der Regel Multi-Tenant mit starker Isolation, mit Single-Tenant-Optionen für Enterprise-Kunden."
+    },
+    {
+      "question": "Wie gehen Sie mit unterschiedlichen Preisstufen und Feature-Gating um?",
+      "answer": "Wir bauen Feature-Flagging und Berechtigungssysteme von Anfang an ein. Pläne legen Funktionszugriff, Nutzungslimits und UI-Varianten fest. Ein Upgrade schaltet Funktionen sofort frei, ohne Codeänderungen – alles ist datengesteuert."
+    },
+    {
+      "question": "Wie sieht es mit Enterprise-Kunden aus, die individuelle Funktionen benötigen?",
+      "answer": "Unsere Architektur unterstützt sowohl Standard- als auch Enterprise-Tarife. Enterprise-Funktionen wie SSO, Audit-Logs, individuelles Branding und dedizierter Support sind als optionale Module aufgebaut. Große Kunden erhalten Anpassungen, ohne dass Ihre Codebasis geforkt werden muss."
+    },
+    {
+      "question": "Wie gehen Sie mit SaaS-Sicherheit um?",
+      "answer": "Sicherheit ist von Anfang an integriert, nicht nachträglich aufgesetzt: Mandantenisolation auf Datenbankebene, Verschlüsselung im Ruhezustand und bei der Übertragung, SOC-2-konforme Praktiken und regelmäßige Sicherheitsaudits. Enterprise-Kunden verlangen das häufig – wir sorgen dafür, dass Sie vorbereitet sind."
+    },
+    {
+      "question": "Was ist ein realistischer Zeitrahmen für ein MVP?",
+      "answer": "Ein fokussiertes MVP mit Kernfunktionen dauert in der Regel 3-4 Monate. Komplexe Produkte mit mehreren Nutzertypen, Integrationen oder regulatorischen Anforderungen können 5-6 Monate benötigen. Wir planen ehrlich – unrealistische Zeitpläne führen zu technischen Schulden, die Sie später ausbremsen."
+    }
+  ],
+  "relatedServices": [
+    "custom-software",
+    "web-development",
+    "ai-development"
+  ],
+  "cta": {
+    "headline": "Bereit, Ihr SaaS-Produkt zu bauen?",
+    "description": "Lassen Sie uns über Ihre Produktvision sprechen und den schnellsten Weg zum Launch skizzieren. Wir helfen Ihnen, ein MVP einzugrenzen, das Mehrwert liefert, ohne überdimensioniert zu sein.",
+    "primaryButton": {
+      "text": "Produkt besprechen",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "SaaS-Projekte ansehen",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "corecloud365",
+    "mach24orbital"
+  ],
+  "metaTitle": "Mandantenfähige SaaS-Entwicklung in Calgary | Zunkiree Labs",
+  "metaDescription": "Mandantenfähige SaaS-Plattformen mit Abo-Abrechnung, Benutzerverwaltung und skalierbarer Architektur. Ihr SaaS-Produkt live in 3-6 Monaten, nicht in Jahren."
+}

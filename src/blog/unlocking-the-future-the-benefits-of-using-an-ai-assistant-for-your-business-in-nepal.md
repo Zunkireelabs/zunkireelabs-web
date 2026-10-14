@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Unlocking the Future: The Benefits of Using an AI Assistant for Your Business in Nepal"
+title: "Benefits of an AI Assistant for Your Business in Nepal"
 description: "Discover how an AI assistant can streamline operations, enhance customer experience, and support business growth in Nepal."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/7414304/pexels-photo-7414304.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -1,0 +1,309 @@
+{
+  "id": "ai-development",
+  "relatedCaseStudies": [
+    {
+      "slug": "rapid-investment-case-study",
+      "title": "Rapid Investment",
+      "stat": "10x snellere dealanalyse"
+    },
+    {
+      "slug": "mach24orbital-case-study",
+      "title": "Mach24 Orbital",
+      "stat": "50% snellere lanceringsvoorbereiding"
+    }
+  ],
+  "title": "AI-ontwikkeling",
+  "category": "AI & Data",
+  "tagline": "De meeste AI geeft advies. Wij bouwen intelligente systemen die handelen.",
+  "description": "Maatwerk AI-systemen met RAG-pipelines, LLM-integratie en slimme automatisering. Wij bouwen AI die specifieke bedrijfsproblemen oplost, geen generieke chatbots.",
+  "heroImage": "/assets/images/ai-development-hero.webp",
+  "lastUpdated": "2026-03-23",
+  "heroCommands": [
+    {
+      "text": "Factuurgegevens extraheren",
+      "type": "Inhoud",
+      "offset": "top-8 right-12"
+    },
+    {
+      "text": "Klantsentiment analyseren",
+      "type": "Inhoud",
+      "offset": "top-20 right-24"
+    },
+    {
+      "text": "Documentenbatch verwerken",
+      "type": "Acties",
+      "offset": "top-32 right-8"
+    },
+    {
+      "text": "Kennisantwoord genereren",
+      "type": "Acties",
+      "offset": "top-44 right-32"
+    },
+    {
+      "text": "Eigen model trainen",
+      "type": "Inhoud",
+      "offset": "top-56 right-16"
+    },
+    {
+      "text": "Naar productie uitrollen",
+      "type": "Acties",
+      "offset": "top-68 right-4"
+    },
+    {
+      "text": "Modelnauwkeurigheid bewaken",
+      "type": "Inhoud",
+      "offset": "top-80 right-28"
+    }
+  ],
+  "definition": {
+    "heading": "AI die handelt binnen uw bedrijf. Niet alleen antwoord geeft.",
+    "content": "Generieke AI beantwoordt vragen. Zunkiree bouwt AI die het werk doet — RAG-pipelines, LLM-orkestratie en slimme automatisering, geïntegreerd in uw infrastructuur. Onze systemen, ingezet in de zorg, de financiële sector en de maakindustrie, verlagen de operationele kosten met 40% en gaan binnen 3 maanden in productie."
+  },
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Snellere ontwikkeling",
+      "description": "ten opzichte van traditionele methoden"
+    },
+    {
+      "value": "<3 mnd",
+      "label": "Tijd tot productie",
+      "description": "voor de meeste projecten"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime-SLA",
+      "description": "productiesystemen"
+    },
+    {
+      "value": "24/7",
+      "label": "Monitoring",
+      "description": "inbegrepen"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "workflow",
+      "title": "Complexe dataworkflows vereenvoudigen",
+      "description": "Onze AI-pipelines verwerken ongestructureerde documenten, halen inzichten eruit en automatiseren beslissingen — en verminderen de handmatige controletijd met maximaal 80% in de zorg, de juridische sector en de financiële sector."
+    },
+    {
+      "icon": "speed",
+      "title": "In weken naar productie, niet in maanden",
+      "description": "Doelgerichte architectuur met vooraf geconfigureerde infrastructuur. De meeste klanten hebben hun eerste AI-systeem binnen 6-8 weken live, met enterprise-beveiliging en monitoring vanaf dag één."
+    },
+    {
+      "icon": "integrate",
+      "title": "Integreer met uw bestaande stack",
+      "description": "Native connectors voor Salesforce, SAP, Microsoft 365 en maatwerk-API's. Onze systemen werken naast uw huidige tools — zonder dat u alles hoeft te vervangen."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "document-ai",
+      "title": "Document-AI",
+      "headline": "Documentverwerking met AI",
+      "description": "Documenten op schaal extraheren, classificeren en verwerken met maatwerk AI-modellen. Maak van ongestructureerde documenten gestructureerde, bruikbare data.",
+      "features": [
+        "Verwerking van facturen en bonnen",
+        "Contractanalyse en -extractie",
+        "Extractie van formuliergegevens",
+        "Documentclassificatie"
+      ],
+      "image": "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "knowledge-base",
+      "title": "Kennisbank",
+      "headline": "Intelligente kennisbank",
+      "description": "Bouw AI-gestuurde kennissystemen die context begrijpen en nauwkeurige antwoorden geven uit uw documentatie, handleidingen en interne bronnen.",
+      "features": [
+        "Vragen en antwoorden in natuurlijke taal",
+        "Contextbewuste antwoorden",
+        "Integratie van meerdere bronnen",
+        "Continu leren"
+      ],
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "predictive",
+      "title": "Voorspellend",
+      "headline": "Voorspellende analyses",
+      "description": "Gebruik machine learning om trends te voorspellen, patronen te herkennen en datagedreven beslissingen te nemen voordat problemen ontstaan.",
+      "features": [
+        "Vraagvoorspelling",
+        "Anomaliedetectie",
+        "Risicobeoordeling",
+        "Churn-voorspelling"
+      ],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "automation",
+      "title": "Automatisering",
+      "headline": "Slimme automatisering",
+      "description": "Automatiseer complexe workflows die oordeelsvermogen en besluitvorming vereisen. AI-agents die uitzonderingen afhandelen en op de juiste manier opschalen.",
+      "features": [
+        "Workflowautomatisering",
+        "Beslissingsroutering",
+        "Afhandeling van uitzonderingen",
+        "Procesoptimalisatie"
+      ],
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "custom",
+      "title": "Maatwerk",
+      "headline": "Maatwerk AI-oplossingen",
+      "description": "Unieke bedrijfsuitdagingen vragen om unieke oplossingen. Wij bouwen gespecialiseerde AI-systemen voor problemen die niet in standaardcategorieën passen.",
+      "features": [
+        "Gespecialiseerde modellen",
+        "Domeinspecifieke training",
+        "Maatwerkintegraties",
+        "Hybride aanpakken"
+      ],
+      "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop"
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Uw data, workflows en doelen in kaart brengen. Succesmetrics definiëren en de juiste AI-aanpak bepalen.",
+      "duration": "2 weken",
+      "deliverables": [
+        "Requirementsdocument",
+        "Databeoordeling",
+        "Architectuurvoorstel"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Ontwerp",
+      "description": "Keuze van architectuur en tech stack. Dataverwerking en pipelineontwerp. Prototype van de kernfunctionaliteit.",
+      "duration": "2-3 weken",
+      "deliverables": [
+        "Technische architectuur",
+        "Ontwerp van de datapipeline",
+        "Werkend prototype"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Bouw",
+      "description": "Iteratieve ontwikkeling met wekelijkse demo's. Continu testen met echte data. Verfijning op basis van feedback.",
+      "duration": "6-12 weken",
+      "deliverables": [
+        "Productiecode",
+        "Testsuite",
+        "Documentatie"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Uitrol",
+      "description": "Uitrol naar productie met monitoring. Kennisoverdracht en training van uw team. Doorlopende ondersteuning en optimalisatie.",
+      "duration": "Doorlopend",
+      "deliverables": [
+        "Live systeem",
+        "Monitoringdashboard",
+        "Supportovereenkomst"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "name": "OpenAI",
+      "category": "LLM",
+      "description": "GPT-4, Embeddings",
+      "logo": "https://cdn.worldvectorlogo.com/logos/openai-2.svg"
+    },
+    {
+      "name": "Anthropic",
+      "category": "LLM",
+      "description": "Claude, Safety",
+      "logo": "https://cdn.simpleicons.org/anthropic/191919"
+    },
+    {
+      "name": "LangChain",
+      "category": "Framework",
+      "description": "RAG-pipelines",
+      "logo": "https://cdn.worldvectorlogo.com/logos/langchain-1.svg"
+    },
+    {
+      "name": "Pinecone",
+      "category": "Vectordatabase",
+      "description": "Opslag van embeddings",
+      "logo": "https://cdn.simpleicons.org/pinecone/000000"
+    },
+    {
+      "name": "Python",
+      "category": "Taal",
+      "description": "ML & backend",
+      "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    },
+    {
+      "name": "FastAPI",
+      "category": "Framework",
+      "description": "API-ontwikkeling",
+      "logo": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "description": "Infrastructuur",
+      "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "description": "Gegevensopslag",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welke bedrijfsproblemen lost AI-ontwikkeling op?",
+      "answer": "AI-ontwikkeling automatiseert repetitieve taken, haalt inzichten uit ongestructureerde data en maakt snellere besluitvorming mogelijk. Bedrijven zien doorgaans 40-60% minder handmatige verwerkingstijd, 3x snellere reactietijden naar klanten en aanzienlijke kostenbesparingen door workflows te automatiseren die voorheen handmatige controle vereisten."
+    },
+    {
+      "question": "Hoe snel kan AI ROI opleveren?",
+      "answer": "De meeste bedrijven zien binnen 8-12 weken meetbare impact. Eenvoudige automatiseringen, zoals documentverwerking of FAQ-chatbots, zijn in 4-6 weken live. Complexere systemen, zoals voorspellende analyses, nemen 3-6 maanden in beslag, maar leveren vaak 10x rendement op via operationele efficiëntie en omzetoptimalisatie."
+    },
+    {
+      "question": "Welke soorten AI werken het best voor enterprise-toepassingen?",
+      "answer": "Enterprise-AI blinkt uit in documentverwerking (facturen, contracten, aanvragen), kennismanagement (interne zoekfunctie, supportautomatisering) en voorspellende analyses (vraagvoorspelling, churn-voorspelling). De sleutel is om AI-mogelijkheden af te stemmen op specifieke workflows waarin nauwkeurigheid en snelheid direct van invloed zijn op bedrijfsresultaten."
+    },
+    {
+      "question": "Hoe verhoudt maatwerk-AI zich tot kant-en-klare tools?",
+      "answer": "Kant-en-klare AI-tools werken voor generieke taken, maar halen bij domeinspecifieke problemen vaak slechts 60-70% nauwkeurigheid. Maatwerk-AI die is getraind op uw data en workflows bereikt doorgaans 90-95% nauwkeurigheid, integreert rechtstreeks met uw systemen en verbetert na verloop van tijd doordat ze leert van uw specifieke use cases."
+    },
+    {
+      "question": "Is enterprise-AI veilig genoeg voor gevoelige data?",
+      "answer": "Ja. Moderne AI-systemen ondersteunen on-premise-implementatie, gegevensversleuteling, rolgebaseerde toegang en naleving van SOC 2, HIPAA en AVG. Bedrijven kunnen gevoelige documenten, klantgegevens en bedrijfseigen informatie verwerken zonder dat data hun omgeving verlaat of wordt gebruikt om externe modellen te trainen."
+    }
+  ],
+  "relatedServices": [
+    "ai-customer-experience",
+    "data-systems",
+    "custom-software"
+  ],
+  "cta": {
+    "headline": "Klaar om intelligente systemen te bouwen?",
+    "description": "Bespreek uw AI-project met ons engineeringteam. Wij helpen u de juiste aanpak te bepalen en een helder pad naar productie uit te stippelen.",
+    "primaryButton": {
+      "text": "Plan een consult",
+      "url": "/contact/"
+    },
+    "secondaryButton": {
+      "text": "Bekijk ons werk",
+      "url": "/projects/"
+    }
+  },
+  "clients": [
+    "corecloud365",
+    "admizz"
+  ],
+  "metaTitle": "AI-ontwikkeling: maatwerk AI-oplossingen | Zunkiree Labs",
+  "metaDescription": "Bouw intelligente systemen met maatwerk AI-ontwikkeling: RAG-pipelines, LLM-integratie, document-AI en slimme automatisering. Binnen 3 maanden productieklaar."
+}

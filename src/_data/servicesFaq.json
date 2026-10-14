@@ -26,5 +26,9 @@
   {
     "question": "Does Zunkiree Labs build AI voice agents?",
     "answer": "Yes. As part of our AI Customer Experience service, we build Voice AI systems that replace traditional IVR phone trees with conversational AI—handling speech recognition, intent detection, automatic call routing, and voice authentication, so callers get instant answers instead of navigating a menu."
+  },
+  {
+    "question": "Can your Voice AI handle appointment bookings over the phone?",
+    "answer": "Yes. Our Voice AI systems can take and manage appointment bookings directly over a phone call, alongside speech recognition, intent detection, and call routing—so callers can schedule without navigating a menu or waiting for a human agent."
   }
 ]

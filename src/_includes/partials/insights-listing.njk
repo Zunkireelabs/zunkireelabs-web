@@ -1,0 +1,69 @@
+{# The "Insights" view of the blog: the same listing as /blog/ (src/blog/index.njk),
+   filtered to posts with `category: Insights`. Emits no page at all while there
+   are none (Eleventy generates nothing for empty pagination data), so there is
+   never an empty, indexable Insights page. #}
+{% include "partials/navbar-v2.njk" %}
+
+<section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/blog/" class="text-zunkiree-600 hover:underline">Blog</a>
+      <span class="text-warm-400">/</span>
+      {% if activePillar %}
+      <a href="/blog/insights/" class="text-zunkiree-600 hover:underline">Insights</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">{{ activePillarLabel }}</span>
+      {% else %}
+      <span class="text-warm-600">Insights</span>
+      {% endif %}
+    </nav>
+
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+      {{ activePillarLabel if activePillar else "Insights" }}
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+      {% if activePillar %}{{ activePillarIntro }}{% else %}What is trending in AI and technology right now, explained, and what it means for your business.{% endif %}
+    </p>
+
+    {% set blogFilter = "insights" %}
+    {% include "partials/blog-filter.njk" %}
+
+    {# Topic chips: real links, one page per pillar (/blog/insights/<pillar>/). #}
+    {% if collections.insightsPillars.length > 1 %}
+    <nav class="mt-6 -mx-4 flex flex-nowrap gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" aria-label="Filter Insights by topic">
+      <a href="/blog/insights/"{% if not activePillar %} aria-current="page"{% endif %}
+         class="inline-flex flex-shrink-0 items-center whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors {% if not activePillar %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}">All topics</a>
+      {% for pl in collections.insightsPillars %}
+      <a href="/blog/insights/{{ pl.slug }}/"{% if activePillar == pl.slug %} aria-current="page"{% endif %}
+         class="inline-flex flex-shrink-0 items-center whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors {% if activePillar == pl.slug %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}">{{ pl.label }} <span class="ml-2 rounded-full px-1.5 text-xs {% if activePillar == pl.slug %}bg-white/20 text-white{% else %}bg-gray-100 text-gray-500{% endif %}">{{ pl.count }}</span></a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</section>
+
+<section class="pb-16 md:pb-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {% include "partials/blog-grid.njk" %}
+
+  </div>
+</section>
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Want to build with AI?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Let's discuss how AI can transform your business operations.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Schedule a Discovery Call
+    </a>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}

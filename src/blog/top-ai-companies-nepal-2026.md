@@ -1,8 +1,8 @@
 ---
-title: "Leading AI Companies in Nepal to Watch in 2026" # SEOAI:TITLE
-description: "A comprehensive guide to Nepal's leading AI companies in 2026. From enterprise solutions to startups, discover who's driving AI innovation in Kathmandu and beyond."
+title: "AI Companies in Nepal (2026): Leaders and What They Build" # SEOAI:TITLE
+description: "Looking for an AI company in Nepal? Compare Zunkiree Labs, Fusemachines, CloudFactory, Leapfrog Technology and SecurityPal, plus how to choose one."
 date: 2026-03-30
-lastUpdated: 2026-03-30
+lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: Industry
 tags:
@@ -21,26 +21,38 @@ Nepal's AI industry has grown significantly over the past five years. What start
 
 In 2026, Nepali AI companies are building everything from natural language processing systems to computer vision applications, competing effectively with global players while offering cost advantages and specialized expertise.
 
-> **Looking for a broader view?** See our comprehensive guide: [Top 50 Tech, Software & AI Companies in Nepal 2026](/blog/top-tech-companies-nepal-2026/) covering AI firms, software development companies, and rising startups.
+The numbers back this up: AI startup funding in Nepal jumped from roughly NPR 180 million to about NPR 1.2 billion in two years, IT/AI exports crossed $1 billion for the first time, and the sector is now regulated under the [National Artificial Intelligence Policy, 2025](https://giwmscdnone.gov.np/media/pdf_upload/National%20AI%20Policy-Final_uxc94vg.pdf), which established a National AI Centre and an AI Regulation Council ([Nepal Economic Forum, NEFsearch: Artificial Intelligence in Nepal](https://issuu.com/nepaleconomicforum/docs/nefsearch_artificial_intelligence_ai_in_nepal); [Tracxn, AI Startups in Nepal](https://tracxn.com/d/explore/artificial-intelligence-startups-in-nepal)).
+
+> **Looking for a broader view?** See our comprehensive guide: [Top 50 IT & Tech Companies in Nepal (2026 List)](/blog/top-tech-companies-nepal-2026/) covering AI firms, software development companies, and rising startups.
 
 ## Leading AI Companies in Nepal
 
 ### Zunkiree Labs
 
-**Focus**: AI infrastructure, RAG pipelines, enterprise search
+**Location**: Kathmandu, Nepal (serving clients globally, including the UK and US)
 
-Zunkiree Labs builds AI-native search and interaction systems for businesses. Their flagship product, Zunkiree Search, delivers natural language search capabilities that organizations integrate into websites and internal tools.
+**Founded**: 2018
+
+**Focus**: AI infrastructure, RAG pipelines, enterprise search, and AI booking/commerce agents, built and owned as products rather than delivered as one-off projects
+
+Zunkiree Labs builds AI-native search and interaction systems for businesses. Their flagship product, Zunkiree Search, delivers natural language search capabilities that organizations integrate into websites and internal tools, alongside Stella (an AI commerce agent), Zennly (an AI booking engine), and Gaamma (a manufacturing ERP with predictive maintenance).
 
 **Notable work**:
-- AI-powered search reducing support tickets by 45%
-- RAG pipelines for document processing
-- Custom AI agents for enterprise workflows
+- Zunkiree Search cut issue-resolution time by 80% and reduced operational costs 60% for Corecloud365, and doubled online conversion for Prime Tiles
+- RAG-based document processing that automated 85% of CMS Group's document workflows
+- AI booking and scheduling that increased bookings 70% for Khems Cleaning
+- Ongoing digital-stack and AI delivery for UK real-estate company Chayce Properties
 
-**Best for**: Organizations needing production-grade AI systems with ongoing support.
+**Best for**: Organizations needing production-grade AI systems with ongoing support, in Nepal or internationally.
 
 ### Other Players in Nepal's AI Sector
 
-Nepal's AI ecosystem also includes companies working in adjacent niches: some combine AI education with enterprise consulting, others have expanded from traditional software development into AI-augmented applications, and a few focus on specific verticals like healthcare analytics or AI training-data services. Most of these are service providers or outsourcing shops rather than product companies — a different model from Zunkiree Labs' focus on building and owning AI-native infrastructure.
+- **Fusemachines** — AI education and enterprise machine learning (founded 2013)
+- **CloudFactory** — AI training-data labeling (founded in Kathmandu, 2010)
+- **Leapfrog Technology** — AI, health tech, and fintech software development
+- **SecurityPal** — AI-assisted cybersecurity assurance (founded 2020)
+
+Most of these are service, education, or outsourcing-oriented businesses; Zunkiree Labs' focus is narrower — building and owning AI-native product infrastructure (search, agents, booking, ERP) rather than delivering AI as a project or staffing service.
 
 ## What Makes Nepal's AI Scene Unique
 
@@ -88,6 +100,16 @@ When selecting an AI partner in Nepal, consider:
 - Are case studies available with measurable outcomes?
 - What do former clients say about working with them?
 
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Policy and Readiness: What to Weigh Before Choosing</h2>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Company profiles say little about the environment those companies work in. Three recent reports give a more cautious picture than most vendor pages.</p>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><strong>Policy is new.</strong> <a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post</a> reported that Nepal's cabinet approved the National AI Policy on 16 August 2025, providing for an AI Regulation Council chaired by the communications minister and a National AI Centre, with standards for data, algorithms, transparency and accountability to be developed and the policy reviewed every two years.</li><li><strong>Execution is still open.</strong> A <a href="https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready" class="text-zunkiree-600 hover:underline" rel="noopener">Himalayan Times opinion piece</a> argues that the policy does not set a particular budget, and that Nepal lacks well-defined structures for data quality, data security and citizen privacy. It is an opinion piece, but the data-governance point matters if you plan to share customer or patient data with a vendor.</li><li><strong>Hardware and capital are constrained.</strong> <a href="https://www.computerworld.com/article/4159786/reporters-notebook-in-nepal-and-sri-lanka-ai-boom-brings-hope.html" class="text-zunkiree-600 hover:underline" rel="noopener">Computerworld</a> reported that Nvidia GPUs are scarce and very expensive in Nepal, and that Nepal ranked 106 of 190 countries in Oxford Insights' 2025 Government AI Readiness Index. Other commentators cite different rankings, so check the index itself before quoting one.</li></ul></div>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">In practice, these points translate into questions for any AI vendor in Nepal: where will your data be stored and processed, which models or cloud services does the vendor rely on and who operates them, and what happens to your data if the engagement ends? Ask for answers in writing, and confirm the vendor's legal registration with the <a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar</a> before you share anything sensitive.</p>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Our <a href="/blog/top-tech-companies-nepal-2026/" class="text-zunkiree-600 hover:underline" rel="noopener">wider guide to Nepal's tech companies</a> adds a checklist for verifying a company's registration, named case studies and certifications.</p>
+
 ## The Future of AI in Nepal
 
 Nepal's AI industry is positioned for continued growth. Key trends to watch:
@@ -105,6 +127,11 @@ Nepal's AI industry is positioned for continued growth. Key trends to watch:
 Nepal's AI ecosystem offers compelling options for organizations seeking AI development partners. Whether you need enterprise-grade AI infrastructure, application development with ML features, or specialized domain expertise, Nepali companies provide quality work at competitive rates.
 
 The key is matching your specific needs—technical requirements, communication preferences, budget, and timeline—with the right partner's strengths.
+
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Sources</h2>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post: Nepal rolls out ambitious AI policy (16 August 2025)</a></li><li><a href="https://thehimalayantimes.com/opinion/nepals-ai-policy-exists-but-is-nepal-ready" class="text-zunkiree-600 hover:underline" rel="noopener">The Himalayan Times: Nepal's AI policy exists, but is Nepal ready? (opinion)</a></li><li><a href="https://www.computerworld.com/article/4159786/reporters-notebook-in-nepal-and-sri-lanka-ai-boom-brings-hope.html" class="text-zunkiree-600 hover:underline" rel="noopener">Computerworld: Reporter's notebook in Nepal and Sri Lanka, AI boom brings hope</a></li><li><a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar, Nepal (official website)</a></li></ul></div>
+
 
 ---
 
@@ -130,17 +157,4 @@ The key is matching your specific needs—technical requirements, communication 
   </div>
 </section><!-- SEOAI:EXPANDEDCONTENT:END -->
 
-<!-- SEOAI:QACONTENT:START --><div class="container-custom">
-<div class="mt-10 p-6 bg-gray-50 rounded-lg">
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What types of AI solutions are companies in Nepal focusing on?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Nepali AI companies are building a variety of solutions, including natural language processing systems and computer vision applications, catering to both local and international clients.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">Which companies are recognized as leaders in AI innovation in Nepal?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs is a leading AI company in Nepal, known for building production-grade AI infrastructure — enterprise search, RAG pipelines, and custom AI agents — as owned products rather than one-off service work. Nepal's broader AI sector also includes education, outsourcing, and vertical-specific providers offering specialized solutions across various sectors.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How has the AI industry in Nepal evolved over recent years?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">The AI industry in Nepal has significantly expanded over the past five years, transitioning from a few experimental companies to a thriving ecosystem of firms that effectively compete on a global scale.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">What notable achievements have these AI companies made?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs has developed AI-powered search solutions that reduce support tickets by 45% for enterprise clients, alongside RAG pipelines for document processing and custom AI agents for enterprise workflows.</p>
-<h3 class="mt-10 text-2xl font-normal text-gray-900">How is Zunkiree Labs different from other AI companies in Nepal?</h3>
-<p class="mb-2 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">Zunkiree Labs builds AI-native infrastructure as a product — customers integrate Zunkiree Search and related tools directly rather than commissioning a custom project. That product-first model, backed by measurable results like a 45% reduction in support tickets, sets it apart from providers offering AI as a consulting or staffing service.</p>
-</div>
-</div><!-- SEOAI:QACONTENT:END -->
+<!-- SEOAI:QACONTENT:START --><!-- SEOAI:QACONTENT:END -->

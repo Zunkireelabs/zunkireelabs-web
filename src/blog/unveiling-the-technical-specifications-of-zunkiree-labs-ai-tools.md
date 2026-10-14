@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Unveiling the Technical Specifications of Zunkiree Labs' AI Tools"
-description: "Discover the advanced technical specifications of Zunkiree Labs' AI tools, designed to empower businesses with robust infrastructure-level solutions and intelligent automation."
+title: "Technical Specifications of Zunkiree Labs' AI Tools"
+description: "The technical specifications of Zunkiree Labs' AI tools, built for infrastructure-level solutions and intelligent automation for businesses."
 date: "2026-09-01"
 featuredImage: "https://images.pexels.com/photos/16023919/pexels-photo-16023919.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "HTML code displayed on a screen, demonstrating web structure and syntax."

@@ -1,0 +1,11 @@
+# Lead-form submission proxy sidecar. Separate from the main Dockerfile
+# (which builds the static site + nginx) because that image has no Node
+# runtime — see server/submit-lead-server.js's header comment for why this
+# container exists at all.
+FROM node:20-alpine
+
+WORKDIR /app
+COPY server/lead-proxy-core.js server/submit-lead-server.js ./server/
+
+EXPOSE 3001
+CMD ["node", "server/submit-lead-server.js"]

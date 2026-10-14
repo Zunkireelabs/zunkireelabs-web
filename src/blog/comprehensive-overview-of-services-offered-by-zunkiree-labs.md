@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
 title: "Comprehensive Overview of Services Offered by Zunkiree Labs"
-description: "Explore the extensive range of services provided by Zunkiree Labs, including AI development, software solutions, and data engineering tailored to empower modern businesses."
+description: "The range of services from Zunkiree Labs, including AI development, software solutions and data engineering for modern businesses."
 date: "2026-08-31"
 featuredImage: "https://images.pexels.com/photos/8439005/pexels-photo-8439005.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "Researchers working with advanced robotics technology in a laboratory setting."

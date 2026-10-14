@@ -1,0 +1,23 @@
+---
+layout: service.njk
+lang: nl
+ogLocale: nl_NL
+title: "Multi-tenant SaaS-ontwikkeling in Calgary | Zunkiree Labs"
+description: "Multi-tenant SaaS-platforms met abonnementsfacturatie, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in 3-6 maanden, niet in jaren."
+permalink: /nl/services/saas-development/
+serviceId: saas-development
+hreflangAlternates:
+  - lang: en
+    url: /services/saas-development/
+  - lang: de
+    url: /de/services/saas-development/
+  - lang: de-CH
+    url: /de-ch/services/saas-development/
+  - lang: nl
+    url: /nl/services/saas-development/
+  - lang: x-default
+    url: /services/saas-development/
+---
+
+{# Structured data generated from the same localized FAQ the page displays. #}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in servicesLocales["nl"].details["saas-development"].faq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>

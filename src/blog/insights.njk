@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: "Insights | Trending AI & Technology Topics | Zunkiree Labs"
+description: "Timely explainers on what is trending in AI and technology, and what it means for your business, from the team at Zunkiree Labs."
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.insights
+  size: 100
+  reverse: true
+  alias: posts
+permalink: "{{ '/blog/insights/' if pagination.pageNumber == 0 else '/blog/insights/page/' + (pagination.pageNumber + 1) + '/' }}"
+---
+{% include "partials/insights-listing.njk" %}

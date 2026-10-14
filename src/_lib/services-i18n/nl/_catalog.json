@@ -1,0 +1,321 @@
+{
+  "services": [
+    {
+      "id": "ai-development",
+      "title": "AI-ontwikkeling",
+      "tagline": "AI die problemen oplost, niet alleen vragen beantwoordt.",
+      "category": "AI & Data",
+      "description": "Maatwerk AI-systemen met RAG-pipelines, LLM-integratie en intelligente automatisering. Wij bouwen AI die specifieke bedrijfsproblemen oplost, geen generieke chatbots.",
+      "cta": "Ontdek AI-ontwikkeling",
+      "url": "/services/ai-development/",
+      "icon": "ai",
+      "mockup": "/assets/images/ai-development-hero.webp",
+      "clients": [
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        },
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        }
+      ]
+    },
+    {
+      "id": "ai-customer-experience",
+      "title": "AI-klantervaring",
+      "tagline": "40% minder tickets. Snellere antwoorden. Tevredener klanten.",
+      "category": "AI & Data",
+      "description": "AI-gestuurde supportsystemen die klantvragen direct beantwoorden. Verminder supporttickets met 40% en verbeter tegelijk de nauwkeurigheid van de antwoorden.",
+      "cta": "Ontdek AI CX",
+      "url": "/services/ai-customer-experience/",
+      "icon": "chat",
+      "mockup": "/assets/images/ai-customer-experience-hero.webp",
+      "clients": [
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        },
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Khems Cleaning",
+          "logo": "/images/clients/khems-cleaning.webp"
+        }
+      ]
+    },
+    {
+      "id": "ai-ecommerce",
+      "title": "AI-ecommerceoplossingen",
+      "tagline": "Agentic commerce, gebouwd voor de Nepalese markt.",
+      "category": "AI & Data",
+      "description": "Bouw agentic-commercesystemen met AI-shoppingagents, conversational commerce en slimme aanbevelingen. Gespecialiseerd voor de Nepalese markt met eSewa- en Khalti-integratie.",
+      "cta": "Ontdek AI-commerce",
+      "url": "/services/ai-ecommerce/",
+      "icon": "cart",
+      "mockup": "/assets/images/service-ai.webp",
+      "clients": []
+    },
+    {
+      "id": "data-systems",
+      "title": "Datasystemen",
+      "tagline": "Uw data, klaar voor AI — zonder maandenlange opschoning.",
+      "category": "AI & Data",
+      "description": "Datapipelines, datawarehouses en analytics-infrastructuur gebouwd voor AI-workloads. Maak uw data klaar voor machine learning zonder maandenlange opschoning.",
+      "cta": "Ontdek datasystemen",
+      "url": "/services/data-systems/",
+      "icon": "data",
+      "mockup": "/assets/images/data-systems-hero.webp",
+      "clients": [
+        {
+          "name": "Rapid Investment",
+          "logo": "/images/clients/rapid-investment.svg"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        },
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        }
+      ]
+    },
+    {
+      "id": "custom-software",
+      "title": "Maatwerksoftware",
+      "tagline": "Interne tools die uw team echt gebruikt.",
+      "category": "Ontwikkeling",
+      "description": "Bedrijfsapplicaties op maat van uw workflows. Wij bouwen interne tools en bedrijfssystemen die teams echt graag gebruiken.",
+      "cta": "Ontdek maatwerksoftware",
+      "url": "/services/custom-software/",
+      "icon": "code",
+      "mockup": "/assets/images/custom-software-hero.webp",
+      "clients": [
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        },
+        {
+          "name": "Khushbu Nirman Sewa",
+          "logo": "/images/clients/khushbu-nirman-sewa.webp"
+        },
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        }
+      ]
+    },
+    {
+      "id": "saas-development",
+      "title": "SaaS-ontwikkeling",
+      "tagline": "Van nul naar multi-tenant in maanden, niet jaren.",
+      "category": "Ontwikkeling",
+      "description": "Multi-tenant platforms met abonnementsfacturering, gebruikersbeheer en schaalbare architectuur. Lanceer uw SaaS-product in maanden, niet jaren.",
+      "cta": "Ontdek SaaS-ontwikkeling",
+      "url": "/services/saas-development/",
+      "icon": "cloud",
+      "mockup": "/assets/images/saas-development-hero.webp",
+      "clients": [
+        {
+          "name": "CoreCloud365",
+          "logo": "/images/clients/corecloud365.svg"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        }
+      ]
+    },
+    {
+      "id": "web-development",
+      "title": "Webontwikkeling",
+      "tagline": "Snel, SEO-ready, gebouwd om te converteren.",
+      "category": "Ontwikkeling",
+      "description": "Krachtige websites en web-apps, geoptimaliseerd voor snelheid en conversie. Moderne frameworks, responsive design, vanaf dag één gebouwd voor SEO.",
+      "cta": "Ontdek webontwikkeling",
+      "url": "/services/web-development/",
+      "icon": "globe",
+      "mockup": "/assets/images/web-development-hero.webp",
+      "clients": [
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Khushbu Nirman Sewa",
+          "logo": "/images/clients/khushbu-nirman-sewa.webp"
+        },
+        {
+          "name": "Khems Cleaning",
+          "logo": "/images/clients/khems-cleaning.webp"
+        }
+      ]
+    },
+    {
+      "id": "app-development",
+      "title": "App-ontwikkeling",
+      "tagline": "iOS en Android, geleverd door één team.",
+      "category": "Ontwikkeling",
+      "description": "Native en cross-platform mobiele apps voor iOS en Android. Van consumenten-apps tot enterprise mobility, met naadloze backend-integratie.",
+      "cta": "Ontdek app-ontwikkeling",
+      "url": "/services/app-development/",
+      "icon": "mobile",
+      "mockup": "/assets/images/service-mobile.webp",
+      "clients": [
+        {
+          "name": "Admizz",
+          "logo": "/images/clients/admizz.webp"
+        },
+        {
+          "name": "Rapid Investment",
+          "logo": "/images/clients/rapid-investment.svg"
+        }
+      ]
+    },
+    {
+      "id": "aeo-seo",
+      "title": "AEO & SEO",
+      "tagline": "Gevonden door Google en geciteerd door AI.",
+      "category": "Marketing",
+      "description": "Word gevonden door Google en AI-assistenten zoals ChatGPT en Perplexity. Wij optimaliseren content voor traditioneel zoeken en AI-citaties.",
+      "cta": "Ontdek AEO & SEO",
+      "url": "/services/aeo-seo/",
+      "icon": "search",
+      "mockup": "/assets/images/aeo-seo-hero.webp",
+      "clients": [
+        {
+          "name": "Prime Tiles",
+          "logo": "/images/clients/prime-tiles.webp"
+        },
+        {
+          "name": "Mach24 Orbital",
+          "logo": "/images/clients/mach24orbital.webp"
+        },
+        {
+          "name": "CMS Group",
+          "logo": "/images/clients/cms-group.webp"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welke digitale diensten biedt Zunkiree Labs aan?",
+      "answer": "Zunkiree Labs levert AI-ontwikkeling (RAG-pipelines, LLM-integratie, intelligente automatisering), maatwerksoftware, de ontwikkeling van SaaS-platforms, web- en mobiele app-ontwikkeling, architectuur van datasystemen en AEO/SEO-marketingdiensten. Wij werken voor bedrijven in de zorg, maakindustrie, onderwijs en technologie."
+    },
+    {
+      "question": "Hoe pakt Zunkiree Labs AI-ontwikkelprojecten aan?",
+      "answer": "Wij beginnen bij uw specifieke bedrijfsprobleem, niet bij generieke AI-oplossingen. Ons AI-ontwikkelproces omvat discovery (inzicht in uw data en workflows), architectuurontwerp (selectie van geschikte modellen en infrastructuur), iteratieve ontwikkeling (bouwen en testen met echte data) en deployment met monitoring. De meeste projecten gaan binnen 8-12 weken live."
+    },
+    {
+      "question": "Welke sectoren bedient Zunkiree Labs?",
+      "answer": "Wij bedienen technologiebedrijven, e-commerce, zorg, onderwijs, maakindustrie, vastgoed, juridische en zakelijke dienstverlening. Elk bedrijf met klantgerichte content, interne kennisbanken of operationele data kan profiteren van onze AI- en softwareontwikkelingsdiensten, en we staan open voor nieuwe sectoren buiten deze lijst."
+    },
+    {
+      "question": "Hoe lang duurt een gemiddeld softwareontwikkelproject?",
+      "answer": "De doorlooptijd verschilt per omvang: AI-integraties duren doorgaans 4-8 weken, maatwerk webapplicaties 8-16 weken, complete SaaS-platforms 3-6 maanden en mobiele apps 8-12 weken. Na de discovery leveren wij een gedetailleerde planning, met oplevering op basis van mijlpalen."
+    },
+    {
+      "question": "Biedt Zunkiree Labs doorlopende ondersteuning na oplevering van het project?",
+      "answer": "Ja. Alle projecten bevatten 30 dagen ondersteuning na de lancering. Daarnaast bieden wij doorlopende onderhoudspakketten met updates, prestatiemonitoring, beveiligingspatches en functie-uitbreidingen. Veel klanten stappen over op retainer-overeenkomsten voor continue verbetering."
+    },
+    {
+      "question": "Werkt Zunkiree Labs wereldwijd met klanten, niet alleen in Nepal?",
+      "answer": "Ja. Ongeveer 60% van onze klanten is internationaal, onder meer in de VS, het VK, India, Australië, Canada, Zwitserland en Nederland. Zunkiree Labs levert AI-ontwikkeling, maatwerksoftware en AEO/SEO-werk wereldwijd — onze dienstverlening is aan geen enkele locatie gebonden en wij werken gestructureerd op afstand, met overlap in tijdzones, waar uw team ook zit."
+    },
+    {
+      "question": "Bouwt Zunkiree Labs AI-spraakagents?",
+      "answer": "Ja. Als onderdeel van onze dienst AI-klantervaring bouwen wij Voice AI-systemen die traditionele IVR-keuzemenu's vervangen door conversationele AI — met spraakherkenning, intentieherkenning, automatische gespreksdoorverbinding en stemauthenticatie, zodat bellers direct antwoord krijgen in plaats van door een menu te navigeren."
+    },
+    {
+      "question": "Kan uw Voice AI afspraken telefonisch inplannen?",
+      "answer": "Ja. Onze Voice AI-systemen kunnen afspraken rechtstreeks tijdens een telefoongesprek aannemen en beheren, naast spraakherkenning, intentieherkenning en gespreksdoorverbinding — zodat bellers kunnen inplannen zonder door een menu te navigeren of op een medewerker te wachten."
+    }
+  ],
+  "stories": [
+    {
+      "id": "admizz",
+      "name": "Admizz Education",
+      "logo": "/images/clients/admizz.webp",
+      "stat": "45%",
+      "statLabel": "snellere reacties",
+      "headline": "Admizz transformeert het beheer van studentenaanvragen",
+      "description": "Na de implementatie van de AI-gestuurde chatbot van Zunkiree verkortte Admizz de reactietijden en verbeterde het de betrokkenheid van studenten op het hele onderwijsplatform.",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
+      "ctaText": "Lees de casestudy",
+      "ctaUrl": "/resources/admizz-case-study/"
+    },
+    {
+      "id": "corecloud365",
+      "name": "CoreCloud365",
+      "logo": "/images/clients/corecloud365.webp",
+      "stat": "60%",
+      "statLabel": "efficiëntiewinst",
+      "headline": "CoreCloud365 integreert AI-automatisering",
+      "description": "Wij hielpen CoreCloud365 AI-mogelijkheden te integreren in de bestaande infrastructuur, waardoor intelligente automatisering in hun hele organisatie mogelijk werd.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "ctaText": "Lees de casestudy",
+      "ctaUrl": "/resources/corecloud365-case-study/"
+    },
+    {
+      "id": "rapid-investment",
+      "name": "Rapid Investment",
+      "logo": "/images/clients/rapid-investment.webp",
+      "stat": "10x",
+      "statLabel": "snellere analyse",
+      "headline": "Rapid Investment transformeert dataverwerking",
+      "description": "Rapid Investment had realtime data-analyse nodig om hun beleggingsbeslissingen te onderbouwen. Wij bouwden een datasysteem dat miljoenen datapunten verwerkt.",
+      "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "cms-group",
+      "name": "CMS Group",
+      "logo": "/images/clients/cms-group.webp",
+      "stat": "85%",
+      "statLabel": "procesautomatisering",
+      "headline": "CMS Group automatiseert bedrijfsworkflows",
+      "description": "CMS Group transformeerde hun bedrijfsvoering met maatwerk bedrijfssoftware die handmatige workflows automatiseerde en de samenwerking binnen het team verbeterde.",
+      "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop"
+    },
+    {
+      "id": "chayce-properties",
+      "name": "Chayce Properties",
+      "logo": "/images/clients/chayce-properties.webp",
+      "stat": "End-to-end",
+      "statLabel": "digitale bedrijfsvoering volledig beheerd",
+      "headline": "Chayce Properties draait op de infrastructuur van Zunkiree",
+      "description": "Voor Chayce Properties, een Brits vastgoedbedrijf, verzorgt Zunkiree Labs niet alleen de SEO — wij beheren de volledige digitale bedrijfsvoering: website, AI-systemen en de doorlopende technische uitvoering.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+    }
+  ],
+  "page": {
+    "metaTitle": "AI-, web- & SaaS-ontwikkeling in Nepal | Zunkiree Labs",
+    "metaDescription": "Toonaangevende AI-ontwikkeling in Nepal: maatwerk AI-agents, RAG-pipelines, webontwikkeling, mobiele apps en SaaS-platforms. Softwarebedrijf in Kathmandu.",
+    "heroTitle": "Digitale diensten",
+    "heroLabel": "Diensten",
+    "heroTagline": "End-to-end oplossingen die ideeën omzetten in groei",
+    "introHeadline": "Ontdek onze diensten, gebouwd voor impact in de praktijk",
+    "introDescription": "Van AI-systemen tot webapplicaties: wij helpen bedrijven sneller te leveren en slimmer te werken. Onze diensten combineren technische diepgang met praktische uitvoering — zodat u oplossingen krijgt die werken, niet alleen prototypes.",
+    "ctaHeadline": "Een oplossing nodig die we niet hebben vermeld?",
+    "ctaDescription": "Wij bouwden maatwerksystemen voor de zorg, maakindustrie, juridische sector en tientallen andere branches. Laten we praten over wat u wilt oplossen — wij vertellen u of wij kunnen helpen.",
+    "ctaButtonText": "Plan een gesprek",
+    "ctaButtonUrl": "/schedule-a-call/",
+    "catalogCategories": [
+      {
+        "id": "ai",
+        "label": "AI & Data"
+      },
+      {
+        "id": "dev",
+        "label": "Ontwikkeling"
+      },
+      {
+        "id": "marketing",
+        "label": "Marketing"
+      }
+    ]
+  }
+}

@@ -1,13 +1,15 @@
 ---
 layout: base.njk
-title: "AI Development Company Nepal | Custom AI Systems & RAG Pipelines | Zunkiree Labs"
-description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, AI agents, and enterprise software. Custom AI development from Kathmandu. Get a free consultation."
+title: "AI Development Company Nepal | Zunkiree Labs"
+description: "Leading AI company in Nepal building production-grade AI systems, RAG pipelines, and AI agents from Kathmandu. Get a free consultation."
 permalink: /
 hreflangAlternates:
   - lang: en
     url: /
   - lang: de
     url: /de/
+  - lang: de-CH
+    url: /de-ch/
   - lang: nl
     url: /nl/
   - lang: x-default
@@ -173,7 +175,8 @@ bodyClass: "v2-inter"
         </h2>
         <p class="text-[14px] leading-relaxed text-white/60">
           Orca connects your CRM, email, and marketing tools into one coordinated layer —
-          agent workflows that act across systems, not just within one.
+          customized automation workflows tailored to how your business actually
+          operates, acting across systems instead of one at a time.
         </p>
       </div>
 
@@ -485,7 +488,7 @@ bodyClass: "v2-inter"
 
 <section class="relative z-10 px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-16" aria-labelledby="platform-pillars-heading">
   <div class="mx-auto max-w-5xl">
-    <h2 id="platform-pillars-heading" class="sr-only">AI infrastructure, built to scale</h2>
+    <h2 id="platform-pillars-heading" class="sr-only">What does production-grade AI infrastructure actually look like?</h2>
 
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-3" data-reveal-stagger>
       {% for pillar in pillars %}
@@ -709,7 +712,8 @@ app = platform.init(
   { name: "Mach24 Orbital", logo: "/assets/images/clients/mach24orbital.webp" },
   { name: "Khushbu Nirman Sewa", logo: "/assets/images/clients/khushbu-nirman-sewa.webp" },
   { name: "Prime Tiles", logo: "/assets/images/clients/prime-tiles.webp" },
-  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" }
+  { name: "Khems Cleaning", logo: "/assets/images/clients/khems-cleaning.webp" },
+  { name: "Chayce Properties", logo: "/assets/images/clients/chayce-properties.webp" }
 ] %}
 <div class="w-full pb-12 sm:pb-16 lg:pb-20 overflow-hidden relative" data-reveal>
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -810,7 +814,7 @@ app = platform.init(
     headline: "Running our own agency operations on this exact platform.",
     iconPath: "M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM10 5h4v2h-4V5zm10 13H4V9h16v9z",
     proofType: "line",
-    proofLine: "ZunkireeLabs runs its own deal pipeline, proposals, delivery, and time tracking on this same platform — Mobilise runs the same infrastructure externally."
+    proofLine: "Zunkiree Labs runs its own deal pipeline, proposals, delivery, and time tracking on this same platform — Mobilise runs the same infrastructure externally."
   },
   {
     id: "healthcare",
@@ -930,7 +934,7 @@ app = platform.init(
       </span>
 
       <h2 id="industry-showcase-heading" class="mb-6 text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
-        Find the industry that looks like yours
+        What does Zunkiree Labs build for your industry?
       </h2>
 
       <!-- Subhead copy + Tabs Row — aligned in the same row -->
@@ -1201,7 +1205,7 @@ app = platform.init(
     label: "Agencies",
     live: true,
     headline: "Deal flow that never sits idle",
-    body: "Proposals, delivery capacity, and resourcing tracked in one thread — the same infrastructure ZunkireeLabs runs its own agency on.",
+    body: "Proposals, delivery capacity, and resourcing tracked in one thread — the same infrastructure Zunkiree Labs runs its own agency on.",
     footnotes: ["Deal pipeline", "Proposal share/print views", "Project cockpit", "RAID log", "Utilization dashboards"],
     messages: [
       { from: "bot", text: "Your proposal for the client moved to Sent 2 hours ago. Want a follow-up reminder queued for next week?" },
@@ -1316,7 +1320,7 @@ app = platform.init(
             A Zunkiree Labs Platform
           </span>
           <h2 id="platform-visual-heading" class="text-[28px] font-light leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
-            One platform. Every capability.
+            Why use one AI platform instead of a dozen point tools?
           </h2>
           <a
             href="/contact/"
@@ -1651,7 +1655,7 @@ app = platform.init(
 ] %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="testimonials-heading">
   <div class="mx-auto max-w-5xl">
-    <h2 id="testimonials-heading" class="sr-only">What our clients say</h2>
+    <h2 id="testimonials-heading" class="sr-only">What do our clients say about working with Zunkiree Labs?</h2>
     <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]" data-reveal>
       Client Results
     </span>
@@ -1713,7 +1717,7 @@ app = platform.init(
    of smaller posts right. Pulled from the real `collections.blog`
    posts already published under src/blog/ — no placeholder content.
    ===================================================== #}
-{% set sortedPosts = collections.blog | reverse %}
+{% set sortedPosts = collections.insights | reverse %}
 {# Flat two-tone cover art for posts without a real featuredImage — MASTER_DESIGN_SPEC.md
    §25 explicitly allows "flat gradient art (matching §10's accent gradient palette) instead
    of a photo when no real photo exists" for article thumbnails. No blur/ambient bloom (both
@@ -1771,7 +1775,7 @@ app = platform.init(
         </h2>
       </div>
       <a
-        href="/blog/"
+        href="/blog/insights/"
         class="inline-flex items-center gap-2 rounded-md border border-navy-200 px-5 py-3 text-[13px] font-medium uppercase tracking-wider text-navy-900 transition-colors hover:border-navy-400 hover:bg-navy-50 sm:py-2.5"
       >
         View all
@@ -1820,12 +1824,12 @@ app = platform.init(
    ===================================================== #}
 {% set homepageFaq = [
   {
-    question: "What industries does ZunkireeLabs build for?",
+    question: "What industries does Zunkiree Labs build for?",
     answer: "Four core verticals today: Education, Agencies, Healthcare, and Real Estate — each running on the same shared platform underneath. Education and Agencies are live in production now; Healthcare and Real Estate are built to the same standard."
   },
   {
     question: "Is this a demo, or is it actually running somewhere?",
-    answer: "It's running. Admizz runs its education CRM deployment on this platform today, and ZunkireeLabs runs its own agency operations — deal pipeline, proposals, delivery, time tracking — on the exact same infrastructure. Nothing you see here is a concept."
+    answer: "It's running. Admizz runs its education CRM deployment on this platform today, and Zunkiree Labs runs its own agency operations — deal pipeline, proposals, delivery, time tracking — on the exact same infrastructure. Nothing you see here is a concept."
   },
   {
     question: "What's shared across industries vs. built custom per client?",
@@ -1885,6 +1889,7 @@ app = platform.init(
     </div>
   </div>
 </section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for item in homepageFaq %}{"@type":"Question","name":{{ item.question | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.answer | dump | safe }}}}{{ "," if not loop.last }}{%- endfor %}]}</script>
 
 {# =====================================================
    CLOSING CTA BANNER — Website V2
@@ -1922,7 +1927,7 @@ app = platform.init(
         Get Started
       </span>
       <h2 id="closing-cta-heading" class="relative z-10 mx-auto max-w-2xl text-[28px] font-light leading-[1.2] tracking-tight text-white sm:text-[32px] lg:text-[36px]">
-        See it running for your industry
+        Want to see it running for your industry?
       </h2>
       <p class="relative z-10 mx-auto mt-4 max-w-xl text-body-lg text-white/60">
         Education, Agencies, Healthcare, Real Estate — talk to us, or explore the shared platform underneath it all.

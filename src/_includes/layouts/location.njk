@@ -36,7 +36,7 @@ layout: base.njk
   "url": "{{ site.url }}/locations/{{ location.id }}/",
   "telephone": "{{ location.phone | default(site.phone) }}",
   "email": "{{ location.email | default(site.email) }}",
-  "image": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+  "image": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "{{ location.name }}",
@@ -111,6 +111,13 @@ layout: base.njk
         <p class="mt-5 max-w-[540px] text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
           {{ location.intro }}
         </p>
+
+        {% if location.answer %}
+        <div class="mt-6 max-w-[540px] rounded-2xl border border-navy-100/60 bg-white p-5 shadow-subtle">
+          <span class="mb-2 block font-mono text-[11px] font-medium uppercase tracking-wider text-[#4a7a00]">In short</span>
+          <p class="text-[15px] leading-relaxed text-[#374151]">{{ location.answer }}</p>
+        </div>
+        {% endif %}
 
         {# CTAs #}
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -497,6 +504,17 @@ layout: base.njk
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="px-4 pb-12 sm:px-6 lg:px-8" aria-labelledby="related-insights-heading">
+  <div class="mx-auto max-w-3xl">
+    <h2 id="related-insights-heading" class="text-[20px] font-semibold tracking-tight text-[#111827]">Related Insights</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-5 text-[15px] text-[#6B7280]">
+      <li><a class="underline hover:text-navy-900" href="/blog/why-ai-matters-for-nepal-what-the-evidence-shows/">Why AI Matters for Nepal: What the Evidence Shows</a></li>
+      <li><a class="underline hover:text-navy-900" href="/blog/state-of-ai-nepal-2026/">State of AI in Nepal: Overview as of Today</a></li>
+      <li><a class="underline hover:text-navy-900" href="/blog/top-ai-companies-nepal-2026/">AI Companies in Nepal (2026): Leaders and What They Build</a></li>
+    </ul>
   </div>
 </section>
 

@@ -1,0 +1,26 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+excludeFromSitemap: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zunkiree Labs Insights</title>
+  <subtitle>Sourced explainers on AI, software and the IT market.</subtitle>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/blog/insights/" rel="alternate" type="text/html"/>
+  <id>{{ site.url }}/blog/insights/</id>
+  {%- set newest = collections.insights | reverse | first %}
+  <updated>{{ (newest.data.lastUpdated or newest.date) | date('%Y-%m-%d') }}T00:00:00Z</updated>
+  <author><name>Zunkiree Labs</name><uri>{{ site.url }}/</uri></author>
+  {%- for post in collections.insights | reverse %}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <published>{{ post.date | date('%Y-%m-%d') }}T00:00:00Z</published>
+    <updated>{{ (post.data.lastUpdated or post.date) | date('%Y-%m-%d') }}T00:00:00Z</updated>
+    <summary>{{ post.data.description | escape }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -1,8 +1,8 @@
 ---
-title: "Top Tech Companies in Nepal 2026: AI & Software Leaders" # SEOAI:TITLE
-description: "The definitive guide to Nepal's leading technology companies. Discover top AI companies, software development firms, and rising tech startups in Kathmandu."
+title: "Top 50 IT & Tech Companies in Nepal (2026 List)" # SEOAI:TITLE
+description: "A researched list of 50 IT, software, AI and startup companies in Nepal for 2026, grouped by category, with how each was selected."
 date: 2026-03-30
-lastUpdated: 2026-03-30
+lastUpdated: "2026-10-02"
 authorId: sadin-shrestha
 category: Industry
 tags:
@@ -13,12 +13,15 @@ tags:
 featuredImage: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 featuredImageAlt: "A neat workspace featuring a laptop displaying Google search, a smartphone, and a notebook on a wooden desk."
 readTime: 18
+translationKey: top-tech-companies-nepal-2026
 featuredImageCredit: "Photo by Caio on Pexels"
 ---
 
-Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions.
+Nepal's technology sector has transformed from a small outsourcing hub into a thriving ecosystem of AI innovators, software development powerhouses, and ambitious startups. In 2026, Nepali tech companies serve clients across six continents while building products used by millions. IT/AI exports crossed $1 billion for the first time, and the sector now operates under the government's [National Artificial Intelligence Policy, 2025](https://giwmscdnone.gov.np/media/pdf_upload/National%20AI%20Policy-Final_uxc94vg.pdf) ([Nepal Economic Forum, NEFsearch: Artificial Intelligence in Nepal](https://issuu.com/nepaleconomicforum/docs/nefsearch_artificial_intelligence_ai_in_nepal)).
 
 This guide profiles 50 of the most significant tech companies operating in Nepal—from established enterprises to fast-growing startups. Whether you're looking for an AI development partner, evaluating software vendors, or researching the market, this is your starting point.
+
+Well-known IT and software companies in Nepal include Leapfrog Technology, F1Soft, Deerwalk, Javra, and Verisk Nepal. Leading AI-focused companies include Fusemachines, CloudFactory, Docsumo, and Zunkiree Labs. The full list of 50 is below. For data on how ready Nepali organizations are for AI, see our [State of AI in Nepal 2026 report](/resources/state-of-ai-nepal-2026/).
 
 ## Top AI Companies in Nepal
 
@@ -26,7 +29,7 @@ Nepal has emerged as an unexpected hub for artificial intelligence work. Lower o
 
 ### Zunkiree Labs
 
-**Founded**: 2023 | **Location**: Kathmandu | **Team**: 15+
+**Founded**: 2018 | **Location**: Kathmandu | **Team**: 15+
 
 **Specialization**: AI-native search, RAG pipelines, enterprise AI infrastructure
 
@@ -846,6 +849,16 @@ MeroShare provides the digital infrastructure for Nepal's stock market, enabling
 
 **Website**: cdsc.com.np
 
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">How to Check Any Nepali IT Company Before You Hire It</h2>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">A list like this one is a starting point, not a verdict. Before signing with any vendor, it is worth confirming a few things yourself. Treat the points below as a checklist, not a ranking method.</p>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><strong>Legal registration.</strong> Companies in Nepal are registered with the <a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar</a>, whose website describes a public company data portal. Ask the vendor for its registration certificate and match the name and registration number against the registry. Access to the portal can change, so confirm how it works on the official site.</li><li><strong>Named, checkable work.</strong> Look for case studies where the client is named and can be contacted, and ask for a reference call. Claims without a named client or a stated scope are marketing, not evidence.</li><li><strong>Certifications and partnerships.</strong> If a vendor says it holds a cloud-partner status or a security certification, ask for the certificate or the partner-directory listing and check it with the issuer.</li><li><strong>Team and delivery details.</strong> Ask who will actually work on your project, their experience, and how handover and support are handled. Team sizes quoted in directories, including this one, are approximate and change often.</li><li><strong>Contract basics.</strong> Agree ownership of code and data, payment terms and exit conditions in writing before work begins.</li></ul></div>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">It also helps to read headline figures carefully. <a href="https://kathmandupost.com/national/2026/02/25/nepal-s-it-exports-near-1-billion-can-the-momentum-be-sustained" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post</a> reported in February 2026 that Nepal's IT exports crossed about $1 billion in 2025, but described this as a best estimate from the Nepal Association for Software and IT Services (NAS-IT) rather than official data, noting that payments often arrive labelled as remittances. The same report put the 2022 figure at $515 million and the sector's workforce at roughly 100,000 people, about 90% of them in Kathmandu. On the policy side, <a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post</a> reported that Nepal's cabinet approved a National AI Policy on 16 August 2025, which provides for an AI Regulation Council and a National AI Centre.</p>
+
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">For the AI side of this market specifically, see our guide to <a href="/blog/top-ai-companies-nepal-2026/" class="text-zunkiree-600 hover:underline" rel="noopener">AI companies in Nepal</a>.</p>
+
 ## How We Selected These Companies
 
 This list reflects companies meeting specific criteria:
@@ -915,11 +928,16 @@ For organizations seeking technology partners, Nepal offers compelling value: qu
 
 The companies profiled here represent the leading edge of what's possible from Kathmandu and beyond. Whether you need an AI implementation partner, software development team, or are simply curious about emerging tech hubs, Nepal deserves attention.
 
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900">Sources</h2>
+
+<div class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"><ul class="space-y-3"><li><a href="https://kathmandupost.com/national/2026/02/25/nepal-s-it-exports-near-1-billion-can-the-momentum-be-sustained" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post: Nepal's IT exports near $1 billion. Can the momentum be sustained? (25 February 2026)</a></li><li><a href="https://kathmandupost.com/money/2025/08/16/nepal-rolls-out-ambitious-ai-policy" class="text-zunkiree-600 hover:underline" rel="noopener">The Kathmandu Post: Nepal rolls out ambitious AI policy (16 August 2025)</a></li><li><a href="https://ocr.gov.np" class="text-zunkiree-600 hover:underline" rel="noopener">Office of the Company Registrar, Nepal (official website)</a></li></ul></div>
+
+
 ---
 
 *Building AI systems for your organization? [Contact Zunkiree Labs](/contact/) to discuss how we can help with AI-native search, RAG pipelines, and enterprise AI infrastructure.*
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What are some AI products offered by top tech companies in Nepal?</p><p class="text-gray-600 leading-relaxed">Top tech companies in Nepal offer various AI products including Zunkiree Search, Dental AI for patient management, and Gaamma for business analytics.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can AI improve business processes in Nepal?</p><p class="text-gray-600 leading-relaxed">AI can improve business processes in Nepal by reducing support tickets by up to 45%, enhancing knowledge management, and modernizing legacy systems.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What industries in Nepal are utilizing AI technologies?</p><p class="text-gray-600 leading-relaxed">AI technologies are being utilized across various industries in Nepal, including healthcare, manufacturing, legal, professional services, education, and human resources.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is there a resource available to learn about AI adoption in Nepal?</p><p class="text-gray-600 leading-relaxed">Yes, there is a featured report titled 'State of AI in Nepal 2026' which serves as a definitive guide to AI adoption across Nepali industries.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What type of support can AI provide for customer experiences?</p><p class="text-gray-600 leading-relaxed">AI can provide support for customer experiences through intelligent chatbots and conversational AI, helping to automate outreach and predict customer needs.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can businesses in Nepal benefit from using AI development services?</p><p class="text-gray-600 leading-relaxed">Businesses in Nepal can benefit from AI development services by integrating custom AI systems, enhancing data management, and implementing multi-tenant platforms.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are some AI products offered by top tech companies in Nepal?","@type":"Question","acceptedAnswer":{"text":"Top tech companies in Nepal offer various AI products including Zunkiree Search, Dental AI for patient management, and Gaamma for business analytics.","@type":"Answer"}},{"name":"How can AI improve business processes in Nepal?","@type":"Question","acceptedAnswer":{"text":"AI can improve business processes in Nepal by reducing support tickets by up to 45%, enhancing knowledge management, and modernizing legacy systems.","@type":"Answer"}},{"name":"What industries in Nepal are utilizing AI technologies?","@type":"Question","acceptedAnswer":{"text":"AI technologies are being utilized across various industries in Nepal, including healthcare, manufacturing, legal, professional services, education, and human resources.","@type":"Answer"}},{"name":"Is there a resource available to learn about AI adoption in Nepal?","@type":"Question","acceptedAnswer":{"text":"Yes, there is a featured report titled 'State of AI in Nepal 2026' which serves as a definitive guide to AI adoption across Nepali industries.","@type":"Answer"}},{"name":"What type of support can AI provide for customer experiences?","@type":"Question","acceptedAnswer":{"text":"AI can provide support for customer experiences through intelligent chatbots and conversational AI, helping to automate outreach and predict customer needs.","@type":"Answer"}},{"name":"How can businesses in Nepal benefit from using AI development services?","@type":"Question","acceptedAnswer":{"text":"Businesses in Nepal can benefit from AI development services by integrating custom AI systems, enhancing data management, and implementing multi-tenant platforms.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-<!-- SEOAI:SCHEMA:START --><script type="application/ld+json"></script><!-- SEOAI:SCHEMA:END -->
+<!-- SEOAI:SCHEMA:START --><!-- SEOAI:SCHEMA:END -->
 <!-- SEOAI:EXPANDEDCONTENT:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg">
 </div><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:INTERNALLINKS:START --><section class="py-12 md:py-20">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ lang or 'en' }}" class="scroll-smooth">
 <head>
-  <!-- Google Analytics -->
+  <!-- Google Analytics — gated by cookie consent, see the consent-loader script below -->
   {% if env.GA_MEASUREMENT_ID %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ env.GA_MEASUREMENT_ID }}"></script>
-  <script>
+  <script type="text/plain" data-cookie-consent="analytics" async data-src="https://www.googletagmanager.com/gtag/js?id={{ env.GA_MEASUREMENT_ID }}"></script>
+  <script type="text/plain" data-cookie-consent="analytics">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -21,17 +21,24 @@
        before the JS module graph resolves — avoids a flash of unstyled content on cold reload -->
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <!-- Robots: noindex for non-production environments -->
-  {% if env.ELEVENTY_ENV != 'production' %}
+  <!-- Robots: noindex for non-production environments, and for utility pages that set `noindex: true` in front matter -->
+  {% if env.ELEVENTY_ENV != 'production' or noindex %}
   <meta name="robots" content="noindex, nofollow">
   {% endif %}
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or site.meta.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
-  <meta property="og:image" content="{{ site.url }}{{ site.meta.ogImage }}">
+  <meta property="og:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
+  {% if not ogImageUrl %}<meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">{% endif %}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  {% if ogType == 'article' %}
+  <meta property="article:published_time" content="{{ date | date('%Y-%m-%d') }}">
+  <meta property="article:modified_time" content="{{ lastUpdated | default(date) | date('%Y-%m-%d') }}">
+  {% if category %}<meta property="article:section" content="{{ category }}">{% endif %}
+  {% endif %}
   <meta property="og:locale" content="{{ ogLocale or 'en_US' }}">
   <meta property="og:site_name" content="{{ site.name }}">
 
@@ -39,7 +46,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title or site.meta.title }}">
   <meta name="twitter:description" content="{{ description or site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.meta.ogImage }}">
+  <meta name="twitter:image" content="{{ ogImageUrl or (site.url + site.meta.ogImage) }}">
+
+  <link rel="alternate" type="application/atom+xml" title="Zunkiree Labs Insights" href="{{ site.url }}/feed.xml">
 
   <!-- Canonical URL -->
   {% if canonicalUrl %}
@@ -47,18 +56,19 @@
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   {% endif %}
+  {% if category == "Insights" and layout == "blog-post.njk" and page.url.startsWith("/blog/") %}
+  <link rel="alternate" type="text/markdown" href="{{ site.url }}{{ page.url }}index.md">
+  {% endif %}
 
   <!-- Hreflang alternates (language/region variants of this page) -->
-  {% if hreflangAlternates %}
-  {% for alt in hreflangAlternates %}
+  {% set pageAlternates = hreflangAlternates or (translationKey | hreflangFor(collections.all)) %}{% if pageAlternates | length %}
+  {% for alt in pageAlternates %}
   <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ site.url }}{{ alt.url }}">
   {% endfor %}
   {% endif %}
 
   <!-- Preload Critical Resources for LCP -->
-  {% if page.url == "/home-legacy/" %}
-  <link rel="preload" href="/assets/images/hero-orca-dashboard.png" as="image" fetchpriority="high" media="(min-width:1024px)">
-  {% elif heroImage %}
+  {% if heroImage %}
   <link rel="preload" href="{{ heroImage }}" as="image" fetchpriority="high">
   {% endif %}
 
@@ -78,8 +88,10 @@
     "@type": "Organization",
     "@id": "{{ site.url }}/#organization",
     "name": "Zunkiree Labs",
+    "alternateName": ["Zunkireelabs", "ZunkireeLabs"],
+    "knowsAbout": ["AI development", "RAG pipelines", "AI agents", "AI orchestration", "Enterprise software", "Answer engine optimization"],
     "url": "{{ site.url }}",
-    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png",
     "description": "AI infrastructure company building custom AI systems, RAG pipelines, AI agents, and enterprise software. Headquartered in Kathmandu, Nepal.",
     "foundingDate": "2018",
     "founder": {
@@ -93,9 +105,12 @@
       "addressCountry": "NP"
     },
     "sameAs": [
-      "{{ site.social.twitter }}",
       "{{ site.social.linkedin }}",
-      "{{ site.social.github }}"
+      "{{ site.social.clutch }}",
+      "{{ site.social.goodfirms }}",
+      "{{ site.social.techbehemoths }}",
+      "{{ site.social.startupsnepal }}",
+      "{{ site.social.instagram }}"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -129,7 +144,7 @@
     "url": "{{ site.url }}",
     "telephone": "{{ site.phone }}",
     "email": "{{ site.email }}",
-    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-round.svg",
+    "logo": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png",
     "image": "{{ site.url }}/assets/images/og-image.svg",
     "address": {
       "@type": "PostalAddress",
@@ -167,6 +182,21 @@
       "url": "{{ site.url }}"
     }
   }
+  </script>
+  {% endif %}
+
+  {% if schemaType == "industry" and industryId %}
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": site.url + page.url + "#service",
+    "name": title,
+    "description": description,
+    "url": site.url + page.url,
+    "serviceType": "AI software for " + (industryId | replace("-", " ")),
+    "provider": { "@type": "Organization", "@id": site.url + "/#organization", "name": "Zunkiree Labs", "url": site.url }
+  } | dump | safe }}
   </script>
   {% endif %}
 
@@ -211,9 +241,13 @@
   </script>
   {% endif %}
 
-  {# FAQPage schema - supports both explicit faqs and service page FAQs #}
-  {%- set pageFaqs = faqs if faqs else (servicesDetails[serviceId].faq if serviceId and servicesDetails[serviceId] else null) -%}
-  {% if pageFaqs %}
+  {# FAQPage schema - supports explicit faqs, service page FAQs, and product page FAQs #}
+  {%- set productFaqData = (platformProducts | find("id", productId)) if productId else null -%}
+  {%- set pageFaqs = faqs if faqs else (servicesDetails[serviceId].faq if serviceId and servicesDetails[serviceId] else (productFaqData.faq if productFaqData else null)) -%}
+  {# hasServiceFaqs: location x service pages that render their own FAQ block (and FAQPage schema) in the layout #}
+  {# A page body that already carries its own FAQPage JSON-LD (SEOAI:QACONTENT) wins; emitting a second one makes duplicate FAQPage entities #}
+  {%- set bodyHasFaqSchema = ('"FAQPage"' in (content | string)) -%}
+  {% if pageFaqs and not hasServiceFaqs and not bodyHasFaqSchema %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -286,14 +320,14 @@
   {% endif %}
 
   <!-- SEOAI:HEAD:START -->
-<!-- SEOAI:ANALYTICSSCRIPTGA4:START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
-<script>
+<!-- SEOAI:ANALYTICSSCRIPTGA4:START --><script type="text/plain" data-cookie-consent="analytics" async data-src="https://www.googletagmanager.com/gtag/js?id=G-2ZQRDS0D14"></script>
+<script type="text/plain" data-cookie-consent="analytics">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-2ZQRDS0D14');
 </script><!-- SEOAI:ANALYTICSSCRIPTGA4:END -->
-<!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:START --><script>
+<!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:START --><script type="text/plain" data-cookie-consent="marketing">
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
   n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -301,7 +335,42 @@
   document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '2104437347081359');
   fbq('track', 'PageView');
-</script><!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:END --><!-- SEOAI:HEAD:END -->
+</script><!-- SEOAI:ANALYTICSSCRIPTFACEBOOKPIXEL:END -->
+<script>
+  // Cookie-consent loader — activates the analytics/marketing scripts above
+  // (shipped inert as type="text/plain" data-cookie-consent="...") once
+  // consent is known. Default: granted (matches this site's existing
+  // behavior prior to the /cookie-preferences/ page existing) until a
+  // visitor explicitly opts out there. See /cookie-preferences/ for the
+  // control UI and the localStorage key this reads.
+  (function () {
+    var consent = { analytics: true, marketing: true };
+    try {
+      var raw = localStorage.getItem('zunkiree-cookie-consent');
+      if (raw) {
+        var stored = JSON.parse(raw);
+        if (stored && typeof stored === 'object') {
+          if (stored.analytics === false) consent.analytics = false;
+          if (stored.marketing === false) consent.marketing = false;
+        }
+      }
+    } catch (e) {}
+
+    document.querySelectorAll('script[data-cookie-consent]').forEach(function (inert) {
+      var category = inert.getAttribute('data-cookie-consent');
+      if (!consent[category]) return;
+      var active = document.createElement('script');
+      Array.prototype.forEach.call(inert.attributes, function (attr) {
+        if (attr.name === 'type') return;
+        if (attr.name === 'data-src') { active.src = attr.value; return; }
+        if (attr.name === 'data-cookie-consent') return;
+        active.setAttribute(attr.name, attr.value);
+      });
+      active.text = inert.text;
+      inert.parentNode.replaceChild(active, inert);
+    });
+  })();
+</script><!-- SEOAI:HEAD:END -->
 </head>
 <body class="font-sans antialiased overflow-x-clip {% if hideChrome %}bg-white{% endif %} {{ bodyClass }}">
 
