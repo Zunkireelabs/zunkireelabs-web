@@ -318,8 +318,23 @@ faqs:
           <div x-ref="canvas" data-lenis-prevent @scroll.passive="checkMore()" class="gu-canvas relative min-h-0 flex-1 overflow-y-auto px-5 pb-44 pt-4">
             <p x-show="stage < 5" class="pt-32 text-center text-[14px] text-[#9CA3AF]" x-text="stage === 0 ? 'Your interface will appear here.' : 'The agent is choosing components from your registry...'"></p>
 
+            {# ===== STEP-BY-STEP BUILDER: Dashboards, Internal tools and Assistant ask first, then build ===== #}
+            <div x-show="stage >= 5 && wcfg && !wdone[active]" style="display:none" class="mx-auto max-w-2xl space-y-4">
+              <div class="assemble flex items-center justify-between"><p class="text-[18px] font-semibold text-[#111827]" x-text="wcfg ? wcfg.title : ''"></p><span class="hidden font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF] sm:inline">&lt;StepBuilder /&gt;</span></div>
+              <div class="assemble grid gap-1.5" :style="'grid-template-columns: repeat(' + (wcfg ? wcfg.steps.length : 1) + ', minmax(0, 1fr))'">
+                <template x-for="(st, i) in (wcfg ? wcfg.steps : [])" :key="active + st.k"><button type="button" @click="wz[active][st.k] && (wedit = i)" :disabled="!wz[active][st.k]" class="text-left disabled:cursor-default"><span class="block h-1 rounded-full transition-colors duration-500" :class="wz[active][st.k] ? 'bg-[#76B900]' : (i === wshow ? 'bg-[#76B900]/40' : 'bg-navy-100')"></span><span class="mt-1.5 block font-mono text-[9.5px] uppercase tracking-wider" :class="(wz[active][st.k] || i === wshow) ? 'text-[#3d6600]' : 'text-[#9CA3AF]'" x-text="(i + 1) + ' ' + st.t"></span></button></template>
+              </div>
+              <template x-for="(st, i) in (wcfg ? wcfg.steps : [])" :key="'a' + active + st.k"><div x-show="wz[active][st.k] && i !== wshow" style="display:none" class="assemble flex items-center justify-between rounded-xl border border-navy-100 bg-white px-3 py-2"><span class="text-[13px] text-[#374151]"><span class="mr-2 font-mono text-[9.5px] uppercase tracking-wider text-[#3d6600]" x-text="'\u2713 ' + st.t"></span><span class="font-medium text-[#111827]" x-text="wz[active][st.k]"></span></span><button type="button" @click="wedit = i" class="font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] hover:text-[#111827]">Edit</button></div></template>
+              <section x-show="wcfg && wshow < wcfg.steps.length" style="display:none" class="assemble space-y-3">
+                <div><p class="text-[15px] font-medium text-[#111827]" x-text="wcfg && wshow < wcfg.steps.length ? wcfg.steps[wshow].q : ''"></p><p class="text-[12px] text-[#6B7280]">Tap an answer, or type it in the box below.</p></div>
+                <div class="grid gap-2.5" style="grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr))"><template x-for="(o, j) in (wcfg && wshow < wcfg.steps.length ? wopts(wshow) : [])" :key="active + wshow + o.l"><button type="button" @click="wpick(wshow, j)" :aria-pressed="wz[active][wcfg.steps[wshow].k] === o.l" class="rounded-xl border-2 bg-white px-3 py-3.5 text-center transition-all duration-300" :class="wz[active][wcfg.steps[wshow].k] === o.l ? 'border-[#76B900] bg-[#76B900]/10 shadow-md' : 'border-navy-100 hover:-translate-y-0.5 hover:border-[#76B900]/60'"><span class="block text-[15px] font-semibold text-[#111827]" x-text="o.l"></span><span class="mt-0.5 block text-[11.5px] text-[#6B7280]" x-text="o.d"></span></button></template></div>
+              </section>
+              <button type="button" x-show="wall && wedit < 0" style="display:none" @click="wbuild()" :disabled="wgen" class="assemble relative w-full overflow-hidden rounded-xl bg-[#76B900] px-4 py-3 font-mono text-[12px] uppercase tracking-wider text-white shadow-lg shadow-[#76B900]/30 transition-colors hover:bg-[#5a9100] disabled:opacity-70"><span x-text="wgen ? 'Building...' : '\u2726 ' + (wcfg ? wcfg.cta : '')"></span></button>
+            </div>
+            <div x-show="stage >= 5 && wcfg && wdone[active]" style="display:none" class="assemble mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-[#76B900]/30 bg-[#76B900]/[0.07] px-3 py-2"><span class="font-mono text-[9.5px] uppercase tracking-wider text-[#3d6600]">Built from your answers</span><template x-for="st in (wcfg ? wcfg.steps : [])" :key="'s' + active + st.k"><span class="rounded-full border border-[#76B900]/40 bg-white px-2.5 py-0.5 text-[11.5px] text-[#2f5200]" x-text="wz[active][st.k]"></span></template><button type="button" @click="wreset(true)" class="ml-auto font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF] hover:text-[#111827]">&#8634; Change answers</button></div>
+
             {# ===== DASHBOARDS: 7 day itinerary page ===== #}
-            <div x-show="stage >= 5 && active === 'dash'" style="display:none" class="space-y-3">
+            <div x-show="stage >= 5 && active === 'dash' && wdone.dash" style="display:none" class="space-y-3">
               <div class="assemble grid gap-3 md:grid-cols-[1.7fr_1fr]">
                 <div class="relative overflow-hidden rounded-2xl" :style="crop('dash', 540, 12, 680, 285)">
                   <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(15,23,42,.6) 0%, rgba(15,23,42,.05) 70%);"></div>
@@ -355,9 +370,10 @@ faqs:
                 {# 1. experience #}
                 <section data-fsec="1" class="assemble">
                   <div x-show="!compact(1)" class="space-y-3">
-                    <div><p class="text-[15px] font-medium text-[#111827]">What kind of trip are you after?</p><p class="text-[12px] text-[#6B7280]">Pick one or more. I add a question for each.</p></div>
+                    <div><p class="text-[15px] font-medium text-[#111827]">What kind of trip are you after?</p><p class="text-[12px] text-[#6B7280]">Pick one or more. I add a question for each, then press Continue.</p></div>
                     <div class="grid grid-cols-2 gap-2.5"><template x-for="e in exps" :key="e.n"><button type="button" @click="toggleExp(e.n)" :aria-pressed="fexp.includes(e.n)" class="group relative overflow-hidden rounded-2xl text-left transition-all duration-300" :class="fexp.includes(e.n) ? 'shadow-lg ring-[3px] ring-[#76B900]' : 'ring-1 ring-navy-100 hover:-translate-y-0.5 hover:shadow-lg'"><div class="transition-transform duration-500 group-hover:scale-105" :style="expArt(e.n, 16, 10)"></div><span class="absolute inset-0" style="background:linear-gradient(0deg,rgba(15,23,42,.78) 0%,rgba(15,23,42,.15) 48%,rgba(15,23,42,0) 70%)"></span><span class="absolute inset-x-3 bottom-2.5" style="text-shadow:0 1px 6px rgba(0,0,0,.4)"><span class="block text-[15px] font-semibold leading-tight text-white" x-text="e.n"></span><span class="block text-[11px] text-white/80" x-text="expInfo[e.n].tag"></span></span><span class="absolute right-2.5 top-2.5 flex h-6 w-6 items-center justify-center rounded-full border-2 text-[12px] font-bold transition-all" :class="fexp.includes(e.n) ? 'scale-100 border-[#76B900] bg-[#76B900] text-white' : 'border-white/90 bg-black/25 text-transparent group-hover:bg-black/40'">&#10003;</span></button></template></div>
                     <template x-for="x in fexp" :key="'q' + x"><div class="assemble rounded-xl border border-[#76B900]/40 bg-[#76B900]/[0.07] p-3"><p class="font-mono text-[9.5px] uppercase tracking-wider text-[#3d6600]" x-text="'Added because you chose ' + x"></p><p class="mt-1 text-[13px] text-[#111827]" x-text="follow[x].q"></p><div class="mt-2 flex flex-wrap gap-2"><template x-for="o in follow[x].o" :key="o"><button type="button" @click="pickOpt(x, o)" :aria-pressed="fopt[x] === o" class="rounded-full border px-3.5 py-1 text-[12px] transition-colors" :class="fopt[x] === o ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-navy-100 bg-white text-navy-600 hover:border-[#76B900]/60'" x-text="o"></button></template></div></div></template>
+                    <button type="button" data-cont @click="advance(1)" :disabled="!fexp.length" class="w-full rounded-xl bg-[#76B900] px-4 py-2.5 font-mono text-[12px] uppercase tracking-wider text-white shadow-lg shadow-[#76B900]/30 transition-colors hover:bg-[#5a9100] disabled:cursor-not-allowed disabled:bg-navy-100 disabled:text-[#9CA3AF] disabled:shadow-none" x-text="fexp.length ? (shown[2] ? 'Done' : 'Continue') + ' →' : 'Pick at least one to continue'"></button>
                   </div>
                   <div x-show="compact(1)" style="display:none" class="rounded-xl border border-navy-100 bg-white p-2.5">
                     <div class="mb-2 flex items-center justify-between px-0.5"><span class="font-mono text-[9.5px] uppercase tracking-wider text-[#3d6600]">&#10003; Experience</span><button type="button" @click="fedit = 1" class="font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] hover:text-[#111827]">Edit</button></div>
@@ -370,9 +386,10 @@ faqs:
                 <div x-show="adding === 2" style="display:none" class="space-y-2 rounded-xl border border-dashed border-[#76B900]/40 p-3"><div class="gu-shim h-3 w-1/2 rounded"></div><div class="grid grid-cols-3 gap-2"><div class="gu-shim h-16 rounded-lg"></div><div class="gu-shim h-16 rounded-lg"></div><div class="gu-shim h-16 rounded-lg"></div></div><p class="font-mono text-[9.5px] uppercase tracking-wider text-[#5a9100]">Adding the next question...</p></div>
                 <section data-fsec="2" x-show="sectionOn(2)" style="display:none" class="assemble">
                   <div x-show="!compact(2)" class="space-y-3">
-                    <div><p class="text-[15px] font-medium text-[#111827]">Where do you want to go?</p><p class="text-[12px] text-[#6B7280]" x-text="'Pictured for ' + (flast || 'your trip').toLowerCase() + '. Tap to add or remove.'"></p></div>
+                    <div><p class="text-[15px] font-medium text-[#111827]">Where do you want to go?</p><p class="text-[12px] text-[#6B7280]" x-text="'Pictured for ' + (flast || 'your trip').toLowerCase() + '. Tap to add or remove, then press Continue.'"></p></div>
                     <div class="grid grid-cols-3 gap-2"><template x-for="pl in places" :key="pl"><button type="button" @click="togglePlace(pl)" :aria-pressed="fplaces.includes(pl)" class="group relative overflow-hidden rounded-2xl text-left transition-all duration-300" :class="fplaces.includes(pl) ? 'shadow-lg ring-[3px] ring-[#76B900]' : 'ring-1 ring-navy-100 hover:-translate-y-0.5 hover:shadow-lg'"><div class="transition-transform duration-500 group-hover:scale-105" :style="art(pl, placeExp(pl), 4, 5)"></div><span class="absolute inset-0" style="background:linear-gradient(0deg,rgba(15,23,42,.8) 0%,rgba(15,23,42,.15) 45%,rgba(15,23,42,0) 65%)"></span><span class="absolute inset-x-2.5 bottom-2" style="text-shadow:0 1px 6px rgba(0,0,0,.4)"><span class="block text-[14px] font-semibold leading-tight text-white" x-text="pl"></span><span class="block text-[10.5px] leading-tight text-white/80" x-text="placeLine[pl]"></span></span><span class="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full border-2 font-mono text-[11px] font-bold transition-all" :class="fplaces.includes(pl) ? 'border-[#76B900] bg-[#76B900] text-white' : 'border-white/90 bg-black/25 text-transparent group-hover:bg-black/40'" x-text="fplaces.includes(pl) ? orderedPlaces.indexOf(pl) + 1 : ''"></span></button></template></div>
                     <p x-show="err" style="display:none" class="text-[12px] text-red-600" x-text="err"></p>
+                    <button type="button" data-cont @click="advance(2)" :disabled="!fplaces.length" class="w-full rounded-xl bg-[#76B900] px-4 py-2.5 font-mono text-[12px] uppercase tracking-wider text-white shadow-lg shadow-[#76B900]/30 transition-colors hover:bg-[#5a9100] disabled:cursor-not-allowed disabled:bg-navy-100 disabled:text-[#9CA3AF] disabled:shadow-none" x-text="fplaces.length ? (shown[3] ? 'Done' : 'Continue') + ' →' : 'Pick at least one place to continue'"></button>
                   </div>
                   <div x-show="compact(2)" style="display:none" class="rounded-xl border border-navy-100 bg-white p-2.5">
                     <div class="mb-2 flex items-center justify-between px-0.5"><span class="font-mono text-[9.5px] uppercase tracking-wider text-[#3d6600]">&#10003; Places</span><button type="button" @click="fedit = 2" class="font-mono text-[9.5px] uppercase tracking-wider text-[#9CA3AF] hover:text-[#111827]">Edit</button></div>
@@ -439,7 +456,7 @@ faqs:
             </div>
 
             {# ===== INTERNAL TOOLS: SEO analytics workspace ===== #}
-            <div x-show="stage >= 5 && active === 'tools'" style="display:none" class="space-y-3">
+            <div x-show="stage >= 5 && active === 'tools' && wdone.tools" style="display:none" class="space-y-3">
               <div class="assemble flex flex-wrap items-center justify-between gap-2">
                 <div><p class="text-[18px] font-semibold text-[#111827]">Good morning, Team</p><p class="text-[12px] text-[#6B7280]">Here is what is happening with your projects today.</p></div>
                 <div class="flex items-center gap-2"><span class="hidden font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF] sm:inline">&lt;KpiRow /&gt;</span>
@@ -448,11 +465,11 @@ faqs:
               </div>
 
               <div class="assemble assemble-2 grid grid-cols-2 gap-2.5 md:grid-cols-5">
-                <template x-for="k in seoKpis" :key="k.l"><button type="button" @click="touch(k.l, k.a, ['Reading ' + k.l.toLowerCase(), 'Comparing with the previous period'], k.l, k.a)" class="group rounded-xl border border-navy-100 bg-white p-3 text-left transition-all hover:-translate-y-0.5 hover:border-[#76B900] hover:shadow-md"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]" x-text="k.l"></p><p class="mt-1 text-[22px] font-semibold leading-none text-[#111827]" x-text="k.v"></p><div class="mt-2 flex items-end justify-between"><p class="text-[10.5px] font-medium text-emerald-600" x-text="(k.up ? '↑ ' : '↓ ') + k.d"></p><svg class="h-5 w-14 text-[#76B900]" viewBox="0 0 56 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path :d="k.sp"/></svg></div></button></template>
+                <template x-for="k in seoKpis" :key="k.l"><button type="button" :class="wz.tools.goal === 'Backlinks' && /backlink/i.test(k.l) ? 'ring-2 ring-[#76B900] shadow-lg' : ''" @click="touch(k.l, k.a, ['Reading ' + k.l.toLowerCase(), 'Comparing with the previous period'], k.l, k.a)" class="group rounded-xl border border-navy-100 bg-white p-3 text-left transition-all hover:-translate-y-0.5 hover:border-[#76B900] hover:shadow-md"><p class="font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]" x-text="k.l"></p><p class="mt-1 text-[22px] font-semibold leading-none text-[#111827]" x-text="k.v"></p><div class="mt-2 flex items-end justify-between"><p class="text-[10.5px] font-medium text-emerald-600" x-text="(k.up ? '↑ ' : '↓ ') + k.d"></p><svg class="h-5 w-14 text-[#76B900]" viewBox="0 0 56 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path :d="k.sp"/></svg></div></button></template>
               </div>
 
               <div class="assemble assemble-3 grid gap-3 lg:grid-cols-[1.45fr_1fr]">
-                <div class="rounded-2xl border border-navy-100 bg-white p-3.5">
+                <div class="rounded-2xl border border-navy-100 bg-white p-3.5 transition-shadow" :class="wz.tools.goal === 'Traffic' ? 'ring-2 ring-[#76B900] shadow-lg' : ''">
                   <div class="flex items-start justify-between"><p class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Organic traffic</p><span class="font-mono text-[10px] text-[#9CA3AF]">&lt;TrafficChart /&gt;</span></div>
                   <div class="mt-1 flex items-baseline gap-2"><span class="text-[22px] font-semibold leading-none text-[#111827]" x-text="seoNow.t"></span><span class="text-[11px] font-medium text-emerald-600" x-text="'↑ ' + seoNow.c"></span><span class="text-[11px] text-[#6B7280]">organic sessions</span></div>
                   <div class="relative mt-2">
@@ -468,7 +485,7 @@ faqs:
                     <div x-show="seoSel !== null" style="display:none" class="pointer-events-none absolute top-0 -translate-x-1/2 rounded-lg bg-[#111827] px-2.5 py-1 text-[11px] text-white shadow-lg" :style="'left:' + Math.min(88, Math.max(12, seoDot.x / 6)) + '%'"><span x-text="seoTip"></span></div>
                   </div>
                 </div>
-                <div class="rounded-2xl border border-navy-100 bg-white p-3.5">
+                <div class="rounded-2xl border border-navy-100 bg-white p-3.5" :class="wz.tools.goal === 'Keywords' ? 'ring-2 ring-[#76B900] shadow-lg' : ''">
                   <p class="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]"><span>Top performing keywords</span><span>&lt;KeywordTable /&gt;</span></p>
                   <div class="mt-2 grid grid-cols-[1fr_auto_auto_auto] gap-x-3 gap-y-0 text-[11.5px]">
                     <span class="pb-1 font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Keyword</span><span class="pb-1 text-right font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Pos.</span><span class="pb-1 text-right font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Chg.</span><span class="pb-1 text-right font-mono text-[9px] uppercase tracking-wider text-[#9CA3AF]">Clicks</span>
@@ -494,7 +511,7 @@ faqs:
             </div>
 
             {# ===== IN-PRODUCT ASSISTANT: a real-estate app with a docked assistant ===== #}
-            <div x-show="stage >= 5 && active === 'assist'" style="display:none" class="assemble overflow-hidden rounded-2xl border border-navy-100 bg-white lg:grid lg:grid-cols-[1fr_20.5rem]">
+            <div x-show="stage >= 5 && active === 'assist' && wdone.assist" style="display:none" class="assemble overflow-hidden rounded-2xl border border-navy-100 bg-white lg:grid lg:grid-cols-[1fr_20.5rem]">
               {# the host product #}
               <div class="min-w-0 space-y-3 p-3 sm:p-4">
                 <div class="flex items-center gap-5 border-b border-navy-100 pb-2.5">
@@ -594,7 +611,7 @@ faqs:
             </div>
             <form @submit.prevent="ask()" class="pointer-events-auto flex w-full max-w-[760px] items-center gap-2 rounded-full border border-navy-100 bg-white py-1.5 pl-5 pr-1.5 shadow-xl">
               <span class="text-[#76B900]">&#10022;</span>
-              <input type="text" x-model="draft" placeholder="Ask for a view, a form or a tool..." class="min-w-0 flex-1 border-0 bg-transparent p-0 text-[14px] text-[#111827] outline-none focus:ring-0" aria-label="Type a request">
+              <input type="text" x-model="draft" :placeholder="ph" placeholder="Ask for a view, a form or a tool..." class="min-w-0 flex-1 border-0 bg-transparent p-0 text-[14px] text-[#111827] outline-none focus:ring-0" aria-label="Type a request">
               <span class="hidden font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF] sm:inline" x-text="note"></span>
               <button type="submit" class="flex h-9 w-9 items-center justify-center rounded-full bg-[#76B900] text-white transition-colors hover:bg-[#5a9100]" aria-label="Send"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg></button>
             </form>
@@ -1113,15 +1130,61 @@ window.genDemo = function () {
     form: { label: 'Adaptive forms', prompt: 'Help me plan a trip to Nepal', reply: 'Pick what you like. I add questions as you answer, then build the trip.',
       work: ['Understanding the request', 'Picking the first question', 'Choosing form components'],
       registry: ['AdaptiveForm', 'ExperienceCard', 'DayPicker', 'PlacePicker', 'Itinerary'] },
-    dash: { label: 'Dashboards', prompt: 'Plan a 7-day trip to Nepal with a mix of mountains, culture and nature', reply: 'Here is a personalised 7-day Nepal itinerary. Tap a day, an experience or a plan.',
+    dash: { label: 'Dashboards', prompt: 'Plan a 7-day trip to Nepal with a mix of mountains, culture and nature', reply: 'Answer three quick questions and I will build your trip dashboard.',
       work: ['Understanding your trip request', 'Searching destinations and routes', 'Reading itinerary templates', 'Choosing components for the page'],
       registry: ['ItineraryHero', 'DayStrip', 'ExperienceCards', 'PlanCompare', 'Related'] },
-    tools: { label: 'Internal tools', prompt: 'Show how our SEO is performing this month and what to fix first', reply: 'Here is your SEO workspace. Tap any number, keyword, country or insight.',
+    tools: { label: 'Internal tools', prompt: 'Show how our SEO is performing this month and what to fix first', reply: 'Tell me what to focus on and I will build your SEO workspace.',
       work: ['Reading search and traffic data', 'Comparing with the previous period', 'Finding keyword and backlink changes', 'Choosing components for the workspace'],
       registry: ['KpiRow', 'TrafficChart', 'KeywordTable', 'CountryBars', 'ActivityFeed', 'InsightCard'] },
-    assist: { label: 'In-product assistant', prompt: '3-bedroom flats under 5 crore near a school', reply: 'I found 6 homes and added the tools to narrow them down. Tap a filter, a home or a suggestion.',
+    assist: { label: 'In-product assistant', prompt: '3-bedroom flats under 5 crore near a school', reply: 'Answer a few questions and I will narrow down the homes.',
       work: ['Understanding the search', 'Reading the listings and the map', 'Checking school distances', 'Choosing components for the app'],
       registry: ['FilterBar', 'ListingGrid', 'MapCard', 'ResultList', 'PaymentCalc', 'CompareTable'] }
+  };
+  function lev(a, b) { var m = a.length, n = b.length, d = [], i, j; for (i = 0; i <= m; i++) { d[i] = [i]; } for (j = 1; j <= n; j++) { d[0][j] = j; } for (i = 1; i <= m; i++) { for (j = 1; j <= n; j++) { d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); } } return d[m][n]; }
+  function toks(t) { return t.toLowerCase().match(/[a-z]+|\d+(?:\.\d+)?/g) || []; }
+  // an answer is "said" when a word starts with one of its stems, equals one of its exact words, or is within a typo of one of its full words
+  function said(t, o) {
+    var ws = toks(t), stems = o.s || [], full = o.f || [], exact = o.x || [];
+    return ws.some(function (w) {
+      return stems.some(function (s) { return w.length >= s.length && w.indexOf(s) === 0; }) ||
+        exact.indexOf(w) > -1 ||
+        full.some(function (f) { return w.length >= 4 && Math.abs(w.length - f.length) <= 2 && lev(w, f) <= (f.length >= 8 ? 2 : 1); });
+    });
+  }
+  var NUMW = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, week: 7, weekend: 3, fortnight: 10 };
+  function nearest(n, opts) { return opts.reduce(function (a, b) { return Math.abs(b - n) < Math.abs(a - n) ? b : a; }); }
+  var FX = { Adventure: { s: ['advent', 'trek', 'hik', 'paraglid', 'climb', 'raft', 'activ'], f: ['adventure', 'trekking'] }, Cultural: { s: ['cultur', 'heritage', 'temple', 'histor', 'festiv', 'food', 'cook', 'tradition'], f: ['cultural', 'culture'] }, Relaxation: { s: ['relax', 'calm', 'slow', 'rest', 'spa', 'peace', 'unwind'], f: ['relaxation', 'relaxing'] }, Nature: { s: ['nature', 'wildlife', 'jungle', 'safari', 'outdoor', 'scener', 'mountain', 'bird'], f: ['nature', 'natural'] } };
+  var FP = { Kathmandu: { s: ['kathmandu', 'ktm', 'valley', 'patan', 'bhaktapur', 'thamel'], f: ['kathmandu'] }, Pokhara: { s: ['pokhara', 'phewa', 'annapurna', 'lake'], f: ['pokhara'] }, Chitwan: { s: ['chitwan', 'rhino', 'jungle', 'safari'], f: ['chitwan'] } };
+  // Step-by-step builders for the three screens that used to open already finished. Answers are simulated: they set real filters
+  // where the screen has them (plan, period, buy/rent, price, school, parking) and are shown as "built from your answers" otherwise.
+  var WZ = {
+    dash: { title: 'Your Nepal trip dashboard', cta: 'Build my dashboard', auto: [1, 1, 1],
+      steps: [
+        { k: 'who', t: 'Who', q: 'Who is travelling?', o: [{ l: 'Solo', d: 'Just me', s: ['solo', 'alone', 'myself'], f: ['solo'] }, { l: 'Couple', d: 'Two travellers', s: ['coupl', 'two', 'partner', 'wife', 'husband', 'honeymoon'], f: ['couple'] }, { l: 'Family', d: 'With children', s: ['famil', 'kid', 'child'], f: ['family'] }, { l: 'Friends', d: 'A small group', s: ['friend', 'group', 'team', 'mate'], f: ['friends'] }] },
+        { k: 'pace', t: 'Pace', q: 'What pace suits you?', o: [{ l: 'Easy', d: 'Short days, more rest', s: ['easy', 'slow', 'relax', 'calm', 'gentl', 'lazy'], f: ['easy', 'gentle'] }, { l: 'Balanced', d: 'A mix of both', s: ['balanc', 'mix', 'moder', 'medium', 'normal'], f: ['balanced', 'moderate'] }, { l: 'Active', d: 'Full days out', s: ['activ', 'fast', 'busy', 'full', 'intens'], f: ['active'] }] },
+        { k: 'plan', t: 'Plan', q: 'Which plan fits your budget?', o: [{ l: 'Classic', d: '$650-850', s: ['classic', 'cheap', 'budget', 'basic', 'standard', 'econom', 'low'], f: ['classic', 'cheap'] }, { l: 'Comfort', d: '$850-1,150', s: ['comfort', 'mid', 'boutique'], f: ['comfort'] }, { l: 'Premium', d: '$1,150-1,600', s: ['premium', 'luxur', 'high', 'private', 'best'], f: ['premium', 'luxury'] }] }
+      ],
+      apply: function (d, k, o) { if (k === 'plan') d.plan2 = o.l; },
+      done: function (d) { var a = d.wz.dash; return 'Here is your dashboard for a ' + a.who.toLowerCase() + ' trip at an ' + a.pace.toLowerCase() + ' pace, with the ' + a.plan + ' plan selected. Tap a day, an experience or a plan.'; } },
+    tools: { title: 'Your SEO workspace', cta: 'Build my workspace', auto: [0, 1],
+      steps: [
+        { k: 'goal', t: 'Goal', q: 'What do you want to improve first?', o: [{ l: 'Traffic', d: 'Organic sessions', s: ['traffic', 'visit', 'session', 'organic'], f: ['traffic'] }, { l: 'Keywords', d: 'Rankings and gaps', s: ['keyword', 'rank', 'gap', 'search'], f: ['keywords', 'ranking'] }, { l: 'Backlinks', d: 'Links and authority', s: ['backlink', 'link', 'authorit'], f: ['backlinks'] }] },
+        { k: 'range', t: 'Period', q: 'Which period should I show?', o: [{ l: '7 days', d: 'Last week', s: ['7', 'seven', 'week'], f: ['week'] }, { l: '30 days', d: 'Last month', s: ['30', 'thirty', 'month'], f: ['month'] }] }
+      ],
+      apply: function (d, k, o) { if (k === 'range') { d.seoRange = o.l === '7 days' ? 7 : 30; d.seoSel = null; } },
+      done: function (d) { var a = d.wz.tools; return 'Here is your SEO workspace for the last ' + a.range + ', with ' + a.goal.toLowerCase() + ' highlighted. Tap any number, keyword, country or insight.'; } },
+    assist: { title: 'Your property search', cta: 'Show me homes', auto: [0, 2, 0],
+      steps: [
+        { k: 'mode', t: 'Buy or rent', q: 'Are you buying or renting?', o: [{ l: 'Buy', d: 'Homes for sale', s: ['buy', 'purchas', 'sale', 'own'], f: ['buy', 'purchase'] }, { l: 'Rent', d: 'Per month', s: ['rent', 'leas', 'month'], f: ['rent', 'lease'] }] },
+        { k: 'budget', t: 'Budget', q: 'What is your budget?',
+          o: function (d) { return d.reMode === 'rent' ? [{ l: 'Under NPR 60k', d: 'per month', v: 60 }, { l: 'Under NPR 80k', d: 'per month', v: 80 }, { l: 'Under NPR 100k', d: 'per month', v: 100 }] : [{ l: 'Under NPR 4 crore', d: 'to buy', v: 4 }, { l: 'Under NPR 4.5 crore', d: 'to buy', v: 4.5 }, { l: 'Under NPR 5 crore', d: 'to buy', v: 5 }]; },
+          match: function (d, t) { var opts = d.wopts(1), m = t.match(/\d+(?:\.\d+)?/); if (m) { var best = nearest(+m[0], opts.map(function (x) { return x.v; })); for (var i = 0; i < opts.length; i++) { if (opts[i].v === best) return i; } } if (/cheap|low|small|least|tight/.test(t)) return 0; if (/mid|middle|medium/.test(t)) return 1; if (/high|max|most|top|big|flexible/.test(t)) return 2; return -1; } },
+        { k: 'must', t: 'Must-have', q: 'Anything it must have?',
+          o: [{ l: 'Near a school', d: 'Within walking distance', sc: true, pk: false }, { l: 'Parking', d: 'Parking included', sc: false, pk: true }, { l: 'Both', d: 'School and parking', sc: true, pk: true }, { l: 'No preference', d: 'Show everything', sc: false, pk: false }],
+          match: function (d, t) { var sc = /school/.test(t), pk = /park|garage|\bcar\b/.test(t); if (sc && pk || /\bboth\b/.test(t)) return 2; if (sc) return 0; if (pk) return 1; if (/no preference|none|nothing|any\b|either|skip|whatever|don.?t mind/.test(t)) return 3; return -1; } }
+      ],
+      apply: function (d, k, o) { if (k === 'mode') { d.reSetMode(o.l.toLowerCase()); delete d.wz.assist.budget; } else if (k === 'budget') { d.reSetMax(o.v); } else if (k === 'must') { d.reSchool = !!o.sc; d.reParking = !!o.pk; d.reView = ''; } },
+      done: function (d) { var n = d.reVisible.length; return 'I found ' + n + ' ' + (d.reMode === 'rent' ? (n === 1 ? 'home to rent' : 'homes to rent') : (n === 1 ? 'home' : 'homes')) + (n === 1 ? ' that matches' : ' that match') + '. Tap a filter, a home or a suggestion.'; } }
   };
   var cats = [
     { n: 'Delivery Delays', v: 32, c: '#3b82f6', a: 'Delivery delays are 32% of complaints. They remain the top issue, though down 18% on last quarter.' },
@@ -1207,6 +1270,7 @@ window.genDemo = function () {
     ],
     reMode: 'buy', rePriceOpen: false, reMax: { buy: 5, rent: 100 }, reSchool: false, reParking: false, reHi: null, reSaved: {}, reCmp: [1, 4], rePick: 1, reDown: 20, reYears: 15, reView: '', reSlot: '', reNote: '',
     seoRange: 30, seoSel: null,
+    wz: { dash: {}, tools: {}, assist: {} }, wdone: {}, wedit: -1, wgen: false, wauto: false,
     seoSeries: [5.5, 4.8, 5.6, 5.8, 7.0, 6.4, 7.0, 5.7, 5.4, 5.8, 7.4, 8.0, 9.6, 8.6, 8.2, 8.8, 9.4, 9.8, 10.1, 9.2, 8.6, 9.6, 10.4, 11.6, 12.6, 13.0, 13.9, 16.8],
     seoTotals: { 30: { t: '16,842', c: '14%' }, 7: { t: '4,310', c: '9%' } },
     seoKpis: [
@@ -1436,20 +1500,20 @@ window.genDemo = function () {
     },
     pause() { this.paused = true; this.stopAuto(); },
     resume() { this.paused = false; if (this.stage >= 5 && !this.busy) this.schedule(); },
-    engage() { var self = this; this.lastTouch = Date.now(); this.pause(); clearTimeout(this.idleTimer); this.idleTimer = setTimeout(function () { self.resume(); }, this.active === 'form' ? 30000 : 12000); },
+    engage() { var self = this; this.wauto = false; this.lastTouch = Date.now(); this.pause(); clearTimeout(this.idleTimer); this.idleTimer = setTimeout(function () { self.resume(); }, this.active === 'form' ? 30000 : 12000); },
     run(id) {
       var self = this, s = SC[id];
       this.clear(); this.stopAuto(); this.started = true;
       this.active = id; this.stage = 0; this.sel = null; this.result = false; this.err = ''; this.done = {}; this.focus = null; this.busy = true;
       if (id === 'form') this.resetForm();
-      if (id === 'assist') this.resetRe();
+      if (id !== 'form') this.wreset(false);
       var work = { who: 'work', items: s.work.map(function (t) { return { t: t, ok: false }; }) };
       this.msgs = [{ who: 'user', text: s.prompt }, work];
       for (var i = 1; i <= 5; i++) {
         (function (n) { self.timers.push(setTimeout(function () {
           self.stage = n;
           work.items.forEach(function (w, wi) { if (wi < n - 1) w.ok = true; });
-          if (n === 5) { self.msgs.push({ who: 'assistant', text: s.reply }); self.busy = false; self.schedule(); }
+          if (n === 5) { self.msgs.push({ who: 'assistant', text: s.reply }); self.busy = false; if (id !== 'form' && self.autoplay && !self.touched && !self.paused) { self.wautorun(id); } else { self.schedule(); } }
           self.scroll();
         }, 450 * n)); })(i);
       }
@@ -1469,14 +1533,29 @@ window.genDemo = function () {
       }, t + 350));
     },
     act(a) { var self = this; this.touch(a.l, a.a, ['Working on it', 'Preparing: ' + a.l.toLowerCase()], null, null, function () { self.done[a.l] = true; }); },
-    bump() { var self = this; this.touched = true; this.building = true; clearTimeout(this.buildT); this.buildT = setTimeout(function () { self.building = false; }, 800); },
+    bump() { var self = this; this.wauto = false; this.touched = true; this.building = true; clearTimeout(this.buildT); this.buildT = setTimeout(function () { self.building = false; }, 800); },
     resetForm(say) {
       this.fexp = []; this.flast = null; this.fopt = {}; this.fdays = null; this.fplaces = []; this.fedit = 0; this.adding = 0; this.shown = {};
       this.tier = 'Comfort'; this.result = false; this.gen = false; this.err = ''; this.building = false; this.touched = false;
       if (say) this.touch('Start over', 'Fresh start. Pick a kind of trip.', ['Clearing the form'], null, null);
     },
     sectionOn(n) { return n === 1 || (!!this.shown[n] && this.adding !== n); },
-    compact(n) { return n === 1 ? (this.fplaces.length > 0 && this.fedit !== 1 && this.sectionOn(2)) : (n === 2 ? (!!this.fdays && this.fedit !== 2) : false); },
+    compact(n) { return n === 1 ? (this.fedit !== 1 && this.sectionOn(2)) : (n === 2 ? (this.fedit !== 2 && this.sectionOn(3)) : false); },
+    showCont(n) {
+      var self = this;
+      setTimeout(function () {
+        var el = self.$refs.stage && self.$refs.stage.querySelector('[data-fsec="' + n + '"] [data-cont]'), cv = el && el.closest('.gu-canvas');
+        if (!cv || !el.offsetParent) return;
+        var gap = el.getBoundingClientRect().bottom - (cv.getBoundingClientRect().bottom - 150);
+        if (gap > 0) cv.scrollBy({ top: gap + 8, behavior: self.reduced ? 'auto' : 'smooth' });
+      }, 120);
+    },
+    advance(n) {
+      if (n === 1 && !this.fexp.length) return;
+      if (n === 2 && !this.fplaces.length) { this.err = 'Pick at least one place.'; return; }
+      this.bump(); this.err = ''; this.fedit = 0; this.revealNext(n + 1);
+      this.touch('Continue', n === 1 ? 'Experience saved. Next: where do you want to go?' : 'Route saved. Next: how many days?', ['Adding the next question'], null, null);
+    },
     fdone(n) { return [false, this.fexp.length > 0, this.fplaces.length > 0, !!this.fdays, this.result][n]; },
     jump(n) { if (!this.sectionOn(n)) return; this.fedit = n; this.scrollSec(n); },
     scrollSec(n) {
@@ -1501,8 +1580,8 @@ window.genDemo = function () {
       if (on) { this.fexp.push(n); this.flast = n; if (!this.fopt[n]) { add[n] = this.follow[n].o[0]; this.fopt = Object.assign({}, this.fopt, add); } }
       else { this.fexp.splice(i, 1); this.flast = this.fexp[this.fexp.length - 1] || null; }
       this.result = false; this.err = '';
-      if (on && this.fexp.length === 1) this.revealNext(2);
-      this.touch(n, on ? n + ' added. I asked a follow-up question for it' + (this.shown[2] && this.fexp.length === 1 ? ', and next: where to go.' : '.') : n + ' removed from the plan.', ['Updating the form'], null, null);
+      if (on) this.showCont(1);
+      this.touch(n, on ? n + ' added. I asked a follow-up question for it.' : n + ' removed from the plan.', ['Updating the form'], null, null);
     },
     pickOpt(x, o) {
       var add = {}; add[x] = o;
@@ -1518,7 +1597,7 @@ window.genDemo = function () {
       var i = this.fplaces.indexOf(n), on = i < 0;
       if (on) this.fplaces.push(n); else this.fplaces.splice(i, 1);
       this.result = false; this.err = ''; if (this.fedit === 1) this.fedit = 0;
-      if (on && this.fplaces.length === 1) this.revealNext(3);
+      if (on) this.showCont(2);
       this.touch(n, on ? n + ' added to the route.' : n + ' removed from the route.', ['Updating the route'], null, null);
     },
     build(label, reply) {
@@ -1550,14 +1629,166 @@ window.genDemo = function () {
       }
       this.build(label, reply);
     },
+    get wcfg() { return WZ[this.active] || null; },
+    wopts(i) { var st = this.wcfg.steps[i]; return typeof st.o === 'function' ? st.o(this) : st.o; },
+    get wcur() { var st = this.wcfg ? this.wcfg.steps : [], a = this.wz[this.active] || {}; for (var i = 0; i < st.length; i++) { if (!a[st[i].k]) return i; } return st.length; },
+    get wshow() { return this.wedit > -1 ? this.wedit : this.wcur; },
+    get wall() { return !!this.wcfg && this.wcur >= this.wcfg.steps.length; },
+    wfind(st, t) { var o = typeof st.o === 'function' ? st.o(this) : st.o, hit = -1; o.forEach(function (x, j) { if (hit < 0 && said(t, x)) hit = j; }); return hit; },
+    wset(i, j) {
+      var cfg = WZ[this.active], st = cfg.steps[i], o = this.wopts(i)[j];
+      this.wz[this.active][st.k] = o.l;
+      if (cfg.apply) cfg.apply(this, st.k, o);
+    },
+    wpick(i, j, auto) {
+      var cfg = this.wcfg, lab = this.wopts(i)[j].l;
+      if (!auto) this.bump();
+      this.wset(i, j); this.wedit = -1;
+      var nxt = this.wcur;
+      this.touch(lab, nxt < cfg.steps.length ? 'Got it. Next: ' + cfg.steps[nxt].q : 'That is everything I need. Press “' + cfg.cta + '”.', ['Reading your answer'], null, null);
+    },
+    wbuild(auto) {
+      var self = this, id = this.active, cfg = this.wcfg;
+      if (!cfg || !this.wall || this.wgen) return;
+      if (!auto) this.bump();
+      this.wgen = true;
+      this.touch(cfg.cta, cfg.done(this), ['Choosing components', 'Validating props', 'Rendering the screen'], null, null, function () {
+        self.wgen = false;
+        var d = Object.assign({}, self.wdone); d[id] = true; self.wdone = d;
+        var cv = self.$refs.canvas; if (cv) cv.scrollTo({ top: 0 });
+        if (self.wauto) { self.wauto = false; self.schedule(); }
+      });
+    },
+    wreset(say) {
+      this.wz = { dash: {}, tools: {}, assist: {} }; this.wdone = {}; this.wedit = -1; this.wgen = false; this.wauto = false;
+      this.plan2 = 'Comfort'; this.seoRange = 30; this.seoSel = null; this.resetRe();
+      if (say && this.wcfg) this.touch('Start over', 'Fresh start. ' + this.wcfg.steps[0].q, ['Clearing the screen'], null, null);
+    },
+    wautorun(id) {
+      var self = this, cfg = WZ[id], t = 700;
+      this.wauto = true;
+      cfg.steps.forEach(function (st, i) { t += 1100; self.timers.push(setTimeout(function () { if (self.wauto && self.active === id) self.wpick(i, cfg.auto[i], true); }, t)); });
+      t += 1100; this.timers.push(setTimeout(function () { if (self.wauto && self.active === id) self.wbuild(true); }, t));
+    },
+    route(t) {
+      var id = 'dash', hit = true;
+      if (/seo|keyword|traffic|backlink|rank|complain|summar|insight|report|data|issue|analy|kpi|metric|dashboard/.test(t)) id = 'tools';
+      else if (/flat|home|house|apartment|property|propert|rent|buy|mortgage|school|bedroom|crore|listing/.test(t)) id = 'assist';
+      else if (/\d+\s*-?\s*day|itinerar|7 day|week/.test(t)) id = 'dash';
+      else if (/form|budget|dates|customi|detail|preference|trip|travel|plan|visit|holiday|vacation|nepal|help me/.test(t)) id = 'form';
+      else hit = false;
+      return { id: id, hit: hit };
+    },
+    askWiz(raw) {
+      var self = this, t = raw.toLowerCase(), cfg = this.wcfg, id = this.active, a = this.wz[id];
+      var say = function (reply) { self.touch(raw, reply, ['Reading your answer'], null, null); };
+      if (/start over|reset|restart|clear/.test(t)) { this.wreset(true); return true; }
+      if (this.wdone[id]) return this.askDone(raw);
+      var got = [];
+      cfg.steps.forEach(function (st, i) {
+        if (a[st.k] && i !== self.wedit) return;
+        var j = st.match ? st.match(self, t) : self.wfind(st, t);
+        if (j > -1) { self.wset(i, j); got.push(self.wopts(i)[j].l); }
+      });
+      if (got.length) {
+        this.bump(); this.wedit = -1;
+        var nxt = this.wcur;
+        say('Noted: ' + got.join(', ') + '. ' + (nxt < cfg.steps.length ? 'Next: ' + cfg.steps[nxt].q : 'That is everything I need. Say “build” or press “' + cfg.cta + '”.'));
+        return true;
+      }
+      if (this.wall) {
+        if (/build|yes|show|go|ready|ok|sure|create|make|done|generate/.test(t)) { this.wbuild(); return true; }
+        var r = this.route(t); if (r.hit && r.id !== id) return false;
+        say('Say “build” when you are ready, or tap an answer above to change it.'); return true;
+      }
+      var r2 = this.route(t); if (r2.hit && r2.id !== id) return false;
+      say(cfg.steps[this.wshow].q + ' Try: ' + this.wopts(this.wshow).map(function (o) { return o.l.toLowerCase(); }).join(', ') + '.');
+      return true;
+    },
+    askDone(raw) {
+      var self = this, t = raw.toLowerCase(), id = this.active, r = this.route(t);
+      var say = function (reply) { self.touch(raw, reply, ['Updating the screen'], null, null); return true; };
+      if (id === 'assist') {
+        if (/\brent/.test(t)) { this.reSetMode('rent'); return say('Showing homes to rent.'); }
+        if (/\bbuy|purchase/.test(t)) { this.reSetMode('buy'); return say('Showing homes to buy.'); }
+        if (/school/.test(t) && !this.reSchool) { this.reToggleSchool(); return say('Added the near a school filter.'); }
+        if (/park|garage/.test(t) && !this.reParking) { this.reToggleParking(); return say('Added the parking filter.'); }
+        if (/compare/.test(t)) { this.reGoCompare(); return say('Comparing the two selected homes.'); }
+      } else if (id === 'tools') {
+        if (/\b7\b|seven|week/.test(t)) { this.setRange(7); return true; }
+        if (/30|thirty|month/.test(t)) { this.setRange(30); return true; }
+      } else if (id === 'dash') {
+        var pl = this.plans2.filter(function (p) { return said(t, { s: [p.n.toLowerCase().slice(0, 5)], f: [p.n.toLowerCase()] }); })[0];
+        if (pl) { this.plan2 = pl.n; return say('Switched to the ' + pl.n + ' plan: ' + pl.t); }
+      }
+      return r.hit && r.id !== id ? false : say('I can change filters, the period or the plan on this screen, or switch screens with a chip below.');
+    },
+    get formStep() { if (this.fedit === 1) return 1; if (this.fedit === 2) return 2; if (!this.shown[2]) return 1; if (!this.shown[3]) return 2; if (!this.fdays) return 3; return 4; },
+    get ph() {
+      if (this.stage >= 5 && this.wcfg) {
+        if (this.wdone[this.active]) return { dash: 'Try: classic plan, premium plan, start over', tools: 'Try: last 7 days, last 30 days, start over', assist: 'Try: rent, parking, near a school, start over' }[this.active];
+        if (this.wall) return 'Say \u201cbuild\u201d to create it';
+        return 'Type: ' + this.wopts(this.wshow).map(function (o) { return o.l.toLowerCase(); }).join(', ');
+      }
+      if (this.active !== 'form' || this.stage < 5) return 'Ask for a view, a form or a tool...';
+      return ['', 'Type an experience: adventure, cultural, relaxation or nature', 'Where to? Kathmandu, Pokhara or Chitwan', 'How many days? 3, 5, 7 or 10', this.result ? 'Try: add a rest day, make it cheaper, swap a city' : 'Say \u201cgenerate\u201d to build your itinerary'][this.formStep];
+    },
+    askForm(raw) {
+      var self = this, t = raw.toLowerCase();
+      if (/seo|keyword|traffic|backlink|complain|insight|report|analytics|dashboard|flat|home|house|apartment|property|rent|buy|mortgage|school|bedroom|crore|listing/.test(t)) return false;
+      if (/start over|reset|restart|clear/.test(t)) { this.resetForm(true); return true; }
+      var step = this.formStep, say = function (reply) { self.touch(raw, reply, ['Reading your answer'], null, null); };
+      var later = function (fn) { self.timers.push(setTimeout(fn, 800)); };
+      if (step === 1) {
+        var xs = this.exps.map(function (e) { return e.n; }).filter(function (n) { return said(t, FX[n]); });
+        if (!xs.length) { say('I did not catch an experience. Try adventure, cultural, relaxation or nature.'); return true; }
+        xs.forEach(function (n) { if (self.fexp.indexOf(n) < 0) self.toggleExp(n); });
+        later(function () { self.advance(1); });
+        return true;
+      }
+      if (step === 2) {
+        var ps = this.places.filter(function (n) { return said(t, FP[n]); });
+        if (!ps.length) { say('Which of Kathmandu, Pokhara or Chitwan?'); return true; }
+        ps.forEach(function (n) { if (self.fplaces.indexOf(n) < 0) self.togglePlace(n); });
+        later(function () { self.advance(2); });
+        return true;
+      }
+      if (step === 3) {
+        var m = t.match(/\d+/), n = m ? +m[0] : 0;
+        if (!n) { toks(t).forEach(function (w) { if (!n && NUMW[w]) n = NUMW[w]; }); }
+        if (!n) { say('How many days: 3, 5, 7 or 10?'); return true; }
+        this.pickDays(nearest(n, [3, 5, 7, 10]));
+        return true;
+      }
+      if (!this.result && !this.gen) {
+        if (/generate|yes|go|build|ready|ok|sure|create|make|show|plan|itinerar|done/.test(t)) this.generate();
+        else say('Say generate when you are ready, or change an earlier answer.');
+        return true;
+      }
+      if (/cheap|budget|save|afford/.test(t)) this.tweak('cheap');
+      else if (/rest|extra day|add a day|longer/.test(t)) this.tweak('rest');
+      else if (/swap|city|place|different/.test(t)) this.tweak('swap');
+      else say('Try: add a rest day, make it cheaper or swap a city.');
+      return true;
+    },
     ask() {
       var t = (this.draft || '').toLowerCase().trim();
       if (!t) return;
-      var id = 'dash';
-      if (/seo|keyword|traffic|backlink|rank|complain|summar|insight|report|data|issue|analy|kpi|metric/.test(t)) id = 'tools';
-      else if (/form|budget|dates|customi|detail|preference/.test(t)) id = 'form';
-      else if (/flat|home|house|apartment|property|propert|rent|buy|mortgage|school|bedroom|crore|listing/.test(t)) id = 'assist';
-      this.note = 'Demo maps your request to the closest prepared screen.';
+      this.engage();
+      if (this.wcfg && this.stage >= 5) {
+        if (this.busy || this.wgen) return;
+        var rw = this.draft.trim(); this.draft = '';
+        if (this.askWiz(rw)) return;
+        this.draft = rw;
+      }
+      if (this.active === 'form' && this.stage >= 5) {
+        if (this.busy || this.gen) return;
+        var raw = this.draft.trim(); this.draft = '';
+        if (this.askForm(raw)) return;
+        this.draft = raw;
+      }
+      var rt = this.route(t), id = rt.id, hit = rt.hit;
+      this.note = hit ? 'Demo maps your request to the closest prepared screen.' : 'No exact match in this demo, so here is the closest prepared screen. Try a chip below.';
       var typed = this.draft; this.draft = '';
       this.run(id); this.msgs[0].text = typed;
     }
