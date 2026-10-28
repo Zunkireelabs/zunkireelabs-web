@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="ai-answers-source-selection-evidence-digest-2026-report-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ai-answers-source-selection-evidence-digest-2026-report-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">HOW AI ANSWERS PICK SOURCES</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">REPORT</text>
+  <path d="M240.0 150.0 A105 105 0 0 1 261.6 357.7" fill="none" stroke="#22c55e" stroke-width="44"/>
+  <path d="M260.4 358.0 A105 105 0 0 1 180.5 168.5" fill="none" stroke="#60a5fa" stroke-width="44"/>
+  <path d="M181.5 167.8 A105 105 0 0 1 213.2 153.5" fill="none" stroke="#f59e0b" stroke-width="44"/>
+  <path d="M214.4 153.2 A105 105 0 0 1 238.7 150.0" fill="none" stroke="#94a3b8" stroke-width="44"/>
+  <text x="240" y="252" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#ffffff" opacity="1" text-anchor="middle">17.2M</text>
+  <text x="240" y="277" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">citations studied</text>
+  <rect x="470" y="150" width="18" height="18" rx="3" fill="#22c55e"/>  <text x="500" y="165" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Brand-owned websites</text>
+  <rect x="470" y="205" width="18" height="18" rx="3" fill="#60a5fa"/>  <text x="500" y="220" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Managed listings</text>
+  <rect x="470" y="260" width="18" height="18" rx="3" fill="#f59e0b"/>  <text x="500" y="275" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Reviews and social</text>
+  <rect x="470" y="315" width="18" height="18" rx="3" fill="#94a3b8"/>  <text x="500" y="330" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">News, forums, other</text>
+</svg>

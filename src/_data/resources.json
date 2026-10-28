@@ -1250,6 +1250,794 @@
       ],
       "formTitle": "Download Whitepaper",
       "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "predictive-maintenance-small-manufacturers-whitepaper",
+      "type": "WHITEPAPER",
+      "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        {
+          "href": "/blog/predictive-maintenance-how-sensor-data-and-ai-predict-failures/",
+          "title": "Blog: Predictive Maintenance, Sensor Data and AI"
+        },
+        {
+          "slug": "gaamma-case-study",
+          "title": "Case Study: Gaamma Manufacturing ERP"
+        },
+        {
+          "href": "/solutions/custom-agent/",
+          "title": "Custom AI Agent Development"
+        }
+      ],
+      "title": "Predictive Maintenance for Small Manufacturers: A Practical Starting Guide",
+      "subtitle": "A practical whitepaper for plant managers and operations teams",
+      "description": "What sensor-based predictive maintenance can and cannot do, what the studies report, why false alarms matter, and how a small plant can run a one-machine pilot.",
+      "coverImage": "/assets/images/resources/predictive-maintenance-small-manufacturers-whitepaper-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "12 min read",
+      "whatYouGet": [
+        "What predictive maintenance is and where it sits between reactive and scheduled upkeep",
+        "What an 85-study 2026 review reports on accuracy and downtime",
+        "Why false alarms decide success, with a heavy-industry case",
+        "A one-machine pilot plan with a failure log and clear success test",
+        "Where small manufacturers stand, per a NIST-affiliated survey"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download Whitepaper",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "mcp-agent-security-checklist-business-whitepaper",
+      "type": "WHITEPAPER",
+      "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        {
+          "href": "/blog/owasp-mcp-top-10-explained-for-business-owners/",
+          "title": "Blog: OWASP MCP Top 10 for Business Owners"
+        },
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "Whitepaper: AI Governance Checklist"
+        },
+        {
+          "href": "/solutions/custom-agent/",
+          "title": "Custom AI Agent Development"
+        }
+      ],
+      "title": "MCP and AI Agent Security: A Checklist for Business Buyers",
+      "subtitle": "A buyer’s checklist for businesses deploying AI agents",
+      "description": "What the 2026 MCP specification changed, the OWASP MCP Top 10 in plain English, how least privilege works in practice, and the questions to ask any agent supplier.",
+      "coverImage": "/assets/images/resources/mcp-agent-security-checklist-business-whitepaper-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "13 min read",
+      "whatYouGet": [
+        "What changed in the 2026 MCP specification and what it opened up",
+        "The OWASP MCP Top 10 in plain language",
+        "A least-privilege example: step-up authorization on a real MCP server",
+        "Eight questions to ask any agent supplier",
+        "Where to go next for agent governance"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download Whitepaper",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-orchestration-automation-agents-whitepaper",
+      "type": "WHITEPAPER",
+      "category": "reports",
+      "badgeLabel": "Whitepaper",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/",
+          "title": "Blog: AI Orchestration vs Automation vs Agents"
+        },
+        {
+          "slug": "ai-agents-for-business-whitepaper",
+          "title": "Whitepaper: AI Agents for Business"
+        },
+        {
+          "href": "/solutions/custom-agent/",
+          "title": "Custom AI Agent Development"
+        }
+      ],
+      "title": "Orchestration, Automation or Agents: Choosing the Least Complexity That Works",
+      "subtitle": "A decision guide for choosing between automation, agents and orchestration",
+      "description": "How automation, AI agents and orchestration differ, what Anthropic, Microsoft and Gartner say, and a simple way to choose the simplest design that does the job.",
+      "coverImage": "/assets/images/resources/ai-orchestration-automation-agents-whitepaper-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "12 min read",
+      "whatYouGet": [
+        "Plain definitions of automation, agents and orchestration",
+        "What Anthropic, Microsoft and Gartner say, with sources",
+        "The main orchestration patterns and how they overlap",
+        "Where MCP and A2A fit",
+        "A least-complexity decision guide you can apply today"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download Whitepaper",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-agents-small-business-playbook-ebook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/",
+          "title": "Blog: AI Orchestration vs Automation vs Agents"
+        },
+        {
+          "slug": "ai-agents-for-business-whitepaper",
+          "title": "Whitepaper: AI Agents for Business"
+        },
+        {
+          "href": "/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/",
+          "title": "Blog: AI Agent Pricing, Per Seat, Task or Outcome"
+        }
+      ],
+      "title": "AI Agents for Small Business: A Plain-English Playbook",
+      "subtitle": "A plain-English guide for owners deciding what to automate first, what it costs and how to start",
+      "description": "A plain-English playbook for owners: what an AI agent is, what to automate first, how to think about cost, who you need on your side and a first 90 days path.",
+      "coverImage": "/assets/images/resources/ai-agents-small-business-playbook-ebook-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "14 min read",
+      "whatYouGet": [
+        "What an AI agent is, and how it differs from automation and orchestration",
+        "Six questions for choosing the first workflow to automate",
+        "How to think about cost, with the per seat, per task and per outcome models compared",
+        "The three roles every business needs: owner, reviewer and affected staff",
+        "A 90-day path with a decision point at each stage"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "ai-compliance-business-owners-ebook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        {
+          "href": "/blog/eu-ai-act-what-applies-now-and-what-was-delayed/",
+          "title": "Blog: EU AI Act, What Applies Now and What Was Delayed"
+        },
+        {
+          "href": "/blog/ethical-ai-principles-risks-and-how-organizations-apply-them/",
+          "title": "Blog: Ethical AI Principles, Risks and How to Apply Them"
+        },
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "AI Governance and Data Privacy for SMEs"
+        }
+      ],
+      "title": "AI Compliance for Business Owners: Privacy, Regulation and Risk",
+      "subtitle": "A plain-English overview of AI privacy, regulation and risk for owners and managers",
+      "description": "A plain-English ebook on AI compliance for business owners: where privacy and AI laws reach you, what the EU AI Act changed, cross-border rules and the questions to ask.",
+      "coverImage": "/assets/images/resources/ai-compliance-business-owners-ebook-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "14 min read",
+      "whatYouGet": [
+        "Who AI and privacy rules can reach, including non-EU and offshore arrangements",
+        "The EU AI Act dates as published, with what applies now and what was delayed",
+        "A market comparison of cross-border transfer rules in five jurisdictions",
+        "The questions to put to any AI supplier, in a form you can paste into a contract review",
+        "A short owner’s action plan with calendar dates"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "ai-in-education-evidence-ebook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-personalized-learning-what-tutoring-trials-show/",
+          "title": "Blog: AI Tutoring and Personalized Learning"
+        },
+        {
+          "href": "/blog/oecd-digital-education-outlook-2026-ai-performance-not-learning/",
+          "title": "Blog: OECD on AI in Education"
+        },
+        {
+          "slug": "ai-student-inquiries-education-consultancies-whitepaper",
+          "title": "Whitepaper: AI for Education Consultancies"
+        }
+      ],
+      "title": "AI in Education: What the Trials and Surveys Show",
+      "subtitle": "An evidence-based ebook for school leaders, trainers and education teams",
+      "description": "An ebook reading the published evidence on AI in education: tutoring trials, teacher time savings, adoption data, risks, and what schools can responsibly do next.",
+      "coverImage": "/assets/images/resources/ai-in-education-evidence-ebook-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "14 min read",
+      "whatYouGet": [
+        "What three tutoring trials found, and why tutor design decided the result",
+        "What a large teacher survey reports on time savings and quality",
+        "What the OECD review says about performance versus learning",
+        "The limits of the evidence, including that no cited trial was run in Nepal",
+        "Practical, clearly labelled suggestions for a first pilot"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "ai-in-education-evidence-report-2026",
+      "type": "REPORT",
+      "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-teacher-workload-what-the-gallup-survey-shows/",
+          "title": "Blog: AI and Teacher Workload"
+        },
+        {
+          "href": "/blog/ai-everyday-life-what-the-usage-data-shows/",
+          "title": "Blog: AI in Everyday Life"
+        },
+        {
+          "slug": "state-of-ai-nepal-2026",
+          "title": "Report: State of AI in Nepal 2026"
+        }
+      ],
+      "title": "AI in Education Evidence Report 2026: Tutoring, Teacher Workload and Adoption",
+      "subtitle": "An evidence digest of published research for education leaders",
+      "description": "An evidence digest of published 2025 and 2026 research on AI tutoring, teacher workload and adoption, with key findings, limits and what to do next.",
+      "coverImage": "/assets/images/resources/ai-in-education-evidence-report-2026-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "11 min read",
+      "whatYouGet": [
+        "Key findings from tutoring trials, a teacher survey and an OECD review",
+        "Source-by-source tables with design, result and main limit",
+        "Teacher time-saving figures with the Gallup methodology",
+        "A clear list of what the evidence cannot tell you",
+        "Labelled suggestions for what to do next"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-in-healthcare-clinics-evidence-ebook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-mammography-screening-what-the-swedish-trial-shows/",
+          "title": "Blog: AI Mammography Screening: What the Swedish Trial Shows"
+        },
+        {
+          "slug": "ai-patient-communication-clinics-whitepaper",
+          "title": "Whitepaper: AI Patient Communication for Clinics"
+        },
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "Whitepaper: AI Governance and Data Privacy for SMEs"
+        }
+      ],
+      "title": "AI in Healthcare Clinics: What the Evidence Shows",
+      "subtitle": "What trials and published reports say about screening, alerts, notes and patient communication",
+      "description": "What published trials and reports say about AI in screening, hospital alerts, clinical notes and patient communication, and how a clinic can read that evidence with care.",
+      "coverImage": "/assets/images/resources/ai-in-healthcare-clinics-evidence-ebook-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "14 min read",
+      "whatYouGet": [
+        "How to rank clinical AI evidence, from vendor claim to randomized trial",
+        "What the MASAI mammography trial reported and where it stops",
+        "What reports say about an AI sepsis alert and an independent check of another",
+        "What a randomized scribe trial found on time saved and note errors",
+        "Scope rules for a patient-communication assistant and a data-protection primer"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "ai-regulation-data-residency-by-market-2026-report",
+      "type": "REPORT",
+      "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-infrastructure-in-canada-the-privacy-rules-behind-the-decision/",
+          "title": "Blog: AI Infrastructure in Canada, the Privacy Rules"
+        },
+        {
+          "href": "/blog/data-engineering-in-australia-the-privacy-act-in-practice/",
+          "title": "Blog: Data Engineering in Australia, the Privacy Act"
+        },
+        {
+          "href": "/de-ch/blog/ki-entwicklung-in-der-schweiz-was-das-datenschutzgesetz-fuer-ki-verlangt/",
+          "title": "Blog (German): KI-Entwicklung in der Schweiz"
+        }
+      ],
+      "title": "AI Regulation and Data Residency by Market 2026: EU, UK, Canada, Australia and Beyond",
+      "subtitle": "A source-based digest for buyers comparing AI and data transfer rules across markets",
+      "description": "A digest of published regulator and law-firm sources on AI regulation and cross-border data rules in the EU, UK, Canada, Australia and Switzerland, with a comparison table.",
+      "coverImage": "/assets/images/resources/ai-regulation-data-residency-by-market-2026-report-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "10 min read",
+      "whatYouGet": [
+        "A five-market comparison table of AI-specific rules and cross-border data rules",
+        "EU AI Act dates as published, including the 2026 delays",
+        "What the UK, Canadian, Australian and Swiss regulators say about transfers",
+        "The common threads: accountability, transparency and location risk",
+        "A clear list of what the digest does not cover"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "choosing-ai-development-partner-buyers-ebook",
+      "type": "EBOOK",
+      "category": "ebooks",
+      "badgeLabel": "Ebook",
+      "relatedResources": [
+        {
+          "href": "/blog/choosing-an-ai-development-partner-a-global-buyers-guide/",
+          "title": "Blog: Choosing an AI Development Partner"
+        },
+        {
+          "href": "/blog/how-to-choose-ai-development-company/",
+          "title": "Blog: Choose an AI Development Company"
+        },
+        {
+          "slug": "build-vs-buy-ai-software-nepal-whitepaper",
+          "title": "Build vs Buy vs Outsource AI Software"
+        }
+      ],
+      "title": "Choosing an AI Development Partner: A Buyer's Ebook",
+      "subtitle": "Questions, red flags and a scorecard for buyers of AI development work",
+      "description": "Questions, red flags and a weighted scorecard for buyers choosing an AI development partner, with notes on data, security, location and ownership.",
+      "coverImage": "/assets/images/resources/choosing-ai-development-partner-buyers-ebook-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "14 min read",
+      "whatYouGet": [
+        "Eight questions to ask any AI development partner",
+        "A list of red flags to watch for in proposals",
+        "How to test a partner's approach to data and accuracy",
+        "Security, data location and contract questions",
+        "A weighted scorecard and a seven-step selection process"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Get Your Free Copy",
+      "ctaText": "Download Now"
+    },
+    {
+      "slug": "clinical-ai-evidence-digest-2026-report",
+      "type": "REPORT",
+      "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-sepsis-early-warning-what-the-evidence-shows/",
+          "title": "Blog: AI Sepsis Early Warning: What the Evidence Shows"
+        },
+        {
+          "href": "/blog/ai-medical-scribes-what-the-randomized-trial-shows/",
+          "title": "Blog: AI Medical Scribes: What the Randomized Trial Shows"
+        },
+        {
+          "slug": "ai-patient-communication-clinics-whitepaper",
+          "title": "Whitepaper: AI Patient Communication for Clinics"
+        }
+      ],
+      "title": "Clinical AI Evidence Digest 2026: What the Trials Show",
+      "subtitle": "A digest of published trials and reports on screening, sepsis alerts and medical scribes",
+      "description": "A digest of three published clinical AI evidence sets from 2025 and 2026, on mammography screening, sepsis alerts and medical scribes, with key findings, limits and recommended actions.",
+      "coverImage": "/assets/images/resources/clinical-ai-evidence-digest-2026-report-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "11 min read",
+      "whatYouGet": [
+        "A side-by-side table of three clinical AI evidence sets",
+        "Plain-English summaries of the MASAI, sepsis alert and scribe findings",
+        "The limits of each result as stated by the sources",
+        "A short action list for clinics assessing AI tools",
+        "Full source list with publishers and dates"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "evaluate-healthcare-ai-tool-before-you-buy-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/",
+          "title": "Blog: AI in UK Healthcare: What to Check Before You Buy"
+        },
+        {
+          "href": "/blog/ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices/",
+          "title": "Blog: AI Dental Assistant Data Security and HIPAA Checklist"
+        },
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "Whitepaper: AI Governance and Data Privacy for SMEs"
+        }
+      ],
+      "title": "How to Evaluate a Healthcare AI Tool Before You Buy",
+      "subtitle": "A seven-step method and question checklist for clinic owners and practice managers",
+      "description": "A seven-step method and a question checklist for judging a healthcare AI product: define the job, test the evidence, check the false alarms, protect the data, and pilot with supervision.",
+      "coverImage": "/assets/images/resources/evaluate-healthcare-ai-tool-before-you-buy-guide-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "9 min read",
+      "whatYouGet": [
+        "A seven-step method from defining the job to a supervised pilot",
+        "How to grade the evidence a supplier hands you",
+        "The accuracy figures to request beyond a headline number",
+        "Data protection and regulatory checks for US and UK settings",
+        "A ten-row question checklist to take into supplier meetings"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "get-cited-by-ai-engines-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        {
+          "href": "/blog/ai-overviews-fewer-clicks-what-google-says-to-do/",
+          "title": "Blog: AI Overviews and Fewer Clicks"
+        },
+        {
+          "href": "/blog/where-ai-answers-get-their-sources/",
+          "title": "Blog: Where AI Answers Get Their Sources"
+        },
+        {
+          "slug": "answer-engine-optimization-whitepaper",
+          "title": "Answer Engine Optimization Whitepaper"
+        }
+      ],
+      "title": "How to Get Cited by ChatGPT, Copilot and Google AI Overviews",
+      "subtitle": "Nine steps and a checklist for making your pages citable in AI answers",
+      "description": "A step-by-step guide to making your pages eligible, useful and measurable in AI answers, with what Google and Microsoft say and a closing checklist.",
+      "coverImage": "/assets/images/resources/get-cited-by-ai-engines-guide-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "9 min read",
+      "whatYouGet": [
+        "Nine ordered steps from crawling to measurement",
+        "What Google says is and is not required",
+        "How to read the Bing AI Performance report",
+        "Why citations and clicks need separate tracking",
+        "A ten-point checklist to review each page"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "introduce-ai-school-training-program-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        {
+          "href": "/blog/generative-ai-in-uk-schools-what-the-dfe-guidance-says/",
+          "title": "Blog: Generative AI in UK Schools"
+        },
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "Whitepaper: AI Governance Checklist"
+        },
+        {
+          "href": "/blog/ethical-ai-principles-risks-and-how-organizations-apply-them/",
+          "title": "Blog: Ethical AI Principles and Risks"
+        }
+      ],
+      "title": "How to Introduce AI in a School or Training Program Safely",
+      "subtitle": "An eight-step guide with a launch checklist for school and training leaders",
+      "description": "A step-by-step guide for school leaders and training providers: choose a use case, set rules, protect student data, pilot with teachers, and measure real learning.",
+      "coverImage": "/assets/images/resources/introduce-ai-school-training-program-guide-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "9 min read",
+      "whatYouGet": [
+        "Eight numbered steps from problem definition to a measured pilot",
+        "A table ranking uses by risk to learning, labelled as our reading of the sources",
+        "Supplier and data questions to ask before any student data is shared",
+        "A ten-item launch checklist you can copy",
+        "How to test learning without the tool, as the trials did"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "run-30-day-ai-agent-pilot-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        {
+          "slug": "ai-agents-small-business-playbook-ebook",
+          "title": "Ebook: AI Agents for Small Business Playbook"
+        },
+        {
+          "slug": "mcp-agent-security-checklist-business-whitepaper",
+          "title": "Whitepaper: MCP and AI Agent Security Checklist"
+        },
+        {
+          "href": "/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/",
+          "title": "Blog: FTC Probe and Rogue Agents, What to Do"
+        }
+      ],
+      "title": "How to Run a 30-Day AI Agent Pilot",
+      "subtitle": "A week-by-week plan, success measures and a checklist for testing one agent on one workflow",
+      "description": "A week-by-week plan for a 30-day AI agent pilot: choose one workflow, set a baseline, test with a person in the loop, measure the result and decide whether to continue.",
+      "coverImage": "/assets/images/resources/run-30-day-ai-agent-pilot-guide-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "9 min read",
+      "whatYouGet": [
+        "A four-week plan from scoping to a go, adjust or stop decision",
+        "Five decisions to make before day 1",
+        "Success measures for value, cost and control",
+        "Guardrails to keep in place during the pilot",
+        "A 12-point checklist you can print"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "state-of-ai-agent-infrastructure-2026-report",
+      "type": "REPORT",
+      "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        {
+          "href": "/blog/specification-security-what-changed/",
+          "title": "Blog: MCP Security in 2026, What the New Spec Fixed"
+        },
+        {
+          "slug": "mcp-agent-security-checklist-business-whitepaper",
+          "title": "Whitepaper: MCP and AI Agent Security Checklist"
+        },
+        {
+          "href": "/blog/microsoft-execution-containers-agent-containment-explained/",
+          "title": "Blog: Microsoft Execution Containers Explained"
+        }
+      ],
+      "title": "State of AI Agent Infrastructure 2026: Protocols, Security and Pricing",
+      "subtitle": "A digest of published sources on protocols, security, containment and pricing, with what to do",
+      "description": "A digest of published sources on AI agent infrastructure in 2026: protocol changes, security findings, containment tools, regulatory attention, pricing models and what to do.",
+      "coverImage": "/assets/images/resources/state-of-ai-agent-infrastructure-2026-report-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "12 min read",
+      "whatYouGet": [
+        "A dated table of the key agent infrastructure developments from 2025 to October 2026",
+        "What the MCP 2026-07-28 specification removed and what researchers say it opened up",
+        "How Microsoft and NVIDIA approach containment outside the agent",
+        "A plain account of the pricing models and the gaps in public price data",
+        "A short action list for buyers, with every claim traced to a listed source"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "write-ai-policy-for-your-team-guide",
+      "type": "GUIDE",
+      "category": "ebooks",
+      "badgeLabel": "Guide",
+      "relatedResources": [
+        {
+          "slug": "ai-governance-data-privacy-sme-whitepaper",
+          "title": "AI Governance and Data Privacy for SMEs"
+        },
+        {
+          "href": "/blog/ethical-ai-principles-risks-and-how-organizations-apply-them/",
+          "title": "Blog: Ethical AI Principles, Risks and How to Apply Them"
+        },
+        {
+          "slug": "mcp-agent-security-checklist-business-whitepaper",
+          "title": "MCP and AI Agent Security Checklist"
+        }
+      ],
+      "title": "How to Write an AI Policy for Your Team",
+      "subtitle": "Seven steps, a policy outline and a checklist for managers and team leads",
+      "description": "A step-by-step guide to writing a short AI policy for your team, with a policy outline you can adapt, a pre-launch checklist and the external rules to check.",
+      "coverImage": "/assets/images/resources/write-ai-policy-for-your-team-guide-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "8 min read",
+      "whatYouGet": [
+        "Seven steps from naming an owner to reviewing the policy",
+        "A data-rules table with three plain categories",
+        "A policy outline with eight headings you can adapt",
+        "A pre-publish checklist of nine items",
+        "Where the EU, UK, Canadian and Australian rules touch a team policy"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Guide",
+      "ctaText": "Get Free Access"
+    },
+    {
+      "slug": "ai-answers-source-selection-evidence-digest-2026-report",
+      "type": "REPORT",
+      "category": "reports",
+      "badgeLabel": "Report",
+      "relatedResources": [
+        {
+          "href": "/blog/where-ai-answers-get-their-sources/",
+          "title": "Blog: Where AI Answers Get Their Sources"
+        },
+        {
+          "href": "/blog/ai-overviews-fewer-clicks-what-google-says-to-do/",
+          "title": "Blog: AI Overviews and Fewer Clicks"
+        },
+        {
+          "slug": "answer-engine-optimization-whitepaper",
+          "title": "Whitepaper: Answer Engine Optimization"
+        }
+      ],
+      "title": "How AI Answers Choose Their Sources: An Evidence Digest 2026",
+      "subtitle": "An evidence digest for marketing and web teams",
+      "description": "What Google documents, what the largest published citation sample found, why assistants differ, and how far to trust the numbers. A digest of public sources.",
+      "coverImage": "/assets/images/resources/ai-answers-source-selection-evidence-digest-2026-report-cover.svg",
+      "publishDate": "2026-10-28",
+      "readTime": "11 min read",
+      "whatYouGet": [
+        "What Google documents about AI Overviews and AI Mode",
+        "The largest published AI-citation sample, with a per-model breakdown",
+        "Why assistants cite different sources",
+        "How far to trust vendor-produced numbers",
+        "A practical, low-cost action list"
+      ],
+      "authors": [
+        {
+          "name": "Zunkiree Labs Team",
+          "role": "Engineering Team",
+          "company": "Zunkiree Labs",
+          "image": "/assets/images/zunkireelabs-logo-light.png"
+        }
+      ],
+      "formTitle": "Download the Report",
+      "ctaText": "Get Free Access",
+      "stats": [
+        {
+          "value": "17.2M",
+          "label": "AI citations in the Yext sample"
+        },
+        {
+          "value": "46.89%",
+          "label": "From brand-owned websites"
+        },
+        {
+          "value": "43.71%",
+          "label": "From managed listings"
+        }
+      ]
     }
   ]
 }

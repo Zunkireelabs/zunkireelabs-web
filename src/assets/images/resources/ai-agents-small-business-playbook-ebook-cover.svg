@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="ai-agents-small-business-playbook-ebook-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ai-agents-small-business-playbook-ebook-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">AI AGENTS PLAYBOOK</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">EBOOK</text>
+  <rect x="70" y="220" width="150" height="110" fill="#ffffff" opacity="0.1"/><path d="M60 220 L230 220 L215 170 L75 170 Z" fill="#22c55e" opacity="0.85"/><rect x="125" y="265" width="40" height="65" fill="#0f172a"/>
+  <text x="145" y="360" font-family="system-ui, sans-serif" font-size="15" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">Your business</text>
+  <line x1="235" y1="255" x2="340" y2="255" stroke="#22c55e" stroke-width="3" />
+  <polygon points="345,255 332,247 332,263" fill="#22c55e"/>
+  <circle cx="395" cy="255" r="48" fill="#22c55e" opacity="0.2" stroke="#22c55e" stroke-width="3"/>  <text x="395" y="262" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#22c55e" opacity="1" text-anchor="middle">AGENT</text>
+  <line x1="445" y1="235" x2="540" y2="175" stroke="#60a5fa" stroke-width="2" />
+  <line x1="445" y1="255" x2="540" y2="255" stroke="#60a5fa" stroke-width="2" />
+  <line x1="445" y1="275" x2="540" y2="335" stroke="#60a5fa" stroke-width="2" />
+  <g transform="translate(545,150)"><rect width="205" height="44" rx="8" fill="#ffffff" opacity="0.1"/><text x="102.5" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Answer enquiries</text></g>
+  <g transform="translate(545,233)"><rect width="205" height="44" rx="8" fill="#ffffff" opacity="0.1"/><text x="102.5" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Book appointments</text></g>
+  <g transform="translate(545,316)"><rect width="205" height="44" rx="8" fill="#ffffff" opacity="0.1"/><text x="102.5" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Chase invoices</text></g>
+</svg>

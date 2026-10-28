@@ -1,0 +1,117 @@
+---
+layout: resource-content.njk
+title: "Predictive Maintenance for Small Manufacturers: A Practical Starting Guide"
+description: "What sensor-based predictive maintenance can and cannot do, what the studies report, why false alarms matter, and how a small plant can run a one-machine pilot."
+permalink: /resources/predictive-maintenance-small-manufacturers-whitepaper/
+slug: predictive-maintenance-small-manufacturers-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What predictive maintenance is</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Maintenance has traditionally been reactive, fixing a machine after it fails, or scheduled, servicing it at fixed intervals whether or not it needs it. Predictive maintenance adds a third option: sensors on the machine measure signals such as vibration and temperature, and a model learns what normal behaviour looks like so that drift away from it can be flagged early.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For a plant manager the useful definition is practical. It is a way to plan a repair before an unplanned stop, using evidence from the machine itself.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What the evidence says</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The anchor study is a peer-reviewed review, <a href="https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2025.1722114/full" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Artificial intelligence and robotics in predictive maintenance: a comprehensive review</a>, published in <em>Frontiers in Mechanical Engineering</em> on January 7, 2026. The authors selected 85 full-text studies from 1,864 database records.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Support vector machines and neural networks reach roughly 85% to 94% accuracy for fault classification.</li>
+    <li>Reported downtime reductions are 15% to 40% across manufacturing, aerospace and energy.</li>
+    <li>The main challenges are data quality, computing cost, interpretability, generalisation between machines and system integration.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    These figures are collected from many studies with different machines, data and definitions. They are ranges to plan around, not a guarantee for any single plant.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why false alarms decide whether it works</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A predictive system that raises too many alerts is quickly ignored. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8749854/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">2021 case study in <em>Sensors</em></a> worked on two real machines: a coal crusher at a coal-fired power plant and a 500-tonne gantry in a steelworks converter. The authors added operator feedback and explanations on top of an outlier-detection model and reduced false alarms by 90.25% on average, compared with the stand-alone method.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    That result is against the authors’ own baseline on two machines, not against other published systems. The lesson is about design: alerts must be specific enough that the maintenance team acts on them, and operators must be able to see why an alert was raised.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why small plants lag, and what that means</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A 2016 pilot survey affiliated with NIST, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4981924/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">The present status and future growth of maintenance in US manufacturing</a>, found large manufacturers ahead of small and medium ones in adopting advanced maintenance strategies. Cost, technical support and workforce skills were the main barriers, and reactive maintenance was still common among smaller firms.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Most of the strongest published results come from heavy industry and large manufacturers. A small plant should read them as evidence that the method can work, and test it on its own equipment before committing.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">A one-machine pilot</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the studies:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Pick one critical machine</strong> where an unplanned stop is costly.</li>
+    <li><strong>Start a failure log on day one.</strong> Record every failure and repair, with date, cause and downtime.</li>
+    <li><strong>Add a small number of sensors</strong>, such as vibration and temperature, to that machine only.</li>
+    <li><strong>Judge success by action.</strong> Are alerts specific enough that the maintenance team acts on them, and are false alarms low enough that they trust them?</li>
+    <li><strong>Expand only when the result holds</strong> for several weeks.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The failure log needs somewhere to live. Manufacturing software that already tracks production, inventory and quality, such as our <a href="/resources/gaamma-case-study/" class="font-medium text-[#5a9100] hover:underline">Gaamma manufacturing ERP</a>, is one place it can sit next to the rest of the plant’s data.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2025.1722114/full" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Azeta et al., Artificial intelligence and robotics in predictive maintenance: a comprehensive review</a>, Frontiers in Mechanical Engineering, January 7, 2026</li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8749854/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Hermansa et al., Sensor-Based Predictive Maintenance with Reduction of False Alarms: A Case Study in Heavy Industry</a>, Sensors, December 29, 2021</li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4981924/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Jin et al., The present status and future growth of maintenance in US manufacturing</a>, Manufacturing Review 3, article 10, 2016</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is predictive maintenance?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It uses sensors on machines, such as vibration and temperature, and a model that learns what normal looks like, so signs of failure can be flagged before a breakdown. It sits between fixing things when they break and servicing them on a fixed schedule.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How accurate is AI at predicting machine failures?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">A January 2026 review of 85 studies in Frontiers in Mechanical Engineering reports roughly 85% to 94% accuracy for fault classification and downtime reductions of 15% to 40%. These are averages across many studies and sites, not a promise for any one plant.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Can a small factory use predictive maintenance?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Possibly, but the evidence is thinner. A 2016 NIST pilot survey found small and medium manufacturers behind large ones on advanced maintenance. A sensible start is one critical machine, a few sensors and a written failure log.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the biggest practical problem?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Data quality and false alarms. The same review names data quality, computing cost, interpretability, generalisation and integration as the main challenges, and a 2021 heavy-industry study was built specifically to cut false alarms.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "predictive maintenance, predictive maintenance AI, sensor data machine failure, small manufacturers",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is predictive maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "It uses sensors on machines, such as vibration and temperature, and a model that learns what normal looks like, so signs of failure can be flagged before a breakdown. It sits between fixing things when they break and servicing them on a fixed schedule."}}, {"@type": "Question", "name": "How accurate is AI at predicting machine failures?", "acceptedAnswer": {"@type": "Answer", "text": "A January 2026 review of 85 studies in Frontiers in Mechanical Engineering reports roughly 85% to 94% accuracy for fault classification and downtime reductions of 15% to 40%. These are averages across many studies and sites, not a promise for any one plant."}}, {"@type": "Question", "name": "Can a small factory use predictive maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "Possibly, but the evidence is thinner. A 2016 NIST pilot survey found small and medium manufacturers behind large ones on advanced maintenance. A sensible start is one critical machine, a few sensors and a written failure log."}}, {"@type": "Question", "name": "What is the biggest practical problem?", "acceptedAnswer": {"@type": "Answer", "text": "Data quality and false alarms. The same review names data quality, computing cost, interpretability, generalisation and integration as the main challenges, and a 2021 heavy-industry study was built specifically to cut false alarms."}}]}</script>

@@ -130,32 +130,31 @@ The companies profiled here represent the leading edge of what's possible from K
 *Building AI systems for your organization? [Contact Zunkiree Labs](/contact/) to discuss how we can help with AI-native search, RAG pipelines, and enterprise AI infrastructure.*
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What AI products does Zunkiree Labs offer?</p><p class="text-gray-600 leading-relaxed">Zunkiree Labs offers Zunkiree Search (natural language search), Stella (an AI commerce agent), Zennly (an AI booking engine), Gaamma (a manufacturing ERP with predictive maintenance) and Dental AI Assistant.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can AI improve business processes in Nepal?</p><p class="text-gray-600 leading-relaxed">AI can take over repetitive, rule-bound work. In our published case studies, Khems Cleaning increased bookings by 70% with automated scheduling, and CMS Group automated 85% of its document workflows.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Which industries does Zunkiree Labs serve?</p><p class="text-gray-600 leading-relaxed">Zunkiree Labs serves healthcare, manufacturing, legal, professional services, education and human resources, among other industries.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is there a resource available to learn about AI adoption in Nepal?</p><p class="text-gray-600 leading-relaxed">Yes. Our report “State of AI in Nepal 2026” analyses AI adoption across Nepali organisations.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What type of support can AI provide for customer experiences?</p><p class="text-gray-600 leading-relaxed">AI chatbots and voice agents can answer routine questions instantly and hand complex cases to your team.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can businesses in Nepal benefit from using AI development services?</p><p class="text-gray-600 leading-relaxed">Custom AI development lets a business automate one specific workflow, such as support, scheduling or document handling, and measure the result.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What AI products does Zunkiree Labs offer?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs offers Zunkiree Search (natural language search), Stella (an AI commerce agent), Zennly (an AI booking engine), Gaamma (a manufacturing ERP with predictive maintenance) and Dental AI Assistant.","@type":"Answer"}},{"name":"How can AI improve business processes in Nepal?","@type":"Question","acceptedAnswer":{"text":"AI can take over repetitive, rule-bound work. In our published case studies, Khems Cleaning increased bookings by 70% with automated scheduling, and CMS Group automated 85% of its document workflows.","@type":"Answer"}},{"name":"Which industries does Zunkiree Labs serve?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs serves healthcare, manufacturing, legal, professional services, education and human resources, among other industries.","@type":"Answer"}},{"name":"Is there a resource available to learn about AI adoption in Nepal?","@type":"Question","acceptedAnswer":{"text":"Yes. Our report “State of AI in Nepal 2026” analyses AI adoption across Nepali organisations.","@type":"Answer"}},{"name":"What type of support can AI provide for customer experiences?","@type":"Question","acceptedAnswer":{"text":"AI chatbots and voice agents can answer routine questions instantly and hand complex cases to your team.","@type":"Answer"}},{"name":"How can businesses in Nepal benefit from using AI development services?","@type":"Question","acceptedAnswer":{"text":"Custom AI development lets a business automate one specific workflow, such as support, scheduling or document handling, and measure the result.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 <!-- SEOAI:SCHEMA:START --><!-- SEOAI:SCHEMA:END -->
-<!-- SEOAI:EXPANDEDCONTENT:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg">
-</div><!-- SEOAI:EXPANDEDCONTENT:END -->
+<!-- SEOAI:EXPANDEDCONTENT:START --><!-- SEOAI:EXPANDEDCONTENT:END -->
 <!-- SEOAI:INTERNALLINKS:START --><section class="py-12 md:py-20">
   <div class="container-custom">
     <h2 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Related Resources</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
       <a href="https://zunkireelabs.com/blog/top-ai-companies-nepal-2026/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">top AI companies</span>
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">Top AI companies in Nepal</span>
         <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
       </a>
       <a href="https://zunkireelabs.com/resources/nepali-language-ai-guide/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">strong English proficiency</span>
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">How AI understands the Nepali language</span>
         <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
       </a>
       <a href="https://zunkireelabs.com/blog/state-of-ai-nepal-2026/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">AI education programs</span>
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">AI adoption trends in Nepal for 2026</span>
         <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
       </a>
       <a href="https://zunkireelabs.com/resources/zenly-case-study/" class="flex items-center justify-between gap-4 py-4 border-b border-gray-200 group">
-        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">enterprise AI infrastructure</span>
+        <span class="text-base text-zunkiree-600 group-hover:text-zunkiree-700 transition-colors">How we built Zennly, an AI booking engine</span>
         <svg class="w-4 h-4 text-gray-400 group-hover:text-zunkiree-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>

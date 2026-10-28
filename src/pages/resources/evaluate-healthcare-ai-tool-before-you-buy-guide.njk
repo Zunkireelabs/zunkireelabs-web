@@ -1,0 +1,167 @@
+---
+layout: resource-content.njk
+title: "How to Evaluate a Healthcare AI Tool Before You Buy"
+description: "A seven-step method and a question checklist for judging a healthcare AI product: define the job, test the evidence, check the false alarms, protect the data, and pilot with supervision."
+permalink: /resources/evaluate-healthcare-ai-tool-before-you-buy-guide/
+slug: evaluate-healthcare-ai-tool-before-you-buy-guide
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Who this guide is for</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This guide is for clinic owners, practice managers and operations leads who have been offered an AI product and need a clear way to decide. It does not rank products. It gives a method you can apply to any of them. This document is general information about published evidence. It is not medical, legal or regulatory advice.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The method draws on published studies and regulator guidance, listed at the end. Where a step is our own suggestion rather than a finding from the studies, we say so.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 1: Define the job in one sentence</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Write down what the tool must do, for whom, and how you will know it worked. “Reduce time spent writing notes” is a job. “Improve patient care” is not.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Then place the job on a risk scale. Administrative tasks, such as answering opening-hours questions or booking, carry less risk than tools that influence a clinical decision, such as flagging a patient as high risk. The more a tool shapes a clinical decision, the more evidence you should demand.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 2: Ask for evidence, then grade it</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Ask the supplier for every study and report behind its claims. Then grade what you receive:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Who ran it?</strong> A study run by the developer deserves a second look. In the sepsis alert example, the 18% lower in-hospital death figure was reported by the developers and their partners, as CIDRAP and Healthcare Dive describe it.</li>
+    <li><strong>What was compared?</strong> The strongest designs compare the tool with current practice. The MASAI mammography trial randomly assigned about 106,000 women to AI-supported or standard double reading.</li>
+    <li><strong>What was measured?</strong> Prefer outcomes that matter. MASAI looked at interval cancers, not only cancers detected.</li>
+    <li><strong>Where and for how long?</strong> The scribe trial ran at one academic medical center for about two months, and UCLA says longer, multi-institution studies are needed.</li>
+    <li><strong>Is it independent?</strong> Ask whether anyone outside the developer has tested the product on patients like yours.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If the supplier can only offer a brochure or a customer testimonial, record that as a finding.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 3: Check the numbers behind the headline</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A single accuracy figure hides trade-offs. Ask for these, in writing:
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Ask for</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Why it matters</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Sensitivity (cases found)</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A low value means real cases are missed</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Positive predictive value (alerts that are right)</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A low value means most alerts are false</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Alert volume per 100 patients</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Shows the workload the tool creates for your staff</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Results by patient group</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">The sources we read did not report how results vary by age, density or other populations, so ask</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The independent check of one sepsis model shows why. Across 38,455 hospitalizations it showed 33% sensitivity and 12% positive predictive value, per the <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781313" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">JAMA Internal Medicine validation</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 4: Check regulation and assurance</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Ask what regulatory status the product holds in your country and what that status does and does not mean. A US 510(k) clearance, for example, means the FDA judged the device substantially equivalent to an existing one, according to CIDRAP.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    In the UK, NHS England’s <a href="https://transform.england.nhs.uk/key-tools-and-info/digital-technology-assessment-criteria-dtac/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Digital Technology Assessment Criteria</a> are used when assuring digital health technologies at procurement. Ask whether the supplier has completed it and ask to see the result. Regulatory duties differ by country and product type, so confirm yours with your own advisers.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 5: Check data protection before any patient data moves</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    In the US, a vendor that creates, receives, maintains or transmits protected health information is generally a business associate, and <a href="https://www.law.cornell.edu/cfr/text/45/164.502" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">45 CFR 164.502(e)</a> requires satisfactory assurance, documented in a written contract, before disclosure. If a vendor wants patient data but will not sign, treat that as a stop sign. In the UK, data concerning health is <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">special category data</a>, and a supplier outside the UK usually means a restricted transfer under <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/international-transfers-a-guide/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">ICO guidance</a>.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Ask where data is stored, whether it trains the vendor’s models, who can read conversations, how long it is kept, and how a breach would be reported. For the technical controls, see the <a href="https://www.law.cornell.edu/cfr/text/45/164.312" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Security Rule safeguards</a>. A longer checklist is in our <a href="/resources/ai-governance-data-privacy-sme-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI governance and data privacy whitepaper</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 6: Define human oversight and scope limits</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Decide in writing who reviews the tool’s output and who is accountable. In the scribe trial, UCLA reports occasional clinically significant inaccuracies in notes, such as omissions and pronoun errors, so each note needs real review by the physician. In the MASAI trial a radiologist read every exam. The sepsis system requires clinician confirmation.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For patient-facing assistants, write what it may answer, what needs fixed wording, and what it must never do. Our <a href="/resources/ai-patient-communication-clinics-whitepaper/" class="font-medium text-[#5a9100] hover:underline">patient communication whitepaper</a> explains this boundary.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Step 7: Run a supervised pilot with a pass mark</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the studies:
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Pick one channel, one team or one clinic site.</li>
+    <li>Write the pass mark before you start, such as a target time saving and a maximum tolerated error rate.</li>
+    <li>Test with fictional or test data first where possible.</li>
+    <li>Have staff review a sample of outputs every week and log every error.</li>
+    <li>Set a review date. Widen scope only if the log supports it, and stop if it does not.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The question checklist</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Take these to any supplier meeting. A plain answer in writing is a good sign. Vague or missing answers are a finding.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Area</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Question</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Job</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What exact task does the tool perform, and what does it not do?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Evidence</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Which studies support it, who ran them, and were they compared with current practice?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Evidence</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Has anyone independent tested it on patients like ours?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Accuracy</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What are sensitivity, positive predictive value and alert volume?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Errors</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What types of error have been seen, and how are they caught?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Regulation</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What status does it hold here, and what does that status cover?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Data</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Will you sign the required data agreement? Where is data stored? Is it used to train models?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Access</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Who at the vendor can read patient conversations, and is access logged?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Oversight</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Who reviews outputs, and can a human take over at any point?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Exit</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Can we export and delete our data if we leave?</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If you would like a second opinion on a product you are considering, you can <a href="/schedule-a-call/" class="font-medium text-[#5a9100] hover:underline">book a call</a> or read about our <a href="/solutions/custom-agent/" class="font-medium text-[#5a9100] hover:underline">custom AI agent work</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.ai.lu.se/article/ai-supported-breast-cancer-screening-new-results-suggest-even-higher-accuracy" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Lund University, AI-supported breast cancer screening: new results suggest even higher accuracy</a>, February 4, 2025</li>
+    <li><a href="https://www.textbookofdigitalhealth.com/news/2026-01-29-masai-ai-mammography.html" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Textbook of Digital Health, AI-supported mammography cuts interval cancers by 12% in first randomised trial of 100,000 women</a>, January 29, 2026</li>
+    <li><a href="https://www.cidrap.umn.edu/sepsis/fda-clears-first-ai-based-early-warning-system-sepsis" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">CIDRAP, FDA clears first AI-based early warning system for sepsis</a></li>
+    <li><a href="https://www.healthcaredive.com/news/bayesian-health-gets-fda-nod-for-ai-sepsis-detection-tool/820107/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Healthcare Dive, Bayesian Health gets FDA nod for AI sepsis detection tool</a>, May 12, 2026</li>
+    <li><a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781313" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Wong et al., External validation of a widely implemented proprietary sepsis prediction model in hospitalized patients</a>, JAMA Internal Medicine, 2021</li>
+    <li><a href="https://www.uclahealth.org/news/release/ucla-study-finds-ai-scribes-may-reduce-documentation-time" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">UCLA Health, UCLA study finds AI scribes may reduce documentation time and improve physician well-being</a>, November 26, 2025</li>
+    <li>Lukac et al., Ambient AI Scribes in Clinical Practice: A Randomized Trial, NEJM AI, 2025 (figures as reported by UCLA Health; we did not read the full paper)</li>
+    <li><a href="https://www.law.cornell.edu/cfr/text/45/164.502" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Legal Information Institute, 45 CFR 164.502, Uses and disclosures of protected health information: general rules</a></li>
+    <li><a href="https://www.law.cornell.edu/cfr/text/45/164.312" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Legal Information Institute, 45 CFR 164.312, Technical safeguards</a></li>
+    <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">ICO, What is special category data?</a> (updated 9 April 2024)</li>
+    <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/international-transfers-a-guide/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">ICO, International transfers, a guide</a> (updated 15 January 2026)</li>
+    <li><a href="https://transform.england.nhs.uk/key-tools-and-info/digital-technology-assessment-criteria-dtac/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">NHS England, Digital Technology Assessment Criteria (DTAC)</a></li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the first question to ask a healthcare AI supplier?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Ask what exact job the tool does and what evidence shows it does that job in a setting like yours. A general claim about accuracy is not enough. Ask for the study, who ran it, and which outcome it measured.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is regulatory clearance enough to buy?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. CIDRAP explains that a US 510(k) clearance means the FDA judged a device substantially equivalent to an existing one, so clearance alone is not an outcomes study. Treat it as one input and still ask for outcome and false-alarm data.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Why do false alarms matter so much?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">An independent validation of one widely used sepsis model found it did not detect sepsis in 67% of patients with sepsis while alerting on 18% of all patients. High alert volume with low accuracy wastes staff time and can lead people to ignore alerts.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How long should a pilot run?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">There is no single correct length. The randomized scribe trial summarized by UCLA ran about two months and its authors called for longer studies, so a pilot should run long enough to see error patterns and set review dates before you start.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "evaluate healthcare AI, healthcare AI buyer checklist, clinical AI evidence, AI vendor questions clinic",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the first question to ask a healthcare AI supplier?", "acceptedAnswer": {"@type": "Answer", "text": "Ask what exact job the tool does and what evidence shows it does that job in a setting like yours. A general claim about accuracy is not enough. Ask for the study, who ran it, and which outcome it measured."}}, {"@type": "Question", "name": "Is regulatory clearance enough to buy?", "acceptedAnswer": {"@type": "Answer", "text": "No. CIDRAP explains that a US 510(k) clearance means the FDA judged a device substantially equivalent to an existing one, so clearance alone is not an outcomes study. Treat it as one input and still ask for outcome and false-alarm data."}}, {"@type": "Question", "name": "Why do false alarms matter so much?", "acceptedAnswer": {"@type": "Answer", "text": "An independent validation of one widely used sepsis model found it did not detect sepsis in 67% of patients with sepsis while alerting on 18% of all patients. High alert volume with low accuracy wastes staff time and can lead people to ignore alerts."}}, {"@type": "Question", "name": "How long should a pilot run?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single correct length. The randomized scribe trial summarized by UCLA ran about two months and its authors called for longer studies, so a pilot should run long enough to see error patterns and set review dates before you start."}}]}</script>

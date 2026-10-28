@@ -205,23 +205,90 @@ hideChrome: true
              below and never redirects). #}
           <div
             x-data="{
+              step: 1,
               email: '',
+              firstName: '',
+              lastName: '',
               submitting: false,
               submitted: false,
               error: false,
+              alreadySubscribed: false,
+              // 'Already subscribed' only applies on the live site. Local and LAN addresses
+              // skip it so signup can be tried again and again; add ?checkDuplicates=1 to
+              // the URL to switch it on while testing.
+              dupCheckEnabled() {
+                const h = location.hostname;
+                const dev = /^(localhost|127\.|10\.|192\.168\.)/.test(h) || /\.local$/.test(h);
+                return !dev || new URLSearchParams(location.search).get('checkDuplicates') === '1';
+              },
+              // Emails already subscribed from this browser, kept as SHA-256 hashes, never as plain text.
+              async emailKey(email) {
+                const data = new TextEncoder().encode(email.trim().toLowerCase());
+                const buf = await crypto.subtle.digest('SHA-256', data);
+                return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+              },
+              knownKeys() {
+                try { return JSON.parse(localStorage.getItem('zunkireeSubscribers') || '[]'); } catch (e) { return []; }
+              },
+              rememberEmail(key) {
+                try {
+                  const list = this.knownKeys().filter(k => k !== key);
+                  list.push(key);
+                  localStorage.setItem('zunkireeSubscribers', JSON.stringify(list.slice(-50)));
+                } catch (e) {}
+              },
+              // True when the CRM says this email is already on the list.
+              async looksDuplicate(res) {
+                if (res.status === 409) return true;
+                let text = '';
+                try { text = await res.clone().text(); } catch (e) {}
+                if (!res.ok) return /already|duplicate|exists/i.test(text);
+                try { const j = JSON.parse(text); return !!(j && (j.duplicate === true || j.already_subscribed === true || j.already_exists === true)); } catch (e) { return false; }
+              },
+              async next() {
+                const el = this.$refs.emailInput;
+                if (!el.checkValidity() || !this.email.trim()) { el.reportValidity(); return; }
+                if (this.dupCheckEnabled()) {
+                  const key = await this.emailKey(this.email);
+                  if (this.knownKeys().includes(key)) { this.alreadySubscribed = true; return; }
+                }
+                this.step = 2;
+                this.$nextTick(() => this.$refs.firstNameInput && this.$refs.firstNameInput.focus());
+              },
               async subscribe() {
-                if (!this.email.trim()) return;
+                if (!this.firstName.trim()) return;
                 this.submitting = true;
                 this.error = false;
                 try {
                   const res = await fetch('/api/submit-lead?form=newsletter', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: this.email.trim() })
+                    body: JSON.stringify({
+                      first_name: this.firstName.trim(),
+                      last_name: this.lastName.trim(),
+                      email: this.email.trim()
+                    })
                   });
+                  if (this.dupCheckEnabled() && await this.looksDuplicate(res)) {
+                    this.rememberEmail(await this.emailKey(this.email));
+                    this.alreadySubscribed = true;
+                    this.step = 1;
+                    return;
+                  }
                   if (!res.ok) throw new Error('Subscribe failed: ' + res.status);
+                  if (this.dupCheckEnabled()) this.rememberEmail(await this.emailKey(this.email));
+                  // Name and email go to the quiz results page for the thank-you
+                  // box. sessionStorage (this tab only), not localStorage, because
+                  // it is personal data.
+                  try {
+                    sessionStorage.setItem('zunkireeSubscriber', JSON.stringify({
+                      firstName: this.firstName.trim(),
+                      lastName: this.lastName.trim(),
+                      email: this.email.trim()
+                    }));
+                  } catch (e) {}
                   this.submitted = true;
-                  window.location.href = '/resources/welcome/';
+                  window.dispatchEvent(new CustomEvent('open-welcome-quiz', { detail: { firstName: this.firstName.trim() } }));
                 } catch (err) {
                   console.error('[newsletter subscribe] error', err);
                   this.error = true;
@@ -232,27 +299,67 @@ hideChrome: true
             }"
           >
             <template x-if="!submitted">
-              <form @submit.prevent="subscribe()" class="space-y-2">
-                <label for="newsletter-email" class="sr-only">Email address</label>
-                <input
-                  type="email"
-                  id="newsletter-email"
-                  x-model="email"
-                  required
-                  placeholder="you@company.com"
-                  class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"
-                >
-                <button
-                  type="submit"
-                  :disabled="submitting"
-                  class="block w-full rounded-md bg-[#76B900] px-6 py-3.5 text-center font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#5a9100] disabled:opacity-60"
-                >
-                  <span x-show="!submitting">Subscribe to Newsletter</span>
-                  <span x-show="submitting">Subscribing…</span>
-                </button>
+              <form x-show="!alreadySubscribed" @submit.prevent="step === 1 ? next() : subscribe()" class="space-y-2">
+                <div x-show="step === 1" class="space-y-2">
+                  <label for="newsletter-email" class="sr-only">Email address</label>
+                  <input
+                    type="email"
+                    id="newsletter-email"
+                    x-ref="emailInput"
+                    x-model="email"
+                    required
+                    placeholder="you@company.com"
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"
+                  >
+                  <button
+                    type="submit"
+                    class="block w-full whitespace-nowrap rounded-md bg-[#76B900] px-4 py-2.5 text-center font-mono text-[12px] uppercase tracking-normal text-white transition-colors duration-200 hover:bg-[#5a9100]"
+                  >
+                    Subscribe to Newsletter
+                  </button>
+                </div>
+                <div x-show="step === 2" x-cloak class="space-y-2">
+                  <p class="text-[13px] leading-snug text-[#6B7280]">
+                    One more step. Add your name to finish subscribing <span class="font-medium text-[#111827]" x-text="email"></span>.
+                  </p>
+                  <label for="newsletter-first-name" class="sr-only">First name</label>
+                  <input
+                    type="text"
+                    id="newsletter-first-name"
+                    x-ref="firstNameInput"
+                    x-model="firstName"
+                    autocomplete="given-name"
+                    :required="step === 2"
+                    placeholder="First name"
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"
+                  >
+                  <label for="newsletter-last-name" class="sr-only">Last name</label>
+                  <input
+                    type="text"
+                    id="newsletter-last-name"
+                    x-model="lastName"
+                    autocomplete="family-name"
+                    placeholder="Last name (optional)"
+                    class="w-full rounded-md border border-navy-100/60 bg-white px-3 py-2.5 text-[14px] text-[#111827] outline-none transition-colors focus:border-[#76B900] focus:ring-1 focus:ring-[#76B900]/30"
+                  >
+                  <button
+                    type="submit"
+                    :disabled="submitting"
+                    class="block w-full whitespace-nowrap rounded-md bg-[#76B900] px-4 py-2.5 text-center font-mono text-[12px] uppercase tracking-normal text-white transition-colors duration-200 hover:bg-[#5a9100] disabled:opacity-60"
+                  >
+                    <span x-show="!submitting">Finish subscribing</span>
+                    <span x-show="submitting">Subscribing…</span>
+                  </button>
+                  <button type="button" @click="step = 1" class="block w-full text-center text-[12px] text-[#6B7280] underline hover:text-[#5a9100]">Use a different email</button>
+                </div>
                 <p x-show="error" x-cloak class="text-[12px] text-red-600">Something went wrong. Please try again.</p>
               </form>
             </template>
+            <div x-show="alreadySubscribed" x-cloak class="rounded-md bg-[#F0F5E8] px-4 py-3.5 text-[13px] leading-snug text-[#3f6600]">
+              <p class="font-semibold">You are already subscribed.</p>
+              <p class="mt-1 text-[#5a9100]"><span class="break-all font-medium" x-text="email"></span> is already on our list, so there is nothing more to do. We will keep sending you new research and launches first.</p>
+              <button type="button" @click="alreadySubscribed = false; step = 1; email = ''" class="mt-2 text-[12px] underline hover:text-[#3f6600]">Use a different email</button>
+            </div>
             <p x-show="submitted" x-cloak class="rounded-md bg-[#F0F5E8] px-4 py-3.5 text-center text-[13px] font-medium text-[#5a9100]">
               You're subscribed — thanks!
             </p>
@@ -504,6 +611,288 @@ hideChrome: true
     </div>
   </div>
 </section>
+
+{# =====================================================
+   WELCOME QUIZ POPUP. Opens over this page after "Finish subscribing"
+   (event: open-welcome-quiz) or when the URL has ?welcome=1. Three short
+   questions about the visitor's business, then three AI knowledge
+   questions: a right answer earns a star, a wrong one shows the correct
+   answer with a one-line reason. Answers stay in this browser
+   (localStorage, enum values only) and are never sent to the CRM.
+   Finishing goes to /resources/welcome/results/.
+   ===================================================== #}
+<style>
+  html.quiz-open [class*="zk-"] { display: none !important; }
+  @keyframes quizStarPop { 0% { transform: scale(.2) rotate(-25deg); opacity: 0; } 60% { transform: scale(1.35) rotate(8deg); opacity: 1; } 100% { transform: scale(1) rotate(0); opacity: 1; } }
+  .quiz-star-pop { animation: quizStarPop .55s cubic-bezier(.2,.9,.3,1.2) both; }
+</style>
+<div x-data="welcomeQuizPopup()" x-init="init()" @open-welcome-quiz.window="open($event.detail)" @keydown.escape.window="close()">
+  <div
+    x-show="isOpen" x-cloak
+    x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+    x-transition:leave="transition duration-150 ease-in" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+    @click.self="close()"
+    class="fixed inset-0 z-[9998] flex items-center justify-center px-4 py-6"
+    style="background: radial-gradient(ellipse at 50% 0%, rgba(118,185,0,.18), transparent 55%), linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #0f172a 100%);"
+    role="dialog" aria-modal="true" aria-labelledby="welcome-quiz-title"
+  >
+    <div
+      x-show="isOpen"
+      x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="translate-y-3 scale-95 opacity-0" x-transition:enter-end="translate-y-0 scale-100 opacity-100"
+      x-ref="card"
+      class="relative max-h-full w-full max-w-[440px] overflow-y-auto rounded-2xl bg-white p-5 shadow-2xl sm:p-6"
+    >
+      <button type="button" @click="close()" class="absolute right-3.5 top-3.5 flex h-7 w-7 items-center justify-center rounded-full text-navy-400 transition-colors hover:bg-navy-50 hover:text-navy-700" aria-label="Close quiz">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="mb-4 flex items-center gap-3 pr-8">
+        <span class="inline-flex items-center rounded-full bg-[#76B900]/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-[#5a9100]" x-text="firstName ? 'Subscribed' : 'Quick quiz'"></span>
+        <span class="ml-auto flex items-center gap-0.5" :aria-label="stars + ' of ' + knowledgeTotal + ' stars'">
+          <template x-for="n in knowledgeTotal" :key="n">
+            <span class="inline-flex" :class="[n <= stars ? 'text-amber-400' : 'text-navy-200', (n === stars && revealed && wasCorrect) ? 'quiz-star-pop' : '']" x-html="starSvg"></span>
+          </template>
+          <span x-show="!done" class="ml-2 font-mono text-[11px] uppercase tracking-wider text-navy-500" x-text="(step + 1) + ' / ' + steps.length"></span>
+        </span>
+      </div>
+      <div x-show="!done">
+      <div class="mb-4 h-1 w-full overflow-hidden rounded-full bg-navy-100">
+        <div class="h-full rounded-full bg-[#76B900] transition-all duration-300" :style="'width: ' + progressPct + '%'"></div>
+      </div>
+
+      <h2 id="welcome-quiz-title" class="text-[20px] font-medium leading-snug tracking-tight text-[#111827]" x-text="firstName ? ('You\'re in, ' + firstName) : 'A quick AI check'"></h2>
+      <p class="mb-4 mt-1 text-[13.5px] leading-snug text-[#6B7280]">Five quick questions on what's new in AI and tech. Get one right and you earn a star.</p>
+
+      <template x-for="(s, i) in steps" :key="s.key">
+        <div x-show="step === i">
+          <p class="mb-1.5 font-mono text-[10px] uppercase tracking-wider text-navy-400" x-text="'Tech and market trends'"></p>
+          <h3 class="mb-3 text-[16px] font-medium leading-snug text-[#111827]" x-text="s.question"></h3>
+          <div class="space-y-2">
+            <template x-for="opt in s.options" :key="opt.value">
+              <button
+                type="button"
+                @click="select(opt.value)"
+                :disabled="revealed"
+                class="flex w-full items-center justify-between gap-3 rounded-lg border px-3.5 py-2.5 text-left text-[14px] transition-colors duration-150 disabled:cursor-default"
+                :class="optionClass(s, opt)"
+              >
+                <span x-text="opt.label"></span>
+                <svg x-show="revealed && s.kind === 'knowledge' && opt.value === s.correct" class="h-4 w-4 flex-shrink-0 text-[#5a9100]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <svg x-show="revealed && s.kind === 'knowledge' && picked === opt.value && opt.value !== s.correct" class="h-4 w-4 flex-shrink-0 text-red-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/></svg>
+              </button>
+            </template>
+          </div>
+
+          <div x-show="revealed && s.kind === 'knowledge'" x-cloak class="mt-3 rounded-lg px-3.5 py-3 text-[13.5px] leading-snug" :class="wasCorrect ? 'bg-[#76B900]/10 text-[#3f6600]' : 'bg-amber-50 text-amber-900'">
+            <template x-if="wasCorrect">
+              <p class="flex items-start gap-2"><span class="quiz-star-pop mt-0.5 inline-flex flex-shrink-0 text-amber-400" x-html="starSvg"></span><span><strong class="font-semibold">Correct, you earned a star.</strong> <span x-text="s.explain"></span></span></p>
+            </template>
+            <template x-if="!wasCorrect">
+              <p><strong class="font-semibold">Not quite.</strong> The answer is <strong class="font-semibold" x-text="correctLabel(s)"></strong>. <span x-text="s.explain"></span></p>
+            </template>
+          </div>
+        </div>
+      </template>
+
+      <div class="mt-3 flex h-8 items-center justify-between">
+        <button type="button" @click="back()" x-show="step > 0 && !revealed" class="font-mono text-[11px] uppercase tracking-wide text-navy-400 hover:text-navy-600">Back</button>
+        <span x-show="!(step > 0 && !revealed)"></span>
+        <button type="button" @click="next()" x-show="revealed" x-cloak class="rounded-md bg-[#76B900] px-4 py-2 font-mono text-[12px] uppercase tracking-normal text-white transition-colors hover:bg-[#5a9100]" x-text="step + 1 >= steps.length ? 'Finish' : 'Next question'"></button>
+      </div>
+      </div>
+
+      {# Finished: the thank-you, in the same card #}
+      <div x-show="done" x-cloak>
+        <div x-show="!perfect" class="mb-2.5 mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-[#76B900]/10 text-[#5a9100]"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+        <div x-show="perfect" x-cloak class="mb-2.5 mt-1 flex items-center gap-3">
+          <svg class="quiz-star-pop h-12 w-12 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+            <defs><linearGradient id="quizGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset=".5" stop-color="#fbbf24"/><stop offset="1" stop-color="#d97706"/></linearGradient></defs>
+            <path d="M18 2h12l6 22H24z" fill="#76B900"/><path d="M46 2H34l-6 22h12z" fill="#5a9100"/>
+            <circle cx="32" cy="40" r="20" fill="url(#quizGold)" stroke="#b45309" stroke-width="1.5"/>
+            <circle cx="32" cy="40" r="15" fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="1.5"/>
+            <path d="M32 30l3.1 6.3 6.9 1-5 4.9 1.2 6.9L32 45.8l-6.2 3.3 1.2-6.9-5-4.9 6.9-1z" fill="#fff" fill-opacity=".95"/>
+          </svg>
+          <div>
+            <p class="font-mono text-[10px] uppercase tracking-wider text-amber-600">Gold medal</p>
+            <p class="text-[17px] font-semibold leading-tight tracking-tight text-[#111827]">Congratulations<span x-show="firstName" x-cloak x-text="', ' + firstName"></span>! A perfect score.</p>
+          </div>
+        </div>
+        <h2 class="text-[19px] font-medium leading-snug tracking-tight text-[#111827]" x-text="subscriber ? ('Thank you for subscribing to Zunkiree Labs' + ((firstName && !perfect) ? ', ' + firstName : '')) : 'Thanks for taking the quiz'"></h2>
+        <p class="mt-1.5 text-[13.5px] leading-snug text-[#6B7280]">You scored <strong class="font-semibold text-[#111827]" x-text="stars + ' of ' + knowledgeTotal"></strong> on the AI quiz<span x-show="perfect" x-cloak>, every answer right</span>.</p>
+
+        <template x-if="subscriber">
+          <div>
+            <div class="mt-4 overflow-hidden rounded-xl border border-navy-100/70">
+              <div class="flex items-center gap-3 bg-sky-50/60 px-4 py-2.5">
+                <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white text-[#5a9100] shadow-sm"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg></span>
+                <div class="min-w-0"><p class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Name</p><p class="truncate text-[14px] font-medium text-[#111827]" x-text="((subscriber.firstName || '') + ' ' + (subscriber.lastName || '')).trim()"></p></div>
+              </div>
+              <div class="flex items-center gap-3 border-t border-navy-100/70 bg-sky-50/60 px-4 py-2.5">
+                <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white text-[#5a9100] shadow-sm"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></span>
+                <div class="min-w-0 flex-1"><p class="font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Email</p><p class="truncate text-[14px] font-medium text-[#111827]" x-text="subscriber.email"></p></div>
+                <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900] text-white" title="Subscribed"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+              </div>
+            </div>
+
+            <h3 class="mb-0.5 mt-4 text-[15px] font-semibold text-[#111827]">You are now connected to us</h3>
+            <p class="mb-2.5 text-[13px] leading-snug text-[#6B7280]">You will hear from us first when we publish something new, before it reaches everyone else.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-3">
+                <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></span>
+                <span class="min-w-0 leading-snug"><span class="block text-[14px] font-semibold text-[#111827]">New research and reports</span><span class="block text-[12.5px] text-[#6B7280]">On AI and technology, with sources</span></span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></span>
+                <span class="min-w-0 leading-snug"><span class="block text-[14px] font-semibold text-[#111827]">Launches and developments</span><span class="block text-[12.5px] text-[#6B7280]">From us and across the AI field</span></span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#76B900]/10 text-[#5a9100]"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></span>
+                <span class="min-w-0 leading-snug"><span class="block text-[14px] font-semibold text-[#111827]">Guides, ebooks and whitepapers</span><span class="block text-[12.5px] text-[#6B7280]">As soon as they go live</span></span>
+              </li>
+            </ul>
+            <p class="mt-3 text-[12px] leading-snug text-[#9CA3AF]">Not seeing us? Check Spam or Promotions and mark it as not spam. You can unsubscribe at any time.</p>
+          </div>
+        </template>
+        <template x-if="!subscriber">
+          <p class="mt-4 text-[14px] leading-snug text-[#6B7280]">Want new research and launches first? Subscribe with your email and we will send them as they go live.</p>
+        </template>
+
+        <div class="mt-4 flex flex-col gap-2.5 sm:flex-row">
+          <a x-show="subscriber" href="/" class="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-[#76B900] px-5 py-2.5 sm:flex-1 font-mono text-[12px] uppercase tracking-normal text-white shadow-sm transition-colors duration-200 hover:bg-[#5a9100]">Go to homepage <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+          <button x-show="subscriber" type="button" @click="close()" class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-lg border border-navy-100 bg-white px-5 py-2.5 font-mono text-[12px] uppercase tracking-normal text-[#374151] transition-colors duration-200 hover:border-[#76B900]/50 hover:bg-sky-50/60 hover:text-[#3f6600] sm:w-auto">Keep browsing</button>
+          <button x-show="!subscriber" x-cloak type="button" @click="close(); $nextTick(() => { const e = document.getElementById('newsletter-email'); if (e) { e.scrollIntoView({ behavior: 'smooth', block: 'center' }); e.focus(); } })" class="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-[#76B900] px-5 py-2.5 sm:flex-1 font-mono text-[12px] uppercase tracking-normal text-white shadow-sm transition-colors duration-200 hover:bg-[#5a9100]">Subscribe now</button>
+          <a x-show="!subscriber" x-cloak href="/" class="inline-flex w-full items-center justify-center whitespace-nowrap rounded-lg border border-navy-100 bg-white px-5 py-2.5 font-mono text-[12px] uppercase tracking-normal text-[#374151] transition-colors duration-200 hover:border-[#76B900]/50 hover:bg-sky-50/60 hover:text-[#3f6600] sm:w-auto">Go to homepage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div x-ref="confetti" class="pointer-events-none fixed inset-0 z-[9999] overflow-hidden" aria-hidden="true"></div>
+  </div>
+</div>
+<script>
+  function welcomeQuizPopup() {
+    return {
+      isOpen: false,
+      done: false,
+      subscriber: null,
+      firstName: '',
+      step: 0,
+      answers: {},
+      picks: {},
+      picked: null,
+      revealed: false,
+      stars: 0,
+      starSvg: '<svg class=\"h-5 w-5\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2.5l2.95 6.2 6.8.9-5 4.7 1.3 6.7L12 17.6l-6.05 3.4 1.3-6.7-5-4.7 6.8-.9L12 2.5z\"/></svg>',
+      steps: [
+        { key: 'trivia1', kind: 'knowledge', correct: 'b', question: 'What does "LLM" stand for?',
+          explain: 'It is a model trained on very large amounts of text so it can read and write language. Chat assistants are built on them.',
+          options: [ { value: 'a', label: 'Linked Logic Machine' }, { value: 'b', label: 'Large Language Model' }, { value: 'c', label: 'Local Language Mapping' } ] },
+        { key: 'trivia2', kind: 'knowledge', correct: 'a', question: 'What does "RAG" stand for in AI?',
+          explain: 'The model looks up your own documents first, so its answer is grounded in your content.',
+          options: [ { value: 'a', label: 'Retrieval-Augmented Generation' }, { value: 'b', label: 'Rapid Agent Generation' }, { value: 'c', label: 'Random Access Graph' } ] },
+        { key: 'trivia3', kind: 'knowledge', correct: 'c', question: 'What is MCP, the protocol AI agents increasingly use to connect to tools and data?',
+          explain: 'The Model Context Protocol is an open standard that lets an AI agent use tools and data through one common interface.',
+          options: [ { value: 'a', label: 'Multi-Cloud Pricing' }, { value: 'b', label: 'Machine Code Processor' }, { value: 'c', label: 'Model Context Protocol' } ] },
+        { key: 'trivia4', kind: 'knowledge', correct: 'b', question: "Which region's AI Act began applying its transparency duties for AI systems on 2 August 2026?",
+          explain: 'The EU AI Act, Regulation (EU) 2024/1689. Its Article 50 transparency duties apply from that date.',
+          options: [ { value: 'a', label: 'United States' }, { value: 'b', label: 'European Union' }, { value: 'c', label: 'India' } ] },
+        { key: 'trivia5', kind: 'knowledge', correct: 'a', question: 'Gartner predicted that over 40% of agentic AI projects could be what by the end of 2027?',
+          explain: 'Canceled, because of rising costs, unclear business value or weak risk controls. It is a prediction, not a fact.',
+          options: [ { value: 'a', label: 'Canceled' }, { value: 'b', label: 'Doubled in budget' }, { value: 'c', label: 'Taken over by regulators' } ] }
+      ],
+      get perfect() { return this.done && this.knowledgeTotal > 0 && this.stars === this.knowledgeTotal; },
+      get knowledgeTotal() { return this.steps.filter(s => s.kind === 'knowledge').length; },
+      get wasCorrect() { const s = this.steps[this.step]; return !!s && s.kind === 'knowledge' && this.picked === s.correct; },
+      correctLabel(s) { const o = s.options.find(o => o.value === s.correct); return o ? o.label : ''; },
+      optionClass(s, opt) {
+        if (s.kind !== 'knowledge' || !this.revealed) {
+          return (this.answers[s.key] === opt.value ? 'border-[#76B900] bg-[#76B900]/10 text-[#5a9100]' : 'border-navy-100/60 text-[#111827] hover:border-[#76B900]/40 hover:bg-sky-50/40');
+        }
+        if (opt.value === s.correct) return 'border-[#76B900] bg-[#76B900]/10 text-[#3f6600]';
+        if (opt.value === this.picked) return 'border-red-300 bg-red-50 text-red-700';
+        return 'border-navy-100/60 text-navy-300';
+      },
+      init() {
+        if (new URLSearchParams(window.location.search).get('welcome') === '1') {
+          this.open({});
+          try { history.replaceState(null, '', window.location.pathname); } catch (e) {}
+        }
+      },
+      open(detail) {
+        let name = detail && detail.firstName ? detail.firstName : '';
+        if (!name) {
+          try { const sub = JSON.parse(sessionStorage.getItem('zunkireeSubscriber') || 'null'); name = sub && sub.firstName ? sub.firstName : ''; } catch (e) {}
+        }
+        try { this.subscriber = JSON.parse(sessionStorage.getItem('zunkireeSubscriber') || 'null'); } catch (e) { this.subscriber = null; }
+        this.done = false;
+        this.firstName = name; this.step = 0; this.answers = {}; this.picks = {}; this.picked = null; this.revealed = false; this.stars = 0; this.isOpen = true;
+        document.documentElement.classList.add('quiz-open');
+        document.documentElement.style.overflow = 'hidden';
+        if (window.__lenis) window.__lenis.stop();
+      },
+      close() {
+        if (!this.isOpen) return;
+        this.isOpen = false;
+        document.documentElement.classList.remove('quiz-open');
+        document.documentElement.style.overflow = '';
+        if (window.__lenis) window.__lenis.start();
+      },
+      get progressPct() { return Math.round((this.step / this.steps.length) * 100); },
+      select(value) {
+        const s = this.steps[this.step];
+        if (s.kind === 'knowledge') {
+          if (this.revealed) return;
+          this.picked = value;
+          this.picks[s.key] = value;
+          this.revealed = true;
+          const right = value === s.correct;
+          this.answers[s.key] = right ? 'correct' : 'wrong';
+          if (right) { this.stars++; this.celebrate(this.stars === this.knowledgeTotal ? 90 : 46); }
+          return;
+        }
+        this.answers[s.key] = value;
+        this.advance();
+      },
+      // Confetti burst from the card. Web Animations API, no library. Skipped
+      // for visitors who ask their device for reduced motion.
+      celebrate(count) {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const layer = this.$refs.confetti, card = this.$refs.card;
+        if (!layer || !card) return;
+        const box = layer.getBoundingClientRect(), r = card.getBoundingClientRect();
+        const ox = r.left - box.left + r.width / 2, oy = r.top - box.top + r.height * 0.45;
+        const colors = ['#76B900', '#fbbf24', '#60a5fa', '#f472b6', '#34d399', '#a78bfa', '#f97316'];
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('i');
+          const w = 6 + Math.random() * 6, h = 8 + Math.random() * 8;
+          el.style.cssText = 'position:absolute;left:' + ox + 'px;top:' + oy + 'px;width:' + w + 'px;height:' + h + 'px;background:' + colors[i % colors.length] + ';border-radius:' + (Math.random() > 0.5 ? '2px' : '50%') + ';opacity:1;';
+          layer.appendChild(el);
+          const ang = Math.PI + Math.random() * Math.PI;            // upward fan
+          const dist = 140 + Math.random() * 300;
+          const dx = Math.cos(ang) * dist, dy = Math.sin(ang) * dist;
+          el.animate([
+            { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+            { transform: 'translate(' + dx + 'px,' + dy + 'px) rotate(' + (Math.random() * 540) + 'deg)', opacity: 1, offset: 0.5 },
+            { transform: 'translate(' + (dx * 1.2) + 'px,' + (dy + 420) + 'px) rotate(' + (Math.random() * 900) + 'deg)', opacity: 0 }
+          ], { duration: 1100 + Math.random() * 800, easing: 'cubic-bezier(.2,.7,.4,1)' }).onfinish = () => el.remove();
+        }
+      },
+      next() { this.advance(); },
+      advance() {
+        this.picked = null; this.revealed = false;
+        this.step++;
+        if (this.step >= this.steps.length) { this.step = this.steps.length - 1; this.finish(); }
+      },
+      back() { if (this.step > 0 && !this.revealed) { this.step--; this.picked = null; } },
+      // The thank-you shows in this same card, so nothing is stored or sent anywhere.
+      finish() {
+        this.done = true;
+        // Gold-medal moment: another burst when the congratulations appears.
+        if (this.stars === this.knowledgeTotal) this.$nextTick(() => this.celebrate(120));
+      }
+    };
+  }
+</script>
 
 {% include "partials/footer-v2.njk" %}
 

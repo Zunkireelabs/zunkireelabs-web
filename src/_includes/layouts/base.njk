@@ -401,6 +401,7 @@
   <!-- Main JS + CSS (bundled via Vite) -->
   <script type="module" src="/assets/js/main.js"></script>
 
+  {% if not hideWidget %}
   {# Zunkiree Search Widget - lazy loaded for performance #}
   <script>
     // Lazy load widget after page is interactive
@@ -437,6 +438,7 @@
       setTimeout(function() { clearInterval(checkInterval); }, 5000);
     }
   </script>
+  {% endif %}
 
 </body>
 </html>
