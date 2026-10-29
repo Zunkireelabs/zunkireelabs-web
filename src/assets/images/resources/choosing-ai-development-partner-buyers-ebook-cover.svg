@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="choosing-ai-development-partner-buyers-ebook-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#choosing-ai-development-partner-buyers-ebook-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">AI PARTNER BUYER EBOOK</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">EBOOK</text>
+  <rect x="70" y="115" width="660" height="260" rx="10" fill="#ffffff" opacity="0.08"/>
+  <text x="100" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.6" text-anchor="start">Criteria</text>
+  <text x="470" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.6" text-anchor="middle">Partner A</text>
+  <text x="570" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.6" text-anchor="middle">Partner B</text>
+  <text x="670" y="150" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.6" text-anchor="middle">Partner C</text>
+  <text x="100" y="195" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Delivery record</text>
+  <line x1="85" y1="210" x2="715" y2="210" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <text x="100" y="245" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Security practices</text>
+  <line x1="85" y1="260" x2="715" y2="260" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <text x="100" y="295" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Clear pricing</text>
+  <line x1="85" y1="310" x2="715" y2="310" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <text x="100" y="345" font-family="system-ui, sans-serif" font-size="17" font-weight="400" fill="#ffffff" opacity="0.9" text-anchor="start">Support after launch</text>
+  <line x1="85" y1="360" x2="715" y2="360" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <circle cx="470" cy="190" r="11" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="470" cy="240" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="470" cy="290" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="470" cy="340" r="11" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="570" cy="190" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="570" cy="240" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="570" cy="290" r="11" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="570" cy="340" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="670" cy="190" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="670" cy="240" r="11" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="670" cy="290" r="11" fill="#22c55e" opacity="0.9"/>
+  <circle cx="670" cy="340" r="11" fill="#22c55e" opacity="0.9"/>
+</svg>

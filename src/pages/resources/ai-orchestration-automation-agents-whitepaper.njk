@@ -1,0 +1,119 @@
+---
+layout: resource-content.njk
+title: "Orchestration, Automation or Agents: Choosing the Least Complexity That Works"
+description: "How automation, AI agents and orchestration differ, what Anthropic, Microsoft and Gartner say, and a simple way to choose the simplest design that does the job."
+permalink: /resources/ai-orchestration-automation-agents-whitepaper/
+slug: ai-orchestration-automation-agents-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Three terms, three jobs</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    These short definitions are ours, built on the sources listed at the end.
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Automation</strong> follows a fixed recipe: if this happens, do that. It is predictable and cheap, and it breaks when the situation changes.</li>
+    <li><strong>An agent</strong> is given a goal and chooses its own steps and tools to reach it. It is flexible, but costs more, runs slower and is harder to predict.</li>
+    <li><strong>Orchestration</strong> is the coordination layer. It decides what runs next, passes context between steps and keeps track of what happened.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What the major sources say</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    In <a href="https://www.anthropic.com/engineering/building-effective-agents" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Building effective agents</a> (December 19, 2024), Anthropic defines workflows as “systems where LLMs and tools are orchestrated through predefined code paths” and agents as “systems where LLMs dynamically direct their own processes and tool usage.”
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Microsoft’s Azure Architecture Center guide, <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI agent orchestration patterns</a> (February 2026), describes a spectrum from a direct model call, to a single agent with tools, to multi-agent orchestration. It says each level adds coordination overhead, latency and cost, and advises using the lowest level of complexity that reliably meets your requirements.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <a href="https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">W.Media reported</a> (June 27, 2025) on a Gartner prediction that over 40% of agentic AI projects could be canceled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls. Gartner also warns of “agent washing”. Predictions are not facts, but the caution is useful.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Orchestration patterns</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Microsoft names five orchestration patterns: sequential, concurrent, group chat, handoff and magentic. Anthropic lists five workflow patterns: prompt chaining, routing, parallelization, orchestrator-workers and evaluator-optimizer. They overlap. Prompt chaining resembles a sequential pipeline, and parallelization resembles concurrent work.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For most small and mid-sized businesses the most common shape is the simplest: a process that crosses several tools, such as a lead moving from a CRM to an email sequence to a campaign, where something has to carry updates between them. See our posts on <a href="/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/" class="font-medium text-[#5a9100] hover:underline">disconnected tools</a> and on <a href="/blog/what-is-orca-workflow-orchestration-layer-explained/" class="font-medium text-[#5a9100] hover:underline">what an orchestration layer does</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The plumbing is being standardised</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Two open protocols address different needs. Model Context Protocol (MCP) connects an agent to tools and data, while Google’s Agent2Agent (A2A) protocol lets agents connect with each other. <a href="https://sdtimes.com/ai/googles-agent2agent-protocol-finds-new-home-at-the-linux-foundation/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">SD Times reported</a> on June 23, 2025 that Google was donating A2A to the Linux Foundation. On December 9, 2025, Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">announced</a> it was donating MCP to the new Agentic AI Foundation under the Linux Foundation.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Both standards are young. Questions about agent identity, delegated authority and security are still being worked out, which is why we pair this paper with our <a href="/resources/mcp-agent-security-checklist-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">MCP and agent security checklist</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">A simple way to choose</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own guide, not a finding from the sources. Start at the top and stop at the first level that does the job:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>One model call</strong> is enough for many text tasks such as summarising or drafting.</li>
+    <li><strong>Plain automation</strong> fits simple, repetitive, well-defined tasks.</li>
+    <li><strong>A single agent with tools</strong> fits tasks where the steps vary but the goal is clear and a wrong action is cheap to undo.</li>
+    <li><strong>Orchestration</strong> fits processes that cross several tools or need several steps, agents or people to hand work to each other.</li>
+    <li><strong>Multi-agent designs</strong> are worth their extra cost only when a simpler design has been tried and does not work.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Whatever you choose, keep an owner for the outcome and a person approving anything costly. See our whitepaper on <a href="/resources/ai-agents-for-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI agents for business</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.anthropic.com/engineering/building-effective-agents" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Anthropic, Building effective agents</a>, December 19, 2024</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Learn, AI agent orchestration patterns</a>, February 2026</li>
+    <li><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Anthropic, Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>, December 9, 2025</li>
+    <li><a href="https://sdtimes.com/ai/googles-agent2agent-protocol-finds-new-home-at-the-linux-foundation/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">SD Times, Google’s Agent2Agent protocol finds new home at the Linux Foundation</a>, June 23, 2025</li>
+    <li><a href="https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">W.Media, Over 40 percent of Agentic AI projects could face the axe by end of 2027: Gartner</a>, June 27, 2025</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the difference between automation and an AI agent?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Automation follows steps that people defined in advance. An agent is given a goal and chooses its own steps and tools. Anthropic describes workflows as LLMs and tools orchestrated through predefined code paths, and agents as LLMs that dynamically direct their own processes.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is AI orchestration?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It is the coordination layer that decides which step, tool or agent runs next, passes context between them and tracks what happened. It can coordinate fixed workflows, agents, or both.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Do I need AI agents?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not always. Microsoft’s guidance says to use the lowest level of complexity that reliably meets your requirements, and simple repeatable tasks are usually better served by plain automation or a single model call.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is agent washing?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Gartner uses the term for rebranding existing assistants, chatbots or RPA as agents. Ask a vendor which steps the system decides on its own and which are fixed.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI orchestration, AI agents vs automation, agentic AI, multi-agent orchestration, workflow automation",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between automation and an AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Automation follows steps that people defined in advance. An agent is given a goal and chooses its own steps and tools. Anthropic describes workflows as LLMs and tools orchestrated through predefined code paths, and agents as LLMs that dynamically direct their own processes."}}, {"@type": "Question", "name": "What is AI orchestration?", "acceptedAnswer": {"@type": "Answer", "text": "It is the coordination layer that decides which step, tool or agent runs next, passes context between them and tracks what happened. It can coordinate fixed workflows, agents, or both."}}, {"@type": "Question", "name": "Do I need AI agents?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. Microsoft’s guidance says to use the lowest level of complexity that reliably meets your requirements, and simple repeatable tasks are usually better served by plain automation or a single model call."}}, {"@type": "Question", "name": "What is agent washing?", "acceptedAnswer": {"@type": "Answer", "text": "Gartner uses the term for rebranding existing assistants, chatbots or RPA as agents. Ask a vendor which steps the system decides on its own and which are fixed."}}]}</script>

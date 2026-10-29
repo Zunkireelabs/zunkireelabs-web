@@ -1,0 +1,192 @@
+---
+layout: resource-content.njk
+title: "AI Agents for Small Business: A Plain-English Playbook"
+description: "A plain-English playbook for owners: what an AI agent is, what to automate first, how to think about cost, who you need on your side and a first 90 days path."
+permalink: /resources/ai-agents-small-business-playbook-ebook/
+slug: ai-agents-small-business-playbook-ebook
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Who this playbook is for</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This playbook is for owners and managers who run a business rather than a software team. You have heard a great deal about AI agents and want to know what to do next, what it will cost in effort and money, and how to avoid the mistakes that sink projects.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    It covers what an agent is, what to automate first, how to think about cost, the people side, safety, and a path for your first 90 days. It draws on engineering guidance from Anthropic and Microsoft, an analyst forecast reported by W.Media, security research and news coverage, and our own published case studies. All of them are listed in the Sources section. Where something is our opinion and not a finding from those sources, we say so.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    It does not repeat the <a href="/resources/ai-agents-for-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI agents for business whitepaper</a>, which goes deeper on how agents are built and bounded. Read this first if you are still deciding whether to start.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What an AI agent is, in plain English</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Anthropic, in its engineering post <a href="https://www.anthropic.com/engineering/building-effective-agents" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Building effective agents</a>, separates two ideas. Workflows are “systems where LLMs and tools are orchestrated through predefined code paths”. Agents are “systems where LLMs dynamically direct their own processes and tool usage”. In short: a workflow follows a recipe someone wrote, and an agent decides its own steps.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Term</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Plain meaning</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Fits when</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Automation</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Follows a fixed recipe: if this happens, do that.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">The task is simple, repetitive and well defined.</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Agent</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Given a goal, picks its own steps and tools.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">The path to the goal varies and a person can check the result.</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Orchestration</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Coordinates several steps, tools or agents so work finishes across systems.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A process crosses several tools and people copy status between them.</td></tr></tbody></table></div>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    These short definitions are ours, built on the Anthropic and Microsoft guidance. Both vendors give the same advice about choosing between them. Anthropic recommends finding “the simplest solution possible, and only increasing complexity when needed”. Microsoft’s Azure Architecture Center guide, <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI agent orchestration patterns</a>, says to use “the lowest level of complexity that reliably meets your requirements”.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    One more caution. Gartner, as reported by W.Media, warns of “agent washing”, the rebranding of assistants, chatbots and robotic process automation as agents. It estimates that only about 130 of the thousands of agentic AI vendors have genuine capabilities. Ask any supplier which steps the system decides on its own and which are scripted.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What to automate first</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: pick the first workflow by checking it against six questions.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Is it repeated often?</strong> A task done twice a month will not repay the setup effort.</li>
+    <li><strong>Is “done” easy to define?</strong> “Booking confirmed in the diary” is clear. “Customer happy” is not.</li>
+    <li><strong>Is a mistake cheap and reversible?</strong> Start where a wrong answer costs a minute, not a client.</li>
+    <li><strong>Can a person check the result quickly?</strong> If checking takes as long as doing, nothing is saved.</li>
+    <li><strong>Is the information already written down?</strong> Documents, price lists and policies give an agent something to work from.</li>
+    <li><strong>Does it avoid money, deletion and legal commitments?</strong> Keep those with people at first.</li>
+  </ul>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Two starting points appear in our published guidance. The first is answering customer questions from your own documents. The second is booking appointments. In <a href="/blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/" class="font-medium text-[#5a9100] hover:underline">our guide to AI voice agents</a> we describe why booking suits automation: missed calls are lost bookings in appointment-led businesses, and much of a reception phone is rescheduling and cancelling, not new bookings. That guide also says the idea does not fit when your booking rules are simple enough for a booking link.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our published case studies show what this can look like. The <a href="/resources/khems-cleaning-case-study/" class="font-medium text-[#5a9100] hover:underline">Khems Cleaning case study</a> reports a 70% increase in bookings after automated scheduling and cancellation backfill, and the <a href="/resources/cms-group-case-study/" class="font-medium text-[#5a9100] hover:underline">CMS Group case study</a> reports 85% of document workflows automated. These are results for those clients. Yours will differ, so treat them as examples of where to look, not as forecasts.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What it costs</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    We are not going to quote prices. None of the sources behind this playbook publishes an agent price list, and a number we invented would mislead you. What we can give you is a way to think about cost.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <strong>Complexity costs money.</strong> Anthropic notes that agentic systems “often trade latency and cost for better task performance”. Microsoft says each step up the ladder, from a single model call to a single agent to several coordinated agents, adds coordination overhead, latency and cost. Gartner, as reported by W.Media, predicted in June 2025 that over 40% of agentic AI projects could be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our published buying guidance, <a href="/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/" class="font-medium text-[#5a9100] hover:underline">AI agent pricing: per seat, per task or per outcome</a>, describes three common ways suppliers charge. It is practical guidance, not market data.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Model</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">You pay for</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">The hard question</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per seat</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Access for a named user</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">How many seats do we really need?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per task</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Each unit of work attempted or completed</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What counts as one task?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per outcome</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A result you defined</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Who decides it was delivered?</td></tr></tbody></table></div>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: budget for more than the supplier’s fee. Allow for setup and connecting your systems, for staff time spent reviewing the agent’s work, and for monitoring after launch. Before you sign, ask how failed or retried work is billed, whether there is a minimum commitment, what happens if volume doubles or halves, whether you can see a log of everything the agent did, and what happens to your data if you leave.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The best comparison is one real workflow. Estimate its monthly volume and what it costs you now, including staff time, then ask each supplier to price that same job. Rate cards measure different things; quotes for the same workflow can be compared.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The people side</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    An agent does not remove people from the process. It changes what they do. The sources and our experience point to three roles you need, even in a very small business.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>An owner.</strong> One named person is accountable for the agent’s results, just as for a member of staff. Our guidance written after the reported FTC probe says the same: name an owner for each agent.</li>
+    <li><strong>A reviewer.</strong> Someone checks the agent’s output, especially at first. Among software developers, Stack Overflow’s 2025 survey found that 66% of respondents pointed to AI output that is “almost right, but not quite”, and 45.2% said debugging AI-generated code takes more time. That is a developer survey, but the lesson carries over: drafts arrive fast and checking still takes skilled attention.</li>
+    <li><strong>The people whose work changes.</strong> Tell them early what the agent will handle and what stays with them. In our CMS Group case study, staff now review exceptions instead of processing every document by hand. That is a change in the job, and it works best when people hear about it before it happens.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our post on <a href="/blog/ai-coding-agents-2026-how-developers-actually-work-now/" class="font-medium text-[#5a9100] hover:underline">how developers use coding agents</a> cites The Pragmatic Engineer’s survey of 906 engineers, where 95% used AI tools weekly. Our own reading: agents change who does the typing, not who is accountable. You still own the result.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Keeping it safe</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    An agent that acts needs limits. Four habits cover most of the risk, and they come from our published guidance on the FTC reports and on agent containment.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Least access.</strong> Start read-only and widen access deliberately. An agent that cannot reach a system cannot damage it.</li>
+    <li><strong>Log everything.</strong> Keep a record of what the agent did and with which data, so you can audit and explain it later.</li>
+    <li><strong>Approval for high-impact steps.</strong> Payments, deletions, outbound messages and anything customer-facing should need a person’s approval.</li>
+    <li><strong>Limits the agent cannot change.</strong> A permission set in the system the agent runs in is stronger than an instruction in a prompt.</li>
+  </ul>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    On the news: ABC News and SecurityWeek reported on September 30, 2026 that the US Federal Trade Commission has opened an investigation into AI companies including OpenAI and Anthropic over possible consumer risks. SecurityWeek, citing the New York Post, said it focuses on agents going beyond human instructions. These are reports, not findings against any company.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If your agent will connect to your calendar, customer data or internal tools through the Model Context Protocol (MCP), the standard agents use to reach other software, two public resources help. OWASP’s <a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">MCP Top 10</a> lists ten risks and is still in beta. Our <a href="/blog/mcp-specification-security-what-changed/" class="font-medium text-[#5a9100] hover:underline">post on the 2026 MCP specification</a> lists three questions to ask a supplier: which MCP version their servers run, how they verify client-supplied state, and what is logged when an agent calls a tool. For the full list, see the <a href="/resources/mcp-agent-security-checklist-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">MCP and AI agent security checklist</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Your first 90 days</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: treat the first 90 days as three stages with a decision at the end of each.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Days</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Focus</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Output</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">1 to 30</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Pick one workflow, record today’s numbers, run a small pilot with a person reviewing every result.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A baseline and a pilot result. See our <a href="/resources/run-30-day-ai-agent-pilot-guide/" class="font-medium text-[#5a9100] hover:underline">30-day pilot guide</a>.</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">31 to 60</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Fix what the pilot exposed. Widen the scope a little. Move from reviewing every result to reviewing a sample, if the numbers allow.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A written list of what the agent may and may not do, plus a log you actually read.</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">61 to 90</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Decide: keep, expand, or stop. If you expand, choose the next workflow with the same six questions.</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A one-page decision with cost, time saved and problems found.</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Do not add a second workflow until the first one has run for several weeks without surprises. If a process crosses several tools, orchestration may be the real need. Microsoft and Anthropic both advise adding that only when a simpler design falls short.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Warning signs, and when to wait</h2>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>The supplier cannot say which steps the system decides by itself. That may be agent washing.</li>
+    <li>Nobody in your business can say what “done” looks like for the task.</li>
+    <li>The agent needs broad access on day one, with no way to start smaller.</li>
+    <li>There is no log you can read, and no way for a person to step in.</li>
+    <li>Your rules are simple enough that a booking link or a fixed automation would do the job.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If you are unsure, talk it through with us. We build <a href="/solutions/custom-agent/" class="font-medium text-[#5a9100] hover:underline">custom AI agent development</a> and will say so if you do not need one. You can <a href="/schedule-a-call/" class="font-medium text-[#5a9100] hover:underline">book a call</a> at any time.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.anthropic.com/engineering/building-effective-agents" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Building effective agents</a>, Anthropic, December 19, 2024</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI agent orchestration patterns</a>, Microsoft Learn, Azure Architecture Center, February 2026</li>
+    <li><a href="https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Over 40 percent of Agentic AI projects could face the axe by end of 2027: Gartner</a>, W.Media, June 27, 2025 (reporting Gartner’s June 25, 2025 press release)</li>
+    <li><a href="https://abcnews.com/Politics/ftc-opens-probe-safety-ai-including-anthropic-open/story?id=136896227" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">FTC opens probe into safety of AI, including Anthropic and OpenAI</a>, ABC News, September 30, 2026</li>
+    <li><a href="https://www.securityweek.com/ftc-is-investigating-openai-and-anthropic-over-possible-risks-to-consumers/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">FTC is Investigating OpenAI and Anthropic Over Possible Risks to Consumers</a>, SecurityWeek, September 30, 2026</li>
+    <li><a href="https://survey.stackoverflow.co/2025/ai" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">2025 Developer Survey: AI</a>, Stack Overflow, 2025</li>
+    <li><a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI Tooling for Software Engineers in 2026</a>, The Pragmatic Engineer, March 3, 2026</li>
+    <li><a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">MCP Top 10 project</a>, OWASP (beta, 2025 edition labels)</li>
+    <li><a href="/blog/mcp-specification-security-what-changed/" class="font-medium text-[#5a9100] hover:underline">MCP Security in 2026: What the New Specification Fixed and What It Opened Up</a>, Zunkiree Labs, October 27, 2026</li>
+    <li><a href="/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/" class="font-medium text-[#5a9100] hover:underline">AI Agent Pricing: Per Seat, Per Task or Per Outcome?</a>, Zunkiree Labs (buying guidance, not market data)</li>
+    <li><a href="/blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/" class="font-medium text-[#5a9100] hover:underline">AI Voice Agent Appointment Booking</a>, Zunkiree Labs</li>
+    <li><a href="/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/" class="font-medium text-[#5a9100] hover:underline">FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do</a>, Zunkiree Labs, October 2026</li>
+    <li>Our published case studies: <a href="/resources/khems-cleaning-case-study/" class="font-medium text-[#5a9100] hover:underline">Khems Cleaning case study</a> and <a href="/resources/cms-group-case-study/" class="font-medium text-[#5a9100] hover:underline">CMS Group case study</a>, Zunkiree Labs</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is an AI agent in plain English?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Software that is given a goal and chooses its own steps and tools to reach it. Anthropic describes agents as systems where the model dynamically directs its own processes and tool usage, while a workflow follows steps defined in advance by people. A chatbot answers questions; an agent can also take actions such as booking an appointment.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should a small business automate first?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">One repeatable workflow with a clear definition of done, where a mistake is cheap and a person can check the result. Answering customer questions from your own documents and booking appointments are two examples we use. Do not start with payments, deletions or anything customer-facing without approval.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How much does an AI agent cost?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">The sources behind this playbook publish no price lists, so we give none. What they do show is that more complex designs add cost and latency, and that Gartner expects over 40% of agentic AI projects to be cancelled by the end of 2027, partly because of escalating costs. Ask each supplier to price one real workflow and compare the quotes.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Do I need to hire a technical person before I start?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not necessarily, but you do need a named owner inside the business who is accountable for the result, and a person who reviews the agent's work. The technical build can come from a supplier. What you cannot hand over is the decision about what the agent is allowed to do.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI agents for small business, AI agent playbook, what to automate first, AI agent cost, AI agent pilot, small business automation",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an AI agent in plain English?", "acceptedAnswer": {"@type": "Answer", "text": "Software that is given a goal and chooses its own steps and tools to reach it. Anthropic describes agents as systems where the model dynamically directs its own processes and tool usage, while a workflow follows steps defined in advance by people. A chatbot answers questions; an agent can also take actions such as booking an appointment."}}, {"@type": "Question", "name": "What should a small business automate first?", "acceptedAnswer": {"@type": "Answer", "text": "One repeatable workflow with a clear definition of done, where a mistake is cheap and a person can check the result. Answering customer questions from your own documents and booking appointments are two examples we use. Do not start with payments, deletions or anything customer-facing without approval."}}, {"@type": "Question", "name": "How much does an AI agent cost?", "acceptedAnswer": {"@type": "Answer", "text": "The sources behind this playbook publish no price lists, so we give none. What they do show is that more complex designs add cost and latency, and that Gartner expects over 40% of agentic AI projects to be cancelled by the end of 2027, partly because of escalating costs. Ask each supplier to price one real workflow and compare the quotes."}}, {"@type": "Question", "name": "Do I need to hire a technical person before I start?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily, but you do need a named owner inside the business who is accountable for the result, and a person who reviews the agent's work. The technical build can come from a supplier. What you cannot hand over is the decision about what the agent is allowed to do."}}]}</script>

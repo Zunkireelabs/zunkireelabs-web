@@ -205,12 +205,12 @@ bodyClass: "v2-inter"
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/25 to-transparent"></div>
           <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
             {% if category %}
-            <span class="mb-4 inline-flex items-center rounded-full bg-[#76B900]/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#c3f562] backdrop-blur-sm">
+            <span class="mb-4 hidden items-center rounded-full bg-[#76B900]/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#c3f562] backdrop-blur-sm sm:inline-flex">
               {{ category }}
             </span>
             {% endif %}
             {% if pillar %}
-            <span class="mb-4 ml-2 inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+            <span class="mb-4 ml-2 hidden items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm sm:inline-flex">
               {{ pillar | pillarLabel(lang) }}
             </span>
             {% endif %}
@@ -295,6 +295,16 @@ bodyClass: "v2-inter"
             .prose thead th:last-child { border-top-right-radius: 1rem; }
             .prose th, .prose td { padding: 0.85rem 1.25rem; border-bottom: 1px solid #e3eaec; }
             .prose tr:last-child td { border-bottom: none; }
+
+            /* On phones a wide table was clipped by prose-table:overflow-hidden
+               with no way to see the rest. Let the table scroll sideways inside
+               its own box instead (swipe). Long values such as URLs stay on one
+               line so the columns read cleanly. */
+            @media (max-width: 767px) {
+              .prose table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+              .prose td code, .prose th { white-space: nowrap; }
+              .prose td, .prose th { padding: 0.75rem 1rem; }
+            }
 
             /* Action Center's expand-content generator wraps its section in
                its own py-12/md:py-20 padding, authored for a plain page body

@@ -1,0 +1,211 @@
+---
+layout: resource-content.njk
+title: "State of AI Agent Infrastructure 2026: Protocols, Security and Pricing"
+description: "A digest of published sources on AI agent infrastructure in 2026: protocol changes, security findings, containment tools, regulatory attention, pricing models and what to do."
+permalink: /resources/state-of-ai-agent-infrastructure-2026-report/
+slug: state-of-ai-agent-infrastructure-2026-report
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What this digest covers</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Agents are moving from demos into infrastructure: protocols that connect them to tools, security guidance, containment tools, regulatory attention and new ways to charge for them. This report summarises what published sources said on those topics between mid-2025 and October 2026.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    It is a digest, not original research. Figures come from the sources listed at the end, and many are vendors’ own claims. We mark our own readings as ours. Our case-study results are not used here as evidence about the market.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Key developments at a glance</h2>
+  <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Date</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Development</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Source</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Dec 9, 2025</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Anthropic donates MCP to the new Agentic AI Foundation under the Linux Foundation</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Anthropic</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">June 25, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Akamai researchers analyse the MCP 2026-07-28 specification release candidate</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">SiliconANGLE</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Sept 30, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Reports of an FTC investigation into AI companies over agents that exceed instructions</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">ABC News, SecurityWeek</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Oct 1, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Funding stories on agent security testing and messaging-based agents</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">TechCrunch</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Oct 7, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Microsoft Execution Containers reported generally available on Windows 11</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Windows Report, eSecurity Planet, Petri</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Oct 10 to 22, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Cloudflare adds skills, events and step-up authorization to its MCP server and retires /sse</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Cloudflare</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Oct 21, 2026</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">NVIDIA announces the OpenShell Reference Architecture</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">NVIDIA</td></tr></tbody></table></div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Protocols: MCP and A2A move to neutral homes</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Two open protocols are emerging. According to SD Times, Google’s Agent2Agent (A2A) protocol is meant to let agents connect with any other agent built on it, and on June 23, 2025 it was reported that Google was donating A2A to the Linux Foundation. Anthropic’s Model Context Protocol (MCP) connects agents to data sources and applications. On December 9, 2025, Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">announced</a> it was donating MCP to the Agentic AI Foundation under the Linux Foundation, co-founded by Anthropic, Block and OpenAI.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Anthropic says there are more than 10,000 active public MCP servers and that MCP is adopted by products including ChatGPT, Cursor, Gemini, Microsoft Copilot and Visual Studio Code. These adoption figures are Anthropic’s own.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own reading, not a finding from the sources: neutral hosting and wide support lower the risk of being locked into one vendor’s way of connecting agents, though standards are still young. Microsoft’s architecture guidance and Anthropic’s engineering post both say to use the least complexity that works, so a protocol is a tool for when you need it, not a goal.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Security: a safer protocol is not a safe deployment</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    SiliconANGLE reported on June 25, 2026 on Akamai research into the MCP 2026-07-28 specification. It describes the revision as the biggest architectural change to the protocol since Anthropic created it, with a 12-month deprecation window for some legacy features.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Removed or limited:</strong> protocol-managed sessions that used the Mcp-Session-Id header, unsolicited server-initiated prompts, and legacy password and implicit OAuth grants, now replaced by mandatory OAuth 2.1 with PKCE.</li>
+    <li><strong>Opened up:</strong> Akamai’s researchers listed six areas for implementers: client-held state, unsigned _meta objects, header and body mismatch, x-mcp-header mapping, MCP Apps panels and long-running “hit-and-run” tasks.</li>
+  </ul>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The common thread is that checks the protocol used to perform now fall to whoever builds and runs the server. This is analysis of a specification, not a report of attacks in the wild.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    OWASP has also started an <a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">MCP Top 10</a>, in beta, covering secrets, over-broad permissions, tool poisoning, supply chain risk, command injection, prompt injection, weak authentication, missing logs, unapproved servers and data leaking between tasks. Its labels carry the 2025 edition and may change.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Vendors add controls: Cloudflare in October 2026</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Cloudflare’s changelog records four changes to its MCP servers in October: skills served over MCP (October 10), Workers error alerts pushed to agents as events (October 13), step-up authorization (October 19) and retirement of the /sse endpoint in favour of /mcp (October 22).
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Step-up authorization means a client can connect with minimal scopes and approve more only when a task needs them. Cloudflare also reports, in <a href="https://blog.cloudflare.com/code-mode-mcp/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">its February 2026 Code Mode post</a>, that exposing its more than 2,500 API endpoints as separate tools would use about 1.17 million tokens of context, against about 1,000 tokens with its approach. All of this is vendor-reported and untested by us.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own reading, not a finding from the sources: scoped access, signed alerts and a single supported endpoint are the controls a security reviewer would ask for, and it is useful to see them arriving in platforms.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Containment: limits enforced outside the agent</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Two announcements share one idea: do not rely on the agent to police itself.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Microsoft Execution Containers (MXC).</strong> Windows Report, eSecurity Planet and Petri report general availability on Windows 11 on October 7, 2026. Policies limit which files, network destinations and resources an agent can reach, with enforcement outside the agent. Learning and Permissive modes record attempted access so a team can refine a policy before enforcing it. Reported as not yet generally available: central policy management through Intune for process containers and Entra-based agent identity. We could not open Microsoft’s own announcement page, so check Microsoft’s documentation before relying on details.</li>
+    <li><strong>NVIDIA OpenShell Reference Architecture.</strong> Announced October 21, 2026 at GTC Berlin, described by NVIDIA as a way to “build, contain, observe and enforce safe agents”. It pairs software with hardware, including BlueField-4 DPUs running NVIDIA Sentry for enforcement outside the agent’s own software. Reporting says the software is open source under Apache 2.0. The safety and cost claims are NVIDIA’s own, and no prices were published.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Participation by other companies in a reference architecture is not the same as production deployment. Watch for named deployments.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Regulatory and trust signals</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    ABC News and SecurityWeek reported on September 30, 2026 that the US Federal Trade Commission has opened an investigation into AI companies including OpenAI and Anthropic. SecurityWeek, citing the New York Post, said an FTC spokesperson confirmed it and that it focuses on agents going beyond human instructions. Details are thin and nothing reported is a finding against any company.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Fortune reported on October 2 that two GovAI researchers say the most powerful models are often run in labs with key safeguards switched off, so published safety tests may not reflect behaviour in practice. These accounts relate to controlled tests, not customer deployments.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Agents reach customers, and the market splits its bets</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    TechCrunch reported on October 1, 2026 that Armadin raised $255.5 million to run always-on agent swarms for security testing, and that Photon raised $4.5 million to build agents that work inside messaging apps. Photon’s claims of more than 40,000 developers and tenfold revenue growth in four months are the company’s own. Airbnb’s CEO told TechCrunch he sees interoperability through MCP as the prize but said that using Airbnb through consumer agents “doesn't work very well” yet.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    On how teams work, The Pragmatic Engineer’s March 2026 survey of 906 engineers found 70% used two to four AI tools at once. The a16z survey of 100 Global 2000 CIOs, published January 30, 2026, found 81% of enterprises using three or more model families. Samples differ, so do not compare the two directly. They suggest mixing tools is normal.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Pricing: no price lists, three models</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    None of the sources above publishes an agent price list. NVIDIA reported efficiency gains for its infrastructure but no prices. Gartner, as reported by W.Media, expects over 40% of agentic AI projects to be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    What exists is a framework. Our published buying guidance, which is practical guidance and not market data, compares three models.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Model</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">You pay for</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Hardest question</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per seat</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Access for a named user</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">How many seats do we need?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per task</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Each unit of work</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">What counts as one task?</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Per outcome</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">A result you defined</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Who decides it was delivered, and what happens to failed attempts?</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: compare suppliers by asking each to price one real workflow, and ask how failed and retried work is billed.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Limits of this digest</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Many figures are vendor claims. We have not tested the products mentioned.</li>
+    <li>Security findings are analysis of specifications and beta lists, not incident data.</li>
+    <li>The FTC story is a set of reports, and details may change.</li>
+    <li>We found no independent data on agent prices.</li>
+    <li>Surveys use different samples and dates and should not be compared directly.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What to do</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Ask each supplier which MCP version their servers run, how they verify client-supplied state and what is logged when an agent calls a tool.</li>
+    <li>Give agents the least access that works, and prefer limits enforced outside the agent.</li>
+    <li>Observe before you enforce: record what the agent does for a period, then write the policy.</li>
+    <li>Name an owner, keep a log and require approval for high-impact steps.</li>
+    <li>Keep tool definitions and workflows portable so you can change vendor.</li>
+    <li>Start with one workflow. Our <a href="/resources/run-30-day-ai-agent-pilot-guide/" class="font-medium text-[#5a9100] hover:underline">30-day pilot guide</a> shows how.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For more, see the <a href="/resources/mcp-agent-security-checklist-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">MCP and AI agent security checklist</a> and the <a href="/resources/ai-agents-for-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI agents for business whitepaper</a>. We build <a href="/solutions/custom-agent/" class="font-medium text-[#5a9100] hover:underline">custom AI agent development</a>; you can <a href="/schedule-a-call/" class="font-medium text-[#5a9100] hover:underline">book a call</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Donating the Model Context Protocol and establishing the Agentic AI Foundation</a>, Anthropic, December 9, 2025</li>
+    <li><a href="https://sdtimes.com/ai/googles-agent2agent-protocol-finds-new-home-at-the-linux-foundation/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Google’s Agent2Agent protocol finds new home at the Linux Foundation</a>, SD Times, June 23, 2025</li>
+    <li><a href="https://siliconangle.com/2026/06/25/new-mcp-specification-kills-old-risks-opens-fresh-attack-surfaces-akamai-finds/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">New MCP specification kills old risks, opens fresh attack surfaces, Akamai finds</a>, SiliconANGLE, June 25, 2026</li>
+    <li><a href="https://modelcontextprotocol.io/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Model Context Protocol</a>, project site</li>
+    <li><a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">MCP Top 10 project</a>, OWASP (beta, 2025 edition labels)</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-10-cloudflare-mcp-skills/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare API MCP server serves Cloudflare skills</a>, Cloudflare changelog, October 10, 2026</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-13-cloudflare-mcp-events/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare API MCP server sends Workers Issues as MCP Events</a>, Cloudflare changelog, October 13, 2026</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare API MCP server now supports step-up authorization</a>, Cloudflare changelog, October 19, 2026</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare MCP servers no longer serve /sse</a>, Cloudflare changelog, October 22, 2026</li>
+    <li><a href="https://blog.cloudflare.com/code-mode-mcp/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Code Mode: give agents an entire API in 1,000 tokens</a>, Matt Carey, Cloudflare blog, February 20, 2026</li>
+    <li><a href="https://windowsreport.com/microsoft-execution-containers-mxc-is-now-generally-available-on-windows-11/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Execution Containers (MXC) Is Now Generally Available on Windows 11</a>, Windows Report</li>
+    <li><a href="https://www.esecurityplanet.com/endpoint-security/news-microsoft-execution-containers-for-ai-agents-reach-ga/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Execution Containers for AI Agents Reach GA on Windows 11</a>, eSecurity Planet</li>
+    <li><a href="https://petri.com/?p=780559" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Makes Execution Containers Generally Available for AI Agents</a>, Petri</li>
+    <li><a href="https://nvidianews.nvidia.com/news/openshell-reference-architecture" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">NVIDIA Launches OpenShell Reference Architecture for Safe AI Agents</a>, NVIDIA, October 21, 2026</li>
+    <li><a href="https://abcnews.com/Politics/ftc-opens-probe-safety-ai-including-anthropic-open/story?id=136896227" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">FTC opens probe into safety of AI, including Anthropic and OpenAI</a>, ABC News, September 30, 2026</li>
+    <li><a href="https://www.securityweek.com/ftc-is-investigating-openai-and-anthropic-over-possible-risks-to-consumers/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">FTC is Investigating OpenAI and Anthropic Over Possible Risks to Consumers</a>, SecurityWeek, September 30, 2026</li>
+    <li><a href="https://fortune.com/2026/10/02/we-cant-trust-them-completely-labs-safeguards/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">We can’t trust them completely: AI research fellows warn that labs are running models with the safeguards off behind closed doors</a>, Fortune, October 2, 2026</li>
+    <li><a href="https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Kevin Mandia’s new agent swarm security startup Armadin raises $255.5M</a>, TechCrunch, October 1, 2026</li>
+    <li><a href="https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Photon held a funeral for mobile apps. Now it has $4.5M to help replace them with agents</a>, TechCrunch, October 1, 2026</li>
+    <li><a href="https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Brian Chesky interview: AI agents need their own operating system</a>, TechCrunch, October 1, 2026</li>
+    <li><a href="https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Over 40 percent of Agentic AI projects could face the axe by end of 2027: Gartner</a>, W.Media, June 27, 2025</li>
+    <li><a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI Tooling for Software Engineers in 2026</a>, The Pragmatic Engineer, March 3, 2026</li>
+    <li><a href="https://a16z.com/leaders-gainers-and-unexpected-winners-in-the-enterprise-ai-arms-race/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Leaders, gainers and unexpected winners in the Enterprise AI arms race</a>, Andreessen Horowitz, January 30, 2026</li>
+    <li><a href="/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/" class="font-medium text-[#5a9100] hover:underline">AI Agent Pricing: Per Seat, Per Task or Per Outcome?</a>, Zunkiree Labs (buying guidance, not market data)</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is this original research?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. It is a digest of published sources, listed at the end, with our reading marked as ours. Many figures come from vendors and are their own claims; we say so where it applies.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What changed in the Model Context Protocol in 2026?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">A major revision dated 2026-07-28. SiliconANGLE, reporting on Akamai's research, says it removes protocol-managed sessions, limits unsolicited server prompts and requires OAuth 2.1 with PKCE, while adding new attack surfaces that implementers must handle. Akamai's analysis is of the specification, not of attacks seen in the wild.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Are there agent price lists in the sources?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. None of the sources digested here publishes agent price lists. Our own buying guidance describes per seat, per task and per outcome models, and NVIDIA published no prices for its new infrastructure. Compare suppliers by pricing one real workflow.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should a small business do with this news?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Ask suppliers which protocol versions they run, what the agent can access, what is logged and who is accountable. Limit access, enforce limits outside the agent where you can, and start with one workflow. Our suggestions are in the final section.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI agent infrastructure 2026, MCP specification, MCP security, agent containment, AI agent pricing, OWASP MCP Top 10",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this original research?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a digest of published sources, listed at the end, with our reading marked as ours. Many figures come from vendors and are their own claims; we say so where it applies."}}, {"@type": "Question", "name": "What changed in the Model Context Protocol in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "A major revision dated 2026-07-28. SiliconANGLE, reporting on Akamai's research, says it removes protocol-managed sessions, limits unsolicited server prompts and requires OAuth 2.1 with PKCE, while adding new attack surfaces that implementers must handle. Akamai's analysis is of the specification, not of attacks seen in the wild."}}, {"@type": "Question", "name": "Are there agent price lists in the sources?", "acceptedAnswer": {"@type": "Answer", "text": "No. None of the sources digested here publishes agent price lists. Our own buying guidance describes per seat, per task and per outcome models, and NVIDIA published no prices for its new infrastructure. Compare suppliers by pricing one real workflow."}}, {"@type": "Question", "name": "What should a small business do with this news?", "acceptedAnswer": {"@type": "Answer", "text": "Ask suppliers which protocol versions they run, what the agent can access, what is logged and who is accountable. Limit access, enforce limits outside the agent where you can, and start with one workflow. Our suggestions are in the final section."}}]}</script>

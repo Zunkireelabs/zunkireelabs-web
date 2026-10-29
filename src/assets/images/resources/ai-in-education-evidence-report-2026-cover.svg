@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="ai-in-education-evidence-report-2026-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ai-in-education-evidence-report-2026-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">AI IN EDUCATION REPORT</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">REPORT</text>
+  <rect x="90" y="270" width="42" height="90" rx="4" fill="#60a5fa" opacity="0.5"/><rect x="138" y="230" width="42" height="130" rx="4" fill="#22c55e"/>
+  <rect x="210" y="220" width="42" height="140" rx="4" fill="#60a5fa" opacity="0.5"/><rect x="258" y="250" width="42" height="110" rx="4" fill="#22c55e"/>
+  <rect x="330" y="260" width="42" height="100" rx="4" fill="#60a5fa" opacity="0.5"/><rect x="378" y="190" width="42" height="170" rx="4" fill="#22c55e"/>
+  <line x1="70" y1="360" x2="470" y2="360" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+  <text x="150" y="385" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">Tutoring</text>
+  <text x="270" y="385" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">Workload</text>
+  <text x="390" y="385" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">Adoption</text>
+  <g transform="translate(530,150)"><rect width="210" height="44" rx="8" fill="#60a5fa" opacity="0.22"/><text x="105.0" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Without AI support</text></g>
+  <g transform="translate(530,215)"><rect width="210" height="44" rx="8" fill="#22c55e" opacity="0.22"/><text x="105.0" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">With AI support</text></g>
+  <text x="530" y="300" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#ffffff" opacity="0.75" text-anchor="start">What the trials and</text>
+  <text x="530" y="324" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#ffffff" opacity="0.75" text-anchor="start">surveys report</text>
+</svg>
