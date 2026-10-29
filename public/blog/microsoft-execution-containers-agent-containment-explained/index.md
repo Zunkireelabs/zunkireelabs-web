@@ -74,7 +74,7 @@ No single tool is required, but the principle is: enforce limits outside the age
 ## Related Insights
 
 - [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources

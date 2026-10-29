@@ -59,7 +59,7 @@ It does not remove the need for judgement. Whether a firewall rule is safe to ap
 
 ## Risks and Guardrails
 
-An MCP connection is a delegation of authority. Whatever you approve, the agent can do. Three habits keep that safe: grant least privilege, keep a person approving anything that changes production, and review what the agent actually did. For the wider picture, read the [OWASP MCP Top 10 for business owners](/blog/owasp-mcp-top-10-explained-for-business-owners/) and [what the new MCP specification fixed and opened up](/blog/specification-security-what-changed/).
+An MCP connection is a delegation of authority. Whatever you approve, the agent can do. Three habits keep that safe: grant least privilege, keep a person approving anything that changes production, and review what the agent actually did. For the wider picture, read the [OWASP MCP Top 10 for business owners](/blog/owasp-mcp-top-10-explained-for-business-owners/) and [what the new MCP specification fixed and opened up](/blog/mcp-specification-security-what-changed/).
 
 If you want agents connected to your own systems in a controlled way, see our whitepaper on [AI agents for business](/resources/ai-agents-for-business-whitepaper/), or talk to us about [custom AI agents](/solutions/custom-agent/) and [book a call](/schedule-a-call/).
 
@@ -85,7 +85,7 @@ Only with limits. Grant the smallest set of scopes that covers the task, start r
 
 - [Cloudflare's MCP Server in October 2026: Step-Up Auth, Events and Skills](/blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/)
 - [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources

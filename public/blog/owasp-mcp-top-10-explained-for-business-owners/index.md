@@ -43,7 +43,7 @@ The names below are OWASP's own. The explanations and questions are ours.
 3. Start with MCP01, MCP02 and MCP08. Secrets, permissions and logs are the cheapest to fix and the most revealing.
 4. Re-check when the OWASP list moves out of beta.
 
-For the protocol-level changes that sit underneath this list, read [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/).
+For the protocol-level changes that sit underneath this list, read [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/).
 
 ## The Short Version
 
@@ -72,7 +72,7 @@ For the full buyer's checklist, read our whitepaper on [MCP and AI agent securit
 
 ## Related Insights
 
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [FTC Probes AI Labs Over Rogue Agents: What to Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
 - [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 

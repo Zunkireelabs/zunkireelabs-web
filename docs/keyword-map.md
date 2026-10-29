@@ -69,7 +69,7 @@ Targets, not measured volume. Each post pairs a global query (how people search 
 | /blog/what-is-generative-ui-and-when-does-a-business-need-it/ | generative UI, what is generative UI, AI-generated interfaces, conversational dashboards | generative UI development Nepal | /solutions/generative-ui/, /solutions/ai-development/ |
 | /blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/ | AI chatbot for business, AI customer support automation, chatbot vs AI agent | AI chatbot Nepal, ecommerce chatbot Nepal | /solutions/ai-customer-experience/, /solutions/ai-ecommerce/, /solutions/custom-agent/ |
 | /blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show/ | AI case study, AI for education consultancy, AI for construction, AI search for operations | AI in Nepal case study, AI for construction Nepal | /resources/admizz-case-study/, /resources/corecloud365-case-study/, /resources/khushbu-nirman-case-study/ |
-| /blog/mcp-2026-07-28-specification-security-what-changed/ | MCP security, Model Context Protocol security, MCP specification, AI agent security | AI agent security Nepal | /solutions/custom-agent/, AI governance whitepaper |
+| /blog/mcp-specification-security-what-changed/ | MCP security, Model Context Protocol security, MCP specification, AI agent security | AI agent security Nepal | /solutions/custom-agent/, AI governance whitepaper |
 | /blog/owasp-mcp-top-10-explained-for-business-owners/ | OWASP MCP Top 10, MCP vulnerabilities, AI agent risks | AI governance Nepal | AI governance whitepaper, /solutions/custom-agent/ |
 | /blog/openai-models-on-google-cloud-what-multi-cloud-ai-means/ | OpenAI Google Cloud, multi-cloud AI, OpenAI Model Garden | AI development company in Nepal | /solutions/ai-development/, /solutions/custom-agent/ |
 | /blog/ai-overviews-fewer-clicks-what-google-says-to-do/ | AI Overviews clicks, optimize for AI Overviews, generative engine optimization, AI Mode SEO | AEO Nepal | /solutions/aeo-seo/, AEO whitepaper |
@@ -131,7 +131,7 @@ Target phrases, not measured volume. Confirm demand in Search Console and Bing W
 |---|---|---|
 | /blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/ | Cloudflare MCP server | MCP server, Model Context Protocol, how to connect MCP, Cloudflare API MCP |
 | /blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/ | Cloudflare MCP updates | step-up authorization MCP, MCP events, skills over MCP, MCP /sse deprecated |
-| /blog/specification-security-what-changed/ | MCP security | MCP specification 2026, MCP attack surface, AI agent security |
+| /blog/mcp-specification-security-what-changed/ | MCP security | MCP specification 2026, MCP attack surface, AI agent security |
 | /blog/owasp-mcp-top-10-explained-for-business-owners/ | OWASP MCP Top 10 | MCP risks, AI agent security for business |
 
 ## New whitepapers (2026-10-28)

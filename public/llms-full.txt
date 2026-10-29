@@ -23,7 +23,7 @@ Summary: Cloudflare added step-up authorization, event alerts and skills to its 
 
 ## What MCP Is, in One Paragraph
 
-MCP is an open protocol for connecting AI agents to external tools and data, such as a calendar, a database or a company's cloud account. An agent talks to an MCP server, which exposes a defined set of actions. We covered why that matters in [why AI agents are getting their own infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/) and the security side in [what the new MCP specification fixed and opened up](/blog/specification-security-what-changed/).
+MCP is an open protocol for connecting AI agents to external tools and data, such as a calendar, a database or a company's cloud account. An agent talks to an MCP server, which exposes a defined set of actions. We covered why that matters in [why AI agents are getting their own infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/) and the security side in [what the new MCP specification fixed and opened up](/blog/mcp-specification-security-what-changed/).
 
 New to it? Start with our explainer on [what Cloudflare's MCP server does and how to connect it](/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/).
 
@@ -89,7 +89,7 @@ It is an approach Cloudflare described in February 2026 in which the server expo
 ## Related Insights
 
 - [Cloudflare MCP Server Explained: What It Does and How to Connect](/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [Microsoft Execution Containers: How to Contain an AI Agent](/blog/microsoft-execution-containers-agent-containment-explained/)
@@ -166,7 +166,7 @@ It does not remove the need for judgement. Whether a firewall rule is safe to ap
 
 ## Risks and Guardrails
 
-An MCP connection is a delegation of authority. Whatever you approve, the agent can do. Three habits keep that safe: grant least privilege, keep a person approving anything that changes production, and review what the agent actually did. For the wider picture, read the [OWASP MCP Top 10 for business owners](/blog/owasp-mcp-top-10-explained-for-business-owners/) and [what the new MCP specification fixed and opened up](/blog/specification-security-what-changed/).
+An MCP connection is a delegation of authority. Whatever you approve, the agent can do. Three habits keep that safe: grant least privilege, keep a person approving anything that changes production, and review what the agent actually did. For the wider picture, read the [OWASP MCP Top 10 for business owners](/blog/owasp-mcp-top-10-explained-for-business-owners/) and [what the new MCP specification fixed and opened up](/blog/mcp-specification-security-what-changed/).
 
 If you want agents connected to your own systems in a controlled way, see our whitepaper on [AI agents for business](/resources/ai-agents-for-business-whitepaper/), or talk to us about [custom AI agents](/solutions/custom-agent/) and [book a call](/schedule-a-call/).
 
@@ -192,7 +192,7 @@ Only with limits. Grant the smallest set of scopes that covers the task, start r
 
 - [Cloudflare's MCP Server in October 2026: Step-Up Auth, Events and Skills](/blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/)
 - [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
@@ -1474,7 +1474,7 @@ Only if quality, retries and output length do not eat the savings. Measure cost 
 
 # MCP Security in 2026: What the New Specification Fixed and What It Opened Up
 
-URL: https://zunkireelabs.com/blog/mcp-2026-07-28-specification-security-what-changed/
+URL: https://zunkireelabs.com/blog/mcp-specification-security-what-changed/
 Published: 2026-10-27
 Summary: The MCP 2026-07-28 specification removes session and OAuth risks but adds new attack surfaces, according to Akamai researchers. What changed and what to do about it.
 
@@ -1640,7 +1640,7 @@ No single tool is required, but the principle is: enforce limits outside the age
 ## Related Insights
 
 - [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
@@ -1868,7 +1868,7 @@ The names below are OWASP's own. The explanations and questions are ours.
 3. Start with MCP01, MCP02 and MCP08. Secrets, permissions and logs are the cheapest to fix and the most revealing.
 4. Re-check when the OWASP list moves out of beta.
 
-For the protocol-level changes that sit underneath this list, read [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/).
+For the protocol-level changes that sit underneath this list, read [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/).
 
 ## The Short Version
 
@@ -1897,7 +1897,7 @@ For the full buyer's checklist, read our whitepaper on [MCP and AI agent securit
 
 ## Related Insights
 
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [FTC Probes AI Labs Over Rogue Agents: What to Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
 - [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 

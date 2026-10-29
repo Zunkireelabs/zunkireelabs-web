@@ -1,6 +1,6 @@
 # MCP Security in 2026: What the New Specification Fixed and What It Opened Up
 
-URL: https://zunkireelabs.com/blog/mcp-2026-07-28-specification-security-what-changed/
+URL: https://zunkireelabs.com/blog/mcp-specification-security-what-changed/
 Published: 2026-10-27
 Summary: The MCP 2026-07-28 specification removes session and OAuth risks but adds new attack surfaces, according to Akamai researchers. What changed and what to do about it.
 

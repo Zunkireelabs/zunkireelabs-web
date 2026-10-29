@@ -17,7 +17,7 @@ Summary: Cloudflare added step-up authorization, event alerts and skills to its 
 
 ## What MCP Is, in One Paragraph
 
-MCP is an open protocol for connecting AI agents to external tools and data, such as a calendar, a database or a company's cloud account. An agent talks to an MCP server, which exposes a defined set of actions. We covered why that matters in [why AI agents are getting their own infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/) and the security side in [what the new MCP specification fixed and opened up](/blog/specification-security-what-changed/).
+MCP is an open protocol for connecting AI agents to external tools and data, such as a calendar, a database or a company's cloud account. An agent talks to an MCP server, which exposes a defined set of actions. We covered why that matters in [why AI agents are getting their own infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/) and the security side in [what the new MCP specification fixed and opened up](/blog/mcp-specification-security-what-changed/).
 
 New to it? Start with our explainer on [what Cloudflare's MCP server does and how to connect it](/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/).
 
@@ -83,7 +83,7 @@ It is an approach Cloudflare described in February 2026 in which the server expo
 ## Related Insights
 
 - [Cloudflare MCP Server Explained: What It Does and How to Connect](/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/specification-security-what-changed/)
+- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
 - [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [Microsoft Execution Containers: How to Contain an AI Agent](/blog/microsoft-execution-containers-agent-containment-explained/)

@@ -1,7 +1,7 @@
 ---
 title: "MCP Security in 2026: What the New Specification Fixed and What It Opened Up"
 shortLabel: "MCP Specification Security"
-translationKey: "mcp-2026-07-28-specification-security-what-changed"
+translationKey: "mcp-specification-security-what-changed"
 description: "The MCP 2026-07-28 specification removes session and OAuth risks but adds new attack surfaces, according to Akamai researchers. What changed and what to do about it."
 date: 2026-10-27
 lastUpdated: 2026-10-27
@@ -13,7 +13,7 @@ tags:
   - AI Agent Security
   - AI Agents
 readTime: 8
-featuredImage: "/assets/images/blog/mcp-2026-07-28-specification-security-what-changed.svg"
+featuredImage: "/assets/images/blog/mcp-specification-security-what-changed.svg"
 featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
