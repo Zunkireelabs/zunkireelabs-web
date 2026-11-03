@@ -4,7 +4,6 @@ title: "GaaS Scalability Options for Your Business"
 description: "Explore the scalability options offered by Gateway as a Service (GaaS) and how Zunkiree Labs can facilitate your growth through tailored AI solutions."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/gaas-scalability-options-unlocking-potential-for-your-business.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

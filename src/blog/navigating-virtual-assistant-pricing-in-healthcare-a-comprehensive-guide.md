@@ -4,7 +4,6 @@ title: "Virtual Assistant Pricing in Healthcare: A Complete Guide"
 description: "What drives virtual assistant pricing in healthcare, the value of AI-driven solutions, and how Zunkiree Labs can optimize healthcare operations."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/navigating-virtual-assistant-pricing-in-healthcare-a-comprehensive-guide.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

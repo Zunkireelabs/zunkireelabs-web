@@ -5,7 +5,6 @@ translationKey: "what-is-machine-learning-how-it-works-and-where-its-used"
 description: "Machine learning explained: how systems learn from data, how neural networks, NLP and LLMs fit in, where ML is used, and what to check first."
 date: "2026-10-02T14:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-machine-learning-how-it-works-and-where-its-used.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: AI Fundamentals

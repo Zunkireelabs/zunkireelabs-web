@@ -5,7 +5,6 @@ translationKey: "what-is-deep-learning-neural-networks-explained"
 description: "Deep learning explained: how neural networks learn, main architectures, where it is used, its limits, and when a simpler method is better."
 date: "2026-10-02T13:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-deep-learning-neural-networks-explained.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: AI Fundamentals

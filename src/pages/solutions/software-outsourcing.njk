@@ -388,6 +388,7 @@ faqs:
       <div class="divide-y divide-navy-100 border-y border-navy-100">
         {% for item in faqs %}
         <div class="py-5" data-reveal>
+          <h3>
           <button
             type="button"
             @click="activeIndex = (activeIndex === {{ loop.index }} && !expandAll) ? null : {{ loop.index }}"
@@ -410,6 +411,7 @@ faqs:
               </svg>
             </span>
           </button>
+          </h3>
           <div
             x-show="activeIndex === {{ loop.index }} || expandAll"
             x-transition:enter="transition ease-out duration-200"
@@ -440,7 +442,7 @@ faqs:
         <h2 id="so-src-heading" class="font-mono text-[11px] font-normal uppercase tracking-wider text-[#5a9100]">Sources and further reading</h2>
         <p class="mt-4 text-[22px] font-medium leading-snug tracking-tight text-[#111827] sm:text-[26px]">Where the claims on this page come from.</p>
         <p class="mt-3 max-w-2xl text-[14px] leading-relaxed text-[#6B7280]">Outside references for the claims on this page. Our own descriptions of what we build are our own account, not independent evidence.</p>
-        <p class="mt-6 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Last updated <time datetime="2026-10-09">9 October 2026</time> &middot; Zunkiree Labs, Kathmandu, Nepal</p>
+        <p class="mt-6 font-mono text-[10px] uppercase tracking-wider text-[#9CA3AF]">Zunkiree Labs, Kathmandu, Nepal</p>
       </div>
       <div class="divide-y divide-navy-100">
         <a href="https://en.wikipedia.org/wiki/Time_in_Nepal" target="_blank" rel="noopener" class="src-row group grid grid-cols-[2.25rem_1fr_auto] items-start gap-x-4 py-6 first:pt-0 last:pb-0 sm:grid-cols-[3rem_1fr_auto]">

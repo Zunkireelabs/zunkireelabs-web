@@ -13,7 +13,6 @@ tags:
   - Industrial AI
 readTime: 8
 featuredImage: "/assets/images/blog/predictive-maintenance-how-sensor-data-and-ai-predict-failures.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

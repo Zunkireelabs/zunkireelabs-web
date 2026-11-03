@@ -4,7 +4,6 @@ title: "AI Startups in Nepal Worth Checking Out"
 description: "Explore innovative AI startups in Nepal that are transforming industries with cutting-edge technology and solutions. Discover key players and what they offer."
 date: "2026-09-01"
 featuredImage: "/assets/images/blog/ai-startups-worth-checking.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

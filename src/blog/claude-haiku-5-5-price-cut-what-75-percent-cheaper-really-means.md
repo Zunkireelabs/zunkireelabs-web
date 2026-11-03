@@ -12,7 +12,6 @@ tags:
   - AI Strategy
 readTime: 7
 featuredImage: "/assets/images/blog/claude-haiku-5-5-price-cut-what-75-percent-cheaper-really-means.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

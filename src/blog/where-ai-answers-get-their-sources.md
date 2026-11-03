@@ -13,7 +13,6 @@ tags:
   - Brand Visibility
 readTime: 7
 featuredImage: "/assets/images/blog/where-ai-answers-get-their-sources.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

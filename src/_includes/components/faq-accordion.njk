@@ -29,6 +29,7 @@
       <div class="divide-y divide-navy-100" data-reveal-stagger>
         {% for item in faqItems %}
         <div class="py-5">
+          <h3>
           <button
             @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
             class="group flex w-full items-center justify-between gap-4 text-left"
@@ -44,6 +45,7 @@
               </svg>
             </span>
           </button>
+          </h3>
           <div
             id="faq-accordion-answer-{{ loop.index }}"
             x-show="activeIndex === {{ loop.index }}"

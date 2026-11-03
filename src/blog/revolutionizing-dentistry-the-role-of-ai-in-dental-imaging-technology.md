@@ -4,7 +4,6 @@ title: "The Role of AI in Dental Imaging Technology"
 description: "How Zunkiree Labs applies AI to dental imaging to improve diagnostic accuracy, streamline workflows and support better patient care."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/revolutionizing-dentistry-the-role-of-ai-in-dental-imaging-technology.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

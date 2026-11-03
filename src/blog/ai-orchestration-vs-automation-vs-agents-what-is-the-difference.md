@@ -13,7 +13,6 @@ tags:
   - Workflow Automation
 readTime: 8
 featuredImage: "/assets/images/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

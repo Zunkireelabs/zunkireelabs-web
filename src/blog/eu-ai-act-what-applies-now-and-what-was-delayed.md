@@ -13,7 +13,6 @@ tags:
   - Compliance
 readTime: 7
 featuredImage: "/assets/images/blog/eu-ai-act-what-applies-now-and-what-was-delayed.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

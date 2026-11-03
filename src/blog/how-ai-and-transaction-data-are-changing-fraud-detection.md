@@ -13,7 +13,6 @@ tags:
   - AI in Finance
 readTime: 8
 featuredImage: "/assets/images/blog/how-ai-and-transaction-data-are-changing-fraud-detection.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

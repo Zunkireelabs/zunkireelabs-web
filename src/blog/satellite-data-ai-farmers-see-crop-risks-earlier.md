@@ -13,7 +13,6 @@ tags:
   - AI in Agriculture
 readTime: 8
 featuredImage: "/assets/images/blog/satellite-data-ai-farmers-see-crop-risks-earlier.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

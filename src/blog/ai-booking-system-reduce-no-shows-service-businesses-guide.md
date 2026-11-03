@@ -16,7 +16,6 @@ tags:
   - AI Agents
 readTime: 8
 featuredImage: "/assets/images/blog/ai-booking-system-reduce-no-shows-service-businesses-guide.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

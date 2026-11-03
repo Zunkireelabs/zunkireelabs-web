@@ -13,7 +13,6 @@ tags:
 readTime: 6
 translationKey: flow-ai-vs-workflow-automation-what-is-the-difference
 featuredImage: "/assets/images/blog/flow-ai-vs-workflow-automation-what-is-the-difference.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** traditional workflow automation follows rules you wrote in advance. Flow AI, as we use the term in [What Is Flow AI?](/blog/what-is-flow-ai/), applies AI to a workflow so it can decide what should happen next. Rules are enough when the process never varies. AI starts to earn its place when inputs are messy and the next step depends on judgment.

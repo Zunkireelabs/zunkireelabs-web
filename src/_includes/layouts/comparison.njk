@@ -306,19 +306,8 @@ layout: base.njk
    #76B900 accent on hover (same interaction language as the
    nav's mega-menu links and resource filter chips).
    ===================================================== #}
-<section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="other-comparisons-heading">
-  <div class="mx-auto max-w-5xl">
-    <h2 id="other-comparisons-heading" class="mb-6 text-[18px] font-medium text-[#111827]">Other comparisons</h2>
-    <div class="flex flex-wrap gap-3" data-reveal>
-      {% for c in comparisons %}
-      {% if c.id != comp.id %}
-      <a href="/compare/{{ c.id }}/" class="inline-flex items-center rounded-full bg-navy-50 px-4 py-2 text-[14px] text-navy-600 transition-colors hover:bg-[#76B900]/10 hover:text-[#5a9100]">
-        {{ c.title }}
-      </a>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% set ocItems = [] %}
+{% for c in comparisons %}{% if c.id != comp.id %}{% set ocItems = (ocItems.push({ href: "/compare/" + c.id + "/", title: c.title, blurb: c.description }), ocItems) %}{% endif %}{% endfor %}
+{% include "partials/other-comparisons.njk" %}
 
 {% include "partials/footer-v2.njk" %}

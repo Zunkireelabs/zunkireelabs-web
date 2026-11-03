@@ -12,7 +12,6 @@ tags:
   - AI Strategy
 readTime: 7
 featuredImage: "/assets/images/blog/chatgpt-intelligent-ui-gpt-6-what-interactive-answers-mean-for-businesses.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

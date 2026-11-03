@@ -1,12 +1,13 @@
 ---
 layout: base.njk
-title: "Insights | Trending AI & Technology Topics | Zunkiree Labs"
-description: "Timely explainers on what is trending in AI and technology, and what it means for your business, from the team at Zunkiree Labs."
+eleventyComputed:
+  title: "{% if pagination.pageNumber == 0 %}Insights | Trending AI & Technology Topics | Zunkiree Labs{% else %}Insights, Page {{ pagination.pageNumber + 1 }} | Zunkiree Labs{% endif %}"
+  description: "{% if pagination.pageNumber == 0 %}Timely explainers on what is trending in AI and technology, and what it means for your business, from the team at Zunkiree Labs.{% else %}Page {{ pagination.pageNumber + 1 }} of Zunkiree Labs Insights: timely explainers on trending AI and technology topics and what they mean for your business.{% endif %}"
 eleventyExcludeFromCollections: true
 hideChrome: true
 pagination:
   data: collections.insights
-  size: 100
+  size: 24
   reverse: true
   alias: posts
 permalink: "{{ '/blog/insights/' if pagination.pageNumber == 0 else '/blog/insights/page/' + (pagination.pageNumber + 1) + '/' }}"

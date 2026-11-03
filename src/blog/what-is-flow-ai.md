@@ -5,7 +5,6 @@ translationKey: "what-is-flow-ai"
 description: "Flow AI means applying AI to a workflow so it can decide what happens next and coordinate tasks and tools."
 date: "2026-10-02T10:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-flow-ai.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

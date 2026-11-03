@@ -13,7 +13,6 @@ tags:
   - Enterprise AI
 readTime: 8
 featuredImage: "/assets/images/blog/from-dashboards-to-decisions-the-future-of-business-intelligence.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

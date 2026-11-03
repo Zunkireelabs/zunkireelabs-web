@@ -13,7 +13,6 @@ tags:
   - AI Policy
 readTime: 8
 featuredImage: "/assets/images/blog/why-ai-matters-for-nepal-what-the-evidence-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

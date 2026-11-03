@@ -13,7 +13,6 @@ tags:
 readTime: 6
 translationKey: superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean
 featuredImage: "/assets/images/blog/superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** narrow AI does specific tasks, AGI (artificial general intelligence) would match human ability across most tasks, and superintelligence would exceed it. The terms are definitions of capability, not products you can buy today, and different people define the thresholds differently. This post explains the vocabulary. It is not a forecast.

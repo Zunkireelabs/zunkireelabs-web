@@ -277,6 +277,23 @@
   </script>
   {% endif %}
 
+  <!-- Schema.org - WebPage freshness (machine-readable only; dates come from git history via scripts/gen-page-dates.mjs) -->
+  {%- set pd = pageDates[page.inputPath] -%}
+  {% if pd and schemaType != "article" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}#webpage",
+    "url": "{{ site.url }}{{ page.url }}",
+    "name": {{ (title or site.meta.title) | dump | safe }},
+    "datePublished": "{{ pd.published }}",
+    "dateModified": "{{ pd.modified }}",
+    "publisher": { "@id": "{{ site.url }}/#organization" }
+  }
+  </script>
+  {% endif %}
+
   <!-- Schema.org - BreadcrumbList (all pages except homepage) -->
   {% if page.url != "/" %}
   {%- set urlParts = page.url | split("/") -%}

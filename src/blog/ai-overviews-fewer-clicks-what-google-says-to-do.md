@@ -14,7 +14,6 @@ tags:
   - SEO
 readTime: 7
 featuredImage: "/assets/images/blog/ai-overviews-fewer-clicks-what-google-says-to-do.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

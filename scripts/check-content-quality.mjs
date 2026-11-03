@@ -51,6 +51,48 @@ for (const dir of DIRS) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Regular pages must not embed comparison blocks.
+// Comparisons belong on /compare/ (src/_data/companyComparisons.js, rendered by
+// layouts/comparison-company.njk); a source page only links to it with a small
+// `compareCard`. Blog posts (src/blog) may contain comparisons and are not scanned.
+// This catches the generator-written "Comparison Table" / "X vs Y" HTML that used to
+// be pasted into the middle of location pages.
+// ---------------------------------------------------------------------------
+const REGULAR_PAGE_ROOTS = ['src/_data', 'src/pages', 'src/_includes/layouts'];
+// Structured comparison data (no pasted HTML) and hand-built pages whose whole purpose is a comparison.
+const COMPARISON_ALLOWLIST = [
+  'src/_data/comparisons.js',
+  'src/_data/companyComparisons.js',
+  'src/pages/agentic-as-a-service.njk', // GaaS vs SaaS, hand-built
+  'src/pages/resources/what-is-gaas.njk', // GaaS vs SaaS, hand-built
+  'src/pages/resources/ai-vs-traditional-software-kathmandu.njk', // article whose topic is the comparison
+  'src/_includes/layouts/comparison.njk',
+  'src/_includes/layouts/comparison-company.njk',
+];
+// <h2>/<h3> whose text is "Comparison Table" or contains "vs" / "versus" (as pasted into page content)
+const COMPARISON_HEADING = /<h[23][^>]*>\s*[^<]*(?:comparison table|\bvs\.?\s|\sversus\s)[^<]*<\/h[23]>/i;
+
+function walkFiles(dir, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const name of fs.readdirSync(dir)) {
+    const p = path.join(dir, name);
+    if (fs.statSync(p).isDirectory()) walkFiles(p, out);
+    else if (/\.(js|json|njk)$/.test(name)) out.push(p);
+  }
+  return out;
+}
+
+for (const root of REGULAR_PAGE_ROOTS) {
+  for (const file of walkFiles(root)) {
+    if (COMPARISON_ALLOWLIST.includes(file.replace(/\\/g, '/'))) continue;
+    const text = fs.readFileSync(file, 'utf8');
+    if (COMPARISON_HEADING.test(text) && /<table\b/i.test(text)) {
+      problems.push(`${file}: comparison table embedded in a regular page; move it to src/_data/companyComparisons.js and link with compareCard`);
+    }
+  }
+}
+
 if (problems.length) {
   console.error(problems.join('\n'));
   console.error(`\n${problems.length} problem(s)`);

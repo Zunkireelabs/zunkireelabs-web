@@ -4,7 +4,6 @@ description: "Where virtual assistants can and cannot cut hospital waits: phone 
 date: 2026-10-02
 lastUpdated: 2026-10-02
 featuredImage: /assets/images/blog/how-virtual-assistants-can-reduce-hospital-wait-times.svg
-featuredImageAlt: Abstract gradient background
 ---
 
 <div class="container-custom py-12 md:py-20">

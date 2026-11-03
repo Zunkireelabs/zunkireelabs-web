@@ -4,7 +4,6 @@ title: "AI Solutions for Education in Nepal: Transforming Learning"
 description: "How AI solutions are shaping education in Nepal, from personalized learning and data management to operational efficiency."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ai-solutions-for-education-in-nepal-transforming-learning-experiences.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

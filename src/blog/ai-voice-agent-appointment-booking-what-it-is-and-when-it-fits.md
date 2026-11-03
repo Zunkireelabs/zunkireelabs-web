@@ -15,7 +15,6 @@ tags:
   - AI Agents
 readTime: 8
 featuredImage: "/assets/images/blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

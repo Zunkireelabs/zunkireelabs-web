@@ -4,7 +4,6 @@ title: "How to Choose a GaaS Provider: Key Considerations"
 description: "Selecting the right Gateway as a Service (GaaS) provider is crucial for businesses looking to enhance connectivity and integration."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/how-to-choose-a-gaas-provider-key-considerations-for-your-business.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

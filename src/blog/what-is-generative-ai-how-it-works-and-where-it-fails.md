@@ -5,7 +5,6 @@ translationKey: "what-is-generative-ai-how-it-works-and-where-it-fails"
 description: "Generative AI explained: how it works, how organizations use it, the risks NIST identifies such as confabulation and bias, and how to use it responsibly."
 date: "2026-10-02T12:00:00+05:45"
 featuredImage: "/assets/images/blog/what-is-generative-ai-how-it-works-and-where-it-fails.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: AI Fundamentals

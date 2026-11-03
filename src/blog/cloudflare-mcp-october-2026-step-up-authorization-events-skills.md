@@ -14,7 +14,6 @@ tags:
   - AI Infrastructure
 readTime: 7
 featuredImage: "/assets/images/blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

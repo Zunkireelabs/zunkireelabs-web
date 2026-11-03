@@ -13,7 +13,6 @@ tags:
   - Enterprise AI
 readTime: 7
 featuredImage: "/assets/images/blog/google-gemini-agent-universal-work-agent.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

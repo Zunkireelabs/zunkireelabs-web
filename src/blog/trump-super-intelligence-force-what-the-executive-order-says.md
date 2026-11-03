@@ -13,7 +13,6 @@ tags:
   - Regulation
 readTime: 6
 featuredImage: "/assets/images/blog/trump-super-intelligence-force-what-the-executive-order-says.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

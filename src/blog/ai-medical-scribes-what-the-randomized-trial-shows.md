@@ -13,7 +13,6 @@ tags:
   - Clinical AI
 readTime: 8
 featuredImage: "/assets/images/blog/ai-medical-scribes-what-the-randomized-trial-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

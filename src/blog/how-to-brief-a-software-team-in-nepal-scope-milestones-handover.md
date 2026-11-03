@@ -12,7 +12,6 @@ tags:
 readTime: 7
 translationKey: how-to-brief-a-software-team-in-nepal-scope-milestones-handover
 featuredImage: "/assets/images/blog/how-to-brief-a-software-team-in-nepal-scope-milestones-handover.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** once you have chosen an IT company in Nepal, the quality of your brief decides most of what happens next. A clear scope, small paid milestones and an agreed handover protect you more than any rate negotiation. This is practical advice drawn from how software engagements generally work, not market data about Nepal.

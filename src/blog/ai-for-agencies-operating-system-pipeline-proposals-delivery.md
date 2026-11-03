@@ -15,7 +15,6 @@ tags:
   - Project Delivery
 readTime: 8
 featuredImage: "/assets/images/blog/ai-for-agencies-operating-system-pipeline-proposals-delivery.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -13,7 +13,6 @@ tags:
   - Anthropic
 readTime: 7
 featuredImage: "/assets/images/blog/ai-agent-race-openai-dots-and-claude-sonnet-5-5.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

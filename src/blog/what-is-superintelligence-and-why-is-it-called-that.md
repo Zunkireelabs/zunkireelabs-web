@@ -13,7 +13,6 @@ tags:
   - AI Safety
 readTime: 8
 featuredImage: "/assets/images/blog/what-is-superintelligence-and-why-is-it-called-that.svg"
-featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Google DeepMind on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -15,7 +15,6 @@ tags:
   - Proptech
 readTime: 8
 featuredImage: "/assets/images/blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

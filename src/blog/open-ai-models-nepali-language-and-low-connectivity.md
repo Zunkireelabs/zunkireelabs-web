@@ -13,7 +13,6 @@ tags:
   - Nepali Language
 readTime: 8
 featuredImage: "/assets/images/blog/open-ai-models-nepali-language-and-low-connectivity.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -17,7 +17,6 @@ tags:
   - Enterprise AI
 readTime: 7
 featuredImage: "/assets/images/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -28,18 +28,6 @@ bodyClass: "v2-inter"
   // Add synchronous class to html element to prevent FOUC (flash of unstyled content) before GSAP runs
   document.documentElement.classList.add('js-reveal-hidden');
 </script>
-<style>
-  /* Premium reveal fade-ins: hide items initially if JS is active so GSAP can animate them cleanly */
-  .js-reveal-hidden [data-reveal]:not(.revealed),
-  .js-reveal-hidden [data-reveal-stagger]:not(.revealed) > * {
-    opacity: 0;
-  }
-
-  /* Mobile sticky platform tabs: pin just below the fixed navbar (h-[72px], z-50)
-     while scrolling through the panels — sticking at top: 0 pushed them underneath
-     the navbar      and made them invisible. */
-  .platform-sticky-tabs { top: 73px; }
-</style>
 
 {# =====================================================
    HOMEPAGE HERO — Website V2 (rebuilt 2026-07-21 as a direct
@@ -143,8 +131,8 @@ bodyClass: "v2-inter"
   <div class="mx-auto max-w-5xl">
     <a
       href="/products/orca/"
-      class="group relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl bg-navy-950 p-6 transition-colors duration-200 hover:bg-navy-900 sm:gap-8 sm:p-10 md:flex-row md:items-center lg:p-12"
-      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      class="hp-shadow-lift group relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl bg-navy-950 p-6 transition-colors duration-200 hover:bg-navy-900 sm:gap-8 sm:p-10 md:flex-row md:items-center lg:p-12"
+     
     >
       <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10). Enlarged + slow drift vs. the original static version. -->
       <div
@@ -190,49 +178,6 @@ bodyClass: "v2-inter"
   </div>
 </section>
 
-<style>
-  .orca-card-bloom {
-    background:
-      radial-gradient(ellipse 85% 100% at 10% 105%, rgba(118, 185, 0, 0.28) 0%, transparent 62%),
-      radial-gradient(ellipse 70% 90% at 105% -5%, rgba(87, 119, 130, 0.32) 0%, transparent 62%);
-    animation: orca-card-bloom-drift 14s ease-in-out infinite;
-  }
-  @keyframes orca-card-bloom-drift {
-    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-    50% { transform: translate3d(1.5%, -1.5%, 0) scale(1.06); }
-  }
-
-  /* Marble swirl — feTurbulence colorized to the same brand green (#76B900) + slate-navy pair used in
-     .orca-card-bloom, so it reads as texture on that gradient rather than a new hue. Opacity kept low
-     (mix-blend: screen, ~0.5) to protect text contrast per accessibility requirements. */
-  .orca-card-swirl {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='s' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.014' numOctaves='4' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='matrix' values='0 0 0 0 0.29  0 0 0 0 0.55  0 0 0 0 0.13  0 0 0 0.85 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
-    background-size: 140% 140%;
-    background-position: 30% 85%;
-    mix-blend-mode: screen;
-    opacity: 0.55;
-    animation: orca-card-swirl-drift 22s ease-in-out infinite;
-  }
-  @keyframes orca-card-swirl-drift {
-    0%, 100% { background-position: 30% 85%; transform: scale(1); }
-    50% { background-position: 42% 95%; transform: scale(1.08); }
-  }
-
-  /* Fine grain — same texture family as the blog featured-image treatment, kept very subtle here. */
-  .orca-card-grain {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    mix-blend-mode: screen;
-    opacity: 0.18;
-    -webkit-mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
-    mask-image: linear-gradient(to top, black 0%, black 40%, transparent 90%);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .orca-card-bloom { animation: none; }
-    .orca-card-swirl { animation: none; }
-  }
-</style>
 
 {# =====================================================
    PLATFORM PILLARS — Website V2
@@ -283,206 +228,6 @@ bodyClass: "v2-inter"
   }
 ] %}
 
-<style>
-  @keyframes marquee-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee-scroll 25s linear infinite;
-  }
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
-
-  /* Mockups base cursor */
-  .simulated-cursor {
-    position: absolute;
-    pointer-events: none;
-    z-index: 40;
-    width: 1px;
-    height: 1px;
-  }
-
-  /* Card 1 Animations */
-  .mockup-cursor-1 { animation: cursor-move-1 10s infinite ease-in-out; }
-  .mockup-click-ripple-1 { animation: ripple-anim-1 10s infinite ease-out; }
-  .mockup-search-text::after { content: ""; animation: typing-search 10s infinite; }
-  .mockup-chip-edu { animation: chip-edu-highlight 10s infinite; }
-  .mockup-row-edu { animation: row-edu-active 10s infinite; }
-
-  @keyframes cursor-move-1 {
-    0% { top: 160px; left: 80%; }
-    15% { top: 36px; left: 30%; }
-    18% { top: 36px; left: 30%; transform: scale(0.85); }
-    21% { top: 36px; left: 30%; transform: scale(1); }
-    40% { top: 75px; left: 16%; }
-    43% { top: 75px; left: 16%; transform: scale(0.85); }
-    46% { top: 75px; left: 16%; transform: scale(1); }
-    88% { top: 75px; left: 16%; }
-    94%, 100% { top: 160px; left: 80%; }
-  }
-  @keyframes ripple-anim-1 {
-    0%, 17.9% { transform: scale(0.2); opacity: 0; }
-    18% { transform: scale(0.2); opacity: 1; }
-    20% { transform: scale(2.2); opacity: 0; }
-    20.1%, 42.9% { transform: scale(0.2); opacity: 0; }
-    43% { transform: scale(0.2); opacity: 1; }
-    45% { transform: scale(2.2); opacity: 0; }
-    100% { opacity: 0; }
-  }
-  @keyframes typing-search {
-    0%, 18% { content: ""; }
-    20% { content: "E"; }
-    22% { content: "Ed"; }
-    24% { content: "Edu"; }
-    26% { content: "Educ"; }
-    28% { content: "Educa"; }
-    30% { content: "Educat"; }
-    32% { content: "Educati"; }
-    34% { content: "Educatio"; }
-    36%, 88% { content: "Education CRM"; }
-    90%, 100% { content: ""; }
-  }
-  @keyframes chip-edu-highlight {
-    0%, 43% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
-    45%, 88% { background-color: #0f172a; border-color: #0f172a; color: #fff; }
-    89%, 100% { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: rgba(15,23,42,0.5); }
-  }
-  @keyframes row-edu-active {
-    0%, 43% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
-    45%, 88% { background-color: rgba(255,255,255,0.35); border-color: rgba(118, 185, 0, 0.4); box-shadow: 0 0 10px rgba(118, 185, 0, 0.15); }
-    89%, 100% { background-color: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
-  }
-
-  /* Card 2 Animations */
-  .mockup-cursor-2 { animation: cursor-move-2 10s infinite ease-in-out; }
-  .mockup-click-ripple-2 { animation: ripple-anim-2 10s infinite ease-out; }
-  .mockup-run-btn-anim { animation: button-click-effect 10s infinite; }
-  .mockup-progress-bar { animation: progress-fill 10s infinite ease-out; }
-  .mockup-status-badge::after { content: "Idle"; animation: status-badge-anim 10s infinite; }
-  .mockup-latency-val::after { content: "--"; animation: latency-text-anim 10s infinite; }
-  .mockup-status-val::after { content: "Idle"; animation: status-val-text-anim 10s infinite; }
-  .mockup-dot-1 { animation: node-1-active 10s infinite; }
-  .mockup-dot-2 { animation: node-2-active 10s infinite; }
-  .mockup-dot-3 { animation: node-3-active 10s infinite; }
-
-  @keyframes cursor-move-2 {
-    0% { top: 190px; left: 80%; }
-    20% { top: 183px; left: 50%; }
-    23% { top: 183px; left: 50%; transform: scale(0.85); }
-    26% { top: 183px; left: 50%; transform: scale(1); }
-    90%, 100% { top: 190px; left: 80%; }
-  }
-  @keyframes ripple-anim-2 {
-    0%, 22.9% { transform: scale(0.2); opacity: 0; }
-    23% { transform: scale(0.2); opacity: 1; }
-    25% { transform: scale(2.2); opacity: 0; }
-    100% { opacity: 0; }
-  }
-  @keyframes button-click-effect {
-    0%, 22.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
-    23%, 25% { background-color: #76B900; border-color: #76B900; color: #fff; transform: scale(0.95); }
-    26.1%, 90% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.6); transform: scale(1); }
-  }
-  @keyframes progress-fill {
-    0%, 24.9% { width: 0%; }
-    60%, 90% { width: 100%; }
-    92%, 100% { width: 0%; }
-  }
-  @keyframes status-badge-anim {
-    0%, 23.9% { content: "Idle"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
-    24%, 39% { content: "Building"; background-color: #fef3c7; color: #d97706; }
-    40%, 59% { content: "Testing"; background-color: #dbeafe; color: #2563eb; }
-    60%, 90% { content: "Deployed"; background-color: rgba(118, 185, 0, 0.15); color: #76B900; }
-    91%, 100% { content: "Idle"; background-color: rgba(15,23,42,0.05); color: rgba(15,23,42,0.5); }
-  }
-  @keyframes node-1-active {
-    0%, 27.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-    28%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
-    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-  }
-  @keyframes node-2-active {
-    0%, 39.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-    40%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
-    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-  }
-  @keyframes node-3-active {
-    0%, 59.9% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-    60%, 90% { background-color: rgba(118, 185, 0, 0.2); border-color: rgba(118, 185, 0, 0.5); box-shadow: 0 0 8px rgba(118,185,0,0.3); }
-    91%, 100% { background-color: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
-  }
-  @keyframes latency-text-anim {
-    0%, 59.9% { content: "--"; }
-    60%, 90% { content: "43ms"; }
-    91%, 100% { content: "--"; }
-  }
-  @keyframes status-val-text-anim {
-    0%, 23.9% { content: "Idle"; color: rgba(15,23,42,0.5); }
-    24%, 59% { content: "Running"; color: #d97706; }
-    60%, 90% { content: "Active & Healthy"; color: #76B900; }
-    91%, 100% { content: "Idle"; color: rgba(15,23,42,0.5); }
-  }
-
-  /* Card 3 Animations */
-  .mockup-cursor-3 { animation: cursor-move-3 10s infinite ease-in-out; }
-  .mockup-click-ripple-3 { animation: ripple-anim-3 10s infinite ease-out; }
-  .mockup-scale-btn-anim { animation: button-click-scale 10s infinite; }
-  .mockup-replicas-text::after { content: "3"; animation: replica-text-anim 10s infinite; }
-  .mockup-terminal { animation: terminal-slide-up 10s infinite ease-out; }
-  .mockup-server-node-1, .mockup-server-node-2, .mockup-server-node-3 { animation: node-1-3-active 10s infinite; }
-  .mockup-server-node-4, .mockup-server-node-5, .mockup-server-node-6 { animation: node-4-6-active 10s infinite; }
-
-  @keyframes cursor-move-3 {
-    0% { top: 170px; left: 80%; }
-    25% { top: 32px; left: 84%; }
-    28% { top: 32px; left: 84%; transform: scale(0.85); }
-    31% { top: 32px; left: 84%; transform: scale(1); }
-    90%, 100% { top: 170px; left: 80%; }
-  }
-  @keyframes ripple-anim-3 {
-    0%, 27.9% { transform: scale(0.2); opacity: 0; }
-    28% { transform: scale(0.2); opacity: 1; }
-    30% { transform: scale(2.2); opacity: 0; }
-    100% { opacity: 0; }
-  }
-  @keyframes button-click-scale {
-    0%, 27.9% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
-    28%, 35% { background-color: #76B900; border-color: #76B900; color: #fff; }
-    35.1%, 90% { background-color: rgba(15,23,42,0.05); border-color: rgba(15,23,42,0.15); color: #0f172a; }
-  }
-  @keyframes replica-text-anim {
-    0%, 29.9% { content: "3"; color: inherit; font-weight: normal; }
-    30%, 90% { content: "6"; color: #76B900; font-weight: bold; }
-    91%, 100% { content: "3"; color: inherit; font-weight: normal; }
-  }
-  @keyframes terminal-slide-up {
-    0%, 29.9% { transform: translateY(100%); opacity: 0; }
-    33%, 88% { transform: translateY(0); opacity: 1; }
-    90%, 100% { transform: translateY(100%); opacity: 0; }
-  }
-  @keyframes node-1-3-active {
-    0%, 29.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
-    30%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
-    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
-  }
-  @keyframes node-4-6-active {
-    0%, 34.9% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
-    35%, 90% { background-color: #76B900; border-color: #76B900; box-shadow: 0 0 6px rgba(118,185,0,0.4); }
-    91%, 100% { background-color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.3); box-shadow: none; }
-  }
-
-  /* Tab 2/3 floating capability tile — gentle float, Kore.ai reference (2026-07-28) */
-  @keyframes tile-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-  }
-  .tile-float {
-    animation: tile-float 4s ease-in-out infinite;
-  }
-</style>
 
 <section class="relative z-10 px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-16" aria-labelledby="platform-pillars-heading">
   <div class="mx-auto max-w-5xl">
@@ -563,9 +308,9 @@ bodyClass: "v2-inter"
                 </div>
 
                 <!-- Simulated Mouse Pointer -->
-                <div class="mockup-cursor-1 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                <div class="mockup-cursor-1 hp-dot absolute z-40 pointer-events-none">
                   <div class="mockup-click-ripple-1 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
-                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                  <svg class="hp-origin w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
                   </svg>
                 </div>
@@ -628,9 +373,9 @@ bodyClass: "v2-inter"
                 </div>
 
                 <!-- Simulated Mouse Pointer -->
-                <div class="mockup-cursor-2 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                <div class="mockup-cursor-2 hp-dot absolute z-40 pointer-events-none">
                   <div class="mockup-click-ripple-2 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
-                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                  <svg class="hp-origin w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
                   </svg>
                 </div>
@@ -677,9 +422,9 @@ app = platform.init(
                 </div>
 
                 <!-- Simulated Mouse Pointer -->
-                <div class="mockup-cursor-3 absolute z-40 pointer-events-none" style="width: 1px; height: 1px;">
+                <div class="mockup-cursor-3 hp-dot absolute z-40 pointer-events-none">
                   <div class="mockup-click-ripple-3 absolute -top-3 -left-3 w-6 h-6 rounded-full border border-navy-900/30 pointer-events-none opacity-0"></div>
-                  <svg class="w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" style="top: 0px; left: 0px;" viewBox="0 0 24 24" fill="currentColor">
+                  <svg class="hp-origin w-3.5 h-3.5 text-navy-900 drop-shadow-sm filter absolute" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M0 0L3 17L8 12L14 22L17 20L11 10L17 10L0 0Z" fill="currentColor" stroke="white" stroke-width="1.5"/>
                   </svg>
                 </div>
@@ -834,55 +579,6 @@ app = platform.init(
   }
 ] %}
 
-<style>
-  .showcase-track-container {
-    --card-width: 72%;
-    --card-gap: 1rem;
-    --card-offset: 14%;
-  }
-  /* Same pattern as #logo-marquee (main.css): let vertical page scroll
-     pass through natively, we handle horizontal drag/swipe ourselves
-     via pointer events. Without this, touch browsers can hijack the
-     gesture as a page scroll before our pointermove handler ever fires. */
-  .industry-track-container {
-    touch-action: pan-y;
-  }
-  @media (min-width: 1024px) {
-    .showcase-track-container {
-      --card-width: 48%;
-      --card-gap: 1.5rem;
-      --card-offset: 26%;
-    }
-  }
-  @media (min-width: 1088px) {
-    .showcase-title-area {
-      margin-left: calc((100% - 1024px) / 2 - 2rem);
-    }
-  }
-
-  /* Auto-advancing tab indicator: the `.industry-tab-fill` class (which
-     carries the animation-name) is added/removed per tab via :class as
-     `activeTab` changes, rather than staying permanently applied and
-     being hidden/shown via x-show or x-if. Adding an animation-name to
-     an element that didn't have one a moment ago always starts that
-     animation fresh from its `from` keyframe — the one restart mechanism
-     that's actually reliable, unlike toggling `display` (an animation
-     that already finished doesn't reliably restart just because display
-     comes back) or remounting via `<template x-if>` (real mount cost,
-     noticeable next to this page's GSAP/Lenis/ScrollTrigger load). */
-  .industry-tab-fill {
-    animation-name: industry-tab-timer;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-  @keyframes industry-tab-timer {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .industry-tab-fill { animation: none; transform: scaleX(1); }
-  }
-</style>
 
 <section
   class="relative flex flex-col justify-center overflow-hidden py-12 sm:py-16 lg:py-20"
@@ -1034,9 +730,8 @@ app = platform.init(
           id="industry-panel-{{ originalIndex }}"
           aria-labelledby="industry-tab-{{ targetTab }}"
           :aria-hidden="pos !== {{ originalIndex }} ? 'true' : 'false'"
-          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] opacity-100"
+          class="relative h-[440px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-subtle sm:h-[480px] opacity-100 hp-card-w"
           :class="(pos === {{ originalIndex }} ? 'scale-100 z-10' : 'scale-95 z-0 cursor-pointer') + (noTransition ? '' : ' transition-all duration-500')"
-          style="width: var(--card-width);"
           @click="
             if (didDrag) { didDrag = false; }
             else if (pos === {{ originalIndex }}) { next(); }
@@ -1312,7 +1007,7 @@ app = platform.init(
            (a global `position: sticky` here pinned this column mid-scroll on
            mobile too, which read as broken/stuck content on a phone) — plain
            flow below lg, `lg:sticky` above it. -->
-      <div class="flex flex-col gap-8 mb-8 lg:sticky lg:mb-0 lg:self-start" style="top: 96px;">
+      <div class="hp-sticky-top flex flex-col gap-8 mb-8 lg:sticky lg:mb-0 lg:self-start">
         <div data-reveal>
           <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
             A Zunkiree Labs Platform
@@ -1662,8 +1357,8 @@ app = platform.init(
       <!-- Wider card — white with faint decorative pattern in the brand accent green (#76B900) -->
       <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-[#76B900]/30">
         <!-- Faint card-info-01 pattern -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-[0.35] pointer-events-none" style="background-image: url('/assets/images/card-info-01.avif');"></div>
-        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 80% 20%, rgba(118, 185, 0, 0.05) 0%, transparent 60%);"></div>
+        <div class="hp-card-info-01 absolute inset-0 bg-cover bg-center opacity-[0.35] pointer-events-none"></div>
+        <div class="hp-glow-green absolute inset-0 pointer-events-none"></div>
         <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
           "{{ testimonials[0].quote }}"
         </blockquote>
@@ -1678,8 +1373,8 @@ app = platform.init(
       <!-- Narrower card — white with faint decorative pattern in sky blue (#3D8FD4) -->
       <div class="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-navy-100/50 bg-white p-6 shadow-md sm:min-h-[320px] sm:p-10 transition-all duration-300 hover:shadow-lg hover:border-sky-300/30">
         <!-- Faint card-info-03 pattern -->
-        <div class="absolute inset-0 bg-cover bg-bottom opacity-[0.30] pointer-events-none" style="background-image: url('/assets/images/card-info-03.avif'); filter: invert(1);"></div>
-        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 20% 80%, rgba(61, 143, 212, 0.15) 0%, transparent 75%);"></div>
+        <div class="hp-card-info-03 absolute inset-0 bg-cover bg-bottom opacity-[0.30] pointer-events-none"></div>
+        <div class="hp-glow-blue absolute inset-0 pointer-events-none"></div>
         <blockquote class="relative z-10 max-w-lg text-[19px] font-medium leading-snug text-[#111827] sm:text-[22px] lg:text-[26px]">
           "{{ testimonials[1].quote }}"
         </blockquote>
@@ -1812,30 +1507,45 @@ app = platform.init(
    sections with natural-language questions") and the full-page audit
    that found zero FAQ content anywhere on homepage-v2.
 
-   Content sourced from CONTENT_SUMMARY.md and company-industry-
-   context.md only — no fabricated facts. Q1 and Q3 deliberately
-   correct the stale "six industries" framing still live elsewhere on
-   the site (aboutFaq.json, contact.njk, agentic-as-a-service.njk —
-   flagged as a conflict in CONTENT_SUMMARY.md's Summary of Conflicts
-   #1) with the accurate four-vertical answer. No pricing question
-   included — no public pricing model is confirmed in any doc.
+   Buyer-intent questions (what we build, industries, working internationally,
+   how a project starts and what it costs, ownership, integration with existing
+   systems, production proof, trying it). Every answer restates facts already
+   on the site (solution pages, industry pages, software-outsourcing page,
+   product CTAs): no invented figures. No price is quoted: no public pricing
+   model is confirmed in any doc, so the cost answer says it depends on scope.
    ===================================================== #}
 {% set homepageFaq = [
   {
-    question: "What industries does Zunkiree Labs build for?",
-    answer: "Four core verticals today: Education, Agencies, Healthcare, and Real Estate — each running on the same shared platform underneath. Education and Agencies are live in production now; Healthcare and Real Estate are built to the same standard."
+    question: "What does Zunkiree Labs build?",
+    answer: "Zunkiree Labs is a Kathmandu, Nepal AI company that builds AI agents, AI voice agents, RAG search and custom software for businesses worldwide, including SaaS platforms, websites and mobile apps."
   },
   {
-    question: "Is this a demo, or is it actually running somewhere?",
-    answer: "It's running. Admizz runs its education CRM deployment on this platform today, and Zunkiree Labs runs its own agency operations — deal pipeline, proposals, delivery, time tracking — on the exact same infrastructure. Nothing you see here is a concept."
+    question: "Which industries does Zunkiree Labs work with?",
+    answer: "Education, agencies, healthcare and real estate each have a dedicated page and run on one shared platform. Our case studies also cover construction, financial services, retail, aerospace and cloud services."
   },
   {
-    question: "What's shared across industries vs. built custom per client?",
-    answer: "The platform layer — multi-tenant architecture and Orca orchestration — is shared. What sits on top of it is a pre-built application per vertical plus accelerators to launch fast, so a new customer isn't starting from zero."
+    question: "Do you work with clients outside Nepal?",
+    answer: "Yes. Roughly 60% of our clients are international. We work from Kathmandu (UTC+5:45) with remote onboarding, and deliver to clients in the US, UK, India, Australia, Canada, Switzerland and the Netherlands."
   },
   {
-    question: "Do we need to replace our existing systems to use this?",
-    answer: "No — the platform is built to sit on your own infrastructure and integrate with what you already run, not replace it wholesale."
+    question: "How does a project start, and what does it cost?",
+    answer: "Projects start with a conversation about your process, systems and goals. For fixed-scope work we agree a small paid first milestone with a clear scope and price, deliver in milestones and hand over the repositories, documentation and credentials. Cost depends on scope, integrations and data, so we quote after discovery rather than from a price list."
+  },
+  {
+    question: "Who owns the code and the data?",
+    answer: "Our standard position is that you own what you pay for. At the end of the work we hand over the repositories, documentation and credentials."
+  },
+  {
+    question: "Can your AI agents and voice agents work with the systems we already use?",
+    answer: "Yes. Our custom AI agents work through a fixed set of tools with approval gates, and every tool call and decision is logged. Our voice agents read live availability and write bookings into the system you already run, and we deploy them most often in English and Nepali."
+  },
+  {
+    question: "Is this running in production, or just a demo?",
+    answer: "It is running. Admizz Education runs its student inquiry pipeline on the platform, and Zunkiree Labs runs its own agency operations on it. Healthcare and real estate are presented as capabilities rather than named client deployments."
+  },
+  {
+    question: "Can I try it or see a demo?",
+    answer: "Zunkiree Search has a free trial, and you can book a demo or ask for a quote through the contact page. Dental AI Assistant is in private beta with select practices."
   }
 ] %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
@@ -1853,6 +1563,7 @@ app = platform.init(
       <div class="divide-y divide-navy-100" data-reveal-stagger>
         {% for item in homepageFaq %}
           <div class="py-3">
+            <h3>
             <button
               @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
               class="flex w-full items-center justify-between gap-4 py-2 text-left group"
@@ -1868,6 +1579,7 @@ app = platform.init(
                 </svg>
               </span>
             </button>
+            </h3>
             <div
               id="faq-answer-{{ loop.index }}"
               x-show="activeIndex === {{ loop.index }}"
@@ -1910,15 +1622,14 @@ app = platform.init(
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
   <div class="mx-auto max-w-5xl">
     <div
-      class="relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
-      style="box-shadow: 0 40px 60px -25px rgba(15, 23, 42, 0.45);"
+      class="hp-shadow-lift relative overflow-hidden rounded-[28px] bg-navy-950 px-6 py-14 text-center sm:px-12 sm:py-16"
+     
       data-reveal
     >
       <!-- Gradient bloom — brand green + navy, no blue (one-accent-hue rule, §4/§10) -->
       <div
-        class="pointer-events-none absolute inset-0 z-0"
+        class="hp-cta-glow pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
-        style="background: radial-gradient(ellipse 60% 80% at 15% 100%, rgba(118,185,0,0.20) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 100% 0%, rgba(87,119,130,0.25) 0%, transparent 60%);"
       ></div>
 
       <span class="relative z-10 mb-4 block font-mono text-[11px] uppercase tracking-wider text-white/50">

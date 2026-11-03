@@ -5,7 +5,6 @@ translationKey: "the-role-of-ai-in-cloud-computing-transforming-businesses-globa
 description: "How AI in cloud computing is changing healthcare, education, real estate and agencies, improving efficiency and enabling new solutions."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/the-role-of-ai-in-cloud-computing-transforming-businesses-globally.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -10,7 +10,6 @@ tags:
   - Tech Companies
   - FAQ
 featuredImage: "/assets/images/blog/nepal-tech-companies-faq.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 5
 translationKey: nepal-tech-companies-faq
 ---

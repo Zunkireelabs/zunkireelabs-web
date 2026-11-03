@@ -12,7 +12,6 @@ tags:
   - AI Strategy
 readTime: 7
 featuredImage: "/assets/images/blog/gemini-4-argon-how-to-read-a-frontier-model-release.svg"
-featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by panumas nikhomkhai on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/17489151/pexels-photo-17489151.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

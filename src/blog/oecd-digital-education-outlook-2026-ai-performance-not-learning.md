@@ -13,7 +13,6 @@ tags:
   - Student Learning
 readTime: 7
 featuredImage: "/assets/images/blog/oecd-digital-education-outlook-2026-ai-performance-not-learning.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 
