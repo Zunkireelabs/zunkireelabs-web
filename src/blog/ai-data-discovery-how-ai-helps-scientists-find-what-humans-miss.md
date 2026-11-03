@@ -13,7 +13,6 @@ tags:
   - Machine Learning
 readTime: 8
 featuredImage: "/assets/images/blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

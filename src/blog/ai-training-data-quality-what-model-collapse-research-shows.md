@@ -13,7 +13,6 @@ tags:
   - Model Training
 readTime: 7
 featuredImage: "/assets/images/blog/ai-training-data-quality-what-model-collapse-research-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

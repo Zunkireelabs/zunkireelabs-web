@@ -13,7 +13,6 @@ tags:
   - Clinical AI
 readTime: 9
 featuredImage: "/assets/images/blog/ai-sepsis-early-warning-what-the-evidence-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -13,7 +13,6 @@ tags:
   - AI Tutoring
 readTime: 9
 featuredImage: "/assets/images/blog/ai-personalized-learning-what-tutoring-trials-show.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

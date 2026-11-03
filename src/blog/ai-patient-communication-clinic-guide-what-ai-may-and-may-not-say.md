@@ -14,7 +14,6 @@ tags:
   - Healthcare Compliance
 readTime: 8
 featuredImage: "/assets/images/blog/ai-patient-communication-clinic-guide-what-ai-may-and-may-not-say.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

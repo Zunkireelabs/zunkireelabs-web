@@ -12,7 +12,6 @@ tags:
   - AI Strategy
 readTime: 7
 featuredImage: "/assets/images/blog/saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

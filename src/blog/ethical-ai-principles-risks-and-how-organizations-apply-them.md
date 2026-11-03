@@ -5,7 +5,6 @@ translationKey: "ethical-ai-principles-risks-and-how-organizations-apply-them"
 description: "Ethical AI explained: UNESCO, OECD and NIST frameworks, new laws, the risks of generative AI, and a practical checklist for organizations."
 date: "2026-10-02T11:00:00+05:45"
 featuredImage: "/assets/images/blog/ethical-ai-principles-risks-and-how-organizations-apply-them.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 authorId: zunkiree-team
 category: AI Fundamentals

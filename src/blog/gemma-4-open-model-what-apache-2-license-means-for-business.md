@@ -13,7 +13,6 @@ tags:
   - Google
 readTime: 8
 featuredImage: "/assets/images/blog/gemma-4-open-model-what-apache-2-license-means-for-business.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

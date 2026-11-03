@@ -15,7 +15,6 @@ tags:
   - AI Strategy
 readTime: 8
 featuredImage: "/assets/images/blog/what-is-generative-ui-and-when-does-a-business-need-it.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -14,7 +14,6 @@ tags:
   - AI Infrastructure
 readTime: 7
 featuredImage: "/assets/images/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

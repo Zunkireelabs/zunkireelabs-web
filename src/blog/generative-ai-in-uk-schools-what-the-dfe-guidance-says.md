@@ -4,7 +4,6 @@ title: "Generative AI in UK Schools: What the DfE Guidance Says"
 description: "What the Department for Education says about generative AI in schools and colleges, and the questions to ask an AI supplier before adopting it."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/generative-ai-in-uk-schools-what-the-dfe-guidance-says.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

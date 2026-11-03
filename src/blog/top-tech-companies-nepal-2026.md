@@ -11,7 +11,6 @@ tags:
   - Software Companies
   - Tech Startups
 featuredImage: "/assets/images/blog/top-tech-companies-nepal-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 9
 translationKey: top-tech-companies-nepal-2026
 ---

@@ -1822,20 +1822,36 @@ app = platform.init(
    ===================================================== #}
 {% set homepageFaq = [
   {
-    question: "Voor welke branches bouwt Zunkiree Labs?",
-    answer: "Vandaag vier kernbranches: Onderwijs, Bureaus, Gezondheidszorg en Vastgoed — elk draait op hetzelfde gedeelde platform. Onderwijs en Bureaus zijn nu live in productie; Gezondheidszorg en Vastgoed zijn volgens dezelfde standaard gebouwd."
+    question: "Wat bouwt Zunkiree Labs?",
+    answer: "Zunkiree Labs is een AI-bedrijf uit Kathmandu, Nepal, dat AI-agents, AI-spraakagents, RAG-zoeken en maatwerksoftware bouwt voor bedrijven wereldwijd, waaronder SaaS-platforms, websites en mobiele apps."
   },
   {
-    question: "Is dit een demo, of draait het echt ergens?",
-    answer: "Het draait. Admizz gebruikt dit platform vandaag voor zijn onderwijs-CRM, en Zunkiree Labs draait de eigen bureauactiviteiten — dealpipeline, offertes, oplevering, tijdregistratie — op exact dezelfde infrastructuur. Niets van wat je hier ziet is een concept."
+    question: "Met welke branches werkt Zunkiree Labs?",
+    answer: "Onderwijs, Bureaus, Gezondheidszorg en Vastgoed hebben elk een eigen pagina en draaien op één gedeeld platform. Onze casestudy's behandelen ook bouw, financiële dienstverlening, retail, lucht- en ruimtevaart en cloudservices."
   },
   {
-    question: "Wat wordt over branches heen gedeeld en wat wordt per klant op maat gebouwd?",
-    answer: "De platformlaag — multi-tenantarchitectuur en Orca-orkestratie — wordt gedeeld. Daarbovenop zit per branche een kant-en-klare toepassing plus accelerators voor een snelle start, zodat een nieuwe klant niet bij nul begint."
+    question: "Werken jullie ook met klanten buiten Nepal?",
+    answer: "Ja. Ongeveer 60% van onze klanten is internationaal. We werken vanuit Kathmandu (UTC+5:45) met onboarding op afstand en leveren aan klanten in de VS, het VK, India, Australië, Canada, Zwitserland en Nederland."
   },
   {
-    question: "Moeten we onze bestaande systemen vervangen om dit te gebruiken?",
-    answer: "Nee — het platform is gebouwd om op je eigen infrastructuur te draaien en te integreren met wat je al gebruikt, niet om het volledig te vervangen."
+    question: "Hoe begint een project, en wat kost het?",
+    answer: "Projecten beginnen met een gesprek over je processen, systemen en doelen. Bij werk met een vast bereik spreken we een kleine, betaalde eerste mijlpaal af met een duidelijk bereik en een duidelijke prijs, leveren we in mijlpalen op en dragen we de repositories, documentatie en toegangsgegevens over. De kosten hangen af van bereik, integraties en data. Daarom maken we na de verkenning een offerte in plaats van een prijslijst te hanteren."
+  },
+  {
+    question: "Van wie zijn de code en de data?",
+    answer: "Ons uitgangspunt is dat jij bezit wat je betaalt. Aan het einde van het werk dragen we de repositories, de documentatie en de toegangsgegevens over."
+  },
+  {
+    question: "Werken jullie AI-agents en AI-spraakagents samen met de systemen die we al gebruiken?",
+    answer: "Ja. Onze maatwerk-AI-agents werken met een vaste set tools en goedkeuringsstappen, en elke toolaanroep en elke beslissing wordt vastgelegd. Onze AI-spraakagents lezen live beschikbaarheid en schrijven boekingen in het systeem dat je al gebruikt. We zetten ze het vaakst in het Engels en Nepalees in."
+  },
+  {
+    question: "Draait dit in productie, of is het alleen een demo?",
+    answer: "Het draait. Admizz Education draait zijn aanvraagpijplijn voor studenten op het platform, en Zunkiree Labs draait de eigen bureauactiviteiten erop. Gezondheidszorg en Vastgoed worden gepresenteerd als mogelijkheden, niet als benoemde klantimplementaties."
+  },
+  {
+    question: "Kan ik het uitproberen of een demo zien?",
+    answer: "Zunkiree Search heeft een gratis proefperiode, en via de contactpagina kun je een demo boeken of een offerte aanvragen. De Dental AI Assistant zit met geselecteerde praktijken in een besloten bètafase."
   }
 ] %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
@@ -1853,6 +1869,7 @@ app = platform.init(
       <div class="divide-y divide-navy-100" data-reveal-stagger>
         {% for item in homepageFaq %}
           <div class="py-3">
+            <h3>
             <button
               @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
               class="flex w-full items-center justify-between gap-4 py-2 text-left group"
@@ -1868,6 +1885,7 @@ app = platform.init(
                 </svg>
               </span>
             </button>
+            </h3>
             <div
               id="faq-answer-{{ loop.index }}"
               x-show="activeIndex === {{ loop.index }}"

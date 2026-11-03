@@ -286,6 +286,7 @@ bodyClass: "v2-inter"
 {% if serviceContent.expandedContent %}
 {{ serviceContent.expandedContent | safe }}
 {% endif %}
+{% set ccard = serviceContent.compareCard %}{% include "partials/compare-card.njk" %}
 
 {# =====================================================
    HIGHLIGHTS — "Why Choose Us" checklist in white cards,

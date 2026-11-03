@@ -4,7 +4,6 @@ title: "GaaS Security Features: How Your Data Stays Protected"
 description: "The key security features of Gateway as a Service (GaaS) and how they protect sensitive data while keeping functionality seamless."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/understanding-gaas-security-features-for-enhanced-data-protection.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

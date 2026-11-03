@@ -5,7 +5,6 @@ description: "The key benefits of partnering with Zunkiree Labs for cloud soluti
 date: "2026-09-21"
 shortLabel: "Cloud Solutions"
 featuredImage: "/assets/images/blog/cloud-solutions-provider.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Unlocking the Power of Cloud Solutions

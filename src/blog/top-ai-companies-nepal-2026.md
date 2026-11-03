@@ -10,7 +10,6 @@ tags:
   - Nepal Tech
   - AI Industry
 featuredImage: "/assets/images/blog/top-ai-companies-nepal-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 6
 ---
 

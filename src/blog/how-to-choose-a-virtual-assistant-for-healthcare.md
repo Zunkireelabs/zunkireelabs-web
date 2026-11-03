@@ -4,7 +4,6 @@ description: "A practical guide to choosing a healthcare virtual assistant: defi
 date: 2026-10-02
 lastUpdated: 2026-10-02
 featuredImage: /assets/images/blog/how-to-choose-a-virtual-assistant-for-healthcare.svg
-featuredImageAlt: Abstract gradient background
 ---
 
 <div class="container-custom py-12 md:py-20">

@@ -4,7 +4,6 @@ title: "UK AI Infrastructure Providers: A Data Protection Checklist"
 description: "A checklist for UK organizations comparing AI infrastructure providers, built on the ICO's AI guidance and its rules on international transfers."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/uk-ai-infrastructure-providers-a-data-protection-checklist.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

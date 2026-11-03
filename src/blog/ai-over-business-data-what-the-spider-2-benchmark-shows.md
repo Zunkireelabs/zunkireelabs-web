@@ -13,7 +13,6 @@ tags:
   - Business Intelligence
 readTime: 8
 featuredImage: "/assets/images/blog/ai-over-business-data-what-the-spider-2-benchmark-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

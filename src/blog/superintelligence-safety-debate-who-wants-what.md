@@ -13,7 +13,6 @@ tags:
   - AI Policy
 readTime: 8
 featuredImage: "/assets/images/blog/superintelligence-safety-debate-who-wants-what.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -15,7 +15,6 @@ tags:
   - Conversational AI
 readTime: 8
 featuredImage: "/assets/images/blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

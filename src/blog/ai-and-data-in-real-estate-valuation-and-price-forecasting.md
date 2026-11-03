@@ -13,7 +13,6 @@ tags:
   - Proptech
 readTime: 8
 featuredImage: "/assets/images/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

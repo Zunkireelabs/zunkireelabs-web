@@ -13,7 +13,6 @@ tags:
   - Enterprise Software
 readTime: 8
 featuredImage: "/assets/images/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

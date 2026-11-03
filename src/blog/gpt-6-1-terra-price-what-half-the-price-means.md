@@ -14,7 +14,6 @@ tags:
   - Enterprise AI
 readTime: 6
 featuredImage: "/assets/images/blog/gpt-6-1-terra-price-what-half-the-price-means.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

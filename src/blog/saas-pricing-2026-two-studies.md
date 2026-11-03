@@ -4,7 +4,6 @@ title: "SaaS Pricing in 2026: What Two Recent Studies Report"
 description: "What two published studies say about SaaS and AI pricing, usage-based and hybrid models, with their sample sizes and limits stated."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/saas-pricing-2026-two-studies.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

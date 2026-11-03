@@ -13,7 +13,6 @@ tags:
   - AI Governance
 readTime: 7
 featuredImage: "/assets/images/blog/frontier-ai-labs-internal-models-safeguards-off-govai.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

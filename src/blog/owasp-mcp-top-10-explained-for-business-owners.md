@@ -14,7 +14,6 @@ tags:
   - AI Governance
 readTime: 8
 featuredImage: "/assets/images/blog/owasp-mcp-top-10-explained-for-business-owners.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

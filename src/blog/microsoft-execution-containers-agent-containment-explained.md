@@ -14,7 +14,6 @@ tags:
   - AI Agents
 readTime: 6
 featuredImage: "/assets/images/blog/microsoft-execution-containers-agent-containment-explained.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

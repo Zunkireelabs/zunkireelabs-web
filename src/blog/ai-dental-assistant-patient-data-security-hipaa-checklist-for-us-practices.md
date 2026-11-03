@@ -12,7 +12,6 @@ tags:
   - Patient Data
 readTime: 8
 featuredImage: "/assets/images/blog/ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -12,7 +12,6 @@ tags:
   - AI Agents
 readTime: 7
 featuredImage: "/assets/images/blog/gaas-for-marketing-agencies-what-agentic-as-a-service-changes.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

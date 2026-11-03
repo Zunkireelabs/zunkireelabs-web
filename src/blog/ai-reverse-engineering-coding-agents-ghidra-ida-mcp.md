@@ -18,7 +18,6 @@ tags:
   - Cybersecurity
 readTime: 8
 featuredImage: "/assets/images/blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

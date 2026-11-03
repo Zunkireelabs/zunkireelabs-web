@@ -5,7 +5,6 @@ description: "The key differences between a true AI infrastructure partner and o
 date: "2026-09-24"
 shortLabel: "AI Partner"
 featuredImage: "/assets/images/blog/ai-development-partner-guide.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

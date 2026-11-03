@@ -13,7 +13,6 @@ tags:
   - Workflow Automation
 readTime: 6
 featuredImage: "/assets/images/blog/what-is-orca-workflow-orchestration-layer-explained.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

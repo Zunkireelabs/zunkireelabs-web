@@ -14,7 +14,6 @@ tags:
   - Enterprise AI
 readTime: 6
 featuredImage: "/assets/images/blog/openai-models-on-google-cloud-what-multi-cloud-ai-means.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

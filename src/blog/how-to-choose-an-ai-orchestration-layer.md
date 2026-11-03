@@ -13,7 +13,6 @@ tags:
 readTime: 7
 translationKey: how-to-choose-an-ai-orchestration-layer
 featuredImage: "/assets/images/blog/how-to-choose-an-ai-orchestration-layer.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** an AI orchestration layer coordinates work across the tools and agents a business already runs. Options range from general automation tools to agent frameworks to managed layers such as [Orca](/blog/what-is-orca-workflow-orchestration-layer-explained/). This guide is deliberately vendor-neutral: it gives you criteria to compare any option, and does not rank specific products.

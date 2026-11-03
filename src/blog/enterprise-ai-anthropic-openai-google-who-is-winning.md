@@ -14,7 +14,6 @@ tags:
   - OpenAI
 readTime: 8
 featuredImage: "/assets/images/blog/enterprise-ai-anthropic-openai-google-who-is-winning.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

@@ -15,7 +15,6 @@ tags:
   - AI in Nepal
 readTime: 8
 featuredImage: "/assets/images/blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

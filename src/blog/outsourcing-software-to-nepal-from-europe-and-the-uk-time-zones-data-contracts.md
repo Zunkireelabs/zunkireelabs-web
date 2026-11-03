@@ -12,7 +12,6 @@ tags:
 readTime: 6
 translationKey: outsourcing-software-to-nepal-from-europe-and-the-uk-time-zones-data-contracts
 featuredImage: "/assets/images/blog/outsourcing-software-to-nepal-from-europe-and-the-uk-time-zones-data-contracts.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** European and UK companies can work with a Nepal-based team, but three things need deciding up front: how you will overlap in working hours, where your data lives, and what the contract says about ownership and handover. This is practical guidance, not legal advice. Check data-protection obligations with your own counsel.

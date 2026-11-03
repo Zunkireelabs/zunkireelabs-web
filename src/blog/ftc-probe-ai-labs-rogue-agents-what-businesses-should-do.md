@@ -13,7 +13,6 @@ tags:
   - AI Regulation
 readTime: 7
 featuredImage: "/assets/images/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

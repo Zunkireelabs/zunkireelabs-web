@@ -15,7 +15,6 @@ tags:
   - AI Agents
 readTime: 8
 featuredImage: "/assets/images/blog/ai-for-education-consultancy-student-inquiry-automation-guide.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

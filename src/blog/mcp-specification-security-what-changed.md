@@ -14,7 +14,6 @@ tags:
   - AI Agents
 readTime: 8
 featuredImage: "/assets/images/blog/mcp-specification-security-what-changed.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

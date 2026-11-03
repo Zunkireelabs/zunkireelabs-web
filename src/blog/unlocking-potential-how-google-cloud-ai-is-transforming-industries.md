@@ -4,7 +4,6 @@ title: "How Google Cloud AI Is Transforming Industries"
 description: "Explore how Google Cloud AI is reshaping sectors like education, healthcare, real estate, and agencies."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/unlocking-potential-how-google-cloud-ai-is-transforming-industries.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

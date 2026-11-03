@@ -13,7 +13,6 @@ tags:
 readTime: 7
 translationKey: outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome
 featuredImage: "/assets/images/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** SaaS usually charges per seat, meaning per person with a login. GaaS (Agentic as a Service) usually charges for work done, either per task or per outcome. The difference sounds small but changes what you are buying, what can go wrong, and what you should ask a vendor before signing. This post is practical buying guidance, not market data.

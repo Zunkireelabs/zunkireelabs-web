@@ -12,7 +12,6 @@ tags:
 readTime: 7
 translationKey: software-outsourcing-models-dedicated-team-vs-fixed-price-vs-white-label
 featuredImage: "/assets/images/blog/software-outsourcing-models-dedicated-team-vs-fixed-price-vs-white-label.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 **In short:** outsourcing models differ in who carries the risk and who directs the work. A dedicated team gives you capacity, a fixed-price project gives you an outcome, and a white-label build gives you an outcome under your own brand. Choosing the wrong one is a common reason outsourcing disappoints. This is practical guidance, not market data.

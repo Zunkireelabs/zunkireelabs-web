@@ -12,7 +12,6 @@ tags:
   - AI Infrastructure
 readTime: 6
 featuredImage: "/assets/images/blog/ai-agents-are-getting-their-own-infrastructure.svg"
-featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/6415626/pexels-photo-6415626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

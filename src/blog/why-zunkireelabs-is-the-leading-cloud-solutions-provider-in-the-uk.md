@@ -5,7 +5,6 @@ description: "How Zunkiree Labs helps UK businesses with innovative cloud archit
 date: "2026-09-21"
 shortLabel: "Cloud Solutions"
 featuredImage: "/assets/images/blog/cloud-solutions-uk.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Introduction to Cloud Solutions

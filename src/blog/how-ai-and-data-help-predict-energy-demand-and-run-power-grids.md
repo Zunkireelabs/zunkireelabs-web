@@ -13,7 +13,6 @@ tags:
   - AI Infrastructure
 readTime: 8
 featuredImage: "/assets/images/blog/how-ai-and-data-help-predict-energy-demand-and-run-power-grids.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

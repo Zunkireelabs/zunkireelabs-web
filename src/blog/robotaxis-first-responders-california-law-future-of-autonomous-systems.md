@@ -13,7 +13,6 @@ tags:
   - Robotaxis
 readTime: 7
 featuredImage: "/assets/images/blog/robotaxis-first-responders-california-law-future-of-autonomous-systems.svg"
-featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Abhishek  Navlakha on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/32461216/pexels-photo-32461216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -13,7 +13,6 @@ tags:
   - Digital Divide
 readTime: 8
 featuredImage: "/assets/images/blog/ai-everyday-life-what-the-usage-data-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

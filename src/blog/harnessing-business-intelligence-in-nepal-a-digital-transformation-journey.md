@@ -4,7 +4,6 @@ title: "Business Intelligence in Nepal: A Digital Transformation"
 description: "Explore the role of Business Intelligence in transforming industries in Nepal, from healthcare to real estate."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/harnessing-business-intelligence-in-nepal-a-digital-transformation-journey.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">
