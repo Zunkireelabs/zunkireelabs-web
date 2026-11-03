@@ -87,6 +87,8 @@ Often not. Microsoft advises using "the lowest level of complexity that reliably
 **What are MCP and A2A?**
 The Model Context Protocol (MCP) connects an AI agent to tools, data and applications. The Agent2Agent protocol (A2A) lets agents from different vendors communicate with each other. Both have been moved under the Linux Foundation.
 
+For a decision guide, read our whitepaper on [choosing between orchestration, automation and agents](/resources/ai-orchestration-automation-agents-whitepaper/).
+
 ## Related Insights
 
 - [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)

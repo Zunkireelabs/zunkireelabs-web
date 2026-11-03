@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="get-cited-by-ai-engines-guide-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#get-cited-by-ai-engines-guide-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">GET CITED BY AI</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">GUIDE</text>
+  <rect x="80" y="110" width="400" height="55" rx="27" fill="#ffffff" opacity="0.1"/><circle cx="115" cy="137" r="11" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+  <text x="145" y="143" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="start">best way to choose a supplier?</text>
+  <rect x="80" y="195" width="400" height="190" rx="12" fill="#ffffff" opacity="0.1"/>
+  <line x1="105" y1="235" x2="440" y2="235" stroke="#ffffff" stroke-width="5" opacity="0.3"/>
+  <line x1="105" y1="267" x2="380" y2="267" stroke="#ffffff" stroke-width="5" opacity="0.3"/>
+  <line x1="105" y1="299" x2="440" y2="299" stroke="#ffffff" stroke-width="5" opacity="0.3"/>
+  <line x1="105" y1="331" x2="380" y2="331" stroke="#ffffff" stroke-width="5" opacity="0.3"/>
+  <rect x="105" y="350" width="42" height="26" rx="6" fill="#22c55e"/>  <text x="126" y="369" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a" opacity="1" text-anchor="middle">[1]</text>
+
+  <line x1="147" y1="363" x2="560" y2="300" stroke="#22c55e" stroke-width="2" stroke-dasharray="6 6"/>
+  <rect x="560" y="255" width="180" height="90" rx="10" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="2"/>
+  <text x="650" y="292" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#22c55e" opacity="1" text-anchor="middle">Your page</text>
+  <text x="650" y="318" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#ffffff" opacity="0.8" text-anchor="middle">cited as source</text>
+</svg>

@@ -10,7 +10,6 @@ tags:
   - Tech Startups
   - Fintech
 featuredImage: "/assets/images/blog/rising-tech-startups-nepal-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 8
 translationKey: rising-tech-startups-nepal-2026
 ---

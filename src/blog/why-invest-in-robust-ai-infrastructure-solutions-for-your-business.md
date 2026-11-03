@@ -4,7 +4,6 @@ title: "Why Invest in Robust AI Infrastructure for Your Business"
 description: "Explore the essential components of AI infrastructure solutions and how Zunkiree Labs can help your business leverage AI technology for efficiency and growth."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/why-invest-in-robust-ai-infrastructure-solutions-for-your-business.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

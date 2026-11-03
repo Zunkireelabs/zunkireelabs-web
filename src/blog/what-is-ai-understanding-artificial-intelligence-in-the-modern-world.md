@@ -5,7 +5,6 @@ description: "Discover what artificial intelligence (AI) is, its applications, a
 date: "2026-09-21"
 shortLabel: "What Is AI"
 featuredImage: "/assets/images/blog/what-is-ai.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Defining AI: A Concise Overview

@@ -13,7 +13,6 @@ tags:
   - Developer Tools
 readTime: 7
 featuredImage: "/assets/images/blog/ai-coding-agents-2026-how-developers-actually-work-now.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

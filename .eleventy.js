@@ -58,8 +58,28 @@ export default function (eleventyConfig) {
     },
   });
 
+  // Local-only stand-in for the /api/submit-lead sidecar (server/submit-lead-server.js),
+  // which does not run under `eleventy --serve`. It answers 200 and prints the body in
+  // the terminal so the signup and quiz flow can be tried locally. It never calls the
+  // CRM, and it is only mounted when ELEVENTY_ENV=development (npm run dev).
+  const localLeadStub = (req, res, next) => {
+    if (!req.url || !req.url.startsWith("/api/submit-lead")) return next();
+    if (req.method !== "POST") { res.statusCode = 405; return res.end(); }
+    let body = "";
+    req.on("data", (chunk) => { body += chunk; });
+    req.on("end", () => {
+      console.log("[local lead stub] NOT sent to the CRM:", req.url, body);
+      res.setHeader("Content-Type", "application/json");
+      res.statusCode = 200;
+      res.end(JSON.stringify({ ok: true, local: true }));
+    });
+  };
+
   // Allow access from local network (phones, tablets on same WiFi)
-  eleventyConfig.setServerOptions({ host: "0.0.0.0" });
+  eleventyConfig.setServerOptions({
+    host: "0.0.0.0",
+    ...(process.env.ELEVENTY_ENV === "development" ? { middleware: [localLeadStub] } : {}),
+  });
 
   // Debounce rebuilds: a single save can fire multiple near-simultaneous
   // file-change events (editor atomic writes, overlapping watch targets),

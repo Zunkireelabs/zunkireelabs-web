@@ -10,7 +10,6 @@ tags:
   - Software Outsourcing
   - Vendor Selection
 featuredImage: "/assets/images/blog/how-to-check-a-nepali-it-company-before-you-hire-it.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 4
 translationKey: how-to-check-a-nepali-it-company-before-you-hire-it
 ---

@@ -38,15 +38,13 @@
       {# Client Logo Tabs - Horizontal Scroll (5 visible at once) #}
       <div
         x-ref="tabsContainer"
-        class="flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
-        style="--tab-count: 5;"
+        class="cs-tabs flex-1 flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
       >
         <template x-for="(study, index) in studies" :key="study.id">
           <button
             @click="goTo(index)"
             :x-ref="'tab-' + index"
-            class="relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
-            style="min-width: calc((100% - 32px) / 5);"
+            class="cs-tab relative h-20 px-6 flex items-center justify-center transition-all duration-300 flex-shrink-0"
             :class="activeIndex === index ? 'bg-white shadow-sm' : 'bg-gray-100 hover:bg-gray-50'"
           >
             <img

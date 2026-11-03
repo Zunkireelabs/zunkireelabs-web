@@ -1822,20 +1822,36 @@ app = platform.init(
    ===================================================== #}
 {% set homepageFaq = [
   {
-    question: "Für welche Branchen entwickelt Zunkiree Labs?",
-    answer: "Heute vier Kernbranchen: Bildung, Agenturen, Gesundheitswesen und Immobilien – jede läuft auf derselben gemeinsamen Plattform. Bildung und Agenturen sind jetzt live im Produktivbetrieb; Gesundheitswesen und Immobilien sind nach demselben Standard gebaut."
+    question: "Was entwickelt Zunkiree Labs?",
+    answer: "Zunkiree Labs ist ein KI-Unternehmen aus Kathmandu, Nepal, das KI-Agenten, KI-Sprachagenten, RAG-Suche und individuelle Software für Unternehmen weltweit entwickelt, darunter SaaS-Plattformen, Websites und mobile Apps."
   },
   {
-    question: "Ist das eine Demo, oder läuft es tatsächlich irgendwo?",
-    answer: "Es läuft. Admizz betreibt sein Bildungs-CRM heute auf dieser Plattform, und Zunkiree Labs betreibt die eigene Agenturarbeit – Deal-Pipeline, Angebote, Lieferung, Zeiterfassung – auf exakt derselben Infrastruktur. Nichts, was Sie hier sehen, ist ein Konzept."
+    question: "Mit welchen Branchen arbeitet Zunkiree Labs?",
+    answer: "Bildung, Agenturen, Gesundheitswesen und Immobilien haben jeweils eine eigene Seite und laufen auf einer gemeinsamen Plattform. Unsere Fallstudien decken zudem Bauwesen, Finanzdienstleistungen, Einzelhandel, Luft- und Raumfahrt sowie Cloud-Services ab."
   },
   {
-    question: "Was wird branchenübergreifend geteilt, und was wird pro Kunde individuell gebaut?",
-    answer: "Die Plattformschicht – Multi-Tenant-Architektur und Orca-Orchestrierung – wird geteilt. Darauf liegt je Branche eine vorgefertigte Anwendung plus Beschleuniger für einen schnellen Start, sodass ein neuer Kunde nicht bei null anfängt."
+    question: "Arbeiten Sie auch mit Kunden ausserhalb Nepals zusammen?",
+    answer: "Ja. Rund 60 % unserer Kunden sind international. Wir arbeiten von Kathmandu aus (UTC+5:45) mit Onboarding aus der Ferne und liefern an Kunden in den USA, im Vereinigten Königreich, in Indien, Australien, Kanada, der Schweiz und den Niederlanden."
   },
   {
-    question: "Müssen wir unsere bestehenden Systeme ersetzen, um das zu nutzen?",
-    answer: "Nein – die Plattform ist dafür gebaut, auf Ihrer eigenen Infrastruktur zu laufen und sich in Bestehendes zu integrieren, statt es komplett zu ersetzen."
+    question: "Wie startet ein Projekt, und was kostet es?",
+    answer: "Projekte beginnen mit einem Gespräch über Ihre Prozesse, Systeme und Ziele. Bei Projekten mit festem Umfang vereinbaren wir einen kleinen, bezahlten ersten Meilenstein mit klarem Umfang und Preis, liefern in Meilensteinen und übergeben Repositories, Dokumentation und Zugangsdaten. Die Kosten hängen von Umfang, Integrationen und Daten ab. Deshalb erstellen wir nach der Discovery-Phase ein Angebot, statt eine Preisliste zu nennen."
+  },
+  {
+    question: "Wem gehören Code und Daten?",
+    answer: "Unser Standard lautet: Sie besitzen, was Sie bezahlen. Am Ende der Arbeit übergeben wir die Repositories, die Dokumentation und die Zugangsdaten."
+  },
+  {
+    question: "Funktionieren Ihre KI-Agenten und KI-Sprachagenten mit den Systemen, die wir bereits nutzen?",
+    answer: "Ja. Unsere individuellen KI-Agenten arbeiten mit einem festen Satz an Werkzeugen und Freigabestufen, und jeder Werkzeugaufruf und jede Entscheidung wird protokolliert. Unsere KI-Sprachagenten lesen die aktuelle Verfügbarkeit und tragen Buchungen in das System ein, das Sie bereits einsetzen. Am häufigsten setzen wir sie auf Englisch und Nepalesisch ein."
+  },
+  {
+    question: "Läuft das produktiv, oder ist es nur eine Demo?",
+    answer: "Es läuft. Admizz Education betreibt seine Anfragen-Pipeline für Studierende auf der Plattform, und Zunkiree Labs betreibt seine eigene Agenturarbeit darauf. Gesundheitswesen und Immobilien werden als Fähigkeiten dargestellt, nicht als benannte Kundeneinsätze."
+  },
+  {
+    question: "Kann ich es ausprobieren oder eine Demo sehen?",
+    answer: "Zunkiree Search bietet eine kostenlose Testphase, und über die Kontaktseite können Sie eine Demo buchen oder ein Angebot anfragen. Der Dental AI Assistant befindet sich mit ausgewählten Praxen in einer privaten Beta."
   }
 ] %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
@@ -1853,6 +1869,7 @@ app = platform.init(
       <div class="divide-y divide-navy-100" data-reveal-stagger>
         {% for item in homepageFaq %}
           <div class="py-3">
+            <h3>
             <button
               @click="activeIndex = (activeIndex === {{ loop.index }}) ? null : {{ loop.index }}"
               class="flex w-full items-center justify-between gap-4 py-2 text-left group"
@@ -1868,6 +1885,7 @@ app = platform.init(
                 </svg>
               </span>
             </button>
+            </h3>
             <div
               id="faq-answer-{{ loop.index }}"
               x-show="activeIndex === {{ loop.index }}"

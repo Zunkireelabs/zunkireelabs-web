@@ -1,0 +1,198 @@
+---
+layout: resource-content.njk
+title: "Choosing an AI Development Partner: A Buyer's Ebook"
+description: "Questions, red flags and a weighted scorecard for buyers choosing an AI development partner, with notes on data, security, location and ownership."
+permalink: /resources/choosing-ai-development-partner-buyers-ebook/
+slug: choosing-ai-development-partner-buyers-ebook
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Who this ebook is for</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This ebook is for owners, operations leads and technical managers who are about to hire an outside team to build an AI system, such as a retrieval-based assistant, a custom agent or an automation connected to company data. It gives you questions to ask, red flags to watch for and a scorecard you can fill in. It does not name or rank any supplier.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    It is written by a supplier, Zunkiree Labs, so read it with that in mind. Where a statement comes from a published source it is cited in the Sources section. Where it is our own view we say so. If your first question is whether to build, buy or outsource, start with our <a href="/resources/build-vs-buy-ai-software-nepal-whitepaper/" class="font-medium text-[#5a9100] hover:underline">build vs buy whitepaper</a> and return here once you have decided to commission a partner.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">1. Be clear about what you are buying</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Many software companies now say they do AI. Some of that work is a thin layer over a general-purpose model API, such as a chatbot added to an existing product. Other work is built around your own data and workflows: a retrieval pipeline built against your real documents, agents that can call real internal tools, and a data foundation clean enough that the AI is not guessing. Both can be legitimate, but they are different products with different prices.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The practical risk is a mismatch. A team that delivers a generic chatbot when you expected something wired into your order system, support queue or data pipeline has not necessarily failed. The scope was never agreed. Write down, in one paragraph, what the system must read, what it must change, and who must be able to trust its output. Every question below is easier to answer once that paragraph exists.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">2. Questions to ask before you sign</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Use these in the first two calls. A partner who has built this kind of system before can answer them in plain terms and with examples.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Can you show a system that reads and writes to a live data source, not only a chat interface over static documents?</li>
+    <li>Do you discuss my data pipeline and integration points before you discuss which model to use?</li>
+    <li>What happens when the underlying model changes or is withdrawn? Can the model layer be swapped without rebuilding everything above it?</li>
+    <li>What does the system do when it is uncertain: guess, defer to a person, or fall back to a safe answer?</li>
+    <li>Which AI systems have you taken into production, and what is your longest-running one?</li>
+    <li>How do you monitor quality after launch, and what is the process when answers drift or data changes?</li>
+    <li>Who exactly will work on my project, and how are scope changes handled?</li>
+    <li>What do I receive at the end: code, documentation, deployment instructions and a handover session?</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    These come from the buyer guidance in our blog posts on choosing an AI partner, listed in Sources.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">3. Red flags</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    None of these proves a partner is poor, but each is a reason to ask more questions before you continue.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Claims of expertise in all areas of AI, with no specific systems to show.</li>
+    <li>A demo built on sample data, and no discussion of your real data.</li>
+    <li>Technical choices that cannot be explained in plain language.</li>
+    <li>No experience with production deployments, only prototypes.</li>
+    <li>A fixed timeline or price promised before anyone has looked at your data or workflows.</li>
+    <li>A price far below other quotes with no explanation of what is left out.</li>
+    <li>No discussion of maintenance, monitoring or what happens after launch.</li>
+    <li>Answers about security and data handling that stay at the level of general assurances.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The same advice appears in our guide to choosing an AI development company, which also suggests that guaranteed timelines and unusually low prices deserve scepticism.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">4. Test their thinking about data and accuracy</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Most AI projects succeed or fail on data, not on the model. Two pieces of published research make the point and give you something concrete to ask about.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    First, the Spider 2.0 benchmark, published by Lei and colleagues at ICLR 2025, tested models on real enterprise database tasks. Its databases average 812 columns, against 27 in the earlier Spider 1.0 benchmark. The authors report that o1-preview solved 21.3% of tasks in their agent setting, compared with 91.2% for the older benchmark. Their error analysis found that 27.6% of failures came from linking to the wrong tables or columns. These results come from the 2024 and 2025 models the authors tested and later systems score higher on the project leaderboard, so treat the figures as a warning about messy business data, not as a current score. The paper is at <a href="https://arxiv.org/abs/2411.07763" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Second, a July 2024 Nature paper by Shumailov and colleagues found that models trained repeatedly on content generated by earlier models lose information, starting with rare cases. It is about training, so it matters most if a partner proposes to generate synthetic data or fine-tune a model. Their advice is to keep real, human-produced data in the mix and to track where data came from (<a href="https://www.nature.com/articles/s41586-024-07566-y" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Nature</a>).
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Questions that follow from this:
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>How will you check that the system picks the right records and fields in my data?</li>
+    <li>Will you test on my own questions, with answers I can verify, before launch?</li>
+    <li>If you plan to generate training data, how will you keep real data in the mix and record where each piece came from?</li>
+    <li>Who on my side is responsible for the numbers that drive decisions?</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">5. Security, location and the contract</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    AI systems often process sensitive data, so your partner needs a clear security position. Ask to see evidence rather than accept a statement. In the UK, the National Cyber Security Centre describes Cyber Essentials as "the minimum standard of cyber security recommended by the Government for organisations of all sizes." It covers five controls: firewalls, secure configuration, security update management, user access control and malware protection, and comes in two levels, Cyber Essentials and Cyber Essentials Plus. Other countries have their own schemes. The point is to ask which certifications a supplier holds and to see the certificate and its scope.
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Where will my data be stored and processed, during development and in production?</li>
+    <li>Who can access my systems and data, and how is that access removed when people leave?</li>
+    <li>Who owns the code and the data, and what happens to them if the relationship ends?</li>
+    <li>What does the contract say about personal data, sub-contractors and breach notification?</li>
+    <li>Who handles security updates after launch?</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Location matters mainly for law. The engineering work, such as data pipelines and agent orchestration, can be done remotely. But if a supplier in another country will handle personal data of people in the UK, the ICO says each restricted transfer must be covered by adequacy regulations, by appropriate safeguards together with a transfer risk assessment, or by an exception, and "if you can't identify an appropriate exception, you must not make the transfer." See the ICO guide linked in Sources. This is general information, not legal advice, and other jurisdictions have their own rules. Ask any supplier, including us, which of these apply to your project. Zunkiree Labs is based in Nepal, and we do not claim UK certification on this page.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">6. Timeline, price and ownership</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Compare the whole cost, not the day rate: discovery, build, hosting, model usage, monitoring, maintenance and the time your own people spend managing the work. A cheaper rate can cost more if a vague brief leads to rework.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: treat any fixed timeline as credible only after the supplier has seen your data. In our blog guide we give rough ranges, such as 4 to 6 weeks for a simple FAQ chatbot, 6 to 10 weeks for a custom retrieval pipeline and 3 to 6 months for a full AI product. These are our own planning estimates, not an industry benchmark, and your project may differ.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Agree in writing that you own the code and data, that documentation and deployment instructions are included, and how support continues after launch. Our <a href="/resources/build-vs-buy-ai-software-nepal-whitepaper/" class="font-medium text-[#5a9100] hover:underline">build vs buy whitepaper</a> covers these terms in more detail.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">7. The scorecard</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Score each shortlisted partner from 1 to 5 on every row, multiply by the weight and add up the results. Our own suggestion, not a finding from the sources: the weights below reflect a typical business project, so change them if, for example, security matters more to you than anything else.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Criterion</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Weight</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">What a strong answer looks like</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Relevant technical expertise</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">20%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Specific systems of your type, explained plainly, with named tools and trade-offs</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Production experience</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">15%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Live systems, monitoring, handling of failures and model changes</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Domain knowledge</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">15%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Understands your sector, regulation and terminology; relevant case studies</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Communication</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">15%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Clear proposals, honest about limits and risks, one named contact</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Price and timeline realism</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">10%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Estimates tied to your data; maintenance costs discussed</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Post-deployment support</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">10%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Defined support, monitoring and handover to your team</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Security and data handling</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">10%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Evidence of controls, clear data location and access rules</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Working fit</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">5%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Overlapping hours, compatible style, willingness to say no</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Do not choose on price alone. A failed project usually costs more than the saving from a cheaper supplier.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">8. A selection process you can follow</h2>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Define the requirement.</strong> The business problem, success measures, available data, budget and must-have features.</li>
+    <li><strong>Shortlist three to five suppliers.</strong></li>
+    <li><strong>Hold exploratory calls</strong> and use the questions in section 2.</li>
+    <li><strong>Request written proposals</strong> that answer your specific requirement.</li>
+    <li><strong>Have a technical person review</strong> the proposed approach, especially the data and integration plan.</li>
+    <li><strong>Check references</strong> from similar projects.</li>
+    <li><strong>Run a small pilot</strong> with a written success test before committing to the full engagement.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    If you would like to talk through a requirement with us, you can <a href="/schedule-a-call/" class="font-medium text-[#5a9100] hover:underline">schedule a call</a>. If your project is a custom agent, see our <a href="/solutions/custom-agent/" class="font-medium text-[#5a9100] hover:underline">custom AI agent service</a>. Use the same questions with us as with any other supplier.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.ncsc.gov.uk/cyberessentials/overview" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">National Cyber Security Centre: Cyber Essentials overview</a></li>
+    <li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/international-transfers-a-guide/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Information Commissioner's Office: International transfers, a guide</a>, checked 28 October 2026</li>
+    <li><a href="https://arxiv.org/abs/2411.07763" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Lei et al., Spider 2.0: Evaluating Language Models on Real-World Enterprise Text-to-SQL Workflows</a>, ICLR 2025, revised March 17, 2025</li>
+    <li><a href="https://www.nature.com/articles/s41586-024-07566-y" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Shumailov et al., AI models collapse when trained on recursively generated data</a>, Nature 631, July 24, 2024</li>
+    <li><a href="/blog/choosing-an-ai-development-partner-a-global-buyers-guide/" class="font-medium text-[#5a9100] hover:underline">Zunkiree Labs, Choosing an AI Development Partner: A Global Buyer's Guide</a> (our own guidance)</li>
+    <li><a href="/blog/how-to-choose-ai-development-company/" class="font-medium text-[#5a9100] hover:underline">Zunkiree Labs, Choose an AI Development Company: 8 Things to Look For</a> (our own guidance, including the timeline ranges)</li>
+    <li><a href="/blog/choosing-a-software-development-partner-in-the-uk/" class="font-medium text-[#5a9100] hover:underline">Zunkiree Labs, Choosing a Software Development Partner in the UK</a></li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the most important question to ask an AI development partner?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Ask them to show a system they built that reads from and writes to a live data source, and to explain what it does when the AI is uncertain. A chat window over static documents does not show integration work.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does the location of an AI development partner matter?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Less than it used to for the engineering itself. It matters for law and contracts. If a supplier outside the UK will handle personal data of UK people, the ICO says the transfer must be covered by adequacy regulations, appropriate safeguards or an exception, and you must not make it if none applies.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Should I choose the cheapest AI development quote?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not on price alone. Compare the whole cost, including discovery, build, hosting, model usage, maintenance and the time your own staff spend. A low quote on a vague brief often becomes a rebuild.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How can I test a partner before a large commitment?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Start with a small, paid pilot on one workflow with a written success test, and check references from similar projects. Agree ownership of code and data before the pilot starts.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI development partner, choosing an AI company, AI vendor selection, AI supplier scorecard, buyer guide",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the most important question to ask an AI development partner?", "acceptedAnswer": {"@type": "Answer", "text": "Ask them to show a system they built that reads from and writes to a live data source, and to explain what it does when the AI is uncertain. A chat window over static documents does not show integration work."}}, {"@type": "Question", "name": "Does the location of an AI development partner matter?", "acceptedAnswer": {"@type": "Answer", "text": "Less than it used to for the engineering itself. It matters for law and contracts. If a supplier outside the UK will handle personal data of UK people, the ICO says the transfer must be covered by adequacy regulations, appropriate safeguards or an exception, and you must not make it if none applies."}}, {"@type": "Question", "name": "Should I choose the cheapest AI development quote?", "acceptedAnswer": {"@type": "Answer", "text": "Not on price alone. Compare the whole cost, including discovery, build, hosting, model usage, maintenance and the time your own staff spend. A low quote on a vague brief often becomes a rebuild."}}, {"@type": "Question", "name": "How can I test a partner before a large commitment?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a small, paid pilot on one workflow with a written success test, and check references from similar projects. Agree ownership of code and data before the pilot starts."}}]}</script>

@@ -1,0 +1,18 @@
+---
+pagination:
+  data: companyComparisons
+  size: 1
+  alias: cc
+  addAllPagesToCollections: true
+layout: comparison-company.njk
+permalink: /compare/{{ cc.id }}/
+bodyClass: "v2-inter"
+hideChrome: true
+eleventyComputed:
+  title: "{{ cc.title }} | Zunkiree Labs"
+  description: "{{ cc.description }}"
+  comparisonId: "{{ cc.id }}"
+---
+
+{# Company/service comparison pages are generated from companyComparisons data #}
+{# Content is rendered by the comparison-company.njk layout #}

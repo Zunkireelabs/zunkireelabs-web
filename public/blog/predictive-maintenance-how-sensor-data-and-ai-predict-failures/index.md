@@ -58,6 +58,8 @@ Smaller manufacturers could in principle benefit too, but the evidence here is t
 
 The research direction is towards models that need less labelled failure data, that explain themselves, and that transfer between machines. For a factory, the practical step does not depend on any of that. Our own suggestion, not a finding from the studies: pick one critical machine, record every failure and repair in a simple log from day one, add a small number of vibration and temperature sensors, and judge success by whether alerts are specific enough that the maintenance team acts on them. Manufacturing software that already tracks production, inventory and quality, such as our [Gaamma manufacturing ERP](/resources/gaamma-case-study/), is one place where that failure log can live next to the rest of the plant's data.
 
+Zunkiree Labs, a Kathmandu company that builds [custom AI agents](/solutions/custom-agent/) and data systems, can help scope a small pilot like this: which machine to start with, what to log, and how alerts reach the maintenance team. [Book a call](/schedule-a-call/) to talk it through.
+
 ## The Short Version
 
 Predictive maintenance turns sensor readings into early warnings. The best-documented gains come from heavy industry and from systems designed to limit false alarms and to explain themselves. The main obstacles are data quality, trust and transfer, and smaller factories face cost and skills barriers on top. Start small, keep a failure log, and treat published percentages as ranges.
@@ -77,6 +79,8 @@ The same review names data quality, with missing data, sensor noise and a lack o
 
 **Can a small factory use predictive maintenance?**
 Possibly, but the evidence is thinner. A 2016 NIST pilot survey found that small and medium manufacturers lagged large ones in advanced maintenance strategies, with cost, technical support and workforce skills as the main barriers. A sensible start is one critical machine, a few low-cost sensors and a written log of every failure.
+
+For a longer, structured version of this guide, read our whitepaper on [predictive maintenance for small manufacturers](/resources/predictive-maintenance-small-manufacturers-whitepaper/).
 
 ## Related Insights
 

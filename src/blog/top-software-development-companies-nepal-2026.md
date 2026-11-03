@@ -10,7 +10,6 @@ tags:
   - Software Companies
   - Software Outsourcing
 featuredImage: "/assets/images/blog/top-software-development-companies-nepal-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 readTime: 6
 translationKey: top-software-development-companies-nepal-2026
 ---

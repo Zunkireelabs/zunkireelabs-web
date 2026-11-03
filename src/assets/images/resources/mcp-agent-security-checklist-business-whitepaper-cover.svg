@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="mcp-agent-security-checklist-business-whitepaper-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#mcp-agent-security-checklist-business-whitepaper-bg)"/>
+  <path d="M400 80 L520 125 L520 225 C520 290 465 335 400 360 C335 335 280 290 280 225 L280 125 Z" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="3"/>
+  <rect x="370" y="205" width="60" height="50" rx="6" fill="#22c55e"/>
+  <path d="M382 205 L382 190 C382 170 418 170 418 190 L418 205" fill="none" stroke="#22c55e" stroke-width="5"/>
+  <text x="400" y="55" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#22c55e" text-anchor="middle">MCP AGENT SECURITY</text>
+  <text x="400" y="410" font-family="system-ui, sans-serif" font-size="14" fill="#fff" opacity="0.7" text-anchor="middle">Least privilege · Logs · Approvals</text>
+</svg>

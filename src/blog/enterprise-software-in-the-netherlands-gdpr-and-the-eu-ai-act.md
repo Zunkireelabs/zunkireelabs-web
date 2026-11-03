@@ -4,7 +4,6 @@ title: "Enterprise Software in the Netherlands: GDPR and EU AI Act"
 description: "What a Dutch organization buying enterprise software should know about its data protection regulator and the EU AI Act timeline, with the dates as published."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/enterprise-software-in-the-netherlands-gdpr-and-the-eu-ai-act.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

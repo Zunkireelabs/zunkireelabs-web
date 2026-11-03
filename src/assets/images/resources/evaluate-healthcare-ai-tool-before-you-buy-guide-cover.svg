@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="evaluate-healthcare-ai-tool-before-you-buy-guide-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#evaluate-healthcare-ai-tool-before-you-buy-guide-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">EVALUATE HEALTHCARE AI</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">GUIDE</text>
+  <rect x="95" y="105" width="270" height="310" rx="14" fill="#ffffff" opacity="0.1"/><rect x="175" y="92" width="110" height="30" rx="8" fill="#22c55e"/>
+  <circle cx="135" cy="170" r="14" fill="#22c55e"/><path d="M128 170 L133 176 L143 164" fill="none" stroke="#0f172a" stroke-width="3"/>  <line x1="165" y1="170" x2="335" y2="170" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+  <circle cx="135" cy="225" r="14" fill="#22c55e"/><path d="M128 225 L133 231 L143 219" fill="none" stroke="#0f172a" stroke-width="3"/>  <line x1="165" y1="225" x2="335" y2="225" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+  <circle cx="135" cy="280" r="14" fill="#22c55e"/><path d="M128 280 L133 286 L143 274" fill="none" stroke="#0f172a" stroke-width="3"/>  <line x1="165" y1="280" x2="335" y2="280" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+  <circle cx="135" cy="335" r="14" fill="#22c55e"/><path d="M128 335 L133 341 L143 329" fill="none" stroke="#0f172a" stroke-width="3"/>  <line x1="165" y1="335" x2="335" y2="335" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+  <rect x="470" y="150" width="190" height="190" rx="95" fill="none" stroke="#60a5fa" stroke-width="6" opacity="0.8"/><rect x="545" y="185" width="40" height="120" rx="6" fill="#60a5fa"/><rect x="505" y="225" width="120" height="40" rx="6" fill="#60a5fa"/>
+  <text x="565" y="385" font-family="system-ui, sans-serif" font-size="16" font-weight="400" fill="#ffffff" opacity="0.7" text-anchor="middle">Ask before you buy</text>
+</svg>

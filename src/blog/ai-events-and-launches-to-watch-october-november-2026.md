@@ -13,7 +13,6 @@ tags:
   - Developer Conferences
 readTime: 6
 featuredImage: "/assets/images/blog/ai-events-and-launches-to-watch-october-november-2026.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

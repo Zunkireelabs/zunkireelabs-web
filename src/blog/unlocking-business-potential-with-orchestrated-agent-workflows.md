@@ -5,7 +5,6 @@ translationKey: "unlocking-business-potential-with-orchestrated-agent-workflows"
 description: "How orchestrated agent workflows improve automation and efficiency across industries, and why Zunkiree Labs suits your GaaS needs."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/unlocking-business-potential-with-orchestrated-agent-workflows.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

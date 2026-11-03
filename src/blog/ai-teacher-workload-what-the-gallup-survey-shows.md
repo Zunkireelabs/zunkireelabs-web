@@ -13,7 +13,6 @@ tags:
   - Workload
 readTime: 6
 featuredImage: "/assets/images/blog/ai-teacher-workload-what-the-gallup-survey-shows.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

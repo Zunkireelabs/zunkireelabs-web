@@ -4,7 +4,6 @@ title: "A Comprehensive Guide to AI Stores in Nepal"
 description: "Discover essential insights about AI stores in Nepal, including their services, offerings, and how they can impact local businesses."
 date: "2026-09-01"
 featuredImage: "/assets/images/blog/ai-stores-nepal.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

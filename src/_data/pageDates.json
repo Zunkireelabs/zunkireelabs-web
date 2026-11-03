@@ -1,0 +1,594 @@
+{
+  "./src/compare/company-comparison-pages.njk": {
+    "published": "2026-11-03",
+    "modified": "2026-11-03"
+  },
+  "./src/compare/comparison-pages.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-09"
+  },
+  "./src/compare/index.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-09"
+  },
+  "./src/glossary/glossary-terms.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-09"
+  },
+  "./src/glossary/index.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-09"
+  },
+  "./src/insights-feed.njk": {
+    "published": "2026-10-05",
+    "modified": "2026-10-05"
+  },
+  "./src/locations/index.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-09-30"
+  },
+  "./src/locations/location-pages.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-09-22"
+  },
+  "./src/locations/location-service-pages.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/about.njk": {
+    "published": "2025-12-19",
+    "modified": "2026-10-14"
+  },
+  "./src/pages/agentic-as-a-service.njk": {
+    "published": "2026-04-20",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/apply.njk": {
+    "published": "2026-09-29",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/careers.njk": {
+    "published": "2025-12-30",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/contact.njk": {
+    "published": "2025-12-19",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/cookie-policy-zunkiree-labs.njk": {
+    "published": "2026-08-05",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/cookie-preferences.njk": {
+    "published": "2026-09-29",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/customers.njk": {
+    "published": "2025-12-30",
+    "modified": "2026-10-01"
+  },
+  "./src/pages/de/about.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-14"
+  },
+  "./src/pages/de/contact.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/de/get-a-quote.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/de/global-delivery.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/index.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/de/solutions/aeo-seo.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/ai-customer-experience.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/ai-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/ai-ecommerce.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/app-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/custom-software.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/data-systems.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/saas-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions/web-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de/solutions.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/about.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-14"
+  },
+  "./src/pages/de-ch/contact.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/de-ch/get-a-quote.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/de-ch/index.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/de-ch/solutions/aeo-seo.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/ai-customer-experience.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/ai-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/ai-ecommerce.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/app-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/custom-software.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/data-systems.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/saas-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions/web-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/de-ch/solutions.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/get-a-quote.njk": {
+    "published": "2026-09-29",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/global-delivery.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/homepage-v2.njk": {
+    "published": "2026-07-24",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/industries/industry-pages.njk": {
+    "published": "2026-07-28",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/it-companies-nepal.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/nl/about.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-14"
+  },
+  "./src/pages/nl/contact.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/nl/get-a-quote.njk": {
+    "published": "2026-10-02",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/nl/global-delivery.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/index.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/nl/solutions/aeo-seo.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/ai-customer-experience.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/ai-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/ai-ecommerce.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/app-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/custom-software.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/data-systems.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/saas-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions/web-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/nl/solutions.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/pricing.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-09-29"
+  },
+  "./src/pages/privacy-policy-zunkiree-labs.njk": {
+    "published": "2026-08-05",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/products/ai-crm.njk": {
+    "published": "2026-03-24",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/products/index.njk": {
+    "published": "2026-03-24",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/products/orca.njk": {
+    "published": "2026-07-28",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/products/search.njk": {
+    "published": "2025-12-30",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/projects.njk": {
+    "published": "2025-12-19",
+    "modified": "2026-10-01"
+  },
+  "./src/pages/resources/admizz-case-study.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/resources/ai-agents-for-business-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-agents-small-business-playbook-ebook.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-29"
+  },
+  "./src/pages/resources/ai-answers-source-selection-evidence-digest-2026-report.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-booking-automation-service-businesses-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-compliance-business-owners-ebook.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-governance-data-privacy-sme-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-implementation-guide-nepal.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/ai-in-education-evidence-ebook.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-in-education-evidence-report-2026.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-in-healthcare-clinics-evidence-ebook.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-lead-response-real-estate-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-native-search-nepal.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/ai-orchestration-automation-agents-whitepaper.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-patient-communication-clinics-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-regulation-data-residency-by-market-2026-report.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/ai-search-playbook.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/ai-search-report-2026.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/ai-search-stack-guide.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/ai-student-inquiries-education-consultancies-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/ai-vs-traditional-software-kathmandu.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/resources/answer-engine-optimization-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/build-vs-buy-ai-software-nepal-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/chayce-properties-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/resources/choosing-ai-development-partner-buyers-ebook.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/clinical-ai-evidence-digest-2026-report.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/cms-group-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/corecloud365-case-study.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/dental-ai-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/enterprise-ai-adoption-report.njk": {
+    "published": "2026-09-06",
+    "modified": "2026-09-29"
+  },
+  "./src/pages/resources/evaluate-healthcare-ai-tool-before-you-buy-guide.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/gaamma-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/get-cited-by-ai-engines-guide.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/index.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/introduce-ai-school-training-program-guide.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/khems-cleaning-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/resources/khushbu-nirman-case-study.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/mach24orbital-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/resources/mcp-agent-security-checklist-business-whitepaper.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/natural-language-processing-fundamentals.njk": {
+    "published": "2026-09-06",
+    "modified": "2026-09-29"
+  },
+  "./src/pages/resources/nepali-language-ai-guide.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/predictive-maintenance-small-manufacturers-whitepaper.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/prime-tiles-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-09-30"
+  },
+  "./src/pages/resources/rag-for-enterprise-knowledge-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/rapid-investment-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/run-30-day-ai-agent-pilot-guide.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/semantic-search-vs-keyword-search.njk": {
+    "published": "2026-09-06",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/resources/state-of-ai-agent-infrastructure-2026-report.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/state-of-ai-nepal-2026.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-05"
+  },
+  "./src/pages/resources/stella-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/resources/voice-ai-agents-customer-support-whitepaper.njk": {
+    "published": "2026-10-13",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/webinar-ai-search-implementation.njk": {
+    "published": "2026-03-22",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/resources/welcome-results.njk": {
+    "published": "2026-10-01",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/welcome.njk": {
+    "published": "2026-09-30",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/what-is-gaas.njk": {
+    "published": "2026-04-20",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/resources/write-ai-policy-for-your-team-guide.njk": {
+    "published": "2026-10-28",
+    "modified": "2026-10-28"
+  },
+  "./src/pages/resources/zenly-case-study.njk": {
+    "published": "2026-09-25",
+    "modified": "2026-10-09"
+  },
+  "./src/pages/schedule-a-call.njk": {
+    "published": "2026-09-29",
+    "modified": "2026-09-29"
+  },
+  "./src/pages/solutions/aeo-seo.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/ai-customer-experience.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/ai-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/ai-ecommerce.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/app-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/custom-agent.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/custom-software.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/data-systems.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions/generative-ui.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/saas-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/software-outsourcing.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/voice-agent.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-11-03"
+  },
+  "./src/pages/solutions/web-development.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/solutions.njk": {
+    "published": "2026-10-09",
+    "modified": "2026-10-13"
+  },
+  "./src/pages/team.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-02"
+  },
+  "./src/pages/zunkiree-labs-terms-of-service.njk": {
+    "published": "2026-08-04",
+    "modified": "2026-09-27"
+  },
+  "./src/sitemap.njk": {
+    "published": "2026-03-30",
+    "modified": "2026-10-09"
+  }
+}

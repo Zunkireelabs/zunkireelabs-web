@@ -1,0 +1,137 @@
+---
+layout: resource-content.njk
+title: "How AI Answers Choose Their Sources: An Evidence Digest 2026"
+description: "What Google documents, what the largest published citation sample found, why assistants differ, and how far to trust the numbers. A digest of public sources."
+permalink: /resources/ai-answers-source-selection-evidence-digest-2026-report/
+slug: ai-answers-source-selection-evidence-digest-2026-report
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">About this digest</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This digest compiles published sources on how AI assistants and Google's AI features pick the pages they cite. It contains no data from Zunkiree Labs. Where a number comes from a company that sells search or listing tools, we say so.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own readings are labelled as ours. Treat every percentage as a prompt to check your own position, not as a benchmark to hit.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What Google documents</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Google's page on <a href="https://developers.google.com/search/docs/appearance/ai-features" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI features and your website</a> is direct. It says there are no additional requirements to appear in AI Overviews or AI Mode, and no other special optimizations are necessary. A page must be indexed and eligible to appear in Search with a snippet, and meeting the requirements does not guarantee crawling, indexing or serving.
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>No new files or markup.</strong> Google says you do not need new machine-readable files, AI text files, extra markup or special structured data for these features.</li>
+    <li><strong>The basics still apply.</strong> Allow crawling, link internally, give a good page experience, keep important content as text, and make structured data match the visible text.</li>
+    <li><strong>Measurement.</strong> AI Overviews and AI Mode traffic is counted in the normal Web search type in Search Console and is not reported separately.</li>
+    <li><strong>Control.</strong> Googlebot's robots.txt rules govern access, and nosnippet, data-nosnippet, max-snippet or noindex limit what is displayed.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What the largest published citation sample found</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A <a href="https://www.yext.com/blog/chatgpt-make-your-brand-visible-ai-search" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Yext Research study</a>, "AI Citation Behavior Across Models (Q4 2025)", reported by Lauryn Chamberlain on September 22, 2026, analysed 17.2 million distinct AI citations across four models and seven sectors. It grouped the sources into four buckets.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Source type</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Share of citations</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Brand-owned websites</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">46.89%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Managed third-party listings</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">43.71%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Reviews and social</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">5.48%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">News, forums and other</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">3.92%</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Brand sites and managed listings together supplied about 90.6% of citations. Listings made up 54.53% of the distinct cited URLs, while brand websites averaged 4.31 citations per URL against 2.46 for listings. The study comes from a company that sells listing management, so the exact figures are directional.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Different assistants, different sources</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The split changes sharply by model in the same study:
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Model</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Brand-owned site</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Managed listings</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Gemini</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">51.62%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">39.15%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Perplexity</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">46.11%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">43.41%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Claude</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">41.27%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">45.93%</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">ChatGPT</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">39.55%</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">53.36%</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Other analyses point the same way. As reported in the secondary sources <a href="https://www.onely.com/blog/what-influences-brand-visibility-in-ai-search-a-practical-guide-for-2026/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Onely</a> and <a href="https://www.superlines.io/articles/ai-search-statistics/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Superlines</a>, Ahrefs found that only about 12% of URLs cited by AI tools overlap with Google's top-10 organic results, and one audit reported about 11% overlap between the domains ChatGPT and Perplexity cite. We have not checked those underlying datasets ourselves.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">How far to trust the numbers</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Vendor-produced.</strong> The Yext study comes from a listing-management company, and most AI-visibility statistics in circulation come from GEO and tracking tool vendors.</li>
+    <li><strong>Consistent in direction.</strong> Studies with different samples and methods keep reaching the same qualitative conclusion: assistants cite a different mix of sources than Google ranks, and structured profile pages carry real weight.</li>
+    <li><strong>Not established.</strong> Any specific percentage. Sample windows differ, "citation" is defined differently across studies, and none of these datasets has been independently replicated.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What this means for visibility</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the studies:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Claim and correct your profiles</strong> on the directories and review sites your buyers use, and keep the description identical to your website's wording.</li>
+    <li><strong>State plainly what you do</strong> in one self-contained sentence near the top of key pages, because assistants lift passages that make sense out of context.</li>
+    <li><strong>Add Organization structured data with sameAs</strong> that lists every profile you control, so your site and listings are linked.</li>
+    <li><strong>Check what assistants say today.</strong> Ask the questions your buyers ask and note which sources are cited. That audit is more useful than any published average.</li>
+    <li><strong>Do not buy a special route into Google AI Overviews.</strong> Google says none is required.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For the mechanics, see our <a href="/resources/answer-engine-optimization-whitepaper/" class="font-medium text-[#5a9100] hover:underline">answer engine optimization whitepaper</a> and our step-by-step <a href="/resources/get-cited-by-ai-engines-guide/" class="font-medium text-[#5a9100] hover:underline">guide to getting cited by AI engines</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Limits of this digest</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>It summarises published sources and was not independently replicated.</li>
+    <li>The headline figures come from one vendor study and secondary reports of other studies.</li>
+    <li>Assistants change quickly, so figures from late 2025 data may not describe today's behaviour.</li>
+    <li>Google's documentation describes its own features only, not other assistants.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.yext.com/blog/chatgpt-make-your-brand-visible-ai-search" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Yext, Lauryn Chamberlain, Cracking the ChatGPT Code: How to Grow Brand Visibility in OpenAI</a>, September 22, 2026, reporting Yext Research, AI Citation Behavior Across Models (Q4 2025)</li>
+    <li><a href="https://developers.google.com/search/docs/appearance/ai-features" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Google Search Central, AI features and your website</a></li>
+    <li><a href="https://www.onely.com/blog/what-influences-brand-visibility-in-ai-search-a-practical-guide-for-2026/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Onely, What Influences Brand Visibility in AI Search? A Practical Guide for 2026</a> (secondary)</li>
+    <li><a href="https://www.superlines.io/articles/ai-search-statistics/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Superlines, AI Search Statistics 2026: 60+ Data Points on Visibility, Citations, and Traffic</a> (secondary)</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Do I need special markup to appear in Google AI Overviews?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Google's documentation says there are no additional requirements to appear in AI Overviews or AI Mode, and no other special optimizations are necessary. A page must be indexed and eligible to show a snippet.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Where do AI answers get their sources?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">In one large vendor-published sample of 17.2 million citations, brand-owned websites supplied 46.89% and managed third-party listings 43.71%. The split varied by model, and the figures are directional, not audited.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does ranking in Google mean being cited by AI assistants?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not necessarily. Ahrefs has reported that only about 12% of URLs cited by AI tools overlap with Google's top-10 organic results, according to secondary sources. Different assistants also cite different sources.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Can I measure AI Overview traffic in Search Console?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">AI Overviews and AI Mode traffic is counted under the Web search type in the Performance report and is not reported separately, per Google's documentation.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI citations, how AI answers choose sources, Google AI Overviews, answer engine optimization, AI visibility",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need special markup to appear in Google AI Overviews?", "acceptedAnswer": {"@type": "Answer", "text": "Google's documentation says there are no additional requirements to appear in AI Overviews or AI Mode, and no other special optimizations are necessary. A page must be indexed and eligible to show a snippet."}}, {"@type": "Question", "name": "Where do AI answers get their sources?", "acceptedAnswer": {"@type": "Answer", "text": "In one large vendor-published sample of 17.2 million citations, brand-owned websites supplied 46.89% and managed third-party listings 43.71%. The split varied by model, and the figures are directional, not audited."}}, {"@type": "Question", "name": "Does ranking in Google mean being cited by AI assistants?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Ahrefs has reported that only about 12% of URLs cited by AI tools overlap with Google's top-10 organic results, according to secondary sources. Different assistants also cite different sources."}}, {"@type": "Question", "name": "Can I measure AI Overview traffic in Search Console?", "acceptedAnswer": {"@type": "Answer", "text": "AI Overviews and AI Mode traffic is counted under the Web search type in the Performance report and is not reported separately, per Google's documentation."}}]}</script>

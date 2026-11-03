@@ -1,0 +1,180 @@
+---
+layout: resource-content.njk
+title: "How to Run a 30-Day AI Agent Pilot"
+description: "A week-by-week plan for a 30-day AI agent pilot: choose one workflow, set a baseline, test with a person in the loop, measure the result and decide whether to continue."
+permalink: /resources/run-30-day-ai-agent-pilot-guide/
+slug: run-30-day-ai-agent-pilot-guide
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What this guide is for</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A pilot is a small, time-limited test of one agent on one workflow, designed to produce a decision. This guide gives a four-week plan, the measures to track and a checklist. It is written for owners and managers, and it suits a business that has chosen a candidate task but not yet committed.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The plan is our own. It is built on public guidance: Anthropic advises finding “the simplest solution possible, and only increasing complexity when needed”, and Microsoft advises using “the lowest level of complexity that reliably meets your requirements”. Where we state a step as a recommendation, we say it is ours. For background on what agents are, read our <a href="/resources/ai-agents-small-business-playbook-ebook/" class="font-medium text-[#5a9100] hover:underline">plain-English playbook</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Before day 1: five decisions</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Our own suggestion, not a finding from the sources: settle these before anyone builds anything.
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>One workflow.</strong> Repeated often, easy to define as done, cheap to get wrong and quick to check. Answering customer questions from your own documents and booking appointments are two examples from our published guidance.</li>
+    <li><strong>One owner.</strong> A named person who answers for the result, as for a member of staff.</li>
+    <li><strong>One baseline.</strong> Record today’s numbers for the workflow: volume, time per item, error rate, cost including staff time. Without these, any before and after is guesswork.</li>
+    <li><strong>One access list.</strong> Write down exactly what the agent may read and change. Start with read-only.</li>
+    <li><strong>One stop rule.</strong> Decide in advance what would make you pause the pilot, such as a wrong message sent to a customer or access beyond the list.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The plan at a glance</h2>
+  <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Week</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Goal</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Output</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">1</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Define and measure</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Written scope, access list, baseline numbers, success thresholds</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">2</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Build and test privately</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Working agent tested on past cases, with logging switched on</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">3</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Run alongside people</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Agent drafts, a person approves every result</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">4</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Limited live run and decision</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Results against baseline and a continue, adjust or stop decision</td></tr></tbody></table></div>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Week 1: define and measure</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Write a one-page scope: what the agent does, what it never does, and when it hands over to a person.</li>
+    <li>Define “done” in a sentence with one example that counts and one that does not. Vague outcomes are the hardest part of agent projects, as our buying guidance on outcome-based pricing notes.</li>
+    <li>Pull your baseline from the last month of real work.</li>
+    <li>Set thresholds now, not after you see results. For example, the lowest accuracy you would accept and the highest review time per item. The numbers are yours to choose.</li>
+    <li>Tell the affected staff what is being tested and why.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Week 2: build and test privately</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Connect the agent only to what the access list allows. Prefer read-only access to a copy or test environment.</li>
+    <li>Turn on logging before the first test. If you cannot see what the agent read, called and changed, you cannot govern it.</li>
+    <li>Test on past cases where you already know the right answer. Include awkward ones: missing information, an angry customer, a request outside scope.</li>
+    <li>If the agent connects through MCP, ask the builder which specification version the servers run and how client-supplied state is verified. The OWASP MCP Top 10, still in beta, is a useful question sheet.</li>
+    <li>Check what happens when the agent does not know. It should hand over, not guess.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Week 3: run alongside people</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Real work now flows through the agent, but nothing leaves the business without a person’s approval.
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>The agent drafts; a named reviewer approves, edits or rejects each item.</li>
+    <li>Record every edit and rejection with a reason. This is your best evidence about where the agent is weak.</li>
+    <li>Track review time per item. Among developers, Stack Overflow’s 2025 survey found 66% pointed to AI output that is “almost right, but not quite”. Expect to see something similar and measure it.</li>
+    <li>Fix instructions, data or access based on the log. Change one thing at a time so you know what helped.</li>
+    <li>Do not widen scope this week.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Week 4: limited live run and decision</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Let the agent complete a defined slice of low-risk items without item-by-item approval, only if week 3 met your thresholds. Keep approval for payments, deletions, outbound messages and anything customer-facing.</li>
+    <li>Review a sample of results each day, and read the log.</li>
+    <li>At the end of the week, compare the numbers with your baseline and write the one-page decision (below).</li>
+    <li>Keep the ability to switch the agent off in minutes.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Success measures</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Gartner, as reported by W.Media, said over 40% of agentic AI projects could be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls. Our suggestion is to measure those three things directly.
+  </p>
+  <div class="mb-5 overflow-x-auto"><table class="w-full text-left"><thead><tr><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Area</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">Measure</th><th class="border-b border-gray-200 py-3 pr-4 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#6B7280]">How</th></tr></thead><tbody><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Value</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Time per item, volume handled, error rate, turnaround</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Compare with the week 1 baseline</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Cost</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Supplier fees, staff review time, setup effort</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Total for the month, divided by items handled</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Control</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Actions outside the access list, incidents, items handed to a person</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Read from the log, not from the supplier’s summary</td></tr><tr><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">People</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Reviewer confidence and staff feedback</td><td class="border-b border-gray-100 py-3 pr-4 align-top text-[15px] leading-relaxed text-[#6B7280]">Short check-in at the end of weeks 3 and 4</td></tr></tbody></table></div>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Measure outcomes, not enthusiasm. That advice comes from our post on <a href="/blog/ai-coding-agents-2026-how-developers-actually-work-now/" class="font-medium text-[#5a9100] hover:underline">how developers use coding agents</a>: track review time, defects and delivery speed before and after, not how often the tool is used.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The day-30 decision</h2>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Continue:</strong> thresholds met on value, cost and control. Widen scope one step at a time.</li>
+    <li><strong>Adjust:</strong> promising but a threshold missed. Name the fix, run another two weeks.</li>
+    <li><strong>Stop:</strong> thresholds missed with no clear fix, or the workflow turned out to be better served by plain automation or a booking link. This is a valid, cheap result.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Write the decision on one page: what you tested, the numbers against baseline, what went wrong, what you would change. If you continue, pick the next workflow with the same five decisions.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Checklist</h2>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>Workflow chosen, with a written definition of done</li>
+    <li>Owner named</li>
+    <li>Baseline recorded from real work</li>
+    <li>Thresholds for value, cost and control set before week 1 ends</li>
+    <li>Access list written; read-only to start</li>
+    <li>Logging on before the first test</li>
+    <li>Tested on past cases, including awkward ones</li>
+    <li>Handover to a person defined and tested</li>
+    <li>Reviewer assigned for week 3</li>
+    <li>Approval kept for payments, deletions, outbound messages and customer-facing steps</li>
+    <li>Switch-off tested</li>
+    <li>Day-30 decision written on one page</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Need help running one? We build <a href="/solutions/custom-agent/" class="font-medium text-[#5a9100] hover:underline">custom AI agent development</a>, and you can <a href="/schedule-a-call/" class="font-medium text-[#5a9100] hover:underline">book a call</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://www.anthropic.com/engineering/building-effective-agents" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Building effective agents</a>, Anthropic, December 19, 2024</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI agent orchestration patterns</a>, Microsoft Learn, Azure Architecture Center, February 2026</li>
+    <li><a href="https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Over 40 percent of Agentic AI projects could face the axe by end of 2027: Gartner</a>, W.Media, June 27, 2025 (reporting Gartner’s June 25, 2025 press release)</li>
+    <li><a href="https://survey.stackoverflow.co/2025/ai" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">2025 Developer Survey: AI</a>, Stack Overflow, 2025</li>
+    <li><a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">MCP Top 10 project</a>, OWASP (beta, 2025 edition labels)</li>
+    <li><a href="https://newsletter.pragmaticengineer.com/p/ai-tooling-2026" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">AI Tooling for Software Engineers in 2026</a>, The Pragmatic Engineer, March 3, 2026</li>
+    <li><a href="/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/" class="font-medium text-[#5a9100] hover:underline">AI Agent Pricing: Per Seat, Per Task or Per Outcome?</a>, Zunkiree Labs (buying guidance, not market data)</li>
+    <li><a href="/blog/ai-coding-agents-2026-how-developers-actually-work-now/" class="font-medium text-[#5a9100] hover:underline">AI Coding Agents in 2026: How Developers Actually Work Now</a>, Zunkiree Labs</li>
+    <li><a href="/blog/ai-agents-are-getting-their-own-infrastructure/" class="font-medium text-[#5a9100] hover:underline">Why AI Agents Are Getting Their Own Infrastructure</a>, Zunkiree Labs, October 2, 2026</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How long should an AI agent pilot last?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Thirty days is a workable length for one narrow workflow: enough time to set a baseline, test with a person reviewing, run a limited live period and decide. A broader scope needs longer. The aim is a decision, not a launch.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should the pilot measure?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Gartner, as reported by W.Media, links cancelled agentic projects to escalating costs, unclear business value and inadequate risk controls. Our suggestion is to measure those three things: cost, value against your own baseline, and control (access, logs and incidents).</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Who needs to be involved?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">A named owner who is accountable for the result, a reviewer who checks the agent's work, and a supplier or builder who can answer questions about access, logging and failure. Staff whose work changes should hear about it in week one.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What if the pilot fails?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">That is a useful result. A pilot that ends with a clear reason to stop, such as unclear outcomes or too much review time, costs far less than a full rollout that gets cancelled. Write down what you learned and choose a different workflow or wait.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "AI agent pilot, 30-day AI pilot, AI agent success metrics, AI agent checklist, AI agent small business",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should an AI agent pilot last?", "acceptedAnswer": {"@type": "Answer", "text": "Thirty days is a workable length for one narrow workflow: enough time to set a baseline, test with a person reviewing, run a limited live period and decide. A broader scope needs longer. The aim is a decision, not a launch."}}, {"@type": "Question", "name": "What should the pilot measure?", "acceptedAnswer": {"@type": "Answer", "text": "Gartner, as reported by W.Media, links cancelled agentic projects to escalating costs, unclear business value and inadequate risk controls. Our suggestion is to measure those three things: cost, value against your own baseline, and control (access, logs and incidents)."}}, {"@type": "Question", "name": "Who needs to be involved?", "acceptedAnswer": {"@type": "Answer", "text": "A named owner who is accountable for the result, a reviewer who checks the agent's work, and a supplier or builder who can answer questions about access, logging and failure. Staff whose work changes should hear about it in week one."}}, {"@type": "Question", "name": "What if the pilot fails?", "acceptedAnswer": {"@type": "Answer", "text": "That is a useful result. A pilot that ends with a clear reason to stop, such as unclear outcomes or too much review time, costs far less than a full rollout that gets cancelled. Write down what you learned and choose a different workflow or wait."}}]}</script>

@@ -4,7 +4,6 @@ title: "Choosing a Software Development Partner in the UK"
 description: "How to evaluate a software development supplier for a UK project: Cyber Essentials, data location, and the contract questions that matter."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/choosing-a-software-development-partner-in-the-uk.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

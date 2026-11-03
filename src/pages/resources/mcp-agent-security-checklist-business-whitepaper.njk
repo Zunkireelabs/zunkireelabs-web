@@ -1,0 +1,133 @@
+---
+layout: resource-content.njk
+title: "MCP and AI Agent Security: A Checklist for Business Buyers"
+description: "What the 2026 MCP specification changed, the OWASP MCP Top 10 in plain English, how least privilege works in practice, and the questions to ask any agent supplier."
+permalink: /resources/mcp-agent-security-checklist-business-whitepaper/
+slug: mcp-agent-security-checklist-business-whitepaper
+---
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Why MCP is a security question</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    MCP is an open protocol that lets AI agents call tools and read data from other systems. That is what makes agents useful, and it is also why they need controls: an agent connected through MCP can do whatever the connection allows.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For a business buyer the key idea is delegation. Whatever access you approve, the agent holds. Security is mostly about how much you hand over, how it is checked, and whether you can see what happened.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What the 2026 specification changed</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    According to <a href="https://siliconangle.com/2026/06/25/new-mcp-specification-kills-old-risks-opens-fresh-attack-surfaces-akamai-finds/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">SiliconANGLE’s report on Akamai’s analysis</a>, the MCP revision dated 2026-07-28 removes three older risks: protocol-managed sessions that used the <code>Mcp-Session-Id</code> header, unsolicited server prompts, and weak OAuth grants, which are replaced by mandatory OAuth 2.1 with PKCE.
+  </p>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Removing server-side sessions moves state to the client. Akamai’s researchers identified six areas to watch:
+  </p>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>Client-held state:</strong> predictable IDs or unvalidated objects could let an attacker hijack a workflow.</li>
+    <li><strong>Unsigned metadata:</strong> a forged field could escalate privileges.</li>
+    <li><strong>Header and body mismatch:</strong> requests can slip past proxies and monitoring.</li>
+    <li><strong>Header mapping:</strong> keys or personal data could end up in headers that logs can see.</li>
+    <li><strong>Interactive panels:</strong> stored cross-site scripting could show deceptive content.</li>
+    <li><strong>“Hit-and-run” tasks:</strong> an abandoned long-running task can leave the server bearing the cost.</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    This is researchers’ analysis of a specification, not a report of attacks seen in the wild.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">The OWASP MCP Top 10 in plain English</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    The <a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">OWASP MCP Top 10</a> is a beta project, labelled with the 2025 edition. The names are OWASP’s; the plain-language reading is ours.
+  </p>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><strong>MCP01 Secrets exposure:</strong> long-lived or hard-coded credentials leak.</li>
+    <li><strong>MCP02 Scope creep:</strong> permissions grow until the agent can do more than it needs.</li>
+    <li><strong>MCP03 Tool poisoning:</strong> a compromised tool feeds misleading context to the model.</li>
+    <li><strong>MCP04 Supply chain:</strong> a tampered dependency changes agent behaviour.</li>
+    <li><strong>MCP05 Command injection:</strong> the agent runs commands built from untrusted input.</li>
+    <li><strong>MCP06 Prompt injection:</strong> hidden instructions in content the agent reads steer it.</li>
+    <li><strong>MCP07 Weak authentication:</strong> servers fail to verify who is calling.</li>
+    <li><strong>MCP08 No audit trail:</strong> actions are not logged, so incidents cannot be investigated.</li>
+    <li><strong>MCP09 Shadow servers:</strong> unapproved MCP deployments run outside governance.</li>
+    <li><strong>MCP10 Context over-sharing:</strong> one task’s data leaks into another.</li>
+  </ul>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Least privilege in practice</h2>
+  <p class="mb-5 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    A concrete example comes from Cloudflare. Its API MCP server now supports <a href="https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">step-up authorization</a>: you grant only the scopes a task needs when you connect, and a client that supports it asks you to approve more when a tool call needs them. Cloudflare’s consent page also offers a <strong>Minimal</strong> option.
+  </p>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    Cloudflare has also <a href="https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">retired the /sse endpoint</a> on its product-specific servers, which now serve only <code>/mcp</code>. Older client settings that still point at <code>/sse</code> receive a 410 Gone response. The point for buyers is that a supplier should be able to explain both what access an agent starts with and how it asks for more.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Questions to ask any agent supplier</h2>
+  <ul class="mb-5 list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li>What is the agent’s exact permission list, and who reviews it?</li>
+    <li>Where are its credentials stored, and how often are they rotated?</li>
+    <li>Can I see a log of everything the agent did last week?</li>
+    <li>Which MCP version do your servers run, and how do you verify client-supplied state?</li>
+    <li>Is there an inventory of every MCP server and tool the agent can reach?</li>
+    <li>What happens if a document or email tells the agent to ignore its rules?</li>
+    <li>Is customer data kept separate between tasks and users?</li>
+    <li>Does a person approve any action that changes production?</li>
+  </ul>
+  <p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    For how to bound an agent’s authority, see our whitepapers on <a href="/resources/ai-agents-for-business-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI agents for business</a> and the <a href="/resources/ai-governance-data-privacy-sme-whitepaper/" class="font-medium text-[#5a9100] hover:underline">AI governance checklist</a>.
+  </p>
+</div>
+
+<div class="mb-12" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Sources</h2>
+  <ul class="list-disc space-y-2 pl-6 text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">
+    <li><a href="https://siliconangle.com/2026/06/25/new-mcp-specification-kills-old-risks-opens-fresh-attack-surfaces-akamai-finds/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">SiliconANGLE, New MCP specification kills old risks, opens fresh attack surfaces, Akamai finds</a>, June 25, 2026</li>
+    <li><a href="https://owasp.org/www-project-mcp-top-10/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">OWASP, MCP Top 10 project</a> (beta, 2025 edition labels)</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare, API MCP server now supports step-up authorization</a>, changelog, October 19, 2026</li>
+    <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/" class="font-medium text-[#5a9100] hover:underline" target="_blank" rel="noopener noreferrer">Cloudflare, MCP servers no longer serve /sse</a>, changelog, October 22, 2026</li>
+  </ul>
+</div>
+
+<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
+  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
+  <div class="mt-6 space-y-6">
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is MCP?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">The Model Context Protocol is an open standard that lets AI agents connect to tools and data, such as a calendar, a database or a cloud account, through one common interface.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is the new MCP specification more secure?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It removes some older risks, including protocol-managed sessions and weak OAuth grants, but Akamai researchers also identified new attack surfaces because responsibility for verifying state moved to implementers.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the OWASP MCP Top 10?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">An OWASP project listing the ten most likely ways to compromise an MCP deployment. It is in beta and labelled with the 2025 edition, so use it as a question sheet and expect changes.</p></div>
+    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should I ask an agent supplier first?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Three things: what permissions the agent has and who reviews them, where its credentials are stored and how often they rotate, and whether you can see a log of everything it did last week.</p></div>
+  </div>
+</div>
+
+<div class="mb-2" data-reveal>
+  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
+  <ul class="space-y-3.5">
+    {% for item in resource.whatYouGet %}
+    <li class="flex items-start gap-3">
+      <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#76B900]">
+        <svg class="h-3 w-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </span>
+      <span class="text-[15px] leading-relaxed text-[#6B7280]">{{ item }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": "{{ resource.title }}",
+  "description": "{{ resource.description }}",
+  "datePublished": "{{ resource.publishDate }}",
+  "keywords": "MCP security, AI agent security, OWASP MCP Top 10, Model Context Protocol, least privilege agents",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs" }
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is MCP?", "acceptedAnswer": {"@type": "Answer", "text": "The Model Context Protocol is an open standard that lets AI agents connect to tools and data, such as a calendar, a database or a cloud account, through one common interface."}}, {"@type": "Question", "name": "Is the new MCP specification more secure?", "acceptedAnswer": {"@type": "Answer", "text": "It removes some older risks, including protocol-managed sessions and weak OAuth grants, but Akamai researchers also identified new attack surfaces because responsibility for verifying state moved to implementers."}}, {"@type": "Question", "name": "What is the OWASP MCP Top 10?", "acceptedAnswer": {"@type": "Answer", "text": "An OWASP project listing the ten most likely ways to compromise an MCP deployment. It is in beta and labelled with the 2025 edition, so use it as a question sheet and expect changes."}}, {"@type": "Question", "name": "What should I ask an agent supplier first?", "acceptedAnswer": {"@type": "Answer", "text": "Three things: what permissions the agent has and who reviews them, where its credentials are stored and how often they rotate, and whether you can see a log of everything it did last week."}}]}</script>

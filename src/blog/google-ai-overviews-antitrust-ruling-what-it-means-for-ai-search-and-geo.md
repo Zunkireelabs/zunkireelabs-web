@@ -12,7 +12,6 @@ tags:
   - SEO
 readTime: 7
 featuredImage: "/assets/images/blog/google-ai-overviews-antitrust-ruling-what-it-means-for-ai-search-and-geo.svg"
-featuredImageAlt: "Abstract gradient background"
 featuredImageCredit: "Photo by Firmbee.com on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/6927333/pexels-photo-6927333.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

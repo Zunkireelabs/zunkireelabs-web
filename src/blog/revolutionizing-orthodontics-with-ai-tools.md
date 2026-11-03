@@ -4,7 +4,6 @@ title: "Revolutionizing Orthodontics with AI Tools"
 description: "Explore how AI tools are transforming orthodontics, enhancing patient care, operational efficiency, and driving business growth in the dental industry."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/revolutionizing-orthodontics-with-ai-tools.svg"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 <div class="container-custom py-12 md:py-20">

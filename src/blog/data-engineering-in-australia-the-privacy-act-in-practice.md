@@ -4,7 +4,6 @@ title: "Data Engineering in Australia: The Privacy Act in Practice"
 description: "What the Privacy Act, APP 8, the Notifiable Data Breaches scheme and the Voluntary AI Safety Standard mean for choosing a data engineering partner in Australia."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/data-engineering-in-australia-the-privacy-act-in-practice.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

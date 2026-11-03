@@ -4,7 +4,6 @@ title: "AI in UK Healthcare: What to Check Before You Buy"
 description: "What UK data protection guidance and NHS England's assessment framework mean for buying AI in healthcare, with the questions to ask a supplier."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/ai-in-uk-healthcare-what-to-check-before-you-buy.svg"
-featuredImageAlt: "Abstract gradient background"
 lastUpdated: "2026-10-02"
 ---
 

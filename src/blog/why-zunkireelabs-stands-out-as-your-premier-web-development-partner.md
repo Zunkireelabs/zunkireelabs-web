@@ -5,7 +5,6 @@ description: "Zunkiree Labs provides expert web development in 85225, offering t
 date: "2026-09-21"
 shortLabel: "Web Development"
 featuredImage: "/assets/images/blog/web-development-partner.webp"
-featuredImageAlt: "Abstract gradient background"
 ---
 
 ## Elevating Web Development with Zunkiree Labs

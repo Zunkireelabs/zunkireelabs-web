@@ -13,7 +13,6 @@ tags:
   - Traffic Management
 readTime: 8
 featuredImage: "/assets/images/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 

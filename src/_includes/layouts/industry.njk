@@ -618,19 +618,8 @@ schemaType: industry
 {% include "components/faq-accordion.njk" %}
 {% endif %}
 
-{% if industry.relatedPosts and industry.relatedPosts.length %}
-<section class="px-4 pb-4 sm:px-6 lg:px-8" aria-labelledby="related-insights-heading">
-  <div class="mx-auto max-w-3xl">
-    <h2 id="related-insights-heading" class="text-[20px] font-semibold tracking-tight text-[#111827]">Related Insights</h2>
-    <ul class="mt-4 list-disc space-y-2 pl-5 text-[15px] text-[#6B7280]">
-      {% for post in industry.relatedPosts %}
-      <li><a class="underline hover:text-navy-900" href="{{ post.href }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-    <p class="mt-4 text-[15px] text-[#6B7280]">See all <a class="underline hover:text-navy-900" href="/blog/insights/">Insights</a> or our <a class="underline hover:text-navy-900" href="/solutions/">services</a>.</p>
-  </div>
-</section>
-{% endif %}
+{% set riPosts = industry.relatedPosts %}{% set riDark = false %}
+{% include "partials/related-insights.njk" %}
 
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="closing-cta-heading">
   <div class="mx-auto max-w-5xl">

@@ -13,7 +13,6 @@ tags:
   - AI Regulation
 readTime: 7
 featuredImage: "/assets/images/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do.svg"
-featuredImageAlt: "Abstract gradient background"
 ogType: article
 ---
 
@@ -72,6 +71,7 @@ For the bigger picture, read our explainer on [superintelligence and why it is c
 
 - [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 - [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
+- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 
 ## Sources
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="ai-in-healthcare-clinics-evidence-ebook-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ai-in-healthcare-clinics-evidence-ebook-bg)"/>
+  <text x="48" y="64" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#22c55e">AI IN HEALTHCARE CLINICS</text>
+  <rect x="640" y="36" width="112" height="36" rx="6" fill="#dc2626"/><text x="696" y="60" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">EBOOK</text>
+  <rect x="95" y="130" width="170" height="170" rx="16" fill="#ffffff" opacity="0.1"/><rect x="155" y="155" width="50" height="120" rx="6" fill="#22c55e"/><rect x="120" y="190" width="120" height="50" rx="6" fill="#22c55e"/>
+  <polyline points="320,250 380,250 400,200 425,300 450,170 480,260 505,250 740,250" fill="none" stroke="#22c55e" stroke-width="4"/>
+  <g transform="translate(320,330)"><rect width="200" height="44" rx="8" fill="#ffffff" opacity="0.1"/><text x="100.0" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Screening trials</text></g>
+  <g transform="translate(540,330)"><rect width="200" height="44" rx="8" fill="#ffffff" opacity="0.1"/><text x="100.0" y="27.0" font-family="system-ui, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Scribes and alerts</text></g>
+</svg>

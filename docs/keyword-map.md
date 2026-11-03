@@ -57,6 +57,75 @@ Unsourced claims removed from meta descriptions while doing this: "3x AI citatio
 | /blog/where-ai-answers-get-their-sources/ | AI search citations, brand visibility in AI search |
 | /blog/google-gemini-agent-universal-work-agent/ | Gemini agent, enterprise AI agents |
 
+## Trending-topic Insights posts added 2026-10-27
+
+Targets, not measured volume. Each post pairs a global query (how people search worldwide) with a local angle for Nepal and South Asia buyers, and links to the solution page that sells the matching capability. Phrases sit in the title, description, H2/H3 headings, FAQ and the `tags` list, which feeds `keywords` in the Article schema.
+
+| Page | Global phrases | Nepal / local angle | Links to |
+|---|---|---|---|
+| /blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp/ | AI reverse engineering, Ghidra MCP, LLM binary analysis, AI malware analysis | legacy software modernization Nepal, software outsourcing Nepal | /solutions/custom-software/, /solutions/custom-agent/ |
+| /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/ | NVIDIA OpenShell, AI agent security, Vera Rubin, safe AI agents | AI agent development company in Nepal | /solutions/custom-agent/, AI governance whitepaper |
+| /blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/ | AI voice agent, AI phone agent, voice AI for customer service, AI appointment booking | AI voice agent Nepal, Nepali voice agent | /solutions/voice-agent/, voice AI agents whitepaper, AI booking whitepaper |
+| /blog/what-is-generative-ui-and-when-does-a-business-need-it/ | generative UI, what is generative UI, AI-generated interfaces, conversational dashboards | generative UI development Nepal | /solutions/generative-ui/, /solutions/ai-development/ |
+| /blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/ | AI chatbot for business, AI customer support automation, chatbot vs AI agent | AI chatbot Nepal, ecommerce chatbot Nepal | /solutions/ai-customer-experience/, /solutions/ai-ecommerce/, /solutions/custom-agent/ |
+| /blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show/ | AI case study, AI for education consultancy, AI for construction, AI search for operations | AI in Nepal case study, AI for construction Nepal | /resources/admizz-case-study/, /resources/corecloud365-case-study/, /resources/khushbu-nirman-case-study/ |
+| /blog/mcp-specification-security-what-changed/ | MCP security, Model Context Protocol security, MCP specification, AI agent security | AI agent security Nepal | /solutions/custom-agent/, AI governance whitepaper |
+| /blog/owasp-mcp-top-10-explained-for-business-owners/ | OWASP MCP Top 10, MCP vulnerabilities, AI agent risks | AI governance Nepal | AI governance whitepaper, /solutions/custom-agent/ |
+| /blog/openai-models-on-google-cloud-what-multi-cloud-ai-means/ | OpenAI Google Cloud, multi-cloud AI, OpenAI Model Garden | AI development company in Nepal | /solutions/ai-development/, /solutions/custom-agent/ |
+| /blog/ai-overviews-fewer-clicks-what-google-says-to-do/ | AI Overviews clicks, optimize for AI Overviews, generative engine optimization, AI Mode SEO | AEO Nepal | /solutions/aeo-seo/, AEO whitepaper |
+| /blog/gpt-6-1-terra-price-what-half-the-price-means/ | GPT-6.1 Terra, GPT-6.1 Terra pricing, OpenAI API pricing | AI cost for Nepal businesses | /solutions/ai-development/ |
+| /blog/microsoft-execution-containers-agent-containment-explained/ | Microsoft Execution Containers, MXC, sandbox AI agents, contain AI agent | AI agent security Nepal | /solutions/custom-agent/, AI agents whitepaper |
+| /blog/ai-for-education-consultancy-student-inquiry-automation-guide/ | AI for education consultancy, student inquiry automation, study abroad chatbot, AI for study abroad consultancy | AI for education consultancy Nepal, study abroad consultancy Nepal | /industries/education/, /resources/admizz-case-study/, /resources/ai-student-inquiries-education-consultancies-whitepaper/, /solutions/ai-customer-experience/ |
+| /blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/ | AI for real estate, real estate lead follow-up automation, property chatbot, real estate lead qualification | AI for real estate Nepal, property chatbot Nepal | /resources/ai-lead-response-real-estate-whitepaper/, /solutions/ai-customer-experience/, /solutions/voice-agent/, /resources/chayce-properties-case-study/ |
+| /blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/ | AI for agencies, agency workflow automation, AI operations for marketing agency, agency operating system | AI for agencies Nepal, agency software Nepal | /industries/agencies/, /products/ai-crm/, /products/orca/, AI governance whitepaper |
+| /blog/ai-booking-system-reduce-no-shows-service-businesses-guide/ | AI booking system, appointment scheduling automation, reduce no-shows, cancellation backfill | AI booking system Nepal, appointment scheduling for salons and clinics in Nepal | /solutions/voice-agent/, /solutions/custom-agent/, /resources/ai-booking-automation-service-businesses-whitepaper/, /resources/zenly-case-study/ |
+| /blog/ai-patient-communication-clinic-guide-what-ai-may-and-may-not-say/ | AI patient communication, healthcare chatbot for clinics, AI for clinics, healthcare compliance | AI for clinics Nepal, healthcare chatbot Nepal | /industries/healthcare/, /solutions/ai-customer-experience/, /solutions/voice-agent/, /resources/ai-patient-communication-clinics-whitepaper/, /resources/dental-ai-case-study/ |
+| /blog/ibm-agent-identity-vault-2-2-how-to-govern-ai-agents/ | AI agent governance | AI agent identity, IBM Agent Identity, agent credentials, AI agent security | /solutions/custom-agent/, MCP agent security whitepaper |
+| /blog/nvidia-nemotron-transcribe-salesforce-launa-omni-voice-ai-what-changes/ | voice AI models 2026 | speech to text model, real-time voice AI, open transcription model, AI voice assistant | /solutions/voice-agent/, voice AI agents whitepaper |
+| /blog/ai-voice-calls-real-estate-lead-follow-up-speed-to-signal/ | AI voice agent real estate | AI lead follow-up real estate, real estate voice AI, speed to lead, property lead qualification | /resources/ai-lead-response-real-estate-whitepaper/, /solutions/voice-agent/ |
+| /blog/most-fda-cleared-ai-devices-lack-patient-outcome-testing-what-clinics-should-ask/ | FDA-cleared AI devices | healthcare AI evidence, medical AI patient outcomes, how to evaluate healthcare AI, AI in clinics | /resources/evaluate-healthcare-ai-tool-before-you-buy-guide/, clinical AI evidence digest |
+| /blog/ai-in-education-research-audit-why-the-meta-analyses-cannot-be-trusted-yet/ | AI in education research | AI education evidence, AI learning outcomes, AI tutoring meta-analysis, EdTech evidence | /resources/ai-in-education-evidence-report-2026/, education consultancy AI guide |
+| /blog/vercel-agent-desktop-computer-use-for-ai-agents-explained/ | computer use AI agents | agent-desktop, AI agent desktop automation, accessibility tree automation, open-source AI agent tools | /solutions/custom-agent/, /solutions/custom-software/ |
+| /blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/ | generative engine optimization | GEO vs AEO vs SEO, what is GEO, answer engine optimization, AI search optimization | /solutions/aeo-seo/, answer engine optimization whitepaper |
+| /blog/ai-crawlers-and-robots-txt-gptbot-oai-searchbot-claudebot-perplexitybot/ | AI crawlers robots.txt | GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, block AI crawlers, Google-Extended | /solutions/aeo-seo/, what is GEO |
+| /blog/what-is-llms-txt-and-do-you-need-one/ | llms.txt | what is llms.txt, llms.txt for SEO, llms-full.txt, AI crawler file | /solutions/aeo-seo/, what is GEO |
+| /blog/how-to-measure-ai-search-visibility-a-simple-monthly-method/ | measure AI search visibility | AI visibility tracking, share of answer, GEO measurement, track ChatGPT mentions | /solutions/aeo-seo/, AI search playbook |
+| /blog/what-is-an-ai-receptionist-ivr-vs-chatbot-vs-ai-receptionist/ | AI receptionist | AI receptionist vs IVR, AI phone answering, AI answering service, virtual receptionist AI | /solutions/voice-agent/, voice AI agents whitepaper |
+| /blog/how-much-does-an-ai-agent-cost-what-drives-the-price/ | AI agent cost | how much does an AI agent cost, AI development cost, AI chatbot cost, AI agent pricing | /solutions/custom-agent/, AI agent pilot guide |
+| /blog/aeo-for-clinics-real-estate-and-schools-what-to-publish-so-ai-names-you/ | AEO for clinics | AI search for clinics, real estate AEO, education consultancy SEO, get recommended by AI | /solutions/aeo-seo/, AEO whitepaper |
+| /blog/how-to-build-an-ai-voice-agent-architecture-latency-and-handoff/ | how to build an AI voice agent | AI voice agent development, voice AI architecture, AI phone agent, voice agent latency, Twilio AI voice agent | /solutions/voice-agent/, Zennly case study |
+| /blog/how-to-build-an-ai-agent-for-your-business-tools-guardrails-audit-trail/ | how to build an AI agent | custom AI agent development, AI agent architecture, AI agent guardrails, AI agent tools, AI agent development company | /solutions/custom-agent/, AI agents whitepaper |
+| /blog/how-to-test-ai-agents-before-launch-evals-red-teaming-and-regression-suites/ | how to test AI agents | AI agent evaluation, LLM evals, AI red teaming, prompt injection testing, AI regression testing | /solutions/custom-agent/, MCP security whitepaper |
+| /blog/rag-vs-fine-tuning-vs-long-context-which-should-your-business-use/ | RAG vs fine-tuning | RAG vs fine-tuning vs long context, retrieval augmented generation for business, enterprise AI knowledge base, custom AI development | /solutions/ai-development/, RAG whitepaper |
+| /blog/multi-tenant-saas-architecture-tenancy-models-billing-and-isolation/ | multi-tenant SaaS architecture | SaaS development company, tenant isolation, SaaS billing architecture, row level security, B2B SaaS development | /solutions/saas-development/, build vs buy whitepaper |
+| /blog/offline-first-mobile-app-architecture-sync-conflicts-and-low-connectivity/ | offline-first mobile app | mobile app development Nepal, offline sync architecture, React Native offline, field service app, app data sync | /solutions/app-development/ |
+| /blog/technical-seo-for-ai-search-rendering-schema-and-core-web-vitals/ | technical SEO for AI search | technical SEO checklist, JSON-LD schema markup, Core Web Vitals, server-side rendering SEO, AEO technical SEO | /solutions/aeo-seo/, /solutions/web-development/ |
+| /blog/ai-shopping-agent-for-shopify-woocommerce-and-daraz-sellers-in-nepal/ | AI ecommerce chatbot Nepal | AI shopping agent, Shopify AI chatbot, WooCommerce AI chatbot, eSewa Khalti chatbot, Daraz seller AI | /solutions/ai-ecommerce/, Stella case study |
+| /blog/data-readiness-for-ai-pipelines-quality-freshness-and-what-to-fix-first/ | data readiness for AI | data engineering for AI, data pipelines, data quality, data warehouse vs data lake, feature store, vector database | /solutions/data-systems/, AI governance whitepaper |
+| /blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment/ | study abroad CRM | education consultancy CRM, student application tracking, education consultancy software, admission management system | /industries/education/, Admizz case study |
+| /blog/visa-tracking-for-education-consultancies-stages-reminders-and-handoffs/ | visa tracking for consultancies | student visa tracking software, education consultancy operations, study abroad case management | /industries/education/ |
+| /blog/measure-recruitment-campaign-roi-education-consultancy-enrollments-not-leads/ | education consultancy marketing ROI | cost per enrollment, student recruitment campaign tracking, study abroad marketing, lead source tracking | /industries/education/ |
+| /blog/agency-sales-to-delivery-handoff-keep-deals-and-projects-in-one-system/ | agency sales to delivery handoff | agency operations software, agency CRM, agency project management, professional services automation | /industries/agencies/ |
+| /blog/agency-proposal-process-how-to-build-proposals-faster-from-a-shared-system/ | agency proposal process | proposal software for agencies, proposal automation, agency pricing, sales proposal template | /industries/agencies/ |
+| /blog/agency-utilization-and-resourcing-see-overbooked-vs-capacity-in-real-time/ | agency utilization | resource planning for agencies, capacity planning, agency time tracking, professional services management | /industries/agencies/ |
+| /blog/compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments/ | compliance-gated rostering | healthcare rostering software, aged care rostering, nurse scheduling, credential checks, healthcare workforce management Australia | /industries/healthcare/ |
+| /blog/healthcare-credential-and-licensure-tracking-build-an-audit-ready-system/ | healthcare credential tracking | licensure tracking software, credentialing software healthcare, staff compliance register, aged care compliance | /industries/healthcare/ |
+| /blog/healthcare-recruitment-job-matching-connect-hiring-to-your-workforce-platform/ | healthcare recruitment platform | healthcare job matching, nurse recruitment software, healthcare staffing, onboarding automation | /industries/healthcare/ |
+| /blog/how-cre-sponsors-run-a-capital-raise-workflow-from-offering-to-close/ | CRE capital raise workflow | real estate syndication software, investor relations software, offering management, commercial real estate sponsor software | /industries/real-estate/ |
+| /blog/investor-commitment-tracking-for-real-estate-sponsors-soft-hard-and-funded/ | investor commitment tracking | real estate investor management, soft vs hard commitment, capital raise tracking, investor CRM | /industries/real-estate/ |
+| /blog/virtual-data-room-for-real-estate-offerings-access-control-audit-and-checklist/ | real estate data room | virtual data room, secure document sharing, due diligence data room, data room access control | /industries/real-estate/ |
+| /blog/custom-software-vs-off-the-shelf-software-how-to-decide/ | custom software vs off-the-shelf | build vs buy software, custom software development, custom vs packaged software, software decision guide | /solutions/custom-software/, build vs buy whitepaper |
+| /blog/native-vs-cross-platform-vs-pwa-which-mobile-app-approach-fits-your-business/ | native vs cross-platform app | React Native vs native, PWA vs native app, cross-platform app development, mobile app development Nepal | /solutions/app-development/ |
+| /blog/headless-cms-vs-wordpress-which-fits-a-business-website/ | headless CMS vs WordPress | WordPress alternatives, headless CMS for business, Sanity vs WordPress, SEO-friendly CMS | /solutions/web-development/ |
+
+Industry posts (education, real estate, agencies, booking, clinics): every figure is attributed to the company's own case study or whitepaper; no hours, percentages or client quotes were invented. The Khems Cleaning 70% whitepaper figure was left out because its case-study page labels results illustrative. The agencies industry data contains a `[NEEDS SADIN: confirmed metric…]` placeholder, so the agencies post cites no result figure. The Nepal-angle phrases are targets only and the posts carry little Nepal-specific content.
+
+Content rule for the four case-study and product posts above (voice agent, generative UI, chatbot vs agent, case studies): client figures are quoted only from the published case studies and attributed as reported; no client quotes are reproduced; the repo's unsourced support statistics (CSAT, ticket-resolution rates) are deliberately not repeated. Khems Cleaning, Prime Tiles, CMS Group and Rapid Investment were left out because their case-study pages label results as illustrative.
+
+Sources checked against primary pages on 2026-10-27: Anthropic's announcements page, NVIDIA's newsroom, InfoQ and arXiv. Topics skipped: Claude 5.5 and the FTC/rogue-agents story (already covered by existing posts), and Anthropic's S-1 (the dates in coverage conflicted, 1 June versus 26 October, so it was left out). "Claude Duet" appeared only in aggregator coverage and not on Anthropic's own page, so it was not used.
+
+Internal links added: the FTC probe post and the AI-agents-infrastructure post now list the new posts under Related Insights.
+
 ## AI-crawler (AEO) foundations — audited 2026-10-13
 
 Verified present and working, no change needed: robots.txt explicitly allows GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended and Applebot-Extended (and blocks Bytespider); sitemap.xml; llms.txt and llms-full.txt (the latter generated by `scripts/build-llms-full.mjs`, Insights posts only, by design); Organization schema with a populated `sameAs` (LinkedIn, Clutch, GoodFirms, TechBehemoths, StartupsNepal, Trustpilot, Instagram); canonical and hreflang on every page; `<link rel="alternate" type="text/markdown">` on Insights posts, which resolve 200.
@@ -90,3 +159,46 @@ The hub's two non-directory sections now live on their own pages, so the hub no 
 The hub keeps only the grey SEO "Frequently asked questions" box (6 questions). Its answers were corrected: Gaamma is a manufacturing ERP (not "business analytics"), and the support-ticket claim was replaced with published case-study figures. Schema and visible text match.
 
 The two unsourced figures that were on the FAQ page (developer salary ranges in NPR, and "Nepal offers 20-40% lower costs than India") were softened on 2026-10-13 in the visible text, the FAQ schema and the German hub. If a real salary survey or cost comparison is available, specific numbers can be reinstated with a citation.
+
+## MCP and agent-security posts (2026-10-28)
+
+Target phrases, not measured volume. Confirm demand in Search Console and Bing Webmaster Tools (AI Performance) before investing further.
+
+| Page | Primary phrase | Secondary phrases |
+|---|---|---|
+| /blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/ | Cloudflare MCP server | MCP server, Model Context Protocol, how to connect MCP, Cloudflare API MCP |
+| /blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/ | Cloudflare MCP updates | step-up authorization MCP, MCP events, skills over MCP, MCP /sse deprecated |
+| /blog/mcp-specification-security-what-changed/ | MCP security | MCP specification 2026, MCP attack surface, AI agent security |
+| /blog/owasp-mcp-top-10-explained-for-business-owners/ | OWASP MCP Top 10 | MCP risks, AI agent security for business |
+
+## New whitepapers (2026-10-28)
+
+Target phrases, not measured volume. Each paper has TechArticle and FAQPage schema, a sources list and cross-links to the matching blog post.
+
+| Page | Primary phrase | Secondary phrases |
+|---|---|---|
+| /resources/predictive-maintenance-small-manufacturers-whitepaper/ | predictive maintenance for small manufacturers | predictive maintenance AI, sensor data machine failure, one-machine pilot |
+| /resources/mcp-agent-security-checklist-business-whitepaper/ | MCP security checklist | AI agent security, OWASP MCP Top 10, least privilege agents |
+| /resources/ai-orchestration-automation-agents-whitepaper/ | AI orchestration vs automation vs agents | agentic AI, multi-agent orchestration, workflow automation |
+
+## New ebooks, guides and reports (2026-10-28)
+
+Target phrases, not measured volume. Each page has TechArticle and FAQPage schema and a sources list.
+
+| Page | Primary phrase | Secondary phrases |
+|---|---|---|
+| /resources/ai-agents-small-business-playbook-ebook/ | AI agents for small business | AI automation small business, AI agent playbook |
+| /resources/ai-compliance-business-owners-ebook/ | AI compliance for business | EU AI Act business, AI privacy rules, AI risk |
+| /resources/ai-in-education-evidence-ebook/ | AI in education | AI tutoring evidence, AI for schools |
+| /resources/ai-in-healthcare-clinics-evidence-ebook/ | AI in healthcare clinics | clinical AI evidence, AI for clinics |
+| /resources/choosing-ai-development-partner-buyers-ebook/ | how to choose an AI development partner | AI vendor selection, AI company buyer guide |
+| /resources/evaluate-healthcare-ai-tool-before-you-buy-guide/ | how to evaluate a healthcare AI tool | healthcare AI procurement, AI vendor checklist clinics |
+| /resources/get-cited-by-ai-engines-guide/ | get cited by ChatGPT | AI Overviews citations, Copilot citations, AEO guide |
+| /resources/introduce-ai-school-training-program-guide/ | how to introduce AI in a school | AI in training programs, AI classroom policy |
+| /resources/run-30-day-ai-agent-pilot-guide/ | AI agent pilot | how to pilot an AI agent, 30-day AI pilot |
+| /resources/write-ai-policy-for-your-team-guide/ | how to write an AI policy | AI policy template, AI use policy for employees |
+| /resources/ai-in-education-evidence-report-2026/ | AI in education report | AI tutoring trials, teacher workload AI |
+| /resources/ai-regulation-data-residency-by-market-2026-report/ | AI regulation by country | data residency, EU AI Act, Canada AI privacy, Australia Privacy Act |
+| /resources/clinical-ai-evidence-digest-2026-report/ | clinical AI evidence | AI mammography screening trial, AI sepsis alert, AI medical scribes |
+| /resources/state-of-ai-agent-infrastructure-2026-report/ | AI agent infrastructure | MCP, agent security, agent pricing models |
+| /resources/ai-answers-source-selection-evidence-digest-2026-report/ | how AI answers choose sources | AI citations, Google AI Overviews requirements, AI visibility, answer engine optimization |
