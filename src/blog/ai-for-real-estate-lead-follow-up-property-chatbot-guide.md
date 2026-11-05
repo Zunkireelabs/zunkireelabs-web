@@ -1,5 +1,7 @@
 ---
 title: "AI for Real Estate: A Practical Guide to Lead Follow-Up and Property Chatbots"
+seoTitle: "AI for Real Estate: Lead Follow-Up and Chatbots"
+seoDescription: "How property agents can use AI for faster lead response, qualification and viewings: what to automate, what to keep human, and what to measure."
 shortLabel: "AI for Real Estate Leads"
 translationKey: "ai-for-real-estate-lead-follow-up-property-chatbot-guide"
 description: "How property agents and developers can use AI for faster lead response, qualification and viewings: what to automate, what to keep human, how to roll out and what to measure."

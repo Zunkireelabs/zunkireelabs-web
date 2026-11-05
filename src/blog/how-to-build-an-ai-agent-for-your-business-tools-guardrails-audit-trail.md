@@ -1,5 +1,6 @@
 ---
 title: "How to Build an AI Agent for Your Business: Tools, Guardrails, Audit Trail"
+seoTitle: "How to Build an AI Agent: Tools, Guardrails, Audit"
 shortLabel: "Build a Business AI Agent"
 translationKey: "how-to-build-an-ai-agent-for-your-business-tools-guardrails-audit-trail"
 description: "How to build a custom AI agent for one business workflow: choose the job, define tools, bound authority, add approvals and logs, and launch safely."

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "Zunkiree Search Alternatives & Comparisons | Zunkiree Labs"
-description: "Compare Zunkiree Search vs Algolia, Elasticsearch, and Typesense. See how AI-native search compares to traditional search solutions."
+title: "Compare Zunkiree Search and Services | Zunkiree Labs"
+description: "Compare Zunkiree Search with Algolia, Elasticsearch and Typesense, and Zunkiree Labs services with typical alternatives. Side-by-side tables."
 permalink: /compare/
 bodyClass: "v2-inter"
 hideChrome: true
@@ -39,11 +39,11 @@ hideChrome: true
     </span>
 
     <h1 id="hero-heading" class="text-center text-[34px] font-medium leading-[1.15] tracking-tight text-[#111827] sm:text-[42px] sm:leading-[1.1] lg:text-[48px]">
-      How Zunkiree Search compares
+      Compare Zunkiree Labs
     </h1>
 
     <p class="mt-4 max-w-[640px] text-center text-[18px] font-medium leading-relaxed text-[#6B7280] sm:text-[20px]">
-      See how AI-native search stacks up against traditional search solutions. Detailed comparisons to help you choose the right tool.
+      Side-by-side comparisons of Zunkiree Search with other search tools, and of our services with typical alternatives, to help you choose the right fit.
     </p>
   </div>
 </section>
@@ -55,7 +55,10 @@ hideChrome: true
    ===================================================== #}
 <section class="px-4 pb-12 pt-4 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="comparisons-grid-heading">
   <div class="mx-auto max-w-5xl">
-    <h2 id="comparisons-grid-heading" class="sr-only">All comparisons</h2>
+    <div class="mb-8" data-reveal>
+      <span class="mb-2 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Compare</span>
+      <h2 id="comparisons-grid-heading" class="text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">All comparisons</h2>
+    </div>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
       {% for comp in comparisons %}
       <a
@@ -85,9 +88,38 @@ hideChrome: true
         </span>
       </a>
       {% endfor %}
+      {% for cc in companyComparisons %}
+      <a
+        href="/compare/{{ cc.id }}/"
+        class="group flex flex-col overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-sky-100/60 via-sky-50/25 to-white/50 p-6 shadow-subtle backdrop-blur-sm transition-shadow duration-300 hover:shadow-card-hover"
+      >
+        <div class="mb-6 flex items-center gap-3">
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-navy-950 p-2">
+            <img src="/assets/images/favicon.png" alt="Zunkiree" class="h-full w-full object-contain" />
+          </span>
+          <span class="font-mono text-[13px] uppercase tracking-wider text-navy-400">vs</span>
+          <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-navy-100 bg-white font-mono text-[13px] font-semibold text-navy-500">
+            &middot;&middot;&middot;
+          </span>
+        </div>
+        <h3 class="mb-3 text-[18px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-sky-700">
+          {{ cc.title }}
+        </h3>
+        <p class="mb-6 flex-1 text-[14px] leading-relaxed text-[#6B7280]">
+          {{ cc.description }}
+        </p>
+        <span class="inline-flex items-center gap-1.5 font-mono text-[12px] uppercase tracking-wide text-[#76B900] transition-all group-hover:gap-2.5">
+          Read comparison
+          <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </span>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
+
 
 {# =====================================================
    WHY AI-NATIVE — 3 compact blocks, navy-950 icon badges with
@@ -177,6 +209,15 @@ hideChrome: true
           data-cta-id="compare-index-cta"
         >
           Explore Zunkiree Search
+          <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
+        </a>
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 font-mono text-[13px] uppercase tracking-wide text-white transition-colors duration-200 hover:border-white/40"
+          data-track="cta"
+          data-cta-id="compare-index-contact"
+        >
+          Talk to our team
           <span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-white/70" aria-hidden="true"></span>
         </a>
       </div>

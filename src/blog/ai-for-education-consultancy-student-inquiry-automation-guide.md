@@ -1,5 +1,7 @@
 ---
 title: "AI for Education Consultancies: A Practical Guide to Student Inquiry Automation"
+seoTitle: "AI for Education Consultancies: Student Inquiries"
+seoDescription: "How study-abroad consultancies can use AI to answer student inquiries faster: what to automate, what to keep human, how to roll out and measure."
 shortLabel: "AI for Education Consultancies"
 translationKey: "ai-for-education-consultancy-student-inquiry-automation-guide"
 description: "How study-abroad and education consultancies can use AI to answer student inquiries faster: what to automate, what to keep human, how to roll out and what to measure."

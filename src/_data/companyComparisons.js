@@ -31,6 +31,7 @@ export default [
   },
   {
     id: "web-development-kathmandu-vs-other-services",
+    seoTitle: "Kathmandu Web Development vs Other Options",
     title: "Web Development in Kathmandu: Our Services vs Other Options",
     description: "A side-by-side look at our Kathmandu web development services against other options: speed, frameworks, mobile design, SEO and support.",
     intro: "When considering web development services, it's essential to understand the key differences and similarities between various options available in Kathmandu. Below is a comparison of our web development services against other potential web development solutions.",
@@ -49,6 +50,7 @@ export default [
   },
   {
     id: "custom-software-lalitpur-vs-other-locations",
+    seoTitle: "Custom Software: Lalitpur vs Other Locations",
     title: "Custom Software Development: Lalitpur vs Other Locations",
     description: "What working with a local Lalitpur team means for custom software: proximity, local fit, expertise, methodology and additional services.",
     intro: "When considering custom software development for your business, it's important to weigh the benefits of working with a local team against other options in nearby locations. Here's a comparison to help you understand the advantages.",
@@ -84,6 +86,7 @@ export default [
   },
   {
     id: "zunkiree-labs-vs-other-multi-tenant-saas-developers",
+    seoTitle: "Multi-Tenant SaaS: Zunkiree Labs vs Others",
     title: "Zunkiree Labs vs Other Multi-Tenant SaaS Developers",
     description: "How our multi-tenant SaaS development compares with typical alternatives on MVP launch time, tenant scale, billing and design approach.",
     intro: "When considering multi-tenant SaaS development, Zunkiree Labs stands out for its expertise in building scalable solutions tailored for high tenant volumes. Unlike some competitors, we emphasize speed to market with our efficient MVP launch processes, aiming for deployment within months rather than years. Our approach centers on utilizing pre-built components, which distinguishes us from others that may favor complete custom builds that can lead to delays and increased costs. Furthermore, we handle complex billing and user management intricately from the onset, reducing the risk of complications as your platform grows.",
@@ -98,5 +101,23 @@ export default [
     ],
     back: { href: "/solutions/saas-development/", label: "SaaS development" },
     cta: { eyebrow: "Next step", headline: "Plan your multi-tenant platform with us", body: "Share your product idea and we will outline the tenancy model, billing and a first release." }
+  },
+  {
+    id: "zunkiree-labs-vs-other-data-infrastructure-providers",
+    seoTitle: "Data Infrastructure: Zunkiree Labs vs Others",
+    title: "Zunkiree Labs vs Other Data Infrastructure Providers",
+    description: "How our data engineering for AI workloads compares with typical alternatives on pipeline reliability, data preparation time and scaling.",
+    intro: "Zunkiree Labs builds data pipelines, warehouses and feature stores for machine learning rather than general data management. Below is how our published figures for AI data engineering compare with what a typical alternative offers. The Zunkiree Labs column restates the figures on our data systems page; they are our own, not independent benchmarks.",
+    featureLabel: "Feature",
+    leftLabel: "Zunkiree Labs",
+    rightLabel: "Typical alternative",
+    rows: [
+      { feature: "Pipeline reliability", left: "99.9% pipeline uptime with auto-recovery, error handling and data validation", right: "Varies by provider" },
+      { feature: "Speed of data preparation", left: "80% faster than manual processes, with production ML in weeks", right: "Varies by provider and starting data quality" },
+      { feature: "Scaling infrastructure", left: "Designed to scale from gigabytes to petabytes without replatforming", right: "Varies; some designs need rework at larger volumes" },
+      { feature: "Focus", left: "Data systems built specifically for AI and machine learning workloads", right: "Often general-purpose data management" }
+    ],
+    back: { href: "/solutions/data-systems/", label: "Data engineering and ML infrastructure" },
+    cta: { eyebrow: "Next step", headline: "Plan the data foundation for your AI project", body: "Tell us about your data sources and volumes and we will outline pipelines, a warehouse and what to fix first." }
   }
 ];

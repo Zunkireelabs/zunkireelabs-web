@@ -1,5 +1,6 @@
 ---
 title: "How to Test AI Agents Before Launch: Evals, Red Teaming, Regression Suites"
+seoTitle: "How to Test AI Agents: Evals and Red Teaming"
 shortLabel: "Test AI Agents Before Launch"
 translationKey: "how-to-test-ai-agents-before-launch-evals-red-teaming-and-regression-suites"
 description: "How to test an AI agent before launch: build a test set, grade outcomes and tool use, red team for prompt injection, track regressions and set go-live rules."

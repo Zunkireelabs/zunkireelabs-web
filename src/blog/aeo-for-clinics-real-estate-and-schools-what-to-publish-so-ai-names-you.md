@@ -1,5 +1,6 @@
 ---
 title: "AEO for Clinics, Property and Schools: What to Publish for AI"
+seoTitle: "AEO for Clinics, Property and Schools: What to Publish"
 shortLabel: "AEO for Clinics, Property, Schools"
 translationKey: "aeo-for-clinics-real-estate-and-schools-what-to-publish-so-ai-names-you"
 description: "What clinics, property firms and schools should publish so AI assistants find, describe and recommend them accurately: pages, FAQs and consistent facts."

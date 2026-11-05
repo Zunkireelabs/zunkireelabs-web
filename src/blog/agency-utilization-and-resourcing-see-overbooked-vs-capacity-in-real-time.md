@@ -1,5 +1,6 @@
 ---
 title: "Agency Utilization and Resourcing: See Overbooked vs Capacity in Real Time"
+seoTitle: "Agency Utilization and Resourcing: Spot Overbooking"
 shortLabel: "Agency Utilization and Resourcing"
 translationKey: "agency-utilization-and-resourcing-see-overbooked-vs-capacity-in-real-time"
 description: "How agencies can track utilization and plan resources: define targets, connect time tracking to billing, forecast capacity and spot overbooked people early."

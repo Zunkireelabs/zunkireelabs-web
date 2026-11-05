@@ -1,5 +1,6 @@
 ---
 title: "How to Check a Nepali IT Company Before You Hire It (2026)" # SEOAI:TITLE
+seoDescription: "A practical checklist for vetting an IT company in Nepal: legal registration, named client work, certifications, team details and contract basics."
 description: "A practical checklist for vetting an IT company in Nepal: legal registration, named client work, certifications, team details and contract basics, before you sign."
 date: 2026-10-13
 lastUpdated: "2026-10-13"

@@ -9,7 +9,7 @@ permalink: /compare/{{ cc.id }}/
 bodyClass: "v2-inter"
 hideChrome: true
 eleventyComputed:
-  title: "{{ cc.title }} | Zunkiree Labs"
+  title: "{{ cc.seoTitle or cc.title }} | Zunkiree Labs"
   description: "{{ cc.description }}"
   comparisonId: "{{ cc.id }}"
 ---

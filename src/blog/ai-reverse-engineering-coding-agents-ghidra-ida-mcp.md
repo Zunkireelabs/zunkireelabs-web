@@ -1,5 +1,7 @@
 ---
 title: "AI Reverse Engineering in 2026: How Coding Agents Now Drive Ghidra and IDA"
+seoTitle: "AI Reverse Engineering: Coding Agents Drive Ghidra"
+seoDescription: "AI agents can now drive Ghidra, IDA and Hopper through MCP to analyse binaries. What Reverse Engineer Anything and CrackMeBench show, and the limits."
 shortLabel: "AI Reverse Engineering"
 translationKey: "ai-reverse-engineering-coding-agents-ghidra-ida-mcp"
 description: "AI agents can now drive Ghidra, IDA and Hopper through MCP to analyse binaries. What the Reverse Engineer Anything project and CrackMeBench show, and where the limits are."

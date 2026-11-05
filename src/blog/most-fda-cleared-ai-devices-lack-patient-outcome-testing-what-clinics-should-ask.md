@@ -1,5 +1,6 @@
 ---
 title: "FDA-Cleared Medical AI and Patient Outcomes: What Clinics Should Ask"
+seoTitle: "FDA-Cleared Medical AI: What Clinics Should Ask"
 shortLabel: "FDA-Cleared AI Evidence"
 translationKey: "most-fda-cleared-ai-devices-lack-patient-outcome-testing-what-clinics-should-ask"
 description: "A 2026 review found that of 1,357 FDA-cleared AI devices only 3 assessed patient outcomes. What that means and five questions to ask before you buy."

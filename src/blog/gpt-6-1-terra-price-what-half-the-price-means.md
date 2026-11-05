@@ -1,5 +1,7 @@
 ---
 title: "GPT-6.1 Terra at Half the Price: What a Cheaper Model Really Changes"
+seoTitle: "GPT-6.1 Terra at Half the Price: What Changes"
+seoDescription: "OpenAI launched GPT-6.1 Terra on 26 October 2026 at $1 per million input and $5 per million output tokens. What it means and how to test before switching."
 shortLabel: "GPT-6.1 Terra Pricing"
 translationKey: "gpt-6-1-terra-price-what-half-the-price-means"
 description: "OpenAI launched GPT-6.1 Terra on 26 October 2026 at $1 per million input tokens and $5 per million output. What the price cut means and how to test it before switching."

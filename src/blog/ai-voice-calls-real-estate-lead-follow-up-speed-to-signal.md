@@ -1,5 +1,6 @@
 ---
 title: "AI Voice Calls in Real Estate: From Speed to Lead to Speed to Signal"
+seoTitle: "AI Voice Calls in Real Estate: Speed to Signal"
 shortLabel: "AI Voice for Real Estate"
 translationKey: "ai-voice-calls-real-estate-lead-follow-up-speed-to-signal"
 description: "AI voice agents are moving into real estate lead follow-up. What HousingWire reports, where cold-lead calls work, and what to ask before you use one."

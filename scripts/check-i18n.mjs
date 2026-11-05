@@ -151,9 +151,16 @@ export function loadPosts(root) {
   return posts;
 }
 
+// Blog URLs that are listing pages rather than posts. They live in .njk
+// templates, not src/**/blog/*.md, so loadPosts() never sees them — without
+// this the `/blog/<segment>/` "no such blog post" check below rejects a
+// perfectly valid redirect that targets a listing (e.g. /blog/insights/).
+export const BLOG_LISTINGS = ['/blog/', '/blog/articles/', '/blog/insights/'];
+
 export function runAll(root) {
   const posts = loadPosts(root);
   const existing = new Set(posts.map((p) => `${p.collection.urlBase}${p.file.replace(/\.md$/, '')}/`));
+  for (const url of BLOG_LISTINGS) existing.add(url);
   const nginx = parseNginxRedirects(fs.readFileSync(path.join(root, 'nginx/static.conf'), 'utf8'));
   const vercel = parseVercelRedirects(JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8')));
   return {

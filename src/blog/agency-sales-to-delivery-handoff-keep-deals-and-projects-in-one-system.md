@@ -1,5 +1,6 @@
 ---
 title: "Agency Sales-to-Delivery Handoff: Keep Deals and Projects in One System"
+seoTitle: "Agency Sales-to-Delivery Handoff in One System"
 shortLabel: "Agency Sales to Delivery Handoff"
 translationKey: "agency-sales-to-delivery-handoff-keep-deals-and-projects-in-one-system"
 description: "How agencies can stop losing detail between sales and delivery: connect the deal pipeline to project setup, scope, milestones and billing, with a checklist."

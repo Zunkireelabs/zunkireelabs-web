@@ -1,5 +1,7 @@
 ---
 title: "Real Estate Data Room: Access Control, Audit Trail and Checklist"
+seoTitle: "Real Estate Data Room: Access, Audit, Checklist"
+seoDescription: "How CRE sponsors should run a secure data room: what to include, permission tiers, watermarks, view logs, version control, Q&A and a launch checklist."
 shortLabel: "Real Estate Data Room"
 translationKey: "virtual-data-room-for-real-estate-offerings-access-control-audit-and-checklist"
 description: "How CRE sponsors should run a secure data room: what to include, permission tiers, watermarks, view logs, version control, Q&A handling and a launch checklist."

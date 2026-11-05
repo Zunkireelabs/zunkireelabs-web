@@ -1,5 +1,7 @@
 ---
 title: "Offline-First Mobile App Architecture: Sync, Conflicts and Low Connectivity"
+seoTitle: "Offline-First Mobile App Architecture: Sync, Conflicts"
+seoDescription: "How to design an offline-first mobile app: local storage, sync queues, conflict resolution and testing on poor networks for field teams."
 shortLabel: "Offline-First Mobile Apps"
 translationKey: "offline-first-mobile-app-architecture-sync-conflicts-and-low-connectivity"
 description: "How to design an offline-first mobile app: local storage, sync queues, conflict resolution and testing on poor networks, for field teams and patchy connectivity."

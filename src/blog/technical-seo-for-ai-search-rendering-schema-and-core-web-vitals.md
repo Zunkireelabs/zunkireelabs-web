@@ -1,5 +1,6 @@
 ---
 title: "Technical SEO for AI Search: Rendering, Schema and Core Web Vitals"
+seoTitle: "Technical SEO for AI Search: Schema and Web Vitals"
 shortLabel: "Technical SEO for AI Search"
 translationKey: "technical-seo-for-ai-search-rendering-schema-and-core-web-vitals"
 description: "A technical checklist for SEO, AEO and GEO: crawlability, rendering, canonicals, JSON-LD, Core Web Vitals thresholds and what Google says AI features need."

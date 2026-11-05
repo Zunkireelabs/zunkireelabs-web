@@ -1,5 +1,7 @@
 ---
 title: "RAG vs Fine-Tuning vs Long Context: Which Should Your Business Use?"
+seoTitle: "RAG vs Fine-Tuning vs Long Context for Business"
+seoDescription: "RAG, fine-tuning or long context? A decision guide for business AI: what each does, when each wins, costs, freshness, risks and a simple path."
 shortLabel: "RAG vs Fine-Tuning vs Long Context"
 translationKey: "rag-vs-fine-tuning-vs-long-context-which-should-your-business-use"
 description: "RAG, fine-tuning or long context? A decision guide for business AI covering what each does, when each wins, costs, freshness, risks and a simple decision path."

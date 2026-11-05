@@ -1,5 +1,7 @@
 ---
 title: "Data Readiness for AI: Pipelines, Quality, Freshness and What to Fix First"
+seoTitle: "Data Readiness for AI: What to Fix First"
+seoDescription: "A data engineering checklist before building AI: inventory sources, fix quality and ownership, design pipelines, set freshness and add lineage."
 shortLabel: "Data Readiness for AI"
 translationKey: "data-readiness-for-ai-pipelines-quality-freshness-and-what-to-fix-first"
 description: "A data engineering checklist before building AI: inventory sources, fix quality and ownership, design pipelines, set freshness, add lineage and access control."

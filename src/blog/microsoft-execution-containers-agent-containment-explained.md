@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Execution Containers: How to Contain an AI Agent"
+seoDescription: "Microsoft made Execution Containers generally available on Windows 11 on 7 October 2026, limiting what an AI agent can reach. What it does and what is missing."
 shortLabel: "Microsoft Execution Containers"
 translationKey: "microsoft-execution-containers-agent-containment-explained"
 description: "Microsoft made Execution Containers generally available on Windows 11 on 7 October 2026, limiting which files and networks an AI agent can reach. What it does and what is missing."

@@ -1,5 +1,6 @@
 ---
 title: "Agent-Desktop: How AI Agents Operate Desktop Apps Without Screenshots"
+seoTitle: "Agent-Desktop: AI Agents Operating Desktop Apps"
 shortLabel: "Agent-Desktop Explained"
 translationKey: "vercel-agent-desktop-computer-use-for-ai-agents-explained"
 description: "Vercel Labs' open-source agent-desktop lets AI agents operate Mac, Windows and Linux apps via the accessibility tree. How it works and the risks."
