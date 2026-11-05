@@ -1,5 +1,6 @@
 ---
 title: "Custom Software vs Off-the-Shelf: How to Decide What to Build or Buy"
+seoTitle: "Custom Software vs Off-the-Shelf: How to Decide"
 shortLabel: "Custom vs Off-the-Shelf Software"
 translationKey: "custom-software-vs-off-the-shelf-software-how-to-decide"
 description: "Custom software or off-the-shelf? Compare cost, fit, speed, ownership, integration and risk, with a decision checklist and the hybrid route."

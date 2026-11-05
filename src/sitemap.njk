@@ -75,4 +75,12 @@ eleventyExcludeFromCollections: true
   </url>
 {%- endif %}
 {%- endfor %}
+{%- for l in collections.sitemapListings %}
+  <url>
+    <loc>{{ site.url }}{{ l.url }}</loc>
+    <lastmod>{{ l.date | date("%Y-%m-%d") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>{{ "0.7" if l.root and l.first else ("0.6" if l.first else "0.4") }}</priority>
+  </url>
+{%- endfor %}
 </urlset>

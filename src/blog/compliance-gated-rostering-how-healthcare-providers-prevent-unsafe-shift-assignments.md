@@ -1,5 +1,6 @@
 ---
 title: "Compliance-Gated Rostering: Preventing Unsafe Shifts in Care Providers"
+seoTitle: "Compliance-Gated Rostering for Care Providers"
 shortLabel: "Compliance-Gated Rostering"
 translationKey: "compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments"
 description: "How hospitals, aged care and community care can prevent unsafe rostering: check credentials before assigning shifts, handle expiry and keep an audit trail."

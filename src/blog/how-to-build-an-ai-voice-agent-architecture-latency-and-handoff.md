@@ -1,5 +1,7 @@
 ---
 title: "How to Build an AI Voice Agent: Architecture, Latency and Handoff"
+seoTitle: "How to Build an AI Voice Agent: Architecture, Latency"
+seoDescription: "How to build an AI voice agent: speech, model and tools pipeline, latency budget, barge-in, live booking, handoff and testing, with a checklist."
 shortLabel: "Build an AI Voice Agent"
 translationKey: "how-to-build-an-ai-voice-agent-architecture-latency-and-handoff"
 description: "How to build an AI voice agent: speech, model and tools pipeline, latency budget, barge-in, live booking, handoff and testing, with a build checklist."

@@ -1,5 +1,7 @@
 ---
 title: "NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents"
+seoTitle: "NVIDIA OpenShell and GTC Berlin 2026 for AI Agents"
+seoDescription: "At GTC Berlin on 21 October 2026 NVIDIA launched the OpenShell Reference Architecture for safe AI agents. What it means for businesses."
 shortLabel: "NVIDIA OpenShell"
 translationKey: "nvidia-openshell-safe-ai-agents-gtc-berlin-2026"
 description: "At GTC Berlin on 21 October 2026 NVIDIA launched the OpenShell Reference Architecture for safe AI agents and an Agent Knowledge Foundation. What it means for businesses."

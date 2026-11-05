@@ -1,5 +1,7 @@
 ---
 title: "Healthcare Credential and Licensure Tracking: Build an Audit-Ready System"
+seoTitle: "Healthcare Credential and Licensure Tracking System"
+seoDescription: "How healthcare providers can track staff credentials and licensure: one register, expiry alerts, evidence, scope checks, ownership and audit needs."
 shortLabel: "Credential and Licensure Tracking"
 translationKey: "healthcare-credential-and-licensure-tracking-build-an-audit-ready-system"
 description: "How healthcare providers can track staff credentials and licensure: one register, expiry alerts, evidence, scope checks, ownership and what an audit needs."

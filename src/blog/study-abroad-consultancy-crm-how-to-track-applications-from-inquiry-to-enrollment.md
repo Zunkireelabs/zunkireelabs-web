@@ -1,5 +1,6 @@
 ---
 title: "Study Abroad Consultancy CRM: Track Applications From Inquiry to Enrollment"
+seoTitle: "Study Abroad Consultancy CRM: Track Applications"
 shortLabel: "Study Abroad Consultancy CRM"
 translationKey: "study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment"
 description: "What a CRM for a study abroad consultancy must track: inquiries, documents, applications, offers, visas and enrollment, with stages, owners and a checklist."

@@ -1,5 +1,6 @@
 ---
 title: "Native vs Cross-Platform vs PWA: Which Mobile App Approach Fits?"
+seoTitle: "Native vs Cross-Platform vs PWA: Which Fits?"
 shortLabel: "Native vs Cross-Platform vs PWA"
 translationKey: "native-vs-cross-platform-vs-pwa-which-mobile-app-approach-fits-your-business"
 description: "Native, cross-platform or PWA? Compare performance, cost, device features, offline use, store distribution and maintenance, and how to choose."

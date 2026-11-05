@@ -1,5 +1,6 @@
 ---
 title: "How CRE Sponsors Run a Capital Raise: Workflow From Offering to Close"
+seoTitle: "CRE Capital Raise Workflow: Offering to Close"
 shortLabel: "CRE Capital Raise Workflow"
 translationKey: "how-cre-sponsors-run-a-capital-raise-workflow-from-offering-to-close"
 description: "A workflow guide for CRE sponsors raising capital: structure the offering, manage investors, track commitments, share documents securely and close."

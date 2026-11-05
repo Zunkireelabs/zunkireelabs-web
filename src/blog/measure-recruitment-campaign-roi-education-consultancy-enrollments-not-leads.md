@@ -1,5 +1,6 @@
 ---
 title: "Campaign ROI for Education Consultancies: Measure Enrollments, Not Leads"
+seoTitle: "Education Consultancy Campaign ROI: Enrollments"
 shortLabel: "Campaign ROI for Consultancies"
 translationKey: "measure-recruitment-campaign-roi-education-consultancy-enrollments-not-leads"
 description: "How education consultancies can tie marketing to enrollments: track source through every stage, measure cost per enrollment and find stuck stages."

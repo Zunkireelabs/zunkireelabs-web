@@ -1,5 +1,7 @@
 ---
 title: "Google's Gemini Agent: What a Universal Work Agent Actually Changes"
+seoTitle: "Google Gemini Agent: What a Universal Work Agent Changes"
+seoDescription: "Google announced a universal Gemini agent on 8 October 2026, with coworker agents that get their own Workspace account. What is confirmed and what is not."
 shortLabel: "Google's Gemini Agent"
 translationKey: "google-gemini-agent-universal-work-agent"
 description: "Google announced a single universal Gemini agent on 8 October 2026, with coworker agents that get their own Workspace account. What is confirmed and what is not."

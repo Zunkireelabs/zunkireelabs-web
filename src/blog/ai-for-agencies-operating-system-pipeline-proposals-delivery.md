@@ -1,5 +1,7 @@
 ---
 title: "AI for Agencies: An Operating System View From Pipeline to Utilization"
+seoTitle: "AI for Agencies: Pipeline, Proposals and Utilization"
+seoDescription: "How agencies can use AI across pipeline, proposals, delivery and utilization: what to automate, what to keep human, and how to protect client data."
 shortLabel: "AI for Agencies"
 translationKey: "ai-for-agencies-operating-system-pipeline-proposals-delivery"
 description: "How an agency can use AI across deal pipeline, proposals, delivery, time tracking and utilization, what to automate, what to keep human, and how to protect client data."

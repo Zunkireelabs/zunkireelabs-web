@@ -2,6 +2,13 @@ import locations from './locations.js';
 import services from './services.json' with { type: 'json' };
 
 // Generate all location × service combinations for programmatic SEO
+// Keep generated descriptions inside Google's visible range (~110-160 chars):
+// a bare description under ~110 wastes SERP space, so add a call to action.
+function padDescription(d) {
+  const cta = ' Free consultation with our Kathmandu team.';
+  return d.length < 120 && d.length + cta.length <= 160 ? d + cta : d;
+}
+
 const pages = [];
 
 for (const location of locations) {
@@ -32,7 +39,7 @@ for (const location of locations) {
       hasServiceFaqs: !!(serviceContent?.faqs && serviceContent.faqs.length),
       canonicalUrl: canonicalUrl,
       title: serviceContent?.title || `${service.title} in ${location.name} | Zunkiree Labs`,
-      description: serviceContent?.description || `${service.description} Professional ${service.title.toLowerCase()} services in ${location.name}, ${location.country}.`,
+      description: padDescription(serviceContent?.description || `${service.description} Professional ${service.title.toLowerCase()} services in ${location.name}, ${location.country}.`),
       permalink: `/locations/${location.id}/${service.id}/`
     });
   }

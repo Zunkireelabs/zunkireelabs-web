@@ -1,5 +1,7 @@
 ---
 title: "SaaS to GaaS: How to Move From Seat Licences to Outcome Pricing"
+seoTitle: "SaaS to GaaS: Move From Seats to Outcome Pricing"
+seoDescription: "Considering a move from SaaS to GaaS? When agentic as a service makes sense, how per-seat and per-outcome pricing compare, and how to test the switch."
 translationKey: "saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing"
 description: "Considering a move from SaaS to GaaS? When agentic as a service makes sense, how per-seat and per-outcome pricing compare, and a step-by-step way to test the switch."
 date: 2026-10-12

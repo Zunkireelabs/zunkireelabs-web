@@ -1,5 +1,6 @@
 ---
 title: "Agency Proposal Process: Build Better Proposals Faster From a Shared System"
+seoTitle: "Agency Proposal Process: Build Proposals Faster"
 shortLabel: "Agency Proposal Process"
 translationKey: "agency-proposal-process-how-to-build-proposals-faster-from-a-shared-system"
 description: "How agencies can build proposals faster without losing quality: reusable components, pricing logic, review steps, versioning and a feedback loop from delivery."

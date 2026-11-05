@@ -1,5 +1,7 @@
 ---
 title: "AI Voice Agents for Appointment Booking: What They Do and When They Fit"
+seoTitle: "AI Voice Agents for Appointment Booking"
+seoDescription: "What an AI voice agent is, how it books appointments, where it fails and how to evaluate one before you commit. A plain-English guide."
 shortLabel: "AI Voice Agents"
 translationKey: "ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits"
 description: "What an AI voice agent is, how an AI phone agent books appointments, where it fails and how to evaluate one before you commit. A plain-English guide for businesses."

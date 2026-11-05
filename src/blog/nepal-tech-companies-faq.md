@@ -1,5 +1,6 @@
 ---
 title: "Tech Companies in Nepal: Frequently Asked Questions (2026)" # SEOAI:TITLE
+seoDescription: "Answers on Nepal's tech sector: top companies, AI companies, developer salaries, jobs, startups, outsourcing versus India and how our list was chosen."
 description: "Answers on Nepal's tech sector: top companies, AI companies, developer salaries, finding jobs, startups, outsourcing compared with India and how our list was chosen."
 date: 2026-10-13
 lastUpdated: "2026-10-13"

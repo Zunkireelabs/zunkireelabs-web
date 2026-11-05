@@ -1,5 +1,6 @@
 ---
 title: "Cloudflare MCP Server Explained: What It Does and How to Connect"
+seoTitle: "Cloudflare MCP Server: What It Does, How to Connect"
 shortLabel: "Cloudflare MCP Server"
 translationKey: "cloudflare-mcp-server-explained-what-it-does-and-how-to-connect"
 description: "What Cloudflare's MCP server is, what an AI agent can do with it, how it helps a business, and how to connect it safely with the right permissions."

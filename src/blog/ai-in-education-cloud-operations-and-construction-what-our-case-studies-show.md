@@ -1,5 +1,7 @@
 ---
 title: "AI in Education, Cloud Operations and Construction: What Our Case Studies Show"
+seoTitle: "AI Case Studies: Education, Cloud and Construction"
+seoDescription: "Three AI projects: an education consultancy, a cloud services provider and a Kathmandu construction firm. What we built and what carries over."
 shortLabel: "AI Case Study Lessons"
 translationKey: "ai-in-education-cloud-operations-and-construction-what-our-case-studies-show"
 description: "Three industries, three AI projects: an education consultancy, a cloud services provider and a Kathmandu construction firm. What we built, what was reported and what carries over."

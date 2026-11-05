@@ -1,5 +1,7 @@
 ---
 title: "GaaS for Marketing Agencies: What Agentic as a Service Changes"
+seoTitle: "GaaS for Marketing Agencies: What Changes"
+seoDescription: "What GaaS means for a marketing agency: how agentic as a service differs from SaaS, which tasks suit it, and how to test it before relying on it."
 translationKey: "gaas-for-marketing-agencies-what-agentic-as-a-service-changes"
 description: "What does GaaS mean for a marketing agency? How agentic as a service differs from SaaS tools, which agency tasks suit it, and how to test it before you rely on it."
 date: 2026-10-12

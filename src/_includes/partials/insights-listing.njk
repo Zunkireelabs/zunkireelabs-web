@@ -1,7 +1,13 @@
 {# The "Insights" view of the blog: the same listing as /blog/ (src/blog/index.njk),
    filtered to posts with `category: Insights`. Emits no page at all while there
    are none (Eleventy generates nothing for empty pagination data), so there is
-   never an empty, indexable Insights page. #}
+   never an empty, indexable Insights page.
+
+   Per-pillar sub-pages (/blog/insights/<pillar>/) and their topic chip row were
+   removed: thin, absent from sitemap.njk (eleventyExcludeFromCollections) and
+   with no inbound internal links, they earned nothing and went orphan the moment
+   the chips came off. Posts keep their `pillar:` front matter — it still drives
+   `pillarLabel` and relatedByTopic. Old URLs 301 to this page. #}
 {% include "partials/navbar-v2.njk" %}
 
 <section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
@@ -11,36 +17,19 @@
       <span class="text-warm-400">/</span>
       <a href="/blog/" class="text-zunkiree-600 hover:underline">Blog</a>
       <span class="text-warm-400">/</span>
-      {% if activePillar %}
-      <a href="/blog/insights/" class="text-zunkiree-600 hover:underline">Insights</a>
-      <span class="text-warm-400">/</span>
-      <span class="text-warm-600">{{ activePillarLabel }}</span>
-      {% else %}
       <span class="text-warm-600">Insights</span>
-      {% endif %}
     </nav>
 
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
-      {{ activePillarLabel if activePillar else "Insights" }}
+      Insights
     </h1>
     <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-      {% if activePillar %}{{ activePillarIntro }}{% else %}What is trending in AI and technology right now, explained, and what it means for your business.{% endif %}
+      What is trending in AI and technology right now, explained, and what it means for your business.
     </p>
 
     {% set blogFilter = "insights" %}
     {% include "partials/blog-filter.njk" %}
 
-    {# Topic chips: real links, one page per pillar (/blog/insights/<pillar>/). #}
-    {% if collections.insightsPillars.length > 1 %}
-    <nav class="mt-6 -mx-4 flex flex-nowrap gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" aria-label="Filter Insights by topic">
-      <a href="/blog/insights/"{% if not activePillar %} aria-current="page"{% endif %}
-         class="inline-flex flex-shrink-0 items-center whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors {% if not activePillar %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}">All topics</a>
-      {% for pl in collections.insightsPillars %}
-      <a href="/blog/insights/{{ pl.slug }}/"{% if activePillar == pl.slug %} aria-current="page"{% endif %}
-         class="inline-flex flex-shrink-0 items-center whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors {% if activePillar == pl.slug %}bg-zunkiree-600 text-white{% else %}border border-gray-200 text-gray-900 hover:bg-gray-50{% endif %}">{{ pl.label }} <span class="ml-2 rounded-full px-1.5 text-xs {% if activePillar == pl.slug %}bg-white/20 text-white{% else %}bg-gray-100 text-gray-500{% endif %}">{{ pl.count }}</span></a>
-      {% endfor %}
-    </nav>
-    {% endif %}
   </div>
 </section>
 
@@ -51,6 +40,15 @@
 
   </div>
 </section>
+
+{% set faqItems = [
+  { question: "What is Zunkiree Labs Insights?", answer: "Zunkiree Labs Insights is a collection of timely explainers on what is trending in AI and technology, written by the Zunkiree Labs team in Kathmandu, Nepal. Each piece explains the topic in plain language and what it means for businesses adopting AI." },
+  { question: "How is Insights different from the Zunkiree Labs blog?", answer: "The blog holds in-depth guides and tutorials on building AI systems, such as RAG pipelines and agents. Insights covers faster-moving news and trends and explains their practical impact on business decisions." },
+  { question: "Who writes Zunkiree Labs Insights?", answer: "Insights is written by the Zunkiree Labs team, an AI company in Kathmandu, Nepal that builds AI agents, voice agents, RAG search and custom software for businesses worldwide." },
+  { question: "How can I get help applying these AI topics to my business?", answer: "Contact Zunkiree Labs for a free discovery call. The team can review your workflow and recommend where AI agents, voice agents or search would help." }
+] %}
+{% set faqHeading = "About Insights" %}
+{% include "partials/insights-faq.njk" %}
 
 <section class="py-16 md:py-24 bg-gray-50">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

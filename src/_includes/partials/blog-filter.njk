@@ -1,14 +1,23 @@
-{# All / Insights switcher for the blog listing. Rendered only once at least one
-   post carries `category: Insights`, so the listing is unchanged until then.
-   Button styling is the pagination buttons' own (square, border-gray-200,
-   zunkiree-600 for the active one), at a smaller size. #}
+{# All / Blog / Insights switcher for the blog listings. Rendered only once at
+   least one post carries `category: Insights`, so the listing is unchanged
+   until then.
+
+   All      -> /blog/          every post, Insights included
+   Blog     -> /blog/articles/ posts without `category: Insights`
+   Insights -> /blog/insights/ posts with `category: Insights`
+
+   The including page sets `blogFilter` to "all", "articles" or "insights". #}
 {% if collections.insights.length > 0 %}
+{% set blogFilterTabs = [
+  { key: "all", href: "/blog/", label: "All" },
+  { key: "articles", href: "/blog/articles/", label: "Blog" },
+  { key: "insights", href: "/blog/insights/", label: "Insights" }
+] %}
 <nav class="mt-8 inline-flex items-center gap-1 rounded-full bg-gray-100 p-1" aria-label="Blog filter">
-  <a href="/blog/"
-     class="inline-flex items-center rounded-full px-5 py-1.5 text-sm font-medium transition-colors {% if blogFilter == 'all' %}bg-zunkiree-600 text-white shadow-sm{% else %}text-gray-600 hover:text-gray-900{% endif %}"
-     {% if blogFilter == 'all' %}aria-current="page"{% endif %}>Blog</a>
-  <a href="/blog/insights/"
-     class="inline-flex items-center rounded-full px-5 py-1.5 text-sm font-medium transition-colors {% if blogFilter == 'insights' %}bg-zunkiree-600 text-white shadow-sm{% else %}text-gray-600 hover:text-gray-900{% endif %}"
-     {% if blogFilter == 'insights' %}aria-current="page"{% endif %}>Insights</a>
+  {% for tab in blogFilterTabs %}
+  <a href="{{ tab.href }}"
+     class="inline-flex items-center rounded-full px-5 py-1.5 text-sm font-medium transition-colors {% if blogFilter == tab.key %}bg-zunkiree-600 text-white shadow-sm{% else %}text-gray-600 hover:text-gray-900{% endif %}"
+     {% if blogFilter == tab.key %}aria-current="page"{% endif %}>{{ tab.label }}</a>
+  {% endfor %}
 </nav>
 {% endif %}

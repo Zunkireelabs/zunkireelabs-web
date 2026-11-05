@@ -852,6 +852,96 @@
       "source": "/nl/services/web-development/",
       "destination": "/nl/solutions/web-development/",
       "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-frontier",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-frontier/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-data",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-data/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-healthcare",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-healthcare/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-education",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-education/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-business",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-business/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-society",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/ai-society/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/software-future",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/software-future/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/it-market",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/it-market/",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/future-of-industries",
+      "destination": "/blog/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/insights/future-of-industries/",
+      "destination": "/blog/insights/",
+      "permanent": true
     }
   ]
 }
