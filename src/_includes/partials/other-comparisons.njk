@@ -1,17 +1,20 @@
-{# "Other comparisons" cards, shared by both compare layouts.
-   Input: ocItems = [{ href, title, blurb }]. Same card grammar as partials/related-insights.njk. #}
+{# "Other comparisons" cards, shared by both compare layouts and the /compare/ hub.
+   Input: ocItems = [{ href, title, blurb }]. Optional: ocHeading (default "Other comparisons"),
+   ocHideAll (hide the "All comparisons" link, used on the hub itself). Same card grammar as partials/related-insights.njk. #}
 {% if ocItems and ocItems.length %}
 <section class="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8" aria-labelledby="other-comparisons-heading">
   <div class="mx-auto max-w-5xl">
     <div class="mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-3 sm:mb-8">
       <div>
         <span class="mb-2 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">Compare</span>
-        <h2 id="other-comparisons-heading" class="text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">Other comparisons</h2>
+        <h2 id="other-comparisons-heading" class="text-[24px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[28px]">{{ ocHeading or 'Other comparisons' }}</h2>
       </div>
+      {% if not ocHideAll %}
       <a href="/compare/" class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-navy-600 transition-all hover:gap-2.5 hover:text-navy-900">
         All comparisons
         <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6-6 6 6-6 6"/></svg>
       </a>
+      {% endif %}
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3">
       {% for item in ocItems %}

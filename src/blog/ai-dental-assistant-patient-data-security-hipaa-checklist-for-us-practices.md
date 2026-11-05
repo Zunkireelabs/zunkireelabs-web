@@ -1,5 +1,7 @@
 ---
 title: "AI Dental Assistant and Patient Data Security: A HIPAA Checklist for US Practices"
+seoTitle: "AI Dental Assistant HIPAA Checklist for US Practices"
+seoDescription: "A plain-English HIPAA checklist for US practices adopting an AI dental assistant: BAAs, access controls, audit logs and questions for vendors."
 translationKey: "ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices"
 description: "Thinking of an AI dental assistant? A plain-English HIPAA checklist for US practices: business associate agreements, access controls, audit logs and questions for vendors."
 date: 2026-10-12

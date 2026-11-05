@@ -1,5 +1,7 @@
 ---
 title: "ChatGPT Intelligent UI: What Interactive Answers Mean for Business"
+seoTitle: "ChatGPT Intelligent UI: What It Means for Business"
+seoDescription: "OpenAI's Intelligent UI turns ChatGPT answers into buttons, calculators and editable charts. What it is, what is unproven and what it means for you."
 translationKey: "chatgpt-intelligent-ui-gpt-6-what-interactive-answers-mean-for-businesses"
 description: "OpenAI's Intelligent UI turns ChatGPT answers into buttons, calculators and editable charts. What it is, what is unproven and what it means for your own product."
 date: 2026-10-12

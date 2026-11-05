@@ -1,5 +1,6 @@
 ---
 title: "Voice AI in October 2026: Open Transcription and Real-Time Voice Models"
+seoTitle: "Voice AI in October 2026: Open Transcription Models"
 shortLabel: "Voice AI Models"
 translationKey: "nvidia-nemotron-transcribe-salesforce-launa-omni-voice-ai-what-changes"
 description: "NVIDIA released an open transcription model and Salesforce a real-time voice model in October 2026. What each does, what it cannot, and what it means."

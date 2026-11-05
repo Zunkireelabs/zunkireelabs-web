@@ -1,5 +1,7 @@
 ---
 title: "Top 50 IT & Software Companies in Nepal (2026 List)" # SEOAI:TITLE
+seoTitle: "Top 50 IT Companies in Nepal (2026): Full List"
+seoDescription: "The top 50 IT, software and AI companies in Nepal for 2026, grouped by category, with how each was chosen. Plus salaries, jobs and outsourcing answers."
 description: "The top IT, software and AI companies in Nepal for 2026: 50 firms grouped by category, how each was chosen, plus answers on salaries, jobs and outsourcing."
 date: 2026-03-30
 lastUpdated: "2026-10-13"

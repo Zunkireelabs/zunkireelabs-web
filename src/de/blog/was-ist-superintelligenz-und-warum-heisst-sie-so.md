@@ -1,7 +1,7 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Was ist Superintelligenz? Bedeutung, Herkunft und Unterschied zu AGI"
-description: "Superintelligenz einfach erklärt: Bedeutung des Begriffs, Herkunft, Unterschied zu AGI und warum das Thema für Unternehmen wichtig ist, die KI einführen."
+title: "Superintelligenz: Bedeutung, Herkunft und Unterschied zu AGI"
+description: "Was ist Superintelligenz? Bedeutung, Herkunft und Unterschied zu AGI einfach erklärt, plus warum der Begriff für Unternehmen mit KI-Einsatz wichtig ist."
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/was-ist-superintelligenz-und-warum-heisst-sie-so.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"

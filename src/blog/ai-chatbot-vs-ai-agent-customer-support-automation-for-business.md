@@ -1,5 +1,7 @@
 ---
 title: "AI Chatbot vs AI Agent: Customer Support Automation for Your Business"
+seoTitle: "AI Chatbot vs AI Agent for Customer Support"
+seoDescription: "A chatbot answers questions; an AI agent completes tasks. How the two differ for customer support automation and how to choose for your business."
 shortLabel: "AI Chatbot vs AI Agent"
 translationKey: "ai-chatbot-vs-ai-agent-customer-support-automation-for-business"
 description: "An AI chatbot answers questions; an AI agent completes tasks. How the two differ, what each does for customer support automation, and how to choose for your business."

@@ -1,5 +1,7 @@
 ---
 title: "Multi-Tenant SaaS Architecture: Tenancy Models, Billing and Isolation"
+seoTitle: "Multi-Tenant SaaS Architecture: Models and Isolation"
+seoDescription: "How to design a multi-tenant SaaS: shared vs separate databases, tenant isolation, authentication, billing and feature gating, with a checklist."
 shortLabel: "Multi-Tenant SaaS Architecture"
 translationKey: "multi-tenant-saas-architecture-tenancy-models-billing-and-isolation"
 description: "How to design a multi-tenant SaaS: shared vs separate databases, tenant isolation, authentication, billing, feature gating and noisy neighbours, with a checklist."

@@ -1,5 +1,7 @@
 ---
 title: "AI Patient Communication for Clinics: What the Assistant May and May Not Say"
+seoTitle: "AI Patient Communication: What the Assistant May Say"
+seoDescription: "A clinic guide to AI patient communication: the patient journey, what an assistant must never answer, escalation to staff and data handling."
 shortLabel: "AI Patient Communication"
 translationKey: "ai-patient-communication-clinic-guide-what-ai-may-and-may-not-say"
 description: "A clinic guide to AI patient communication: the patient journey from first message to follow-up, what an assistant must never answer, escalation to staff and data handling."

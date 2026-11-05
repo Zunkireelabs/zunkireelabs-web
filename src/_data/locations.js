@@ -10,8 +10,8 @@ const cities = [
     isHeadquarters: false,
 
     // SEO metadata
-    title: "AI Development Company in Kathmandu | Zunkiree Labs",
-    description: "Explore Zunkiree Labs in Kathmandu for AI development services, including custom AI systems, intelligent chatbots, and data solutions tailored for businesses.",
+    title: "AI Company in Kathmandu, Nepal | Zunkiree Labs",
+    description: "Zunkiree Labs is an AI company in Kathmandu, Nepal. We build AI agents, chatbots, RAG search and custom software for businesses. Free consultation.",
 
     // Location content
     intro: "Zunkiree Labs serves Kathmandu, Nepal's capital and technology hub, with our team headquartered nearby in Sanepa, Lalitpur. Our AI engineers and software developers build production-grade AI systems for businesses across Nepal and globally.",

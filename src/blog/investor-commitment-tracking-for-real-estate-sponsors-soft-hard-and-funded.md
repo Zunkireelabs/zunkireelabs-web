@@ -1,5 +1,7 @@
 ---
 title: "Investor Commitment Tracking: Soft, Hard and Funded for CRE Sponsors"
+seoTitle: "Investor Commitment Tracking: Soft, Hard, Funded"
+seoDescription: "How real estate sponsors can track investor commitments: define soft, hard and funded, reconcile to funds, manage changes and keep one number."
 shortLabel: "Investor Commitment Tracking"
 translationKey: "investor-commitment-tracking-for-real-estate-sponsors-soft-hard-and-funded"
 description: "How real estate sponsors can track investor commitments accurately: define soft, hard and funded, reconcile to funds, manage changes and keep one trusted number."

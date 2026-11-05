@@ -1,5 +1,6 @@
 ---
 title: "AI in Education Research: Why Big Claims Rest on Weak Meta-Analyses"
+seoTitle: "AI in Education Research: Weak Meta-Analyses"
 shortLabel: "AI Education Research Audit"
 translationKey: "ai-in-education-research-audit-why-the-meta-analyses-cannot-be-trusted-yet"
 description: "A November 2026 audit says 14 meta-analyses claiming AI improves learning pool mismatched studies. What it found and how schools should judge AI claims."

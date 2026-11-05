@@ -1,0 +1,82 @@
+---
+layout: base.njk
+eleventyComputed:
+  title: >-
+    {{ ("Blog | AI Development Guides & Tutorials | Zunkiree Labs" if pagination.pageNumber == 0 else "Blog, Page " + (pagination.pageNumber + 1) + " | Zunkiree Labs") | safe }}
+  description: >-
+    {{ "In-depth guides on AI development, RAG pipelines, machine learning and building production AI systems, from the team at Zunkiree Labs." if pagination.pageNumber == 0 else "Page " + (pagination.pageNumber + 1) + ". In-depth guides on AI development, RAG pipelines, machine learning and building production AI systems, from the team at Zunkiree Labs." }}
+eleventyExcludeFromCollections: true
+hideChrome: true
+pagination:
+  data: collections.articles
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "{{ '/blog/articles/' if pagination.pageNumber == 0 else '/blog/articles/page/' + (pagination.pageNumber + 1) + '/' }}"
+---
+
+{# =====================================================
+   BLOG (ARTICLES ONLY) LISTING
+   The "Blog" tab of the All | Blog | Insights pill row: every
+   post WITHOUT `category: Insights`. /blog/ itself now carries
+   the combined feed, so this page is what "only the blog posts"
+   resolves to. Same chrome/markup as src/blog/index.njk and
+   partials/insights-listing.njk — navbar-v2 + footer-v2 directly
+   under hideChrome, pt-32/36/44 to clear the fixed 72px bar.
+   ===================================================== #}
+{% include "partials/navbar-v2.njk" %}
+
+<section class="pt-32 pb-12 sm:pt-36 md:pb-16 lg:pt-44 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
+      <a href="/" class="text-zunkiree-600 hover:underline">Home</a>
+      <span class="text-warm-400">/</span>
+      <a href="/blog/" class="text-zunkiree-600 hover:underline">Blog</a>
+      <span class="text-warm-400">/</span>
+      <span class="text-warm-600">Articles</span>
+    </nav>
+
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-normal text-gray-900 tracking-tight leading-tight mb-6">
+      Blog
+    </h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+      In-depth guides on AI development, RAG systems and building production-grade AI infrastructure. From the team at Zunkiree Labs.
+    </p>
+
+    {% set blogFilter = "articles" %}
+    {% include "partials/blog-filter.njk" %}
+  </div>
+</section>
+
+<section class="pb-16 md:pb-24 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {% include "partials/blog-grid.njk" %}
+
+  </div>
+</section>
+
+{% set faqItems = [
+  { question: "What topics does the Zunkiree Labs blog cover?", answer: "The Zunkiree Labs blog publishes in-depth guides on AI development, including RAG pipelines, AI agents, voice agents, machine learning and building production AI systems, plus industry guides for education, agencies, healthcare and real estate." },
+  { question: "Who is the Zunkiree Labs blog for?", answer: "It is written for founders, operators and technical teams evaluating or building AI systems, and for businesses in Nepal and worldwide that want practical, jargon-light explanations." },
+  { question: "How often is the blog updated?", answer: "New articles are published regularly, and each article shows its publication and last-updated dates so you can judge how current it is." },
+  { question: "Can Zunkiree Labs build the systems these guides describe?", answer: "Yes. Zunkiree Labs is an AI company in Kathmandu, Nepal that builds AI agents, voice agents, RAG search and custom software. Book a free discovery call from the contact page to discuss your project." }
+] %}
+{% set faqHeading = "About the blog" %}
+{% include "partials/insights-faq.njk" %}
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-normal text-gray-900 mb-4">
+      Want to build with AI?
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+      Let's discuss how AI can transform your business operations.
+    </p>
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-4 bg-zunkiree-600 text-white font-medium hover:bg-zunkiree-700 transition-colors">
+      Schedule a Discovery Call
+    </a>
+  </div>
+</section>
+
+{% include "partials/footer-v2.njk" %}

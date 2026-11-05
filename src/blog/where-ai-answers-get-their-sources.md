@@ -1,5 +1,6 @@
 ---
 title: "Where AI Answers Get Their Sources, and Why Listings Matter as Much as Your Site"
+seoTitle: "Where AI Answers Get Their Sources: Listings Matter"
 shortLabel: "Where AI Answers Get Sources"
 translationKey: "where-ai-answers-get-their-sources"
 description: "Yext studied 17.2 million AI citations. Brand-owned sites supplied 46.89% and managed third-party listings 43.71%. What that means for AI visibility."

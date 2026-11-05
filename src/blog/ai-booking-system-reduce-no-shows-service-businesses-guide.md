@@ -1,5 +1,7 @@
 ---
 title: "AI Booking System for Service Businesses: How to Reduce No-Shows and Empty Slots"
+seoTitle: "AI Booking System: Reduce No-Shows and Empty Slots"
+seoDescription: "How an AI booking system handles real availability, double-bookings, reminders and cancelled slots for salons, clinics and repair teams."
 shortLabel: "AI Booking System"
 translationKey: "ai-booking-system-reduce-no-shows-service-businesses-guide"
 description: "How an AI booking system handles real availability, double-bookings, reminders and cancelled slots for salons, clinics, cleaners and repair teams, and how to measure it."

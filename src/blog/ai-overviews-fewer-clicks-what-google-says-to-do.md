@@ -1,5 +1,7 @@
 ---
 title: "AI Overviews and Fewer Clicks: What Google Actually Says You Need to Do"
+seoTitle: "AI Overviews and Fewer Clicks: What Google Says to Do"
+seoDescription: "Google says no extra requirements apply to appear in AI Overviews or AI Mode. What its documentation says and how to measure the effect in Search Console."
 shortLabel: "AI Overviews and Clicks"
 translationKey: "ai-overviews-fewer-clicks-what-google-says-to-do"
 description: "Google says there are no extra requirements to appear in AI Overviews or AI Mode. What its documentation states, how to measure the effect in Search Console, and what to do."

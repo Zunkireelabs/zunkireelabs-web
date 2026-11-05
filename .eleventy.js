@@ -295,9 +295,13 @@ export default function (eleventyConfig) {
   });
 
   // Blog posts tagged `category: Insights` (trend explainers) — drives the
-  // Insights filter on /blog/ and the /blog/insights/ listing. Empty until the
-  // first such post exists; both surfaces render nothing in that case.
-  // Regular blog posts only: Insights live in their own listing (/blog/insights/)
+  // /blog/insights/ listing and the All | Blog | Insights pill row. Empty until
+  // the first such post exists; those surfaces render nothing in that case.
+  //
+  // Listing split: /blog/ paginates `collections.blog` (every English post,
+  // Insights included), /blog/articles/ paginates `articles` (Insights removed)
+  // and /blog/insights/ paginates `insights`. `articles` is also what
+  // blog-post.njk feeds to `relatedByTopic`, so it stays Insights-free.
   eleventyConfig.addCollection("articles", (collectionApi) =>
     collectionApi.getFilteredByTag("blog").filter((p) => p.data.category !== "Insights")
   );
@@ -306,16 +310,28 @@ export default function (eleventyConfig) {
     collectionApi.getFilteredByTag("blog").filter((p) => p.data.category === "Insights")
   );
 
-  // Pillars that have at least one Insights post, with counts, for the chip
-  // row on /blog/insights/ (a pillar with no posts shows no chip).
-  eleventyConfig.addCollection("insightsPillars", (collectionApi) => {
-    const posts = collectionApi.getFilteredByTag("blog").filter((p) => p.data.category === "Insights");
-    return pillars
-      .map((pl) => {
-        const own = posts.filter((p) => p.data.pillar === pl.slug).reverse();
-        return { ...pl, count: own.length, posts: own };
-      })
-      .filter((pl) => pl.count > 0);
+  // Listing pages (/blog/, /blog/articles/, /blog/insights/ and their /page/N/
+  // pages) must set eleventyExcludeFromCollections (a paginated page can't sit
+  // in the collection it paginates), so they never reach collections.all and
+  // sitemap.njk can't see them. Compute their URLs here instead. Keep `size`
+  // in step with the pagination size in src/blog/{index,articles,insights}.njk.
+  eleventyConfig.addCollection("sitemapListings", (collectionApi) => {
+    const posts = collectionApi.getFilteredByTag("blog");
+    const sets = [
+      { base: "/blog/", size: 10, items: posts },
+      { base: "/blog/articles/", size: 10, items: posts.filter((p) => p.data.category !== "Insights") },
+      { base: "/blog/insights/", size: 24, items: posts.filter((p) => p.data.category === "Insights") },
+    ];
+    const out = [];
+    for (const { base, size, items } of sets) {
+      if (!items.length) continue;
+      const date = new Date(Math.max(...items.map((p) => +p.date)));
+      const pages = Math.ceil(items.length / size);
+      for (let n = 1; n <= pages; n++) {
+        out.push({ url: n === 1 ? base : `${base}page/${n}/`, date, first: n === 1, root: base === "/blog/" });
+      }
+    }
+    return out;
   });
 
   // `{{ pillar | pillarLabel(lang) }}` -> display label ("" for an unknown slug).

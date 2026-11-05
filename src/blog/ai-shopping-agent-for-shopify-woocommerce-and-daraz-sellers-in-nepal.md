@@ -1,5 +1,6 @@
 ---
 title: "AI Shopping Agent for Shopify, WooCommerce and Daraz Sellers in Nepal"
+seoTitle: "AI Shopping Agent for Shopify and Daraz Sellers, Nepal"
 shortLabel: "AI Shopping Agent for Nepal"
 translationKey: "ai-shopping-agent-for-shopify-woocommerce-and-daraz-sellers-in-nepal"
 description: "How an AI shopping agent works for Shopify and WooCommerce stores in Nepal: catalogue grounding, cart actions, eSewa, Khalti and Fonepay, and human handoff."

@@ -1,5 +1,6 @@
 ---
 title: "Visa Tracking for Education Consultancies: Stages, Reminders and Handoffs"
+seoTitle: "Visa Tracking for Education Consultancies"
 shortLabel: "Visa Tracking for Consultancies"
 translationKey: "visa-tracking-for-education-consultancies-stages-reminders-and-handoffs"
 description: "How education consultancies can track student visa cases: stages to model, owners, reminders, document links, risk flags and clean handoffs to enrollment."

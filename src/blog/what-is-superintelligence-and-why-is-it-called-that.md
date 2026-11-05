@@ -1,5 +1,6 @@
 ---
 title: "What Is Superintelligence? Meaning, Origin and How It Differs From AGI"
+seoTitle: "What Is Superintelligence? Meaning and AGI Difference"
 shortLabel: "SuperIntelligence (SI)"
 translationKey: "what-is-superintelligence-and-why-is-it-called-that"
 description: "Superintelligence explained in plain language: what the term means, where it comes from, how it differs from AGI, and why it matters to businesses adopting AI."

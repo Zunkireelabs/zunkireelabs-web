@@ -1,5 +1,6 @@
 ---
 title: "Cloudflare's MCP Server in October 2026: Step-Up Auth, Events and Skills"
+seoTitle: "Cloudflare MCP Server, October 2026: What Changed"
 shortLabel: "Cloudflare MCP Updates"
 translationKey: "cloudflare-mcp-october-2026-step-up-authorization-events-skills"
 description: "Cloudflare added step-up authorization, event alerts and skills to its MCP server in October 2026 and retired /sse. What changed and what to check."

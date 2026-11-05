@@ -1,5 +1,7 @@
 ---
 title: "OpenAI Models Come to Google Cloud: What Multi-Cloud AI Means for Buyers"
+seoTitle: "OpenAI Models on Google Cloud: Multi-Cloud AI"
+seoDescription: "OpenAI announced on 21 October 2026 that its models and Codex are coming to Google Cloud, with Microsoft still primary. What is confirmed and what it means."
 shortLabel: "OpenAI on Google Cloud"
 translationKey: "openai-models-on-google-cloud-what-multi-cloud-ai-means"
 description: "OpenAI announced on 21 October 2026 that its models and Codex are coming to Google Cloud, with Microsoft still its primary cloud partner. What is confirmed and what it means."

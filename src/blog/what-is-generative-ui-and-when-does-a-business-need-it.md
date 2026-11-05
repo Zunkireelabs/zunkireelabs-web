@@ -1,5 +1,7 @@
 ---
 title: "What Is Generative UI? How It Differs From Chatbots and When You Need It"
+seoTitle: "What Is Generative UI? When a Business Needs It"
+seoDescription: "Generative UI is an interface a model assembles at runtime from your own components. How it differs from chatbots and static screens, and when you need it."
 shortLabel: "What Is Generative UI"
 translationKey: "what-is-generative-ui-and-when-does-a-business-need-it"
 description: "Generative UI is an interface a model assembles at runtime from your own components. How it differs from a chatbot and static screens, and when a business needs it."

@@ -1,5 +1,6 @@
 ---
 title: "What Is llms.txt? What It Does and Whether Your Site Needs One"
+seoTitle: "What Is llms.txt? Does Your Site Need One?"
 shortLabel: "What Is llms.txt"
 translationKey: "what-is-llms-txt-and-do-you-need-one"
 description: "llms.txt is a proposed file that points AI agents to your best content. What the proposal says, what Google says, and what no provider has confirmed."

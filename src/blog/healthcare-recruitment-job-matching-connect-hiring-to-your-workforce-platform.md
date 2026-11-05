@@ -1,5 +1,7 @@
 ---
 title: "Healthcare Recruitment and Job Matching: Connect Hiring to Rostering"
+seoTitle: "Healthcare Recruitment: Connect Hiring to Rostering"
+seoDescription: "How healthcare providers can fix disconnected recruitment: match candidates to roles, pre-check credentials and hand onboarding to rostering."
 shortLabel: "Healthcare Recruitment Matching"
 translationKey: "healthcare-recruitment-job-matching-connect-hiring-to-your-workforce-platform"
 description: "How healthcare providers can fix disconnected recruitment: match candidates to roles, pre-check credentials and hand onboarding to rostering without re-entry."

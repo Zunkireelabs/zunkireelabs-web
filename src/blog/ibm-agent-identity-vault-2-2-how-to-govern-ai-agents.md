@@ -1,5 +1,6 @@
 ---
 title: "IBM Agent Identity: How to Give Every AI Agent Its Own Credentials"
+seoTitle: "IBM Agent Identity: Credentials for Every AI Agent"
 shortLabel: "IBM Agent Identity"
 translationKey: "ibm-agent-identity-vault-2-2-how-to-govern-ai-agents"
 description: "IBM launched Agent Identity and Vault 2.2 on 26-27 October 2026 to give AI agents their own accounts, short-lived credentials and a kill switch."
