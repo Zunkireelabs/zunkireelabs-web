@@ -4,6 +4,7 @@ description: "Explore the concept of Agentic Search, its implications for AI dev
 date: "2026-07-14"
 featuredImage: /assets/images/blog/agentic-search-queries.webp
 featuredImageAlt: Abstract branching network of glowing paths extending from a central node representing autonomous agentic search
+excludeFromSitemap: true
 ---
 
 ## Introduction to Agentic Search
