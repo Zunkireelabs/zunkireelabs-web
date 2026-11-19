@@ -4,6 +4,7 @@ description: "The trends and predictions shaping AI in 2026, including emerging 
 date: "2026-07-19"
 featuredImage: /assets/images/blog/ai-trends-2026.webp
 featuredImageAlt: Abstract upward trend line across layered geometric planes representing AI forecasting
+excludeFromSitemap: true
 ---
 
 ## Introduction
