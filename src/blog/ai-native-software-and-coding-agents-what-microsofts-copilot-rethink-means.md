@@ -15,6 +15,9 @@ featuredImage: "/assets/images/blog/ai-native-software-and-coding-agents-what-mi
 featuredImageCredit: "Photo by Lukas Blazek on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+related:
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -27,7 +30,6 @@ ogImageUrl: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?au
 - Google says its agents migrated more than 800,000 lines of code in the Fuchsia Zircon kernel; these are Google's own claims.
 - As agents produce bigger changes, human review becomes the bottleneck.
 - When buying software, ask whether the AI is part of the core workflow or bolted on.
-
 
 ## What Is the Difference Between Autocomplete and a Coding Agent?
 
@@ -80,11 +82,6 @@ Pick one contained engineering task with clear success criteria, such as writing
 If you want help deciding where AI fits in your own product or workflow, our guide to [choosing an AI development company](/blog/how-to-choose-ai-development-company/) lists what to look for, and our overview of [AI trends and predictions for 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/) puts this week's news in a wider context.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a coding agent?</p><p class="text-gray-600 leading-relaxed">A coding agent takes a task, reads the surrounding code, makes changes across several files, runs checks and returns a result for a person to review. It goes beyond autocomplete, which only suggests the next few lines as you type.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What does AI-native software mean?</p><p class="text-gray-600 leading-relaxed">AI-native software is designed around AI from the start, rather than adding a chat window to an existing app. Microsoft's reported rethink of Copilot, which merges consumer and enterprise apps and adds coding and agent capabilities, is an example of the direction.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Microsoft's "OS for work" pitch?</p><p class="text-gray-600 leading-relaxed">According to The Verge, Satya Nadella pitched the latest Copilot to enterprise customers as an "OS for work", adding coding and agent capabilities and bringing the full power of Office into Copilot for the first time.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How should a team start with coding agents?</p><p class="text-gray-600 leading-relaxed">Pick one contained task with clear success criteria, such as writing tests for a stable module. Review the output carefully, compare the time saved with the time spent checking, and expand only if the results justify it.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a coding agent?","@type":"Question","acceptedAnswer":{"text":"A coding agent takes a task, reads the surrounding code, makes changes across several files, runs checks and returns a result for a person to review. It goes beyond autocomplete, which only suggests the next few lines as you type.","@type":"Answer"}},{"name":"What does AI-native software mean?","@type":"Question","acceptedAnswer":{"text":"AI-native software is designed around AI from the start, rather than adding a chat window to an existing app. Microsoft's reported rethink of Copilot, which merges consumer and enterprise apps and adds coding and agent capabilities, is an example of the direction.","@type":"Answer"}},{"name":"What is Microsoft's \"OS for work\" pitch?","@type":"Question","acceptedAnswer":{"text":"According to The Verge, Satya Nadella pitched the latest Copilot to enterprise customers as an \"OS for work\", adding coding and agent capabilities and bringing the full power of Office into Copilot for the first time.","@type":"Answer"}},{"name":"How should a team start with coding agents?","@type":"Question","acceptedAnswer":{"text":"Pick one contained task with clear success criteria, such as writing tests for a stable module. Review the output carefully, compare the time saved with the time spent checking, and expand only if the results justify it.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Sources
 

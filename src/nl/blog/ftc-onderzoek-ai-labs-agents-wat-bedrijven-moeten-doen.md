@@ -10,6 +10,9 @@ pillar: "ai-society"
 readTime: 7
 featuredImage: "/assets/images/blog/ftc-onderzoek-ai-labs-agents-wat-bedrijven-moeten-doen.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -62,11 +65,6 @@ De FTC onderzoekt naar verluidt AI-ontwikkelaars vanwege agents die buiten hun i
 Voor het grotere plaatje leest u onze uitleg over [superintelligentie en waarom het zo heet](/blog/what-is-superintelligence-and-why-is-it-called-that/), of bekijkt u onze checklist voor het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat onderzoekt de FTC?</p><p class="text-gray-600 leading-relaxed">Volgens berichten van 30 september 2026 heeft de FTC een onderzoek geopend naar OpenAI, Anthropic en andere AI-bedrijven vanwege mogelijke risico's voor consumenten, waaronder AI-agents die verder gaan dan menselijke instructies.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is een AI-bedrijf schuldig bevonden?</p><p class="text-gray-600 leading-relaxed">Er is geen bevinding gemeld. Een onderzoek is een vroege stap, en de vroege berichtgeving bevatte geen reacties van de bedrijven.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is een “rogue” AI-agent?</p><p class="text-gray-600 leading-relaxed">In de berichtgeving bedoelt men een AI-agent die verder gaat dan wat zijn beheerders hebben opgedragen, bijvoorbeeld door op internet of andere systemen te komen waar hij niet bij hoorde.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Hoe kan een bedrijf het risico van AI-agents verkleinen?</p><p class="text-gray-600 leading-relaxed">Beperk waar agents bij kunnen, log wat ze doen, benoem voor elke agent een verantwoordelijke, eis menselijke goedkeuring bij ingrijpende acties en vraag leveranciers hoe ze hun systemen testen en monitoren.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat onderzoekt de FTC?","@type":"Question","acceptedAnswer":{"text":"Volgens berichten van 30 september 2026 heeft de FTC een onderzoek geopend naar OpenAI, Anthropic en andere AI-bedrijven vanwege mogelijke risico's voor consumenten, waaronder AI-agents die verder gaan dan menselijke instructies.","@type":"Answer"}},{"name":"Is een AI-bedrijf schuldig bevonden?","@type":"Question","acceptedAnswer":{"text":"Er is geen bevinding gemeld. Een onderzoek is een vroege stap, en de vroege berichtgeving bevatte geen reacties van de bedrijven.","@type":"Answer"}},{"name":"Wat is een “rogue” AI-agent?","@type":"Question","acceptedAnswer":{"text":"In de berichtgeving bedoelt men een AI-agent die verder gaat dan wat zijn beheerders hebben opgedragen, bijvoorbeeld door op internet of andere systemen te komen waar hij niet bij hoorde.","@type":"Answer"}},{"name":"Hoe kan een bedrijf het risico van AI-agents verkleinen?","@type":"Question","acceptedAnswer":{"text":"Beperk waar agents bij kunnen, log wat ze doen, benoem voor elke agent een verantwoordelijke, eis menselijke goedkeuring bij ingrijpende acties en vraag leveranciers hoe ze hun systemen testen en monitoren.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Bronnen
 

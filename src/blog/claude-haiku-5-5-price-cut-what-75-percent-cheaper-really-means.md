@@ -13,6 +13,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/claude-haiku-5-5-price-cut-what-75-percent-cheaper-really-means.svg"
 ogType: article
+related:
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -84,32 +87,7 @@ VKTR lists several changes that can break existing code:
 
 A lower price list is good news for anyone running AI at volume, and it widens the set of tasks where AI makes economic sense. But "75% cheaper" is an average from the vendor, not a promise about your bill. Measure it on your own work.
 
-## Frequently Asked Questions
-
-### How much does Claude Haiku 5.5 cost?
-
-For prompts up to 100,000 tokens it costs $0.10 per million input tokens and $0.50 per million output tokens. For longer prompts it costs $0.50 and $2.50.
-
-### Is Claude Haiku 5.5 really 75% cheaper than Haiku 4.5?
-
-Anthropic says it costs around 75% less to run on average. The real saving depends on your prompt lengths and on a tokenizer that produces about 30% more tokens for the same text.
-
-### What is Claude Haiku 5.5 good for?
-
-Anthropic says high-volume, latency-sensitive work such as classification, routing, extraction and subagent tasks.
-
-### Do I need to change my code to use it?
-
-Possibly. Reports note that thinking is on by default, some sampling settings return errors and responses can begin with a thinking block, so test before switching.
-
-### Where is Claude Haiku 5.5 available?
-
-On the Claude API, and through AWS, Google Cloud and Microsoft Azure, according to the reports.
-
-## Related Insights
-
-- [Gemini 4 Argon Release: What Was Claimed, What Is Unproven](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [AI Coding Agents: What Microsoft's Copilot Rethink Means](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
+<!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How much does Claude Haiku 5.5 cost?</p><p class="text-gray-600 leading-relaxed">For prompts up to 100,000 tokens it costs $0.10 per million input tokens and $0.50 per million output tokens. For longer prompts it costs $0.50 and $2.50.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Claude Haiku 5.5 really 75% cheaper than Haiku 4.5?</p><p class="text-gray-600 leading-relaxed">Anthropic says it costs around 75% less to run on average. The real saving depends on your prompt lengths and on a tokenizer that produces about 30% more tokens for the same text.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Claude Haiku 5.5 good for?</p><p class="text-gray-600 leading-relaxed">Anthropic says high-volume, latency-sensitive work such as classification, routing, extraction and subagent tasks.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do I need to change my code to use it?</p><p class="text-gray-600 leading-relaxed">Possibly. Reports note that thinking is on by default, some sampling settings return errors and responses can begin with a thinking block, so test before switching.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Where is Claude Haiku 5.5 available?</p><p class="text-gray-600 leading-relaxed">On the Claude API, and through AWS, Google Cloud and Microsoft Azure, according to the reports.</p></div></div></div><!-- SEOAI:FAQ:END -->
 
 ## Sources
 

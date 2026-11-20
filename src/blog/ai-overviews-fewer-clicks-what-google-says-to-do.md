@@ -17,6 +17,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/ai-overviews-fewer-clicks-what-google-says-to-do.svg"
 ogType: article
+related:
+  - /blog/where-ai-answers-get-their-sources/
+  - /blog/google-ai-overviews-antitrust-ruling-what-it-means-for-ai-search-and-geo/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -80,11 +83,6 @@ If you want an audit of how your pages appear in AI answers, see our [answer eng
 Google's documentation says getting into AI Overviews takes no special tricks beyond solid, indexable, snippet-eligible pages. The practical work is to get the basics right, measure what AI features do to your own clicks in Search Console, and give readers reasons to click that a summary cannot.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Do I need special markup to appear in AI Overviews?</p><p class="text-gray-600 leading-relaxed">No. Google says there are no additional requirements or special optimisations for AI Overviews or AI Mode, and no special schema.org structured data is needed.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do I see AI Overviews traffic in Search Console?</p><p class="text-gray-600 leading-relaxed">It is included in the Performance report under the "Web" search type, not reported separately.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do AI Overviews reduce clicks?</p><p class="text-gray-600 leading-relaxed">Some studies report lower click-through when an Overview appears, but the figures vary and are secondary. Compare your own pages in Search Console.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should I add an llms.txt file?</p><p class="text-gray-600 leading-relaxed">Google says you do not need AI text files for its AI features. Other AI crawlers may treat such files differently, and the evidence on their value is still thin, so treat it as optional.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can I stop my content appearing in AI Overviews?</p><p class="text-gray-600 leading-relaxed">You can limit displayed content with <code>nosnippet</code>, <code>data-nosnippet</code>, <code>max-snippet</code> or <code>noindex</code>. Be aware these also affect normal search snippets.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Do I need special markup to appear in AI Overviews?","@type":"Question","acceptedAnswer":{"text":"No. Google says there are no additional requirements or special optimisations for AI Overviews or AI Mode, and no special schema.org structured data is needed.","@type":"Answer"}},{"name":"How do I see AI Overviews traffic in Search Console?","@type":"Question","acceptedAnswer":{"text":"It is included in the Performance report under the \"Web\" search type, not reported separately.","@type":"Answer"}},{"name":"Do AI Overviews reduce clicks?","@type":"Question","acceptedAnswer":{"text":"Some studies report lower click-through when an Overview appears, but the figures vary and are secondary. Compare your own pages in Search Console.","@type":"Answer"}},{"name":"Should I add an llms.txt file?","@type":"Question","acceptedAnswer":{"text":"Google says you do not need AI text files for its AI features. Other AI crawlers may treat such files differently, and the evidence on their value is still thin, so treat it as optional.","@type":"Answer"}},{"name":"Can I stop my content appearing in AI Overviews?","@type":"Question","acceptedAnswer":{"text":"You can limit displayed content with nosnippet, data-nosnippet, max-snippet or noindex. Be aware these also affect normal search snippets.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Where AI Answers Get Their Sources, and Why Listings Matter as Much as Your Site](/blog/where-ai-answers-get-their-sources/)
-- [Google AI Overviews Antitrust Ruling: What It Means for GEO](/blog/google-ai-overviews-antitrust-ruling-what-it-means-for-ai-search-and-geo/)
 
 ## Sources
 

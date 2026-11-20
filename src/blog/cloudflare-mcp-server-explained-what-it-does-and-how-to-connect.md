@@ -16,6 +16,11 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect.svg"
 ogType: article
+related:
+  - /blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/
+  - /blog/owasp-mcp-top-10-explained-for-business-owners/
+  - /blog/mcp-specification-security-what-changed/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -84,13 +89,6 @@ If you want agents connected to your own systems in a controlled way, see our wh
 Cloudflare's MCP server lets an AI agent look things up in the documentation and work with your account through one connection. Connect the main API server at `https://mcp.cloudflare.com/mcp`, grant the least access that works, and keep a person approving production changes.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is Cloudflare's MCP server?</p><p class="text-gray-600 leading-relaxed">It is a remote server Cloudflare runs so that an AI assistant can work with your Cloudflare account and its documentation through the Model Context Protocol. The recommended one is the Cloudflare API MCP server at https://mcp.cloudflare.com/mcp, which covers the whole Cloudflare API.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What can an AI agent do with it?</p><p class="text-gray-600 leading-relaxed">Through search() it can look up Cloudflare API endpoints, through execute() it can call them, and through docs() it can search Cloudflare's documentation. What it may actually change depends on the permissions you approve when you connect.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do I connect to it?</p><p class="text-gray-600 leading-relaxed">Add the server URL to your MCP client's configuration, then sign in through Cloudflare's OAuth screen and choose which permissions to grant. For automation such as CI/CD, Cloudflare says you can pass an API token as a bearer token instead.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is it safe to give an AI agent access to my Cloudflare account?</p><p class="text-gray-600 leading-relaxed">Only with limits. Grant the smallest set of scopes that covers the task, start read-only where you can, and keep a person approving anything that changes production. Cloudflare's step-up authorization lets an agent ask for more access later instead of holding it from the start.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Cloudflare's MCP server?","@type":"Question","acceptedAnswer":{"text":"It is a remote server Cloudflare runs so that an AI assistant can work with your Cloudflare account and its documentation through the Model Context Protocol. The recommended one is the Cloudflare API MCP server at https://mcp.cloudflare.com/mcp, which covers the whole Cloudflare API.","@type":"Answer"}},{"name":"What can an AI agent do with it?","@type":"Question","acceptedAnswer":{"text":"Through search() it can look up Cloudflare API endpoints, through execute() it can call them, and through docs() it can search Cloudflare's documentation. What it may actually change depends on the permissions you approve when you connect.","@type":"Answer"}},{"name":"How do I connect to it?","@type":"Question","acceptedAnswer":{"text":"Add the server URL to your MCP client's configuration, then sign in through Cloudflare's OAuth screen and choose which permissions to grant. For automation such as CI/CD, Cloudflare says you can pass an API token as a bearer token instead.","@type":"Answer"}},{"name":"Is it safe to give an AI agent access to my Cloudflare account?","@type":"Question","acceptedAnswer":{"text":"Only with limits. Grant the smallest set of scopes that covers the task, start read-only where you can, and keep a person approving anything that changes production. Cloudflare's step-up authorization lets an agent ask for more access later instead of holding it from the start.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Cloudflare's MCP Server in October 2026: Step-Up Auth, Events and Skills](/blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills/)
-- [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

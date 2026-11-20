@@ -16,6 +16,12 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/cloudflare-mcp-october-2026-step-up-authorization-events-skills.svg"
 ogType: article
+related:
+  - /blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/
+  - /blog/mcp-specification-security-what-changed/
+  - /blog/owasp-mcp-top-10-explained-for-business-owners/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/microsoft-execution-containers-agent-containment-explained/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -83,14 +89,6 @@ If you are planning agents that connect to your own systems, see our whitepaper 
 Cloudflare's October 2026 MCP updates add skills, push alerts and step-up authorization, and retire `/sse`. If you use its MCP servers, move any `/sse` client to `/mcp`, start with minimal scopes, and verify event signatures. Treat the details as vendor-reported until you have tested them in your own setup.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What did Cloudflare change in its MCP servers in October 2026?</p><p class="text-gray-600 leading-relaxed">Four things, according to Cloudflare's changelog: the API MCP server began serving Cloudflare skills through the Skills over MCP extension (October 10), started sending Workers Issues as MCP Events (October 13), added step-up authorization (October 19), and Cloudflare's product-specific MCP servers stopped serving the /sse endpoint in favour of /mcp (October 22).</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is step-up authorization in MCP?</p><p class="text-gray-600 leading-relaxed">It lets a user grant only the scopes a task needs when connecting, and approve more later. If a tool call needs a scope that has not been granted, the server returns an insufficient_scope challenge naming it, and the MCP client asks the user to approve it. Scopes already granted are kept.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do I need to do anything about the /sse change?</p><p class="text-gray-600 leading-relaxed">Only if a client is configured with an /sse URL. Cloudflare says such requests now return 410 Gone with the server's /mcp URL, and the fix is to change the client to /mcp. Connections already on /mcp are not affected, and anyone who signed in through /sse will be asked to sign in again.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Code Mode in Cloudflare's MCP server?</p><p class="text-gray-600 leading-relaxed">It is an approach Cloudflare described in February 2026 in which the server exposes two tools, search() and execute(), and the agent writes code against the API instead of calling thousands of separate tools. Cloudflare says this takes about 1,000 tokens, against about 1.17 million for an equivalent server without it.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What did Cloudflare change in its MCP servers in October 2026?","@type":"Question","acceptedAnswer":{"text":"Four things, according to Cloudflare's changelog: the API MCP server began serving Cloudflare skills through the Skills over MCP extension (October 10), started sending Workers Issues as MCP Events (October 13), added step-up authorization (October 19), and Cloudflare's product-specific MCP servers stopped serving the /sse endpoint in favour of /mcp (October 22).","@type":"Answer"}},{"name":"What is step-up authorization in MCP?","@type":"Question","acceptedAnswer":{"text":"It lets a user grant only the scopes a task needs when connecting, and approve more later. If a tool call needs a scope that has not been granted, the server returns an insufficient_scope challenge naming it, and the MCP client asks the user to approve it. Scopes already granted are kept.","@type":"Answer"}},{"name":"Do I need to do anything about the /sse change?","@type":"Question","acceptedAnswer":{"text":"Only if a client is configured with an /sse URL. Cloudflare says such requests now return 410 Gone with the server's /mcp URL, and the fix is to change the client to /mcp. Connections already on /mcp are not affected, and anyone who signed in through /sse will be asked to sign in again.","@type":"Answer"}},{"name":"What is Code Mode in Cloudflare's MCP server?","@type":"Question","acceptedAnswer":{"text":"It is an approach Cloudflare described in February 2026 in which the server exposes two tools, search() and execute(), and the agent writes code against the API instead of calling thousands of separate tools. Cloudflare says this takes about 1,000 tokens, against about 1.17 million for an equivalent server without it.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Cloudflare MCP Server Explained: What It Does and How to Connect](/blog/cloudflare-mcp-server-explained-what-it-does-and-how-to-connect/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
-- [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Microsoft Execution Containers: How to Contain an AI Agent](/blog/microsoft-execution-containers-agent-containment-explained/)
 
 ## Sources
 

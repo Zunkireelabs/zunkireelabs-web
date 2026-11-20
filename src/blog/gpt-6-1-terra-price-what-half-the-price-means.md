@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/gpt-6-1-terra-price-what-half-the-price-means.svg"
 ogType: article
+related:
+  - /blog/claude-haiku-5-5-price-cut-what-75-percent-cheaper-really-means/
+  - /blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/
+  - /blog/openai-models-on-google-cloud-what-multi-cloud-ai-means/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -71,12 +75,6 @@ GPT-6.1 Terra is an aggressive price point from OpenAI, with pricing confirmed o
 To design an AI system that can switch models without a rebuild, see our [AI development](/solutions/ai-development/) service.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How much does GPT-6.1 Terra cost?</p><p class="text-gray-600 leading-relaxed">According to OpenAI's launch page, $1 per million input tokens, $0.05 per million cached input tokens and $5 per million output tokens.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Where can I use GPT-6.1 Terra?</p><p class="text-gray-600 leading-relaxed">OpenAI says it is available to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex, and through the API as <code>gpt-6.1-terra</code>.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Terra better than Sol?</p><p class="text-gray-600 leading-relaxed">Not on the one independent index reported, where Terra scored 48 against Sol's 52. It is cheaper, so the right choice depends on the task.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Will switching to a cheaper model save money?</p><p class="text-gray-600 leading-relaxed">Only if quality, retries and output length do not eat the savings. Measure cost per correct result.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How much does GPT-6.1 Terra cost?","@type":"Question","acceptedAnswer":{"text":"According to OpenAI's launch page, $1 per million input tokens, $0.05 per million cached input tokens and $5 per million output tokens.","@type":"Answer"}},{"name":"Where can I use GPT-6.1 Terra?","@type":"Question","acceptedAnswer":{"text":"OpenAI says it is available to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex, and through the API as gpt-6.1-terra.","@type":"Answer"}},{"name":"Is Terra better than Sol?","@type":"Question","acceptedAnswer":{"text":"Not on the one independent index reported, where Terra scored 48 against Sol's 52. It is cheaper, so the right choice depends on the task.","@type":"Answer"}},{"name":"Will switching to a cheaper model save money?","@type":"Question","acceptedAnswer":{"text":"Only if quality, retries and output length do not eat the savings. Measure cost per correct result.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Claude Haiku 5.5 Price Cut: What "75% Cheaper" Really Means](/blog/claude-haiku-5-5-price-cut-what-75-percent-cheaper-really-means/)
-- [AI Agent Pricing: Per Seat, Per Task or Per Outcome?](/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/)
-- [OpenAI Models Come to Google Cloud: What Multi-Cloud AI Means for Buyers](/blog/openai-models-on-google-cloud-what-multi-cloud-ai-means/)
 
 ## Sources
 

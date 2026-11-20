@@ -2,6 +2,7 @@
 templateEngineOverride: "njk, md"
 title: "Was ist Superintelligenz? Bedeutung, Herkunft und Unterschied zu AGI"
 description: "Superintelligenz einfach erklärt: Bedeutung des Begriffs, Herkunft, Unterschied zu AGI und warum das Thema für Unternehmen wichtig ist, die KI einführen."
+seoTitle: "Was ist Superintelligenz? Bedeutung, Herkunft und AGI"
 date: "2026-10-02"
 featuredImage: "/assets/images/blog/was-ist-superintelligenz-und-warum-heisst-sie-so.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
@@ -10,6 +11,9 @@ translationKey: "what-is-superintelligence-and-why-is-it-called-that"
 category: "Einblicke"
 pillar: "ai-frontier"
 readTime: 8
+related:
+  - /de-ch/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
+  - /de-ch/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +26,6 @@ readTime: 8
 - AGI bezeichnet in etwa allgemeine Fähigkeiten auf menschlichem Niveau; Superintelligenz bezeichnet allgemeine Fähigkeiten, die diese deutlich übertreffen.
 - Es gibt keinen allgemein anerkannten Test für AGI und keine vereinbarte Ziellinie für Superintelligenz.
 - In der Debatte geht es vor allem um Sicherheit: Kontrolle, Alignment und die Frage, ob Bedenken Gehör finden.
-
 
 ## Was ist Superintelligenz?
 
@@ -79,11 +82,6 @@ Superintelligenz ist die Vorstellung einer KI, die dem Menschen auf ganzer Linie
 Wie sich das ins grössere Bild einfügt, erfahren Sie in unserem Überblick über [KI-Trends und Prognosen für 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/) oder in unserer Checkliste zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist Superintelligenz?</p><p class="text-gray-600 leading-relaxed">Superintelligenz ist eine hypothetische Form künstlicher Intelligenz, die dem Menschen in praktisch allen relevanten Bereichen weit überlegen wäre, von Wissenschaft und Strategie bis hin zu Kreativität und sozialer Kompetenz.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Warum heisst sie Superintelligenz?</p><p class="text-gray-600 leading-relaxed">Das Präfix «super» stammt vom lateinischen Wort für «oberhalb» oder «jenseits», das Wort sagt also, worum es geht: Intelligenz, die über den menschlichen Bereich hinausgeht, im selben Sinn, in dem «Überschall» schneller als der Schall bedeutet.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist der Unterschied zwischen AGI und Superintelligenz?</p><p class="text-gray-600 leading-relaxed">AGI, künstliche allgemeine Intelligenz, bezeichnet KI, die eine breite Palette von Aufgaben in etwa auf menschlichem Niveau lernen und ausführen kann. Superintelligenz, manchmal ASI genannt, ist der Schritt darüber hinaus: allgemeine Fähigkeiten, die die menschlichen deutlich übertreffen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Gibt es Superintelligenz heute schon?</p><p class="text-gray-600 leading-relaxed">Bei keinem System besteht allgemeine Einigkeit, dass es superintelligent ist. Es gibt keinen allgemein anerkannten Test dafür, wann etwas als AGI gilt, und keine vereinbarte Ziellinie für Superintelligenz, weshalb sich Aussagen, man sei nah dran, schwer vergleichen lassen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was ist Superintelligenz?","@type":"Question","acceptedAnswer":{"text":"Superintelligenz ist eine hypothetische Form künstlicher Intelligenz, die dem Menschen in praktisch allen relevanten Bereichen weit überlegen wäre, von Wissenschaft und Strategie bis hin zu Kreativität und sozialer Kompetenz.","@type":"Answer"}},{"name":"Warum heisst sie Superintelligenz?","@type":"Question","acceptedAnswer":{"text":"Das Präfix «super» stammt vom lateinischen Wort für «oberhalb» oder «jenseits», das Wort sagt also, worum es geht: Intelligenz, die über den menschlichen Bereich hinausgeht, im selben Sinn, in dem «Überschall» schneller als der Schall bedeutet.","@type":"Answer"}},{"name":"Was ist der Unterschied zwischen AGI und Superintelligenz?","@type":"Question","acceptedAnswer":{"text":"AGI, künstliche allgemeine Intelligenz, bezeichnet KI, die eine breite Palette von Aufgaben in etwa auf menschlichem Niveau lernen und ausführen kann. Superintelligenz, manchmal ASI genannt, ist der Schritt darüber hinaus: allgemeine Fähigkeiten, die die menschlichen deutlich übertreffen.","@type":"Answer"}},{"name":"Gibt es Superintelligenz heute schon?","@type":"Question","acceptedAnswer":{"text":"Bei keinem System besteht allgemeine Einigkeit, dass es superintelligent ist. Es gibt keinen allgemein anerkannten Test dafür, wann etwas als AGI gilt, und keine vereinbarte Ziellinie für Superintelligenz, weshalb sich Aussagen, man sei nah dran, schwer vergleichen lassen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Warum KI-Agenten eine eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Quellen
 

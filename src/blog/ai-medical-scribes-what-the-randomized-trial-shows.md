@@ -14,6 +14,11 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-medical-scribes-what-the-randomized-trial-shows.svg"
 ogType: article
+related:
+  - /blog/ai-sepsis-early-warning-what-the-evidence-shows/
+  - /blog/ai-mammography-screening-what-the-swedish-trial-shows/
+  - /blog/ai-in-uk-healthcare-what-to-check-before-you-buy/
+  - /blog/eu-ai-act-what-applies-now-and-what-was-delayed/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -74,13 +79,6 @@ Expect more trials across specialties and settings, independent audits of note a
 AI scribes are no longer just a promise: a randomized trial found a modest documentation-time saving for one tool, no significant saving for the other, and small burnout improvements, alongside occasional note errors. They are best treated as a draft-writing aid that needs careful clinician review. For related evidence on clinical AI, see our posts on [AI sepsis early warning](/blog/ai-sepsis-early-warning-what-the-evidence-shows/) and [AI in UK healthcare](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is an AI medical scribe?</p><p class="text-gray-600 leading-relaxed">An AI medical scribe, or ambient scribe, listens to a doctor-patient conversation with consent and drafts the clinical note, which the physician then reviews, edits and signs.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did the UCLA randomized trial find?</p><p class="text-gray-600 leading-relaxed">Per UCLA Health, in a trial of 238 physicians, Nabla cut time per note by 41 seconds (9.5%), while Microsoft DAX showed no statistically significant difference from the control group. Both tools showed about 7% better burnout scores than controls.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Are AI-written medical notes accurate?</p><p class="text-gray-600 leading-relaxed">Not always. UCLA reports notes occasionally contained clinically significant inaccuracies, such as omissions and pronoun errors, and one mild patient safety event occurred, so physician review is essential.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do these results apply to every clinic?</p><p class="text-gray-600 leading-relaxed">Not necessarily. The study took place at one academic medical center over roughly two months, and UCLA says longer, multi-institution studies are needed.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is an AI medical scribe?","@type":"Question","acceptedAnswer":{"text":"An AI medical scribe, or ambient scribe, listens to a doctor-patient conversation with consent and drafts the clinical note, which the physician then reviews, edits and signs.","@type":"Answer"}},{"name":"What did the UCLA randomized trial find?","@type":"Question","acceptedAnswer":{"text":"Per UCLA Health, in a trial of 238 physicians, Nabla cut time per note by 41 seconds (9.5%), while Microsoft DAX showed no statistically significant difference from the control group. Both tools showed about 7% better burnout scores than controls.","@type":"Answer"}},{"name":"Are AI-written medical notes accurate?","@type":"Question","acceptedAnswer":{"text":"Not always. UCLA reports notes occasionally contained clinically significant inaccuracies, such as omissions and pronoun errors, and one mild patient safety event occurred, so physician review is essential.","@type":"Answer"}},{"name":"Do these results apply to every clinic?","@type":"Question","acceptedAnswer":{"text":"Not necessarily. The study took place at one academic medical center over roughly two months, and UCLA says longer, multi-institution studies are needed.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Sepsis Early Warning: What the Evidence Shows](/blog/ai-sepsis-early-warning-what-the-evidence-shows/)
-- [AI Mammography Screening: What the Swedish Trial Shows](/blog/ai-mammography-screening-what-the-swedish-trial-shows/)
-- [AI in UK Healthcare: What to Check Before You Buy](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/)
-- [EU AI Act: What Applies Now and What Was Delayed](/blog/eu-ai-act-what-applies-now-and-what-was-delayed/)
 
 ## Sources
 

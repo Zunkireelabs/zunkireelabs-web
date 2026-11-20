@@ -15,6 +15,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/owasp-mcp-top-10-explained-for-business-owners.svg"
 ogType: article
+related:
+  - /blog/mcp-specification-security-what-changed/
+  - /blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
+  - /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -69,12 +73,6 @@ To scope an agent with clear limits, see our [AI governance checklist](/resource
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the OWASP MCP Top 10?</p><p class="text-gray-600 leading-relaxed">An OWASP project listing the ten risk categories most likely to compromise a Model Context Protocol deployment. It is in beta and labelled with the 2025 edition.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is the OWASP MCP Top 10 final?</p><p class="text-gray-600 leading-relaxed">No. OWASP's page lists it as a beta release in pilot testing, so the items and wording may change.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do small businesses need to worry about MCP security?</p><p class="text-gray-600 leading-relaxed">If an AI agent connects to your calendar, customer data or internal tools, yes. The questions above cost nothing to ask and apply at any size.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is a shadow MCP server?</p><p class="text-gray-600 leading-relaxed">An MCP deployment that someone set up outside formal approval, often with default settings. OWASP lists it as MCP09.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is tool poisoning?</p><p class="text-gray-600 leading-relaxed">A compromised tool, plugin or tool output feeds malicious or misleading context to the model, as described in MCP03.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the OWASP MCP Top 10?","@type":"Question","acceptedAnswer":{"text":"An OWASP project listing the ten risk categories most likely to compromise a Model Context Protocol deployment. It is in beta and labelled with the 2025 edition.","@type":"Answer"}},{"name":"Is the OWASP MCP Top 10 final?","@type":"Question","acceptedAnswer":{"text":"No. OWASP's page lists it as a beta release in pilot testing, so the items and wording may change.","@type":"Answer"}},{"name":"Do small businesses need to worry about MCP security?","@type":"Question","acceptedAnswer":{"text":"If an AI agent connects to your calendar, customer data or internal tools, yes. The questions above cost nothing to ask and apply at any size.","@type":"Answer"}},{"name":"What is a shadow MCP server?","@type":"Question","acceptedAnswer":{"text":"An MCP deployment that someone set up outside formal approval, often with default settings. OWASP lists it as MCP09.","@type":"Answer"}},{"name":"What is tool poisoning?","@type":"Question","acceptedAnswer":{"text":"A compromised tool, plugin or tool output feeds malicious or misleading context to the model, as described in MCP03.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
 For the full buyer's checklist, read our whitepaper on [MCP and AI agent security](/resources/mcp-agent-security-checklist-business-whitepaper/).
-
-## Related Insights
-
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
-- [FTC Probes AI Labs Over Rogue Agents: What to Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
-- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 
 ## Sources
 

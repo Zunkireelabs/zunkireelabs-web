@@ -2,6 +2,8 @@
 templateEngineOverride: "njk, md"
 title: "Von SaaS zu GaaS: Vom Lizenzmodell zur ergebnisbasierten Abrechnung"
 description: "Ein Wechsel von SaaS zu GaaS? Wann Agentic as a Service sinnvoll ist, wie Preise pro Lizenz und pro Ergebnis zu vergleichen sind und wie Sie den Wechsel Schritt für Schritt testen."
+seoTitle: "Von SaaS zu GaaS: von Lizenzen zu ergebnisbasierter Abrechnung"
+seoDescription: "SaaS zu GaaS wechseln? Wann Agentic as a Service sinnvoll ist, wie Preise pro Lizenz und pro Ergebnis zu vergleichen sind und wie Sie den Wechsel testen."
 date: "2026-10-12"
 featuredImage: "/assets/images/blog/saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
@@ -10,6 +12,9 @@ translationKey: "saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing"
 category: "Einblicke"
 pillar: "ai-business"
 readTime: 7
+related:
+  - /blog/understanding-the-key-differences-between-gaas-and-saas/
+  - /blog/understanding-the-saas-software-development-lifecycle-a-comprehensive-guide/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -70,10 +75,5 @@ Ein Preis pro Ergebnis, der hoch wirkt, kann trotzdem gewinnen, wenn er Stunden 
 SaaS zu GaaS lässt sich am besten als Reihe kleiner, gemessener Tests behandeln, nicht als Migrationsprojekt. Beginnen Sie mit einem wiederkehrenden Ablauf, messen Sie die vollen Kosten und lassen Sie die Zahlen entscheiden.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist der Unterschied zwischen SaaS und GaaS?</p><p class="text-gray-600 leading-relaxed">SaaS gibt Ihnen Software, die Ihr Team bedient, meist pro Nutzer abgerechnet. GaaS gibt Ihnen KI-Agenten, die Aufgaben für Sie ausführen, meist pro geliefertem Ergebnis abgerechnet.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wie wechsle ich von SaaS zu GaaS?</p><p class="text-gray-600 leading-relaxed">Wählen Sie einen wiederkehrenden Ablauf, halten Sie heutige Kosten und Fehlerquote fest, lassen Sie einen Agenten parallel zum bisherigen Werkzeug laufen, vergleichen Sie die Ergebnisse und skalieren Sie nur, wenn die Zahlen tragen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Ist GaaS günstiger als SaaS?</p><p class="text-gray-600 leading-relaxed">Das hängt vom Volumen ab und davon, wie viel Arbeitszeit das Werkzeug bindet. Vergleichen Sie Lizenz- oder Ergebnisgebühren, Bedienzeit, Nacharbeit und Einrichtung, nicht nur die Preisliste.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Sollte ich meine SaaS-Werkzeuge kündigen, wenn ich GaaS ausprobiere?</p><p class="text-gray-600 leading-relaxed">Nicht sofort. Lassen Sie beide an einem Ablauf parallel laufen und kündigen Sie erst, wenn die Ergebnisse klar sind.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was sollte ein GaaS-Vertrag festlegen?</p><p class="text-gray-600 leading-relaxed">Was als ein Ergebnis zählt, was passiert, wenn ein Ergebnis neu erstellt werden muss, auf welche Daten der Agent zugreifen darf und wie Sie Ihre Daten exportieren können, wenn Sie wechseln.</p></div></div></div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist der Unterschied zwischen SaaS und GaaS?", "acceptedAnswer": {"@type": "Answer", "text": "SaaS gibt Ihnen Software, die Ihr Team bedient, meist pro Nutzer abgerechnet. GaaS gibt Ihnen KI-Agenten, die Aufgaben für Sie ausführen, meist pro geliefertem Ergebnis abgerechnet."}}, {"@type": "Question", "name": "Wie wechsle ich von SaaS zu GaaS?", "acceptedAnswer": {"@type": "Answer", "text": "Wählen Sie einen wiederkehrenden Ablauf, halten Sie heutige Kosten und Fehlerquote fest, lassen Sie einen Agenten parallel zum bisherigen Werkzeug laufen, vergleichen Sie die Ergebnisse und skalieren Sie nur, wenn die Zahlen tragen."}}, {"@type": "Question", "name": "Ist GaaS günstiger als SaaS?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Volumen ab und davon, wie viel Arbeitszeit das Werkzeug bindet. Vergleichen Sie Lizenz- oder Ergebnisgebühren, Bedienzeit, Nacharbeit und Einrichtung, nicht nur die Preisliste."}}, {"@type": "Question", "name": "Sollte ich meine SaaS-Werkzeuge kündigen, wenn ich GaaS ausprobiere?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht sofort. Lassen Sie beide an einem Ablauf parallel laufen und kündigen Sie erst, wenn die Ergebnisse klar sind."}}, {"@type": "Question", "name": "Was sollte ein GaaS-Vertrag festlegen?", "acceptedAnswer": {"@type": "Answer", "text": "Was als ein Ergebnis zählt, was passiert, wenn ein Ergebnis neu erstellt werden muss, auf welche Daten der Agent zugreifen darf und wie Sie Ihre Daten exportieren können, wenn Sie wechseln."}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Die zentralen Unterschiede zwischen GaaS und SaaS](/blog/understanding-the-key-differences-between-gaas-and-saas/)
-- [Die wichtigsten Phasen des SaaS-Entwicklungszyklus](/blog/understanding-the-saas-software-development-lifecycle-a-comprehensive-guide/)
 
 </div>

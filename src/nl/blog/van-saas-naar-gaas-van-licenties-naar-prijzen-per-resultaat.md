@@ -2,6 +2,8 @@
 templateEngineOverride: "njk, md"
 title: "Van SaaS naar GaaS: zo stapt u over van licenties per gebruiker naar prijzen per resultaat"
 description: "Overweegt u de overstap van SaaS naar GaaS? Wanneer agentic as a service zinvol is, hoe prijzen per gebruiker en per resultaat zich verhouden en een stappenplan om de overstap te testen."
+seoTitle: "Van SaaS naar GaaS: van licenties naar prijzen per resultaat"
+seoDescription: "Overstap van SaaS naar GaaS? Wanneer agentic as a service past, hoe prijzen per gebruiker en per resultaat verschillen en hoe u de overstap test."
 date: "2026-10-12"
 featuredImage: "/assets/images/blog/saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
@@ -10,6 +12,9 @@ translationKey: "saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing"
 category: "Inzichten"
 pillar: "ai-business"
 readTime: 7
+related:
+  - /blog/understanding-the-key-differences-between-gaas-and-saas/
+  - /blog/understanding-the-saas-software-development-lifecycle-a-comprehensive-guide/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -90,11 +95,6 @@ Niet meteen. Laat beide parallel lopen op één workflow en zeg pas op als de re
 ### Wat moet een GaaS-contract vastleggen?
 
 Wat als één resultaat telt, wat er gebeurt als een resultaat opnieuw moet, tot welke gegevens de agent toegang heeft en hoe u uw gegevens kunt exporteren als u vertrekt.
-
-## Gerelateerde inzichten
-
-- [Het verschil tussen GaaS en SaaS](/blog/understanding-the-key-differences-between-gaas-and-saas/)
-- [De belangrijkste fasen van de SaaS-ontwikkelcyclus](/blog/understanding-the-saas-software-development-lifecycle-a-comprehensive-guide/)
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is het verschil tussen SaaS en GaaS?", "acceptedAnswer": {"@type": "Answer", "text": "SaaS geeft u software die uw team bedient, meestal geprijsd per gebruiker. GaaS geeft u AI-agents die taken voor u uitvoeren, meestal geprijsd per geleverd resultaat."}}, {"@type": "Question", "name": "Hoe stap ik over van SaaS naar GaaS?", "acceptedAnswer": {"@type": "Answer", "text": "Kies één repetitieve workflow, leg de huidige kosten en het foutenpercentage vast, laat een agent naast uw huidige tool meelopen, vergelijk de resultaten en schaal alleen op als de cijfers standhouden."}}, {"@type": "Question", "name": "Is GaaS goedkoper dan SaaS?", "acceptedAnswer": {"@type": "Answer", "text": "Dat hangt af van het volume en van hoeveel personeelstijd de tool kost. Vergelijk licentie- of resultaatkosten, bedientijd, herwerk en inrichting, niet alleen de prijslijst."}}, {"@type": "Question", "name": "Moet ik mijn SaaS-tools opzeggen als ik GaaS probeer?", "acceptedAnswer": {"@type": "Answer", "text": "Niet meteen. Laat beide parallel lopen op één workflow en zeg pas op als de resultaten duidelijk zijn."}}, {"@type": "Question", "name": "Wat moet een GaaS-contract vastleggen?", "acceptedAnswer": {"@type": "Answer", "text": "Wat als één resultaat telt, wat er gebeurt als een resultaat opnieuw moet, tot welke gegevens de agent toegang heeft en hoe u uw gegevens kunt exporteren als u vertrekt."}}]}</script>
 

@@ -16,6 +16,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/microsoft-execution-containers-agent-containment-explained.svg"
 ogType: article
+related:
+  - /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/
+  - /blog/mcp-specification-security-what-changed/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -71,12 +75,6 @@ For the regulatory side of this, see [the FTC probe into rogue agents](/blog/ftc
 Microsoft Execution Containers move agent safety from instructions to enforcement. They are generally available on Windows 11, support several popular tools and still lack central policy and agent identity. Whatever platform you use, bound the agent from outside, watch before you enforce and keep your own audit trail.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What are Microsoft Execution Containers?</p><p class="text-gray-600 leading-relaxed">A feature that lets administrators and developers restrict which files, network destinations and resources an AI agent can access, enforced outside the agent.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">When did they become generally available?</p><p class="text-gray-600 leading-relaxed">Microsoft announced general availability on Windows 11 on 7 October 2026, following a preview in April 2026.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Which AI tools support them?</p><p class="text-gray-600 leading-relaxed">Coverage lists OpenAI Codex, GitHub Copilot, Replit, LM Studio and NVIDIA OpenShell, with Claude Code expected later.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does it work on macOS and Linux?</p><p class="text-gray-600 leading-relaxed">Process containers run on Windows 11, macOS and Linux, according to reporting. Other container types are Windows 11 options.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do I need it to run agents safely?</p><p class="text-gray-600 leading-relaxed">No single tool is required, but the principle is: enforce limits outside the agent and log what it does.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are Microsoft Execution Containers?","@type":"Question","acceptedAnswer":{"text":"A feature that lets administrators and developers restrict which files, network destinations and resources an AI agent can access, enforced outside the agent.","@type":"Answer"}},{"name":"When did they become generally available?","@type":"Question","acceptedAnswer":{"text":"Microsoft announced general availability on Windows 11 on 7 October 2026, following a preview in April 2026.","@type":"Answer"}},{"name":"Which AI tools support them?","@type":"Question","acceptedAnswer":{"text":"Coverage lists OpenAI Codex, GitHub Copilot, Replit, LM Studio and NVIDIA OpenShell, with Claude Code expected later.","@type":"Answer"}},{"name":"Does it work on macOS and Linux?","@type":"Question","acceptedAnswer":{"text":"Process containers run on Windows 11, macOS and Linux, according to reporting. Other container types are Windows 11 options.","@type":"Answer"}},{"name":"Do I need it to run agents safely?","@type":"Question","acceptedAnswer":{"text":"No single tool is required, but the principle is: enforce limits outside the agent and log what it does.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
-- [MCP Security in 2026: What the New Specification Fixed and What It Opened Up](/blog/mcp-specification-security-what-changed/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

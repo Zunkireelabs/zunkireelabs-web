@@ -14,6 +14,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/ai-agent-race-openai-dots-and-claude-sonnet-5-5.svg"
 ogType: article
+related:
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -71,11 +74,6 @@ OpenAI is pushing agents that work in the background, and Anthropic is pushing a
 For more context, read our overview of [AI trends and predictions for 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/), or see our checklist for [choosing an AI development company](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What are OpenAI's Dots?</p><p class="text-gray-600 leading-relaxed">Dots are what OpenAI calls always-on agents, announced at DevDay on September 29, 2026. They run on GPT-6 Astra, get their own cloud computer and browser, connect to apps and can be reached through ChatGPT, Slack and Microsoft Teams, according to VentureBeat and TechCrunch.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Claude Sonnet 5.5?</p><p class="text-gray-600 leading-relaxed">Claude Sonnet 5.5 is Anthropic's mid-tier model, released on September 28, 2026. Anthropic says it is more than 30% faster than Sonnet 5 and can lower the cost of a task by up to 30%, with API prices unchanged at $2 per million input tokens and $10 per million output tokens.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Are the performance claims independently verified?</p><p class="text-gray-600 leading-relaxed">Mostly not. Speed, cost and benchmark figures come from the vendors, supported by a few customer quotes. VentureBeat cautions that benchmarks are not direct proxies for every production workload.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should a business do before using an always-on agent?</p><p class="text-gray-600 leading-relaxed">Start with low-risk tasks and read-only access, require human approval for high-impact actions, keep logs, name an owner, and test on your own work before relying on published numbers.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What are OpenAI's Dots?","@type":"Question","acceptedAnswer":{"text":"Dots are what OpenAI calls always-on agents, announced at DevDay on September 29, 2026. They run on GPT-6 Astra, get their own cloud computer and browser, connect to apps and can be reached through ChatGPT, Slack and Microsoft Teams, according to VentureBeat and TechCrunch.","@type":"Answer"}},{"name":"What is Claude Sonnet 5.5?","@type":"Question","acceptedAnswer":{"text":"Claude Sonnet 5.5 is Anthropic's mid-tier model, released on September 28, 2026. Anthropic says it is more than 30% faster than Sonnet 5 and can lower the cost of a task by up to 30%, with API prices unchanged at $2 per million input tokens and $10 per million output tokens.","@type":"Answer"}},{"name":"Are the performance claims independently verified?","@type":"Question","acceptedAnswer":{"text":"Mostly not. Speed, cost and benchmark figures come from the vendors, supported by a few customer quotes. VentureBeat cautions that benchmarks are not direct proxies for every production workload.","@type":"Answer"}},{"name":"What should a business do before using an always-on agent?","@type":"Question","acceptedAnswer":{"text":"Start with low-risk tasks and read-only access, require human approval for high-impact actions, keep logs, name an owner, and test on your own work before relying on published numbers.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
 
 ## Sources
 

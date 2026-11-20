@@ -10,6 +10,9 @@ pillar: "ai-education"
 readTime: 9
 featuredImage: "/assets/images/blog/ki-personalisiertes-lernen-was-die-tutoring-studien-zeigen.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
+related:
+  - /blog/ai-trends-and-predictions-for-2026-what-lies-ahead/
+  - /blog/state-of-ai-nepal-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -23,7 +26,6 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 - In einem PNAS-Feldexperiment mit fast 1.000 Schülerinnen und Schülern im Mathematikunterricht schnitten Lernende mit ungeschütztem GPT-4-Zugang in einer späteren Prüfung ohne KI um 17 % schlechter ab als Lernende, die nie Zugang hatten. Leitplanken beseitigten den Schaden weitgehend.
 - Ein Pilotprojekt der Weltbank in Nigeria berichtet nach sechs Wochen lehrkraftgestützten KI-Nachhilfeunterrichts von etwa 0,3 Standardabweichungen Zuwachs, es handelt sich aber um eine Blog-Zusammenfassung und nicht um eine begutachtete Studie.
 - Keine dieser Studien zeigt, dass KI Lehrkräfte ersetzt, und keine wurde in Nepal durchgeführt.
-
 
 ## Die Evidenz
 
@@ -80,11 +82,6 @@ Für eine Schule oder einen Weiterbildungsanbieter in Nepal oder Südasien wirke
 Personalisiertes Lernen mit KI ist nicht mehr nur ein Versprechen: Es gibt kontrollierte Studien, und sie zeigen echte Zuwächse, wenn der Tutor auf Lernforschung aufbaut, und echten Schaden, wenn er einfach Antworten ausgibt. Die sinnvolle Reaktion ist weder Hype noch Ablehnung, sondern zu fragen, wie der Tutor gestaltet wurde, womit er verglichen wurde und ob das Gelernte hält, wenn das Werkzeug entfällt.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Verbessert KI-Tutoring das Lernen tatsächlich?</p><p class="text-gray-600 leading-relaxed">Es kann es, bei richtiger Gestaltung. Ein randomisierter Crossover-Versuch in Harvard (194 ausgewertete Studierende) ergab, dass Studierende mit einem sorgfältig gestalteten KI-Tutor deutlich mehr in kürzerer Zeit lernten als in einer Active-Learning-Stunde. Ein PNAS-Feldexperiment mit fast 1.000 Lernenden ergab, dass uneingeschränkter GPT-4-Zugang die spätere Leistung schädigte. Die Gestaltung des Tutors entscheidet.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Können Lernende durch KI beim Lernen schlechter werden?</p><p class="text-gray-600 leading-relaxed">Ja, wenn die KI nur Antworten liefert. In der PNAS-Studie schnitten Lernende, die beim Üben eine übliche ChatGPT-artige Oberfläche nutzten, nach dem Entzug der KI um 17 % schlechter ab als Lernende, die nie KI-Zugang hatten. Eine Version mit Leitplanken milderte den Schaden weitgehend.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Werden KI-Tutoren Lehrkräfte ersetzen?</p><p class="text-gray-600 leading-relaxed">Keine dieser Studien stützt das. Das nigerianische Programm nutzte lehrkraftgestützte Sitzungen, und der in der Harvard Gazette zitierte Forscher sagte, KI-Tutoren sollten den Präsenzunterricht nicht ersetzen. Die Evidenz stützt KI als beaufsichtigte Ergänzung.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was sollte eine Schule fragen, bevor sie einen KI-Tutor einführt?</p><p class="text-gray-600 leading-relaxed">Fragen Sie, wie er gestaltet ist (Hinweise und Schritte gegenüber Antworten), ob er gegen eine Vergleichsgruppe getestet wurde, ob die Leistung ohne das Werkzeug geprüft wird und welche Schülerdaten er erfasst und wohin diese gehen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Verbessert KI-Tutoring das Lernen tatsächlich?","@type":"Question","acceptedAnswer":{"text":"Es kann es, bei richtiger Gestaltung. Ein randomisierter Crossover-Versuch in Harvard (194 ausgewertete Studierende) ergab, dass Studierende mit einem sorgfältig gestalteten KI-Tutor deutlich mehr in kürzerer Zeit lernten als in einer Active-Learning-Stunde. Ein PNAS-Feldexperiment mit fast 1.000 Lernenden ergab, dass uneingeschränkter GPT-4-Zugang die spätere Leistung schädigte. Die Gestaltung des Tutors entscheidet.","@type":"Answer"}},{"name":"Können Lernende durch KI beim Lernen schlechter werden?","@type":"Question","acceptedAnswer":{"text":"Ja, wenn die KI nur Antworten liefert. In der PNAS-Studie schnitten Lernende, die beim Üben eine übliche ChatGPT-artige Oberfläche nutzten, nach dem Entzug der KI um 17 % schlechter ab als Lernende, die nie KI-Zugang hatten. Eine Version mit Leitplanken milderte den Schaden weitgehend.","@type":"Answer"}},{"name":"Werden KI-Tutoren Lehrkräfte ersetzen?","@type":"Question","acceptedAnswer":{"text":"Keine dieser Studien stützt das. Das nigerianische Programm nutzte lehrkraftgestützte Sitzungen, und der in der Harvard Gazette zitierte Forscher sagte, KI-Tutoren sollten den Präsenzunterricht nicht ersetzen. Die Evidenz stützt KI als beaufsichtigte Ergänzung.","@type":"Answer"}},{"name":"Was sollte eine Schule fragen, bevor sie einen KI-Tutor einführt?","@type":"Question","acceptedAnswer":{"text":"Fragen Sie, wie er gestaltet ist (Hinweise und Schritte gegenüber Antworten), ob er gegen eine Vergleichsgruppe getestet wurde, ob die Leistung ohne das Werkzeug geprüft wird und welche Schülerdaten er erfasst und wohin diese gehen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [KI-Trends und Prognosen 2026: Was uns erwartet](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/)
-- [KI-Trends in Nepal 2026: Wichtige Erkenntnisse](/blog/state-of-ai-nepal-2026/)
 
 ## Quellen
 

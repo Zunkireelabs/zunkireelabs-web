@@ -93,6 +93,25 @@ for (const root of REGULAR_PAGE_ROOTS) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Structured data on regular pages must not be built from scraped site chrome.
+// The generator once injected Article JSON-LD whose articleBody was the page's
+// navigation ("Skip to main content Products Solutions ..."). Scans every
+// JSON-LD block in page sources and shared data, not only the blog.
+// ---------------------------------------------------------------------------
+const SCRAPED_CHROME = /Skip to main content|Products Solutions GaaS|Toggle navigation/i;
+for (const root of [...REGULAR_PAGE_ROOTS, 'src/locations']) {
+  for (const file of walkFiles(root)) {
+    const text = fs.readFileSync(file, 'utf8');
+    for (const m of text.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      if (SCRAPED_CHROME.test(m[1])) problems.push(`${file}: JSON-LD contains scraped site navigation text`);
+    }
+    if (file.endsWith('.js') && /"articleBody":\s*"[^"]*(Skip to main content|Products Solutions GaaS)/.test(text)) {
+      problems.push(`${file}: articleBody contains scraped site navigation text`);
+    }
+  }
+}
+
 if (problems.length) {
   console.error(problems.join('\n'));
   console.error(`\n${problems.length} problem(s)`);

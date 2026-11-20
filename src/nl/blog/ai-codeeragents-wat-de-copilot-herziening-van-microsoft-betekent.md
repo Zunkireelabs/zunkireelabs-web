@@ -10,6 +10,9 @@ translationKey: "ai-native-software-and-coding-agents-what-microsofts-copilot-re
 category: "Inzichten"
 pillar: "software-future"
 readTime: 7
+related:
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 7
 - Google zegt dat zijn agents meer dan 800.000 regels code in de Fuchsia Zircon-kernel hebben gemigreerd; dit zijn de eigen beweringen van Google.
 - Naarmate agents grotere wijzigingen produceren, wordt menselijke beoordeling de bottleneck.
 - Vraag bij het kopen van software of de AI deel uitmaakt van de kernworkflow of er achteraf aan is vastgeplakt.
-
 
 ## Wat is het verschil tussen autocomplete en een codeeragent?
 
@@ -75,11 +77,6 @@ Kies één afgebakende engineeringtaak met duidelijke succescriteria, zoals test
 Als u hulp wilt bij het bepalen waar AI in uw eigen product of workflow past, noemt onze gids over het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/) waar u op kunt letten, en plaatst ons overzicht van [AI-trends en voorspellingen voor 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/) het nieuws van deze week in een bredere context.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is een codeeragent?</p><p class="text-gray-600 leading-relaxed">Een codeeragent neemt een taak aan, leest de omliggende code, brengt wijzigingen aan in meerdere bestanden, voert controles uit en geeft een resultaat terug ter beoordeling door een persoon. Het gaat verder dan autocomplete, dat tijdens het typen alleen de volgende paar regels voorstelt.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat betekent AI-native software?</p><p class="text-gray-600 leading-relaxed">AI-native software is vanaf het begin rond AI ontworpen, in plaats van dat er een chatvenster aan een bestaande app wordt toegevoegd. Microsofts gemelde herziening van Copilot, die consumenten- en bedrijfsapps samenvoegt en codeer- en agentmogelijkheden toevoegt, is een voorbeeld van die richting.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat houdt Microsofts “OS for work”-voorstel in?</p><p class="text-gray-600 leading-relaxed">Volgens The Verge presenteerde Satya Nadella de nieuwste Copilot aan zakelijke klanten als een “OS for work”, met extra codeer- en agentmogelijkheden en voor het eerst de volledige kracht van Office in Copilot.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Hoe moet een team beginnen met codeeragents?</p><p class="text-gray-600 leading-relaxed">Kies één afgebakende taak met duidelijke succescriteria, zoals tests schrijven voor een stabiele module. Beoordeel de uitvoer zorgvuldig, vergelijk de bespaarde tijd met de tijd die aan controleren is besteed en breid alleen uit als de resultaten dat rechtvaardigen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat is een codeeragent?","@type":"Question","acceptedAnswer":{"text":"Een codeeragent neemt een taak aan, leest de omliggende code, brengt wijzigingen aan in meerdere bestanden, voert controles uit en geeft een resultaat terug ter beoordeling door een persoon. Het gaat verder dan autocomplete, dat tijdens het typen alleen de volgende paar regels voorstelt.","@type":"Answer"}},{"name":"Wat betekent AI-native software?","@type":"Question","acceptedAnswer":{"text":"AI-native software is vanaf het begin rond AI ontworpen, in plaats van dat er een chatvenster aan een bestaande app wordt toegevoegd. Microsofts gemelde herziening van Copilot, die consumenten- en bedrijfsapps samenvoegt en codeer- en agentmogelijkheden toevoegt, is een voorbeeld van die richting.","@type":"Answer"}},{"name":"Wat houdt Microsofts “OS for work”-voorstel in?","@type":"Question","acceptedAnswer":{"text":"Volgens The Verge presenteerde Satya Nadella de nieuwste Copilot aan zakelijke klanten als een “OS for work”, met extra codeer- en agentmogelijkheden en voor het eerst de volledige kracht van Office in Copilot.","@type":"Answer"}},{"name":"Hoe moet een team beginnen met codeeragents?","@type":"Question","acceptedAnswer":{"text":"Kies één afgebakende taak met duidelijke succescriteria, zoals tests schrijven voor een stabiele module. Beoordeel de uitvoer zorgvuldig, vergelijk de bespaarde tijd met de tijd die aan controleren is besteed en breid alleen uit als de resultaten dat rechtvaardigen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Bronnen
 

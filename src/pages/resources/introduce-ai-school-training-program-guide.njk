@@ -153,15 +153,7 @@ slug: introduce-ai-school-training-program-guide
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Where should a school start with AI?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Our own suggestion is to start with teacher-facing tasks, such as drafting lesson materials, before giving students open access. The Gallup teacher survey reports time savings for those tasks, while student-facing tools carry the risks seen in the tutoring trials.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Should students be allowed to use AI chatbots?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">That is a school decision. The evidence suggests an answer-giving chatbot can raise practice scores and lower later performance, as the PNAS study found. If students use AI, supervised tools built to give hints and steps, plus tests without the tool, are the safer approach.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What student data is safe to put into an AI tool?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Our own suggestion is to avoid personal data unless you have checked the supplier. The UK Department for Education recommends that personal data is not used in generative AI tools, and says personal data must be protected under data protection law.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How do we know a pilot worked?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Compare against a baseline you recorded before the pilot, and check student performance without the tool. Practice scores while using AI can mislead, as the Turkish trial showed.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Where should a school start with AI?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Our own suggestion is to start with teacher-facing tasks, such as drafting lesson materials, before giving students open access. The Gallup teacher survey reports time savings for those tasks, while student-facing tools carry the risks seen in the tutoring trials.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Should students be allowed to use AI chatbots?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">That is a school decision. The evidence suggests an answer-giving chatbot can raise practice scores and lower later performance, as the PNAS study found. If students use AI, supervised tools built to give hints and steps, plus tests without the tool, are the safer approach.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What student data is safe to put into an AI tool?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Our own suggestion is to avoid personal data unless you have checked the supplier. The UK Department for Education recommends that personal data is not used in generative AI tools, and says personal data must be protected under data protection law.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">How do we know a pilot worked?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Compare against a baseline you recorded before the pilot, and check student performance without the tool. Practice scores while using AI can mislead, as the Turkish trial showed.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -183,6 +175,9 @@ slug: introduce-ai-school-training-program-guide
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

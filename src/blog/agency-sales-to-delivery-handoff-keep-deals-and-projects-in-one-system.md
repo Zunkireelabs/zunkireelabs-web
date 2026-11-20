@@ -21,6 +21,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/agency-sales-to-delivery-handoff-keep-deals-and-projects-in-one-system.svg"
 ogType: article
+related:
+  - /blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/
+  - /blog/gaas-for-marketing-agencies-what-agentic-as-a-service-changes/
+  - /blog/how-to-choose-an-ai-orchestration-layer/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -98,12 +102,6 @@ Our agency platform connects the deal pipeline, proposal builder, project cockpi
 To talk through your own situation, see our [AI for Agencies page](/industries/agencies/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a sales-to-delivery handoff in an agency?</p><p class="text-gray-600 leading-relaxed">It is the transfer of a signed deal to the team that will deliver it, including scope, exclusions, assumptions, dates, price terms and client context, so delivery starts from what was sold.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why do agencies lose margin after a deal is signed?</p><p class="text-gray-600 leading-relaxed">Often because sold scope and delivered scope drift apart, changes are not recorded and estimates were not tied to real capacity. A structured handoff and change log help control this.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should be in an agency handoff checklist?</p><p class="text-gray-600 leading-relaxed">Client goals, deliverables and exclusions, assumptions, dependencies, timeline and milestones, commercial terms, team and hours, risks and the first week's plan.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do we need one system for sales and delivery?</p><p class="text-gray-600 leading-relaxed">One connected system avoids retyping and lost detail. If you use separate tools, integrate them so the proposal data creates the project automatically.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a sales-to-delivery handoff in an agency?","@type":"Question","acceptedAnswer":{"text":"It is the transfer of a signed deal to the team that will deliver it, including scope, exclusions, assumptions, dates, price terms and client context, so delivery starts from what was sold.","@type":"Answer"}},{"name":"Why do agencies lose margin after a deal is signed?","@type":"Question","acceptedAnswer":{"text":"Often because sold scope and delivered scope drift apart, changes are not recorded and estimates were not tied to real capacity. A structured handoff and change log help control this.","@type":"Answer"}},{"name":"What should be in an agency handoff checklist?","@type":"Question","acceptedAnswer":{"text":"Client goals, deliverables and exclusions, assumptions, dependencies, timeline and milestones, commercial terms, team and hours, risks and the first week's plan.","@type":"Answer"}},{"name":"Do we need one system for sales and delivery?","@type":"Question","acceptedAnswer":{"text":"One connected system avoids retyping and lost detail. If you use separate tools, integrate them so the proposal data creates the project automatically.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI for Agencies: An Operating System View From Pipeline to Utilization](/blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/)
-- [GaaS for Marketing Agencies: What Agentic as a Service Changes](/blog/gaas-for-marketing-agencies-what-agentic-as-a-service-changes/)
-- [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)
 
 ## Sources
 

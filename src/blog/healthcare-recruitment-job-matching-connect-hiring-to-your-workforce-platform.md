@@ -22,6 +22,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/healthcare-recruitment-job-matching-connect-hiring-to-your-workforce-platform.svg"
 ogType: article
+related:
+  - /blog/compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments/
+  - /blog/healthcare-credential-and-licensure-tracking-build-an-audit-ready-system/
+  - /blog/how-to-choose-a-virtual-assistant-for-healthcare/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -132,12 +136,6 @@ Our healthcare offering includes a recruitment and job-matching platform that co
 To talk through your own situation, see our [AI for Healthcare page](/industries/healthcare/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is healthcare job matching?</p><p class="text-gray-600 leading-relaxed">It is matching candidates to roles using structured requirements such as qualification, registration, clearances, availability and location, with a recruiter reviewing the shortlist.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why connect recruitment to the workforce platform?</p><p class="text-gray-600 leading-relaxed">So candidate details, credentials and onboarding tasks flow into rostering without retyping, reducing errors and the time from accepted offer to first compliant shift.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">When should credentials be checked in hiring?</p><p class="text-gray-600 leading-relaxed">As early as practical: request key documents at application or shortlist, and verify essentials before interview so unsuitable matches are caught early.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can AI make hiring decisions?</p><p class="text-gray-600 leading-relaxed">It can assist with screening, drafting and scheduling. People should make decisions, and you should audit criteria for bias and take advice on employment law.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is healthcare job matching?","@type":"Question","acceptedAnswer":{"text":"It is matching candidates to roles using structured requirements such as qualification, registration, clearances, availability and location, with a recruiter reviewing the shortlist.","@type":"Answer"}},{"name":"Why connect recruitment to the workforce platform?","@type":"Question","acceptedAnswer":{"text":"So candidate details, credentials and onboarding tasks flow into rostering without retyping, reducing errors and the time from accepted offer to first compliant shift.","@type":"Answer"}},{"name":"When should credentials be checked in hiring?","@type":"Question","acceptedAnswer":{"text":"As early as practical: request key documents at application or shortlist, and verify essentials before interview so unsuitable matches are caught early.","@type":"Answer"}},{"name":"Can AI make hiring decisions?","@type":"Question","acceptedAnswer":{"text":"It can assist with screening, drafting and scheduling. People should make decisions, and you should audit criteria for bias and take advice on employment law.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Compliance-Gated Rostering: How Care Providers Prevent Unsafe Shift Assignments](/blog/compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments/)
-- [Healthcare Credential and Licensure Tracking: Build an Audit-Ready System](/blog/healthcare-credential-and-licensure-tracking-build-an-audit-ready-system/)
-- [How to Choose a Virtual Assistant for Healthcare](/blog/how-to-choose-a-virtual-assistant-for-healthcare/)
 
 ## Sources
 

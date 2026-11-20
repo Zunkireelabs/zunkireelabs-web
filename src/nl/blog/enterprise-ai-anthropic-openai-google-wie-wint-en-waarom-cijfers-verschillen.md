@@ -10,6 +10,10 @@ pillar: "it-market"
 readTime: 8
 featuredImage: "/assets/images/blog/enterprise-ai-anthropic-openai-google-wie-wint-en-waarom-cijfers-verschillen.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
+  - /nl/blog/ai-codeeragents-wat-de-copilot-herziening-van-microsoft-betekent/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -23,7 +27,6 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 - Verschillende steekproeven, tijdstippen en definities verklaren een groot deel van het verschil. Geen van beide rapporten telt elke dollar of elke token.
 - Bij programmeren is het verschil het grootst: Menlo plaatst Anthropic op 54% van het zakelijke gebruik voor code en OpenAI op 21%.
 - Volgens a16z gebruikt 81% van de bedrijven drie of meer modelfamilies. Meerdere leveranciers zijn dus al gebruikelijk.
-
 
 ## Wat zeggen de twee rapporten precies?
 
@@ -74,12 +77,6 @@ Het gebruik zelf is breed. De McKinsey-enquête State of AI, gepubliceerd op 5 n
 Een enkel "marktaandeel van enterprise-AI" bestaat niet. Menlo Ventures ziet Anthropic voorop bij geschatte uitgaven op basis van API-gebruik, a16z ziet OpenAI bij meer ondervraagde Global 2000-bedrijven in productie, en beide zijn enquêtes. Lees de definitie vóór het percentage, test modellen op uw eigen werk en bouw uw systemen zo dat u van leverancier kunt wisselen.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Welk AI-lab heeft het grootste zakelijke marktaandeel?</p><p class="text-gray-600 leading-relaxed">Dat hangt af van de maatstaf. Menlo Ventures schat Anthropic op 40%, OpenAI op 27% en Google op 21% van de enterprise-LLM-markt op basis van productiegebruik van API's, terwijl een a16z-enquête onder CIO's van Global 2000-bedrijven vond dat 78% OpenAI-modellen in productie gebruikt en 44% Anthropic.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Waarom spreken rapporten over het marktaandeel van enterprise-AI elkaar tegen?</p><p class="text-gray-600 leading-relaxed">Ze meten verschillende dingen (geschatte uitgaven uit API-gebruik, het aandeel bedrijven dat een leverancier gebruikt, of het budgetaandeel), ondervragen verschillende groepen (495 Amerikaanse besluitvormers tegenover 100 CIO's van Global 2000-bedrijven) en zijn op verschillende momenten uitgevoerd. Beide zijn enquêtes, geen volledige tellingen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Loopt Anthropic echt voorop bij programmeren?</p><p class="text-gray-600 leading-relaxed">Menlo Ventures noemt voor Anthropic 54% en voor OpenAI 21% van het zakelijke API-gebruik voor coding, en a16z meldt winst van Anthropic bij tokenintensieve codingtoepassingen. Beide zijn enquêtegebaseerd en sluiten segmenten uit, dus test tools op uw eigen codebase.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Moet mijn bedrijf meer dan één AI-modelleverancier gebruiken?</p><p class="text-gray-600 leading-relaxed">Veel bedrijven doen dat al: a16z vond 81% dat drie of meer modelfamilies gebruikt in tests of in productie. Een opzet met meerdere leveranciers, één interne interface en een eigen testset verkleint het risico van afhankelijkheid.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Welk AI-lab heeft het grootste zakelijke marktaandeel?","@type":"Question","acceptedAnswer":{"text":"Dat hangt af van de maatstaf. Menlo Ventures schat Anthropic op 40%, OpenAI op 27% en Google op 21% van de enterprise-LLM-markt op basis van productiegebruik van API's, terwijl een a16z-enquête onder CIO's van Global 2000-bedrijven vond dat 78% OpenAI-modellen in productie gebruikt en 44% Anthropic.","@type":"Answer"}},{"name":"Waarom spreken rapporten over het marktaandeel van enterprise-AI elkaar tegen?","@type":"Question","acceptedAnswer":{"text":"Ze meten verschillende dingen (geschatte uitgaven uit API-gebruik, het aandeel bedrijven dat een leverancier gebruikt, of het budgetaandeel), ondervragen verschillende groepen (495 Amerikaanse besluitvormers tegenover 100 CIO's van Global 2000-bedrijven) en zijn op verschillende momenten uitgevoerd. Beide zijn enquêtes, geen volledige tellingen.","@type":"Answer"}},{"name":"Loopt Anthropic echt voorop bij programmeren?","@type":"Question","acceptedAnswer":{"text":"Menlo Ventures noemt voor Anthropic 54% en voor OpenAI 21% van het zakelijke API-gebruik voor coding, en a16z meldt winst van Anthropic bij tokenintensieve codingtoepassingen. Beide zijn enquêtegebaseerd en sluiten segmenten uit, dus test tools op uw eigen codebase.","@type":"Answer"}},{"name":"Moet mijn bedrijf meer dan één AI-modelleverancier gebruiken?","@type":"Question","acceptedAnswer":{"text":"Veel bedrijven doen dat al: a16z vond 81% dat drie of meer modelfamilies gebruikt in tests of in productie. Een opzet met meerdere leveranciers, één interne interface en een eigen testset verkleint het risico van afhankelijkheid.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [AI-codingagents: wat de heroriëntatie van Microsoft Copilot betekent](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
 
 ## Bronnen
 

@@ -17,6 +17,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/mcp-specification-security-what-changed.svg"
 ogType: article
+related:
+  - /blog/owasp-mcp-top-10-explained-for-business-owners/
+  - /blog/microsoft-execution-containers-agent-containment-explained/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -81,12 +85,6 @@ For how to bound an agent's authority, see our whitepaper on [AI agents for busi
 The MCP revision closes real gaps, but it shifts work onto the people who build servers. Verify client-supplied state, check headers against the body, keep secrets out of logs, sandbox rendered panels and cap long-running tasks. Treat the researchers' findings as a checklist, not as proof of attacks in the wild.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is MCP 2026-07-28?</p><p class="text-gray-600 leading-relaxed">It is a major revision of the Model Context Protocol, scheduled for final release on 28 July 2026 after a May release candidate. SiliconANGLE describes it as the biggest architectural change since Anthropic created the protocol.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is the new MCP specification more secure?</p><p class="text-gray-600 leading-relaxed">It removes some older risks, including protocol sessions and weak OAuth grants. Akamai also found new attack surfaces, because responsibility for state and verification moved to implementers.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does this affect my business if I do not build MCP servers?</p><p class="text-gray-600 leading-relaxed">Indirectly. If your suppliers or tools use MCP, ask how they handle the points above.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Who found these risks?</p><p class="text-gray-600 leading-relaxed">Researchers Maxim Zavodchik, Segev Fogel and Gal Meiri at Akamai, as reported by SiliconANGLE on 25 June 2026.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is MCP 2026-07-28?","@type":"Question","acceptedAnswer":{"text":"It is a major revision of the Model Context Protocol, scheduled for final release on 28 July 2026 after a May release candidate. SiliconANGLE describes it as the biggest architectural change since Anthropic created the protocol.","@type":"Answer"}},{"name":"Is the new MCP specification more secure?","@type":"Question","acceptedAnswer":{"text":"It removes some older risks, including protocol sessions and weak OAuth grants. Akamai also found new attack surfaces, because responsibility for state and verification moved to implementers.","@type":"Answer"}},{"name":"Does this affect my business if I do not build MCP servers?","@type":"Question","acceptedAnswer":{"text":"Indirectly. If your suppliers or tools use MCP, ask how they handle the points above.","@type":"Answer"}},{"name":"Who found these risks?","@type":"Question","acceptedAnswer":{"text":"Researchers Maxim Zavodchik, Segev Fogel and Gal Meiri at Akamai, as reported by SiliconANGLE on 25 June 2026.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [Microsoft Execution Containers: How to Contain an AI Agent](/blog/microsoft-execution-containers-agent-containment-explained/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

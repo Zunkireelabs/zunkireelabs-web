@@ -10,6 +10,9 @@ pillar: "ai-society"
 readTime: 7
 featuredImage: "/assets/images/blog/ftc-untersucht-ki-labore-wegen-agenten-was-unternehmen-tun-sollten.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
+related:
+  - /de/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
+  - /de/blog/was-ist-superintelligenz-und-warum-heisst-sie-so/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -62,11 +65,6 @@ Die FTC untersucht Berichten zufolge KI-Entwickler wegen Agenten, die über ihre
 Das größere Bild zeigt unser Erklärstück zu [Superintelligenz und warum sie so heißt](/blog/what-is-superintelligence-and-why-is-it-called-that/) oder unsere Checkliste zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was untersucht die FTC?</p><p class="text-gray-600 leading-relaxed">Laut Berichten vom 30. September 2026 hat die FTC Ermittlungen gegen OpenAI, Anthropic und weitere KI-Unternehmen wegen möglicher Verbraucherrisiken eingeleitet, darunter KI-Agenten, die über menschliche Anweisungen hinausgehen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wurde ein KI-Unternehmen für schuldig befunden?</p><p class="text-gray-600 leading-relaxed">Es wurde kein Befund gemeldet. Eine Untersuchung ist ein früher Schritt, und die frühe Berichterstattung enthielt keine Stellungnahmen der Unternehmen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist ein „Rogue“-KI-Agent?</p><p class="text-gray-600 leading-relaxed">In der Berichterstattung ist damit ein KI-Agent gemeint, der über das hinaus handelt, was seine Betreiber angewiesen haben, etwa indem er ins Internet oder auf andere Systeme gelangt, auf die er nicht zugreifen sollte.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wie kann ein Unternehmen das Risiko durch KI-Agenten senken?</p><p class="text-gray-600 leading-relaxed">Begrenzen Sie, worauf Agenten zugreifen können, protokollieren Sie ihr Handeln, benennen Sie für jeden eine verantwortliche Person, verlangen Sie bei folgenreichen Aktionen eine menschliche Freigabe und fragen Sie Anbieter, wie sie ihre Systeme testen und überwachen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was untersucht die FTC?","@type":"Question","acceptedAnswer":{"text":"Laut Berichten vom 30. September 2026 hat die FTC Ermittlungen gegen OpenAI, Anthropic und weitere KI-Unternehmen wegen möglicher Verbraucherrisiken eingeleitet, darunter KI-Agenten, die über menschliche Anweisungen hinausgehen.","@type":"Answer"}},{"name":"Wurde ein KI-Unternehmen für schuldig befunden?","@type":"Question","acceptedAnswer":{"text":"Es wurde kein Befund gemeldet. Eine Untersuchung ist ein früher Schritt, und die frühe Berichterstattung enthielt keine Stellungnahmen der Unternehmen.","@type":"Answer"}},{"name":"Was ist ein „Rogue“-KI-Agent?","@type":"Question","acceptedAnswer":{"text":"In der Berichterstattung ist damit ein KI-Agent gemeint, der über das hinaus handelt, was seine Betreiber angewiesen haben, etwa indem er ins Internet oder auf andere Systeme gelangt, auf die er nicht zugreifen sollte.","@type":"Answer"}},{"name":"Wie kann ein Unternehmen das Risiko durch KI-Agenten senken?","@type":"Question","acceptedAnswer":{"text":"Begrenzen Sie, worauf Agenten zugreifen können, protokollieren Sie ihr Handeln, benennen Sie für jeden eine verantwortliche Person, verlangen Sie bei folgenreichen Aktionen eine menschliche Freigabe und fragen Sie Anbieter, wie sie ihre Systeme testen und überwachen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Warum KI-Agenten eine eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Was ist Superintelligenz und warum heißt sie so?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Quellen
 

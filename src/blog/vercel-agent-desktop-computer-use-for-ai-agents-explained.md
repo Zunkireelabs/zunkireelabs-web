@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/vercel-agent-desktop-computer-use-for-ai-agents-explained.svg"
 ogType: article
+related:
+  - /blog/ai-coding-agents-2026-how-developers-actually-work-now/
+  - /blog/google-gemini-agent-universal-work-agent/
+  - /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -70,12 +74,6 @@ Agent-desktop is a sign of where agent tooling is heading: reading structured in
 If you are weighing automation options for legacy tools, our team can help you choose between integrations, agents and custom software: see [custom AI agent development](/solutions/custom-agent/) and [custom software development](/solutions/custom-software/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is agent-desktop?</p><p class="text-gray-600 leading-relaxed">Agent-desktop is an open-source command-line tool and C library from Vercel Labs that lets AI agents read and operate desktop applications on macOS, Windows and Linux through the operating system's accessibility tree.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How is it different from screenshot-based computer use?</p><p class="text-gray-600 leading-relaxed">Screenshot-based agents look at an image and guess where to click. Agent-desktop reads a structured list of interface elements, gives each a reference and acts on it directly, so it does not depend on pixel positions.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is agent-desktop safe to use on a work computer?</p><p class="text-gray-600 leading-relaxed">It carries real risk because an agent that can operate your desktop can do much of what you can. Use a dedicated limited account, an isolated machine or virtual desktop, logging, and human approval for consequential actions. We have not tested it in production.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What licence is it under and how do I install it?</p><p class="text-gray-600 leading-relaxed">The repository lists the Apache-2.0 licence, and the README gives npm as the install route. It also says Homebrew and Scoop packages were still being submitted when we read it.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is agent-desktop?","@type":"Question","acceptedAnswer":{"text":"Agent-desktop is an open-source command-line tool and C library from Vercel Labs that lets AI agents read and operate desktop applications on macOS, Windows and Linux through the operating system's accessibility tree.","@type":"Answer"}},{"name":"How is it different from screenshot-based computer use?","@type":"Question","acceptedAnswer":{"text":"Screenshot-based agents look at an image and guess where to click. Agent-desktop reads a structured list of interface elements, gives each a reference and acts on it directly, so it does not depend on pixel positions.","@type":"Answer"}},{"name":"Is agent-desktop safe to use on a work computer?","@type":"Question","acceptedAnswer":{"text":"It carries real risk because an agent that can operate your desktop can do much of what you can. Use a dedicated limited account, an isolated machine or virtual desktop, logging, and human approval for consequential actions. We have not tested it in production.","@type":"Answer"}},{"name":"What licence is it under and how do I install it?","@type":"Question","acceptedAnswer":{"text":"The repository lists the Apache-2.0 licence, and the README gives npm as the install route. It also says Homebrew and Scoop packages were still being submitted when we read it.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Coding Agents in 2026: How Developers Actually Work Now](/blog/ai-coding-agents-2026-how-developers-actually-work-now/)
-- [Google's Gemini Agent: What a Universal Work Agent Actually Changes](/blog/google-gemini-agent-universal-work-agent/)
-- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 
 ## Sources
 

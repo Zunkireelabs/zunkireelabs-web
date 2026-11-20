@@ -256,7 +256,8 @@
   {# hasServiceFaqs: location x service pages that render their own FAQ block (and FAQPage schema) in the layout #}
   {# A page body that already carries its own FAQPage JSON-LD (SEOAI:QACONTENT) wins; emitting a second one makes duplicate FAQPage entities #}
   {%- set bodyHasFaqSchema = ('"FAQPage"' in (content | string)) -%}
-  {% if pageFaqs and not hasServiceFaqs and not bodyHasFaqSchema %}
+  {# suppressFaqSchema: pages whose visible FAQ is different from the generic service FAQs this block would emit (location x service pages without their own FAQ show the city FAQs instead) #}
+  {% if pageFaqs and not hasServiceFaqs and not suppressFaqSchema and not bodyHasFaqSchema %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -279,7 +280,8 @@
 
   <!-- Schema.org - WebPage freshness (machine-readable only; dates come from git history via scripts/gen-page-dates.mjs) -->
   {%- set pd = pageDates[page.inputPath] -%}
-  {% if pd and schemaType != "article" %}
+  {# hasOwnWebPage: the page or its layout writes its own top-level WebPage schema (with about/mainEntity and the same git-derived dates); a second WebPage for the same URL would conflict #}
+  {% if pd and schemaType != "article" and not hasOwnWebPage %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

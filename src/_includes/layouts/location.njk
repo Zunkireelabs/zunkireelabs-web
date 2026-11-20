@@ -77,8 +77,24 @@ layout: base.njk
    here or by the generator that writes it — see server/generators/schema.js.
    ===================================================== #}
 {% if location.reviewSchema %}
+{% set rsDates = pageDates[page.inputPath] %}
 <script type="application/ld+json">
+{% if location.reviewSchema['@type'] == "Article" %}
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ location.reviewSchema.headline | dump | safe }},
+  "articleBody": {{ location.reviewSchema.articleBody | dump | safe }},
+  "image": "{{ site.url }}{{ site.meta.ogImage }}",
+  "author": { "@type": "Organization", "name": "Zunkiree Labs", "url": "{{ site.url }}" },
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  {% if rsDates %}"datePublished": "{{ rsDates.published }}",
+  "dateModified": "{{ rsDates.modified }}",
+  {% endif %}"mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" }
+}
+{% else %}
 {{ location.reviewSchema | dump | safe }}
+{% endif %}
 </script>
 {% endif %}
 

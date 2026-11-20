@@ -20,6 +20,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026.svg"
 ogType: article
+related:
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
+  - /blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -81,12 +85,6 @@ NVIDIA's GTC Berlin announcements treat agent safety as something built into inf
 To design an agent with clear limits, see our whitepaper on [AI agents for business](/resources/ai-agents-for-business-whitepaper/), our [AI governance checklist](/resources/ai-governance-data-privacy-sme-whitepaper/), or talk to us about [custom AI agent development](/solutions/custom-agent/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is NVIDIA OpenShell?</p><p class="text-gray-600 leading-relaxed">OpenShell is NVIDIA's secure runtime for AI agents, which controls what an agent can access and do. The OpenShell Reference Architecture, announced on 21 October 2026, is NVIDIA's design for building, containing, observing and enforcing safe agents on enterprise and edge systems.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is OpenShell open source?</p><p class="text-gray-600 leading-relaxed">Coverage of the launch reports that it is released under the Apache 2.0 licence. Check NVIDIA's repository for the licence terms that apply to each component.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the Agent Knowledge Foundation?</p><p class="text-gray-600 leading-relaxed">It is an expansion of NVIDIA's Agent Toolkit announced on 21 October 2026. It includes Nemotron Retriever, Auto-Ontology and the Kumo model family, and is meant to ground enterprise agents in company data without moving it.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">When is Vera Rubin available on Google Cloud?</p><p class="text-gray-600 leading-relaxed">Google Cloud's first A5X instances on Vera Rubin went live on 21 October 2026, with general availability planned for November 2026.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do small businesses need any of this?</p><p class="text-gray-600 leading-relaxed">Not the hardware. The principle applies at any size: limit what an agent can do, log its actions and keep it connected to data you already control.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is NVIDIA OpenShell?","@type":"Question","acceptedAnswer":{"text":"OpenShell is NVIDIA's secure runtime for AI agents, which controls what an agent can access and do. The OpenShell Reference Architecture, announced on 21 October 2026, is NVIDIA's design for building, containing, observing and enforcing safe agents on enterprise and edge systems.","@type":"Answer"}},{"name":"Is OpenShell open source?","@type":"Question","acceptedAnswer":{"text":"Coverage of the launch reports that it is released under the Apache 2.0 licence. Check NVIDIA's repository for the licence terms that apply to each component.","@type":"Answer"}},{"name":"What is the Agent Knowledge Foundation?","@type":"Question","acceptedAnswer":{"text":"It is an expansion of NVIDIA's Agent Toolkit announced on 21 October 2026. It includes Nemotron Retriever, Auto-Ontology and the Kumo model family, and is meant to ground enterprise agents in company data without moving it.","@type":"Answer"}},{"name":"When is Vera Rubin available on Google Cloud?","@type":"Question","acceptedAnswer":{"text":"Google Cloud's first A5X instances on Vera Rubin went live on 21 October 2026, with general availability planned for November 2026.","@type":"Answer"}},{"name":"Do small businesses need any of this?","@type":"Question","acceptedAnswer":{"text":"Not the hardware. The principle applies at any size: limit what an agent can do, log its actions and keep it connected to data you already control.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [FTC Probes AI Labs Over Rogue Agents: What to Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
-- [AI Reverse Engineering in 2026: How Coding Agents Now Drive Ghidra and IDA](/blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp/)
 
 ## Sources
 

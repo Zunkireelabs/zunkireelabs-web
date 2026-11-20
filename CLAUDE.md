@@ -225,6 +225,34 @@ zunkiree-labs/
 - Comparison tables for "[X] vs [Y]" content
 - Statistics with named sources
 
+### FAQ design (only two exist, do not invent a third)
+
+| Where | Design | How |
+|---|---|---|
+| Blog posts, every resource page (including the resources index), glossary terms | **Grey card** | One bordered box, "Frequently asked questions" heading, then question and answer pairs |
+| Home, about, contact, pricing, products, GaaS, locations, comparisons, solutions | **Accordion** (click to open) | The page's existing `faqs` front matter or `<details>` pattern |
+
+Grey card markup. Copy it exactly. The two forms render identically; the blog's text styling comes from `blog-post.njk`, so resource and glossary pages carry it explicitly.
+
+Blog posts:
+
+```html
+<!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Question?</p><p class="text-gray-600 leading-relaxed">Answer.</p></div></div></div><script type="application/ld+json">{FAQPage JSON-LD}</script><!-- SEOAI:FAQ:END -->
+```
+
+Resource pages (and the glossary layout):
+
+```html
+<!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Question?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Answer.</p></div></div></div><script type="application/ld+json">{FAQPage JSON-LD}</script><!-- SEOAI:FAQ:END -->
+```
+
+Rules for every FAQ:
+- The FAQPage JSON-LD must list exactly the questions shown on the page, with the same wording. No schema-only FAQ, no hidden questions.
+- One FAQ per page. Do not add a second block, and do not repeat a sentence that is already in the body word for word.
+- One FAQPage, one Article-type and one WebPage schema block per URL. A page that writes its own WebPage sets `hasOwnWebPage: true`.
+- Related posts use `related:` in the front matter (rendered as cards by `blog-post.njk`), never a bulleted list in the body.
+- `npm run check:pages` (also run in CI) fails on any of the above.
+
 ### Schema
 - **Global**: Organization, WebSite
 - **Products**: SoftwareApplication, FAQPage

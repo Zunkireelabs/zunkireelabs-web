@@ -15,6 +15,12 @@ featuredImage: "/assets/images/blog/ai-agents-are-getting-their-own-infrastructu
 featuredImageCredit: "Photo by RDNE Stock project on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/6415626/pexels-photo-6415626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+related:
+  - /blog/what-is-orca-workflow-orchestration-layer-explained/
+  - /blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp/
+  - /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -27,7 +33,6 @@ ogImageUrl: "https://images.pexels.com/photos/6415626/pexels-photo-6415626.jpeg?
 - Armadin raised $255.5 million to run always-on agent swarms that test enterprise security.
 - Photon raised $4.5 million to build agents that work inside messaging apps such as iMessage and WhatsApp.
 - Airbnb's CEO says the industry still lacks a true AI operating system, and that apps and agents need to become interoperable.
-
 
 ## What Is Agentic AI, and Why Is It in the News Again?
 
@@ -76,14 +81,6 @@ Taken together, the three stories show a market maturing from "look what an agen
 You do not need an operating system for agents to begin. A sensible first project is a single, well-defined workflow, such as answering customer questions from your own documents or booking appointments, with a human review step and clear success measures. If you want background on agent-led commerce, see our guide to [what agentic commerce is](/blog/what-is-agentic-commerce/), and for the managed-service model, read about [agentic as a service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/). If you are comparing partners, our checklist for [choosing an AI development company](/blog/how-to-choose-ai-development-company/) covers what to ask.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is agentic AI?</p><p class="text-gray-600 leading-relaxed">Agentic AI refers to software that does not just answer a question but takes actions toward a goal. It plans steps, uses tools, talks to other software, and works with limited supervision. A chatbot tells you how to book a flight; an agent books it.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is an agent swarm?</p><p class="text-gray-600 leading-relaxed">In TechCrunch's report on the security startup Armadin, agent swarms are groups of AI agents that run continuously and chain vulnerabilities together to try to break into an enterprise. The idea is to find and fix weaknesses before attackers do, as an alternative to point-in-time penetration tests.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is MCP?</p><p class="text-gray-600 leading-relaxed">MCP is a standard that lets AI agents connect with other software, as described in TechCrunch's interview with Airbnb CEO Brian Chesky. He expects agents connected through MCP to make apps interoperable that were never integrated through a business deal.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How should a business start with AI agents?</p><p class="text-gray-600 leading-relaxed">Start with one well-defined workflow, such as answering customer questions from your own documents or booking appointments, with a human review step and clear success measures. Expand only when the results justify it.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is agentic AI?","@type":"Question","acceptedAnswer":{"text":"Agentic AI refers to software that does not just answer a question but takes actions toward a goal. It plans steps, uses tools, talks to other software, and works with limited supervision. A chatbot tells you how to book a flight; an agent books it.","@type":"Answer"}},{"name":"What is an agent swarm?","@type":"Question","acceptedAnswer":{"text":"In TechCrunch's report on the security startup Armadin, agent swarms are groups of AI agents that run continuously and chain vulnerabilities together to try to break into an enterprise. The idea is to find and fix weaknesses before attackers do, as an alternative to point-in-time penetration tests.","@type":"Answer"}},{"name":"What is MCP?","@type":"Question","acceptedAnswer":{"text":"MCP is a standard that lets AI agents connect with other software, as described in TechCrunch's interview with Airbnb CEO Brian Chesky. He expects agents connected through MCP to make apps interoperable that were never integrated through a business deal.","@type":"Answer"}},{"name":"How should a business start with AI agents?","@type":"Question","acceptedAnswer":{"text":"Start with one well-defined workflow, such as answering customer questions from your own documents or booking appointments, with a human review step and clear success measures. Expand only when the results justify it.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
-- [AI Coding Agents: What Microsoft's Copilot Rethink Means](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [AI Reverse Engineering in 2026: How Coding Agents Now Drive Ghidra and IDA](/blog/ai-reverse-engineering-coding-agents-ghidra-ida-mcp/)
-- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 
 ## Sources
 

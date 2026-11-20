@@ -16,6 +16,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/how-much-does-an-ai-agent-cost-what-drives-the-price.svg"
 ogType: article
+related:
+  - /blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/
+  - /blog/how-to-choose-ai-development-company/
+  - /blog/essential-steps-for-successful-ai-implementation/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -97,12 +101,6 @@ AI agent cost depends on the job: what it must do, what it connects to, how clea
 If you would like a scoped estimate, see our [custom AI agent development](/solutions/custom-agent/) service.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How much does it cost to build an AI agent?</p><p class="text-gray-600 leading-relaxed">It depends on scope, integrations, data quality, testing and risk. A simple question-answering agent is far cheaper than one that books into several systems and escalates safely. A reliable quote needs a look at your processes and systems.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What are the ongoing costs of an AI agent?</p><p class="text-gray-600 leading-relaxed">Model usage, hosting, voice or messaging fees, monitoring and improvement as your business changes. Ask for these separately from the build cost and at your expected volume.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why are integrations expensive?</p><p class="text-gray-600 leading-relaxed">Reading and writing live data in your booking, CRM or records systems requires careful design, security and testing, and it is where most failures happen. The conversation is often the easier part.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should I choose a fixed price or a subscription?</p><p class="text-gray-600 leading-relaxed">A fixed fee works when scope is clear. A subscription suits agents that need ongoing running and improvement. Whichever you choose, make sure the success measure and ownership terms are written down.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How much does it cost to build an AI agent?","@type":"Question","acceptedAnswer":{"text":"It depends on scope, integrations, data quality, testing and risk. A simple question-answering agent is far cheaper than one that books into several systems and escalates safely. A reliable quote needs a look at your processes and systems.","@type":"Answer"}},{"name":"What are the ongoing costs of an AI agent?","@type":"Question","acceptedAnswer":{"text":"Model usage, hosting, voice or messaging fees, monitoring and improvement as your business changes. Ask for these separately from the build cost and at your expected volume.","@type":"Answer"}},{"name":"Why are integrations expensive?","@type":"Question","acceptedAnswer":{"text":"Reading and writing live data in your booking, CRM or records systems requires careful design, security and testing, and it is where most failures happen. The conversation is often the easier part.","@type":"Answer"}},{"name":"Should I choose a fixed price or a subscription?","@type":"Question","acceptedAnswer":{"text":"A fixed fee works when scope is clear. A subscription suits agents that need ongoing running and improvement. Whichever you choose, make sure the success measure and ownership terms are written down.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Agent Pricing: Per Seat, Per Task or Per Outcome?](/blog/outcome-based-pricing-for-ai-agents-per-seat-per-task-per-outcome/)
-- [How to Choose an AI Development Company](/blog/how-to-choose-ai-development-company/)
-- [Essential Steps for Successful AI Implementation](/blog/essential-steps-for-successful-ai-implementation/)
 
 ## Sources
 

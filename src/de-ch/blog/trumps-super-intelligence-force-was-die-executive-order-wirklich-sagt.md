@@ -10,6 +10,9 @@ translationKey: "trump-super-intelligence-force-what-the-executive-order-says"
 category: "Einblicke"
 pillar: "ai-society"
 readTime: 6
+related:
+  - /de-ch/blog/was-ist-superintelligenz-und-warum-heisst-sie-so/
+  - /de-ch/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 6
 - Die am 4. Oktober angekündigte Super Intelligence Force wird vom Direktor der Nationalen Nachrichtendienste, Jay Clayton, geleitet und hat 120 Tage für einen Bericht.
 - Tech-Manager unterzeichneten im Weissen Haus eine Sicherheitsvereinbarung. Trump nannte sie «moralisch bindend», rechtlich durchsetzbar ist sie nicht.
 - Viele Details, darunter die vollständige Unterzeichnerliste und die Zusagen selbst, sind nicht öffentlich.
-
 
 ## Was sagt die Executive Order?
 
@@ -70,11 +72,6 @@ Die US-Regierung hat KI im Bundesgebrauch in «Super Intelligence» umbenannt, e
 Mehr Kontext bietet unser Überblick zu [KI-Trends und Prognosen für 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist die Super Intelligence Force?</p><p class="text-gray-600 leading-relaxed">Eine am 4. Oktober 2026 angekündigte US-Bundes-Task-Force unter Vorsitz des Direktors der Nationalen Nachrichtendienste, Jay Clayton, die 120 Tage Zeit hat, einen Bericht zu Risiken und Chancen fortgeschrittener KI vorzulegen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Hat Trump KI in Super Intelligence umbenannt?</p><p class="text-gray-600 leading-relaxed">Ja, innerhalb der Bundesregierung. Eine am 29. September 2026 gemeldete Executive Order benennt «Artificial Intelligence» in der gesamten Exekutive in «Super Intelligence» (SI) um und verlangt binnen 60 Tagen einen Gesetzestext, der die Begriffe definiert.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Ist die KI-Sicherheitsvereinbarung rechtlich bindend?</p><p class="text-gray-600 leading-relaxed">Nein. Trump nannte sie «morally binding», rechtlich durchsetzbar ist sie nicht. Kritiker wie Senator Blumenthal weisen darauf hin, dass Unternehmen ohne rechtliche Folgen aussteigen können.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Bedeutet das, dass Superintelligenz erreicht wurde?</p><p class="text-gray-600 leading-relaxed">Nein. Es geht um Terminologie und Organisation. Bei keinem System besteht Einigkeit, dass es Superintelligenz erreicht hat.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was ist die Super Intelligence Force?","@type":"Question","acceptedAnswer":{"text":"Eine am 4. Oktober 2026 angekündigte US-Bundes-Task-Force unter Vorsitz des Direktors der Nationalen Nachrichtendienste, Jay Clayton, die 120 Tage Zeit hat, einen Bericht zu Risiken und Chancen fortgeschrittener KI vorzulegen.","@type":"Answer"}},{"name":"Hat Trump KI in Super Intelligence umbenannt?","@type":"Question","acceptedAnswer":{"text":"Ja, innerhalb der Bundesregierung. Eine am 29. September 2026 gemeldete Executive Order benennt «Artificial Intelligence» in der gesamten Exekutive in «Super Intelligence» (SI) um und verlangt binnen 60 Tagen einen Gesetzestext, der die Begriffe definiert.","@type":"Answer"}},{"name":"Ist die KI-Sicherheitsvereinbarung rechtlich bindend?","@type":"Question","acceptedAnswer":{"text":"Nein. Trump nannte sie «morally binding», rechtlich durchsetzbar ist sie nicht. Kritiker wie Senator Blumenthal weisen darauf hin, dass Unternehmen ohne rechtliche Folgen aussteigen können.","@type":"Answer"}},{"name":"Bedeutet das, dass Superintelligenz erreicht wurde?","@type":"Question","acceptedAnswer":{"text":"Nein. Es geht um Terminologie und Organisation. Bei keinem System besteht Einigkeit, dass es Superintelligenz erreicht hat.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Was ist Superintelligenz und warum heisst sie so?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Quellen
 

@@ -94,15 +94,7 @@ slug: mcp-agent-security-checklist-business-whitepaper
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is MCP?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">The Model Context Protocol is an open standard that lets AI agents connect to tools and data, such as a calendar, a database or a cloud account, through one common interface.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is the new MCP specification more secure?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It removes some older risks, including protocol-managed sessions and weak OAuth grants, but Akamai researchers also identified new attack surfaces because responsibility for verifying state moved to implementers.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the OWASP MCP Top 10?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">An OWASP project listing the ten most likely ways to compromise an MCP deployment. It is in beta and labelled with the 2025 edition, so use it as a question sheet and expect changes.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should I ask an agent supplier first?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Three things: what permissions the agent has and who reviews them, where its credentials are stored and how often they rotate, and whether you can see a log of everything it did last week.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What is MCP?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">The Model Context Protocol is an open standard that lets AI agents connect to tools and data, such as a calendar, a database or a cloud account, through one common interface.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Is the new MCP specification more secure?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">It removes some older risks, including protocol-managed sessions and weak OAuth grants, but Akamai researchers also identified new attack surfaces because responsibility for verifying state moved to implementers.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What is the OWASP MCP Top 10?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">An OWASP project listing the ten most likely ways to compromise an MCP deployment. It is in beta and labelled with the 2025 edition, so use it as a question sheet and expect changes.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What should I ask an agent supplier first?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Three things: what permissions the agent has and who reviews them, where its credentials are stored and how often they rotate, and whether you can see a log of everything it did last week.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -124,6 +116,9 @@ slug: mcp-agent-security-checklist-business-whitepaper
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

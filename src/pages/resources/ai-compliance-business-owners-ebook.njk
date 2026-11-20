@@ -162,15 +162,7 @@ slug: ai-compliance-business-owners-ebook
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does the EU AI Act apply to a business outside the EU?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It can. Law-firm summaries describe two routes: placing an AI system on the EU market, including software used by EU customers, and cases where the output of an AI system is used in the EU. Whether it applies to you depends on the facts, so ask a qualified lawyer.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Which EU AI Act rules apply now?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">As reported in October 2026, the Article 50 transparency duties have applied since 2 August 2026, for example telling people when they are interacting with an AI system. The heavier high-risk obligations were delayed to 2 December 2027 and 2 August 2028.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">If a contract promises data protection, is the data safe from foreign authorities?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not entirely. Canada's privacy regulator says no contract can override the criminal, national security or any other laws of the country to which the information has been transferred. A contract is still needed, but where data is processed remains a risk factor.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is this ebook legal advice?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. It summarises published regulator and law-firm sources as of the dates shown in the Sources section. Laws change, so confirm each point with a qualified lawyer in your market.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does the EU AI Act apply to a business outside the EU?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">It can. Law-firm summaries describe two routes: placing an AI system on the EU market, including software used by EU customers, and cases where the output of an AI system is used in the EU. Whether it applies to you depends on the facts, so ask a qualified lawyer.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Which EU AI Act rules apply now?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">As reported in October 2026, the Article 50 transparency duties have applied since 2 August 2026, for example telling people when they are interacting with an AI system. The heavier high-risk obligations were delayed to 2 December 2027 and 2 August 2028.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">If a contract promises data protection, is the data safe from foreign authorities?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Not entirely. Canada's privacy regulator says no contract can override the criminal, national security or any other laws of the country to which the information has been transferred. A contract is still needed, but where data is processed remains a risk factor.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Is this ebook legal advice?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">No. It summarises published regulator and law-firm sources as of the dates shown in the Sources section. Laws change, so confirm each point with a qualified lawyer in your market.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -192,6 +184,9 @@ slug: ai-compliance-business-owners-ebook
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

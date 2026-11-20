@@ -10,6 +10,9 @@ translationKey: "robotaxis-first-responders-california-law-future-of-autonomous-
 category: "Inzichten"
 pillar: "future-of-industries"
 readTime: 7
+related:
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 7
 - Er kunnen boetes worden opgelegd als een robotaxi hulpdiensten langer dan 30 minuten blokkeert.
 - Remote-bestuurders moeten in de VS gevestigd zijn en een Amerikaans rijbewijs hebben.
 - De wet gaat in juli 2028 in, en de Californische DMV (voertuigenregistratie) stelt details vast, zoals reactietijden.
-
 
 ## Wat doet de nieuwe robotaxiwet van Californië?
 
@@ -81,11 +83,6 @@ De wet gaat pas in juli 2028 in, en details zoals reactietijden moeten nog door 
 Als u een AI- of automatiseringsproject plant en wilt nadenken over toezicht en escalatie, kunt u onze gids over het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/) lezen, [agentic as a service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/) verkennen of [contact opnemen](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat doet SB 1246 van Californië?</p><p class="text-gray-600 leading-relaxed">De wet verplicht bedrijven met autonome voertuigen om hulpdiensten lokale ondersteuning ter plaatse te bieden en lokale overheden te informeren bij systeemwijde storingen, en staat boetes toe als een voertuig politie of brandweer langer dan 30 minuten blokkeert.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wanneer gaat de wet in?</p><p class="text-gray-600 leading-relaxed">In juli 2028. Het Californische Department of Motor Vehicles stelt richtlijnen vast voor bepaalde aspecten, waaronder de vereiste reactietijden.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is het verschil tussen besturen op afstand en hulp op afstand?</p><p class="text-gray-600 leading-relaxed">Besturen op afstand betekent dat een mens een voertuig van een afstand rechtstreeks bestuurt. Bij hulp op afstand houdt het zelfrijdende systeem de controle terwijl een mens zo nodig aanwijzingen geeft of softwarecommando's verstuurt. De term «remote-bestuurders» in de wet verwijst specifiek naar het eerste.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat kunnen bedrijven die automatisering inzetten van deze wet meenemen?</p><p class="text-gray-600 leading-relaxed">Leg vóór de lancering vast wie verantwoordelijk is voor elke storing, hoe die persoon bereikbaar is, hoe snel elke escalatiestap moet plaatsvinden, hoe het systeem kan worden gepauzeerd of overruled, wat wordt vastgelegd en wie wordt geïnformeerd.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat doet SB 1246 van Californië?","@type":"Question","acceptedAnswer":{"text":"De wet verplicht bedrijven met autonome voertuigen om hulpdiensten lokale ondersteuning ter plaatse te bieden en lokale overheden te informeren bij systeemwijde storingen, en staat boetes toe als een voertuig politie of brandweer langer dan 30 minuten blokkeert.","@type":"Answer"}},{"name":"Wanneer gaat de wet in?","@type":"Question","acceptedAnswer":{"text":"In juli 2028. Het Californische Department of Motor Vehicles stelt richtlijnen vast voor bepaalde aspecten, waaronder de vereiste reactietijden.","@type":"Answer"}},{"name":"Wat is het verschil tussen besturen op afstand en hulp op afstand?","@type":"Question","acceptedAnswer":{"text":"Besturen op afstand betekent dat een mens een voertuig van een afstand rechtstreeks bestuurt. Bij hulp op afstand houdt het zelfrijdende systeem de controle terwijl een mens zo nodig aanwijzingen geeft of softwarecommando's verstuurt. De term “remote-bestuurders” in de wet verwijst specifiek naar het eerste.","@type":"Answer"}},{"name":"Wat kunnen bedrijven die automatisering inzetten van deze wet meenemen?","@type":"Question","acceptedAnswer":{"text":"Leg vóór de lancering vast wie verantwoordelijk is voor elke storing, hoe die persoon bereikbaar is, hoe snel elke escalatiestap moet plaatsvinden, hoe het systeem kan worden gepauzeerd of overruled, wat wordt vastgelegd en wie wordt geïnformeerd.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Meer inzichten
-
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Bron
 
