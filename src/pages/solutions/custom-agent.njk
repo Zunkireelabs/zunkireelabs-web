@@ -1,4 +1,5 @@
 ---
+hasOwnWebPage: true
 layout: base.njk
 title: "Custom AI Agent Development Company | Zunkiree Labs" # SEOAI:TITLE
 description: "AI agent development company building custom autonomous agents for one workflow at a time: your rules, bounded authority and a full audit trail."
@@ -585,7 +586,8 @@ faqs:
       "publisher": {
         "@id": "https://zunkireelabs.com/#organization"
       },
-      "dateModified": "2026-10-09",
+      "datePublished": "{{ pageDates[page.inputPath].published if pageDates[page.inputPath] else '2026-10-09' }}",
+      "dateModified": "{{ pageDates[page.inputPath].modified if pageDates[page.inputPath] else '2026-10-09' }}",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [

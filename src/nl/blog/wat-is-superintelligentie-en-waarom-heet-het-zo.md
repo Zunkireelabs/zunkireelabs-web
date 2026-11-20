@@ -10,6 +10,9 @@ translationKey: "what-is-superintelligence-and-why-is-it-called-that"
 category: "Inzichten"
 pillar: "ai-frontier"
 readTime: 8
+related:
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 8
 - AGI betekent grofweg algemene vaardigheid op menselijk niveau; superintelligentie betekent algemene vaardigheid die dat duidelijk overtreft.
 - Er is geen algemeen aanvaarde test voor AGI en er is geen afgesproken eindstreep voor superintelligentie.
 - Het debat gaat vooral over veiligheid: controle, alignment en de vraag of zorgen gehoord worden.
-
 
 ## Wat is superintelligentie?
 
@@ -79,11 +81,6 @@ Superintelligentie is het idee van AI die over de hele linie ver boven het mense
 Lees ons overzicht van [AI-trends en voorspellingen voor 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/) om te zien hoe dit in het grotere geheel past, of bekijk onze checklist voor het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is superintelligentie?</p><p class="text-gray-600 leading-relaxed">Superintelligentie is een hypothetische vorm van kunstmatige intelligentie die veel slimmer zou zijn dan mensen op vrijwel elk gebied dat ertoe doet, van wetenschap en strategie tot creativiteit en sociale vaardigheid.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Waarom heet het superintelligentie?</p><p class="text-gray-600 leading-relaxed">Het voorvoegsel “super” komt van het Latijnse woord voor “boven” of “voorbij”, dus het woord zegt wat het idee is: intelligentie die verder gaat dan het menselijke bereik, in dezelfde zin waarin “supersonisch” sneller dan het geluid betekent.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is het verschil tussen AGI en superintelligentie?</p><p class="text-gray-600 leading-relaxed">AGI, algemene kunstmatige intelligentie, betekent AI die een breed scala aan taken kan leren en uitvoeren op ongeveer menselijk niveau. Superintelligentie, soms ASI genoemd, is de stap daarna: algemene vaardigheid die de menselijke duidelijk overtreft.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Bestaat superintelligentie vandaag al?</p><p class="text-gray-600 leading-relaxed">Er is geen systeem waarvan algemeen wordt aangenomen dat het superintelligent is. Er is geen algemeen aanvaarde test voor wanneer iets als AGI geldt en geen afgesproken eindstreep voor superintelligentie, dus uitspraken over dichtbij zijn zijn moeilijk te vergelijken.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat is superintelligentie?","@type":"Question","acceptedAnswer":{"text":"Superintelligentie is een hypothetische vorm van kunstmatige intelligentie die veel slimmer zou zijn dan mensen op vrijwel elk gebied dat ertoe doet, van wetenschap en strategie tot creativiteit en sociale vaardigheid.","@type":"Answer"}},{"name":"Waarom heet het superintelligentie?","@type":"Question","acceptedAnswer":{"text":"Het voorvoegsel “super” komt van het Latijnse woord voor “boven” of “voorbij”, dus het woord zegt wat het idee is: intelligentie die verder gaat dan het menselijke bereik, in dezelfde zin waarin “supersonisch” sneller dan het geluid betekent.","@type":"Answer"}},{"name":"Wat is het verschil tussen AGI en superintelligentie?","@type":"Question","acceptedAnswer":{"text":"AGI, algemene kunstmatige intelligentie, betekent AI die een breed scala aan taken kan leren en uitvoeren op ongeveer menselijk niveau. Superintelligentie, soms ASI genoemd, is de stap daarna: algemene vaardigheid die de menselijke duidelijk overtreft.","@type":"Answer"}},{"name":"Bestaat superintelligentie vandaag al?","@type":"Question","acceptedAnswer":{"text":"Er is geen systeem waarvan algemeen wordt aangenomen dat het superintelligent is. Er is geen algemeen aanvaarde test voor wanneer iets als AGI geldt en geen afgesproken eindstreep voor superintelligentie, dus uitspraken over dichtbij zijn zijn moeilijk te vergelijken.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Bronnen
 

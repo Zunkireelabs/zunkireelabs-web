@@ -22,6 +22,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/virtual-data-room-for-real-estate-offerings-access-control-audit-and-checklist.svg"
 ogType: article
+related:
+  - /blog/how-cre-sponsors-run-a-capital-raise-workflow-from-offering-to-close/
+  - /blog/investor-commitment-tracking-for-real-estate-sponsors-soft-hard-and-funded/
+  - /blog/ensuring-patient-data-security-essential-measures-for-healthcare-providers/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -115,12 +119,6 @@ Our real estate platform includes a secure data room with document access contro
 To talk through your own situation, see our [AI for Real Estate page](/industries/real-estate/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a virtual data room?</p><p class="text-gray-600 leading-relaxed">It is a controlled online space for sharing sensitive documents with defined people, with permissions, activity logs and version control, used for deals, diligence and capital raises.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why not share documents by email or open links?</p><p class="text-gray-600 leading-relaxed">Email and open links give you little control over who sees what, no reliable record of access, and make it hard to update files or withdraw access.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should a real estate data room contain?</p><p class="text-gray-600 leading-relaxed">Overview and terms, property information, financials, market analysis, legal documents, sponsor track record, subscription materials and a Q&amp;A log, as approved by counsel.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do watermarks help?</p><p class="text-gray-600 leading-relaxed">A watermark with the viewer's name and date discourages leaks and helps trace the source if a document is shared without permission.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should AI features be used on data room documents?</p><p class="text-gray-600 leading-relaxed">Only if they respect the same access controls and your provider's data handling meets your requirements. Check how documents are processed and stored.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a virtual data room?","@type":"Question","acceptedAnswer":{"text":"It is a controlled online space for sharing sensitive documents with defined people, with permissions, activity logs and version control, used for deals, diligence and capital raises.","@type":"Answer"}},{"name":"Why not share documents by email or open links?","@type":"Question","acceptedAnswer":{"text":"Email and open links give you little control over who sees what, no reliable record of access, and make it hard to update files or withdraw access.","@type":"Answer"}},{"name":"What should a real estate data room contain?","@type":"Question","acceptedAnswer":{"text":"Overview and terms, property information, financials, market analysis, legal documents, sponsor track record, subscription materials and a Q&A log, as approved by counsel.","@type":"Answer"}},{"name":"How do watermarks help?","@type":"Question","acceptedAnswer":{"text":"A watermark with the viewer's name and date discourages leaks and helps trace the source if a document is shared without permission.","@type":"Answer"}},{"name":"Should AI features be used on data room documents?","@type":"Question","acceptedAnswer":{"text":"Only if they respect the same access controls and your provider's data handling meets your requirements. Check how documents are processed and stored.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [How CRE Sponsors Run a Capital Raise: Workflow From Offering to Close](/blog/how-cre-sponsors-run-a-capital-raise-workflow-from-offering-to-close/)
-- [Investor Commitment Tracking for Real Estate Sponsors: Soft, Hard and Funded](/blog/investor-commitment-tracking-for-real-estate-sponsors-soft-hard-and-funded/)
-- [Ensuring Patient Data Security: Essential Measures for Healthcare Providers](/blog/ensuring-patient-data-security-essential-measures-for-healthcare-providers/)
 
 ## Sources
 

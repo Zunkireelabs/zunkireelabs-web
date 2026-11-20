@@ -14,6 +14,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/gemma-4-open-model-what-apache-2-license-means-for-business.svg"
 ogType: article
+related:
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -26,7 +30,6 @@ ogType: article
 - "Open-weight" means you can download the model and run it yourself; a closed API means the provider runs it and you send your data to them.
 - Apache 2.0 is a permissive license that allows commercial use, but you should read the license text and the model card yourself.
 - Benchmark rankings are Google's claims at launch. Test the model on your own documents before you commit.
-
 
 ## What Is Gemma 4?
 
@@ -77,12 +80,6 @@ Gemma 4 gives businesses a capable open-weight option under a permissive license
 If you are weighing options, see our checklist for [choosing an AI development company](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is Gemma 4?</p><p class="text-gray-600 leading-relaxed">Gemma 4 is a family of open-weight AI models from Google DeepMind, released on April 2, 2026 in four sizes at launch (Effective 2B, Effective 4B, a 26B Mixture of Experts model and a 31B dense model); Google's model card now also lists a 12B variant.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can I use Gemma 4 in a commercial product?</p><p class="text-gray-600 leading-relaxed">Google says Gemma 4 is released under the Apache 2.0 license, which is a permissive license that generally allows commercial use. Read the license text and the model card, and ask a lawyer if your product depends on the terms.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the difference between an open-weight model and a closed API?</p><p class="text-gray-600 leading-relaxed">With a closed API the provider runs the model and you send your data to it. With an open-weight model you download the model files and run them on your own hardware or cloud account, which gives you more control but also more operational work.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should my business self-host Gemma 4?</p><p class="text-gray-600 leading-relaxed">It depends on your data sensitivity, usage volume and technical team. Many teams prototype with an API and move stable, high-volume or sensitive workloads to a self-hosted model later. Test on your own documents and languages first.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Gemma 4?","@type":"Question","acceptedAnswer":{"text":"Gemma 4 is a family of open-weight AI models from Google DeepMind, released on April 2, 2026 in four sizes at launch (Effective 2B, Effective 4B, a 26B Mixture of Experts model and a 31B dense model); Google's model card now also lists a 12B variant.","@type":"Answer"}},{"name":"Can I use Gemma 4 in a commercial product?","@type":"Question","acceptedAnswer":{"text":"Google says Gemma 4 is released under the Apache 2.0 license, which is a permissive license that generally allows commercial use. Read the license text and the model card, and ask a lawyer if your product depends on the terms.","@type":"Answer"}},{"name":"What is the difference between an open-weight model and a closed API?","@type":"Question","acceptedAnswer":{"text":"With a closed API the provider runs the model and you send your data to it. With an open-weight model you download the model files and run them on your own hardware or cloud account, which gives you more control but also more operational work.","@type":"Answer"}},{"name":"Should my business self-host Gemma 4?","@type":"Question","acceptedAnswer":{"text":"It depends on your data sensitivity, usage volume and technical team. Many teams prototype with an API and move stable, high-volume or sensitive workloads to a self-hosted model later. Test on your own documents and languages first.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/most-fda-cleared-ai-devices-lack-patient-outcome-testing-what-clinics-should-ask.svg"
 ogType: article
+related:
+  - /blog/ai-medical-scribes-what-the-randomized-trial-shows/
+  - /blog/ai-sepsis-early-warning-what-the-evidence-shows/
+  - /blog/ai-in-uk-healthcare-what-to-check-before-you-buy/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -73,12 +77,6 @@ Regulatory clearance is a starting point. Most cleared AI tools have not been sh
 For how we read the evidence in this area, see our [clinical AI evidence digest](/resources/clinical-ai-evidence-digest-2026-report/) and the post on [AI medical scribes and the randomized trial](/blog/ai-medical-scribes-what-the-randomized-trial-shows/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What did the 2026 review of FDA-cleared AI devices find?</p><p class="text-gray-600 leading-relaxed">It found at least 1,357 FDA-cleared AI devices cleared before 5 December 2025, of which 34 were linked to registered prospective trials, 12 had posted results, 12 had peer-reviewed publications and 3 assessed patient outcomes.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does this mean FDA-cleared AI is unsafe?</p><p class="text-gray-600 leading-relaxed">No. It means clearance, which often relies on substantial equivalence to an existing device, does not by itself show that a tool improves patient outcomes. Many tools do have good accuracy evidence.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Which healthcare AI tools are regulated as medical devices?</p><p class="text-gray-600 leading-relaxed">That depends on what the tool does and where you are. Tools that diagnose or guide treatment are more likely to be regulated than administrative tools such as scheduling or messaging. Check with your regulator or legal adviser for your market.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How should a clinic evaluate a healthcare AI tool?</p><p class="text-gray-600 leading-relaxed">Ask where and on whom it was tested, whether it improved outcomes or only accuracy, how it was cleared, how you will check it locally and what happens when it is wrong. Then run a small pilot against a baseline.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What did the 2026 review of FDA-cleared AI devices find?","@type":"Question","acceptedAnswer":{"text":"It found at least 1,357 FDA-cleared AI devices cleared before 5 December 2025, of which 34 were linked to registered prospective trials, 12 had posted results, 12 had peer-reviewed publications and 3 assessed patient outcomes.","@type":"Answer"}},{"name":"Does this mean FDA-cleared AI is unsafe?","@type":"Question","acceptedAnswer":{"text":"No. It means clearance, which often relies on substantial equivalence to an existing device, does not by itself show that a tool improves patient outcomes. Many tools do have good accuracy evidence.","@type":"Answer"}},{"name":"Which healthcare AI tools are regulated as medical devices?","@type":"Question","acceptedAnswer":{"text":"That depends on what the tool does and where you are. Tools that diagnose or guide treatment are more likely to be regulated than administrative tools such as scheduling or messaging. Check with your regulator or legal adviser for your market.","@type":"Answer"}},{"name":"How should a clinic evaluate a healthcare AI tool?","@type":"Question","acceptedAnswer":{"text":"Ask where and on whom it was tested, whether it improved outcomes or only accuracy, how it was cleared, how you will check it locally and what happens when it is wrong. Then run a small pilot against a baseline.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Medical Scribes: What the Randomized Trial Shows](/blog/ai-medical-scribes-what-the-randomized-trial-shows/)
-- [AI Sepsis Early Warning: What the Evidence Shows](/blog/ai-sepsis-early-warning-what-the-evidence-shows/)
-- [AI in UK Healthcare: What to Check Before You Buy](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/)
 
 ## Sources
 

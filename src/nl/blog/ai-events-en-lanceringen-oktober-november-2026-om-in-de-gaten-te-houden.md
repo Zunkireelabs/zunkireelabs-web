@@ -10,6 +10,10 @@ pillar: "ai-frontier"
 readTime: 6
 featuredImage: "/assets/images/blog/ai-events-en-lanceringen-oktober-november-2026-om-in-de-gaten-te-houden.svg"
 featuredImageAlt: "Abstract kleurverloop als achtergrond"
+related:
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
+  - /nl/blog/trumps-super-intelligence-force-wat-de-executive-order-echt-zegt/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -63,12 +67,6 @@ De komende twee maanden zijn druk, maar slechts enkele punten veranderen wat een
 Als je rond AI plant, is onze checklist voor het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/) een nuttige aanvulling.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Welke AI-conferenties vinden plaats in oktober en november 2026?</p><p class="text-gray-600 leading-relaxed">Volgens de organisatoren: AI Engineer New York (12–14 oktober), Open Source AI Week in de Bay Area (16–25 oktober) met de PyTorch Conference North America (20–21 oktober), ODSC AI West (27–29 oktober), Web Summit in Lissabon (9–12 november), AI Engineer Code Summit in San Francisco (10–12 november) en Big Data Conference Europe in Vilnius (25–27 november).</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Gemini 4 Argon al voor iedereen beschikbaar?</p><p class="text-gray-600 leading-relaxed">Niet volgens de berichten over de aankondiging. Google brengt het model gefaseerd uit, eerst voor een kleine groep vertrouwde testers, en heeft geen concrete planning beloofd. De algemene beschikbaarheid zou beginnen met betalende API-gebruikers en abonnees van Google AI Ultra.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Hoe herken ik een echte AI-lancering aan het verschil met een conferentie-aankondiging?</p><p class="text-gray-600 leading-relaxed">Kijk of je het vandaag kunt gebruiken, tegen welke prijs en onder welke voorwaarden. Een keynote of demo is een bewering. Een algemeen beschikbaar product met gepubliceerde prijzen en onafhankelijke tests is iets om op te bouwen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Waar staan de data van de EU-AI-verordening?</p><p class="text-gray-600 leading-relaxed">In onze aparte gids over wat nu geldt en wat is uitgesteld onder de EU-AI-verordening. Die is in dit artikel gelinkt.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Welke AI-conferenties vinden plaats in oktober en november 2026?","@type":"Question","acceptedAnswer":{"text":"Volgens de organisatoren: AI Engineer New York (12–14 oktober), Open Source AI Week in de Bay Area (16–25 oktober) met de PyTorch Conference North America (20–21 oktober), ODSC AI West (27–29 oktober), Web Summit in Lissabon (9–12 november), AI Engineer Code Summit in San Francisco (10–12 november) en Big Data Conference Europe in Vilnius (25–27 november).","@type":"Answer"}},{"name":"Is Gemini 4 Argon al voor iedereen beschikbaar?","@type":"Question","acceptedAnswer":{"text":"Niet volgens de berichten over de aankondiging. Google brengt het model gefaseerd uit, eerst voor een kleine groep vertrouwde testers, en heeft geen concrete planning beloofd. De algemene beschikbaarheid zou beginnen met betalende API-gebruikers en abonnees van Google AI Ultra.","@type":"Answer"}},{"name":"Hoe herken ik een echte AI-lancering aan het verschil met een conferentie-aankondiging?","@type":"Question","acceptedAnswer":{"text":"Kijk of je het vandaag kunt gebruiken, tegen welke prijs en onder welke voorwaarden. Een keynote of demo is een bewering. Een algemeen beschikbaar product met gepubliceerde prijzen en onafhankelijke tests is iets om op te bouwen.","@type":"Answer"}},{"name":"Waar staan de data van de EU-AI-verordening?","@type":"Question","acceptedAnswer":{"text":"In onze aparte gids over wat nu geldt en wat is uitgesteld onder de EU-AI-verordening. Die is in dit artikel gelinkt.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Trump's Super Intelligence Force: What the Order Actually Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
 
 ## Bronnen
 

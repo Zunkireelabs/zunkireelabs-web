@@ -14,6 +14,9 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-everyday-life-what-the-usage-data-shows.svg"
 ogType: article
+related:
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -27,7 +30,6 @@ ogType: article
 - Stanford's 2026 AI Index says generative AI reached 53% population adoption within three years and that adoption tracks GDP per capita. Studies use different definitions, so the numbers should not be compared directly.
 - Experts and the public disagree about jobs: 73% of experts expect a positive impact on how people do their jobs, against 23% of the public.
 - Use is growing faster than trust. About two-thirds of Americans say AI is advancing too quickly.
-
 
 ## The Evidence
 
@@ -83,11 +85,6 @@ This section is expectation, not fact. If current patterns continue, usage will 
 AI is now an everyday tool for roughly half of U.S. adults, mostly for finding information and for work, but only about one in five working-age people worldwide use generative AI, and the gap between richer and poorer regions is growing. Use is rising faster than comfort with it. Read each statistic with its definition, because the surveys measure different things.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How many people use AI chatbots?</p><p class="text-gray-600 leading-relaxed">Pew Research Center found in a February 2026 survey of 5,119 U.S. adults that about half use AI chatbots and roughly one in four use them daily. Microsoft estimates that 18.8% of the world's 15-to-64-year-olds used a generative AI product in Q2 2026.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What do people use AI chatbots for most?</p><p class="text-gray-600 leading-relaxed">Searching for information is the most common use in Pew's survey, at about four in ten U.S. adults. 38% of employed adults say they use chatbots for tasks at work, and 13% use them for news.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why do AI adoption figures differ so much between reports?</p><p class="text-gray-600 leading-relaxed">They measure different things. Pew counts self-reported chatbot use by U.S. adults, Microsoft estimates use of generative AI products among people aged 15 to 64 from telemetry, and Stanford's AI Index reports population adoption. The figures should not be compared directly.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is there an AI divide between rich and poor countries?</p><p class="text-gray-600 leading-relaxed">Yes. Microsoft estimates Q2 2026 usage at 28.8% in the Global North and 16.2% in the Global South and says the gap is widening, and Stanford's AI Index says adoption correlates strongly with GDP per capita.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How many people use AI chatbots?","@type":"Question","acceptedAnswer":{"text":"Pew Research Center found in a February 2026 survey of 5,119 U.S. adults that about half use AI chatbots and roughly one in four use them daily. Microsoft estimates that 18.8% of the world's 15-to-64-year-olds used a generative AI product in Q2 2026.","@type":"Answer"}},{"name":"What do people use AI chatbots for most?","@type":"Question","acceptedAnswer":{"text":"Searching for information is the most common use in Pew's survey, at about four in ten U.S. adults. 38% of employed adults say they use chatbots for tasks at work, and 13% use them for news.","@type":"Answer"}},{"name":"Why do AI adoption figures differ so much between reports?","@type":"Question","acceptedAnswer":{"text":"They measure different things. Pew counts self-reported chatbot use by U.S. adults, Microsoft estimates use of generative AI products among people aged 15 to 64 from telemetry, and Stanford's AI Index reports population adoption. The figures should not be compared directly.","@type":"Answer"}},{"name":"Is there an AI divide between rich and poor countries?","@type":"Question","acceptedAnswer":{"text":"Yes. Microsoft estimates Q2 2026 usage at 28.8% in the Global North and 16.2% in the Global South and says the gap is widening, and Stanford's AI Index says adoption correlates strongly with GDP per capita.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

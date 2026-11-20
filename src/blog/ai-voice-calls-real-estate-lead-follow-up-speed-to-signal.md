@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/ai-voice-calls-real-estate-lead-follow-up-speed-to-signal.svg"
 ogType: article
+related:
+  - /blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/
+  - /blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/
+  - /blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -74,12 +78,6 @@ AI voice agents are a reasonable tool for the dull, high-volume part of real est
 For the full picture, read our [practical guide to AI for real estate](/blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/), our [AI lead response whitepaper](/resources/ai-lead-response-real-estate-whitepaper/) and our [Chayce Properties case study](/resources/chayce-properties-case-study/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is speed to signal in real estate?</p><p class="text-gray-600 leading-relaxed">Speed to signal means responding to behaviour that shows real buying or selling intent, rather than only responding quickly to a new enquiry. The phrase comes from CINC's chief product officer in a HousingWire article published on 16 October 2026.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do AI voice agents actually close more real estate deals?</p><p class="text-gray-600 leading-relaxed">There are no published measured results in the reporting we read. Vendors say follow-up improves, and one brokerage team found cold leads responsive, but nobody has published conversion data. Measure your own before and after.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should AI call fresh leads?</p><p class="text-gray-600 leading-relaxed">One team in the HousingWire article does not use AI calling on fresh leads and keeps those calls with people. Cold, older leads are the lower-risk place to start.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Are there rules on AI calls to leads?</p><p class="text-gray-600 leading-relaxed">Yes, and they vary by country and region. The article does not cover them. Get your own legal advice on automated calls, recording, consent and disclosure before you start.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is speed to signal in real estate?","@type":"Question","acceptedAnswer":{"text":"Speed to signal means responding to behaviour that shows real buying or selling intent, rather than only responding quickly to a new enquiry. The phrase comes from CINC's chief product officer in a HousingWire article published on 16 October 2026.","@type":"Answer"}},{"name":"Do AI voice agents actually close more real estate deals?","@type":"Question","acceptedAnswer":{"text":"There are no published measured results in the reporting we read. Vendors say follow-up improves, and one brokerage team found cold leads responsive, but nobody has published conversion data. Measure your own before and after.","@type":"Answer"}},{"name":"Should AI call fresh leads?","@type":"Question","acceptedAnswer":{"text":"One team in the HousingWire article does not use AI calling on fresh leads and keeps those calls with people. Cold, older leads are the lower-risk place to start.","@type":"Answer"}},{"name":"Are there rules on AI calls to leads?","@type":"Question","acceptedAnswer":{"text":"Yes, and they vary by country and region. The article does not cover them. Get your own legal advice on automated calls, recording, consent and disclosure before you start.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI for Real Estate: A Practical Guide to Lead Follow-Up and Property Chatbots](/blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/)
-- [AI Voice Agents for Appointment Booking: What They Do and When They Fit](/blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/)
-- [How AI and Data Are Changing Real Estate Valuation](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
 
 ## Sources
 

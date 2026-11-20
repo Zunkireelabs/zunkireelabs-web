@@ -14,6 +14,9 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/trump-super-intelligence-force-what-the-executive-order-says.svg"
 ogType: article
+related:
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -26,7 +29,6 @@ ogType: article
 - The Super Intelligence Force, announced on October 4, is chaired by National Intelligence Director Jay Clayton and has 120 days to deliver a report.
 - Tech executives signed a safety pledge at the White House. Trump called it "morally binding", but it is not legally enforceable.
 - Many details, including the full list of signatories and the commitments themselves, have not been made public.
-
 
 ## What Did the Executive Order Say?
 
@@ -74,11 +76,6 @@ The US government has renamed AI "Super Intelligence" in federal usage, created 
 For more context, see our overview of [AI trends and predictions for 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the Super Intelligence Force?</p><p class="text-gray-600 leading-relaxed">It is a US federal task force announced on October 4, 2026, chaired by National Intelligence Director Jay Clayton, with 120 days to report on the risks and opportunities of advanced AI.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Did Trump rename AI to Super Intelligence?</p><p class="text-gray-600 leading-relaxed">Yes, within the federal government. An executive order reported on September 29, 2026 renames "Artificial Intelligence" to "Super Intelligence" (SI) across the executive branch and asks officials to draft legislative language defining the terms within 60 days.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is the AI safety pledge legally binding?</p><p class="text-gray-600 leading-relaxed">No. Trump described it as "morally binding", but it is not legally enforceable, and critics such as Senator Blumenthal note that companies can withdraw without legal consequences.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does this mean superintelligence has been achieved?</p><p class="text-gray-600 leading-relaxed">No. The change is about terminology and organisation. No system is generally agreed to have reached superintelligence.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the Super Intelligence Force?","@type":"Question","acceptedAnswer":{"text":"It is a US federal task force announced on October 4, 2026, chaired by National Intelligence Director Jay Clayton, with 120 days to report on the risks and opportunities of advanced AI.","@type":"Answer"}},{"name":"Did Trump rename AI to Super Intelligence?","@type":"Question","acceptedAnswer":{"text":"Yes, within the federal government. An executive order reported on September 29, 2026 renames \"Artificial Intelligence\" to \"Super Intelligence\" (SI) across the executive branch and asks officials to draft legislative language defining the terms within 60 days.","@type":"Answer"}},{"name":"Is the AI safety pledge legally binding?","@type":"Question","acceptedAnswer":{"text":"No. Trump described it as \"morally binding\", but it is not legally enforceable, and critics such as Senator Blumenthal note that companies can withdraw without legal consequences.","@type":"Answer"}},{"name":"Does this mean superintelligence has been achieved?","@type":"Question","acceptedAnswer":{"text":"No. The change is about terminology and organisation. No system is generally agreed to have reached superintelligence.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Sources
 

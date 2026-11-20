@@ -10,6 +10,10 @@ pillar: "ai-frontier"
 readTime: 8
 featuredImage: "/assets/images/blog/gemma-4-open-model-wat-de-apache-2-0-licentie-betekent-voor-bedrijven.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +26,6 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 - “Open-weight” betekent dat u het model kunt downloaden en zelf kunt draaien; bij een gesloten API draait de aanbieder het model en stuurt u uw gegevens naar hem toe.
 - Apache 2.0 is een permissieve licentie die commercieel gebruik toestaat, maar u moet de licentietekst en de modelkaart zelf lezen.
 - Benchmarkposities zijn beweringen van Google op het moment van lancering. Test het model op uw eigen documenten voordat u zich vastlegt.
-
 
 ## Wat is Gemma 4?
 
@@ -73,12 +76,6 @@ Gemma 4 geeft bedrijven een krachtige open-weight optie onder een permissieve li
 Weegt u opties af, bekijk dan onze checklist voor het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is Gemma 4?</p><p class="text-gray-600 leading-relaxed">Gemma 4 is een familie open-weight AI-modellen van Google DeepMind, uitgebracht op 2 april 2026 in vier groottes: Effective 2B, Effective 4B, een Mixture-of-Experts-model van 26B en een dicht model van 31B.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Mag ik Gemma 4 in een commercieel product gebruiken?</p><p class="text-gray-600 leading-relaxed">Google zegt dat Gemma 4 wordt uitgebracht onder de Apache 2.0-licentie, een permissieve licentie die commercieel gebruik in het algemeen toestaat. Lees de licentietekst en de modelkaart, en vraag een jurist als uw product van de voorwaarden afhangt.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is het verschil tussen een open-weight model en een gesloten API?</p><p class="text-gray-600 leading-relaxed">Bij een gesloten API draait de aanbieder het model en stuurt u uw gegevens naar hem toe. Bij een open-weight model downloadt u de modelbestanden en draait u ze op eigen hardware of in uw eigen cloudaccount, wat meer controle geeft maar ook meer operationeel werk.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Moet mijn bedrijf Gemma 4 zelf hosten?</p><p class="text-gray-600 leading-relaxed">Dat hangt af van de gevoeligheid van uw gegevens, het gebruiksvolume en uw technische team. Veel teams prototypen met een API en verplaatsen stabiele, grootschalige of gevoelige workloads later naar een zelf gehost model. Test eerst op uw eigen documenten en talen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat is Gemma 4?","@type":"Question","acceptedAnswer":{"text":"Gemma 4 is een familie open-weight AI-modellen van Google DeepMind, uitgebracht op 2 april 2026 in vier groottes: Effective 2B, Effective 4B, een Mixture-of-Experts-model van 26B en een dicht model van 31B.","@type":"Answer"}},{"name":"Mag ik Gemma 4 in een commercieel product gebruiken?","@type":"Question","acceptedAnswer":{"text":"Google zegt dat Gemma 4 wordt uitgebracht onder de Apache 2.0-licentie, een permissieve licentie die commercieel gebruik in het algemeen toestaat. Lees de licentietekst en de modelkaart, en vraag een jurist als uw product van de voorwaarden afhangt.","@type":"Answer"}},{"name":"Wat is het verschil tussen een open-weight model en een gesloten API?","@type":"Question","acceptedAnswer":{"text":"Bij een gesloten API draait de aanbieder het model en stuurt u uw gegevens naar hem toe. Bij een open-weight model downloadt u de modelbestanden en draait u ze op eigen hardware of in uw eigen cloudaccount, wat meer controle geeft maar ook meer operationeel werk.","@type":"Answer"}},{"name":"Moet mijn bedrijf Gemma 4 zelf hosten?","@type":"Question","acceptedAnswer":{"text":"Dat hangt af van de gevoeligheid van uw gegevens, het gebruiksvolume en uw technische team. Veel teams prototypen met een API en verplaatsen stabiele, grootschalige of gevoelige workloads later naar een zelf gehost model. Test eerst op uw eigen documenten en talen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Bronnen
 

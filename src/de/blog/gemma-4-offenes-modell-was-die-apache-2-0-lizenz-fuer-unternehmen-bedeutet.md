@@ -10,6 +10,10 @@ pillar: "ai-frontier"
 readTime: 8
 featuredImage: "/assets/images/blog/gemma-4-offenes-modell-was-die-apache-2-0-lizenz-fuer-unternehmen-bedeutet.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
+related:
+  - /de/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
+  - /de/blog/was-ist-superintelligenz-und-warum-heisst-sie-so/
+  - /de/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +26,6 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 - „Offene Gewichte“ bedeutet, dass Sie das Modell herunterladen und selbst betreiben können; bei einer geschlossenen API betreibt der Anbieter das Modell, und Sie senden ihm Ihre Daten.
 - Apache 2.0 ist eine permissive Lizenz, die kommerzielle Nutzung erlaubt. Den Lizenztext und die Model Card sollten Sie trotzdem selbst lesen.
 - Benchmark-Platzierungen sind Googles Angaben zum Zeitpunkt der Veröffentlichung. Testen Sie das Modell an Ihren eigenen Dokumenten, bevor Sie sich festlegen.
-
 
 ## Was ist Gemma 4?
 
@@ -73,12 +76,6 @@ Gemma 4 bietet Unternehmen eine leistungsfähige Option mit offenen Gewichten un
 Wenn Sie Optionen abwägen, finden Sie in unserer Checkliste zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/) weitere Hinweise.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist Gemma 4?</p><p class="text-gray-600 leading-relaxed">Gemma 4 ist eine Familie von KI-Modellen mit offenen Gewichten von Google DeepMind, veröffentlicht am 2. April 2026 in vier Größen: Effective 2B, Effective 4B, ein Mixture-of-Experts-Modell mit 26B und ein dichtes Modell mit 31B.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Darf ich Gemma 4 in einem kommerziellen Produkt einsetzen?</p><p class="text-gray-600 leading-relaxed">Google sagt, Gemma 4 werde unter der Apache-2.0-Lizenz veröffentlicht, einer permissiven Lizenz, die kommerzielle Nutzung in der Regel erlaubt. Lesen Sie den Lizenztext und die Model Card, und fragen Sie eine Juristin oder einen Juristen, wenn Ihr Produkt von den Bedingungen abhängt.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist der Unterschied zwischen einem Modell mit offenen Gewichten und einer geschlossenen API?</p><p class="text-gray-600 leading-relaxed">Bei einer geschlossenen API betreibt der Anbieter das Modell, und Sie senden ihm Ihre Daten. Bei einem Modell mit offenen Gewichten laden Sie die Modelldateien herunter und betreiben sie auf eigener Hardware oder im eigenen Cloud-Konto. Das gibt mehr Kontrolle, bedeutet aber auch mehr Betriebsaufwand.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Sollte mein Unternehmen Gemma 4 selbst betreiben?</p><p class="text-gray-600 leading-relaxed">Das hängt von der Sensibilität Ihrer Daten, dem Nutzungsvolumen und Ihrem technischen Team ab. Viele Teams prototypen mit einer API und verlagern stabile, volumenstarke oder sensible Workloads später auf ein selbst betriebenes Modell. Testen Sie zuerst mit Ihren eigenen Dokumenten und Sprachen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was ist Gemma 4?","@type":"Question","acceptedAnswer":{"text":"Gemma 4 ist eine Familie von KI-Modellen mit offenen Gewichten von Google DeepMind, veröffentlicht am 2. April 2026 in vier Größen: Effective 2B, Effective 4B, ein Mixture-of-Experts-Modell mit 26B und ein dichtes Modell mit 31B.","@type":"Answer"}},{"name":"Darf ich Gemma 4 in einem kommerziellen Produkt einsetzen?","@type":"Question","acceptedAnswer":{"text":"Google sagt, Gemma 4 werde unter der Apache-2.0-Lizenz veröffentlicht, einer permissiven Lizenz, die kommerzielle Nutzung in der Regel erlaubt. Lesen Sie den Lizenztext und die Model Card, und fragen Sie eine Juristin oder einen Juristen, wenn Ihr Produkt von den Bedingungen abhängt.","@type":"Answer"}},{"name":"Was ist der Unterschied zwischen einem Modell mit offenen Gewichten und einer geschlossenen API?","@type":"Question","acceptedAnswer":{"text":"Bei einer geschlossenen API betreibt der Anbieter das Modell, und Sie senden ihm Ihre Daten. Bei einem Modell mit offenen Gewichten laden Sie die Modelldateien herunter und betreiben sie auf eigener Hardware oder im eigenen Cloud-Konto. Das gibt mehr Kontrolle, bedeutet aber auch mehr Betriebsaufwand.","@type":"Answer"}},{"name":"Sollte mein Unternehmen Gemma 4 selbst betreiben?","@type":"Question","acceptedAnswer":{"text":"Das hängt von der Sensibilität Ihrer Daten, dem Nutzungsvolumen und Ihrem technischen Team ab. Viele Teams prototypen mit einer API und verlagern stabile, volumenstarke oder sensible Workloads später auf ein selbst betriebenes Modell. Testen Sie zuerst mit Ihren eigenen Dokumenten und Sprachen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Was ist Superintelligenz und warum heißt sie so?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Warum KI-Agenten eine eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Quellen
 

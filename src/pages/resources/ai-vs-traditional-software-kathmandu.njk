@@ -117,51 +117,15 @@ slug: ai-vs-traditional-software-kathmandu
   </ul>
 </div>
 
-<div data-reveal>
-  <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div x-data="{ activeIndex: null }">
-    <div class="divide-y divide-navy-100">
-      <div class="py-5">
-        <button @click="activeIndex = (activeIndex === 1) ? null : 1" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 1 ? 'true' : 'false'" aria-controls="faq-answer-1">
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">Is AI always more expensive than traditional software?</span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 1 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </span>
-        </button>
-        <div id="faq-answer-1" x-show="activeIndex === 1" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Not necessarily. Cloud AI services (chatbots, document processing) can be cheaper than custom development. The cost depends on the use case, not the technology. This whitepaper includes cost comparison frameworks.</p>
-        </div>
-      </div>
-      <div class="py-5">
-        <button @click="activeIndex = (activeIndex === 2) ? null : 2" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 2 ? 'true' : 'false'" aria-controls="faq-answer-2">
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">Can we start with traditional and add AI later?</span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 2 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </span>
-        </button>
-        <div id="faq-answer-2" x-show="activeIndex === 2" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Yes, and this is often the best approach. Start with traditional software to establish processes and collect data. Add AI once you have clear use cases and sufficient training data.</p>
-        </div>
-      </div>
-      <div class="py-5">
-        <button @click="activeIndex = (activeIndex === 3) ? null : 3" class="group flex w-full items-center justify-between gap-4 text-left" :aria-expanded="activeIndex === 3 ? 'true' : 'false'" aria-controls="faq-answer-3">
-          <span class="text-[16px] font-medium leading-snug text-[#111827] transition-colors group-hover:text-navy-600 sm:text-[17px]">What about hybrid approaches?</span>
-          <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-navy-200 text-navy-500 transition-transform duration-200" :class="activeIndex === 3 ? 'rotate-45' : ''">
-            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-          </span>
-        </button>
-        <div id="faq-answer-3" x-show="activeIndex === 3" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="overflow-hidden">
-          <p class="pt-3 pr-10 text-[14px] leading-relaxed text-[#6B7280] sm:text-[15px]">Many successful implementations combine AI and traditional software. AI handles ambiguous inputs, traditional rules handle clear-cut cases. The whitepaper covers patterns for hybrid architectures.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Is AI always more expensive than traditional software?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Not necessarily. Cloud AI services (chatbots, document processing) can be cheaper than custom development. The cost depends on the use case, not the technology. This whitepaper includes cost comparison frameworks.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Can we start with traditional and add AI later?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Yes, and this is often the best approach. Start with traditional software to establish processes and collect data. Add AI once you have clear use cases and sufficient training data.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What about hybrid approaches?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Many successful implementations combine AI and traditional software. AI handles ambiguous inputs, traditional rules handle clear-cut cases. The whitepaper covers patterns for hybrid architectures.</p></div></div></div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

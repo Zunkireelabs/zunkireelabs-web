@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/ibm-agent-identity-vault-2-2-how-to-govern-ai-agents.svg"
 ogType: article
+related:
+  - /blog/microsoft-execution-containers-agent-containment-explained/
+  - /blog/owasp-mcp-top-10-explained-for-business-owners/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -80,12 +84,6 @@ Agents that can act need the same basics as staff who can act: a named owner, li
 If you are planning agents for your own operations, see how we approach [custom AI agent development](/solutions/custom-agent/), and our [AI agent security checklist whitepaper](/resources/mcp-agent-security-checklist-business-whitepaper/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is AI agent identity?</p><p class="text-gray-600 leading-relaxed">AI agent identity means giving each agent its own account and a record of who owns it, what it may do and its lifecycle status, instead of letting it use a shared key or a person's login. It makes permissions, auditing and revocation possible per agent.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did IBM announce on 26 and 27 October 2026?</p><p class="text-gray-600 leading-relaxed">IBM announced Agent Identity as generally available on 26 October, and on 27 October at TechXchange 2026 announced HashiCorp Vault 2.2 with Agent Identity and new watsonx Orchestrate controls named Discover, Contain and Evaluate. Discover and Contain are tech previews.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do small businesses need agent governance?</p><p class="text-gray-600 leading-relaxed">Yes, in a lighter form. Even a handful of agents benefit from an inventory, separate credentials, minimum permissions and a tested way to switch them off. These steps cost little before agents multiply and are painful to add afterwards.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Where do the 150,000 agents and 13% figures come from?</p><p class="text-gray-600 leading-relaxed">IBM's release attributes them to Gartner: by 2028 the average Fortune 500 enterprise will use over 150,000 AI agents, and only 13% of organizations believe they have the right agent governance in place. We have not checked Gartner's own page.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is AI agent identity?","@type":"Question","acceptedAnswer":{"text":"AI agent identity means giving each agent its own account and a record of who owns it, what it may do and its lifecycle status, instead of letting it use a shared key or a person's login. It makes permissions, auditing and revocation possible per agent.","@type":"Answer"}},{"name":"What did IBM announce on 26 and 27 October 2026?","@type":"Question","acceptedAnswer":{"text":"IBM announced Agent Identity as generally available on 26 October, and on 27 October at TechXchange 2026 announced HashiCorp Vault 2.2 with Agent Identity and new watsonx Orchestrate controls named Discover, Contain and Evaluate. Discover and Contain are tech previews.","@type":"Answer"}},{"name":"Do small businesses need agent governance?","@type":"Question","acceptedAnswer":{"text":"Yes, in a lighter form. Even a handful of agents benefit from an inventory, separate credentials, minimum permissions and a tested way to switch them off. These steps cost little before agents multiply and are painful to add afterwards.","@type":"Answer"}},{"name":"Where do the 150,000 agents and 13% figures come from?","@type":"Question","acceptedAnswer":{"text":"IBM's release attributes them to Gartner: by 2028 the average Fortune 500 enterprise will use over 150,000 AI agents, and only 13% of organizations believe they have the right agent governance in place. We have not checked Gartner's own page.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Microsoft Execution Containers: How to Contain an AI Agent](/blog/microsoft-execution-containers-agent-containment-explained/)
-- [OWASP MCP Top 10 Explained for Business Owners](/blog/owasp-mcp-top-10-explained-for-business-owners/)
-- [AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

@@ -123,15 +123,7 @@ slug: get-cited-by-ai-engines-guide
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Do I need special markup or an llms.txt file to appear in Google AI Overviews?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Google says no. Its documentation states there are no additional requirements to appear in AI Overviews or AI Mode, and no special schema.org structured data is needed. A page must be indexed and eligible to show with a snippet.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How can I see whether Copilot cites my site?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Bing Webmaster Tools has an AI Performance report, in public preview since February 2026. It shows total citations, average cited pages per day, citation counts by page and sample grounding queries. It does not show clicks.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is being cited the same as getting traffic?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. Citations count how often a page is shown as a source. Microsoft's report does not include clicks or traffic, so check clicks in Bing and Google search reports and conversions in your analytics.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does ranking well in Google guarantee citations from AI assistants?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. Assistants differ in which sources they use. A study of 17.2 million citations by a listings vendor found that the share from a brand's own site and from managed listings varied by model, so one tactic will not cover them all.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Do I need special markup or an llms.txt file to appear in Google AI Overviews?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Google says no. Its documentation states there are no additional requirements to appear in AI Overviews or AI Mode, and no special schema.org structured data is needed. A page must be indexed and eligible to show with a snippet.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">How can I see whether Copilot cites my site?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Bing Webmaster Tools has an AI Performance report, in public preview since February 2026. It shows total citations, average cited pages per day, citation counts by page and sample grounding queries. It does not show clicks.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Is being cited the same as getting traffic?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">No. Citations count how often a page is shown as a source. Microsoft's report does not include clicks or traffic, so check clicks in Bing and Google search reports and conversions in your analytics.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does ranking well in Google guarantee citations from AI assistants?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">No. Assistants differ in which sources they use. A study of 17.2 million citations by a listings vendor found that the share from a brand's own site and from managed listings varied by model, so one tactic will not cover them all.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -153,6 +145,9 @@ slug: get-cited-by-ai-engines-guide
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

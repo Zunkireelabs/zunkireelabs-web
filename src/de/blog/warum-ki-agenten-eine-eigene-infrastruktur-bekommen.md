@@ -10,6 +10,9 @@ translationKey: "ai-agents-are-getting-their-own-infrastructure"
 category: "Einblicke"
 pillar: "ai-frontier"
 readTime: 6
+related:
+  - /de/blog/ki-coding-agenten-was-microsofts-copilot-neuausrichtung-bedeutet/
+  - /de/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 6
 - Armadin hat 255,5 Millionen US-Dollar eingesammelt, um dauerhaft laufende Agentenschwärme zu betreiben, die die Sicherheit von Unternehmen testen.
 - Photon hat 4,5 Millionen US-Dollar eingesammelt, um Agenten zu bauen, die in Messaging-Apps wie iMessage und WhatsApp arbeiten.
 - Der CEO von Airbnb sagt, der Branche fehle weiterhin ein echtes KI-Betriebssystem, und Apps und Agenten müssten interoperabel werden.
-
 
 ## Was ist Agentic AI, und warum ist sie wieder in den Nachrichten?
 
@@ -71,11 +73,6 @@ Zusammen zeigen die drei Meldungen einen Markt, der von „seht, was ein Agent k
 Sie brauchen kein Betriebssystem für Agenten, um zu beginnen. Ein sinnvolles erstes Projekt ist ein einzelner, klar abgegrenzter Workflow, etwa Kundenfragen anhand Ihrer eigenen Dokumente zu beantworten oder Termine zu buchen, mit einem menschlichen Prüfschritt und klaren Erfolgskennzahlen. Wenn Sie Hintergrundwissen zu agentengesteuertem Handel suchen, lesen Sie unseren Leitfaden dazu, [was Agentic Commerce ist](/blog/what-is-agentic-commerce/), und zum Managed-Service-Modell den Beitrag zu [Agentic as a Service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/). Wenn Sie Partner vergleichen, zeigt unsere Checkliste zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/), was Sie fragen sollten.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist Agentic AI?</p><p class="text-gray-600 leading-relaxed">Agentic AI bezeichnet Software, die nicht nur eine Frage beantwortet, sondern Aktionen auf ein Ziel hin ausführt. Sie plant Schritte, nutzt Werkzeuge, spricht mit anderer Software und arbeitet mit begrenzter Aufsicht. Ein Chatbot sagt Ihnen, wie Sie einen Flug buchen; ein Agent bucht ihn.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist ein Agentenschwarm?</p><p class="text-gray-600 leading-relaxed">Im Bericht von TechCrunch über das Sicherheits-Startup Armadin sind Agentenschwärme Gruppen von KI-Agenten, die dauerhaft laufen und Schwachstellen verketten, um in ein Unternehmen einzudringen. Die Idee ist, Schwachstellen zu finden und zu beheben, bevor Angreifer es tun, als Alternative zu punktuellen Penetrationstests.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist MCP?</p><p class="text-gray-600 leading-relaxed">MCP ist ein Standard, mit dem sich KI-Agenten mit anderer Software verbinden können, wie im TechCrunch-Interview mit Airbnb-CEO Brian Chesky beschrieben. Er erwartet, dass über MCP verbundene Agenten Apps interoperabel machen, die nie durch einen Geschäftsabschluss integriert wurden.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wie sollte ein Unternehmen mit KI-Agenten starten?</p><p class="text-gray-600 leading-relaxed">Beginnen Sie mit einem klar abgegrenzten Workflow, etwa Kundenfragen anhand Ihrer eigenen Dokumente zu beantworten oder Termine zu buchen, mit einem menschlichen Prüfschritt und klaren Erfolgskennzahlen. Erweitern Sie erst, wenn die Ergebnisse es rechtfertigen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was ist Agentic AI?","@type":"Question","acceptedAnswer":{"text":"Agentic AI bezeichnet Software, die nicht nur eine Frage beantwortet, sondern Aktionen auf ein Ziel hin ausführt. Sie plant Schritte, nutzt Werkzeuge, spricht mit anderer Software und arbeitet mit begrenzter Aufsicht. Ein Chatbot sagt Ihnen, wie Sie einen Flug buchen; ein Agent bucht ihn.","@type":"Answer"}},{"name":"Was ist ein Agentenschwarm?","@type":"Question","acceptedAnswer":{"text":"Im Bericht von TechCrunch über das Sicherheits-Startup Armadin sind Agentenschwärme Gruppen von KI-Agenten, die dauerhaft laufen und Schwachstellen verketten, um in ein Unternehmen einzudringen. Die Idee ist, Schwachstellen zu finden und zu beheben, bevor Angreifer es tun, als Alternative zu punktuellen Penetrationstests.","@type":"Answer"}},{"name":"Was ist MCP?","@type":"Question","acceptedAnswer":{"text":"MCP ist ein Standard, mit dem sich KI-Agenten mit anderer Software verbinden können, wie im TechCrunch-Interview mit Airbnb-CEO Brian Chesky beschrieben. Er erwartet, dass über MCP verbundene Agenten Apps interoperabel machen, die nie durch einen Geschäftsabschluss integriert wurden.","@type":"Answer"}},{"name":"Wie sollte ein Unternehmen mit KI-Agenten starten?","@type":"Question","acceptedAnswer":{"text":"Beginnen Sie mit einem klar abgegrenzten Workflow, etwa Kundenfragen anhand Ihrer eigenen Dokumente zu beantworten oder Termine zu buchen, mit einem menschlichen Prüfschritt und klaren Erfolgskennzahlen. Erweitern Sie erst, wenn die Ergebnisse es rechtfertigen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [KI-Coding-Agenten: Was Microsofts Copilot-Neuausrichtung bedeutet](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Quellen
 

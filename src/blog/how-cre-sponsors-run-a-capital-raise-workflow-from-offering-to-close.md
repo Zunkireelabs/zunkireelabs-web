@@ -21,6 +21,10 @@ tags:
 readTime: 9
 featuredImage: "/assets/images/blog/how-cre-sponsors-run-a-capital-raise-workflow-from-offering-to-close.svg"
 ogType: article
+related:
+  - /blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/
+  - /blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/
+  - /blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -107,12 +111,6 @@ Our real estate offering is built around CRE sponsor firms raising capital: offe
 To talk through your own situation, see our [AI for Real Estate page](/industries/real-estate/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a capital raise in commercial real estate?</p><p class="text-gray-600 leading-relaxed">It is the process by which a sponsor assembles equity from investors for a deal, from preparing the offering and engaging investors to collecting commitments, completing onboarding and closing.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why use a workflow system instead of spreadsheets for a raise?</p><p class="text-gray-600 leading-relaxed">A workflow system keeps one source of truth for investors, commitments and documents, reduces version confusion and missed follow-ups, and gives you a record for audits and investor queries.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the difference between interest, commitment and funded?</p><p class="text-gray-600 leading-relaxed">Interest is an informal indication, a commitment is a formal agreement to invest a stated amount subject to conditions, and funded means money has been received. Track them separately.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Do I need legal advice for a capital raise?</p><p class="text-gray-600 leading-relaxed">Yes. Rules vary by jurisdiction and offering type, so work with qualified legal and compliance advisers and configure your process to follow their guidance.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a capital raise in commercial real estate?","@type":"Question","acceptedAnswer":{"text":"It is the process by which a sponsor assembles equity from investors for a deal, from preparing the offering and engaging investors to collecting commitments, completing onboarding and closing.","@type":"Answer"}},{"name":"Why use a workflow system instead of spreadsheets for a raise?","@type":"Question","acceptedAnswer":{"text":"A workflow system keeps one source of truth for investors, commitments and documents, reduces version confusion and missed follow-ups, and gives you a record for audits and investor queries.","@type":"Answer"}},{"name":"What is the difference between interest, commitment and funded?","@type":"Question","acceptedAnswer":{"text":"Interest is an informal indication, a commitment is a formal agreement to invest a stated amount subject to conditions, and funded means money has been received. Track them separately.","@type":"Answer"}},{"name":"Do I need legal advice for a capital raise?","@type":"Question","acceptedAnswer":{"text":"Yes. Rules vary by jurisdiction and offering type, so work with qualified legal and compliance advisers and configure your process to follow their guidance.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI for Real Estate: A Practical Guide to Lead Follow-Up and Property Chatbots](/blog/ai-for-real-estate-lead-follow-up-property-chatbot-guide/)
-- [How AI and Data Are Changing Real Estate Valuation](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
-- [Why Disconnected Business Tools Cost Time and How Orchestration Helps](/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/)
 
 ## Sources
 

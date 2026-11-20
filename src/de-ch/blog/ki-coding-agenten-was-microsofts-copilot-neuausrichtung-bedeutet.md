@@ -10,6 +10,9 @@ translationKey: "ai-native-software-and-coding-agents-what-microsofts-copilot-re
 category: "Einblicke"
 pillar: "software-future"
 readTime: 7
+related:
+  - /de-ch/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
+  - /de-ch/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 7
 - Google sagt, seine Agenten hätten mehr als 800’000 Codezeilen im Fuchsia-Zircon-Kernel migriert; dies sind Googles eigene Angaben.
 - Wenn Agenten grössere Änderungen erzeugen, wird die menschliche Prüfung zum Engpass.
 - Fragen Sie beim Softwarekauf, ob die KI Teil des Kern-Workflows ist oder nur aufgesetzt wurde.
-
 
 ## Was ist der Unterschied zwischen Autovervollständigung und einem Coding-Agenten?
 
@@ -75,11 +77,6 @@ Wählen Sie eine abgegrenzte Entwicklungsaufgabe mit klaren Erfolgskriterien, et
 Wenn Sie Unterstützung bei der Entscheidung brauchen, wo KI in Ihr eigenes Produkt oder Ihren Workflow passt, nennt unser Leitfaden zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/), worauf Sie achten sollten, und unser Überblick über [KI-Trends und Prognosen für 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/) ordnet die Nachrichten dieser Woche in einen grösseren Zusammenhang ein.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist ein Coding-Agent?</p><p class="text-gray-600 leading-relaxed">Ein Coding-Agent übernimmt eine Aufgabe, liest den umgebenden Code, nimmt Änderungen über mehrere Dateien hinweg vor, führt Prüfungen aus und gibt ein Ergebnis zur Prüfung durch einen Menschen zurück. Er geht über die Autovervollständigung hinaus, die nur die nächsten Zeilen während des Tippens vorschlägt.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was bedeutet KI-native Software?</p><p class="text-gray-600 leading-relaxed">KI-native Software wird von Anfang an um KI herum entworfen, statt ein Chatfenster an eine bestehende App anzuhängen. Microsofts berichtete Neuausrichtung von Copilot, die Privat- und Unternehmens-Apps zusammenführt und Coding- und Agentenfunktionen hinzufügt, ist ein Beispiel für diese Richtung.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was steckt hinter Microsofts «OS for work»-Konzept?</p><p class="text-gray-600 leading-relaxed">Laut The Verge präsentierte Satya Nadella Unternehmenskunden das neueste Copilot als «OS for work», mit zusätzlichen Coding- und Agentenfunktionen und der erstmals in Copilot integrierten vollen Leistungsfähigkeit von Office.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wie sollte ein Team mit Coding-Agenten starten?</p><p class="text-gray-600 leading-relaxed">Wählen Sie eine abgegrenzte Aufgabe mit klaren Erfolgskriterien, etwa Tests für ein stabiles Modul zu schreiben. Prüfen Sie das Ergebnis sorgfältig, vergleichen Sie die gesparte Zeit mit der für die Prüfung aufgewendeten Zeit und erweitern Sie nur, wenn die Ergebnisse es rechtfertigen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was ist ein Coding-Agent?","@type":"Question","acceptedAnswer":{"text":"Ein Coding-Agent übernimmt eine Aufgabe, liest den umgebenden Code, nimmt Änderungen über mehrere Dateien hinweg vor, führt Prüfungen aus und gibt ein Ergebnis zur Prüfung durch einen Menschen zurück. Er geht über die Autovervollständigung hinaus, die nur die nächsten Zeilen während des Tippens vorschlägt.","@type":"Answer"}},{"name":"Was bedeutet KI-native Software?","@type":"Question","acceptedAnswer":{"text":"KI-native Software wird von Anfang an um KI herum entworfen, statt ein Chatfenster an eine bestehende App anzuhängen. Microsofts berichtete Neuausrichtung von Copilot, die Privat- und Unternehmens-Apps zusammenführt und Coding- und Agentenfunktionen hinzufügt, ist ein Beispiel für diese Richtung.","@type":"Answer"}},{"name":"Was steckt hinter Microsofts «OS for work»-Konzept?","@type":"Question","acceptedAnswer":{"text":"Laut The Verge präsentierte Satya Nadella Unternehmenskunden das neueste Copilot als «OS for work», mit zusätzlichen Coding- und Agentenfunktionen und der erstmals in Copilot integrierten vollen Leistungsfähigkeit von Office.","@type":"Answer"}},{"name":"Wie sollte ein Team mit Coding-Agenten starten?","@type":"Question","acceptedAnswer":{"text":"Wählen Sie eine abgegrenzte Aufgabe mit klaren Erfolgskriterien, etwa Tests für ein stabiles Modul zu schreiben. Prüfen Sie das Ergebnis sorgfältig, vergleichen Sie die gesparte Zeit mit der für die Prüfung aufgewendeten Zeit und erweitern Sie nur, wenn die Ergebnisse es rechtfertigen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Warum KI-Agenten eine eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Quellen
 

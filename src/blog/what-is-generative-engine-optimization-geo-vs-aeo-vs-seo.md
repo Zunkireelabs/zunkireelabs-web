@@ -16,6 +16,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo.svg"
 ogType: article
+related:
+  - /blog/ai-overviews-fewer-clicks-what-google-says-to-do/
+  - /blog/where-ai-answers-get-their-sources/
+  - /blog/what-is-ai-native-search/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -87,12 +91,6 @@ GEO, AEO and SEO are three names for the same direction of travel: make it easy 
 If you want help with this, see our [answer engine optimization service](/solutions/aeo-seo/) and our [answer engine optimization whitepaper](/resources/answer-engine-optimization-whitepaper/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is generative engine optimization (GEO)?</p><p class="text-gray-600 leading-relaxed">GEO is the practice of making your content easy for AI systems that write their own answers, such as ChatGPT, Perplexity and Google AI Overviews, to find, trust, cite and describe correctly. It builds on SEO rather than replacing it.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the difference between AEO and GEO?</p><p class="text-gray-600 leading-relaxed">AEO focuses on being the direct answer in snippets, voice replies and assistants. GEO focuses on AI systems that compose answers from several sources. The tactics overlap heavily, and most businesses do not need to treat them as separate projects.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does Google require special optimization for AI Overviews?</p><p class="text-gray-600 leading-relaxed">No. Google's documentation says there are no additional requirements or special optimizations. A page must be indexed and eligible to show with a snippet. It also says no special schema markup or AI text files are needed.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is SEO still worth doing?</p><p class="text-gray-600 leading-relaxed">Yes. Indexing, crawlability, helpful content and page experience are the entry ticket for Google's AI features, and they also help other systems find and understand your pages.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can anyone guarantee I will be cited by ChatGPT?</p><p class="text-gray-600 leading-relaxed">No. AI systems choose sources themselves and results vary between runs and platforms. Be cautious of anyone who promises a citation.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is generative engine optimization (GEO)?","@type":"Question","acceptedAnswer":{"text":"GEO is the practice of making your content easy for AI systems that write their own answers, such as ChatGPT, Perplexity and Google AI Overviews, to find, trust, cite and describe correctly. It builds on SEO rather than replacing it.","@type":"Answer"}},{"name":"What is the difference between AEO and GEO?","@type":"Question","acceptedAnswer":{"text":"AEO focuses on being the direct answer in snippets, voice replies and assistants. GEO focuses on AI systems that compose answers from several sources. The tactics overlap heavily, and most businesses do not need to treat them as separate projects.","@type":"Answer"}},{"name":"Does Google require special optimization for AI Overviews?","@type":"Question","acceptedAnswer":{"text":"No. Google's documentation says there are no additional requirements or special optimizations. A page must be indexed and eligible to show with a snippet. It also says no special schema markup or AI text files are needed.","@type":"Answer"}},{"name":"Is SEO still worth doing?","@type":"Question","acceptedAnswer":{"text":"Yes. Indexing, crawlability, helpful content and page experience are the entry ticket for Google's AI features, and they also help other systems find and understand your pages.","@type":"Answer"}},{"name":"Can anyone guarantee I will be cited by ChatGPT?","@type":"Question","acceptedAnswer":{"text":"No. AI systems choose sources themselves and results vary between runs and platforms. Be cautious of anyone who promises a citation.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Overviews and Fewer Clicks: What Google Actually Says You Need to Do](/blog/ai-overviews-fewer-clicks-what-google-says-to-do/)
-- [Where AI Answers Get Their Sources, and Why Listings Matter as Much as Your Site](/blog/where-ai-answers-get-their-sources/)
-- [What Is AI-Native Search?](/blog/what-is-ai-native-search/)
 
 ## Sources
 

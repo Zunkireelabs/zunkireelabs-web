@@ -14,6 +14,11 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/superintelligence-safety-debate-who-wants-what.svg"
 ogType: article
+related:
+  - /blog/superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/trump-super-intelligence-force-what-the-executive-order-says/
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -26,7 +31,6 @@ ogType: article
 - Safe Superintelligence Inc., founded in 2024, says it aims to develop superintelligence safely; critics of a ban say it would be hard to define and enforce.
 - The International AI Safety Report, led by Yoshua Bengio, groups risks into malicious use, technical failures and systemic risks.
 - In the US, the new Super Intelligence Force has a charter that stresses avoiding overregulation, and the safety pledge signed by tech leaders is non-binding.
-
 
 ## Why Is There More Than One Debate?
 
@@ -82,13 +86,6 @@ You do not need to pick a side to act sensibly:
 There is no single superintelligence debate. There are calls to prohibit it until it is proven safe, labs that say they will build it safely, governments that worry about overregulation, and researchers who focus on measuring risk. Everyone says safety matters; they disagree on who decides and how fast to go. For businesses, the practical response is the same under every view: keep control of the AI you use.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Is there a ban on superintelligence?</p><p class="text-gray-600 leading-relaxed">No. According to Wikipedia, no government has enacted an explicit superintelligence ban, although the idea has been debated in the EU and at the UN. The Future of Life Institute published a statement in October 2025 calling for a prohibition until there is broad scientific consensus on safety and strong public buy-in.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Who is building superintelligence safely?</p><p class="text-gray-600 leading-relaxed">Safe Superintelligence Inc., founded in 2024 by Ilya Sutskever, Daniel Gross and Daniel Levy, says its mission is to safely develop a superintelligence. Other labs also describe safety as a priority; these are the companies' own claims.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the International AI Safety Report?</p><p class="text-gray-600 leading-relaxed">It is a report led by Yoshua Bengio and commissioned by 30 nations at the 2023 AI Safety Summit. Its second full edition appeared on February 3, 2026 and groups risks into malicious use, technical failures and systemic risks.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the US Super Intelligence Force?</p><p class="text-gray-600 leading-relaxed">According to TechCrunch, it is a task force chaired by National Intelligence Director Jay Clayton, with 120 days to report on risks and opportunities. Its charter stresses avoiding overregulation that would stifle innovation.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Is there a ban on superintelligence?","@type":"Question","acceptedAnswer":{"text":"No. According to Wikipedia, no government has enacted an explicit superintelligence ban, although the idea has been debated in the EU and at the UN. The Future of Life Institute published a statement in October 2025 calling for a prohibition until there is broad scientific consensus on safety and strong public buy-in.","@type":"Answer"}},{"name":"Who is building superintelligence safely?","@type":"Question","acceptedAnswer":{"text":"Safe Superintelligence Inc., founded in 2024 by Ilya Sutskever, Daniel Gross and Daniel Levy, says its mission is to safely develop a superintelligence. Other labs also describe safety as a priority; these are the companies' own claims.","@type":"Answer"}},{"name":"What is the International AI Safety Report?","@type":"Question","acceptedAnswer":{"text":"It is a report led by Yoshua Bengio and commissioned by 30 nations at the 2023 AI Safety Summit. Its second full edition appeared on February 3, 2026 and groups risks into malicious use, technical failures and systemic risks.","@type":"Answer"}},{"name":"What is the US Super Intelligence Force?","@type":"Question","acceptedAnswer":{"text":"According to TechCrunch, it is a task force chaired by National Intelligence Director Jay Clayton, with 120 days to report on risks and opportunities. Its charter stresses avoiding overregulation that would stifle innovation.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Superintelligence vs AGI vs Narrow AI](/blog/superintelligence-vs-agi-vs-narrow-ai-what-the-terms-mean/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Trump's Super Intelligence Force: What the Executive Order Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Sources
 

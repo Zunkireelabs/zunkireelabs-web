@@ -17,6 +17,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/nvidia-nemotron-transcribe-salesforce-launa-omni-voice-ai-what-changes.svg"
 ogType: article
+related:
+  - /blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/
+  - /blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/
+  - /blog/open-ai-models-nepali-language-and-low-connectivity/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -78,12 +82,6 @@ October's releases show voice AI splitting into two jobs: talking to people live
 To see how we build the live side, read about our [AI voice agent development](/solutions/voice-agent/) and our [voice AI agents whitepaper](/resources/voice-ai-agents-customer-support-whitepaper/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is NVIDIA Nemotron 3.5 Transcribe?</p><p class="text-gray-600 leading-relaxed">It is an open-weight speech model released on 28 October 2026 that transcribes recorded audio in 40 languages, can label different speakers and handles recordings up to an hour. NVIDIA states it is an offline model, not a real-time streaming service.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can Nemotron 3.5 Transcribe power a live voice agent?</p><p class="text-gray-600 leading-relaxed">Not on its own. It is built for recorded audio. A live phone agent also needs a real-time conversation model, low delay, interruption handling and an integration with your booking or customer system.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Salesforce Launa-Omni?</p><p class="text-gray-600 leading-relaxed">Launa-Omni is a voice model Salesforce announced on 19 October 2026 for real-time, two-way spoken conversation. Salesforce describes it as a text model adapted for audio, with a separate speech model for the reply.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does it work in Nepali?</p><p class="text-gray-600 leading-relaxed">We have not confirmed that for either model. Language lists do not show quality on your callers, so test on recordings of your own calls before relying on any model for Nepali or mixed Nepali and English.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is NVIDIA Nemotron 3.5 Transcribe?","@type":"Question","acceptedAnswer":{"text":"It is an open-weight speech model released on 28 October 2026 that transcribes recorded audio in 40 languages, can label different speakers and handles recordings up to an hour. NVIDIA states it is an offline model, not a real-time streaming service.","@type":"Answer"}},{"name":"Can Nemotron 3.5 Transcribe power a live voice agent?","@type":"Question","acceptedAnswer":{"text":"Not on its own. It is built for recorded audio. A live phone agent also needs a real-time conversation model, low delay, interruption handling and an integration with your booking or customer system.","@type":"Answer"}},{"name":"What is Salesforce Launa-Omni?","@type":"Question","acceptedAnswer":{"text":"Launa-Omni is a voice model Salesforce announced on 19 October 2026 for real-time, two-way spoken conversation. Salesforce describes it as a text model adapted for audio, with a separate speech model for the reply.","@type":"Answer"}},{"name":"Does it work in Nepali?","@type":"Question","acceptedAnswer":{"text":"We have not confirmed that for either model. Language lists do not show quality on your callers, so test on recordings of your own calls before relying on any model for Nepali or mixed Nepali and English.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Voice Agents for Appointment Booking: What They Do and When They Fit](/blog/ai-voice-agent-appointment-booking-what-it-is-and-when-it-fits/)
-- [AI Chatbot vs AI Agent: Customer Support Automation for Your Business](/blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/)
-- [Open AI Models for Nepal: Nepali Language and Low Connectivity](/blog/open-ai-models-nepali-language-and-low-connectivity/)
 
 ## Sources
 

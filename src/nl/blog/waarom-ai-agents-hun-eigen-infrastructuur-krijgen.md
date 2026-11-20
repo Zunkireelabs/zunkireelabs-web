@@ -10,6 +10,9 @@ translationKey: "ai-agents-are-getting-their-own-infrastructure"
 category: "Inzichten"
 pillar: "ai-frontier"
 readTime: 6
+related:
+  - /nl/blog/ai-codeeragents-wat-de-copilot-herziening-van-microsoft-betekent/
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 6
 - Armadin haalde 255,5 miljoen dollar op om altijd actieve agentzwermen in te zetten die de beveiliging van ondernemingen testen.
 - Photon haalde 4,5 miljoen dollar op om agents te bouwen die werken binnen berichten-apps zoals iMessage en WhatsApp.
 - De CEO van Airbnb zegt dat de sector nog steeds een echt AI-besturingssysteem mist, en dat apps en agents interoperabel moeten worden.
-
 
 ## Wat is agentic AI, en waarom staat het weer in het nieuws?
 
@@ -71,11 +73,6 @@ Samen laten de drie berichten een markt zien die volwassen wordt, van “kijk wa
 U hebt geen besturingssysteem voor agents nodig om te beginnen. Een verstandig eerste project is één duidelijk afgebakende workflow, zoals klantvragen beantwoorden op basis van uw eigen documenten of afspraken boeken, met een stap waarin een mens controleert en duidelijke succesmaatstaven. Wilt u achtergrond over commerce die door agents wordt aangestuurd, lees dan onze gids over [wat agentic commerce is](/blog/what-is-agentic-commerce/), en lees voor het managed-servicemodel over [agentic as a service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/). Als u partners vergelijkt, behandelt onze checklist voor het [kiezen van een AI-ontwikkelbedrijf](/blog/how-to-choose-ai-development-company/) wat u kunt vragen.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is agentic AI?</p><p class="text-gray-600 leading-relaxed">Agentic AI verwijst naar software die niet alleen een vraag beantwoordt, maar acties onderneemt om een doel te bereiken. Het plant stappen, gebruikt tools, praat met andere software en werkt met beperkt toezicht. Een chatbot vertelt u hoe u een vlucht boekt; een agent boekt hem.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is een agentzwerm?</p><p class="text-gray-600 leading-relaxed">In het bericht van TechCrunch over de beveiligingsstartup Armadin zijn agentzwermen groepen AI-agents die continu draaien en kwetsbaarheden aan elkaar koppelen om te proberen in te breken bij een onderneming. Het idee is om zwakke plekken te vinden en te herstellen voordat aanvallers dat doen, als alternatief voor penetratietests op één moment.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is MCP?</p><p class="text-gray-600 leading-relaxed">MCP is een standaard waarmee AI-agents verbinding kunnen maken met andere software, zoals beschreven in het interview van TechCrunch met Airbnb-CEO Brian Chesky. Hij verwacht dat agents die via MCP verbonden zijn, apps interoperabel maken die nooit via een zakelijke deal zijn geïntegreerd.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Hoe moet een bedrijf beginnen met AI-agents?</p><p class="text-gray-600 leading-relaxed">Begin met één duidelijk afgebakende workflow, zoals klantvragen beantwoorden op basis van uw eigen documenten of afspraken boeken, met een stap waarin een mens controleert en duidelijke succesmaatstaven. Breid pas uit als de resultaten dat rechtvaardigen.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat is agentic AI?","@type":"Question","acceptedAnswer":{"text":"Agentic AI verwijst naar software die niet alleen een vraag beantwoordt, maar acties onderneemt om een doel te bereiken. Het plant stappen, gebruikt tools, praat met andere software en werkt met beperkt toezicht. Een chatbot vertelt u hoe u een vlucht boekt; een agent boekt hem.","@type":"Answer"}},{"name":"Wat is een agentzwerm?","@type":"Question","acceptedAnswer":{"text":"In het bericht van TechCrunch over de beveiligingsstartup Armadin zijn agentzwermen groepen AI-agents die continu draaien en kwetsbaarheden aan elkaar koppelen om te proberen in te breken bij een onderneming. Het idee is om zwakke plekken te vinden en te herstellen voordat aanvallers dat doen, als alternatief voor penetratietests op één moment.","@type":"Answer"}},{"name":"Wat is MCP?","@type":"Question","acceptedAnswer":{"text":"MCP is een standaard waarmee AI-agents verbinding kunnen maken met andere software, zoals beschreven in het interview van TechCrunch met Airbnb-CEO Brian Chesky. Hij verwacht dat agents die via MCP verbonden zijn, apps interoperabel maken die nooit via een zakelijke deal zijn geïntegreerd.","@type":"Answer"}},{"name":"Hoe moet een bedrijf beginnen met AI-agents?","@type":"Question","acceptedAnswer":{"text":"Begin met één duidelijk afgebakende workflow, zoals klantvragen beantwoorden op basis van uw eigen documenten of afspraken boeken, met een stap waarin een mens controleert en duidelijke succesmaatstaven. Breid pas uit als de resultaten dat rechtvaardigen.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [AI-codeeragents: wat de Copilot-herziening van Microsoft betekent](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Bronnen
 

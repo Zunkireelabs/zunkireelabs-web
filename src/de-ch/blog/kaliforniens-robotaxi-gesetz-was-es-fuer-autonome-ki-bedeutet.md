@@ -10,6 +10,9 @@ translationKey: "robotaxis-first-responders-california-law-future-of-autonomous-
 category: "Einblicke"
 pillar: "future-of-industries"
 readTime: 7
+related:
+  - /de-ch/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
+  - /de-ch/blog/was-ist-superintelligenz-und-warum-heisst-sie-so/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 7
 - Bussgelder können fällig werden, wenn ein Robotaxi Rettungskräfte länger als 30 Minuten blockiert.
 - Remote-Fahrer müssen in den USA ansässig sein und einen US-Führerschein besitzen.
 - Das Gesetz tritt im Juli 2028 in Kraft, und die kalifornische Kfz-Behörde (DMV) legt Einzelheiten wie Reaktionszeiten fest.
-
 
 ## Was regelt Kaliforniens neues Robotaxi-Gesetz?
 
@@ -81,11 +83,6 @@ Das Gesetz greift erst im Juli 2028, und Einzelheiten wie Reaktionszeiten muss d
 Wenn Sie ein KI- oder Automatisierungsprojekt planen und Aufsicht und Eskalation durchdenken möchten, lesen Sie unseren Leitfaden zur [Auswahl eines KI-Entwicklungsunternehmens](/blog/how-to-choose-ai-development-company/), informieren Sie sich über [Agentic as a Service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/) oder [nehmen Sie Kontakt auf](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Was regelt Kaliforniens SB 1246?</p><p class="text-gray-600 leading-relaxed">Das Gesetz verpflichtet Anbieter autonomer Fahrzeuge, Rettungskräften lokale Unterstützung vor Ort zu bieten und lokale Behörden bei systemweiten Ausfällen zu benachrichtigen. Es erlaubt Bussgelder, wenn ein Fahrzeug Polizei oder Feuerwehr länger als 30 Minuten blockiert.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wann tritt das Gesetz in Kraft?</p><p class="text-gray-600 leading-relaxed">Im Juli 2028. Das kalifornische Department of Motor Vehicles legt zu bestimmten Aspekten Richtlinien fest, darunter die erforderlichen Reaktionszeiten.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Worin unterscheiden sich Remote-Fahren und Remote-Unterstützung?</p><p class="text-gray-600 leading-relaxed">Remote-Fahren bedeutet, dass ein Mensch ein Fahrzeug aus der Ferne direkt steuert. Bei Remote-Unterstützung behält das selbstfahrende System die Kontrolle, während ein Mensch bei Bedarf Hinweise gibt oder Softwarebefehle sendet. Der Begriff «Remote-Fahrer» im Gesetz bezeichnet ausdrücklich Ersteres.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was sollten Unternehmen, die Automatisierung einsetzen, aus diesem Gesetz mitnehmen?</p><p class="text-gray-600 leading-relaxed">Halten Sie vor dem Start schriftlich fest, wer für welchen Fehlerfall verantwortlich ist, wie diese Person erreichbar ist, wie schnell jeder Eskalationsschritt erfolgen soll, wie sich das System pausieren oder übersteuern lässt, was protokolliert wird und wer benachrichtigt wird.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Was regelt Kaliforniens SB 1246?","@type":"Question","acceptedAnswer":{"text":"Das Gesetz verpflichtet Anbieter autonomer Fahrzeuge, Rettungskräften lokale Unterstützung vor Ort zu bieten und lokale Behörden bei systemweiten Ausfällen zu benachrichtigen. Es erlaubt Bussgelder, wenn ein Fahrzeug Polizei oder Feuerwehr länger als 30 Minuten blockiert.","@type":"Answer"}},{"name":"Wann tritt das Gesetz in Kraft?","@type":"Question","acceptedAnswer":{"text":"Im Juli 2028. Das kalifornische Department of Motor Vehicles legt zu bestimmten Aspekten Richtlinien fest, darunter die erforderlichen Reaktionszeiten.","@type":"Answer"}},{"name":"Worin unterscheiden sich Remote-Fahren und Remote-Unterstützung?","@type":"Question","acceptedAnswer":{"text":"Remote-Fahren bedeutet, dass ein Mensch ein Fahrzeug aus der Ferne direkt steuert. Bei Remote-Unterstützung behält das selbstfahrende System die Kontrolle, während ein Mensch bei Bedarf Hinweise gibt oder Softwarebefehle sendet. Der Begriff «Remote-Fahrer» im Gesetz bezeichnet ausdrücklich Ersteres.","@type":"Answer"}},{"name":"Was sollten Unternehmen, die Automatisierung einsetzen, aus diesem Gesetz mitnehmen?","@type":"Question","acceptedAnswer":{"text":"Halten Sie vor dem Start schriftlich fest, wer für welchen Fehlerfall verantwortlich ist, wie diese Person erreichbar ist, wie schnell jeder Eskalationsschritt erfolgen soll, wie sich das System pausieren oder übersteuern lässt, was protokolliert wird und wer benachrichtigt wird.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Warum KI-Agenten ihre eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [Was ist Superintelligenz, und warum heisst sie so?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Quelle
 

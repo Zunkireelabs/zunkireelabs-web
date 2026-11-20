@@ -158,15 +158,7 @@ slug: choosing-ai-development-partner-buyers-ebook
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What is the most important question to ask an AI development partner?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Ask them to show a system they built that reads from and writes to a live data source, and to explain what it does when the AI is uncertain. A chat window over static documents does not show integration work.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does the location of an AI development partner matter?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Less than it used to for the engineering itself. It matters for law and contracts. If a supplier outside the UK will handle personal data of UK people, the ICO says the transfer must be covered by adequacy regulations, appropriate safeguards or an exception, and you must not make it if none applies.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Should I choose the cheapest AI development quote?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not on price alone. Compare the whole cost, including discovery, build, hosting, model usage, maintenance and the time your own staff spend. A low quote on a vague brief often becomes a rebuild.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How can I test a partner before a large commitment?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Start with a small, paid pilot on one workflow with a written success test, and check references from similar projects. Agree ownership of code and data before the pilot starts.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What is the most important question to ask an AI development partner?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Ask them to show a system they built that reads from and writes to a live data source, and to explain what it does when the AI is uncertain. A chat window over static documents does not show integration work.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does the location of an AI development partner matter?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Less than it used to for the engineering itself. It matters for law and contracts. If a supplier outside the UK will handle personal data of UK people, the ICO says the transfer must be covered by adequacy regulations, appropriate safeguards or an exception, and you must not make it if none applies.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Should I choose the cheapest AI development quote?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Not on price alone. Compare the whole cost, including discovery, build, hosting, model usage, maintenance and the time your own staff spend. A low quote on a vague brief often becomes a rebuild.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">How can I test a partner before a large commitment?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Start with a small, paid pilot on one workflow with a written success test, and check references from similar projects. Agree ownership of code and data before the pilot starts.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -188,6 +180,9 @@ slug: choosing-ai-development-partner-buyers-ebook
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

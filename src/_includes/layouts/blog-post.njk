@@ -337,6 +337,20 @@ bodyClass: "v2-inter"
           </style>
           {{ content | safe }}
         </div>
+
+        {# Nepal hub links: every English post tagged for Nepal points at the pages that own the Nepal head terms, with descriptive anchors, so link equity reaches the hubs. Styled like the sidebar author card. #}
+        {% set tagText = tags | join(" ") %}
+        {% if uiLocale == "en" and "Nepal" in tagText %}
+        <nav class="mt-12 rounded-2xl border border-navy-100 bg-white p-6 shadow-subtle" aria-labelledby="nepal-guides-heading">
+          <p id="nepal-guides-heading" class="mb-4 font-mono text-[11px] uppercase tracking-wider text-navy-400">Nepal tech guides</p>
+          <ul class="space-y-2.5 text-[16px] leading-snug">
+            {% if page.url != "/it-companies-nepal/" %}<li><a href="/it-companies-nepal/" class="font-medium text-[#5a9100] transition-colors hover:text-[#111827] hover:underline">How to choose an IT company in Nepal</a></li>{% endif %}
+            {% if page.url != "/blog/top-tech-companies-nepal-2026/" %}<li><a href="/blog/top-tech-companies-nepal-2026/" class="font-medium text-[#5a9100] transition-colors hover:text-[#111827] hover:underline">Top 50 IT companies in Nepal (2026 list)</a></li>{% endif %}
+            {% if page.url != "/blog/top-software-development-companies-nepal-2026/" %}<li><a href="/blog/top-software-development-companies-nepal-2026/" class="font-medium text-[#5a9100] transition-colors hover:text-[#111827] hover:underline">Software development companies in Nepal</a></li>{% endif %}
+            {% if page.url != "/blog/top-ai-companies-nepal-2026/" %}<li><a href="/blog/top-ai-companies-nepal-2026/" class="font-medium text-[#5a9100] transition-colors hover:text-[#111827] hover:underline">AI companies in Nepal</a></li>{% endif %}
+          </ul>
+        </nav>
+        {% endif %}
       </div>
 
     </div>
@@ -347,7 +361,36 @@ bodyClass: "v2-inter"
    RELATED POSTS (if available)
    ===================================================== #}
 {# Insights end with more Insights (newest first); other locales relate within their own language; regular posts relate by topic across the blog (Insights excluded) #}
-{% if uiLocale != "en" %}
+{# A post can list hand-picked related posts in front matter (related: [/blog/slug/, ...]); they render as the same cards as the automatic block, so the curated links keep their topical relevance without a second, differently styled list in the body. #}
+{% set curatedRelated = [] %}
+{% if related and related.length %}
+  {% for relUrl in related %}
+    {% for candidate in collections.all %}
+      {% if candidate.url == relUrl and candidate.url != page.url %}{% set curatedRelated = (curatedRelated.push(candidate), curatedRelated) %}{% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+{# Top up a short curated list (fewer than 3) with the automatic topic matches so a post never ends on a single lonely card. #}
+{% if curatedRelated.length > 0 and curatedRelated.length < 3 %}
+  {% if uiLocale != "en" %}
+    {% set autoPool = collections['blog-' + (uiLocale | lower)] | relatedByTopic(page, 8) %}
+  {% elif category == "Insights" %}
+    {% set autoPool = collections.insights | reverse | rejectattr("url", "equalto", page.url) | head(8) %}
+  {% else %}
+    {% set autoPool = collections.articles | relatedByTopic(page, 8) %}
+  {% endif %}
+  {% for cand in autoPool %}
+    {% if curatedRelated.length < 3 and cand.url != page.url %}
+      {% set dupMark = [] %}
+      {% for have in curatedRelated %}{% if have.url == cand.url %}{% set dupMark = (dupMark.push(1), dupMark) %}{% endif %}{% endfor %}
+      {% if dupMark.length == 0 %}{% set curatedRelated = (curatedRelated.push(cand), curatedRelated) %}{% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if curatedRelated.length > 0 %}
+  {% set relatedPosts = curatedRelated %}
+  {% if uiLocale != "en" %}{% set relatedHeading = ui.moreFromBlog %}{% elif category == "Insights" %}{% set relatedHeading = "Related Insights" %}{% else %}{% set relatedHeading = "Related Reading" %}{% endif %}
+{% elif uiLocale != "en" %}
   {% set relatedPosts = collections['blog-' + (uiLocale | lower)] | relatedByTopic(page, 3) %}
   {% set relatedHeading = ui.moreFromBlog %}
 {% elif category == "Insights" %}

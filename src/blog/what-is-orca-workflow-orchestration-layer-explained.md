@@ -3,6 +3,8 @@ title: "What Is Orca? The Orchestration Layer Explained"
 shortLabel: "What Is Orca?"
 translationKey: "what-is-orca-workflow-orchestration-layer-explained"
 description: "Orca is Zunkiree Labs' AI orchestration layer that coordinates agent workflows across CRM, email and marketing tools. What it does and what to ask first."
+seoTitle: "What Is Orca by Zunkiree Labs? AI Orchestration Explained"
+seoDescription: "Orca is Zunkiree Labs' AI orchestration layer for CRM, email and marketing workflows. What it does, how it differs from automation and what to ask first."
 date: 2026-10-05
 lastUpdated: 2026-10-05
 category: Insights
@@ -14,6 +16,12 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/what-is-orca-workflow-orchestration-layer-explained.svg"
 ogType: article
+related:
+  - /blog/how-to-choose-an-ai-orchestration-layer/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/from-dashboards-to-decisions-the-future-of-business-intelligence/
+  - /blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/
+  - /blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -86,15 +94,6 @@ Going by the problems Zunkiree Labs says it addresses, Orca is aimed at teams wh
 Orchestration is the coordination layer between the tools a business already runs. Orca is Zunkiree Labs' version of it: a layer above CRM, email and marketing tools that connects them, coordinates handoffs and keeps cross-system actions visible. This description is the company's own. To see whether it fits your setup, start from the tools you want connected and the decisions you are willing to automate. You can talk to the team through the [Orca page](/products/orca/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is Orca?</p><p class="text-gray-600 leading-relaxed">Orca is Zunkiree Labs' AI orchestration layer. It sits above a company's CRM, email and marketing tools and coordinates agent workflows across them, so the systems the team already uses can work together instead of operating in isolation.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does Orca replace my CRM, email or marketing tools?</p><p class="text-gray-600 leading-relaxed">No. According to Zunkiree Labs, Orca connects to the tools a company already uses and coordinates agent workflows across them, rather than asking the company to migrate away from them.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How is Orca different from Zunkiree Search or AI CRM?</p><p class="text-gray-600 leading-relaxed">Zunkiree Search and AI CRM are products that teams and customers interact with directly. Orca is the coordination layer underneath them, keeping agent workflows and data in sync across CRM, email and marketing tools.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Orca available as a standalone product?</p><p class="text-gray-600 leading-relaxed">Zunkiree Labs says Orca currently powers orchestration underneath its platform deployments, including Zunkiree Search and AI CRM, and that the best way to explore it is a conversation about which systems you would want connected.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is Orca?","@type":"Question","acceptedAnswer":{"text":"Orca is Zunkiree Labs' AI orchestration layer. It sits above a company's CRM, email and marketing tools and coordinates agent workflows across them, so the systems the team already uses can work together instead of operating in isolation.","@type":"Answer"}},{"name":"Does Orca replace my CRM, email or marketing tools?","@type":"Question","acceptedAnswer":{"text":"No. According to Zunkiree Labs, Orca connects to the tools a company already uses and coordinates agent workflows across them, rather than asking the company to migrate away from them.","@type":"Answer"}},{"name":"How is Orca different from Zunkiree Search or AI CRM?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Search and AI CRM are products that teams and customers interact with directly. Orca is the coordination layer underneath them, keeping agent workflows and data in sync across CRM, email and marketing tools.","@type":"Answer"}},{"name":"Is Orca available as a standalone product?","@type":"Question","acceptedAnswer":{"text":"Zunkiree Labs says Orca currently powers orchestration underneath its platform deployments, including Zunkiree Search and AI CRM, and that the best way to explore it is a conversation about which systems you would want connected.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [How to Choose an AI Orchestration Layer](/blog/how-to-choose-an-ai-orchestration-layer/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
-- [AI Orchestration vs Automation vs Agents: What Is the Difference?](/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/)
-- [Disconnected Tools: What They Cost and How Orchestration Helps](/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/)
-- [Orca: AI Orchestration Layer](/products/orca/)
 
 ## Sources
 
