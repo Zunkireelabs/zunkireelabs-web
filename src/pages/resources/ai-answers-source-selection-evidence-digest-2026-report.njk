@@ -97,15 +97,7 @@ slug: ai-answers-source-selection-evidence-digest-2026-report
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Do I need special markup to appear in Google AI Overviews?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Google's documentation says there are no additional requirements to appear in AI Overviews or AI Mode, and no other special optimizations are necessary. A page must be indexed and eligible to show a snippet.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Where do AI answers get their sources?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">In one large vendor-published sample of 17.2 million citations, brand-owned websites supplied 46.89% and managed third-party listings 43.71%. The split varied by model, and the figures are directional, not audited.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does ranking in Google mean being cited by AI assistants?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Not necessarily. Ahrefs has reported that only about 12% of URLs cited by AI tools overlap with Google's top-10 organic results, according to secondary sources. Different assistants also cite different sources.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Can I measure AI Overview traffic in Search Console?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">AI Overviews and AI Mode traffic is counted under the Web search type in the Performance report and is not reported separately, per Google's documentation.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Do I need special markup to appear in Google AI Overviews?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Google's documentation says there are no additional requirements to appear in AI Overviews or AI Mode, and no other special optimizations are necessary. A page must be indexed and eligible to show a snippet.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Where do AI answers get their sources?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">In one large vendor-published sample of 17.2 million citations, brand-owned websites supplied 46.89% and managed third-party listings 43.71%. The split varied by model, and the figures are directional, not audited.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does ranking in Google mean being cited by AI assistants?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Not necessarily. Ahrefs has reported that only about 12% of URLs cited by AI tools overlap with Google's top-10 organic results, according to secondary sources. Different assistants also cite different sources.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Can I measure AI Overview traffic in Search Console?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">AI Overviews and AI Mode traffic is counted under the Web search type in the Performance report and is not reported separately, per Google's documentation.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -127,6 +119,9 @@ slug: ai-answers-source-selection-evidence-digest-2026-report
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

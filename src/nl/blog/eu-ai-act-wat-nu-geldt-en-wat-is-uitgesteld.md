@@ -10,6 +10,9 @@ pillar: "ai-society"
 readTime: 7
 featuredImage: "/assets/images/blog/eu-ai-act-wat-nu-geldt-en-wat-is-uitgesteld.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /nl/blog/ftc-onderzoek-ai-labs-agents-wat-bedrijven-moeten-doen/
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -80,11 +83,6 @@ De transparantieregels van de EU AI-verordening gelden al, met een overgangsperi
 Meer lezen over risico en governance: onze artikelen over het [FTC-onderzoek naar AI-agents](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/) en over [wat superintelligentie is en waarom erover wordt gedebatteerd](/blog/what-is-superintelligence-and-why-is-it-called-that/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat geldt er onder de EU AI-verordening vanaf 2 augustus 2026?</p><p class="text-gray-600 leading-relaxed">Vanaf 2 augustus 2026 gelden de transparantieplichten van artikel 50. Daaronder vallen mensen laten weten dat ze met een AI-systeem communiceren, het markeren van synthetische content en het bekendmaken van deepfakes, volgens samenvattingen van advocatenkantoren zoals Cooley.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat heeft de Digital Omnibus on AI uitgesteld?</p><p class="text-gray-600 leading-relaxed">Hij schoof de verplichtingen voor hoog-risicosystemen uit bijlage III naar 2 december 2027 en voor in producten ingebouwde systemen uit bijlage I naar 2 augustus 2028. Hij trad op 27 juli 2026 in werking.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Geldt de EU AI-verordening ook voor bedrijven buiten de EU?</p><p class="text-gray-600 leading-relaxed">Dat kan. Advocatenkantoren beschrijven twee routes: het op de EU-markt brengen van een AI-systeem en het gebruik van de uitkomst van een AI-systeem in de EU. Laat uw eigen situatie beoordelen door een gekwalificeerde jurist.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Welke boetes staan er op overtreding van artikel 50?</p><p class="text-gray-600 leading-relaxed">Cooley meldt boetes tot 15 miljoen euro of 3% van de wereldwijde jaaromzet, afhankelijk van wat hoger is. Dit is een algemene samenvatting en geen juridisch advies.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat geldt er onder de EU AI-verordening vanaf 2 augustus 2026?","@type":"Question","acceptedAnswer":{"text":"Vanaf 2 augustus 2026 gelden de transparantieplichten van artikel 50. Daaronder vallen mensen laten weten dat ze met een AI-systeem communiceren, het markeren van synthetische content en het bekendmaken van deepfakes, volgens samenvattingen van advocatenkantoren zoals Cooley.","@type":"Answer"}},{"name":"Wat heeft de Digital Omnibus on AI uitgesteld?","@type":"Question","acceptedAnswer":{"text":"Hij schoof de verplichtingen voor hoog-risicosystemen uit bijlage III naar 2 december 2027 en voor in producten ingebouwde systemen uit bijlage I naar 2 augustus 2028. Hij trad op 27 juli 2026 in werking.","@type":"Answer"}},{"name":"Geldt de EU AI-verordening ook voor bedrijven buiten de EU?","@type":"Question","acceptedAnswer":{"text":"Dat kan. Advocatenkantoren beschrijven twee routes: het op de EU-markt brengen van een AI-systeem en het gebruik van de uitkomst van een AI-systeem in de EU. Laat uw eigen situatie beoordelen door een gekwalificeerde jurist.","@type":"Answer"}},{"name":"Welke boetes staan er op overtreding van artikel 50?","@type":"Question","acceptedAnswer":{"text":"Cooley meldt boetes tot 15 miljoen euro of 3% van de wereldwijde jaaromzet, afhankelijk van wat hoger is. Dit is een algemene samenvatting en geen juridisch advies.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [FTC onderzoekt AI-labs vanwege agents die uit de bocht vliegen: wat bedrijven kunnen doen](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Bronnen
 

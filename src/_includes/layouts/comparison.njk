@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+hasOwnWebPage: true
 ---
 
 {# Get current comparison data #}
@@ -19,8 +20,8 @@ layout: base.njk
   "@type": "WebPage",
   "name": "{{ comp.title }}",
   "description": "{{ comp.description }}",
-  "datePublished": "2026-03-30",
-  "dateModified": "2026-09-25",
+  "datePublished": "{{ pageDates[page.inputPath].published if pageDates[page.inputPath] else '2026-03-30' }}",
+  "dateModified": "{{ pageDates[page.inputPath].modified if pageDates[page.inputPath] else '2026-09-25' }}",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [

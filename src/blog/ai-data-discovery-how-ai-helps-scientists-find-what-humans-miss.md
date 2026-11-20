@@ -14,6 +14,13 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss.svg"
 ogType: article
+related:
+  - /blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/
+  - /blog/how-ai-and-transaction-data-are-changing-fraud-detection/
+  - /blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/enterprise-ai-anthropic-openai-google-who-is-winning/
+  - /blog/ai-coding-agents-2026-how-developers-actually-work-now/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -84,17 +91,6 @@ For readers, the practical takeaway is that AI is becoming a tool for exploring 
 A May 2026 Nature paper from Google researchers reports that an AI system, ERA, wrote and refined scientific software that beat expert-built methods on benchmarks in genomics, public health, mathematics and neuroscience. It works where success can be scored as a number. The reported results are strong, but they show better prediction and faster search, not scientific understanding, and humans still have to test, explain and decide.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How is AI helping scientists make discoveries?</p><p class="text-gray-600 leading-relaxed">In one 2026 Nature paper, Google researchers describe a system called ERA that uses a language model and tree search to write and improve scientific software, scored against a numerical measure. It reportedly beat expert-built methods on several benchmarks.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did the ERA system actually find?</p><p class="text-gray-600 leading-relaxed">Google reports 40 new methods for integrating single-cell RNA sequencing data, with the top one 14% better than ComBat on a benchmark, and 14 COVID-19 hospitalization forecasting models that outperformed the CDC CovidHub Ensemble. These are reported figures from Google Research and coverage of the paper.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does this mean AI can replace scientists?</p><p class="text-gray-600 leading-relaxed">No. The authors say optimizing predictive models is not the same as full scientific discovery, which also requires reasoning about mechanisms, causes and theories. Researchers still define the problem, check results and interpret them.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the limit of this approach?</p><p class="text-gray-600 leading-relaxed">It needs a scorable task, meaning one where success can be measured as a number, and a prediction is not an explanation. A Nature Communications perspective argues that AI patterns must be tested through experiments or simulations before they count as scientific explanations.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How is AI helping scientists make discoveries?","@type":"Question","acceptedAnswer":{"text":"In one 2026 Nature paper, Google researchers describe a system called ERA that uses a language model and tree search to write and improve scientific software, scored against a numerical measure. It reportedly beat expert-built methods on several benchmarks.","@type":"Answer"}},{"name":"What did the ERA system actually find?","@type":"Question","acceptedAnswer":{"text":"Google reports 40 new methods for integrating single-cell RNA sequencing data, with the top one 14% better than ComBat on a benchmark, and 14 COVID-19 hospitalization forecasting models that outperformed the CDC CovidHub Ensemble. These are reported figures from Google Research and coverage of the paper.","@type":"Answer"}},{"name":"Does this mean AI can replace scientists?","@type":"Question","acceptedAnswer":{"text":"No. The authors say optimizing predictive models is not the same as full scientific discovery, which also requires reasoning about mechanisms, causes and theories. Researchers still define the problem, check results and interpret them.","@type":"Answer"}},{"name":"What is the limit of this approach?","@type":"Question","acceptedAnswer":{"text":"It needs a scorable task, meaning one where success can be measured as a number, and a prediction is not an explanation. A Nature Communications perspective argues that AI patterns must be tested through experiments or simulations before they count as scientific explanations.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI and Real Estate Valuation and Price Forecasting](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
-- [How AI and Transaction Data Are Changing Fraud Detection](/blog/how-ai-and-transaction-data-are-changing-fraud-detection/)
-- [Real-Time Data and AI in Transportation and Logistics Routing](/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Anthropic, OpenAI, Google in Enterprise: Who Is Winning?](/blog/enterprise-ai-anthropic-openai-google-who-is-winning/)
-- [AI Coding Agents in 2026: How Developers Actually Work Now](/blog/ai-coding-agents-2026-how-developers-actually-work-now/)
-- [AI Over Business Data: What the Spider 2.0 Benchmark Shows](/blog/ai-over-business-data-what-the-spider-2-benchmark-shows/)
-- [AI Training Data Quality: What Model Collapse Research Shows](/blog/ai-training-data-quality-what-model-collapse-research-shows/)
 
 ## Sources
 

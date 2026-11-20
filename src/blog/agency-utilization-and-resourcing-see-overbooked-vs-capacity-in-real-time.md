@@ -21,6 +21,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/agency-utilization-and-resourcing-see-overbooked-vs-capacity-in-real-time.svg"
 ogType: article
+related:
+  - /blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/
+  - /blog/agency-proposal-process-how-to-build-proposals-faster-from-a-shared-system/
+  - /blog/understanding-complex-availability-in-scheduling/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -110,12 +114,6 @@ Our agency platform includes time tracking with approvals routed to billing, and
 To talk through your own situation, see our [AI for Agencies page](/industries/agencies/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is agency utilization?</p><p class="text-gray-600 leading-relaxed">Utilization is the share of a person's available time spent on billable or planned work, usually billable hours divided by available hours. Agree on how available time is defined.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is a good utilization rate for an agency?</p><p class="text-gray-600 leading-relaxed">It depends on role and business model. Senior roles carry management and business development time, so targets differ. Set targets by role and check them against margin, not utilization alone.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do you forecast agency capacity?</p><p class="text-gray-600 leading-relaxed">Combine planned allocations on committed projects with weighted likely deals from the pipeline, and compare them with available hours by role and week.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why require approval of timesheets?</p><p class="text-gray-600 leading-relaxed">Approval gives clients accurate invoices and gives you clean data for utilization, margin and estimates.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is agency utilization?","@type":"Question","acceptedAnswer":{"text":"Utilization is the share of a person's available time spent on billable or planned work, usually billable hours divided by available hours. Agree on how available time is defined.","@type":"Answer"}},{"name":"What is a good utilization rate for an agency?","@type":"Question","acceptedAnswer":{"text":"It depends on role and business model. Senior roles carry management and business development time, so targets differ. Set targets by role and check them against margin, not utilization alone.","@type":"Answer"}},{"name":"How do you forecast agency capacity?","@type":"Question","acceptedAnswer":{"text":"Combine planned allocations on committed projects with weighted likely deals from the pipeline, and compare them with available hours by role and week.","@type":"Answer"}},{"name":"Why require approval of timesheets?","@type":"Question","acceptedAnswer":{"text":"Approval gives clients accurate invoices and gives you clean data for utilization, margin and estimates.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI for Agencies: An Operating System View From Pipeline to Utilization](/blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/)
-- [Agency Proposal Process: Build Better Proposals Faster From a Shared System](/blog/agency-proposal-process-how-to-build-proposals-faster-from-a-shared-system/)
-- [Understanding Complex Availability in Scheduling](/blog/understanding-complex-availability-in-scheduling/)
 
 ## Sources
 

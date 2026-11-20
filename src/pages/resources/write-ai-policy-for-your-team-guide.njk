@@ -140,15 +140,7 @@ slug: write-ai-policy-for-your-team-guide
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How long should an AI policy be?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Short enough that people read it. Our own suggestion is one to two pages: approved tools, data rules, review rules, disclosure, incidents and an owner. Put detail in linked procedures rather than in the policy itself.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does a small team need an AI policy?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No law we cite says every small team must have one, but several rules reward having one. Canada's regulator says an organisation is responsible for data it transfers to a third party for processing, and the EU AI Act sets disclosure duties for some uses. A written policy is how you show you thought about it.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should the policy say about customer data?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Name the data categories that may never go into unapproved tools, and the approved tools that may receive each category. Regulators ask where data is processed and who can access it, so record those answers for each tool.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">How often should the policy be reviewed?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Our own suggestion is every six months and whenever a tool, supplier or law changes. The EU AI Act dates alone moved in 2026, so a fixed policy goes stale quickly.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">How long should an AI policy be?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Short enough that people read it. Our own suggestion is one to two pages: approved tools, data rules, review rules, disclosure, incidents and an owner. Put detail in linked procedures rather than in the policy itself.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does a small team need an AI policy?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">No law we cite says every small team must have one, but several rules reward having one. Canada's regulator says an organisation is responsible for data it transfers to a third party for processing, and the EU AI Act sets disclosure duties for some uses. A written policy is how you show you thought about it.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What should the policy say about customer data?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Name the data categories that may never go into unapproved tools, and the approved tools that may receive each category. Regulators ask where data is processed and who can access it, so record those answers for each tool.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">How often should the policy be reviewed?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Our own suggestion is every six months and whenever a tool, supplier or law changes. The EU AI Act dates alone moved in 2026, so a fixed policy goes stale quickly.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -170,6 +162,9 @@ slug: write-ai-policy-for-your-team-guide
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

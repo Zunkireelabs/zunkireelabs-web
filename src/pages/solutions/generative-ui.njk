@@ -1,4 +1,5 @@
 ---
+hasOwnWebPage: true
 layout: base.njk
 title: "Generative UI Development Services | Zunkiree Labs" # SEOAI:TITLE
 description: "Generative UI development: interfaces assembled at runtime from your design system, where the model picks and fills real components users can act on."
@@ -1032,7 +1033,8 @@ faqs:
       "publisher": {
         "@id": "https://zunkireelabs.com/#organization"
       },
-      "dateModified": "2026-10-09",
+      "datePublished": "{{ pageDates[page.inputPath].published if pageDates[page.inputPath] else '2026-10-09' }}",
+      "dateModified": "{{ pageDates[page.inputPath].modified if pageDates[page.inputPath] else '2026-10-09' }}",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [

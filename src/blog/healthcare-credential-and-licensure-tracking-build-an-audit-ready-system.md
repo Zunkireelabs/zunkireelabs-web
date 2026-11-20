@@ -22,6 +22,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/healthcare-credential-and-licensure-tracking-build-an-audit-ready-system.svg"
 ogType: article
+related:
+  - /blog/compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments/
+  - /blog/ensuring-patient-data-security-essential-measures-for-healthcare-providers/
+  - /blog/most-fda-cleared-ai-devices-lack-patient-outcome-testing-what-clinics-should-ask/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -120,12 +124,6 @@ Our healthcare platform includes licensure tracking with expiry and scope checks
 To talk through your own situation, see our [AI for Healthcare page](/industries/healthcare/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is credential tracking in healthcare?</p><p class="text-gray-600 leading-relaxed">It is maintaining a single register of each worker's registration, qualifications, clearances and training, with scope, dates, evidence and verification, and alerting before items expire.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do we avoid missing credential expiries?</p><p class="text-gray-600 leading-relaxed">Alert the worker and manager ahead of expiry, show expiring items in rostering, block assignment on expiry and review a dashboard of upcoming dates regularly.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What evidence should we store?</p><p class="text-gray-600 leading-relaxed">The document or confirmation for each credential, who verified it, when and how, kept against the person's record with version history.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do we prepare for an audit?</p><p class="text-gray-600 leading-relaxed">Be able to show, for any worker and date, what they held, the evidence and verification, and the shifts they worked. Rehearse with mock audits.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is credential tracking in healthcare?","@type":"Question","acceptedAnswer":{"text":"It is maintaining a single register of each worker's registration, qualifications, clearances and training, with scope, dates, evidence and verification, and alerting before items expire.","@type":"Answer"}},{"name":"How do we avoid missing credential expiries?","@type":"Question","acceptedAnswer":{"text":"Alert the worker and manager ahead of expiry, show expiring items in rostering, block assignment on expiry and review a dashboard of upcoming dates regularly.","@type":"Answer"}},{"name":"What evidence should we store?","@type":"Question","acceptedAnswer":{"text":"The document or confirmation for each credential, who verified it, when and how, kept against the person's record with version history.","@type":"Answer"}},{"name":"How do we prepare for an audit?","@type":"Question","acceptedAnswer":{"text":"Be able to show, for any worker and date, what they held, the evidence and verification, and the shifts they worked. Rehearse with mock audits.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Compliance-Gated Rostering: How Care Providers Prevent Unsafe Shift Assignments](/blog/compliance-gated-rostering-how-healthcare-providers-prevent-unsafe-shift-assignments/)
-- [Ensuring Patient Data Security: Essential Measures for Healthcare Providers](/blog/ensuring-patient-data-security-essential-measures-for-healthcare-providers/)
-- [FDA-Cleared Medical AI and Patient Outcomes: What Clinics Should Ask](/blog/most-fda-cleared-ai-devices-lack-patient-outcome-testing-what-clinics-should-ask/)
 
 ## Sources
 

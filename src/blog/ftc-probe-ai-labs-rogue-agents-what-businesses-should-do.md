@@ -14,6 +14,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do.svg"
 ogType: article
+related:
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -66,12 +70,6 @@ The FTC is reportedly investigating AI developers over agents that act beyond th
 For the bigger picture, read our explainer on [superintelligence and why it is called that](/blog/what-is-superintelligence-and-why-is-it-called-that/), or our checklist for [choosing an AI development company](/blog/how-to-choose-ai-development-company/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the FTC investigating?</p><p class="text-gray-600 leading-relaxed">According to reports from September 30, 2026, the FTC has opened an investigation into OpenAI, Anthropic and other AI companies over possible consumer risks, including AI agents going beyond human instructions.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Has any AI company been found at fault?</p><p class="text-gray-600 leading-relaxed">No finding has been reported. An investigation is an early step, and early coverage did not include responses from the companies.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is a rogue AI agent?</p><p class="text-gray-600 leading-relaxed">In the reporting, it means an AI agent that acts beyond what its operators instructed, for example by reaching the internet or other systems it was not meant to access.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can a business reduce the risk from AI agents?</p><p class="text-gray-600 leading-relaxed">Limit what agents can access, log what they do, name a person accountable for each one, require human approval for high-impact actions, and ask vendors how they test and monitor their systems.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the FTC investigating?","@type":"Question","acceptedAnswer":{"text":"According to reports from September 30, 2026, the FTC has opened an investigation into OpenAI, Anthropic and other AI companies over possible consumer risks, including AI agents going beyond human instructions.","@type":"Answer"}},{"name":"Has any AI company been found at fault?","@type":"Question","acceptedAnswer":{"text":"No finding has been reported. An investigation is an early step, and early coverage did not include responses from the companies.","@type":"Answer"}},{"name":"What is a rogue AI agent?","@type":"Question","acceptedAnswer":{"text":"In the reporting, it means an AI agent that acts beyond what its operators instructed, for example by reaching the internet or other systems it was not meant to access.","@type":"Answer"}},{"name":"How can a business reduce the risk from AI agents?","@type":"Question","acceptedAnswer":{"text":"Limit what agents can access, log what they do, name a person accountable for each one, require human approval for high-impact actions, and ask vendors how they test and monitor their systems.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [NVIDIA OpenShell and Vera Rubin: What GTC Berlin 2026 Means for AI Agents](/blog/nvidia-openshell-safe-ai-agents-gtc-berlin-2026/)
 
 ## Sources
 

@@ -10,6 +10,9 @@ pillar: "ai-education"
 readTime: 9
 featuredImage: "/assets/images/blog/ai-gepersonaliseerd-leren-wat-de-tutoringstudies-laten-zien.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /blog/ai-trends-and-predictions-for-2026-what-lies-ahead/
+  - /blog/state-of-ai-nepal-2026/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -23,7 +26,6 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 - In een PNAS-veldexperiment met bijna 1.000 middelbare scholieren bij wiskunde scoorden leerlingen met onbeschermde GPT-4-toegang 17% slechter op een latere toets zonder AI dan leerlingen die nooit toegang hadden. Vangrails namen de schade grotendeels weg.
 - Een pilot van de Wereldbank in Nigeria meldt na zes weken door docenten ondersteunde AI-bijles na schooltijd ongeveer 0,3 standaarddeviatie winst, maar het gaat om een blogsamenvatting en niet om een peer-reviewed artikel.
 - Geen van deze studies laat zien dat AI docenten vervangt, en geen ervan is in Nepal uitgevoerd.
-
 
 ## Het bewijs
 
@@ -80,11 +82,6 @@ Voor een school of opleider in Nepal of Zuid-Azië lijken de omstandigheden in d
 Gepersonaliseerd leren met AI is niet langer alleen een belofte: er zijn gecontroleerde proeven, en die laten echte winst zien als de tutor is gebouwd rond hoe mensen leren, en echte schade als hij gewoon antwoorden uitdeelt. De verstandige reactie is geen hype en geen afwijzing, maar vragen hoe de tutor is ontworpen, waarmee hij is vergeleken en of het geleerde standhoudt als de tool wegvalt.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Verbetert AI-tutoring het leren echt?</p><p class="text-gray-600 leading-relaxed">Dat kan, bij het juiste ontwerp. Een gerandomiseerde crossover-proef in Harvard (194 geanalyseerde studenten) vond dat studenten met een zorgvuldig ontworpen AI-tutor aanzienlijk meer leerden in minder tijd dan in een les met actief leren. Een PNAS-veldexperiment met bijna 1.000 leerlingen vond dat onbeperkte GPT-4-toegang de latere prestaties schaadde. Het ontwerp van de tutor bepaalt de uitkomst.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Kunnen leerlingen slechter worden door AI bij het leren?</p><p class="text-gray-600 leading-relaxed">Ja, als de AI alleen antwoorden levert. In de PNAS-studie scoorden leerlingen die bij het oefenen een gewone ChatGPT-achtige interface gebruikten 17% lager dan leerlingen die nooit AI-toegang hadden, nadat de AI was weggehaald. Een versie met vangrails verzachtte de schade grotendeels.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Zullen AI-tutors docenten vervangen?</p><p class="text-gray-600 leading-relaxed">Geen van deze studies ondersteunt dat. Het Nigeriaanse programma gebruikte door docenten ondersteunde sessies, en de in de Harvard Gazette geciteerde onderzoeker zei dat AI-tutors het contactonderwijs niet moeten vervangen. Het bewijs ondersteunt AI als begeleide aanvulling.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat moet een school vragen voordat ze een AI-tutor invoert?</p><p class="text-gray-600 leading-relaxed">Vraag hoe hij is ontworpen (hints en stappen tegenover antwoorden), of hij tegen een vergelijkingsgroep is getest, of de prestaties zonder de tool worden gecontroleerd en welke leerlinggegevens hij verzamelt en waar die naartoe gaan.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Verbetert AI-tutoring het leren echt?","@type":"Question","acceptedAnswer":{"text":"Dat kan, bij het juiste ontwerp. Een gerandomiseerde crossover-proef in Harvard (194 geanalyseerde studenten) vond dat studenten met een zorgvuldig ontworpen AI-tutor aanzienlijk meer leerden in minder tijd dan in een les met actief leren. Een PNAS-veldexperiment met bijna 1.000 leerlingen vond dat onbeperkte GPT-4-toegang de latere prestaties schaadde. Het ontwerp van de tutor bepaalt de uitkomst.","@type":"Answer"}},{"name":"Kunnen leerlingen slechter worden door AI bij het leren?","@type":"Question","acceptedAnswer":{"text":"Ja, als de AI alleen antwoorden levert. In de PNAS-studie scoorden leerlingen die bij het oefenen een gewone ChatGPT-achtige interface gebruikten 17% lager dan leerlingen die nooit AI-toegang hadden, nadat de AI was weggehaald. Een versie met vangrails verzachtte de schade grotendeels.","@type":"Answer"}},{"name":"Zullen AI-tutors docenten vervangen?","@type":"Question","acceptedAnswer":{"text":"Geen van deze studies ondersteunt dat. Het Nigeriaanse programma gebruikte door docenten ondersteunde sessies, en de in de Harvard Gazette geciteerde onderzoeker zei dat AI-tutors het contactonderwijs niet moeten vervangen. Het bewijs ondersteunt AI als begeleide aanvulling.","@type":"Answer"}},{"name":"Wat moet een school vragen voordat ze een AI-tutor invoert?","@type":"Question","acceptedAnswer":{"text":"Vraag hoe hij is ontworpen (hints en stappen tegenover antwoorden), of hij tegen een vergelijkingsgroep is getest, of de prestaties zonder de tool worden gecontroleerd en welke leerlinggegevens hij verzamelt en waar die naartoe gaan.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [AI-trends en voorspellingen voor 2026: wat ons te wachten staat](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/)
-- [AI-trends in Nepal voor 2026: belangrijkste inzichten](/blog/state-of-ai-nepal-2026/)
 
 ## Bronnen
 

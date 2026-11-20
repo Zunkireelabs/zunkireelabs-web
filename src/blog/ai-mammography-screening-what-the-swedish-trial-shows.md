@@ -14,6 +14,11 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-mammography-screening-what-the-swedish-trial-shows.svg"
 ogType: article
+related:
+  - /blog/ai-sepsis-early-warning-what-the-evidence-shows/
+  - /blog/ai-in-uk-healthcare-what-to-check-before-you-buy/
+  - /blog/why-ai-matters-for-nepal-what-the-evidence-shows/
+  - /blog/ai-personalized-learning-what-tutoring-trials-show/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -73,13 +78,6 @@ Watch for longer follow-up, including whether fewer interval cancers eventually 
 A large Swedish randomized trial reports that AI-supported mammography reading cut interval cancers by 12% and reading workload by 44% without a notable rise in false positives. It is among the stronger pieces of evidence for clinical AI because of its design. But it tested one system in one national program, and its authors say the benefit cannot be assumed elsewhere. For a broader view of how to judge clinical AI claims, see our look at the [evidence for an AI sepsis early-warning system](/blog/ai-sepsis-early-warning-what-the-evidence-shows/) and our guide to [what to check before you buy AI in healthcare](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the MASAI trial?</p><p class="text-gray-600 leading-relaxed">MASAI (Mammography Screening with Artificial Intelligence) is a randomized trial run by Lund University within Sweden's national mammography program. Nearly 106,000 women were assigned to AI-supported screening or standard double reading by two radiologists.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did the trial find?</p><p class="text-gray-600 leading-relaxed">According to reports on the January 2026 Lancet paper, interval cancers were 12% lower with AI support: 1.55 against 1.76 per 1,000 women. Earlier results reported 29% more cancers detected and a 44% reduction in radiologist reading workload.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does AI replace radiologists in this screening?</p><p class="text-gray-600 leading-relaxed">No. In the trial the AI triaged exams and highlighted suspicious areas, and radiologists still read every mammogram, with higher-risk exams read by two radiologists.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can these results be assumed for any AI mammography tool?</p><p class="text-gray-600 leading-relaxed">No. The authors say the result came from a program already using double reading and depends on the specific AI system and reading protocol, so it is not a property of AI mammography in general.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the MASAI trial?","@type":"Question","acceptedAnswer":{"text":"MASAI (Mammography Screening with Artificial Intelligence) is a randomized trial run by Lund University within Sweden's national mammography program. Nearly 106,000 women were assigned to AI-supported screening or standard double reading by two radiologists.","@type":"Answer"}},{"name":"What did the trial find?","@type":"Question","acceptedAnswer":{"text":"According to reports on the January 2026 Lancet paper, interval cancers were 12% lower with AI support: 1.55 against 1.76 per 1,000 women. Earlier results reported 29% more cancers detected and a 44% reduction in radiologist reading workload.","@type":"Answer"}},{"name":"Does AI replace radiologists in this screening?","@type":"Question","acceptedAnswer":{"text":"No. In the trial the AI triaged exams and highlighted suspicious areas, and radiologists still read every mammogram, with higher-risk exams read by two radiologists.","@type":"Answer"}},{"name":"Can these results be assumed for any AI mammography tool?","@type":"Question","acceptedAnswer":{"text":"No. The authors say the result came from a program already using double reading and depends on the specific AI system and reading protocol, so it is not a property of AI mammography in general.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Sepsis Early Warning: What the Evidence Shows](/blog/ai-sepsis-early-warning-what-the-evidence-shows/)
-- [AI in UK Healthcare: What to Check Before You Buy](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/)
-- [Why AI Matters for Nepal: What the Evidence Shows](/blog/why-ai-matters-for-nepal-what-the-evidence-shows/)
-- [AI Personalized Learning: What Tutoring Trials Show](/blog/ai-personalized-learning-what-tutoring-trials-show/)
 
 ## Sources
 

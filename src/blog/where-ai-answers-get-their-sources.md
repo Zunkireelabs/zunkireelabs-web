@@ -15,6 +15,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/where-ai-answers-get-their-sources.svg"
 ogType: article
+related:
+  - /blog/what-is-ai-native-search/
+  - /blog/why-ai-matters-for-nepal-what-the-evidence-shows/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -75,11 +78,6 @@ Treat the percentages as a prompt to check your own position rather than as a be
 Appearing in AI answers is not only a website problem. In the largest published sample so far, roughly 90% of citations came from surfaces a brand can manage, and nearly half of those were third-party listings rather than the brand's own pages. The figures are vendor-produced and should be treated as directional, but the practical implication is cheap to act on: make your profiles consistent, state plainly on your own site what you do, and connect the two with structured data.
 
 For the underlying mechanics, see our whitepaper on [answer engine optimization](/resources/answer-engine-optimization-whitepaper/), or our explainer on [what AI-native search is](/blog/what-is-ai-native-search/).
-
-## Related Insights
-
-- [What Is AI-Native Search?](/blog/what-is-ai-native-search/)
-- [Why AI Matters for Nepal: What the Evidence Shows](/blog/why-ai-matters-for-nepal-what-the-evidence-shows/)
 
 ## Sources
 

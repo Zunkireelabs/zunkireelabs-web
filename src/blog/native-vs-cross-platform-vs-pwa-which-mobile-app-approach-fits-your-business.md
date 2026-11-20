@@ -20,6 +20,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/native-vs-cross-platform-vs-pwa-which-mobile-app-approach-fits-your-business.svg"
 ogType: article
+related:
+  - /blog/offline-first-mobile-app-architecture-sync-conflicts-and-low-connectivity/
+  - /blog/understanding-complex-availability-in-scheduling/
+  - /blog/custom-software-vs-off-the-shelf-software-how-to-decide/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -116,12 +120,6 @@ We build iOS and Android apps, using cross-platform where it makes sense and nat
 For most business apps, cross-platform gives the best balance of cost, speed and quality. Choose native for demanding graphics or deep device features, and a PWA when reach and simplicity matter more than device access. Prototype the hardest feature before you commit.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the difference between native and cross-platform apps?</p><p class="text-gray-600 leading-relaxed">Native apps are built separately for each platform with its own tools. Cross-platform apps share most code across iPhone and Android, using frameworks such as React Native or Flutter.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is React Native good enough for business apps?</p><p class="text-gray-600 leading-relaxed">For most business apps, such as bookings, forms, dashboards, catalogues and field data capture, it works well. Apps with intensive graphics or very deep device integration may need native code.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is a PWA?</p><p class="text-gray-600 leading-relaxed">A progressive web app is a website built to behave like an app, with offline support and installability. Its device access and app-store presence are more limited, and capabilities vary by platform.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Which is cheapest to build?</p><p class="text-gray-600 leading-relaxed">A PWA is generally cheapest, cross-platform is next, and separate native apps cost the most to build and maintain. Consider ongoing maintenance, not only launch cost.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can cross-platform apps work offline?</p><p class="text-gray-600 leading-relaxed">Yes. They can store data locally and sync when a connection returns. The design of the sync and conflict handling matters more than the framework.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the difference between native and cross-platform apps?","@type":"Question","acceptedAnswer":{"text":"Native apps are built separately for each platform with its own tools. Cross-platform apps share most code across iPhone and Android, using frameworks such as React Native or Flutter.","@type":"Answer"}},{"name":"Is React Native good enough for business apps?","@type":"Question","acceptedAnswer":{"text":"For most business apps, such as bookings, forms, dashboards, catalogues and field data capture, it works well. Apps with intensive graphics or very deep device integration may need native code.","@type":"Answer"}},{"name":"What is a PWA?","@type":"Question","acceptedAnswer":{"text":"A progressive web app is a website built to behave like an app, with offline support and installability. Its device access and app-store presence are more limited, and capabilities vary by platform.","@type":"Answer"}},{"name":"Which is cheapest to build?","@type":"Question","acceptedAnswer":{"text":"A PWA is generally cheapest, cross-platform is next, and separate native apps cost the most to build and maintain. Consider ongoing maintenance, not only launch cost.","@type":"Answer"}},{"name":"Can cross-platform apps work offline?","@type":"Question","acceptedAnswer":{"text":"Yes. They can store data locally and sync when a connection returns. The design of the sync and conflict handling matters more than the framework.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Offline-First Mobile App Architecture: Sync, Conflicts and Low Connectivity](/blog/offline-first-mobile-app-architecture-sync-conflicts-and-low-connectivity/)
-- [Understanding Complex Availability in Scheduling](/blog/understanding-complex-availability-in-scheduling/)
-- [Custom Software vs Off-the-Shelf: How to Decide What to Build or Buy](/blog/custom-software-vs-off-the-shelf-software-how-to-decide/)
 
 ## Sources
 

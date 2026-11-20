@@ -10,6 +10,9 @@ translationKey: "trump-super-intelligence-force-what-the-executive-order-says"
 category: "Inzichten"
 pillar: "ai-society"
 readTime: 6
+related:
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +25,6 @@ readTime: 6
 - De op 4 oktober aangekondigde Super Intelligence Force wordt voorgezeten door Jay Clayton, directeur van de nationale inlichtingendiensten, en heeft 120 dagen voor een rapport.
 - Tech-bestuurders tekenden in het Witte Huis een veiligheidsbelofte. Trump noemde die “moreel bindend”, maar ze is juridisch niet afdwingbaar.
 - Veel details, waaronder de volledige lijst van ondertekenaars en de toezeggingen zelf, zijn niet openbaar gemaakt.
-
 
 ## Wat zegt de executive order?
 
@@ -70,11 +72,6 @@ De Amerikaanse overheid heeft AI in federaal gebruik hernoemd tot “Super Intel
 Voor meer context, zie ons overzicht van [AI-trends en voorspellingen voor 2026](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is de Super Intelligence Force?</p><p class="text-gray-600 leading-relaxed">Een op 4 oktober 2026 aangekondigde Amerikaanse federale taskforce onder voorzitterschap van Jay Clayton, directeur van de nationale inlichtingendiensten, met 120 dagen om te rapporteren over de risico’s en kansen van geavanceerde AI.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Heeft Trump AI hernoemd tot Super Intelligence?</p><p class="text-gray-600 leading-relaxed">Ja, binnen de federale overheid. Een op 29 september 2026 gemelde executive order hernoemt “Artificial Intelligence” binnen de hele uitvoerende macht tot “Super Intelligence” (SI) en vraagt functionarissen binnen 60 dagen wetgevende tekst op te stellen die de termen definieert.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is de AI-veiligheidsbelofte juridisch bindend?</p><p class="text-gray-600 leading-relaxed">Nee. Trump noemde haar “morally binding”, maar ze is juridisch niet afdwingbaar, en critici zoals senator Blumenthal wijzen erop dat bedrijven zonder juridische gevolgen kunnen terugtrekken.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Betekent dit dat superintelligentie is bereikt?</p><p class="text-gray-600 leading-relaxed">Nee. Het gaat om terminologie en organisatie. Er is geen systeem waarvan algemeen wordt aangenomen dat het superintelligentie heeft bereikt.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Wat is de Super Intelligence Force?","@type":"Question","acceptedAnswer":{"text":"Een op 4 oktober 2026 aangekondigde Amerikaanse federale taskforce onder voorzitterschap van Jay Clayton, directeur van de nationale inlichtingendiensten, met 120 dagen om te rapporteren over de risico’s en kansen van geavanceerde AI.","@type":"Answer"}},{"name":"Heeft Trump AI hernoemd tot Super Intelligence?","@type":"Question","acceptedAnswer":{"text":"Ja, binnen de federale overheid. Een op 29 september 2026 gemelde executive order hernoemt “Artificial Intelligence” binnen de hele uitvoerende macht tot “Super Intelligence” (SI) en vraagt functionarissen binnen 60 dagen wetgevende tekst op te stellen die de termen definieert.","@type":"Answer"}},{"name":"Is de AI-veiligheidsbelofte juridisch bindend?","@type":"Question","acceptedAnswer":{"text":"Nee. Trump noemde haar “morally binding”, maar ze is juridisch niet afdwingbaar, en critici zoals senator Blumenthal wijzen erop dat bedrijven zonder juridische gevolgen kunnen terugtrekken.","@type":"Answer"}},{"name":"Betekent dit dat superintelligentie is bereikt?","@type":"Question","acceptedAnswer":{"text":"Nee. Het gaat om terminologie en organisatie. Er is geen systeem waarvan algemeen wordt aangenomen dat het superintelligentie heeft bereikt.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Verwante inzichten
-
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Bronnen
 

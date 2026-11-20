@@ -19,6 +19,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/headless-cms-vs-wordpress-which-fits-a-business-website.svg"
 ogType: article
+related:
+  - /blog/technical-seo-for-ai-search-rendering-schema-and-core-web-vitals/
+  - /blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/
+  - /blog/custom-software-vs-off-the-shelf-software-how-to-decide/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -119,12 +123,6 @@ Our web development work covers marketing sites, e-commerce, web apps and conten
 Choose WordPress for quick, standard sites with limited developer time. Choose headless when you need custom front ends, multi-channel content or tight control over performance and security, and have the development capacity. Either can rank well if it is built for speed and crawlability.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a headless CMS?</p><p class="text-gray-600 leading-relaxed">A headless CMS manages and stores content and delivers it through an API, leaving the website or app front end to be built separately with any technology.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is a headless CMS better than WordPress?</p><p class="text-gray-600 leading-relaxed">Not in every case. WordPress is faster and cheaper for standard sites. Headless suits custom front ends, multi-channel content and tight control of performance, but needs more development.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is headless better for SEO?</p><p class="text-gray-600 leading-relaxed">Not automatically. SEO depends on fast, crawlable pages, content in the delivered HTML and good structure. Both approaches can achieve this when built well.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can I migrate from WordPress without losing rankings?</p><p class="text-gray-600 leading-relaxed">Yes, with careful planning: record current URLs and performance, map old URLs to new ones with permanent redirects, keep high-performing content, test on staging and monitor Search Console after launch.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Which headless CMS options are common?</p><p class="text-gray-600 leading-relaxed">Sanity, Contentful and Storyblok are widely used. Choose based on content modelling, editing experience, pricing and your developers' skills.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a headless CMS?","@type":"Question","acceptedAnswer":{"text":"A headless CMS manages and stores content and delivers it through an API, leaving the website or app front end to be built separately with any technology.","@type":"Answer"}},{"name":"Is a headless CMS better than WordPress?","@type":"Question","acceptedAnswer":{"text":"Not in every case. WordPress is faster and cheaper for standard sites. Headless suits custom front ends, multi-channel content and tight control of performance, but needs more development.","@type":"Answer"}},{"name":"Is headless better for SEO?","@type":"Question","acceptedAnswer":{"text":"Not automatically. SEO depends on fast, crawlable pages, content in the delivered HTML and good structure. Both approaches can achieve this when built well.","@type":"Answer"}},{"name":"Can I migrate from WordPress without losing rankings?","@type":"Question","acceptedAnswer":{"text":"Yes, with careful planning: record current URLs and performance, map old URLs to new ones with permanent redirects, keep high-performing content, test on staging and monitor Search Console after launch.","@type":"Answer"}},{"name":"Which headless CMS options are common?","@type":"Question","acceptedAnswer":{"text":"Sanity, Contentful and Storyblok are widely used. Choose based on content modelling, editing experience, pricing and your developers' skills.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Technical SEO for AI Search: Rendering, Schema and Core Web Vitals](/blog/technical-seo-for-ai-search-rendering-schema-and-core-web-vitals/)
-- [What Is GEO? Generative Engine Optimization vs AEO vs SEO](/blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/)
-- [Custom Software vs Off-the-Shelf: How to Decide What to Build or Buy](/blog/custom-software-vs-off-the-shelf-software-how-to-decide/)
 
 ## Sources
 

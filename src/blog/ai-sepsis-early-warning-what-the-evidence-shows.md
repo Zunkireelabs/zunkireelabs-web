@@ -14,6 +14,12 @@ tags:
 readTime: 9
 featuredImage: "/assets/images/blog/ai-sepsis-early-warning-what-the-evidence-shows.svg"
 ogType: article
+related:
+  - /blog/ai-in-uk-healthcare-what-to-check-before-you-buy/
+  - /blog/exploring-ai-services-for-healthcare-in-nepal/
+  - /blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
+  - /blog/ai-mammography-screening-what-the-swedish-trial-shows/
+  - /blog/ai-medical-scribes-what-the-randomized-trial-shows/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -79,14 +85,6 @@ For clinic and hospital software teams, the pattern is reusable: record data goe
 An AI sepsis alert now has FDA clearance, and its developers report 18% lower in-hospital death when clinicians acted on alerts in time. The evidence is encouraging, but it is largely reported by the developers and cleared devices are not all equal: another widely used sepsis model missed two thirds of cases in an independent test. The right response is neither hype nor dismissal. Ask for outside validation, false-alarm rates and a clear plan for who acts on each alert.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is sepsis and why does early detection matter?</p><p class="text-gray-600 leading-relaxed">Sepsis is a life-threatening reaction to infection and, as Healthcare Dive notes, a leading cause of death in US hospitals. CIDRAP's report cites that each hour of delayed treatment reduces survival by 8%, which is why earlier flags are valuable.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Did the FDA approve an AI tool for sepsis?</p><p class="text-gray-600 leading-relaxed">The FDA cleared it. In May 2026 Bayesian Health received 510(k) clearance for its TREWS sepsis early-warning system, which means the FDA judged it substantially equivalent to an existing device rather than approving it on outcomes alone.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does AI sepsis detection reduce deaths?</p><p class="text-gray-600 leading-relaxed">A 2022 study of more than 764,000 encounters at five US hospitals found sepsis patients were 18% less likely to die in hospital when clinicians acted on the alerts, as reported by CIDRAP and Healthcare Dive. These results come from the developers and their partners and compare patients with timely and untimely alert confirmation, so they are not by themselves proof that the alerts caused the difference.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Are all AI sepsis alerts this accurate?</p><p class="text-gray-600 leading-relaxed">No. A University of Michigan validation of the Epic Sepsis Model across 38,455 hospitalizations found 33% sensitivity and 12% positive predictive value, and it missed 67% of patients with sepsis while alerting on 18% of all patients. Ask any vendor for independent validation and false-alarm data.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is sepsis and why does early detection matter?","@type":"Question","acceptedAnswer":{"text":"Sepsis is a life-threatening reaction to infection and, as Healthcare Dive notes, a leading cause of death in US hospitals. CIDRAP's report cites that each hour of delayed treatment reduces survival by 8%, which is why earlier flags are valuable.","@type":"Answer"}},{"name":"Did the FDA approve an AI tool for sepsis?","@type":"Question","acceptedAnswer":{"text":"The FDA cleared it. In May 2026 Bayesian Health received 510(k) clearance for its TREWS sepsis early-warning system, which means the FDA judged it substantially equivalent to an existing device rather than approving it on outcomes alone.","@type":"Answer"}},{"name":"Does AI sepsis detection reduce deaths?","@type":"Question","acceptedAnswer":{"text":"A 2022 study of more than 764,000 encounters at five US hospitals found sepsis patients were 18% less likely to die in hospital when clinicians acted on the alerts, as reported by CIDRAP and Healthcare Dive. These results come from the developers and their partners and compare patients with timely and untimely alert confirmation, so they are not by themselves proof that the alerts caused the difference.","@type":"Answer"}},{"name":"Are all AI sepsis alerts this accurate?","@type":"Question","acceptedAnswer":{"text":"No. A University of Michigan validation of the Epic Sepsis Model across 38,455 hospitalizations found 33% sensitivity and 12% positive predictive value, and it missed 67% of patients with sepsis while alerting on 18% of all patients. Ask any vendor for independent validation and false-alarm data.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI in UK Healthcare: What to Check Before You Buy](/blog/ai-in-uk-healthcare-what-to-check-before-you-buy/)
-- [Exploring AI Services for Healthcare in Nepal](/blog/exploring-ai-services-for-healthcare-in-nepal/)
-- [FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
-- [AI Mammography Screening: What the Swedish Trial Shows](/blog/ai-mammography-screening-what-the-swedish-trial-shows/)
-- [AI Medical Scribes: What the Randomized Trial Shows](/blog/ai-medical-scribes-what-the-randomized-trial-shows/)
 
 ## Sources
 

@@ -21,6 +21,10 @@ tags:
 readTime: 9
 featuredImage: "/assets/images/blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment.svg"
 ogType: article
+related:
+  - /blog/ai-for-education-consultancy-student-inquiry-automation-guide/
+  - /blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show/
+  - /blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -114,11 +118,7 @@ To talk through your own situation, see our [AI for Education page](/industries/
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a CRM for a study abroad consultancy?</p><p class="text-gray-600 leading-relaxed">It is a system that tracks each student from first inquiry through counselling, documents, applications, offers, visa progress and enrollment, with stages, owners and deadlines, so no case is lost between staff.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why not just use spreadsheets?</p><p class="text-gray-600 leading-relaxed">Spreadsheets work for small volumes but struggle with multiple applications per student, document tracking, reminders, shared ownership and reporting. Errors and lost history increase as volume grows.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should a consultancy track for each application?</p><p class="text-gray-600 leading-relaxed">The student, college, course, intake, submission date, reference number, current status, offer details and conditions, and the owner responsible for the next step.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can AI replace counsellors?</p><p class="text-gray-600 leading-relaxed">No. AI helps with routine questions, routing, checklists and summaries, while people provide advice on admissions and visas and handle complex or sensitive cases.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do I know which marketing source brings enrollments?</p><p class="text-gray-600 leading-relaxed">Record the source at inquiry and carry it through to enrollment, then report conversions by source. Tracking only leads, not enrolments, can mislead your spending.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a CRM for a study abroad consultancy?","@type":"Question","acceptedAnswer":{"text":"It is a system that tracks each student from first inquiry through counselling, documents, applications, offers, visa progress and enrollment, with stages, owners and deadlines, so no case is lost between staff.","@type":"Answer"}},{"name":"Why not just use spreadsheets?","@type":"Question","acceptedAnswer":{"text":"Spreadsheets work for small volumes but struggle with multiple applications per student, document tracking, reminders, shared ownership and reporting. Errors and lost history increase as volume grows.","@type":"Answer"}},{"name":"What should a consultancy track for each application?","@type":"Question","acceptedAnswer":{"text":"The student, college, course, intake, submission date, reference number, current status, offer details and conditions, and the owner responsible for the next step.","@type":"Answer"}},{"name":"Can AI replace counsellors?","@type":"Question","acceptedAnswer":{"text":"No. AI helps with routine questions, routing, checklists and summaries, while people provide advice on admissions and visas and handle complex or sensitive cases.","@type":"Answer"}},{"name":"How do I know which marketing source brings enrollments?","@type":"Question","acceptedAnswer":{"text":"Record the source at inquiry and carry it through to enrollment, then report conversions by source. Tracking only leads, not enrolments, can mislead your spending.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-## Related Insights
-
-- [AI for Education Consultancies: A Practical Guide to Student Inquiry Automation](/blog/ai-for-education-consultancy-student-inquiry-automation-guide/)
-- [AI in Education, Cloud Operations and Construction: What Our Case Studies Show](/blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show/)
-- [Why Disconnected Business Tools Cost Time and How Orchestration Helps](/blog/why-disconnected-business-tools-cost-time-and-how-orchestration-helps/)
+See also: [AI for student inquiries in education consultancies whitepaper](/resources/ai-student-inquiries-education-consultancies-whitepaper/).
 
 ## Sources
 

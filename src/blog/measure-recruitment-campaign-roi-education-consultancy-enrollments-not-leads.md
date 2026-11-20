@@ -21,6 +21,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/measure-recruitment-campaign-roi-education-consultancy-enrollments-not-leads.svg"
 ogType: article
+related:
+  - /blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment/
+  - /blog/ai-for-education-consultancy-student-inquiry-automation-guide/
+  - /blog/from-dashboards-to-decisions-the-future-of-business-intelligence/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -110,12 +114,6 @@ Our education CRM module includes recruitment campaign tracking tied to real enr
 To talk through your own situation, see our [AI for Education page](/industries/education/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How do education consultancies measure marketing ROI?</p><p class="text-gray-600 leading-relaxed">Record the source at first contact, follow each inquiry through every pipeline stage to enrollment, and calculate cost per enrollment by source, rather than relying on cost per lead.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is cost per enrollment?</p><p class="text-gray-600 leading-relaxed">It is the total spend on a source or campaign divided by the number of confirmed enrollments it produced, usually measured on a cohort of inquiries by month.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why is cost per lead misleading?</p><p class="text-gray-600 leading-relaxed">Cheap leads may convert poorly through counselling, application and visa stages, so the cheapest source per lead can be the most expensive per enrollment.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How should we handle long study abroad cycles?</p><p class="text-gray-600 leading-relaxed">Group inquiries by the month they arrived and track each cohort to the end, so late enrolments are credited to the campaign that created them.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How do education consultancies measure marketing ROI?","@type":"Question","acceptedAnswer":{"text":"Record the source at first contact, follow each inquiry through every pipeline stage to enrollment, and calculate cost per enrollment by source, rather than relying on cost per lead.","@type":"Answer"}},{"name":"What is cost per enrollment?","@type":"Question","acceptedAnswer":{"text":"It is the total spend on a source or campaign divided by the number of confirmed enrollments it produced, usually measured on a cohort of inquiries by month.","@type":"Answer"}},{"name":"Why is cost per lead misleading?","@type":"Question","acceptedAnswer":{"text":"Cheap leads may convert poorly through counselling, application and visa stages, so the cheapest source per lead can be the most expensive per enrollment.","@type":"Answer"}},{"name":"How should we handle long study abroad cycles?","@type":"Question","acceptedAnswer":{"text":"Group inquiries by the month they arrived and track each cohort to the end, so late enrolments are credited to the campaign that created them.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Study Abroad Consultancy CRM: Track Applications From Inquiry to Enrollment](/blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment/)
-- [AI for Education Consultancies: A Practical Guide to Student Inquiry Automation](/blog/ai-for-education-consultancy-student-inquiry-automation-guide/)
-- [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
 
 ## Sources
 

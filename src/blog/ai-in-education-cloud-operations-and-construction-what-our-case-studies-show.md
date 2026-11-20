@@ -18,6 +18,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-in-education-cloud-operations-and-construction-what-our-case-studies-show.svg"
 ogType: article
+related:
+  - /blog/why-ai-matters-for-nepal-what-the-evidence-shows/
+  - /blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/
+  - /blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -91,12 +95,6 @@ Three different industries, one pattern: find the step where skilled people spen
 To discuss a similar project, start with our [AI development services](/solutions/ai-development/) or browse the [customer stories](/customer-stories/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What did Admizz Education use AI for?</p><p class="text-gray-600 leading-relaxed">According to our case study, Admizz used Zunkiree Search to power an AI-native student inquiry system that answers questions in natural language and routes complex ones to human counsellors.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What results did Corecloud365 report?</p><p class="text-gray-600 leading-relaxed">Our case study reports a 60% reduction in operational costs, 80% faster issue resolution and 99.9% system uptime achieved.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did Khushbu Nirman Sewa do with AI?</p><p class="text-gray-600 leading-relaxed">It moved site reporting from paper to a mobile app, used machine learning to suggest resource allocation and predicted potential delays two to three weeks ahead, with a central dashboard for management.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can these results be guaranteed for another business?</p><p class="text-gray-600 leading-relaxed">No. The figures are as reported in our published case studies, are not independently audited, and depend on each business's volumes, content and systems. Individual outcomes vary.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does AI replace the staff in these examples?</p><p class="text-gray-600 leading-relaxed">In these case studies the AI took over retrieval, data capture and prediction. People kept the decisions and handled the cases the AI escalated.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What did Admizz Education use AI for?","@type":"Question","acceptedAnswer":{"text":"According to our case study, Admizz used Zunkiree Search to power an AI-native student inquiry system that answers questions in natural language and routes complex ones to human counsellors.","@type":"Answer"}},{"name":"What results did Corecloud365 report?","@type":"Question","acceptedAnswer":{"text":"Our case study reports a 60% reduction in operational costs, 80% faster issue resolution and 99.9% system uptime achieved.","@type":"Answer"}},{"name":"What did Khushbu Nirman Sewa do with AI?","@type":"Question","acceptedAnswer":{"text":"It moved site reporting from paper to a mobile app, used machine learning to suggest resource allocation and predicted potential delays two to three weeks ahead, with a central dashboard for management.","@type":"Answer"}},{"name":"Can these results be guaranteed for another business?","@type":"Question","acceptedAnswer":{"text":"No. The figures are as reported in our published case studies, are not independently audited, and depend on each business's volumes, content and systems. Individual outcomes vary.","@type":"Answer"}},{"name":"Does AI replace the staff in these examples?","@type":"Question","acceptedAnswer":{"text":"In these case studies the AI took over retrieval, data capture and prediction. People kept the decisions and handled the cases the AI escalated.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Matters for Nepal: What the Evidence Shows](/blog/why-ai-matters-for-nepal-what-the-evidence-shows/)
-- [AI Orchestration vs Automation vs Agents: The Difference](/blog/ai-orchestration-vs-automation-vs-agents-what-is-the-difference/)
-- [AI Chatbot vs AI Agent: Customer Support Automation for Your Business](/blog/ai-chatbot-vs-ai-agent-customer-support-automation-for-business/)
 
 ## Sources
 

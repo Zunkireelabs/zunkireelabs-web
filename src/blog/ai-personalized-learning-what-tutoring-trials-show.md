@@ -14,6 +14,11 @@ tags:
 readTime: 9
 featuredImage: "/assets/images/blog/ai-personalized-learning-what-tutoring-trials-show.svg"
 ogType: article
+related:
+  - /blog/ai-trends-and-predictions-for-2026-what-lies-ahead/
+  - /blog/state-of-ai-nepal-2026/
+  - /blog/oecd-digital-education-outlook-2026-ai-performance-not-learning/
+  - /blog/ai-teacher-workload-what-the-gallup-survey-shows/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -27,7 +32,6 @@ ogType: article
 - In a PNAS field experiment with nearly 1,000 high school math students, students with unguarded GPT-4 access did 17% worse on a later exam without it than students who never had access. Guardrails largely removed the harm.
 - A World Bank pilot in Nigeria reports about 0.3 standard deviations of gain after six weeks of teacher-supported, after-school AI tutoring, though it is a blog summary, not a peer-reviewed paper.
 - None of these studies shows AI replacing teachers, and none was run in Nepal.
-
 
 ## The Evidence
 
@@ -84,13 +88,6 @@ For a Nepal or South Asia school or training provider, the conditions in these s
 Personalized learning with AI is no longer only a promise: there are controlled trials, and they show real gains when the tutor is built around how people learn, and real harm when it simply hands out answers. The sensible response is neither hype nor rejection. It is to ask how the tutor was designed, what it was compared against, and whether learning holds up when the tool is taken away.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Does AI tutoring actually improve learning?</p><p class="text-gray-600 leading-relaxed">It can, under the right design. A randomized crossover trial at Harvard (194 students analysed) found students learned significantly more in less time with a carefully designed AI tutor than in an active-learning class. A PNAS field experiment with nearly 1,000 students found unrestricted GPT-4 access harmed later performance. The design of the tutor decides the result.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can students get worse by using AI to study?</p><p class="text-gray-600 leading-relaxed">Yes, if the AI just supplies answers. In the PNAS study, students who used a standard ChatGPT-style interface for practice scored 17% lower than students who never had AI access once the AI was removed. A version with guardrails largely mitigated the harm.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Will AI tutors replace teachers?</p><p class="text-gray-600 leading-relaxed">None of these studies supports that. The Nigerian program used teacher-supported sessions, and the Harvard researcher quoted in the Harvard Gazette said AI tutors should not replace in-person instruction. The evidence supports AI as a supervised supplement.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should a school ask before adopting an AI tutor?</p><p class="text-gray-600 leading-relaxed">Ask how it is designed (hints and steps versus answers), whether it was tested against a comparison group, whether performance is checked without the tool, and what student data it collects and where that data goes.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Does AI tutoring actually improve learning?","@type":"Question","acceptedAnswer":{"text":"It can, under the right design. A randomized crossover trial at Harvard (194 students analysed) found students learned significantly more in less time with a carefully designed AI tutor than in an active-learning class. A PNAS field experiment with nearly 1,000 students found unrestricted GPT-4 access harmed later performance. The design of the tutor decides the result.","@type":"Answer"}},{"name":"Can students get worse by using AI to study?","@type":"Question","acceptedAnswer":{"text":"Yes, if the AI just supplies answers. In the PNAS study, students who used a standard ChatGPT-style interface for practice scored 17% lower than students who never had AI access once the AI was removed. A version with guardrails largely mitigated the harm.","@type":"Answer"}},{"name":"Will AI tutors replace teachers?","@type":"Question","acceptedAnswer":{"text":"None of these studies supports that. The Nigerian program used teacher-supported sessions, and the Harvard researcher quoted in the Harvard Gazette said AI tutors should not replace in-person instruction. The evidence supports AI as a supervised supplement.","@type":"Answer"}},{"name":"What should a school ask before adopting an AI tutor?","@type":"Question","acceptedAnswer":{"text":"Ask how it is designed (hints and steps versus answers), whether it was tested against a comparison group, whether performance is checked without the tool, and what student data it collects and where that data goes.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Trends and Predictions for 2026: What Lies Ahead](/blog/ai-trends-and-predictions-for-2026-what-lies-ahead/)
-- [AI Adoption Trends in Nepal for 2026: Key Insights](/blog/state-of-ai-nepal-2026/)
-- [OECD on AI in Education: Performance Is Not Learning](/blog/oecd-digital-education-outlook-2026-ai-performance-not-learning/)
-- [AI and Teacher Workload: What the Gallup Survey Shows](/blog/ai-teacher-workload-what-the-gallup-survey-shows/)
 
 ## Sources
 

@@ -58,20 +58,13 @@ hideChrome: true
 }
 </script>
 
-{# FAQPage schema for the definition #}
+{# FAQPage schema: only when the term has a visible FAQ, and only for the questions shown on the page. The definition itself is already described by the DefinedTerm schema above, so a synthetic "What is X?" question (never shown) is not added. #}
+{% if currentTerm.faq %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is {{ currentTerm.term }}?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ currentTerm.definition | replace('"', '\\"') }}"
-      }
-    }{% for item in currentTerm.faq %},
+  "mainEntity": [{% for item in currentTerm.faq %}
     {
       "@type": "Question",
       "name": "{{ item.q | replace('"', '\\"') }}",
@@ -79,10 +72,11 @@ hideChrome: true
         "@type": "Answer",
         "text": "{{ item.a | replace('"', '\\"') }}"
       }
-    }{% endfor %}
+    }{% if not loop.last %},{% endif %}{% endfor %}
   ]
 }
 </script>
+{% endif %}
 
 {% include "partials/navbar-v2.njk" %}
 
@@ -150,20 +144,20 @@ hideChrome: true
 
         {# FAQ (optional, per term): visible Q&A that mirrors the FAQPage schema above #}
         {% if currentTerm.faq %}
-        <section class="mt-10" aria-labelledby="glossary-faq-heading" data-reveal>
-          <h2 id="glossary-faq-heading" class="mb-6 text-[24px] font-medium tracking-tight text-[#111827] md:text-[28px]">Frequently asked questions</h2>
+        <div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal>
+          <h2 id="glossary-faq-heading" class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2>
           <div class="space-y-6">
             {% for item in currentTerm.faq %}
             <div>
-              <h3 class="mb-2 text-[17px] font-medium leading-snug text-navy-900">{{ item.q }}</h3>
-              <p class="leading-relaxed text-navy-400">{{ item.a }}</p>
+              <p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">{{ item.q }}</p>
+              <p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">{{ item.a }}</p>
             </div>
             {% endfor %}
           </div>
           {% if currentTerm.faqSource %}
           <p class="mt-6 text-[13px] text-navy-400">Source: <a href="{{ currentTerm.faqSource.url }}" class="underline underline-offset-2 transition-colors hover:text-[#5a9100]" rel="noopener" target="_blank">{{ currentTerm.faqSource.label }}</a></p>
           {% endif %}
-        </section>
+        </div>
         {% endif %}
       </div>
 

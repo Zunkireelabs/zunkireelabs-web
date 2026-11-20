@@ -16,6 +16,9 @@ featuredImage: "/assets/images/blog/robotaxis-first-responders-california-law-fu
 featuredImageCredit: "Photo by Abhishek  Navlakha on Pexels"
 ogType: article
 ogImageUrl: "https://images.pexels.com/photos/32461216/pexels-photo-32461216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+related:
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -28,7 +31,6 @@ ogImageUrl: "https://images.pexels.com/photos/32461216/pexels-photo-32461216.jpe
 - Fines can apply if a robotaxi blocks first responders for more than 30 minutes.
 - Remote drivers must be US-based and hold a US driver's license.
 - The law takes effect in July 2028, and the California DMV will set details such as response times.
-
 
 ## What Does California's New Robotaxi Law Do?
 
@@ -87,11 +89,6 @@ The law does not start until July 2028, and details such as response times are s
 If you are planning an AI or automation project and want to think through oversight and escalation, you can read our guide to [choosing an AI development company](/blog/how-to-choose-ai-development-company/), explore [agentic as a service](/blog/understanding-agentic-as-a-service-a-comprehensive-guide/), or [get in touch](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What does California's SB 1246 do?</p><p class="text-gray-600 leading-relaxed">It requires autonomous vehicle companies to give first responders local, on-the-ground support, to notify local jurisdictions during system-wide failures, and allows fines if a vehicle blocks police or firefighters for more than 30 minutes.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">When does the law take effect?</p><p class="text-gray-600 leading-relaxed">July 2028. The California Department of Motor Vehicles will set guidelines on certain aspects, including required response times.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is the difference between remote driving and remote assistance?</p><p class="text-gray-600 leading-relaxed">Remote driving is a human directly operating a vehicle from a distance. Remote assistance means the self-driving system stays in control while a human gives guidance or sends software commands if needed. The law's term "remote drivers" refers specifically to the first.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should businesses deploying automation take from this law?</p><p class="text-gray-600 leading-relaxed">Write down who owns each failure, how they are reached, how fast each escalation step should happen, how the system can be paused or overridden, what is logged and who gets notified, before launch.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What does California's SB 1246 do?","@type":"Question","acceptedAnswer":{"text":"It requires autonomous vehicle companies to give first responders local, on-the-ground support, to notify local jurisdictions during system-wide failures, and allows fines if a vehicle blocks police or firefighters for more than 30 minutes.","@type":"Answer"}},{"name":"When does the law take effect?","@type":"Question","acceptedAnswer":{"text":"July 2028. The California Department of Motor Vehicles will set guidelines on certain aspects, including required response times.","@type":"Answer"}},{"name":"What is the difference between remote driving and remote assistance?","@type":"Question","acceptedAnswer":{"text":"Remote driving is a human directly operating a vehicle from a distance. Remote assistance means the self-driving system stays in control while a human gives guidance or sends software commands if needed. The law's term \"remote drivers\" refers specifically to the first.","@type":"Answer"}},{"name":"What should businesses deploying automation take from this law?","@type":"Question","acceptedAnswer":{"text":"Write down who owns each failure, how they are reached, how fast each escalation step should happen, how the system can be paused or overridden, what is logged and who gets notified, before launch.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Source
 

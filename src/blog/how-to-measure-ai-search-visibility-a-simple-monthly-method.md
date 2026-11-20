@@ -16,6 +16,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/how-to-measure-ai-search-visibility-a-simple-monthly-method.svg"
 ogType: article
+related:
+  - /blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/
+  - /blog/where-ai-answers-get-their-sources/
+  - /blog/ai-overviews-fewer-clicks-what-google-says-to-do/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -103,11 +107,7 @@ If you would like help running this or fixing what it uncovers, see our [answer 
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How do I check if ChatGPT recommends my business?</p><p class="text-gray-600 leading-relaxed">Ask ChatGPT the questions your customers ask, with search enabled, in a fresh session. Record whether your business is named, whether your site is cited and whether the description is correct. Repeat a few times, because answers vary.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is share of answer?</p><p class="text-gray-600 leading-relaxed">Share of answer is your mentions as a proportion of all brands named across a fixed set of prompts. It is a self-defined measure used to track whether AI systems name you more or less over time.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can Google Search Console show my AI Overviews visibility?</p><p class="text-gray-600 leading-relaxed">Partly. Google says traffic from AI features is included in the overall Search Console data, reported in the Web search type. It is not a separate report, so it cannot tell you whether assistants name your business.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How often should I measure AI search visibility?</p><p class="text-gray-600 leading-relaxed">Monthly is a practical rhythm for most businesses. Keep the prompt set fixed, run each prompt more than once, and look at trends rather than single results.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How do I check if ChatGPT recommends my business?","@type":"Question","acceptedAnswer":{"text":"Ask ChatGPT the questions your customers ask, with search enabled, in a fresh session. Record whether your business is named, whether your site is cited and whether the description is correct. Repeat a few times, because answers vary.","@type":"Answer"}},{"name":"What is share of answer?","@type":"Question","acceptedAnswer":{"text":"Share of answer is your mentions as a proportion of all brands named across a fixed set of prompts. It is a self-defined measure used to track whether AI systems name you more or less over time.","@type":"Answer"}},{"name":"Can Google Search Console show my AI Overviews visibility?","@type":"Question","acceptedAnswer":{"text":"Partly. Google says traffic from AI features is included in the overall Search Console data, reported in the Web search type. It is not a separate report, so it cannot tell you whether assistants name your business.","@type":"Answer"}},{"name":"How often should I measure AI search visibility?","@type":"Question","acceptedAnswer":{"text":"Monthly is a practical rhythm for most businesses. Keep the prompt set fixed, run each prompt more than once, and look at trends rather than single results.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
 
-## Related Insights
-
-- [What Is GEO? Generative Engine Optimization vs AEO vs SEO](/blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/)
-- [Where AI Answers Get Their Sources, and Why Listings Matter as Much as Your Site](/blog/where-ai-answers-get-their-sources/)
-- [AI Overviews and Fewer Clicks: What Google Actually Says You Need to Do](/blog/ai-overviews-fewer-clicks-what-google-says-to-do/)
+See also: [AI search playbook](/resources/ai-search-playbook/).
 
 ## Sources
 

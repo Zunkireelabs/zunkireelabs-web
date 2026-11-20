@@ -10,6 +10,10 @@ pillar: "it-market"
 readTime: 8
 featuredImage: "/assets/images/blog/enterprise-ki-anthropic-openai-google-wer-fuehrt-und-warum-die-zahlen-abweichen.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
+related:
+  - /de/blog/gemini-4-argon-so-lesen-sie-die-ankuendigung-eines-frontier-modells/
+  - /de/blog/warum-ki-agenten-eine-eigene-infrastruktur-bekommen/
+  - /de/blog/ki-coding-agenten-was-microsofts-copilot-neuausrichtung-bedeutet/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -23,7 +27,6 @@ featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 - Unterschiedliche Stichproben, Zeitpunkte und Definitionen erklären einen Großteil der Abweichung. Keiner der Berichte zählt jeden Dollar oder jedes Token.
 - Beim Programmieren ist der Abstand am größten: Menlo sieht Anthropic bei 54 % der Unternehmensnutzung für Code und OpenAI bei 21 %.
 - Laut a16z nutzen 81 % der Unternehmen drei oder mehr Modellfamilien. Mehrere Anbieter sind also bereits üblich.
-
 
 ## Was sagen die beiden Berichte tatsächlich?
 
@@ -74,12 +77,6 @@ Die Verbreitung selbst ist groß. Die McKinsey-Umfrage State of AI, veröffentli
 Einen einzigen „Marktanteil bei Unternehmens-KI“ gibt es nicht. Menlo Ventures sieht Anthropic vorn bei den geschätzten Ausgaben auf Basis der API-Nutzung, a16z sieht OpenAI bei mehr befragten Global-2000-Unternehmen im Produktivbetrieb, und beides sind Umfragen. Lesen Sie die Definition vor dem Prozentwert, testen Sie Modelle an Ihrer eigenen Arbeit und bauen Sie Ihre Systeme so, dass Sie den Anbieter wechseln können.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Welches KI-Labor hat den größten Marktanteil bei Unternehmen?</p><p class="text-gray-600 leading-relaxed">Das hängt vom Maß ab. Menlo Ventures schätzt Anthropic auf 40 %, OpenAI auf 27 % und Google auf 21 % des Enterprise-LLM-Marktes auf Basis der produktiven API-Nutzung, während eine a16z-Umfrage unter CIOs von Global-2000-Unternehmen ergab, dass 78 % OpenAI-Modelle produktiv nutzen und 44 % Anthropic.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Warum widersprechen sich Berichte zum Marktanteil bei Unternehmens-KI?</p><p class="text-gray-600 leading-relaxed">Sie messen Unterschiedliches (geschätzte Ausgaben aus API-Nutzung, den Anteil der Unternehmen, die einen Anbieter nutzen, oder den Budgetanteil), befragen unterschiedliche Gruppen (495 US-Entscheider gegenüber 100 CIOs von Global-2000-Firmen) und fanden zu verschiedenen Zeitpunkten statt. Beides sind Umfragen, keine vollständigen Zählungen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Liegt Anthropic beim Programmieren wirklich vorn?</p><p class="text-gray-600 leading-relaxed">Menlo Ventures nennt für Anthropic 54 % und für OpenAI 21 % der API-Nutzung in Unternehmen für Coding, und a16z berichtet von Zuwächsen von Anthropic bei tokenintensiven Coding-Anwendungsfällen. Beides sind Umfragen und beide schließen Segmente aus. Testen Sie Werkzeuge daher an Ihrer eigenen Codebasis.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Sollte mein Unternehmen mehr als einen KI-Modellanbieter nutzen?</p><p class="text-gray-600 leading-relaxed">Viele Unternehmen tun es bereits: a16z fand 81 %, die drei oder mehr Modellfamilien in Tests oder im Produktivbetrieb nutzen. Ein Aufbau mit mehreren Anbietern, einer internen Schnittstelle und einem eigenen Testset senkt das Abhängigkeitsrisiko.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Welches KI-Labor hat den größten Marktanteil bei Unternehmen?","@type":"Question","acceptedAnswer":{"text":"Das hängt vom Maß ab. Menlo Ventures schätzt Anthropic auf 40 %, OpenAI auf 27 % und Google auf 21 % des Enterprise-LLM-Marktes auf Basis der produktiven API-Nutzung, während eine a16z-Umfrage unter CIOs von Global-2000-Unternehmen ergab, dass 78 % OpenAI-Modelle produktiv nutzen und 44 % Anthropic.","@type":"Answer"}},{"name":"Warum widersprechen sich Berichte zum Marktanteil bei Unternehmens-KI?","@type":"Question","acceptedAnswer":{"text":"Sie messen Unterschiedliches (geschätzte Ausgaben aus API-Nutzung, den Anteil der Unternehmen, die einen Anbieter nutzen, oder den Budgetanteil), befragen unterschiedliche Gruppen (495 US-Entscheider gegenüber 100 CIOs von Global-2000-Firmen) und fanden zu verschiedenen Zeitpunkten statt. Beides sind Umfragen, keine vollständigen Zählungen.","@type":"Answer"}},{"name":"Liegt Anthropic beim Programmieren wirklich vorn?","@type":"Question","acceptedAnswer":{"text":"Menlo Ventures nennt für Anthropic 54 % und für OpenAI 21 % der API-Nutzung in Unternehmen für Coding, und a16z berichtet von Zuwächsen von Anthropic bei tokenintensiven Coding-Anwendungsfällen. Beides sind Umfragen und beide schließen Segmente aus. Testen Sie Werkzeuge daher an Ihrer eigenen Codebasis.","@type":"Answer"}},{"name":"Sollte mein Unternehmen mehr als einen KI-Modellanbieter nutzen?","@type":"Question","acceptedAnswer":{"text":"Viele Unternehmen tun es bereits: a16z fand 81 %, die drei oder mehr Modellfamilien in Tests oder im Produktivbetrieb nutzen. Ein Aufbau mit mehreren Anbietern, einer internen Schnittstelle und einem eigenen Testset senkt das Abhängigkeitsrisiko.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Gemini 4 Argon: So lesen Sie die Ankündigung eines Frontier-Modells](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Warum KI-Agenten eine eigene Infrastruktur bekommen](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [KI-Coding-Agenten: Was Microsofts Copilot-Neuausrichtung bedeutet](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
 
 ## Quellen
 

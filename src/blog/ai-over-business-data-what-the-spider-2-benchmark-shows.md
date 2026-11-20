@@ -14,6 +14,13 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-over-business-data-what-the-spider-2-benchmark-shows.svg"
 ogType: article
+related:
+  - /blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/
+  - /blog/how-ai-and-transaction-data-are-changing-fraud-detection/
+  - /blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/
+  - /blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss/
+  - /blog/from-dashboards-to-decisions-the-future-of-business-intelligence/
+  - /blog/how-ai-and-data-help-predict-energy-demand-and-run-power-grids/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -84,16 +91,6 @@ This section is expectation, not fact. The direction is toward agents that read 
 Spider 2.0 showed that models which looked excellent on tidy benchmarks struggled with real enterprise databases: o1-preview solved 21.3% in the paper. Newer agent systems now post much higher scores on the project's leaderboard, though those results are not independently verified. Treat AI over business data as a fast first draft that needs clean documentation and a human check.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is the Spider 2.0 benchmark?</p><p class="text-gray-600 leading-relaxed">Spider 2.0 is a test of 632 real-world text-to-SQL workflow problems taken from enterprise-level database use cases. It was published as a paper at ICLR 2025 and checks whether AI can write correct queries across large, messy databases hosted on systems like BigQuery and Snowflake.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can AI answer questions from my company database?</p><p class="text-gray-600 leading-relaxed">Often for simple, well-documented data, but not reliably for complex ones. The Spider 2.0 authors found o1-preview solved 21.3% of their real-world tasks, and newer systems score higher on the leaderboard. A person should still check results that drive decisions.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why did models do so much worse on Spider 2.0 than on Spider 1.0?</p><p class="text-gray-600 leading-relaxed">The databases are far bigger, averaging 812 columns against 27, and tasks need documentation, multiple queries and dialect-specific functions. The authors report that wrong schema linking and flawed data analysis were the largest error categories.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How should a business prepare data for AI queries?</p><p class="text-gray-600 leading-relaxed">The paper shows that models depend on metadata and documentation, so describing your tables, columns and metric definitions is a sensible first step. Start with read-only access and test the tool on questions whose answers you already know.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is the Spider 2.0 benchmark?","@type":"Question","acceptedAnswer":{"text":"Spider 2.0 is a test of 632 real-world text-to-SQL workflow problems taken from enterprise-level database use cases. It was published as a paper at ICLR 2025 and checks whether AI can write correct queries across large, messy databases hosted on systems like BigQuery and Snowflake.","@type":"Answer"}},{"name":"Can AI answer questions from my company database?","@type":"Question","acceptedAnswer":{"text":"Often for simple, well-documented data, but not reliably for complex ones. The Spider 2.0 authors found o1-preview solved 21.3% of their real-world tasks, and newer systems score higher on the leaderboard. A person should still check results that drive decisions.","@type":"Answer"}},{"name":"Why did models do so much worse on Spider 2.0 than on Spider 1.0?","@type":"Question","acceptedAnswer":{"text":"The databases are far bigger, averaging 812 columns against 27, and tasks need documentation, multiple queries and dialect-specific functions. The authors report that wrong schema linking and flawed data analysis were the largest error categories.","@type":"Answer"}},{"name":"How should a business prepare data for AI queries?","@type":"Question","acceptedAnswer":{"text":"The paper shows that models depend on metadata and documentation, so describing your tables, columns and metric definitions is a sensible first step. Start with read-only access and test the tool on questions whose answers you already know.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI and Real Estate Valuation and Price Forecasting](/blog/ai-and-data-in-real-estate-valuation-and-price-forecasting/)
-- [How AI and Transaction Data Are Changing Fraud Detection](/blog/how-ai-and-transaction-data-are-changing-fraud-detection/)
-- [Real-Time Data and AI in Transportation and Logistics Routing](/blog/real-time-data-and-ai-in-transportation-traffic-logistics-routing/)
-- [How AI Helps Scientists Find What Humans Could Miss](/blog/ai-data-discovery-how-ai-helps-scientists-find-what-humans-miss/)
-- [From Dashboards to Decisions: The Future of Business Intelligence](/blog/from-dashboards-to-decisions-the-future-of-business-intelligence/)
-- [How AI and Data Help Predict Energy Demand and Run Power Grids](/blog/how-ai-and-data-help-predict-energy-demand-and-run-power-grids/)
-- [How AI Is Changing Everyday Life: What Usage Data Shows](/blog/ai-everyday-life-what-the-usage-data-shows/)
 
 ## Sources
 

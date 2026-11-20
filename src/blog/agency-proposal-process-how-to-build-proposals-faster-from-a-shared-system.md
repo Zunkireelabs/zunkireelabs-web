@@ -21,6 +21,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/agency-proposal-process-how-to-build-proposals-faster-from-a-shared-system.svg"
 ogType: article
+related:
+  - /blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/
+  - /blog/agency-sales-to-delivery-handoff-keep-deals-and-projects-in-one-system/
+  - /blog/saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -114,12 +118,6 @@ Our agency platform includes a proposal builder with public share and print view
 To talk through your own situation, see our [AI for Agencies page](/industries/agencies/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">How can agencies write proposals faster?</p><p class="text-gray-600 leading-relaxed">Assemble them from a maintained library of approach blocks, deliverable templates, case examples, team bios and pricing rules, and write fresh only the client-specific understanding and any custom scope.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should an agency proposal include?</p><p class="text-gray-600 leading-relaxed">Understanding of the client, approach, deliverables and exclusions, timeline, team, pricing, assumptions and dependencies, proof and terms.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do you price agency projects accurately?</p><p class="text-gray-600 leading-relaxed">Estimate from tasks and roles, add a risk allowance, check capacity, compare with similar past projects' actual hours and state the assumptions the price depends on.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should proposals be sent as PDFs or links?</p><p class="text-gray-600 leading-relaxed">Both can help. A shareable link lets you track views and update the latest version, while a print or PDF version serves formal procurement.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"How can agencies write proposals faster?","@type":"Question","acceptedAnswer":{"text":"Assemble them from a maintained library of approach blocks, deliverable templates, case examples, team bios and pricing rules, and write fresh only the client-specific understanding and any custom scope.","@type":"Answer"}},{"name":"What should an agency proposal include?","@type":"Question","acceptedAnswer":{"text":"Understanding of the client, approach, deliverables and exclusions, timeline, team, pricing, assumptions and dependencies, proof and terms.","@type":"Answer"}},{"name":"How do you price agency projects accurately?","@type":"Question","acceptedAnswer":{"text":"Estimate from tasks and roles, add a risk allowance, check capacity, compare with similar past projects' actual hours and state the assumptions the price depends on.","@type":"Answer"}},{"name":"Should proposals be sent as PDFs or links?","@type":"Question","acceptedAnswer":{"text":"Both can help. A shareable link lets you track views and update the latest version, while a print or PDF version serves formal procurement.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI for Agencies: An Operating System View From Pipeline to Utilization](/blog/ai-for-agencies-operating-system-pipeline-proposals-delivery/)
-- [Agency Sales-to-Delivery Handoff: Keep Deals and Projects in One System](/blog/agency-sales-to-delivery-handoff-keep-deals-and-projects-in-one-system/)
-- [SaaS to GaaS: How to Move From Seat Licences to Outcome Pricing](/blog/saas-to-gaas-how-to-move-from-seat-licences-to-outcome-pricing/)
 
 ## Sources
 

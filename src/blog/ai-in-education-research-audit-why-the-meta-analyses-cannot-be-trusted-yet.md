@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/ai-in-education-research-audit-why-the-meta-analyses-cannot-be-trusted-yet.svg"
 ogType: article
+related:
+  - /blog/ai-personalized-learning-what-tutoring-trials-show/
+  - /blog/oecd-digital-education-outlook-2026-ai-performance-not-learning/
+  - /blog/ai-teacher-workload-what-the-gallup-survey-shows/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -70,12 +74,6 @@ The strongest-sounding statistics about AI and learning rest on research synthes
 See our [AI in education evidence report](/resources/ai-in-education-evidence-report-2026/) for the studies we consider reliable.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is a meta-analysis?</p><p class="text-gray-600 leading-relaxed">A meta-analysis pools the results of many studies into a single estimate. It is useful only when the studies are comparable. If they differ in population, intervention or outcome, the combined number can be misleading.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did the audit of AI in education meta-analyses find?</p><p class="text-gray-600 leading-relaxed">Per Education Week on 2 November 2026, Patrick O'Neill audited 14 meta-analyses and says they pool mismatched studies and outcomes, did not clearly define AI use, did not account for publication bias and mostly failed to control for other influences. The audit is a preprint.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does this mean AI does not improve learning?</p><p class="text-gray-600 leading-relaxed">No. It means some large summary claims are unreliable. Narrower evidence, such as controlled tutoring trials, still exists and points to design and teacher involvement as the deciding factors.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How can a school judge an AI claim?</p><p class="text-gray-600 leading-relaxed">Ask which tool and use, which outcome was measured, what it was compared with, who took part and for how long, who ran the study and whether the setting matches yours.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is a meta-analysis?","@type":"Question","acceptedAnswer":{"text":"A meta-analysis pools the results of many studies into a single estimate. It is useful only when the studies are comparable. If they differ in population, intervention or outcome, the combined number can be misleading.","@type":"Answer"}},{"name":"What did the audit of AI in education meta-analyses find?","@type":"Question","acceptedAnswer":{"text":"Per Education Week on 2 November 2026, Patrick O'Neill audited 14 meta-analyses and says they pool mismatched studies and outcomes, did not clearly define AI use, did not account for publication bias and mostly failed to control for other influences. The audit is a preprint.","@type":"Answer"}},{"name":"Does this mean AI does not improve learning?","@type":"Question","acceptedAnswer":{"text":"No. It means some large summary claims are unreliable. Narrower evidence, such as controlled tutoring trials, still exists and points to design and teacher involvement as the deciding factors.","@type":"Answer"}},{"name":"How can a school judge an AI claim?","@type":"Question","acceptedAnswer":{"text":"Ask which tool and use, which outcome was measured, what it was compared with, who took part and for how long, who ran the study and whether the setting matches yours.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [AI Tutoring and Personalized Learning: What the Trials Show](/blog/ai-personalized-learning-what-tutoring-trials-show/)
-- [OECD on AI in Education: Performance Is Not Learning](/blog/oecd-digital-education-outlook-2026-ai-performance-not-learning/)
-- [AI and Teacher Workload: What the Gallup Survey Shows](/blog/ai-teacher-workload-what-the-gallup-survey-shows/)
 
 ## Sources
 

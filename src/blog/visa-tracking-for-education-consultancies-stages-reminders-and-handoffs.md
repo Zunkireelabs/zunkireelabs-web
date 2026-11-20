@@ -21,6 +21,10 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/visa-tracking-for-education-consultancies-stages-reminders-and-handoffs.svg"
 ogType: article
+related:
+  - /blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment/
+  - /blog/ai-for-education-consultancy-student-inquiry-automation-guide/
+  - /blog/essential-steps-for-successful-ai-implementation/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -100,12 +104,6 @@ Our education CRM module includes visa stage tracking alongside the enrollment r
 To talk through your own situation, see our [AI for Education page](/industries/education/) or [contact us](/contact/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is visa tracking software for consultancies?</p><p class="text-gray-600 leading-relaxed">It is a system for managing each student's visa case with stages, owners, due dates, documents and reminders, linked to the application and enrollment record.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does a tracker give visa advice?</p><p class="text-gray-600 leading-relaxed">No. A tracker records status and tasks. Eligibility and legal advice should come from qualified staff following official requirements.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What stages should a visa tracker have?</p><p class="text-gray-600 leading-relaxed">Typically not started, preparing, ready to submit, submitted, awaiting, information requested, interview or biometrics, decision, approved, and refused or withdrawn. Adapt them to the destinations you handle.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do we avoid missing visa deadlines?</p><p class="text-gray-600 leading-relaxed">Set reminders on key dates and flags for inactivity, expiring documents and information requests, assign an owner and backup to every case, and review flagged cases weekly.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is visa tracking software for consultancies?","@type":"Question","acceptedAnswer":{"text":"It is a system for managing each student's visa case with stages, owners, due dates, documents and reminders, linked to the application and enrollment record.","@type":"Answer"}},{"name":"Does a tracker give visa advice?","@type":"Question","acceptedAnswer":{"text":"No. A tracker records status and tasks. Eligibility and legal advice should come from qualified staff following official requirements.","@type":"Answer"}},{"name":"What stages should a visa tracker have?","@type":"Question","acceptedAnswer":{"text":"Typically not started, preparing, ready to submit, submitted, awaiting, information requested, interview or biometrics, decision, approved, and refused or withdrawn. Adapt them to the destinations you handle.","@type":"Answer"}},{"name":"How do we avoid missing visa deadlines?","@type":"Question","acceptedAnswer":{"text":"Set reminders on key dates and flags for inactivity, expiring documents and information requests, assign an owner and backup to every case, and review flagged cases weekly.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Study Abroad Consultancy CRM: Track Applications From Inquiry to Enrollment](/blog/study-abroad-consultancy-crm-how-to-track-applications-from-inquiry-to-enrollment/)
-- [AI for Education Consultancies: A Practical Guide to Student Inquiry Automation](/blog/ai-for-education-consultancy-student-inquiry-automation-guide/)
-- [Essential Steps for Successful AI Implementation](/blog/essential-steps-for-successful-ai-implementation/)
 
 ## Sources
 

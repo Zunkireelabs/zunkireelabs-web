@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/what-is-llms-txt-and-do-you-need-one.svg"
 ogType: article
+related:
+  - /blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/
+  - /blog/ai-crawlers-and-robots-txt-gptbot-oai-searchbot-claudebot-perplexitybot/
+  - /blog/what-is-ai-native-search/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -93,12 +97,6 @@ llms.txt is a cheap, optional signpost for AI agents. It is a proposal with no c
 For help with the parts that do move results, see our [answer engine optimization service](/solutions/aeo-seo/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What is llms.txt?</p><p class="text-gray-600 leading-relaxed">llms.txt is a Markdown file placed on a website that gives AI agents a short summary of the site and a curated list of links to its most useful pages. It was proposed by Jeremy Howard in September 2024.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is llms.txt an official standard?</p><p class="text-gray-600 leading-relaxed">No. Its own page describes it as a proposal and says it is open for community input.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does Google use llms.txt?</p><p class="text-gray-600 leading-relaxed">Google's documentation on AI features says you do not need new machine-readable files or AI text files to appear in AI Overviews or AI Mode. It does not mention llms.txt as a requirement.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Will llms.txt help me get cited by ChatGPT?</p><p class="text-gray-600 leading-relaxed">We found no provider documentation saying that ChatGPT or other major assistants read llms.txt from third-party sites, and no verified evidence that it improves citations. Treat it as optional.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Where should llms.txt be placed?</p><p class="text-gray-600 leading-relaxed">At the site root, for example /llms.txt, or at any path to cover the pages under it. If more than one file applies, the proposal says agents should use the most specific one.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What is llms.txt?","@type":"Question","acceptedAnswer":{"text":"llms.txt is a Markdown file placed on a website that gives AI agents a short summary of the site and a curated list of links to its most useful pages. It was proposed by Jeremy Howard in September 2024.","@type":"Answer"}},{"name":"Is llms.txt an official standard?","@type":"Question","acceptedAnswer":{"text":"No. Its own page describes it as a proposal and says it is open for community input.","@type":"Answer"}},{"name":"Does Google use llms.txt?","@type":"Question","acceptedAnswer":{"text":"Google's documentation on AI features says you do not need new machine-readable files or AI text files to appear in AI Overviews or AI Mode. It does not mention llms.txt as a requirement.","@type":"Answer"}},{"name":"Will llms.txt help me get cited by ChatGPT?","@type":"Question","acceptedAnswer":{"text":"We found no provider documentation saying that ChatGPT or other major assistants read llms.txt from third-party sites, and no verified evidence that it improves citations. Treat it as optional.","@type":"Answer"}},{"name":"Where should llms.txt be placed?","@type":"Question","acceptedAnswer":{"text":"At the site root, for example /llms.txt, or at any path to cover the pages under it. If more than one file applies, the proposal says agents should use the most specific one.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [What Is GEO? Generative Engine Optimization vs AEO vs SEO](/blog/what-is-generative-engine-optimization-geo-vs-aeo-vs-seo/)
-- [AI Crawlers and robots.txt: GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot](/blog/ai-crawlers-and-robots-txt-gptbot-oai-searchbot-claudebot-perplexitybot/)
-- [What Is AI-Native Search?](/blog/what-is-ai-native-search/)
 
 ## Sources
 

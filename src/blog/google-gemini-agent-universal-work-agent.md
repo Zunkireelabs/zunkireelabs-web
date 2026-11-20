@@ -16,6 +16,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/google-gemini-agent-universal-work-agent.svg"
 ogType: article
+related:
+  - /blog/what-is-orca-workflow-orchestration-layer-explained/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -64,11 +67,6 @@ The announcement validates several choices that were already sensible, and it sh
 Google announced a single universal work agent with a genuine architectural idea behind it: agents as first-class identities with their own accounts, permissions and audit trails. That is the right direction, and it is worth copying in your own deployments now. The pricing and availability are not public, the performance claims are Google's own, and the sensible response is to adopt the pattern while staying portable on the platform.
 
 If you are deciding how much autonomy to hand an agent, see our whitepaper on [AI agents for business](/resources/ai-agents-for-business-whitepaper/), or our explainer on [what Orca is](/blog/what-is-orca-workflow-orchestration-layer-explained/).
-
-## Related Insights
-
-- [What Is Orca? The Orchestration Layer Explained](/blog/what-is-orca-workflow-orchestration-layer-explained/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Sources
 

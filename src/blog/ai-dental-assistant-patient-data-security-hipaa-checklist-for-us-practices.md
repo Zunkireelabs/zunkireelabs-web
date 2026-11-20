@@ -15,6 +15,9 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices.svg"
 ogType: article
+related:
+  - /blog/what-is-a-dental-ai-virtual-assistant/
+  - /blog/how-to-choose-a-virtual-assistant-for-healthcare/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -76,32 +79,7 @@ An AI assistant can take routine calls off your front desk, but only if the data
 
 For one example of a dental assistant in development, see [how Zunkiree Labs is building Dental AI Assistant](/resources/dental-ai-case-study/). It is a private beta, and this checklist applies to it as it would to any vendor.
 
-## Frequently Asked Questions
-
-### Does an AI dental assistant have to be HIPAA compliant?
-
-If it creates, receives, maintains or transmits protected health information for a US practice, HIPAA generally applies to the vendor as a business associate, and the practice needs a written agreement and appropriate safeguards. Confirm your own situation with counsel.
-
-### What is a business associate agreement (BAA)?
-
-A BAA is the written contract through which a vendor gives a covered entity satisfactory assurance that it will appropriately safeguard protected health information, as required by 45 CFR 164.502(e) and 164.504(e).
-
-### Can an AI assistant be used without sharing patient data?
-
-Yes. A first version can answer general questions such as opening hours and services without touching PHI. Add scheduling only after the agreement and controls are in place.
-
-### What does addressable mean in the HIPAA Security Rule?
-
-Addressable does not mean optional. You assess whether the measure is reasonable and appropriate for your practice, implement it or an equivalent alternative, and document the decision.
-
-### What should I ask an AI vendor about patient data?
-
-Ask where data is stored, whether it trains the vendor's models, who can read conversations, how long data is kept, how breaches are reported and whether a human can take over.
-
-## Related Insights
-
-- [What Is a Dental AI Virtual Assistant?](/blog/what-is-a-dental-ai-virtual-assistant/)
-- [How to Choose a Virtual Assistant for Healthcare](/blog/how-to-choose-a-virtual-assistant-for-healthcare/)
+<!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Does an AI dental assistant have to be HIPAA compliant?</p><p class="text-gray-600 leading-relaxed">If it creates, receives, maintains or transmits protected health information for a US practice, HIPAA generally applies to the vendor as a business associate, and the practice needs a written agreement and appropriate safeguards. Confirm your own situation with counsel.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is a business associate agreement (BAA)?</p><p class="text-gray-600 leading-relaxed">A BAA is the written contract through which a vendor gives a covered entity satisfactory assurance that it will appropriately safeguard protected health information, as required by 45 CFR 164.502(e) and 164.504(e).</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Can an AI assistant be used without sharing patient data?</p><p class="text-gray-600 leading-relaxed">Yes. A first version can answer general questions such as opening hours and services without touching PHI. Add scheduling only after the agreement and controls are in place.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What does addressable mean in the HIPAA Security Rule?</p><p class="text-gray-600 leading-relaxed">Addressable does not mean optional. You assess whether the measure is reasonable and appropriate for your practice, implement it or an equivalent alternative, and document the decision.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What should I ask an AI vendor about patient data?</p><p class="text-gray-600 leading-relaxed">Ask where data is stored, whether it trains the vendor's models, who can read conversations, how long data is kept, how breaches are reported and whether a human can take over.</p></div></div></div><!-- SEOAI:FAQ:END -->
 
 ## Sources
 

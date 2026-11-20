@@ -643,15 +643,67 @@ hreflangAlternates:
 </section>
 
 {# =====================================================
+   OUR APPROACH — Infrastructure-Level AI, Not Wrappers
+   Recovered from the old SEOAI expanded-content block and rebuilt in the
+   page's own section pattern (centered mono eyebrow + h2 + intro, card
+   shell with shadow-subtle) instead of a left-aligned text column with a
+   bare grey table. Sits above the FAQ so the FAQ closes the page's content
+   and the closing CTA follows it. The table keeps real <table> markup.
+   ===================================================== #}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 max-w-2xl md:mb-12" data-reveal>
+      <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-navy-500">Our approach</span>
+      <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">
+        Infrastructure-Level AI, Not Wrappers
+      </h2>
+    </div>
+
+    <p class="mb-10 max-w-3xl text-[14px] leading-relaxed text-[#374151] sm:text-[18px] md:mb-12" data-reveal>
+      Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.
+    </p>
+
+    <div class="overflow-x-auto rounded-2xl border border-navy-100/60 bg-white shadow-subtle" data-reveal>
+      <table class="w-full min-w-[640px] border-collapse text-left">
+        <thead>
+          <tr class="border-b border-navy-100">
+            <th scope="col" class="px-5 py-4 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-500 sm:px-6">Feature</th>
+            <th scope="col" class="px-5 py-4 font-mono text-[11px] font-medium uppercase tracking-wider text-navy-500 sm:px-6">Most AI vendors</th>
+            <th scope="col" class="bg-zunkiree-50/60 px-5 py-4 font-mono text-[11px] font-medium uppercase tracking-wider text-[#5a9100] sm:px-6">Zunkiree Labs</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-navy-100">
+          <tr class="align-top">
+            <th scope="row" class="px-5 py-4 text-left text-[14.5px] font-semibold text-[#111827] sm:px-6 sm:py-5">Foundation</th>
+            <td class="px-5 py-4 text-[14.5px] leading-relaxed text-[#6B7280] sm:px-6 sm:py-5">API wrapper over a third-party model</td>
+            <td class="bg-zunkiree-50/60 px-5 py-4 text-[14.5px] leading-relaxed text-[#111827] sm:px-6 sm:py-5">Owned AI-native infrastructure (RAG pipelines, knowledge systems)</td>
+          </tr>
+          <tr class="align-top">
+            <th scope="row" class="px-5 py-4 text-left text-[14.5px] font-semibold text-[#111827] sm:px-6 sm:py-5">Data readiness</th>
+            <td class="px-5 py-4 text-[14.5px] leading-relaxed text-[#6B7280] sm:px-6 sm:py-5">Ad-hoc, project-by-project</td>
+            <td class="bg-zunkiree-50/60 px-5 py-4 text-[14.5px] leading-relaxed text-[#111827] sm:px-6 sm:py-5">Scalable data pipelines and AI-ready infrastructure built in</td>
+          </tr>
+          <tr class="align-top">
+            <th scope="row" class="px-5 py-4 text-left text-[14.5px] font-semibold text-[#111827] sm:px-6 sm:py-5">Engagement model</th>
+            <td class="px-5 py-4 text-[14.5px] leading-relaxed text-[#6B7280] sm:px-6 sm:py-5">One-off project delivery</td>
+            <td class="bg-zunkiree-50/60 px-5 py-4 text-[14.5px] leading-relaxed text-[#111827] sm:px-6 sm:py-5">Ongoing platform that compounds value over time</td>
+          </tr>
+          <tr class="align-top">
+            <th scope="row" class="px-5 py-4 text-left text-[14.5px] font-semibold text-[#111827] sm:px-6 sm:py-5">Service scope</th>
+            <td class="px-5 py-4 text-[14.5px] leading-relaxed text-[#6B7280] sm:px-6 sm:py-5">Single point solution</td>
+            <td class="bg-zunkiree-50/60 px-5 py-4 text-[14.5px] leading-relaxed text-[#111827] sm:px-6 sm:py-5">AI development, data engineering, custom software, and platform engineering together</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{# =====================================================
    FAQ — same aboutFaq.json data, restyled to the sitewide
    accordion recipe used on contact.njk/homepage-v2.njk.
-   Bottom padding trimmed (pb, not py) since the next section
-   (Infrastructure-Level AI) brings its own top padding — the
-   two stacking at full py-20+py-20 left an oversized gap at
-   just this one boundary, without affecting the section's own
-   top spacing or any other section-to-section transition.
    ===================================================== #}
-<section class="px-4 pt-12 pb-6 sm:px-6 sm:pt-16 sm:pb-8 lg:px-8 lg:pt-20 lg:pb-10" aria-labelledby="faq-heading">
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="faq-heading">
   <div class="mx-auto max-w-content">
     <div class="mb-10 max-w-2xl md:mb-12 mx-auto text-center" data-reveal>
       <span class="mb-4 block font-mono text-[11px] uppercase tracking-wider text-[#9CA3AF]">
@@ -696,57 +748,6 @@ hreflangAlternates:
             </div>
           </div>
         {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-{# =====================================================
-   INFRASTRUCTURE-LEVEL AI COMPARISON
-   Recovered from commit 8d68e55 (SEOAI expanded-content
-   block, since removed) and re-homed into the v2 layout.
-   Aligned to the FAQ section's own mx-auto max-w-3xl reading
-   column directly above it — it previously sat in the wider
-   max-w-content container with no inner centering, so its left
-   edge started well before the FAQ column's left edge.
-   ===================================================== #}
-<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="ai-infra-heading">
-  <div class="mx-auto max-w-3xl">
-    <h2 id="ai-infra-heading" class="text-[28px] font-semibold leading-[1.2] tracking-tight text-[#111827] sm:text-[32px] lg:text-[36px]">Infrastructure-Level AI, Not Wrappers</h2>
-    <div class="mt-4 text-[16px] leading-relaxed text-[#6B7280] sm:text-[17px]">
-      <p>Most AI vendors build a thin layer on top of an existing model API — a "wrapper" that adds a chat interface but little else. Zunkiree Labs takes a different approach: we design and own the underlying AI infrastructure itself, from RAG pipelines and knowledge systems to the data foundations that power them, so the system keeps compounding value as it is used rather than staying a one-off integration.</p>
-      <div class="mt-8 mb-2 overflow-hidden rounded-lg border border-gray-200">
-        <table class="w-full text-sm">
-          <thead class="bg-gray-50">
-            <tr>
-              <th class="px-4 py-3 text-left font-medium text-gray-900">Feature</th>
-              <th class="px-4 py-3 text-left font-medium text-gray-900">Alternative</th>
-              <th class="px-4 py-3 text-left font-medium text-gray-900">This Option</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200">
-            <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Foundation</td>
-              <td class="px-4 py-3 text-gray-600">API wrapper over a third-party model</td>
-              <td class="px-4 py-3 text-gray-600">Owned AI-native infrastructure (RAG pipelines, knowledge systems)</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Data readiness</td>
-              <td class="px-4 py-3 text-gray-600">Ad-hoc, project-by-project</td>
-              <td class="px-4 py-3 text-gray-600">Scalable data pipelines and AI-ready infrastructure built in</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Engagement model</td>
-              <td class="px-4 py-3 text-gray-600">One-off project delivery</td>
-              <td class="px-4 py-3 text-gray-600">Ongoing platform that compounds value over time</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-3 font-medium text-gray-900">Service scope</td>
-              <td class="px-4 py-3 text-gray-600">Single point solution</td>
-              <td class="px-4 py-3 text-gray-600">AI development, data engineering, custom software, and platform engineering together</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>

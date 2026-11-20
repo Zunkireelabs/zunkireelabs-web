@@ -17,6 +17,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/openai-models-on-google-cloud-what-multi-cloud-ai-means.svg"
 ogType: article
+related:
+  - /blog/ai-agent-race-openai-dots-and-claude-sonnet-5-5/
+  - /blog/enterprise-ai-anthropic-openai-google-who-is-winning/
+  - /blog/gpt-6-1-terra-price-what-half-the-price-means/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -64,12 +68,6 @@ OpenAI on Google Cloud is a distribution change more than a model change. It giv
 If you want an AI system that is not tied to one vendor, see our work on [AI development](/solutions/ai-development/) and [custom AI agents](/solutions/custom-agent/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Are OpenAI models available on Google Cloud now?</p><p class="text-gray-600 leading-relaxed">In private preview for select enterprise customers, according to Google Cloud. General availability is planned "in the coming weeks" with no date.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is OpenAI leaving Microsoft Azure?</p><p class="text-gray-600 leading-relaxed">No. OpenAI says Microsoft remains its primary cloud partner. The announcement adds Google Cloud as another route.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What is Google Cloud's Model Garden?</p><p class="text-gray-600 leading-relaxed">It is Google Cloud's catalogue for discovering and deploying AI models. OpenAI's announcement names it as the destination.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How will it be billed?</p><p class="text-gray-600 leading-relaxed">Sales are through Google Cloud Marketplace, and existing Google Cloud spending commitments can apply to eligible purchases. No prices were published.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Are OpenAI models available on Google Cloud now?","@type":"Question","acceptedAnswer":{"text":"In private preview for select enterprise customers, according to Google Cloud. General availability is planned \"in the coming weeks\" with no date.","@type":"Answer"}},{"name":"Is OpenAI leaving Microsoft Azure?","@type":"Question","acceptedAnswer":{"text":"No. OpenAI says Microsoft remains its primary cloud partner. The announcement adds Google Cloud as another route.","@type":"Answer"}},{"name":"What is Google Cloud's Model Garden?","@type":"Question","acceptedAnswer":{"text":"It is Google Cloud's catalogue for discovering and deploying AI models. OpenAI's announcement names it as the destination.","@type":"Answer"}},{"name":"How will it be billed?","@type":"Question","acceptedAnswer":{"text":"Sales are through Google Cloud Marketplace, and existing Google Cloud spending commitments can apply to eligible purchases. No prices were published.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [The Agent Race: OpenAI's Dots and Claude Sonnet 5.5](/blog/ai-agent-race-openai-dots-and-claude-sonnet-5-5/)
-- [Anthropic, OpenAI, Google in Enterprise: Who Is Winning?](/blog/enterprise-ai-anthropic-openai-google-who-is-winning/)
-- [GPT-6.1 Terra at Half the Price: What a Cheaper Model Really Changes](/blog/gpt-6-1-terra-price-what-half-the-price-means/)
 
 ## Sources
 

@@ -15,6 +15,10 @@ tags:
 readTime: 8
 featuredImage: "/assets/images/blog/enterprise-ai-anthropic-openai-google-who-is-winning.svg"
 ogType: article
+related:
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/ai-agents-are-getting-their-own-infrastructure/
+  - /blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -28,7 +32,6 @@ ogType: article
 - Different samples, dates and definitions explain much of the gap. Neither report is a count of every dollar or token.
 - Coding is where the gap is widest: Menlo puts Anthropic at 54% of enterprise coding usage and OpenAI at 21%.
 - The a16z survey found 81% of enterprises using three or more model families, so multi-vendor is already normal.
-
 
 ## What Do the Two Reports Actually Say?
 
@@ -79,12 +82,6 @@ Adoption itself is broad. McKinsey's State of AI survey, published on November 5
 There is no single "enterprise AI market share". Menlo Ventures reports Anthropic ahead on estimated spend based on API usage, while a16z reports OpenAI used by more surveyed Global 2000 companies in production, and both are survey-based. Read the definition before the percentage, test models on your own work, and design your systems so you can change vendors.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Which AI lab has the largest enterprise market share?</p><p class="text-gray-600 leading-relaxed">It depends on the measure. Menlo Ventures estimates Anthropic at 40%, OpenAI at 27% and Google at 21% of enterprise LLM share based on production API usage, while an a16z survey of Global 2000 CIOs found 78% using OpenAI models in production and 44% using Anthropic.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Why do enterprise AI market-share reports disagree?</p><p class="text-gray-600 leading-relaxed">They measure different things (estimated dollars from API usage, the share of companies using a vendor, or share of wallet), survey different groups (495 U.S. decision-makers versus 100 Global 2000 CIOs) and were run at different times. Both are surveys, not complete counts.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Anthropic really ahead in coding?</p><p class="text-gray-600 leading-relaxed">Menlo Ventures reports Anthropic at 54% and OpenAI at 21% of enterprise LLM API usage for coding, and a16z reports Anthropic gaining in token-heavy coding use cases. Both are survey-based and exclude some segments, so test tools on your own codebase.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Should my company use more than one AI model vendor?</p><p class="text-gray-600 leading-relaxed">Many enterprises already do: a16z found 81% using three or more model families in testing or production. A multi-vendor setup with one internal interface and your own test set lowers lock-in risk.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Which AI lab has the largest enterprise market share?","@type":"Question","acceptedAnswer":{"text":"It depends on the measure. Menlo Ventures estimates Anthropic at 40%, OpenAI at 27% and Google at 21% of enterprise LLM share based on production API usage, while an a16z survey of Global 2000 CIOs found 78% using OpenAI models in production and 44% using Anthropic.","@type":"Answer"}},{"name":"Why do enterprise AI market-share reports disagree?","@type":"Question","acceptedAnswer":{"text":"They measure different things (estimated dollars from API usage, the share of companies using a vendor, or share of wallet), survey different groups (495 U.S. decision-makers versus 100 Global 2000 CIOs) and were run at different times. Both are surveys, not complete counts.","@type":"Answer"}},{"name":"Is Anthropic really ahead in coding?","@type":"Question","acceptedAnswer":{"text":"Menlo Ventures reports Anthropic at 54% and OpenAI at 21% of enterprise LLM API usage for coding, and a16z reports Anthropic gaining in token-heavy coding use cases. Both are survey-based and exclude some segments, so test tools on your own codebase.","@type":"Answer"}},{"name":"Should my company use more than one AI model vendor?","@type":"Question","acceptedAnswer":{"text":"Many enterprises already do: a16z found 81% using three or more model families in testing or production. A multi-vendor setup with one internal interface and your own test set lowers lock-in risk.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Why AI Agents Are Getting Their Own Infrastructure](/blog/ai-agents-are-getting-their-own-infrastructure/)
-- [AI Coding Agents: What Microsoft's Copilot Rethink Means](/blog/ai-native-software-and-coding-agents-what-microsofts-copilot-rethink-means/)
 
 ## Sources
 

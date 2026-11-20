@@ -14,6 +14,9 @@ tags:
 readTime: 7
 featuredImage: "/assets/images/blog/eu-ai-act-what-applies-now-and-what-was-delayed.svg"
 ogType: article
+related:
+  - /blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -84,11 +87,6 @@ The transparency rules of the EU AI Act are already in force, with a grace perio
 For related risk and governance reading, see our posts on the [FTC investigation into AI agents](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/) and on [what superintelligence is and why it is debated](/blog/what-is-superintelligence-and-why-is-it-called-that/).
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">What applies under the EU AI Act from 2 August 2026?</p><p class="text-gray-600 leading-relaxed">The Article 50 transparency duties apply from 2 August 2026. They include telling people when they interact with an AI system, marking synthetic content and disclosing deep fakes, according to law-firm summaries such as Cooley's.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What did the Digital Omnibus on AI delay?</p><p class="text-gray-600 leading-relaxed">It moved Annex III high-risk obligations to 2 December 2027 and Annex I product-embedded obligations to 2 August 2028. It entered into force on 27 July 2026.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Does the EU AI Act apply to companies outside the EU?</p><p class="text-gray-600 leading-relaxed">It can. Law firms describe two routes: placing an AI system on the EU market, and using the output of an AI system in the EU. Check your own situation with a qualified lawyer.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">What are the fines for breaking Article 50?</p><p class="text-gray-600 leading-relaxed">Cooley reports fines of up to EUR 15 million or 3% of worldwide annual turnover, whichever is higher. This is a general summary, not legal advice.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"What applies under the EU AI Act from 2 August 2026?","@type":"Question","acceptedAnswer":{"text":"The Article 50 transparency duties apply from 2 August 2026. They include telling people when they interact with an AI system, marking synthetic content and disclosing deep fakes, according to law-firm summaries such as Cooley's.","@type":"Answer"}},{"name":"What did the Digital Omnibus on AI delay?","@type":"Question","acceptedAnswer":{"text":"It moved Annex III high-risk obligations to 2 December 2027 and Annex I product-embedded obligations to 2 August 2028. It entered into force on 27 July 2026.","@type":"Answer"}},{"name":"Does the EU AI Act apply to companies outside the EU?","@type":"Question","acceptedAnswer":{"text":"It can. Law firms describe two routes: placing an AI system on the EU market, and using the output of an AI system in the EU. Check your own situation with a qualified lawyer.","@type":"Answer"}},{"name":"What are the fines for breaking Article 50?","@type":"Question","acceptedAnswer":{"text":"Cooley reports fines of up to EUR 15 million or 3% of worldwide annual turnover, whichever is higher. This is a general summary, not legal advice.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [FTC Probes AI Labs Over Rogue Agents: What Businesses Should Do](/blog/ftc-probe-ai-labs-rogue-agents-what-businesses-should-do/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
 
 ## Sources
 

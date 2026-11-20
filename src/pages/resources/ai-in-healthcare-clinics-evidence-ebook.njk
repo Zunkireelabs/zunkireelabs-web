@@ -152,15 +152,7 @@ slug: ai-in-healthcare-clinics-evidence-ebook
   </ul>
 </div>
 
-<div class="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6" data-reveal>
-  <h2 class="mb-5 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">Frequently asked questions</h2>
-  <div class="mt-6 space-y-6">
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Does the evidence show that AI works in healthcare?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">It shows that specific tools, tested in specific settings, produced specific results. A Swedish randomized trial of about 106,000 women reported fewer interval cancers with AI-supported mammography reading, and a randomized scribe trial reported a modest time saving for one of two tools. Neither result can be assumed for other tools or settings.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Which AI uses have the strongest evidence?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Among the studies summarized here, the two randomized trials are the strongest designs: the MASAI mammography trial and a UCLA randomized trial of ambient scribes. The sepsis alert evidence is largely reported by the developers, and the patient-communication guidance rests on design principles rather than outcome trials.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">What should a small clinic take from this?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">Start with administrative tasks, ask any supplier for independent evidence and error rates, keep a person responsible for every clinical decision, and run a small supervised pilot before widening scope.</p></div>
-    <div><p class="mb-2 text-[17px] font-medium text-[#111827]">Is this medical or legal advice?</p><p class="text-[16px] leading-relaxed text-[#6B7280] md:text-[17px]">No. It summarizes published evidence and its limits. Requirements differ by country and practice type, so confirm legal and regulatory duties with your own advisers.</p></div>
-  </div>
-</div>
+<div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200 shadow-[0_1px_2px_0_rgba(15,23,42,0.04)]" data-reveal><h2 class="mt-10 mb-4 text-[22px] font-semibold leading-[36px] tracking-tight text-[#111827]">Frequently asked questions</h2><div class="space-y-6"><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Does the evidence show that AI works in healthcare?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">It shows that specific tools, tested in specific settings, produced specific results. A Swedish randomized trial of about 106,000 women reported fewer interval cancers with AI-supported mammography reading, and a randomized scribe trial reported a modest time saving for one of two tools. Neither result can be assumed for other tools or settings.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Which AI uses have the strongest evidence?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Among the studies summarized here, the two randomized trials are the strongest designs: the MASAI mammography trial and a UCLA randomized trial of ambient scribes. The sepsis alert evidence is largely reported by the developers, and the patient-communication guidance rests on design principles rather than outcome trials.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">What should a small clinic take from this?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">Start with administrative tasks, ask any supplier for independent evidence and error rates, keep a person responsible for every clinical decision, and run a small supervised pilot before widening scope.</p></div><div><p class="mt-6 mb-2 text-[18px] font-medium leading-[1.625] text-[#4a636e]">Is this medical or legal advice?</p><p class="my-6 text-[18px] leading-[1.625] text-[#4a636e]">No. It summarizes published evidence and its limits. Requirements differ by country and practice type, so confirm legal and regulatory duties with your own advisers.</p></div></div></div>
 
 <div class="mb-2" data-reveal>
   <h2 class="mb-6 text-[26px] font-semibold leading-[1.2] tracking-tight text-[#111827] md:text-[30px]">What you get:</h2>
@@ -182,6 +174,9 @@ slug: ai-in-healthcare-clinics-evidence-ebook
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  "image": "{{ site.url }}{{ resource.coverImage or '/assets/images/og-image.png' }}",
+  "publisher": { "@type": "Organization", "name": "Zunkiree Labs", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/images/zunkireelabs-logo-light.png" } },
+  "dateModified": "{{ resource.lastUpdated or resource.publishDate }}",
   "name": "{{ resource.title }}",
   "description": "{{ resource.description }}",
   "datePublished": "{{ resource.publishDate }}",

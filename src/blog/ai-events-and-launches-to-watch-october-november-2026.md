@@ -14,6 +14,10 @@ tags:
 readTime: 6
 featuredImage: "/assets/images/blog/ai-events-and-launches-to-watch-october-november-2026.svg"
 ogType: article
+related:
+  - /blog/gemini-4-argon-how-to-read-a-frontier-model-release/
+  - /blog/what-is-superintelligence-and-why-is-it-called-that/
+  - /blog/trump-super-intelligence-force-what-the-executive-order-says/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -67,12 +71,6 @@ The next two months are busy, but only a few items change what a business can ac
 If you are planning around AI, our checklist for [choosing an AI development company](/blog/how-to-choose-ai-development-company/) is a useful companion.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Frequently asked questions</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Which AI conferences are happening in October and November 2026?</p><p class="text-gray-600 leading-relaxed">As published by the organisers: AI Engineer New York (October 12-14), Open Source AI Week in the Bay Area (October 16-25) with PyTorch Conference North America (October 20-21), ODSC AI West (October 27-29), Web Summit in Lisbon (November 9-12), AI Engineer Code Summit in San Francisco (November 10-12) and Big Data Conference Europe in Vilnius (November 25-27).</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is Gemini 4 Argon available to everyone yet?</p><p class="text-gray-600 leading-relaxed">Not according to the reports on its announcement. Google is releasing it in phases, starting with a small group of trusted testers, and has not promised a specific timeline. General availability is said to begin with paid API users and Google AI Ultra subscribers.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">How do I tell a real AI launch from a conference announcement?</p><p class="text-gray-600 leading-relaxed">Check whether you can use it today, at what price and under what terms. A keynote or demo is a claim. A generally available product with published pricing and independent testing is something you can build on.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Where are the EU AI Act dates covered?</p><p class="text-gray-600 leading-relaxed">In our separate guide on what applies now and what was delayed under the EU AI Act, linked in this article.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Which AI conferences are happening in October and November 2026?","@type":"Question","acceptedAnswer":{"text":"As published by the organisers: AI Engineer New York (October 12-14), Open Source AI Week in the Bay Area (October 16-25) with PyTorch Conference North America (October 20-21), ODSC AI West (October 27-29), Web Summit in Lisbon (November 9-12), AI Engineer Code Summit in San Francisco (November 10-12) and Big Data Conference Europe in Vilnius (November 25-27).","@type":"Answer"}},{"name":"Is Gemini 4 Argon available to everyone yet?","@type":"Question","acceptedAnswer":{"text":"Not according to the reports on its announcement. Google is releasing it in phases, starting with a small group of trusted testers, and has not promised a specific timeline. General availability is said to begin with paid API users and Google AI Ultra subscribers.","@type":"Answer"}},{"name":"How do I tell a real AI launch from a conference announcement?","@type":"Question","acceptedAnswer":{"text":"Check whether you can use it today, at what price and under what terms. A keynote or demo is a claim. A generally available product with published pricing and independent testing is something you can build on.","@type":"Answer"}},{"name":"Where are the EU AI Act dates covered?","@type":"Question","acceptedAnswer":{"text":"In our separate guide on what applies now and what was delayed under the EU AI Act, linked in this article.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Related Insights
-
-- [Gemini 4 Argon: How to Read a Frontier Model Release](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [What Is Superintelligence and Why Is It Called That?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Trump's Super Intelligence Force: What the Order Actually Says](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
 
 ## Sources
 

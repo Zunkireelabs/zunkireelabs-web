@@ -2,6 +2,8 @@
 templateEngineOverride: "njk, md"
 title: "KI-Zahnarztassistent und Patientendaten: HIPAA-Checkliste für US-Praxen"
 description: "Planen Sie einen KI-Zahnarztassistenten? Eine HIPAA-Checkliste in einfacher Sprache für US-Praxen: Business-Associate-Vereinbarungen, Zugriffskontrollen, Protokolle und Fragen an Anbieter."
+seoTitle: "KI-Zahnarztassistent: HIPAA-Checkliste für US-Praxen"
+seoDescription: "Einen KI-Zahnarztassistenten planen? HIPAA-Checkliste für US-Praxen: Business-Associate-Vereinbarungen, Zugriffskontrollen, Protokolle und Anbieterfragen."
 date: "2026-10-12"
 featuredImage: "/assets/images/blog/ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices.svg"
 featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
@@ -10,6 +12,9 @@ translationKey: "ai-dental-assistant-patient-data-security-hipaa-checklist-for-u
 category: "Einblicke"
 pillar: "ai-healthcare"
 readTime: 8
+related:
+  - /blog/what-is-a-dental-ai-virtual-assistant/
+  - /blog/how-to-choose-a-virtual-assistant-for-healthcare/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -72,11 +77,6 @@ Ein KI-Assistent kann Ihrer Rezeption Routineanrufe abnehmen, aber nur, wenn die
 Ein Beispiel für einen Zahnarztassistenten in der Entwicklung finden Sie unter [So entwickelt Zunkiree Labs den Dental AI Assistant](/resources/dental-ai-case-study/). Er befindet sich in einer privaten Betaphase, und diese Checkliste gilt für ihn wie für jeden anderen Anbieter.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Häufig gestellte Fragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Muss ein KI-Zahnarztassistent HIPAA-konform sein?</p><p class="text-gray-600 leading-relaxed">Wenn er für eine US-Praxis geschützte Gesundheitsdaten erstellt, empfängt, speichert oder übermittelt, gilt HIPAA für den Anbieter in der Regel als Business Associate, und die Praxis braucht eine schriftliche Vereinbarung und angemessene Schutzmassnahmen. Lassen Sie Ihre eigene Situation von Ihrem Rechtsbeistand bestätigen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was ist eine Business Associate Agreement (BAA)?</p><p class="text-gray-600 leading-relaxed">Eine BAA ist der schriftliche Vertrag, mit dem ein Anbieter einer „covered entity“ eine zufriedenstellende Zusicherung gibt, geschützte Gesundheitsdaten angemessen zu schützen, wie es 45 CFR 164.502(e) und 164.504(e) verlangen.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Lässt sich ein KI-Assistent ohne Patientendaten einsetzen?</p><p class="text-gray-600 leading-relaxed">Ja. Eine erste Version kann allgemeine Fragen wie Öffnungszeiten und Leistungen beantworten, ohne PHI zu berühren. Ergänzen Sie die Terminvergabe erst, wenn Vereinbarung und Kontrollen vorhanden sind.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was bedeutet „addressable“ in der HIPAA Security Rule?</p><p class="text-gray-600 leading-relaxed">„Addressable“ heisst nicht freiwillig. Sie prüfen, ob die Massnahme für Ihre Praxis angemessen ist, setzen sie oder eine gleichwertige Alternative um und dokumentieren die Entscheidung.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Was sollte ich einen KI-Anbieter zu Patientendaten fragen?</p><p class="text-gray-600 leading-relaxed">Fragen Sie, wo Daten gespeichert werden, ob sie Modelle des Anbieters trainieren, wer Gespräche lesen kann, wie lange Daten aufbewahrt werden, wie Datenschutzvorfälle gemeldet werden und ob ein Mensch übernehmen kann.</p></div></div></div><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Muss ein KI-Zahnarztassistent HIPAA-konform sein?", "acceptedAnswer": {"@type": "Answer", "text": "Wenn er für eine US-Praxis geschützte Gesundheitsdaten erstellt, empfängt, speichert oder übermittelt, gilt HIPAA für den Anbieter in der Regel als Business Associate, und die Praxis braucht eine schriftliche Vereinbarung und angemessene Schutzmassnahmen. Lassen Sie Ihre eigene Situation von Ihrem Rechtsbeistand bestätigen."}}, {"@type": "Question", "name": "Was ist eine Business Associate Agreement (BAA)?", "acceptedAnswer": {"@type": "Answer", "text": "Eine BAA ist der schriftliche Vertrag, mit dem ein Anbieter einer „covered entity“ eine zufriedenstellende Zusicherung gibt, geschützte Gesundheitsdaten angemessen zu schützen, wie es 45 CFR 164.502(e) und 164.504(e) verlangen."}}, {"@type": "Question", "name": "Lässt sich ein KI-Assistent ohne Patientendaten einsetzen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Eine erste Version kann allgemeine Fragen wie Öffnungszeiten und Leistungen beantworten, ohne PHI zu berühren. Ergänzen Sie die Terminvergabe erst, wenn Vereinbarung und Kontrollen vorhanden sind."}}, {"@type": "Question", "name": "Was bedeutet „addressable“ in der HIPAA Security Rule?", "acceptedAnswer": {"@type": "Answer", "text": "„Addressable“ heisst nicht freiwillig. Sie prüfen, ob die Massnahme für Ihre Praxis angemessen ist, setzen sie oder eine gleichwertige Alternative um und dokumentieren die Entscheidung."}}, {"@type": "Question", "name": "Was sollte ich einen KI-Anbieter zu Patientendaten fragen?", "acceptedAnswer": {"@type": "Answer", "text": "Fragen Sie, wo Daten gespeichert werden, ob sie Modelle des Anbieters trainieren, wer Gespräche lesen kann, wie lange Daten aufbewahrt werden, wie Datenschutzvorfälle gemeldet werden und ob ein Mensch übernehmen kann."}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Weitere Einblicke
-
-- [Was ist ein virtueller KI-Assistent für Zahnarztpraxen?](/blog/what-is-a-dental-ai-virtual-assistant/)
-- [Wie wählt man einen virtuellen Assistenten für das Gesundheitswesen?](/blog/how-to-choose-a-virtual-assistant-for-healthcare/)
 
 ## Quellen
 

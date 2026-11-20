@@ -10,6 +10,9 @@ pillar: "ai-society"
 readTime: 8
 featuredImage: "/assets/images/blog/ai-in-het-dagelijks-leven-wat-de-gebruiksdata-echt-laten-zien.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
+related:
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
+  - /nl/blog/waarom-ai-agents-hun-eigen-infrastructuur-krijgen/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -23,7 +26,6 @@ featuredImageAlt: "Abstracte kleurverloop als achtergrond"
 - De AI Index 2026 van Stanford zegt dat generatieve AI binnen drie jaar 53% bevolkingsbereik haalde en dat het gebruik samenhangt met het bbp per hoofd van de bevolking. De studies hanteren verschillende definities, dus vergelijk de cijfers niet rechtstreeks.
 - Experts en het publiek zijn het oneens over banen: 73% van de experts verwacht een positief effect op hoe mensen hun werk doen, tegenover 23% van het publiek.
 - Het gebruik groeit sneller dan het vertrouwen. Ongeveer twee derde van de Amerikanen zegt dat AI zich te snel ontwikkelt.
-
 
 ## Het bewijs
 
@@ -79,11 +81,6 @@ Dit onderdeel is verwachting, geen feit. Als de huidige patronen doorzetten, zal
 AI is nu een alledaags hulpmiddel voor ongeveer de helft van de Amerikaanse volwassenen, vooral om informatie te vinden en voor werk, maar slechts ongeveer een op de vijf mensen op werkende leeftijd wereldwijd gebruikt generatieve AI, en de kloof tussen rijkere en armere regio's groeit. Het gebruik stijgt sneller dan het vertrouwen. Lees elke statistiek samen met haar definitie, want de enquêtes meten verschillende dingen.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Hoeveel mensen gebruiken AI-chatbots?</p><p class="text-gray-600 leading-relaxed">Pew Research Center stelde in een enquête onder 5.119 Amerikaanse volwassenen in februari 2026 vast dat ongeveer de helft AI-chatbots gebruikt en ruwweg een op de vier ze dagelijks gebruikt. Microsoft schat dat 18,8% van de 15- tot 64-jarigen wereldwijd in het tweede kwartaal van 2026 een generatief AI-product gebruikte.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Waarvoor gebruiken mensen AI-chatbots het meest?</p><p class="text-gray-600 leading-relaxed">Informatie zoeken is in Pews enquête het meest voorkomende gebruik, bij ongeveer vier op de tien Amerikaanse volwassenen. 38% van de werkenden gebruikt chatbots voor taken op het werk en 13% voor nieuws.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Waarom verschillen de cijfers over AI-gebruik zo sterk tussen rapporten?</p><p class="text-gray-600 leading-relaxed">Ze meten verschillende dingen. Pew telt zelfgerapporteerd chatbotgebruik van Amerikaanse volwassenen, Microsoft schat uit telemetrie het gebruik van generatieve AI-producten bij 15- tot 64-jarigen, en Stanfords AI Index rapporteert bevolkingsbereik. De cijfers moeten niet rechtstreeks worden vergeleken.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Is er een AI-kloof tussen rijke en arme landen?</p><p class="text-gray-600 leading-relaxed">Ja. Microsoft schat het gebruik in het tweede kwartaal van 2026 op 28,8% in het Globale Noorden en 16,2% in het Globale Zuiden en zegt dat de kloof groeit, en Stanfords AI Index stelt vast dat het gebruik sterk samenhangt met het bbp per hoofd van de bevolking.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Hoeveel mensen gebruiken AI-chatbots?","@type":"Question","acceptedAnswer":{"text":"Pew Research Center stelde in een enquête onder 5.119 Amerikaanse volwassenen in februari 2026 vast dat ongeveer de helft AI-chatbots gebruikt en ruwweg een op de vier ze dagelijks gebruikt. Microsoft schat dat 18,8% van de 15- tot 64-jarigen wereldwijd in het tweede kwartaal van 2026 een generatief AI-product gebruikte.","@type":"Answer"}},{"name":"Waarvoor gebruiken mensen AI-chatbots het meest?","@type":"Question","acceptedAnswer":{"text":"Informatie zoeken is in Pews enquête het meest voorkomende gebruik, bij ongeveer vier op de tien Amerikaanse volwassenen. 38% van de werkenden gebruikt chatbots voor taken op het werk en 13% voor nieuws.","@type":"Answer"}},{"name":"Waarom verschillen de cijfers over AI-gebruik zo sterk tussen rapporten?","@type":"Question","acceptedAnswer":{"text":"Ze meten verschillende dingen. Pew telt zelfgerapporteerd chatbotgebruik van Amerikaanse volwassenen, Microsoft schat uit telemetrie het gebruik van generatieve AI-producten bij 15- tot 64-jarigen, en Stanfords AI Index rapporteert bevolkingsbereik. De cijfers moeten niet rechtstreeks worden vergeleken.","@type":"Answer"}},{"name":"Is er een AI-kloof tussen rijke en arme landen?","@type":"Question","acceptedAnswer":{"text":"Ja. Microsoft schat het gebruik in het tweede kwartaal van 2026 op 28,8% in het Globale Noorden en 16,2% in het Globale Zuiden en zegt dat de kloof groeit, en Stanfords AI Index stelt vast dat het gebruik sterk samenhangt met het bbp per hoofd van de bevolking.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
-- [Waarom AI-agents hun eigen infrastructuur krijgen](/blog/ai-agents-are-getting-their-own-infrastructure/)
 
 ## Bronnen
 

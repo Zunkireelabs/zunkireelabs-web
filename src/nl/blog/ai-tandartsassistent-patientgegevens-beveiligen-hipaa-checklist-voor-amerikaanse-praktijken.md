@@ -2,6 +2,8 @@
 templateEngineOverride: "njk, md"
 title: "AI-tandartsassistent en patiëntgegevens: een HIPAA-checklist voor Amerikaanse praktijken"
 description: "Overweegt u een AI-tandartsassistent? Een HIPAA-checklist in gewone taal voor Amerikaanse praktijken: verwerkersovereenkomsten, toegangsbeheer, auditlogs en vragen aan leveranciers."
+seoTitle: "AI-tandartsassistent: HIPAA-checklist voor Amerikaanse praktijken"
+seoDescription: "Een AI-tandartsassistent overwegen? HIPAA-checklist voor Amerikaanse praktijken: verwerkersovereenkomsten, toegangsbeheer, auditlogs en vragen aan leveranciers."
 date: "2026-10-12"
 featuredImage: "/assets/images/blog/ai-dental-assistant-patient-data-security-hipaa-checklist-for-us-practices.svg"
 featuredImageAlt: "Abstracte kleurverloop als achtergrond"
@@ -10,6 +12,9 @@ translationKey: "ai-dental-assistant-patient-data-security-hipaa-checklist-for-u
 category: "Inzichten"
 pillar: "ai-healthcare"
 readTime: 8
+related:
+  - /blog/what-is-a-dental-ai-virtual-assistant/
+  - /blog/how-to-choose-a-virtual-assistant-for-healthcare/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -92,11 +97,6 @@ Addressable betekent niet optioneel. U beoordeelt of de maatregel redelijk en pa
 ### Wat moet ik een AI-leverancier vragen over patiëntgegevens?
 
 Vraag waar gegevens worden opgeslagen, of ze de modellen van de leverancier trainen, wie gesprekken kan lezen, hoe lang gegevens worden bewaard, hoe datalekken worden gemeld en of een mens kan overnemen.
-
-## Gerelateerde inzichten
-
-- [Wat is een virtuele AI-assistent voor tandartsen?](/blog/what-is-a-dental-ai-virtual-assistant/)
-- [Een virtuele assistent voor de zorg kiezen](/blog/how-to-choose-a-virtual-assistant-for-healthcare/)
 
 ## Bronnen
 

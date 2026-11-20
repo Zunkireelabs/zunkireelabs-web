@@ -10,6 +10,10 @@ translationKey: "superintelligence-safety-debate-who-wants-what"
 category: "Inzichten"
 pillar: "ai-society"
 readTime: 8
+related:
+  - /nl/blog/wat-is-superintelligentie-en-waarom-heet-het-zo/
+  - /nl/blog/trumps-super-intelligence-force-wat-de-executive-order-echt-zegt/
+  - /nl/blog/gemini-4-argon-zo-leest-u-de-release-van-een-frontiermodel/
 ---
 
 <div class="container-custom py-12 md:py-20">
@@ -22,7 +26,6 @@ readTime: 8
 - Safe Superintelligence Inc., opgericht in 2024, wil superintelligentie naar eigen zeggen veilig ontwikkelen; critici van een verbod vinden het lastig te definiëren en af te dwingen.
 - Het International AI Safety Report, geleid door Yoshua Bengio, deelt risico’s in naar kwaadwillig gebruik, technische storingen en systemische risico’s.
 - In de VS benadrukt het handvest van de nieuwe Super Intelligence Force dat overregulering vermeden moet worden; de veiligheidsbelofte die technologiebazen tekenden is niet bindend.
-
 
 ## Waarom is er meer dan één debat?
 
@@ -78,12 +81,6 @@ U hoeft geen kant te kiezen om verstandig te handelen:
 Er is niet één superintelligentiedebat. Er zijn oproepen om het te verbieden tot het bewezen veilig is, labs die zeggen het veilig te bouwen, overheden die overregulering vrezen en onderzoekers die risico’s meten. Iedereen zegt dat veiligheid telt; ze verschillen over wie beslist en hoe snel het moet. Voor bedrijven is het praktische antwoord bij elk standpunt hetzelfde: houd de controle over de AI die u gebruikt.
 
 <!-- SEOAI:FAQ:START --><div class="mt-10 p-6 bg-gray-50 rounded-lg"><h3 class="text-2xl md:text-3xl font-normal text-gray-900 mb-6">Veelgestelde vragen</h3><div class="space-y-6"><div><p class="text-lg font-medium text-gray-900 mb-2">Is er een verbod op superintelligentie?</p><p class="text-gray-600 leading-relaxed">Nee. Volgens Wikipedia heeft geen enkele overheid een expliciet verbod op superintelligentie ingevoerd, al is het idee besproken in de EU en bij de VN. Het Future of Life Institute publiceerde in oktober 2025 een verklaring die oproept tot een verbod totdat er brede wetenschappelijke consensus over veiligheid is en sterke steun van het publiek.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wie bouwt superintelligentie met veiligheid voorop?</p><p class="text-gray-600 leading-relaxed">Safe Superintelligence Inc., in 2024 opgericht door Ilya Sutskever, Daniel Gross en Daniel Levy, noemt als missie een superintelligentie veilig te ontwikkelen. Ook andere labs noemen veiligheid een prioriteit; dit zijn de eigen beweringen van de bedrijven.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is het International AI Safety Report?</p><p class="text-gray-600 leading-relaxed">Een rapport onder leiding van Yoshua Bengio, besteld door 30 landen op de AI Safety Summit van 2023. De tweede volledige editie verscheen op 3 februari 2026 en deelt risico’s in naar kwaadwillig gebruik, technische storingen en systemische risico’s.</p></div><div><p class="text-lg font-medium text-gray-900 mb-2">Wat is de Amerikaanse Super Intelligence Force?</p><p class="text-gray-600 leading-relaxed">Volgens TechCrunch is het een taskforce onder leiding van Jay Clayton, directeur van de nationale inlichtingendiensten, die binnen 120 dagen verslag moet uitbrengen over risico’s en kansen. Het handvest benadrukt dat overregulering die innovatie zou smoren vermeden moet worden.</p></div></div></div><script type="application/ld+json">{"@type":"FAQPage","@context":"https://schema.org","mainEntity":[{"name":"Is er een verbod op superintelligentie?","@type":"Question","acceptedAnswer":{"text":"Nee. Volgens Wikipedia heeft geen enkele overheid een expliciet verbod op superintelligentie ingevoerd, al is het idee besproken in de EU en bij de VN. Het Future of Life Institute publiceerde in oktober 2025 een verklaring die oproept tot een verbod totdat er brede wetenschappelijke consensus over veiligheid is en sterke steun van het publiek.","@type":"Answer"}},{"name":"Wie bouwt superintelligentie met veiligheid voorop?","@type":"Question","acceptedAnswer":{"text":"Safe Superintelligence Inc., in 2024 opgericht door Ilya Sutskever, Daniel Gross en Daniel Levy, noemt als missie een superintelligentie veilig te ontwikkelen. Ook andere labs noemen veiligheid een prioriteit; dit zijn de eigen beweringen van de bedrijven.","@type":"Answer"}},{"name":"Wat is het International AI Safety Report?","@type":"Question","acceptedAnswer":{"text":"Een rapport onder leiding van Yoshua Bengio, besteld door 30 landen op de AI Safety Summit van 2023. De tweede volledige editie verscheen op 3 februari 2026 en deelt risico’s in naar kwaadwillig gebruik, technische storingen en systemische risico’s.","@type":"Answer"}},{"name":"Wat is de Amerikaanse Super Intelligence Force?","@type":"Question","acceptedAnswer":{"text":"Volgens TechCrunch is het een taskforce onder leiding van Jay Clayton, directeur van de nationale inlichtingendiensten, die binnen 120 dagen verslag moet uitbrengen over risico’s en kansen. Het handvest benadrukt dat overregulering die innovatie zou smoren vermeden moet worden.","@type":"Answer"}}]}</script><!-- SEOAI:FAQ:END -->
-
-## Gerelateerde inzichten
-
-- [Wat is superintelligentie en waarom heet het zo?](/blog/what-is-superintelligence-and-why-is-it-called-that/)
-- [Trumps Super Intelligence Force: wat het presidentieel besluit zegt](/blog/trump-super-intelligence-force-what-the-executive-order-says/)
-- [Gemini 4 Argon: zo leest u de release van een frontiermodel](/blog/gemini-4-argon-how-to-read-a-frontier-model-release/)
 
 ## Bronnen
 
