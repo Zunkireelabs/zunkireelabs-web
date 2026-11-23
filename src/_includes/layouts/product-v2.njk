@@ -1910,7 +1910,10 @@ layout: base.njk
    (product-v2.njk had the identical "page body never rendered"
    gap). Placed above FAQ, same page-order convention.
    ===================================================== #}
-{% if content and content.trim() %}
+{#- A body that holds only HTML comments (the empty SuperRank markers an agent writes into) must not render this padded section: strip comments before
+    asking whether anything is left. A body with real content, including a script such as ai-crm's JSON-LD, renders exactly as before. -#}
+{% set _acBody = (content or '') | replace(r/<!--[\s\S]*?-->/g, '') %}
+{% if _acBody.trim() %}
 <section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
   <div class="mx-auto max-w-content action-center-content">
     {{ content | safe }}

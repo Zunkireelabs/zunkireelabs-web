@@ -1,0 +1,24 @@
+{#- Agent-written text for a data-driven page (SuperRank). Pass acExpanded and/or acQa. Renders nothing when both are empty, so a page
+    without agent content is byte-for-byte what it was. Same wrapper and restyle as product-v2.njk / location.njk: the generators' markup
+    is only wrapped in `.action-center-content`, never edited, and scoped rules bring it into the v2 type system. -#}
+{% if acExpanded or acQa %}
+<section class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+  <div class="mx-auto max-w-content action-center-content">
+    {% if acExpanded %}{{ acExpanded | safe }}{% endif %}
+    {% if acQa %}{{ acQa | safe }}{% endif %}
+  </div>
+</section>
+<style>
+  .action-center-content section { margin-bottom: 2.75rem; text-align: center; }
+  .action-center-content section:last-child { margin-bottom: 0; }
+  .action-center-content section > div { margin-left: auto; margin-right: auto; }
+  .action-center-content h2 { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; color: #111827; }
+  .action-center-content p { color: #6B7280; }
+  .action-center-content :is(div):has(> table) { border-radius: 0.75rem; border-color: rgba(199, 213, 218, 0.6); box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px 0 rgba(15, 23, 42, 0.04); }
+  .action-center-content th, .action-center-content td { text-align: left; }
+  .action-center-content table { font-size: 14px; }
+  .action-center-content thead tr { background-color: #eff7ff; }
+  .action-center-content a { color: #3d8fd4; text-decoration: none; }
+  .action-center-content a:hover { text-decoration: underline; }
+</style>
+{% endif -%}
