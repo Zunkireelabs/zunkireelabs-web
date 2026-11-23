@@ -612,6 +612,9 @@ schemaType: industry
    signature closer, while Platform Tie-in above stays light
    glass-surface per MASTER_DESIGN_SPEC.md §4/§10.
    ===================================================== #}
+{% set acExpanded = industry.expandedContent %}{% set acQa = industry.qaContentHtml %}
+{% include "partials/action-center-block.njk" %}
+
 {% if industry.faq %}
 {% set faqItems = industry.faq %}
 {% set faqHeading = "Questions about AI for " + (industry.eyebrow | replace("AI for ", "")) %}
