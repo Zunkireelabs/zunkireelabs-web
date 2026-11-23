@@ -37,7 +37,7 @@ For a deeper look at the AI side of this market, read our guide to [AI companies
 
 ### Zunkiree Labs
 
-**Founded**: 2018 | **Location**: Kathmandu | **Team**: 15+
+**Founded**: 2018 | **Location**: Sanepa, Lalitpur | **Team**: 1-10
 
 **Specialization**: AI-native search, RAG pipelines, enterprise AI infrastructure
 
