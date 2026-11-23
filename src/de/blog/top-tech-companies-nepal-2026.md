@@ -28,7 +28,7 @@ Nepal hat sich überraschend zu einem Zentrum für Arbeit im Bereich künstliche
 
 ### Zunkiree Labs
 
-**Gegründet**: 2018 | **Standort**: Kathmandu | **Team**: 15+
+**Gegründet**: 2018 | **Standort**: Sanepa, Lalitpur | **Team**: 1-10
 
 **Spezialisierung**: KI-native Suche, RAG-Pipelines, KI-Infrastruktur für Unternehmen
 

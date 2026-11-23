@@ -1,6 +1,6 @@
 ---
 templateEngineOverride: "njk, md"
-title: "Was ist Superintelligenz? Bedeutung, Herkunft und Unterschied zu AGI"
+title: "Superintelligenz: Definition und Unterschiede zu AGI" # SEOAI:TITLE
 description: "Superintelligenz einfach erklärt: Bedeutung des Begriffs, Herkunft, Unterschied zu AGI und warum das Thema für Unternehmen wichtig ist, die KI einführen."
 seoTitle: "Was ist Superintelligenz? Bedeutung, Herkunft und AGI"
 date: "2026-10-02"
