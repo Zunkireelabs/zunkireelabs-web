@@ -4,10 +4,10 @@ title: "RAG-Suche Dienstleistungen: Wie Zunkiree Labs Unternehmenswissen durchsu
 description: "RAG-Suche Dienstleistungen verbinden Ihre Unternehmensdaten mit KI. Zunkiree Labs baut RAG-Suche, KI-Agenten und Voice Agents für Unternehmen weltweit."
 date: "2026-11-26"
 featuredImage: "/assets/images/blog/rag-suche-dienstleistungen-wie-zunkiree-labs-unternehmenswissen-durchsuchbar-macht.svg"
-featuredImageAlt: "Abstract gradient background"
+featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-2xl px-4 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+<div class="container-custom py-12 md:py-20">
 
 ## Kurz gesagt: Was RAG-Suche Dienstleistungen leisten
 

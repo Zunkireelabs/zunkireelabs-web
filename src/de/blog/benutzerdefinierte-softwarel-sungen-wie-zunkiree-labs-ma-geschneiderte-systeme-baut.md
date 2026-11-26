@@ -4,10 +4,10 @@ title: "Benutzerdefinierte Softwarelösungen: Wie Zunkiree Labs maßgeschneidert
 description: "Benutzerdefinierte Softwarelösungen passen sich Ihren Abläufen an, statt umgekehrt. So baut Zunkiree Labs maßgeschneiderte KI, CRM und Automatisierung für Ihre Branche."
 date: "2026-11-26"
 featuredImage: "/assets/images/blog/benutzerdefinierte-softwarel-sungen-wie-zunkiree-labs-ma-geschneiderte-systeme-baut.svg"
-featuredImageAlt: "Abstract gradient background"
+featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-2xl px-4 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+<div class="container-custom py-12 md:py-20">
 
 ## Die kurze Antwort
 

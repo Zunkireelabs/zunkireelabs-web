@@ -4,10 +4,10 @@ title: "Sprachagenten Entwicklung: Wie Zunkiree Labs produktionsreife Voice AI b
 description: "Sprachagenten Entwicklung erklärt: Was moderne Voice AI leistet, wie sie pro Branche eingesetzt wird und warum Zunkiree Labs sie produktionsreif baut."
 date: "2026-11-26"
 featuredImage: "/assets/images/blog/sprachagenten-entwicklung-wie-zunkiree-labs-produktionsreife-voice-ai-baut.svg"
-featuredImageAlt: "Abstract gradient background"
+featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-2xl px-4 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+<div class="container-custom py-12 md:py-20">
 
 ## Kurz gesagt
 

@@ -4,10 +4,10 @@ title: "KI-Anwendungen für Bildung: Was heute wirklich funktioniert — mit Zun
 description: "KI-Anwendungen für Bildung praktisch erklärt: von personalisiertem Lernen bis zur Verwaltung. Wie Zunkiree Labs Bildungseinrichtungen mit KI-Agenten, RAG-Suche und Orca unterstützt."
 date: "2026-11-26"
 featuredImage: "/assets/images/blog/ki-anwendungen-f-r-bildung-was-heute-wirklich-funktioniert-mit-zunkiree-labs.svg"
-featuredImageAlt: "Abstract gradient background"
+featuredImageAlt: "Abstrakter Farbverlauf als Hintergrund"
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-2xl px-4 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+<div class="container-custom py-12 md:py-20">
 
 ## Kurze Antwort
 

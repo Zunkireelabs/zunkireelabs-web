@@ -7,7 +7,7 @@ featuredImage: "/assets/images/blog/gaas-vs-saas-how-agentic-as-a-service-differ
 featuredImageAlt: "Abstract gradient background"
 ---
 
-<div class="container-custom py-12 md:py-20 max-w-2xl px-4 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+<div class="container-custom py-12 md:py-20">
 
 ## Two acronyms, two very different products
 
