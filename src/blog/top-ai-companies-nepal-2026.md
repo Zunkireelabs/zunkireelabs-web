@@ -1,6 +1,6 @@
 ---
-title: "AI Company in Nepal: Zunkiree Labs and What It Builds (2026)" # SEOAI:TITLE
-description: "How to choose an AI company in Nepal: the four kinds of AI company, what each delivers and the questions to ask first. Includes what Zunkiree Labs builds."
+title: "Top AI Companies in Nepal: The 4 Kinds and How to Pick" # SEOAI:TITLE
+description: "Nepal's AI companies fall into four kinds: product builders, ML service shops, chatbot resellers and consultancies. Learn what each delivers and what to ask." # SEOAI:METADESCRIPTION
 date: 2026-03-30
 lastUpdated: "2026-10-14"
 authorId: zunkiree-team
