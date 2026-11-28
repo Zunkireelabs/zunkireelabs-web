@@ -76,3 +76,18 @@ readTime: 10
 <ul><li><a href="https://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf" rel="noopener">Tom M. Mitchell, The Discipline of Machine Learning</a> (Carnegie Mellon University, juli 2006)</li><li><a href="https://arxiv.org/abs/1706.03762" rel="noopener">Vaswani et al., Attention Is All You Need</a> (arXiv, 2017)</li><li><a href="https://hai.stanford.edu/ai-index/2025-ai-index-report" rel="noopener">Stanford HAI: 2025 AI Index Report</a></li></ul>
 
 </div>
+<!-- SEOAI:EXPANDEDCONTENT:START -->
+
+## Waar faalt machine learning, en waarom?
+
+Machine learning wordt breed gebruikt, maar faalt op voorspelbare manieren. De kwaliteit van de data begrenst de kwaliteit van het resultaat: leert een systeem van slechte of eenzijdige voorbeelden, dan neemt het die gebreken over in de vorm van bias. Daarnaast verandert data uit de praktijk na verloop van tijd, waardoor een model dat bij de lancering goed werkte langzaam slechter gaat presteren (drift). Een model kan ook uit het hoofd leren in plaats van echt leren: het scoort goed op de trainingsvoorbeelden, maar faalt zodra het gevallen ziet die het niet eerder heeft gezien.
+
+## Wat controleert u voordat u met ML bouwt?
+
+Begin niet bij een techniek maar bij een concreet probleem en een manier om succes te meten. Volg de toets van Tom Mitchell: welke taak T moet het systeem uitvoeren, welke prestatiemaat P gebruikt u om te bepalen of het beter wordt, en welke ervaring E (welke data) is daarvoor beschikbaar? Zonder een heldere prestatiemaat kunt u niet aantonen dat het systeem zijn prestaties betrouwbaar verbetert.
+
+## Hoe passen NLP en grote taalmodellen hierin?
+
+Natuurlijke taalverwerking, of NLP, past machine learning toe op menselijke taal. In plaats van met de hand regels te schrijven voor elke mogelijke zin, laat u een systeem patronen in taal leren uit grote hoeveelheden voorbeelden. Grote taalmodellen (LLM's) zijn op dit moment het meest zichtbare voorbeeld daarvan, en ze bouwen op dezelfde principes als de rest van machine learning.
+
+<!-- SEOAI:EXPANDEDCONTENT:END -->

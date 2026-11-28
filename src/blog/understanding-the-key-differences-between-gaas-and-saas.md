@@ -52,3 +52,6 @@ See also: [AI Development Services](/solutions/ai-development/).
 
 - [The NIST Definition of Cloud Computing (SP 800-145)](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf), National Institute of Standards and Technology
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), Anthropic
+<!-- SEOAI:INTERNALLINKS:START --><ul class="space-y-1 sm:space-y-3 px-4 sm:px-6 lg:px-8">
+  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/celebrating-success-awards-and-recognition-for-zunkiree-labs/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">Zunkiree Labs Team</a></li>
+</ul><!-- SEOAI:INTERNALLINKS:END -->

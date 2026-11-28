@@ -139,5 +139,5 @@ The companies profiled here represent the leading edge of what's possible from K
 
 See also: [Software Outsourcing Partner in Nepal](/solutions/software-outsourcing/), [How AI understands the Nepali language](/resources/nepali-language-ai-guide/), [How we built Zennly, an AI booking engine](/resources/zenly-case-study/).
 <!-- SEOAI:INTERNALLINKS:START --><ul class="space-y-1 sm:space-y-3 px-4 sm:px-6 lg:px-8">
-  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/ai-solutions-for-education-in-nepal-transforming-learning-experiences/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">AI for Education</a></li>
+  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/how-to-build-rag-pipeline/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">RAG pipelines</a></li>
 </ul><!-- SEOAI:INTERNALLINKS:END -->
