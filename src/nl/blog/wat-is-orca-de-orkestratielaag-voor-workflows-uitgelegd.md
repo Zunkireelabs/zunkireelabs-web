@@ -92,3 +92,7 @@ Orkestratie is de coördinatielaag tussen de tools die een bedrijf al gebruikt. 
 - Zunkiree Labs, [Zunkiree Search](/products/search/) en [AI CRM](/products/ai-crm/), productpagina's
 
 </div>
+<!-- SEOAI:INTERNALLINKS:START --><ul class="space-y-1 sm:space-y-3 px-4 sm:px-6 lg:px-8">
+  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/ai-coding-agents-2026-how-developers-actually-work-now/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">agent-workflows</a></li>
+  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/vercel-agent-desktop-computer-use-for-ai-agents-explained/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">AI-agents</a></li>
+</ul><!-- SEOAI:INTERNALLINKS:END -->
