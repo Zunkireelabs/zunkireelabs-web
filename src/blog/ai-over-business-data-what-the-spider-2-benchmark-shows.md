@@ -98,3 +98,6 @@ Spider 2.0 showed that models which looked excellent on tidy benchmarks struggle
 - Spider 2.0 project, [benchmark and leaderboard page](https://spider2-sql.github.io/), accessed October 2026
 
 </div>
+<!-- SEOAI:INTERNALLINKS:START --><ul class="space-y-1 sm:space-y-3 px-4 sm:px-6 lg:px-8">
+  <li class="relative grid grid-cols-[3.25rem_1fr] gap-x-5 pb-9 last:pb-0 space-y-3"><a href="https://zunkireelabs.com/blog/data-engineering-solutions-in-building-robust-data-infrastructure/" class="inline-block py-2 text-[15px] text-navy-600 transition-colors hover:text-navy-900 sm:py-0">enterprise databases</a></li>
+</ul><!-- SEOAI:INTERNALLINKS:END -->

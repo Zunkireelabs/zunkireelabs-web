@@ -20,3 +20,5 @@ permalink: "{{ '/de/blog/' if pagination.pageNumber == 0 else '/de/blog/page/' +
    post (Eleventy emits no pages for an empty collection), so an empty
    locale never publishes an empty index. Markup lives in the shared partial. #}
 {% include "partials/blog-index-locale.njk" %}
+
+<!-- SEOAI:SCHEMA:START --><script type="application/ld+json">{"@type":"Article","author":{"name":"Zunkiree Labs","@type":"Organization"},"@context":"https://schema.org","headline":"Einblicke zu KI und Technologie von Zunkiree Labs","keywords":"KI, Sprachagenten, RAG-Suche, KI-Anwendungen, Bildung, Softwarelösungen, KI-Agenten, Orca, GaaS","inLanguage":"de","description":"Praxisnahe Einblicke zu KI-Entwicklung und produktionsreifer KI-Infrastruktur. Vom Team von Zunkiree Labs.","datePublished":"2026-11-28"}</script><!-- SEOAI:SCHEMA:END -->
